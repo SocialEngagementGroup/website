@@ -62,15 +62,14 @@
 }
 
 .innerCard h4{
-  font-size: 20px;
-  font-family: Lobster;
+font-family: Lobster;
 font-weight: 400;
 font-style: Regular;
 font-size: 24px;
 line-height: 32PX;
 letter-spacing: 0%;
-text-align: center;
 width: 90%;
+color: #fff;
 
   
 }

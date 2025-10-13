@@ -1,0 +1,27 @@
+.wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #232326;
+  overflow: hidden;
+}
+
+.videoContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+}
+
+.video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+

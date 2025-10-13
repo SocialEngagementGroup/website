@@ -1,0 +1,40 @@
+.sub-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px; /* reduced from 20px */
+  line-height: 36px;
+  letter-spacing: 0;
+  position: relative;
+  display: inline-block;
+}
+
+/* Responsive underline */
+.sub-title::after {
+  content: "";
+  display: block;
+  width: 60px; /* reduced from 79px */
+  height: 5px; /* reduced from 7px */
+  background: #975554;
+  border-radius: 14px;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+/* Left align underline on medium screens and up */
+@media (min-width: 768px) {
+  .sub-title::after {
+    left: 0;
+    transform: none;
+  }
+}
+
+.section-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}

@@ -46,8 +46,8 @@ const InnerSlider = ({ items }) => {
         {items.map((item, idx) => (
           <SwiperSlide key={idx}>
             <div className={styles.innerCard}>
-              <img src={item.icon} alt={`slide-${idx}`} className={styles.icon} />
-              <h4 className={styles.name}>{item.name}</h4>
+              <img src={item.icon} alt={`slide-${idx}`} />
+              <h4 className="mt-5">{item.name}</h4>
             </div>
           </SwiperSlide>
         ))}
