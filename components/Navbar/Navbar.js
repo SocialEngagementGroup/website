@@ -15,6 +15,10 @@ export default function Navbar() {
         setIsSticky(false);
       }
     };
+
+    // ✅ Call once on load to check initial scroll position
+    handleScroll();
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -42,12 +46,14 @@ export default function Navbar() {
 
           {/* Buttons & Hamburger */}
           <div className="flex md:order-2 items-center">
-
-            {/* Contact Us Button */}
             <button
               onClick={() => (window.location.href = "#")}
-              className={`contact-us-btn border font-bold font-sans rounded-[14px] cursor-pointer md:pb-1 pb-0 px-6 md:px-8 transition
-                ${isSticky ? "border-white text-white" : "border-white text-white md:bg-white md:text-black hover:bg-white hover:text-black"}
+              className={`border font-bold font-sans text-[18px] rounded-[14px] cursor-pointer md:py-1.5 pb-1 px-6 md:px-8 transition
+                ${
+                  isSticky
+                    ? "border-white text-white"
+                    : "border-white text-white md:bg-white md:text-black hover:bg-white hover:text-black"
+                }
               `}
             >
               Contact Us
@@ -67,7 +73,6 @@ export default function Navbar() {
                 viewBox="0 0 24 24"
               >
                 {isOpen ? (
-                  // X icon
                   <path
                     stroke="currentColor"
                     strokeLinecap="round"
@@ -76,7 +81,6 @@ export default function Navbar() {
                     d="M4 4L20 20M20 4L4 20"
                   />
                 ) : (
-                  // Hamburger
                   <path
                     stroke="currentColor"
                     strokeLinecap="round"
@@ -92,10 +96,10 @@ export default function Navbar() {
           {/* Menu Links */}
           <div
             className={`${
-              isOpen ? "block" : "hidden"
-            } w-full md:flex md:w-auto md:order-1 items-center justify-between transition-all duration-500`}
+              isOpen ? "block bg-black" : "hidden"
+            } w-full md:flex md:w-auto md:order-1 items-center justify-between transition-all duration-500 md:bg-transparent`}
           >
-            <ul className="flex flex-col p-4 md:p-0 border border-gray-100 rounded-lg md:flex-row md:space-x-10 md:mt-0 md:border-0 mt-5">
+            <ul className="flex flex-col p-4 md:p-0 border border-gray-700 md:border-0 rounded-lg md:flex-row md:space-x-10 md:mt-0 mt-5">
               {[
                 "Home",
                 "About",

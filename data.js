@@ -61,3 +61,57 @@ export const ClientsLogo = [
 
 
 ];
+
+
+
+export const tabsData = [
+  {
+    id: 1,
+    title: "Reinventing micro-mobility with",
+    highlight: "Award winning",
+    description:
+      "Our mission is to close the gap between a scooter and a bike. Yoda is the lightest vehicle of its category, designed to be agile and fun for everyone to ride.",
+    videoSrc:
+      "https://assets-global.website-files.com/65ae37af356fab4845432048/65be0fdac914d702e08f70ed_Yoda-Helmet_1-transcode.mp4",
+  },
+  {
+    id: 2,
+    title: "Best in class energy management for",
+    highlight: "optimal autonomy",
+    description:
+      "3 riding modes: 🌱 eco, ⚡️ normal & 🚀 boost - that offer up to 80 km range on one single charge with a swappable battery.",
+    videoSrc:
+      "https://assets-global.website-files.com/65ae37af356fab4845432048/65ae37af356fab48454320ae_BatteryRemoval_Pingpong_001-transcode.mp4",
+  },
+  {
+    id: 3,
+    title: "Durable and effortless,",
+    highlight: "all the way",
+    description:
+      "We spent years crafting Yoda, stripping away unnecessary components to deliver a simple and efficient mobility experience.",
+    videoSrc:
+      "https://assets-global.website-files.com/65ae37af356fab4845432048/65be104f9aba74d774b7f4a3_Yoda-Exploded-50-transcode.mp4",
+  },
+];
+
+
+
+
+export const images = [
+  { id: 23, src: "/herosliderimage/Rectangle23.png", alt: "Rectangle 23" },
+  { id: 24, src: "/herosliderimage/Rectangle24.png", alt: "Rectangle 24" },
+  { id: 25, src: "/herosliderimage/Rectangle25.png", alt: "Rectangle 25" },
+  { id: 26, src: "/herosliderimage/Rectangle26.png", alt: "Rectangle 26" },
+  { id: 27, src: "/herosliderimage/Rectangle27.png", alt: "Rectangle 27" },
+  { id: 28, src: "/herosliderimage/Rectangle28.png", alt: "Rectangle 28" },
+  { id: 29, src: "/herosliderimage/Rectangle29.png", alt: "Rectangle 29" },
+  { id: 30, src: "/herosliderimage/Rectangle30.png", alt: "Rectangle 30" },
+  { id: 31, src: "/herosliderimage/Rectangle31.png", alt: "Rectangle 31" },
+  { id: 32, src: "/herosliderimage/Rectangle32.png", alt: "Rectangle 32" },
+  { id: 33, src: "/herosliderimage/Rectangle33.png", alt: "Rectangle 33" },
+  { id: 34, src: "/herosliderimage/Rectangle34.png", alt: "Rectangle 34" },
+  { id: 35, src: "/herosliderimage/Rectangle35.png", alt: "Rectangle 35" },
+  { id: 36, src: "/herosliderimage/Rectangle36.png", alt: "Rectangle 36" },
+  { id: 37, src: "/herosliderimage/Rectangle37.png", alt: "Rectangle 37" },
+  { id: 38, src: "/herosliderimage/Rectangle38.png", alt: "Rectangle 38" },
+];

@@ -1,0 +1,57 @@
+
+
+.subTitle {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 36px;
+  display: inline-block;
+  position: relative;
+
+}
+
+/* Underline */
+.subTitle::after {
+  content: "";
+  display: block;
+  width: 118px;
+  height: 5px;
+  background: #975554;
+  border-radius: 14px;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
+}
+
+/* Left-align underline on medium+ screens */
+@media (min-width: 768px) {
+  .subTitle::after {
+    left: 0;
+    transform: none;
+  }
+}
+
+.sectionTitle {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  width: 600px !important;
+}
+
+.sectionTitle2{
+ font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+
+}
+@media only screen and (max-width: 767px) {
+.sectionTitle {
+  width: 100% !important;
+    text-align: center !important;
+}
+.subTitle{
+  font-size: 20px;
+}
+}

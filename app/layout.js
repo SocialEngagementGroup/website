@@ -1,6 +1,6 @@
 import { Inter, Lobster } from "next/font/google";
 import "./globals.css";
-import "../components/Navbar/Navbar.css";
+import "@/components/Navbar/Navbar.module.css";
 import Navbar from "../components/Navbar/Navbar";
 export const metadata = {
   title: "Create Next App",
@@ -23,7 +23,7 @@ const lobster = Lobster({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${lobster.variable} antialiased`}>
+      <body className={`antialiased`}>
           <Navbar />
         {children}
       </body>

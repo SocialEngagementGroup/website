@@ -1,63 +1,72 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Mousewheel } from "swiper";
-import "swiper/css";
-import "swiper/css/effect-coverflow";
 
-const Test = () => {
+import HeroSlider from '../components/HeroSection/Hero-slider/HeroSlider'
+import React from 'react'
+import HeroContent from '../components/HeroSection/Hero-contant/HeroContant'
+import ParallaxSliderSection from '@/components/ParallaxSlider/ParallaxSliderSection'
+import ClientLogos from '../components/ClientLogos/ClientLogos'
+import VideoParallax from '../components/Vdo/Vdo'
+import BlogScrolling from '@/components/ParallaxSlider/TabsScrollSection/BlogScrolling'
+
+import ExploreOurInsights from '@/components/ExploreOurInsights/ExploreOurInsights'
+
+
+const page = () => {
   return (
-    <Swiper
-      direction="vertical"
-      slidesPerView="auto"
-      centeredSlides={true}
-      grabCursor={true}
-      mousewheel={true}
-      spaceBetween={24}
-      effect="coverflow"
-      coverflowEffect={{
-        rotate: 0,
-        stretch: 0,
-        depth: 250,
-        modifier: 1,
-        slideShadows: true,
-      }}
-      modules={[EffectCoverflow, Mousewheel]}
-      className="swiper-container"
-    >
-      <SwiperSlide className="swiper-slide">
-        <img src="https://picsum.photos/192/192" alt="" className="image" />
-        <div className="content">
-          <h2 className="content__title">Title</h2>
-          <p className="content__text">When I was young. I was young.</p>
-          <a href="#" className="content__link">
-            Read more
-          </a>
-        </div>
-      </SwiperSlide>
+    <>
+    
 
-      <SwiperSlide className="swiper-slide">
-        <img src="https://picsum.photos/192/192" alt="" className="image" />
-        <div className="content">
-          <h2 className="content__title">Title</h2>
-          <p className="content__text">When I was young. I was young.</p>
-          <a href="#" className="content__link">
-            Read more
-          </a>
-        </div>
-      </SwiperSlide>
+      <div className="container-fluid mx-auto customPadding p-0 hero-section">
 
-      <SwiperSlide className="swiper-slide">
-        <img src="https://picsum.photos/192/192" alt="" className="image" />
-        <div className="content">
-          <h2 className="content__title">Title</h2>
-          <p className="content__text">When I was young. I was young.</p>
-          <a href="#" className="content__link">
-            Read more
-          </a>
-        </div>
-      </SwiperSlide>
-    </Swiper>
-  );
-};
 
-export default Test;
+        <div className="grid grid-cols-1 md:grid-cols-[40%_60%] ">
+
+          <div className="">
+            <HeroContent />
+          </div>
+
+          <div className="custom-shadow">
+            <HeroSlider />
+          </div>
+
+        </div>
+
+      </div>
+      
+      <div className="container-fluid mx-auto bg-gradient-to-b from-[#E3D3CC] to-white">
+       <div className='container-fluid mx-auto w-[85%]  p-0 '>
+          <ParallaxSliderSection/>
+        
+          
+
+       </div>
+  
+        <VideoParallax src="Vdo/vdo.mp4"  />
+         <div className='container-fluid mx-auto w-[85%] p-0 '>
+           <ClientLogos/>
+              <ExploreOurInsights/> 
+
+
+       </div>
+   
+
+      </div>
+
+       <div className='container-fluid mx-auto w-[65%] p-0'  style={{
+    backgroundImage: "url('/bg/Rectangle15.png')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}>
+    <h1>hello</h1>
+      
+
+       </div>
+    </>
+
+
+  )
+}
+
+export default page
+
+

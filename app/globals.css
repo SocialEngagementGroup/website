@@ -45,6 +45,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body);
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -63,6 +64,31 @@ code, pre {
 .custom-shadow {
   position: relative;
   z-index: 11;
+}
+
+
+@media only screen and (max-width: 767px) {
+.custom-shadow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 111;
+  background: radial-gradient(
+    circle at 80% center,
+    rgba(35, 35, 38, 0.9) 0%,
+    rgba(35, 35, 38, 0.6) 30%,
+    rgba(35, 35, 38, 0.3) 60%,
+    rgba(35, 35, 38, 0) 100%
+  );
+  filter: blur(20px);
+  opacity: 0.9;
+}
+
+
 }
 
 .custom-shadow::after {
@@ -113,4 +139,13 @@ code, pre {
   opacity: 1 !important;
   transform: scale(1) !important;
   background: #1D1D1D !important;
+}
+
+
+.hero-section-bg{
+    background:#232326 !important;
+ 
+}
+.ParallaxSliderSection .sectionTitle{
+  width: 100% !important;
 }

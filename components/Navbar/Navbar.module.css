@@ -1,0 +1,47 @@
+/* Navbar.module.css */
+
+
+
+/* Container adjustments for medium screens */
+@media only screen and (max-width: 1180px) {
+  .containerFluid {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+  }
+
+  .navLink {
+    font-size: 16px;
+  }
+}
+
+/* Contact Us Button */
+.contactUsBtn {
+  border-radius: 14px;
+  font-weight: bold;
+  font-family: sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding-block: 0.5rem; /* default padding */
+}
+
+/* Small screens */
+@media only screen and (max-width: 767px) {
+  .contactUsBtn {
+    padding-block: 0.2rem;
+  }
+}
+
+/* Sticky Navbar modifier */
+.sticky {
+  background: black;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+/* Non-sticky Navbar modifier */
+.nonSticky {
+  background: transparent;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}

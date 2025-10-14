@@ -1,0 +1,11 @@
+.title{
+font-family: Inter;
+font-weight: 700;
+font-style: Bold;
+font-size: 40px;
+}
+
+.decoration{
+  width: 550px;
+  font-size: 18px;
+}
