@@ -4,6 +4,7 @@ import ParallaxSliderSection from '@/components/ParallaxSlider/ParallaxSliderSec
 import BrandSucceed from '@/components/BrandSucceed/BrandSucceed'
 import FooterTop from '@/components/FooterTop/FooterTop'
 import ClientsLogo from '@/components/ClientLogos/ClientLogos'
+import TextSlider from '@/components/TextSlider/TextSlider'
 const page = () => {
   return (
     <>
@@ -12,8 +13,9 @@ const page = () => {
 
          <ClientsLogo />
 
-       {/* <BrandSucceed/>  */}
+       <BrandSucceed/> 
        <FooterTop/>
+       <TextSlider/>
     </>
   )
 }

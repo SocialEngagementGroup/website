@@ -1,56 +1,56 @@
 import React from "react";
-import { ArrowUpRight, Box } from "lucide-react"; // Using lucide icon for arrow
-import Button from "../Button/Button"; // your custom Button component
+import { ArrowUpRight } from "lucide-react"; // Using lucide icon for arrow
 import Image from "next/image";
 import BoxTitle from "./BoxTitle";
 import style from "./ContactInfo.module.css";
+
 const ContactInfo = () => {
   return (
-    <>
-  <div className={`${style.contentbox} container-fluid mx-auto px-4 py-12`}>
-       <BoxTitle/>
-     <div className="relative bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg max-w-4xl mx-auto">
-  {/* Flex container for both boxes */}
-  <div className="flex flex-col md:flex-row gap-6">
-    {/* Call Box */}
-    <div className="relative bg-gray-100 dark:bg-gray-800 p-4 rounded-lg flex items-center justify-between cursor-pointer hover:shadow-lg transition-shadow flex-1">
-      <div className="flex items-center gap-3">
-        {/* Icon */}
-        <Image src="/icons/call.png" alt="Call Icon" width={32} height={32} />
-        {/* Text */}
-        <span className="font-semibold text-gray-900 dark:text-white">
-          Book A Call
-        </span>
-      </div>
+    <div className={`${style.contentbox} container-fluid mx-auto`}>
+      <div
+        className={`${style.contentboxInner} border-4 border-gray-700 relative p-8 rounded-[20px] shadow-lg mx-auto`}
+      >
+        {/* Section Title */}
+        <BoxTitle />
 
-      {/* Arrow icon positioned at top-right */}
-      <div className="absolute top-2 right-2">
-        <ArrowUpRight className="text-gray-700 dark:text-gray-300" size={20} />
+        {/* Flex container for Call & Email Boxes */}
+        <div className="flex flex-col md:flex-row gap-6 mt-8">
+          {/* Call Box */}
+          <div
+            className={`${style.contentboxInner} border-4 border-gray-700 bg-gray-100 dark:bg-gray-800 p-10 rounded-[20px] flex items-center justify-between cursor-pointer hover:shadow-lg transition-shadow flex-1 relative`}
+          >
+            <div className="flex flex-col items-start gap-4">
+              <Image src="/icons/call.png" alt="Call Icon" width={60} height={60} />
+              <h4 className="font-semibold text-[32px] text-gray-900 dark:text-white">
+                Book A Call
+              </h4>
+            </div>
+
+            {/* Arrow icon */}
+            <div className="absolute top-4 right-4">
+              <ArrowUpRight className="text-gray-700 dark:text-gray-300" size={40} />
+            </div>
+          </div>
+
+          {/* Mail Box */}
+          <div
+            className={`${style.contentboxInner} border-4 border-gray-700 p-10 rounded-[20px] flex items-center justify-between cursor-pointer hover:shadow-lg transition-shadow flex-1 relative`}
+          >
+            <div className="flex flex-col items-start gap-4">
+              <Image src="/icons/mail.png" alt="Mail Icon" width={60} height={60} />
+              <h4 className="font-semibold text-[32px] text-gray-900 dark:text-white">
+                Send Email
+              </h4>
+            </div>
+
+            {/* Arrow icon */}
+            <div className="absolute top-4 right-4">
+              <ArrowUpRight className="text-gray-700 dark:text-gray-300" size={40} />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
-    {/* Email Box */}
-    <div className="relative bg-gray-100 dark:bg-gray-800 p-4 rounded-lg flex items-center justify-between cursor-pointer hover:shadow-lg transition-shadow flex-1">
-      <div className="flex items-center gap-3">
-        {/* Icon */}
-        <Image src="/icons/mail.png" alt="Mail Icon" width={32} height={32} />
-        {/* Text */}
-        <span className="font-semibold text-gray-900 dark:text-white">
-          Send Email
-        </span>
-      </div>
-
-      {/* Arrow icon positioned at top-right */}
-      <div className="absolute top-2 right-2">
-        <ArrowUpRight className="text-gray-700 dark:text-gray-300" size={20} />
-      </div>
-    </div>
-  </div>
-</div>
-  </div>
-
-    </>
-
   );
 };
 
