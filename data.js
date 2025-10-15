@@ -15,20 +15,20 @@ export const projects = [
 
     ],
   },
-  {
-    title: "Creative",
-    color: "#202020",
-    sliderData: [
+  // {
+  //   title: "Creative",
+  //   color: "#202020",
+  //   sliderData: [
        
-      { name: "Branding", icon: "/InnerSlider/Creative/branding.png" },
-      { name: "Logo Design", icon: "/InnerSlider/Creative/logo-design.png" },
-      { name: "Content creation", icon: "/InnerSlider/Creative/content-creation.png" },
-      { name: "3D Animation & Rendering", icon: "/InnerSlider/Creative/3d-animation-and-rendering.png" },
-      { name: "Photography & videography", icon: "/InnerSlider/Creative/photography-and-videography.png" },
-      { name: "Social media content", icon: "/InnerSlider/Creative/social-media-content.png" },
+  //     { name: "Branding", icon: "/InnerSlider/Creative/branding.png" },
+  //     { name: "Logo Design", icon: "/InnerSlider/Creative/logo-design.png" },
+  //     { name: "Content creation", icon: "/InnerSlider/Creative/content-creation.png" },
+  //     { name: "3D Animation & Rendering", icon: "/InnerSlider/Creative/3d-animation-and-rendering.png" },
+  //     { name: "Photography & videography", icon: "/InnerSlider/Creative/photography-and-videography.png" },
+  //     { name: "Social media content", icon: "/InnerSlider/Creative/social-media-content.png" },
       
-    ],
-  },
+  //   ],
+  // },
 ];
 
 

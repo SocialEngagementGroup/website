@@ -30,17 +30,22 @@ const InnerSlider = ({ items }) => {
           clickable: true,
           dynamicBullets: true,
         }}
-        autoplay={{
-          delay: 2500, // ⏱ Slide every 2.5 seconds
-          disableOnInteraction: false, // ✅ Keeps autoplay even after user swipes
-        }}
+        // autoplay={{
+        //   delay: 2500, // ⏱ Slide every 2.5 seconds
+        //   disableOnInteraction: false, // ✅ Keeps autoplay even after user swipes
+        // }}
         speed={1000} // 🌀 Smooth transition speed (1s)
         loop={true} // 🔁 Infinite loop
         className={`${styles.sliderWrapper} mySwiper`}
         breakpoints={{
           0: { slidesPerView: 1 },
+          600: { slidesPerView: 2 },
           768: { slidesPerView: 2 },
-          1024: { slidesPerView: 4 },
+          1024: { slidesPerView: 3 },
+         1500: { slidesPerView: 3 },
+         1501: { slidesPerView: 4 },
+
+          
         }}
       >
         {items.map((item, idx) => (

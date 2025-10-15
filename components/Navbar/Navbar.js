@@ -6,19 +6,13 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
 
-  // Detect scroll to toggle sticky class
+  // Sticky navbar scroll logic
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
-      }
+      setIsSticky(window.scrollY > 50);
     };
 
-    // ✅ Call once on load to check initial scroll position
-    handleScroll();
-
+    handleScroll(); // initial call
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -44,11 +38,11 @@ export default function Navbar() {
             </div>
           </a>
 
-          {/* Buttons & Hamburger */}
+          {/* Contact + Hamburger */}
           <div className="flex md:order-2 items-center">
             <button
               onClick={() => (window.location.href = "#")}
-              className={`border font-bold font-sans text-[18px] rounded-[14px] cursor-pointer md:py-1.5 pb-1 px-6 md:px-8 transition
+              className={`border font-bold font-sans text-[18px] rounded-[14px] cursor-pointer md:py-1.5 pb-1.5 pt-1.5 px-6 md:px-8 transition
                 ${
                   isSticky
                     ? "border-white text-white"
@@ -59,7 +53,7 @@ export default function Navbar() {
               Contact Us
             </button>
 
-            {/* Toggle Button */}
+            {/* Hamburger */}
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center w-10 h-10 justify-center text-sm text-white md:hidden focus:outline-none ml-3"
@@ -96,10 +90,13 @@ export default function Navbar() {
           {/* Menu Links */}
           <div
             className={`${
-              isOpen ? "block bg-black" : "hidden"
+              isOpen ? "block" : "hidden"
             } w-full md:flex md:w-auto md:order-1 items-center justify-between transition-all duration-500 md:bg-transparent`}
           >
-            <ul className="flex flex-col p-4 md:p-0 border border-gray-700 md:border-0 rounded-lg md:flex-row md:space-x-10 md:mt-0 mt-5">
+            <ul
+              className={`navlink flex flex-col p-4 md:p-0 border border-gray-700 md:border-0 rounded-lg md:flex-row md:space-x-10 md:mt-0 mt-5 
+              ${isOpen ? "bg-black md:bg-transparent" : "bg-transparent"}`}
+            >
               {[
                 "Home",
                 "About",
@@ -119,7 +116,6 @@ export default function Navbar() {
               ))}
             </ul>
           </div>
-
         </div>
       </div>
     </nav>

@@ -4,10 +4,9 @@ import styles from "./Media.module.css";
 const Media = () => {
   return (
     <div className={styles.mediaWrapper}>
-
       <div className={styles.imageContainer}>
         <div className={styles.imageLeft}>
-          <img src="/bg/innersliderbg.png" alt="Left Layer" />
+          <img src="/bg/innersliderbg.png" alt="Full Width Image" />
         </div>
       </div>
     </div>

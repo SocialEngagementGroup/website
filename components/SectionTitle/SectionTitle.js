@@ -5,7 +5,7 @@ const SectionTitle = ({ title, subtitle, subtitle2, description, id }) => {
   const headerProps = id ? { "aria-labelledby": id } : {};
 
   return (
-    <header className={`${styles.sectionHeader} mb-12`} {...headerProps}>
+    <header className={`${styles.sectionHeader}`} {...headerProps}>
       {/* Main Section Title */}
       {title && (
         <h2 id={id || undefined} className={`${styles.subTitle} text-[#0A0A0A]`}>
@@ -15,7 +15,7 @@ const SectionTitle = ({ title, subtitle, subtitle2, description, id }) => {
 
       {/* Subheading */}
       {subtitle && (
-        <h3 className={`${styles.sectionTitle} text-[26px] sm:text-[32px] md:text-[40px] font-semibold text-gray-900 mt-5 md:mt-8 leading-tight`}>
+        <h3 className={`${styles.sectionTitle} text-[26px] sm:text-[32px] md:text-[48px] font-semibold text-gray-900 mt-5 md:mt-8 leading-tight`}>
           {subtitle}
         </h3>
       )}

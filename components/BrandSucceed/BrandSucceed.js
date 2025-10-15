@@ -8,8 +8,8 @@ const BrandSucceed = () => {
     <div className={styles.wrapper}>
       {/* Centered Section Title with white text */}
       <div className="flex flex-col items-center justify-center text-center mb-12">
-        <h3 className="text-[32px] sm:text-[36px] md:text-[40px] lg:text-[44px] font-semibold text-white">
-          How we help your brand succeed
+        <h3 className={`${styles.sectionTitle} text-[32px] sm:text-[36px] md:text-[40px] lg:text-[44px] font-semibold text-white hero-text}` }>
+          How we help <span className={`${styles.titleSpan}`}>your</span> brand succeed
         </h3>
         <p className="text-white text-base sm:text-lg mt-4 max-w-2xl">
           We combine smart strategy, bold creative, end-to-end execution, and

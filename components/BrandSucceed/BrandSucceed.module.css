@@ -36,3 +36,20 @@
 
 
 
+.sectionTitle {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-style: Normal;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+
+
+.titleSpan {
+
+font-family: Lobster;
+font-weight: 400;
+font-style: Regular;
+font-size: 64px;
+text-align: center;
+}

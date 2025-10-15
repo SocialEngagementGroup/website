@@ -3,7 +3,7 @@
 .subTitle {
   font-family: "Inter", sans-serif;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 20px;
   line-height: 36px;
   display: inline-block;
   position: relative;
@@ -14,7 +14,7 @@
 .subTitle::after {
   content: "";
   display: block;
-  width: 118px;
+  width: 110px;
   height: 5px;
   background: #975554;
   border-radius: 14px;
@@ -50,8 +50,13 @@
 .sectionTitle {
   width: 100% !important;
     text-align: center !important;
+
 }
 .subTitle{
   font-size: 20px;
+    text-align: center !important;
+   margin: auto;
+   
+
 }
 }
