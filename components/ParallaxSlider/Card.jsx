@@ -18,7 +18,9 @@ const Card = ({ i, title, color, progress, range, targetScale, sliderData, isAct
         <h3 className="slider-title">{title}</h3>
 
         {/* 🔥 Inside Swiper Slider Component */}
-        <InnerSlider items={sliderData} />
+      
+            <InnerSlider items={sliderData} />
+     
       </motion.div>
     </div>
   );
