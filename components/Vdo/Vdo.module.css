@@ -1,6 +1,6 @@
 .wrapper {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,7 +19,6 @@
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  background: #a16207; /* amber tone fallback */
   transition: transform 0.2s ease-out, width 0.2s ease-out;
 }
 
@@ -28,4 +27,31 @@
   height: 100%;
   object-fit: cover;
   border-radius: 0;
+}
+
+
+@media only screen and (max-width: 991px) {
+ 
+.wrapper {
+  height: 70vh !important;
+}
+}
+@media only screen and (max-width: 991px) {
+ 
+.wrapper {
+  height: 60vh !important;
+}
+}
+@media only screen and (max-width: 991px) {
+ 
+.wrapper {
+  height: 50vh !important;
+}
+}
+
+@media only screen and (max-width: 991px) {
+ 
+.wrapper {
+  height: 30vh !important;
+}
 }

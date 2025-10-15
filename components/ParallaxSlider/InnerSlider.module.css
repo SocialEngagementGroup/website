@@ -10,30 +10,6 @@ margin: 80px auto 0 auto;
 }
 
 /* ========== Card Styles ========== */
-.innerCard11 {
-  position: relative;
-  border-radius: 15px;
-
-  text-align: center;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  transition: box-shadow 0.3s ease;
-
-
-  /* Background and glass effect */
-  background-image: url('/bg/slider-bg.jpg');
-  background-size: contain;
-  background-position: cover;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  color: #fff;
-  background: red; /* fallback color */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
 
 /* Ensure content sits above overlay */
@@ -71,6 +47,7 @@ line-height: 32PX;
 letter-spacing: 0%;
 width: 90%;
 color: #fff;
+text-transform: capitalize;
 
   
 }
@@ -81,5 +58,40 @@ color: #fff;
 
 .sliderContainer.loaded {
   opacity: 1;
+}
+
+
+
+
+
+@media only screen and (max-width: 1460px) {
+.innerCard img{
+    max-width: 120px;
+
+}
+  .InnerSlider-module__0Tpkga__innerCard {
+    height: 300px !important;
+
+}
+  .innerCard h4 {
+  font-size: 26px;
+}
+}
+
+
+
+@media only screen and (max-width: 1276px) {
+.innerCard img{
+    max-width: 100px;
+
+}
+  .InnerSlider-module__0Tpkga__innerCard {
+    height: 280px !important;
+
+}
+  .innerCard h4 {
+  font-size: 24px;
+    line-height: 32px;
+}
 }
 

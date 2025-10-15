@@ -159,10 +159,15 @@ code, pre {
 
 .mySwiper .InnerSlider-module__0Tpkga__innerCard {
   
-background: red;
+  background: linear-gradient(
+    180deg,          /* direction: top → bottom */
+    rgba(0, 0, 0, 0.6) 0%,   /* darker at top */
+    rgba(0, 0, 0, 0.2) 60%,  /* lighter in middle */
+    rgba(0, 0, 0, 0) 100%    /* fully transparent at bottom */
+  );
   position: relative;
   text-align: center;
-height: 400px;
+height: 350px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -206,5 +211,4 @@ height: 400px;
 
 
 }
-
 
