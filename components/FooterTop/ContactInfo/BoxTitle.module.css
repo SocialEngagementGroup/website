@@ -3,10 +3,26 @@ font-family: Inter;
 font-weight: 700;
 font-style: Bold;
 font-size: 40px;
+line-height: 50px;
+color: white;
 
 }
 
 .decoration{
   width: 550px;
   font-size: 18px;
+  margin-top: 20px;
+  color: white;
+
 }
+
+@media only screen and (max-width: 767px) {
+.decoration {
+  width: 100%;
+}
+.title{
+ font-size: 32px;
+}
+
+}
+

@@ -15,13 +15,15 @@ const ContactInfo = () => {
 
         {/* Flex container for Call & Email Boxes */}
         <div className="flex flex-col md:flex-row gap-6 mt-8">
+
           {/* Call Box */}
           <div
-            className={`${style.contentboxInner} border-4 border-gray-700 bg-gray-100 dark:bg-gray-800 p-10 rounded-[20px] flex items-center justify-between cursor-pointer hover:shadow-lg transition-shadow flex-1 relative`}
+            className={`${style.contentboxInnerBox} border-4 border-gray-700 p-10 rounded-[20px] flex 
+            items-center justify-between cursor-pointer hover:shadow-lg transition-shadow flex-1 relative`}
           >
             <div className="flex flex-col items-start gap-4">
               <Image src="/icons/call.png" alt="Call Icon" width={60} height={60} />
-              <h4 className="font-semibold text-[32px] text-gray-900 dark:text-white">
+              <h4 className="font-semibold text-[32px]  text-white">
                 Book A Call
               </h4>
             </div>
@@ -34,11 +36,11 @@ const ContactInfo = () => {
 
           {/* Mail Box */}
           <div
-            className={`${style.contentboxInner} border-4 border-gray-700 p-10 rounded-[20px] flex items-center justify-between cursor-pointer hover:shadow-lg transition-shadow flex-1 relative`}
+            className={`${style.contentboxInnerBox} border-4 border-gray-700 p-10 rounded-[20px] flex items-center justify-between cursor-pointer hover:shadow-lg transition-shadow flex-1 relative`}
           >
             <div className="flex flex-col items-start gap-4">
               <Image src="/icons/mail.png" alt="Mail Icon" width={60} height={60} />
-              <h4 className="font-semibold text-[32px] text-gray-900 dark:text-white">
+              <h4 className="font-semibold text-[32px]  dark:text-white text-white">
                 Send Email
               </h4>
             </div>
@@ -48,6 +50,7 @@ const ContactInfo = () => {
               <ArrowUpRight className="text-gray-700 dark:text-gray-300" size={40} />
             </div>
           </div>
+          
         </div>
       </div>
     </div>

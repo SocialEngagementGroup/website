@@ -34,3 +34,18 @@ background: #232326A8;
 
 
 
+@media only screen and (max-width: 1135px) {
+ .wrapper {
+   padding: 3rem;
+}
+}
+
+
+
+@media only screen and (max-width: 767px) {
+ .wrapper {
+   padding: 1rem;
+}
+ 
+}
+

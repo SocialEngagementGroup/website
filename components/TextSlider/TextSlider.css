@@ -9,8 +9,8 @@
 
 .animate-slide {
   display: inline-flex;
-  animation: slide 20s linear infinite;
+  animation: slide 70s linear infinite;
   background: #975554
 }
 
-.animate-slide h5{  font-size: 120px;}
+.animate-slide h5{  font-size: 7rem;}

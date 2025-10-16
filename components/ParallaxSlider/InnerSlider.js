@@ -30,10 +30,10 @@ const InnerSlider = ({ items }) => {
           clickable: true,
           dynamicBullets: true,
         }}
-        autoplay={{
-          delay: 2500, // ⏱ Slide every 2.5 seconds
-          disableOnInteraction: false, // ✅ Keeps autoplay even after user swipes
-        }}
+        // autoplay={{
+        //   delay: 2500, // ⏱ Slide every 2.5 seconds
+        //   disableOnInteraction: false, // ✅ Keeps autoplay even after user swipes
+        // }}
         speed={1000} // 🌀 Smooth transition speed (1s)
         loop={true} // 🔁 Infinite loop
         className={`${styles.sliderWrapper} mySwiper`}

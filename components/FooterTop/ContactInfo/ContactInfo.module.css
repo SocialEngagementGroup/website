@@ -2,3 +2,16 @@
   background: #232326C7;
 
 }
+.contentboxInnerBox{
+  background: #232326;
+}
+
+
+
+
+@media only screen and (max-width: 767px) {
+.BoxTitle-module__dnR0AG__decoration {
+  width: 100%;
+}
+}
+

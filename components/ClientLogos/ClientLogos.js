@@ -21,7 +21,7 @@ const ClientLogos = () => {
       </div>
 
       {/* Client Logos / Slider */}
-      <div className="container-fluid w-[95%] mx-auto">
+      <div className="container-fluid w-[95%] mx-auto shadow-effect">
         <Slider />
       </div>
     </section>

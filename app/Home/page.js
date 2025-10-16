@@ -13,7 +13,7 @@ const page = () => {
 
          <ClientsLogo />
 
-       <BrandSucceed/> 
+       {/* <BrandSucceed/>  */}
        <FooterTop/>
        <TextSlider/>
     </>

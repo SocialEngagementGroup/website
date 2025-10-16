@@ -18,9 +18,6 @@ background: #fff;
 .sub-title::after {
   content: "";
   display: block;
-  width: 60px; /* reduced from 79px */
-  height: 5px; /* reduced from 7px */
-  background: #975554;
   border-radius: 14px;
   position: absolute;
   bottom: -5px;
@@ -43,3 +40,4 @@ background: #fff;
   font-weight: 700;
   font-style: normal;
 }
+
