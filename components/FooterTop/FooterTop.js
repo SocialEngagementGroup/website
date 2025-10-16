@@ -2,6 +2,7 @@ import React from "react";
 import ContactInfo from "@/components/FooterTop/ContactInfo/ContactInfo";
 import ContactForm from "@/components/FooterTop/ContactForm/ContactForm";
 import styles from "./FooterTop.module.css";
+import Copyright from "../Copyright/Copyright";
 
 const FooterTop = () => {
   return (
@@ -18,8 +19,10 @@ const FooterTop = () => {
               <ContactForm />
             </div>
           </div>
+      
         </div>
       </div>
+      <Copyright/>
     </section>
   );
 };
