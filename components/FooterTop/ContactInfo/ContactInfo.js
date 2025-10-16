@@ -22,7 +22,7 @@ const ContactInfo = () => {
             items-center justify-between cursor-pointer hover:shadow-lg transition-shadow flex-1 relative`}
           >
             <div className="flex flex-col items-start gap-4">
-              <Image src="/icons/call.png" alt="Call Icon" width={60} height={60} />
+              <Image src="/icons/callicon.png" alt="Call Icon" width={60} height={60} />
               <h4 className="font-semibold text-[32px]  text-white">
                 Book A Call
               </h4>
@@ -39,7 +39,7 @@ const ContactInfo = () => {
             className={`${style.contentboxInnerBox} border-4 border-gray-700 p-10 rounded-[20px] flex items-center justify-between cursor-pointer hover:shadow-lg transition-shadow flex-1 relative`}
           >
             <div className="flex flex-col items-start gap-4">
-              <Image src="/icons/mail.png" alt="Mail Icon" width={60} height={60} />
+              <Image src="/icons/mailicon.png" alt="Mail Icon" width={60} height={60} />
               <h4 className="font-semibold text-[32px]  dark:text-white text-white">
                 Send Email
               </h4>

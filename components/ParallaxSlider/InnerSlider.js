@@ -42,6 +42,7 @@ const InnerSlider = ({ items }) => {
                 450: { slidesPerView: 2 },
           768: { slidesPerView: 3 },
           1024: { slidesPerView: 4 },
+ 
         }}
       >
         {items.map((item, idx) => (

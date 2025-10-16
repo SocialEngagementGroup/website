@@ -17,7 +17,6 @@
 
 .videoBox {
   position: relative;
-  border-radius: 16px;
   overflow: hidden;
   transition: transform 0.2s ease-out, width 0.2s ease-out;
 }

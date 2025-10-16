@@ -202,3 +202,18 @@ background: linear-gradient(rgba(0, 0, 0, 0.97) 0%, rgba(0, 0, 0, 0.61) 60%, rgb
 
 }
 
+
+
+
+.herobrandlogo .Slider-module__hWZm5a__fade-left {
+    left: 0;
+  background: linear-gradient(to right, #E3D3CC, rgba(255, 255, 255, 0));
+}
+
+
+.herobrandlogo .Slider-module__hWZm5a__fade-right {
+   right: 0;
+  background: linear-gradient(to left, #E3D3CC, rgba(255, 255, 255, 0));
+
+}
+
