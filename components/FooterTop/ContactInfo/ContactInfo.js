@@ -22,7 +22,7 @@ const ContactInfo = () => {
             items-center justify-between cursor-pointer hover:shadow-lg transition-shadow flex-1 relative`}
           >
             <div className="flex flex-col items-start gap-4">
-              <img src="/icons/call.png" alt="Call Icon" width={60} height={60} />
+              <Image src="/icons/call.png" alt="Call Icon" width={60} height={60} />
               <h4 className="font-semibold text-[32px]  text-white">
                 Book A Call
               </h4>

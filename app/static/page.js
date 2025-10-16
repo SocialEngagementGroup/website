@@ -23,11 +23,11 @@ export default async function Static() {
 
             <Button>Click Here</Button>
 
-            
-    <div className="mt-4">
+
+            <div className="mt-4">
                 {/* {catFact.fact} */}
-                {new Date().toLocaleString()} 
-                 <span>(as we dosent have any api so how do we let know next.js there is no api so how do we make this dynamic) this is dynamic page but see the time not change because its pre-render at request time</span>
+                {new Date().toLocaleString()}
+                <span>(as we dosent have any api so how do we let know next.js there is no api so how do we make this dynamic) this is dynamic page but see the time not change because its pre-render at request time</span>
             </div>
         </div>
     )

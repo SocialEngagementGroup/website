@@ -14,3 +14,21 @@
 }
 
 .animate-slide h5{  font-size: 7rem;}
+
+.textslide{
+  position: relative;
+}
+.consultant-btn{
+position: absolute;
+top:0;
+right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  z-index: 111;
+ background: #232326;
+
+}
