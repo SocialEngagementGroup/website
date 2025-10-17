@@ -3,10 +3,7 @@ import { ArrowUpRight } from "lucide-react"; // Using lucide icon for arrow
 import BoxTitle from "./BoxTitle";
 import style from "./ContactInfo.module.css";
 
-const icons = {
-  call: "/icons/callicon.png",
-  email: "/icons/emailicon.png",
-}
+
 const ContactInfo = () => {
   return (
     <div className={`${style.contentbox} container-fluid mx-auto`}>
@@ -25,7 +22,7 @@ const ContactInfo = () => {
             items-center justify-between cursor-pointer hover:shadow-lg transition-shadow flex-1 relative`}
           >
             <div className="flex flex-col items-start gap-4">
-              <img src="/icons/callicon.png" alt="Call Icon" width={60} height={60} />
+              <img src="/Icons/callicon.png" alt="Call Icon" width={60} height={60} />
               <h4 className="font-semibold text-[32px]  text-white">
                 Book A Call
               </h4>
@@ -33,7 +30,9 @@ const ContactInfo = () => {
 
             {/* Arrow icon */}
             <div className="absolute top-4 right-4">
-              <ArrowUpRight className="text-gray-700 dark:text-gray-300" size={40} />
+              {/* <ArrowUpRight className="text-gray-700 dark:text-gray-300" size={40} /> */}
+              <img src="/Icons/arrow-up-right-1.png" alt="Mail Icon" width={60} height={60} />
+
             </div>
           </div>
 
@@ -42,7 +41,7 @@ const ContactInfo = () => {
             className={`${style.contentboxInnerBox} border-4 border-gray-700 p-10 rounded-[20px] flex items-center justify-between cursor-pointer hover:shadow-lg transition-shadow flex-1 relative`}
           >
             <div className="flex flex-col items-start gap-4">
-              <img src="/icons/mailicon.png" alt="Mail Icon" width={60} height={60} />
+              <img src="/Icons/mailicon.png" alt="Mail Icon" width={60} height={60} />
               <h4 className="font-semibold text-[32px]  dark:text-white text-white">
                 Send Email
               </h4>
@@ -50,8 +49,8 @@ const ContactInfo = () => {
 
             {/* Arrow icon */}
             <div className="absolute top-4 right-4">
-              <ArrowUpRight className="text-gray-700 dark:text-gray-300" size={40} />
-              <img src="/icons/arrow-up-right-1.png" alt="Mail Icon" width={60} height={60} />
+              {/* <ArrowUpRight className="text-gray-700 dark:text-gray-300" size={40} /> */}
+              <img src="/Icons/arrow-up-right-1.png" alt="Mail Icon" width={60} height={60} />
 
             </div>
           </div>
