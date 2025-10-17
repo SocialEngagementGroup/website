@@ -14,7 +14,7 @@ const ContactInfo = () => {
         <BoxTitle />
 
         {/* Flex container for Call & Email Boxes */}
-        <div className="flex flex-col md:flex-row gap-6 mt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
 
           {/* Call Box */}
           <div

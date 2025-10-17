@@ -13,12 +13,12 @@ const LogoMarquee = ({ speed = 100 }) => {
           {ClientsLogo.concat(ClientsLogo).map((logo, idx) => (
             <div
               key={idx}
-              className="flex justify-center items-center aspect-[3/1] min-w-[150px] mx-2"
+              className="flex justify-center items-center"
             >
               <img
                 src={logo.src}
                 alt={logo.alt}
-                className="h-full w-full object-contain"
+                className="h-full w-full"
               />
             </div>
           ))}
