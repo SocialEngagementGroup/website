@@ -187,12 +187,12 @@ height: 350px;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 102%;
   /* Darker gradient overlay */
-background: linear-gradient(rgba(0, 0, 0, 0.97) 0%, rgba(0, 0, 0, 0.61) 60%, rgb(0, 0, 0) 100%);
+   background: linear-gradient(rgba(0, 0, 0, 0.97) 0%, rgba(0, 0, 0, 0.61) 60%, rgb(0, 0, 0) 100%);
   z-index: 1;
-  border-radius: 5px;
   pointer-events: none;
+ 
 }
 @media only screen and (max-width: 500px) {
 .mySwiper .InnerSlider-module__0Tpkga__innerCard{
@@ -204,16 +204,4 @@ background: linear-gradient(rgba(0, 0, 0, 0.97) 0%, rgba(0, 0, 0, 0.61) 60%, rgb
 
 
 
-
-.herobrandlogo .Slider-module__hWZm5a__fade-left {
-    left: 0;
-  background: linear-gradient(to right, #E3D3CC, rgba(255, 255, 255, 0));
-}
-
-
-.herobrandlogo .Slider-module__hWZm5a__fade-right {
-   right: 0;
-  background: linear-gradient(to left, #E3D3CC, rgba(255, 255, 255, 0));
-
-}
 
