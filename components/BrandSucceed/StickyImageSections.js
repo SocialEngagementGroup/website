@@ -12,6 +12,7 @@ import a4 from "./Animgif/a4.png";
 
 import "./ScrollStickySections.css";
 
+// Sections data
 const sections = [
   {
     button: "Strategy & Research",
@@ -39,61 +40,70 @@ const sections = [
   },
 ];
 
+// ✅ Child component for each section
+const SectionItem = ({ section, setActiveImage }) => {
+  const { ref } = useInView({
+    threshold: 0.5,
+    triggerOnce: false,
+    onChange: (inView) => {
+      if (inView) setActiveImage(section.image);
+    },
+  });
+
+  return (
+    <div
+      ref={ref}
+      className="content-box bg-white rounded-2xl space-y-5 transition-all duration-300 giftitle flex flex-col items-center md:items-start"
+    >
+      <button className="px-5 py-2 rounded-full text-sm uppercase tracking-wide bg-[#D9D9D9] text-black transition-all">
+        {section.button}
+      </button>
+
+      <p className="text-2xl font-regular text-gray-800 leading-relaxed giftext text-center md:text-left">
+        {section.title}
+      </p>
+
+      {/* Mobile image below title */}
+      <div className="md:hidden w-full flex justify-center mt-4">
+        <Image
+          src={section.image}
+          alt={section.button}
+          width={300}
+          height={300}
+          className="object-cover rounded-2xl shadow-xl"
+          priority
+        />
+      </div>
+    </div>
+  );
+};
+
 const ScrollStickySections = () => {
   const [activeImage, setActiveImage] = useState(sections[0].image);
 
   return (
-    <section className="scroll-sticky-section flex flex-col md:flex-row container mx-auto px-6 py-20 gap-10 container-fluid w-[70%]">
-      {/* Left Side */}
+    <section className="scroll-sticky-section flex flex-col md:flex-row container mx-auto px-6 py-20 gap-10 w-[70%]">
+      {/* Left Side: Sections */}
       <div className="flex flex-col md:w-1/2 space-y-[0vh] md:space-y-[60vh]">
-        {sections.map((section, index) => {
-          const { ref } = useInView({
-            threshold: 0.5,
-            triggerOnce: false,
-            onChange: (inView) => {
-              if (inView) setActiveImage(section.image);
-            },
-          });
-
-          return (
- <div
-  ref={ref}
-  key={index}
-  className="content-box bg-white rounded-2xl space-y-5 transition-all duration-300 giftitle flex flex-col items-center md:items-start"
->
-  <button className="px-5 py-2 rounded-full text-sm uppercase tracking-wide bg-[#D9D9D9] text-black transition-all">
-    {section.button}
-  </button>
-
-  <p className="text-2xl font-regular text-gray-800 leading-relaxed giftext text-center md:text-left">
-    {section.title}
-  </p>
-
-  {/* Mobile image below title */}
-  <div className="md:hidden w-full flex justify-center mt-4">
-    <Image
-      src={section.image} // each section's image
-      alt={section.button}
-      width={300}
-      height={300}
-      className="object-cover rounded-2xl shadow-xl"
-      priority
-    />
-  </div>
-</div>
-
-          );
-        })}
+        {sections.map((section, index) => (
+          <SectionItem
+            key={index}
+            section={section}
+            setActiveImage={setActiveImage}
+          />
+        ))}
       </div>
 
-      {/* Right Side Sticky Image */}
+      {/* Right Side: Sticky Image */}
       <div className="md:w-1/2 relative">
-        <div className="sticky mx-auto top-24 transition-all duration-700 gifimage ">
+        <div className="sticky mx-auto top-24 transition-all duration-700 gifimage">
           <Image
             src={activeImage}
-            alt="section"
+            alt="Active Section"
+            width={400}
+            height={400}
+            className="aspect-square object-cover rounded-2xl shadow-xl"
             priority
-            className=" aspect-[3/3]"
           />
         </div>
       </div>
