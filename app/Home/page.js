@@ -1,11 +1,12 @@
 import React from 'react'
 import HeroSection from "@/components/HeroSection/HeroSection"
 import ParallaxSliderSection from '@/components/ParallaxSlider/ParallaxSliderSection'
-import BrandSucceed from '@/components/BrandSucceed/BrandSucceed'
+
 import FooterTop from '@/components/FooterTop/FooterTop'
 import ClientsLogo from '@/components/ClientLogos/ClientLogos'
 import TextSlider from '@/components/TextSlider/TextSlider'
 import Slider from '@/components/ClientLogos/Slider'
+import StickyImageSections from '@/components/BrandSucceed/StickyImageSections'
 const page = () => {
   return (
     <>
@@ -20,7 +21,9 @@ const page = () => {
 
          <ClientsLogo />
           
-       {/* <BrandSucceed/>  */}
+       <div className='bg-white'>
+        <StickyImageSections/> 
+       </div>
        <FooterTop/>
        <TextSlider/>
     </>

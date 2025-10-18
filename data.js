@@ -33,27 +33,21 @@ export const projects = [
 
 export const ClientsLogo = [
   { src: "/ClientsLogo/logos/Aref-Black.png", alt: "Logo 1" },
-   { src: "/ClientsLogo/logos/FJH-Black.png", alt: "Logo 1" },
-   { src: "/ClientsLogo/logos/MFC-Black.png", alt: "Logo 1" },
- { src: "/ClientsLogo/logos/NIPA-Black.png", alt: "Logo 1" },
-{ src: "/ClientsLogo/logos/Rastegar-Black.png", alt: "Logo 1" },
-{ src: "/ClientsLogo/logos/SMF-Black.png", alt: "Logo 1" },
+  { src: "/ClientsLogo/logos/FJH-Black.png", alt: "Logo 1" },
+  { src: "/ClientsLogo/logos/MFC-Black.png", alt: "Logo 1" },
+  { src: "/ClientsLogo/logos/NIPA-Black.png", alt: "Logo 1" },
+  { src: "/ClientsLogo/logos/Rastegar-Black.png", alt: "Logo 1" },
+  { src: "/ClientsLogo/logos/SMF-Black.png", alt: "Logo 1" },
   { src: "/ClientsLogo/logos/Sporcle-Black.png", alt: "Logo 1" },
-
   { src: "/ClientsLogo/logos/Atams-Black.png", alt: "Logo 1" },
   { src: "/ClientsLogo/logos/Boost-Black.png", alt: "Logo 1" },
   { src: "/ClientsLogo/logos/BPI-Black.png", alt: "Logo 1" },
-
   { src: "/ClientsLogo/logos/F-Black.png", alt: "Logo 1" },
- 
   { src: "/ClientsLogo/logos/Gravy-Stack-Black.png", alt: "Logo 1" },
   { src: "/ClientsLogo/logos/GT-Black.png", alt: "Logo 1" },
   { src: "/ClientsLogo/logos/Infuse-Black.png", alt: "Logo 1" },
- 
   { src: "/ClientsLogo/logos/OSAS-Black.png", alt: "Logo 1" },
-  
   { src: "/ClientsLogo/logos/SC-Black.png", alt: "Logo 1" },
-
 ];
 
 
@@ -87,8 +81,6 @@ export const tabsData = [
       "https://assets-global.website-files.com/65ae37af356fab4845432048/65be104f9aba74d774b7f4a3_Yoda-Exploded-50-transcode.mp4",
   },
 ];
-
-
 
 
 export const images = [

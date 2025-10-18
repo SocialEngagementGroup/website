@@ -1,0 +1,45 @@
+.scroll-sticky-section {
+  scroll-behavior: smooth;
+}
+
+.scroll-sticky-section img:hover {
+  transform: scale(1.02);
+}
+
+.scroll-sticky-section .content-box {
+  transition: all 0.3s ease;
+}
+
+.scroll-sticky-section .content-box:hover {
+  transform: translateY(-5px);
+}
+.giftext{
+  width: 90%;
+}
+.scroll-sticky-section button {
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .scroll-sticky-section {
+    flex-direction: column;
+  }
+.giftext{
+  width: 100%;
+}
+  .scroll-sticky-section img {
+    height: 50vh !important;
+  }
+
+}
+.gifimagemobile{
+ display: none
+}
+@media (max-width: 768px) {
+.gifimagemobile{
+ display: block;
+}
+  .gifimage{
+display: none;}
+}
