@@ -6,7 +6,8 @@ import FooterTop from '@/components/FooterTop/FooterTop'
 import ClientsLogo from '@/components/ClientLogos/ClientLogos'
 import TextSlider from '@/components/TextSlider/TextSlider'
 import Slider from '@/components/ClientLogos/Slider'
-import StickyImageSections from '@/components/BrandSucceed/StickyImageSections'
+
+import BrandingSection from '@/components/BrandSucceed/BrandingSection'
 const page = () => {
   return (
     <>
@@ -22,7 +23,7 @@ const page = () => {
          <ClientsLogo />
           
        <div className='bg-white'>
-        <StickyImageSections/> 
+       <BrandingSection/>
        </div>
        <FooterTop/>
        <TextSlider/>

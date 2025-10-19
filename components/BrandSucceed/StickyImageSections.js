@@ -11,6 +11,7 @@ import a3 from "./Animgif/a3.png";
 import a4 from "./Animgif/a4.png";
 
 import "./ScrollStickySections.css";
+import SectionTitle from "../SectionTitle/SectionTitle";
 
 // Sections data
 const sections = [
@@ -43,7 +44,7 @@ const sections = [
 // ✅ Child component for each section
 const SectionItem = ({ section, setActiveImage }) => {
   const { ref } = useInView({
-    threshold: 0.5,
+    threshold: 0.8,
     triggerOnce: false,
     onChange: (inView) => {
       if (inView) setActiveImage(section.image);
@@ -68,8 +69,7 @@ const SectionItem = ({ section, setActiveImage }) => {
         <Image
           src={section.image}
           alt={section.button}
-          width={300}
-          height={300}
+
           className="object-cover rounded-2xl shadow-xl"
           priority
         />
@@ -82,9 +82,10 @@ const ScrollStickySections = () => {
   const [activeImage, setActiveImage] = useState(sections[0].image);
 
   return (
-    <section className="scroll-sticky-section flex flex-col md:flex-row container mx-auto px-6 py-20 gap-10 w-[70%]">
+    <section className="scroll-sticky-section flex flex-col md:flex-row container mx-auto px-6  gap-10">
+
       {/* Left Side: Sections */}
-      <div className="flex flex-col md:w-1/2 space-y-[0vh] md:space-y-[60vh]">
+      <div className="flex flex-col md:w-1/2 space-y-[0vh] md:space-y-[60vh] mt-20">
         {sections.map((section, index) => (
           <SectionItem
             key={index}
@@ -100,10 +101,11 @@ const ScrollStickySections = () => {
           <Image
             src={activeImage}
             alt="Active Section"
-            width={400}
-            height={400}
-            className="aspect-square object-cover rounded-2xl shadow-xl"
+            width={500}
+            height={500}
+            className="aspect-square object-contain"
             priority
+            unoptimized 
           />
         </div>
       </div>

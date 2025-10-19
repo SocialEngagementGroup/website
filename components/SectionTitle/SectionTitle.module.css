@@ -38,12 +38,14 @@
   font-weight: 700;
   font-style: normal;
   width: 600px !important;
+  margin: auto;
 }
 
 .sectionTitle2{
  font-family: "Inter", sans-serif;
   font-weight: 700;
   font-style: normal;
+  margin: auto;
 
 }
 @media only screen and (max-width: 767px) {
