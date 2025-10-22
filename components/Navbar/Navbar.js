@@ -9,7 +9,7 @@ export default function Navbar() {
   // Sticky navbar scroll logic
   useEffect(() => {
     const handleScroll = () => {
-      setIsSticky(window.scrollY > 50);
+      setIsSticky(window.scrollY > 20);
     };
 
     handleScroll(); // initial call
@@ -19,11 +19,15 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-[999] transition-all duration-500 ${
-        isSticky ? "bg-black shadow-md py-3" : "bg-transparent py-5"
+      className={`fixed left-1/2 -translate-x-1/2 z-[999] transition-all duration-500 ${
+        isSticky
+          ? "bg-black shadow-md w-[91%] top-[20px] py-3 rounded-2xl px-2 sm:px-5"
+          : "bg-transparent w-full top-0 py-5 px-3 sm:px-22"
       }`}
     >
-      <div className="container-fluid mx-auto px-3 sm:px-10">
+      <div
+        className={`container-fluid mx-auto  transition-all duration-500`}
+      >
         <div className="flex flex-wrap items-center justify-between">
 
           {/* Logo */}

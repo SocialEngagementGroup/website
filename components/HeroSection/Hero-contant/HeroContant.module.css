@@ -3,7 +3,7 @@
 /* ---------- Hero Content Container ---------- */
 .heroContent {
   position: absolute;
-  left: 45px;
+  left: 96px;
   z-index: 111;
 }
 
@@ -13,14 +13,14 @@
   font-weight: 700;
   font-style: normal;
   letter-spacing: 0;
-  font-size: 80px;
-  line-height: 95px;
+  font-size: 64px;
+  line-height: 80px;
   color: #ffffff;
 }
 
 /* ---------- Hero Subtext ---------- */
 .heroSubtext {
-  padding-block: 3rem;
+  padding-block: 2rem;
   font-family: Inter;
   font-weight: 500;
   font-style: normal;

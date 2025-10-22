@@ -4,7 +4,7 @@ import StickyImageSections from '@/components/BrandSucceed/StickyImageSections'
 
 const BrandingSection = () => {
   return (
-    <div className="flex flex-col items-center justify-center text-center w-full px-4 md:px-0">
+    <div className="flex flex-col items-center justify-center text-center w-full px-4 md:px-0 BrandingSection">
       <div className="w-full md:w-[80%] max-w-5xl">
         <div className="text-center section-title-custom mb-10">
           <SectionTitle

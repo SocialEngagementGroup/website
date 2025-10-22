@@ -25,7 +25,7 @@ const MultiRowSlider = () => {
     <div className={`space-y-4 heroSliderFade${visible ? " visible" : ""}`}>
       {Array.from({ length: rows }).map((_, rowIndex) => {
         const reverse = rowIndex % 2 === 1;
-        const shift = isMobile ? 0 : rowIndex * 50; // no shift on mobile
+        const shift = isMobile ? 0 : rowIndex * 80; // no shift on mobile
 
         return (
           <div
@@ -36,7 +36,7 @@ const MultiRowSlider = () => {
             <Swiper
               modules={[Autoplay]}
               slidesPerView={"auto"}
-              spaceBetween={10}
+              spaceBetween={20}
               loop={true}
               speed={6000}
               autoplay={{
