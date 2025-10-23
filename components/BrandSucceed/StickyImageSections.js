@@ -62,7 +62,7 @@ const SectionItem = ({ section, setActiveImage }) => {
         {section.button}
       </button>
 
-      <p className="text-2xl font-regular text-gray-800 leading-relaxed giftext text-center md:text-left">
+      <p className=" font-regular text-gray-800 leading-relaxed giftext text-center md:text-left">
         {section.title}
       </p>
 
@@ -83,7 +83,7 @@ const ScrollStickySections = () => {
   const [activeImage, setActiveImage] = useState(sections[0].image);
 
   return (
-    <section className="scroll-sticky-section flex flex-col md:flex-row container mx-auto px-6 gap-10">
+    <section className="scroll-sticky-section flex flex-col md:flex-row container mx-auto px-2 md:px-6 gap-10">
       {/* Left Side: Sections */}
       <div className="flex flex-col md:w-1/2 space-y-[0vh] md:space-y-[50vh] mt-20">
         {sections.map((section, index) => (
