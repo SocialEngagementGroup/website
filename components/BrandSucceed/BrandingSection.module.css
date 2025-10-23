@@ -2,6 +2,7 @@
 .customsectiontitle h3{
  width: 100% !important;
   font-size: 48px;
+  line-height: 55px;
 }
 .customsectiontitle h3 span{
 font-family: Lobster;
@@ -9,4 +10,23 @@ font-family: Lobster;
 .customsectiontitle .description{
   width: 100% !important;
   font-size: 18px;
+}
+
+
+@media only screen and (max-width: 512px) {
+  .customsectiontitle h3{
+ width: 100% !important;
+  font-size: 26px !important;
+  line-height: 32px;
+
+  font-weight: bold;
+}
+.customsectiontitle h3 span{
+font-family: Lobster;
+}
+.customsectiontitle .description{
+  width: 100% !important;
+  font-size: 16px;
+}
+
 }

@@ -39,11 +39,11 @@ margin: 80px auto 0 auto;
 }
 
 .innerCard h4{
-font-family: Lobster;
+font-family: Inter;
 font-weight: 400;
 font-style: Regular;
-font-size: 32px;
-line-height: 32PX;
+font-size: 24px;
+  line-height: 35px;
 letter-spacing: 0%;
 width: 90%;
 color: #fff;
@@ -106,3 +106,15 @@ text-transform: capitalize;
 margin: 50px auto 0 auto;
 }
 }
+
+
+
+@media only screen and (max-width: 500px) {
+
+.sliderContainer {
+  width: 100%;
+  max-width: 100%;
+margin: 30px auto 0 auto;
+}
+}
+

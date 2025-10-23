@@ -54,9 +54,7 @@
 
 }
 
-.description{
-  width: 500px !important;
-}
+
 @media only screen and (max-width: 767px) {
 .sectionTitle {
   width: 100% !important;
@@ -77,6 +75,28 @@
 .sectionTitle2{
 
   line-height: 35px;
+
+}
+}
+
+
+@media only screen and (max-width: 500px) {
+  .sectionTitle {
+  line-height: 32px;
+  font-weight: bold;
+  font-size: 22px !important;
+}
+.subTitle{
+  font-size: 20px;
+
+   
+
+}
+.sectionTitle2{
+
+  line-height: 32px;
+  font-weight: bold;
+  font-size: 22px !important;
 
 }
 }

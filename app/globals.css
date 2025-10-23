@@ -198,7 +198,9 @@ code, pre {
 .mySwiper .InnerSlider-module__0Tpkga__innerCard{
   border: 5px solid black;
 }
-
+.mySwiper .InnerSlider-module__0Tpkga__innerCard{
+  height: 275px;
+}
 }
 
 .herobrandlogo .Slider-module__hWZm5a__fade-left {
@@ -237,9 +239,4 @@ code, pre {
 }
 
 
-.section-title-custom h3{
-  line-height: 55px;
-}
-.section-title-custom p{
-  width: 90% !important;
-}
+

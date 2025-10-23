@@ -5,7 +5,7 @@ const SectionTitle = ({ title, subtitle, subtitle2, description, id }) => {
   const headerProps = id ? { "aria-labelledby": id } : {};
 
   return (
-    <header className={`${styles.sectionHeader} px-10`} {...headerProps}>
+    <header className={`${styles.sectionHeader} px-2 md:px-10`} {...headerProps}>
       {/* Main Section Title */}
       {title && (
         <h2 id={id || undefined} className={`${styles.subTitle} text-[#0A0A0A]`}>
