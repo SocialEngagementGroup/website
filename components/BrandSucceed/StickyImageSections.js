@@ -71,7 +71,7 @@ const SectionItem = ({ section, setActiveImage }) => {
         <Image
           src={section.image}
           alt={section.button}
-          className="object-cover rounded-2xl shadow-xl"
+          className="object-cover"
           priority
         />
       </div>

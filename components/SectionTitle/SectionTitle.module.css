@@ -31,6 +31,7 @@
     left: 0;
     transform: none;
   }
+  
 }
 
 .sectionTitle {
@@ -59,17 +60,23 @@
 @media only screen and (max-width: 767px) {
 .sectionTitle {
   width: 100% !important;
-    text-align: center !important;
+  text-align: center !important;
+  line-height: 35px;
 
 }
 .subTitle{
   font-size: 20px;
-    text-align: center !important;
-   margin: auto;
+  text-align: center !important;
+  margin: auto;
    
 
 }
 .description{
   width: 100% !important;
+}
+.sectionTitle2{
+
+  line-height: 35px;
+
 }
 }

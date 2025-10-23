@@ -39,7 +39,7 @@ const InnerSlider = ({ items }) => {
         className={`${styles.sliderWrapper} mySwiper`}
         breakpoints={{
           0: { slidesPerView: 1 },
-                450: { slidesPerView: 2 },
+          450: { slidesPerView: 1 },
           768: { slidesPerView: 3 },
           1024: { slidesPerView: 4 },
  

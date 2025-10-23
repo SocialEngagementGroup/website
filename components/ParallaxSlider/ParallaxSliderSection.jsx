@@ -11,7 +11,7 @@ const ParallaxSliderSection = () => {
       <div className={`${styles.customTextCenter} container-fluid w-[95%] mx-auto pt-10 ClientLogos`}>
         
         {/* 👇 Alignment is handled here */}
-        <div className="text-center md:text-center section-title-custom mt-20">
+        <div className="text-center md:text-center section-title-custom md:mt-20 mt-0">
           <SectionTitle
             id="what-we-do"
             title="What We Do"

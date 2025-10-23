@@ -6,7 +6,7 @@ const ClientLogos = () => {
   return (
     <section className={`${style.ClientLogos} py-14`}>
       {/* 👇 Alignment handled here — center on mobile, left on large screens */}
-      <div className="text-center w-[95%] mx-auto py-15">
+      <div className="text-center w-[95%] mx-auto py-0 md:py-15">
         <SectionTitle
           id="our-clients"
           title="Our Clients"

@@ -212,3 +212,34 @@ code, pre {
 }
 
 
+
+
+
+
+@media only screen and (max-width: 1180px) {
+  .global-navbar {
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .global-navbar .navlink a {
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .global-navbar .Contact-btn {
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+
+.section-title-custom h3{
+  line-height: 55px;
+}
+.section-title-custom p{
+  width: 90% !important;
+}
