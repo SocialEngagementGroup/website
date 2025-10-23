@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed left-1/2 -translate-x-1/2 z-[999] transition-all duration-500 ${
+      className={`fixed inset-x-0 mx-auto z-[999] transition-all duration-500 ${
         isSticky
           ? "bg-black shadow-md w-[91%] top-[20px] py-3 rounded-2xl px-2 sm:px-5"
           : "bg-transparent w-full top-0 py-5 px-3 sm:px-22"
@@ -46,7 +46,7 @@ export default function Navbar() {
           <div className="flex md:order-2 items-center">
             <button
               onClick={() => (window.location.href = "#")}
-              className={`border font-bold font-sans text-[18px] rounded-[14px] cursor-pointer md:py-1.5 pb-1.5 pt-1.5 px-6 md:px-8 transition
+              className={`border font-bold font-sans text-[18px] rounded-[14px] cursor-pointer md:py-1.5 pb-1.5 pt-1.5 px-3 md:px-8 transition
                 ${
                   isSticky
                     ? "border-white text-white"

@@ -1,0 +1,12 @@
+
+.customsectiontitle h3{
+ width: 100% !important;
+  font-size: 48px;
+}
+.customsectiontitle h3 span{
+font-family: Lobster;
+}
+.customsectiontitle .description{
+  width: 100% !important;
+  font-size: 18px;
+}

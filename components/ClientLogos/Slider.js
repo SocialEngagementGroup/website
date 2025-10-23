@@ -4,7 +4,7 @@ import styles from "./Slider.module.css";
 
 const LogoMarquee = ({ speed = 100 }) => {
   return (
-    <div className="w-full pt-8 relative">
+    <div className="w-full pt-4 pb-12 relative">
       <div className={styles["marquee-wrapper"]}>
         <div
           className={styles.marquee}

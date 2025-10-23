@@ -39,12 +39,14 @@ const sections = [
       "Your launch isn’t the finish line — it’s the beginning. We ensure your campaigns perform flawlessly and keep growing after day one.",
     image: a4,
   },
+  
 ];
 
 // ✅ Child component for each section
 const SectionItem = ({ section, setActiveImage }) => {
   const { ref } = useInView({
-    threshold: 0.8,
+    threshold: 0,
+    rootMargin: "-40% 0px -60% 0px", // Trigger when section is roughly centered
     triggerOnce: false,
     onChange: (inView) => {
       if (inView) setActiveImage(section.image);
@@ -54,7 +56,7 @@ const SectionItem = ({ section, setActiveImage }) => {
   return (
     <div
       ref={ref}
-      className="content-box bg-white rounded-2xl space-y-5 transition-all duration-300 giftitle flex flex-col items-center md:items-start"
+      className="content-box  rounded-2xl space-y-5 transition-all duration-300 giftitle flex flex-col items-center md:items-start"
     >
       <button className="px-5 py-2 rounded-full text-sm uppercase tracking-wide bg-[#D9D9D9] text-black transition-all">
         {section.button}
@@ -69,7 +71,6 @@ const SectionItem = ({ section, setActiveImage }) => {
         <Image
           src={section.image}
           alt={section.button}
-
           className="object-cover rounded-2xl shadow-xl"
           priority
         />
@@ -82,10 +83,9 @@ const ScrollStickySections = () => {
   const [activeImage, setActiveImage] = useState(sections[0].image);
 
   return (
-    <section className="scroll-sticky-section flex flex-col md:flex-row container mx-auto px-6  gap-10">
-
+    <section className="scroll-sticky-section flex flex-col md:flex-row container mx-auto px-6 gap-10">
       {/* Left Side: Sections */}
-      <div className="flex flex-col md:w-1/2 space-y-[0vh] md:space-y-[60vh] mt-20">
+      <div className="flex flex-col md:w-1/2 space-y-[0vh] md:space-y-[50vh] mt-20">
         {sections.map((section, index) => (
           <SectionItem
             key={index}
@@ -105,7 +105,7 @@ const ScrollStickySections = () => {
             height={500}
             className="aspect-square object-contain"
             priority
-            unoptimized 
+            unoptimized
           />
         </div>
       </div>

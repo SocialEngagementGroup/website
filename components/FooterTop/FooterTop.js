@@ -8,7 +8,7 @@ const FooterTop = () => {
   return (
     <section className={styles.wrapper}>
       <div className={styles.container}>
-        <div className="container-fluid mx-auto w-full">
+        <div className="container-fluid mx-auto w-[90%]">
           {/* Custom breakpoint at 1135px */}
           <div className="grid grid-cols-1 gap-4 [@media(min-width:1135px)]:grid-cols-[65%_35%] [@media(min-width:1135px)]:gap-10 justify-center items-center">
             <div>
