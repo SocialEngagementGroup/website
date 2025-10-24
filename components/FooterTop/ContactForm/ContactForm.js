@@ -32,7 +32,7 @@ const ContactForm = () => {
   };
 
   return (
-       <div className=" backdrop-blur-md bg-black/40  rounded-xl border-4 border-gray-700 shadow-lg p-8">
+       <div className=" backdrop-blur-md bg-black/40  rounded-xl border-4 border-gray-700 shadow-lg p-12">
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-4">
           {/* Name */}
           <div>
@@ -62,19 +62,18 @@ const ContactForm = () => {
               type="email"
               placeholder="Email Address*"
               {...register("email")}
-              className="w-full bg-transparent border border-gray-500 text-gray-100 placeholder-gray-400 rounded-md px-3 py-2 focus:outline-none focus:border-[#c43b3b] transition-all duration-200"
+              className="w-full bg-transparent border border-gray-500 text-gray-100 placeholder-gray-400 rounded-md px-3 py-3 focus:outline-none focus:border-[#c43b3b] transition-all duration-200"
             />
             <p className="text-red-400 text-sm mt-1">{errors.email?.message}</p>
           </div>
 
           {/* Message */}
           <div>
-            <textarea
-              placeholder="Your Message*"
-              {...register("message")}
-              rows={4}
-              className="w-full bg-transparent border border-gray-500 text-gray-100 placeholder-gray-400 rounded-md px-3 py-2 focus:outline-none focus:border-[#c43b3b] transition-all duration-200"
-            />
+          <textarea
+  placeholder="Your Message*"
+  {...register("message")}
+  className="w-full textarea min-h-[172px] resize-none bg-transparent border border-gray-500 text-gray-100 placeholder-gray-400 rounded-md px-3 py-3 focus:outline-none focus:border-[#c43b3b] transition-all duration-200"
+/>
             <p className="text-red-400 text-sm mt-1">{errors.message?.message}</p>
           </div>
 

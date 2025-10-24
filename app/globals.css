@@ -240,3 +240,70 @@ code, pre {
 
 
 
+@media only screen and (max-width: 1464px) {
+
+.ContactInfo-module__DdFXoW__contentboxInner.border-4.border-gray-700.relative.p-13.rounded-\[20px\].shadow-lg.mx-auto {
+  padding: 30px !important;
+}
+  
+.backdrop-blur-md.bg-black\/40.rounded-xl.border-4.border-gray-700.shadow-lg.p-12 {
+  padding: 30px !important;
+}
+  .BoxTitle-module__dnR0AG__title {
+    line-height: 55px !important;
+    font-size: 50px !important;
+}
+}
+
+
+
+@media only screen and (max-width: 1464px) {
+  .textarea{
+  min-height: 116px;
+  }
+}
+
+@media only screen and (max-width: 1332px) {
+   .textarea{
+  min-height: 164px;
+  }
+}
+
+@media only screen and (max-width: 1290px) {
+   .textarea{
+  min-height: 148px;
+  }
+}
+
+
+
+
+
+@media only screen and (max-width: 1145px) {
+
+  .BoxTitle-module__dnR0AG__title {
+    line-height: 55px !important;
+    font-size: 40px !important;
+}
+}
+
+
+
+
+
+@media only screen and (max-width: 500px) {
+  
+.BoxTitle-module__dnR0AG__title {
+  font-size: 32px !important;
+    line-height: 45px !important;
+}
+.BoxTitle-module__dnR0AG__decoration {
+  margin-top: 20px;
+}
+.ContactInfo-module__DdFXoW__contentboxInner.border-4.border-gray-700.relative.p-13.rounded-\[20px\].shadow-lg.mx-auto {
+  padding: 20px !important;
+}
+  .grid.grid-cols-1.sm\:grid-cols-2.gap-6.mt-5.w-\[90\%\] {
+    width: 100%;
+}
+}

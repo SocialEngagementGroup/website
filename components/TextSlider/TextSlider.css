@@ -32,3 +32,15 @@
  background: #232326;
 
 }
+
+@media only screen and (max-width: 500px) {
+.textslide h5{
+ font-size:64px;
+}
+.consultant-btn{
+  width: 180px;
+  height: 40px;
+  font-size: 14px;
+}
+}
+

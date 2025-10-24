@@ -6,15 +6,15 @@ import style from "./ContactInfo.module.css";
 
 const ContactInfo = () => {
   return (
-    <div className={`${style.contentbox} container-fluid mx-auto backdrop-blur-md`}>
+    <div className={`${style.contentbox} container-fluid mx-auto backdrop-blur-md rounded-[20px]`}>
       <div
-        className={`${style.contentboxInner} border-4 border-gray-700 relative p-9 rounded-[20px] shadow-lg mx-auto`}
+        className={`${style.contentboxInner} border-4 border-gray-700 relative p-13 rounded-[20px] shadow-lg mx-auto`}
       >
         {/* Section Title */}
         <BoxTitle />
 
         {/* Flex container for Call & Email Boxes */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-5 w-[90%]">
 
           {/* Call Box */}
           <div
