@@ -7,7 +7,7 @@ import Vdo from "@/components/Vdo/Vdo";
 
 const ParallaxSliderSection = () => {
   return (
-    <section className={`${styles.parallaxSection}`}>
+    <section id="services" className={`${styles.parallaxSection}`}>
       <div className={`${styles.customTextCenter} container-fluid w-[95%] mx-auto pt-10 ClientLogos`}>
         
         {/* 👇 Alignment is handled here */}

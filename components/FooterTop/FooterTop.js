@@ -6,7 +6,7 @@ import Copyright from "../Copyright/Copyright";
 
 const FooterTop = () => {
   return (
-    <section className={styles.wrapper}>
+    <section id="contact" className={styles.wrapper}>
       <div className={styles.container}>
         <div className="container-fluid mx-auto w-[90%]">
           {/* Custom breakpoint at 1135px */}

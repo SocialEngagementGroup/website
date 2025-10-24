@@ -4,7 +4,7 @@ import Slider from "./Slider";
 import style from "./ClientLogos.module.css";
 const ClientLogos = () => {
   return (
-    <section className={`${style.ClientLogos} py-14`}>
+    <section id="clients" className={`${style.ClientLogos} py-14`}>
       {/* 👇 Alignment handled here — center on mobile, left on large screens */}
       <div className="text-center w-[95%] mx-auto py-0 md:py-15">
         <SectionTitle

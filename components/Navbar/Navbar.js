@@ -32,7 +32,7 @@ export default function Navbar() {
 
           {/* Logo */}
           <a href="#" className="flex items-center space-x-3">
-            <div className="relative w-[45px] h-[45px] md:w-[60px] md:h-[60px]">
+            <div className="relative w-[45px] h-[42px] md:w-[60px] md:h-[42px]">
               <Image
                 src="/SiteLogo/seg.png"
                 alt="Site Logo"
@@ -98,27 +98,26 @@ export default function Navbar() {
             } w-full md:flex md:w-auto md:order-1 items-center justify-between transition-all duration-500 md:bg-transparent`}
           >
             <ul
-              className={`navlink flex flex-col p-4 md:p-0 border border-gray-700 md:border-0 rounded-lg md:flex-row md:space-x-10 md:mt-0 mt-5 
-              ${isOpen ? "bg-black md:bg-transparent" : "bg-transparent"}`}
-            >
-              {[
-                "Home",
-                "About",
-                "Services",
-                "Industries",
-                "Case Studies",
-                "Insights",
-              ].map((link) => (
-                <li key={link}>
-                  <a
-                    href="#"
-                    className="block py-2 px-3 text-white rounded-sm md:bg-transparent md:text-white md:p-0 font-sans font-bold text-[16px] md:text-[20px] hover:text-gray-300 transition"
-                  >
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
+  className={`navlink flex flex-col p-4 md:p-0 border border-gray-700 md:border-0 rounded-lg md:flex-row md:space-x-10 md:mt-0 mt-5 
+  ${isOpen ? "bg-black md:bg-transparent" : "bg-transparent"}`}
+>
+  {[
+    { name: "Home", href: "#" },
+    { name: "Services", href: "#services" },
+    { name: "Clients", href: "#clients" },
+    { name: "About Us", href: "#aboutUs" },
+    { name: "Contact", href: "#contact" },
+  ].map((link) => (
+    <li key={link.name}>
+      <a
+        href={link.href}
+        className="block py-2 px-3 text-white rounded-sm md:bg-transparent md:text-white md:p-0 font-sans font-bold text-[16px] md:text-[20px] hover:text-gray-300 transition"
+      >
+        {link.name}
+      </a>
+    </li>
+  ))}
+</ul>
           </div>
         </div>
       </div>

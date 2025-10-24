@@ -58,15 +58,7 @@ const SectionItem = ({ section, setActiveImage }) => {
       ref={ref}
       className="content-box  rounded-2xl space-y-5 transition-all duration-300 giftitle flex flex-col items-center md:items-start"
     >
-      <button className="px-5 py-2 rounded-full text-sm uppercase tracking-wide bg-[#D9D9D9] text-black transition-all">
-        {section.button}
-      </button>
-
-      <p className=" font-regular text-gray-800 leading-relaxed giftext text-center md:text-left">
-        {section.title}
-      </p>
-
-      {/* Mobile image below title */}
+        {/* Mobile image below title */}
       <div className="md:hidden w-full flex justify-center mt-4">
         <Image
           src={section.image}
@@ -75,6 +67,21 @@ const SectionItem = ({ section, setActiveImage }) => {
           priority
         />
       </div>
+ {/* Desktop button */}
+<button className="hidden md:inline-block branding-btn-dsk px-5 py-2 rounded-full text-sm uppercase tracking-wide bg-[#D9D9D9] text-black transition-all">
+  {section.button}
+</button>
+
+<p className="font-regular text-gray-800 leading-relaxed giftext text-center md:text-left">
+  {section.title}
+</p>
+
+{/* Mobile button */}
+<button className="inline-block md:hidden branding-btn-mob px-5 py-2 rounded-full text-sm uppercase tracking-wide bg-[#D9D9D9] text-black transition-all">
+  {section.button}
+</button>
+
+    
     </div>
   );
 };
