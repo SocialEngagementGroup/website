@@ -6,7 +6,7 @@ import style from "./ContactInfo.module.css";
 
 const ContactInfo = () => {
   return (
-    <div className={`${style.contentbox} container-fluid mx-auto backdrop-blur-md rounded-[20px]`}>
+    <div className={`${style.contentbox} container-fluid mx-auto backdrop-blur-md bg-black/40 rounded-[20px]`}>
       <div
         className={`${style.contentboxInner} border-4 border-gray-700 relative p-13 rounded-[20px] shadow-lg mx-auto`}
       >

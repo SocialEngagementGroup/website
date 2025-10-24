@@ -11,7 +11,7 @@ import a3 from "./Animgif/a3.png";
 import a4 from "./Animgif/a4.png";
 
 import "./ScrollStickySections.css";
-import SectionTitle from "../SectionTitle/SectionTitle";
+import { motion, AnimatePresence } from "framer-motion";
 
 // Sections data
 const sections = [
@@ -39,7 +39,7 @@ const sections = [
       "Your launch isn’t the finish line — it’s the beginning. We ensure your campaigns perform flawlessly and keep growing after day one.",
     image: a4,
   },
-  
+
 ];
 
 // ✅ Child component for each section
@@ -58,7 +58,7 @@ const SectionItem = ({ section, setActiveImage }) => {
       ref={ref}
       className="content-box  rounded-2xl space-y-5 transition-all duration-300 giftitle flex flex-col items-center md:items-start"
     >
-        {/* Mobile image below title */}
+      {/* Mobile image below title */}
       <div className="md:hidden w-full flex justify-center mt-4">
         <Image
           src={section.image}
@@ -67,21 +67,21 @@ const SectionItem = ({ section, setActiveImage }) => {
           priority
         />
       </div>
- {/* Desktop button */}
-<button className="hidden md:inline-block branding-btn-dsk px-5 py-2 rounded-full text-sm uppercase tracking-wide bg-[#D9D9D9] text-black transition-all">
-  {section.button}
-</button>
+      {/* Desktop button */}
+      <button className="hidden md:inline-block branding-btn-dsk px-5 py-2 rounded-full text-sm uppercase tracking-wide bg-[#D9D9D9] text-black transition-all">
+        {section.button}
+      </button>
 
-<p className="font-regular text-gray-800 leading-relaxed giftext text-center md:text-left">
-  {section.title}
-</p>
+      <p className="font-regular text-gray-800 leading-relaxed giftext text-center md:text-left">
+        {section.title}
+      </p>
 
-{/* Mobile button */}
-<button className="inline-block md:hidden branding-btn-mob px-5 py-2 rounded-full text-sm uppercase tracking-wide bg-[#D9D9D9] text-black transition-all">
-  {section.button}
-</button>
+      {/* Mobile button */}
+      <button className="inline-block md:hidden branding-btn-mob px-5 py-2 rounded-full text-sm uppercase tracking-wide bg-[#D9D9D9] text-black transition-all">
+        {section.button}
+      </button>
 
-    
+
     </div>
   );
 };
@@ -103,19 +103,35 @@ const ScrollStickySections = () => {
       </div>
 
       {/* Right Side: Sticky Image */}
+      {/* Right Side: Sticky Image */}
+      {/* Right Side: Sticky Image */}
       <div className="md:w-1/2 relative">
-        <div className="sticky mx-auto top-24 transition-all duration-700 gifimage">
-          <Image
-            src={activeImage}
-            alt="Active Section"
-            width={500}
-            height={500}
-            className="aspect-square object-contain"
-            priority
-            unoptimized
-          />
+        <div className="sticky top-24 flex justify-center items-center gifimage">
+          <div className="w-full h-full relative">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeImage.src}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+                className="w-full flex justify-center"
+              >
+                <Image
+                  src={activeImage}
+                  alt="Active Section"
+                  width={500}
+                  height={500}
+                  className="aspect-square object-contain"
+                  priority
+                  unoptimized
+                />
+              </motion.div>
+            </AnimatePresence>
+          </div>
         </div>
       </div>
+
     </section>
   );
 };

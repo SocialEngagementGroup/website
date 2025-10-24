@@ -11,7 +11,7 @@ const FooterTop = () => {
         <div className="container-fluid mx-auto w-[90%]">
           {/* Custom breakpoint at 1135px */}
 
-          <div className="grid grid-cols-1 gap-4 [@media(min-width:1135px)]:grid-cols-[65%_35%] [@media(min-width:1135px)]:gap-10 items-stretch">
+          <div className="grid grid-cols-1 gap-4 [@media(min-width:1135px)]:grid-cols-[65%_32%] [@media(min-width:1135px)]:gap-10 items-stretch">
             <div >
               <ContactInfo />
             </div>

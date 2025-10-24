@@ -49,8 +49,8 @@ export default function Navbar() {
               className={`Contact-btn border font-bold font-sans text-[18px] rounded-[14px] cursor-pointer md:py-1.5 pb-1.5 pt-1.5 px-3 md:px-8 transition
                 ${
                   isSticky
-                    ? "border-white text-white"
-                    : "border-white text-white md:bg-white md:text-black hover:bg-white hover:text-black"
+                    ? "border-white text-black bg-white"
+                    : "border-white text-white md:bg-white md:text-black hover:bg-white hover:text-black "
                 }
               `}
             >
