@@ -92,7 +92,7 @@ const ScrollStickySections = () => {
   return (
     <section className="scroll-sticky-section flex flex-col md:flex-row container mx-auto px-2 md:px-6 gap-10">
       {/* Left Side: Sections */}
-      <div className="flex flex-col md:w-1/2 space-y-[0vh] md:space-y-[50vh] mt-20">
+      <div className="flex flex-col md:w-1/2 space-y-[0vh] md:space-y-[50vh] mt-0 md:mt-20">
         {sections.map((section, index) => (
           <SectionItem
             key={index}

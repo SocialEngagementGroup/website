@@ -45,7 +45,7 @@ export default function Navbar() {
           {/* Contact + Hamburger */}
           <div className="flex md:order-2 items-center">
             <button
-              onClick={() => (window.location.href = "#")}
+              onClick={() => (window.location.href = "#contact")}
               className={`Contact-btn border font-bold font-sans text-[18px] rounded-[14px] cursor-pointer md:py-1.5 pb-1.5 pt-1.5 px-3 md:px-8 transition
                 ${
                   isSticky
@@ -106,7 +106,7 @@ export default function Navbar() {
     { name: "Services", href: "#services" },
     { name: "Clients", href: "#clients" },
     { name: "About Us", href: "#aboutUs" },
-    { name: "Contact", href: "#contact" },
+    { name: "Contact", href: "#" },
   ].map((link) => (
     <li key={link.name}>
       <a

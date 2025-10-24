@@ -296,11 +296,11 @@ code, pre {
 @media only screen and (max-width: 500px) {
   
 .BoxTitle-module__dnR0AG__title {
-  font-size: 32px !important;
-    line-height: 45px !important;
+  font-size: 26px !important;
+    line-height: 32px !important;
 }
 .BoxTitle-module__dnR0AG__decoration {
-  margin-top: 20px;
+  margin-top: 18px !important;
 }
 .ContactInfo-module__DdFXoW__contentboxInner.border-4.border-gray-700.relative.p-13.rounded-\[20px\].shadow-lg.mx-auto {
   padding: 20px !important;
