@@ -36,9 +36,9 @@
     --foreground: #ededed;
   }
 }
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 /* =========================================================
    Global Styles
