@@ -106,7 +106,7 @@ export default function Navbar() {
     { name: "Services", href: "#services" },
     { name: "Clients", href: "#clients" },
     { name: "About Us", href: "#aboutUs" },
-    { name: "Contact", href: "#" },
+    { name: "Contact with us", href: "#" },
   ].map((link) => (
     <li key={link.name}>
       <a
