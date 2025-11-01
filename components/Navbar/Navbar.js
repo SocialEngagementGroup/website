@@ -21,7 +21,7 @@ export default function Navbar() {
     <nav
       className={`fixed inset-x-0 mx-auto z-[999] transition-all duration-500 global-navbar ${
         isSticky
-          ? "bg-black shadow-md w-[91%] top-[20px] py-3 rounded-2xl px-2 sm:px-5"
+          ? " bg-glass shadow-md w-[91%] top-[20px] py-3 rounded-2xl px-2 sm:px-5"
           : "bg-transparent w-full top-0 py-5 px-3 sm:px-22"
       }`}
     >
@@ -105,8 +105,7 @@ export default function Navbar() {
     { name: "Home", href: "#" },
     { name: "Services", href: "#services" },
     { name: "Clients", href: "#clients" },
-    { name: "About Us", href: "#aboutUs" },
-    { name: "Contact with us", href: "#" },
+    { name: "About Us test", href: "#aboutUs" },
   ].map((link) => (
     <li key={link.name}>
       <a
