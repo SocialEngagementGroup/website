@@ -46,7 +46,7 @@ const sections = [
 const SectionItem = ({ section, setActiveImage }) => {
   const { ref } = useInView({
     threshold: 0,
-    rootMargin: "-40% 0px -60% 0px", // Trigger when section is roughly centered
+    rootMargin: "-40% 0px -40% 0px", // Trigger when section is roughly centered
     triggerOnce: false,
     onChange: (inView) => {
       if (inView) setActiveImage(section.image);
@@ -92,7 +92,7 @@ const ScrollStickySections = () => {
   return (
     <section className="scroll-sticky-section flex flex-col md:flex-row container mx-auto px-2 md:px-6 gap-10">
       {/* Left Side: Sections */}
-      <div className="flex flex-col md:w-1/2 space-y-[0vh] md:space-y-[50vh] mt-0 md:mt-20">
+      <div className="flex flex-col md:w-1/2 space-y-[0vh] md:space-y-[50vh] mt-0 md:mt-20 pb-35">
         {sections.map((section, index) => (
           <SectionItem
             key={index}
@@ -106,7 +106,7 @@ const ScrollStickySections = () => {
       {/* Right Side: Sticky Image */}
       {/* Right Side: Sticky Image */}
       <div className="md:w-1/2 relative">
-        <div className="sticky top-24 flex justify-center items-center gifimage">
+        <div className="sticky top-60 flex justify-center items-center gifimage">
           <div className="w-full h-full relative">
             <AnimatePresence mode="wait">
               <motion.div
