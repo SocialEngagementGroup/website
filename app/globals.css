@@ -90,6 +90,27 @@ code, pre {
 
 }
 
+
+
+
+
+ .customSwiperSlideShadow{
+  position: relative;
+}
+.customSwiperSlideShadow:after{
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: -100px;
+  width: 20%;
+  height: 100%;
+background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #232326 25%, #232326 75%, rgba(0, 0, 0, 0) 100%);
+  z-index: 1;
+}
+
+
+
 .custom-shadow::after {
   content: "";
   pointer-events: none;
@@ -153,13 +174,6 @@ code, pre {
 
 .mySwiper .InnerSlider-module__0Tpkga__innerCard {
   
-  background: linear-gradient(
-    180deg,          /* direction: top → bottom */
-    rgba(0, 0, 0, 0.6) 0%,   /* darker at top */
-    rgba(0, 0, 0, 0.2) 60%,  /* lighter in middle */
-    rgba(0, 0, 0, 0) 100%    /* fully transparent at bottom */
-  );
-  position: relative;
   text-align: center;
   height: 350px;
   width: 100%;
@@ -168,10 +182,10 @@ code, pre {
   align-items: center;
   justify-content: center;
   transition: box-shadow 0.3s ease;
-   border:10px solid black;
+  border:10px solid black;
   border-radius: 20px;
   /* Background and glass effect */
-  background-image: url('/bg/slider-bg.jpg');
+  background-image: url('/bg/innersliderbg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -180,19 +194,7 @@ code, pre {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.mySwiper .InnerSlider-module__0Tpkga__innerCard:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 102%;
-  /* Darker gradient overlay */
-   background: linear-gradient(rgba(0, 0, 0, 0.97) 0%, rgba(0, 0, 0, 0.61) 60%, rgb(0, 0, 0) 100%);
-  z-index: 1;
-  pointer-events: none;
- 
-}
+
 @media only screen and (max-width: 500px) {
 .mySwiper .InnerSlider-module__0Tpkga__innerCard{
   border: 5px solid black;

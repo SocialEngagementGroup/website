@@ -11,7 +11,7 @@ const HeroContant = () => {
           the noise
         </h1>
 
-        <p className={`${styles.heroSubtext} text-lg text-gray-300 max-w-xl text-center md:text-start`}>
+        <p className={`${styles.heroSubtext} text-gray-300 max-w-xl text-center md:text-start`}>
           From startups to enterprise, we help brands break barriers with
           tailored ad strategies, striking visuals, and data-driven results.
         </p>
