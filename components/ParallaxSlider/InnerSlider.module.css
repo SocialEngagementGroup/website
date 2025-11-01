@@ -16,6 +16,7 @@ margin: 80px auto 0 auto;
 .innerCard * {
   position: relative;
   z-index: 2;
+  
 }
 
 /* Hover animation */
@@ -35,6 +36,7 @@ margin: 80px auto 0 auto;
 
 .innerCard img{
   max-width: 180px;
+  
 
 }
 
@@ -118,3 +120,64 @@ margin: 30px auto 0 auto;
 }
 }
 
+
+
+
+/* InnerSlider.module.css */
+
+.sliderContainer {
+    position: relative; 
+    /* The arrows will be placed relative to this boundary */
+    /* Remove any horizontal padding here if you want arrows to hug the screen edge */
+}
+
+/* ⚠️ Ensure you do NOT have any padding left/right on .sliderContainer if you want the arrows completely at the edge. 
+   If you DO have padding, set the left/right properties below to match the negative of the padding value. */
+
+/* Base style for both custom arrows */
+.customArrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    color:#e3d3cc;  
+    background-image: url('/bg/innersliderbg.png');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid #e3d3cc;
+    border-radius: 10%; 
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+
+
+
+.customArrow:hover {
+    background-color: #f0f0f0;
+}
+
+/* --- Positioning the arrows --- */
+
+.swiperButtonPrev {
+    /* Pushes the arrow container flush with the left edge of .sliderContainer */
+    left: -46px; 
+}
+
+.swiperButtonNext {
+    /* Pushes the arrow container flush with the right edge of .sliderContainer */
+    right: -46px;  
+}
+
+/* OPTIONAL: Hide Swiper's default arrows if they somehow still appear */
+:global(.swiper-button-prev),
+:global(.swiper-button-next) {
+    display: none !important;
+}
