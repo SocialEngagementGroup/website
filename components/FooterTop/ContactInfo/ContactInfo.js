@@ -16,46 +16,57 @@ const ContactInfo = () => {
         {/* Flex container for Call & Email Boxes */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-5 w-[90%]">
 
-          {/* Call Box */}
-          <div
-            className={`${style.contentboxInnerBox} border-4 border-gray-700 p-10 rounded-[20px] flex 
-            items-center justify-between cursor-pointer hover:shadow-lg transition-shadow flex-1 relative`}
-          >
-            <div className="flex flex-col items-start gap-4">
-              <img src="/Icons/callicon.png" alt="Call Icon" width={60} height={60} />
-              <h4 className="font-semibold text-[32px]  text-white">
-                Book A Call
-              </h4>
-            </div>
-
-            {/* Arrow icon */}
-            <div className="absolute top-4 right-4">
-              {/* <ArrowUpRight className="text-gray-700 dark:text-gray-300" size={40} /> */}
-              <img src="/Icons/arrow-up-right-1.png" alt="Mail Icon" width={60} height={60} />
-
-            </div>
-          </div>
-
-          {/* Mail Box */}
-          <div
-            className={`${style.contentboxInnerBox} border-4 border-gray-700 p-10 rounded-[20px] flex items-center justify-between cursor-pointer hover:shadow-lg transition-shadow flex-1 relative`}
-          >
-            <div className="flex flex-col items-start gap-4">
-              <img src="/Icons/mailicon.png" alt="Mail Icon" width={60} height={60} />
-              <h4 className="font-semibold text-[32px]  dark:text-white text-white">
-                Send Email
-              </h4>
-            </div>
-
-            {/* Arrow icon */}
-            <div className="absolute top-4 right-4">
-              {/* <ArrowUpRight className="text-gray-700 dark:text-gray-300" size={40} /> */}
-              <img src="/Icons/arrow-up-right-1.png" alt="Mail Icon" width={60} height={60} />
-
-            </div>
-          </div>
-          
+        {/* Call Box */}
+        <a
+        href="tel:+13479356442"
+        className={`${style.contentboxInnerBox} border-4 border-gray-700 p-10 rounded-[20px] flex 
+        items-center justify-between cursor-pointer hover:shadow-lg transition-shadow flex-1 relative`}
+        >
+        <div className="flex flex-col items-start gap-4">
+        <img src="/Icons/callicon.png" alt="Call Icon" width={60} height={60} />
+        <h4 className="font-semibold text-[32px] text-white">
+        Book A Call
+        </h4>
         </div>
+
+        {/* Arrow icon */}
+        <div className="absolute top-4 right-4">
+        <img
+        src="/Icons/arrow-up-right-1.png"
+        alt="Arrow Icon"
+        width={60}
+        height={60}
+        />
+        </div>
+        </a>
+
+        {/* Mail Box */}
+        <a
+        href="mailto:rahee@socialengagementgroup.com"
+        className={`${style.contentboxInnerBox} border-4 border-gray-700 p-10 rounded-[20px] flex 
+        items-center justify-between cursor-pointer hover:shadow-lg transition-shadow flex-1 relative`}
+        >
+        <div className="flex flex-col items-start gap-4">
+        <img src="/Icons/mailicon.png" alt="Mail Icon" width={60} height={60} />
+        <h4 className="font-semibold text-[32px] text-white">
+        Send Email
+        </h4>
+        </div>
+
+        {/* Arrow icon */}
+        <div className="absolute top-4 right-4">
+        <img
+        src="/Icons/arrow-up-right-1.png"
+        alt="Arrow Icon"
+        width={60}
+        height={60}
+        />
+        </div>
+        </a>
+
+        </div>
+
+
       </div>
     </div>
   );
