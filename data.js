@@ -85,7 +85,7 @@ export const tabsData = [
 
 
 export const images = [
-  { id: 23, src: "/herosliderimage/Rectangle23.png", alt: "Rectangle 23" },
+
   { id: 24, src: "/herosliderimage/Rectangle24.png", alt: "Rectangle 24" },
   { id: 25, src: "/herosliderimage/Rectangle25.png", alt: "Rectangle 25" },
   { id: 26, src: "/herosliderimage/Rectangle26.png", alt: "Rectangle 26" },
@@ -101,5 +101,22 @@ export const images = [
   { id: 36, src: "/herosliderimage/Rectangle36.png", alt: "Rectangle 36" },
   { id: 37, src: "/herosliderimage/Rectangle37.png", alt: "Rectangle 37" },
   { id: 38, src: "/herosliderimage/Rectangle38.png", alt: "Rectangle 38" },
+  { id: 39, src: "/herosliderimage/Rectangle39.png", alt: "Rectangle 39" },
+  { id: 40, src: "/herosliderimage/Rectangle40.png", alt: "Rectangle 40" },
+  { id: 41, src: "/herosliderimage/Rectangle41.png", alt: "Rectangle 41" },
+  { id: 42, src: "/herosliderimage/Rectangle42.png", alt: "Rectangle 42" },
+  { id: 43, src: "/herosliderimage/Rectangle43.png", alt: "Rectangle 43" },
+  { id: 44, src: "/herosliderimage/Rectangle44.png", alt: "Rectangle 44" },
+  { id: 45, src: "/herosliderimage/Rectangle45.png", alt: "Rectangle 45" },
+  { id: 46, src: "/herosliderimage/Rectangle46.png", alt: "Rectangle 46" },
+  { id: 47, src: "/herosliderimage/Rectangle47.png", alt: "Rectangle 47" },
+  { id: 48, src: "/herosliderimage/Rectangle48.png", alt: "Rectangle 48" },
+  { id: 49, src: "/herosliderimage/Rectangle49.png", alt: "Rectangle 49" },
+  { id: 50, src: "/herosliderimage/Rectangle50.png", alt: "Rectangle 50" },
+  { id: 51, src: "/herosliderimage/Rectangle51.png", alt: "Rectangle 51" },
+  { id: 52, src: "/herosliderimage/Rectangle52.png", alt: "Rectangle 52" },
+  { id: 53, src: "/herosliderimage/Rectangle53.png", alt: "Rectangle 53" },
+  { id: 54, src: "/herosliderimage/Rectangle54.png", alt: "Rectangle 54" },
+  { id: 55, src: "/herosliderimage/Rectangle55.png", alt: "Rectangle 55" },
 ];
 
