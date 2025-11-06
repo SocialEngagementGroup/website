@@ -25,9 +25,7 @@ export default function Navbar() {
           : "bg-transparent w-full top-0 py-5 px-3 sm:px-22"
       }`}
     >
-      <div
-        className={`container-fluid mx-auto transition-all duration-500`}
-      >
+      <div className="container-fluid mx-auto transition-all duration-500">
         <div className="flex flex-wrap items-center justify-between">
 
           {/* Logo */}
@@ -98,26 +96,28 @@ export default function Navbar() {
             } w-full md:flex md:w-auto md:order-1 items-center justify-between transition-all duration-500 md:bg-transparent`}
           >
             <ul
-  className={`navlink flex flex-col p-4 md:p-0 border border-gray-700 md:border-0 rounded-lg md:flex-row md:space-x-10 md:mt-0 mt-5 
-  ${isOpen ? "bg-black md:bg-transparent" : "bg-transparent"}`}
->
-  {[
-    { name: "Home", href: "#" },
-    { name: "Services", href: "#services" },
-    { name: "Clients", href: "#clients" },
-    { name: "About Us", href: "#aboutUs" },
-  ].map((link) => (
-    <li key={link.name}>
-      <a
-        href={link.href}
-        className="block py-2 px-3 text-white rounded-sm md:bg-transparent md:text-white md:p-0 font-sans font-bold text-[16px] md:text-[20px] hover:text-gray-300 transition"
-      >
-        {link.name}
-      </a>
-    </li>
-  ))}
-</ul>
+              className={`navlink flex flex-col p-4 md:p-0 border border-gray-700 md:border-0 rounded-lg md:flex-row md:space-x-10 md:mt-0 mt-5 
+              ${isOpen ? "bg-black md:bg-transparent" : "bg-transparent"}`}
+            >
+              {[
+                { name: "Home", href: "#" },
+                { name: "Services", href: "#services" },
+                { name: "Clients", href: "#clients" },
+                { name: "About Us", href: "#aboutUs" },
+              ].map((link) => (
+                <li key={link.name}>
+                  <a
+                    href={link.href}
+                    onClick={() => setIsOpen(false)} // ✅ auto-close menu
+                    className="block cursor-pointer py-2 px-3 text-white rounded-sm md:bg-transparent md:text-white md:p-0 font-sans font-bold text-[16px] md:text-[20px] hover:text-gray-300 transition"
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
+
         </div>
       </div>
     </nav>

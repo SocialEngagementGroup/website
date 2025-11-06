@@ -86,12 +86,7 @@ code, pre {
   filter: blur(20px);
   opacity: 0.9;
 }
-
-
 }
-
-
-
 
 
  .customSwiperSlideShadow{
@@ -182,7 +177,7 @@ background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #232326 25%, #232326 
   align-items: center;
   justify-content: center;
   transition: box-shadow 0.3s ease;
-
+    border:10px solid black;
   border-radius: 20px;
   /* Background and glass effect */
   background-image: url('/bg/innersliderbg.png');
@@ -216,9 +211,6 @@ background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #232326 25%, #232326 
 
 
 
-
-
-
 @media only screen and (max-width: 1180px) {
   .global-navbar {
     padding-left: 20px;
@@ -238,8 +230,6 @@ background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #232326 25%, #232326 
     transition: all 0.3s ease-in-out;
   }
 }
-
-
 
 @media only screen and (max-width: 1464px) {
 
@@ -277,9 +267,6 @@ background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #232326 25%, #232326 
 }
 
 
-
-
-
 @media only screen and (max-width: 1145px) {
 
   .BoxTitle-module__dnR0AG__title {
@@ -287,9 +274,6 @@ background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #232326 25%, #232326 
     font-size: 40px !important;
 }
 }
-
-
-
 
 
 @media only screen and (max-width: 500px) {

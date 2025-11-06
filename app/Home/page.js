@@ -15,7 +15,7 @@ const page = () => {
     <>
        <HeroSection/>
         <div className='bg-[#E3D3CC] '>
-             <div className='bg-[#E3D3CC] w-[70%] mx-auto herobrandlogo'>
+             <div className='bg-[#E3D3CC] md:w-[70%] w-[100%] mx-auto herobrandlogo'>
             <Slider/>
         </div>
             

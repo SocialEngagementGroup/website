@@ -2,7 +2,7 @@
 .sliderContainer {
   width: 100%;
   max-width: 100%;
-margin: 80px auto 0 auto;
+  margin: 80px auto 0 auto;
 }
 
 .sliderWrapper {
@@ -16,7 +16,7 @@ margin: 80px auto 0 auto;
 .innerCard * {
   position: relative;
   z-index: 2;
-  
+
 }
 
 /* Hover animation */
@@ -34,25 +34,26 @@ margin: 80px auto 0 auto;
 
 /* ========== Swiper Pagination ========== */
 
-.innerCard img{
+.innerCard img {
   max-width: 180px;
-  
+
 
 }
 
-.innerCard h4{
-font-family: Inter;
-font-weight: 400;
-font-style: Regular;
-font-size: 24px;
+.innerCard h4 {
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 24px;
   line-height: 35px;
-letter-spacing: 0%;
-width: 90%;
-color: #fff;
-text-transform: capitalize;
+  letter-spacing: 0%;
+  width: 90%;
+  color: #fff;
+  text-transform: capitalize;
 
-  
+
 }
+
 .sliderContainer {
   opacity: 0;
   transition: opacity 0.5s ease;
@@ -67,34 +68,38 @@ text-transform: capitalize;
 
 
 @media only screen and (max-width: 1460px) {
-.innerCard img{
+  .innerCard img {
     max-width: 120px;
 
-}
+  }
+
   .InnerSlider-module__0Tpkga__innerCard {
     height: 300px !important;
 
-}
+  }
+
   .innerCard h4 {
-  font-size: 26px;
-}
+    font-size: 26px;
+  }
 }
 
 
 
 @media only screen and (max-width: 1276px) {
-.innerCard img{
+  .innerCard img {
     max-width: 100px;
 
-}
+  }
+
   .InnerSlider-module__0Tpkga__innerCard {
     height: 280px !important;
 
-}
+  }
+
   .innerCard h4 {
-  font-size: 24px;
+    font-size: 24px;
     line-height: 32px;
-}
+  }
 }
 
 
@@ -103,21 +108,21 @@ text-transform: capitalize;
 
 
 @media only screen and (max-width: 1276px) {
-.sliderContainer {
+  .sliderContainer {
 
-margin: 50px auto 0 auto;
-}
+    margin: 50px auto 0 auto;
+  }
 }
 
 
 
 @media only screen and (max-width: 500px) {
 
-.sliderContainer {
-  width: 100%;
-  max-width: 100%;
-margin: 30px auto 0 auto;
-}
+  .sliderContainer {
+    width: 100%;
+    max-width: 100%;
+    margin: 30px auto 0 auto;
+  }
 }
 
 
@@ -126,9 +131,9 @@ margin: 30px auto 0 auto;
 /* InnerSlider.module.css */
 
 .sliderContainer {
-    position: relative; 
-    /* The arrows will be placed relative to this boundary */
-    /* Remove any horizontal padding here if you want arrows to hug the screen edge */
+  position: relative;
+  /* The arrows will be placed relative to this boundary */
+  /* Remove any horizontal padding here if you want arrows to hug the screen edge */
 }
 
 /* ⚠️ Ensure you do NOT have any padding left/right on .sliderContainer if you want the arrows completely at the edge. 
@@ -136,48 +141,67 @@ margin: 30px auto 0 auto;
 
 /* Base style for both custom arrows */
 .customArrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    cursor: pointer;
-    color:#e3d3cc;  
-    background-size: cover; 
-    background-position: center;
-    background-repeat: no-repeat;
-    border: 2px solid #e3d3cc;
-    border-radius: 10%; 
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  color: #e3d3cc;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px solid #e3d3cc;
+  border-radius: 10%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
 }
 
 
 
 
 .customArrow:hover {
-    background-color: #f0f0f0;
-    color: black;
+  background-color: #f0f0f0;
+  color: black;
 }
 
 /* --- Positioning the arrows --- */
 
 .swiperButtonPrev {
-    /* Pushes the arrow container flush with the left edge of .sliderContainer */
-    left: -46px; 
+  /* Pushes the arrow container flush with the left edge of .sliderContainer */
+  left: -46px;
 }
 
 .swiperButtonNext {
+  /* Pushes the arrow container flush with the right edge of .sliderContainer */
+  right: -46px;
+}
+
+
+@media only screen and (max-width: 767px) {
+  .swiperButtonPrev {
+    /* Pushes the arrow container flush with the left edge of .sliderContainer */
+    left: 0px;
+  }
+
+  .swiperButtonNext {
     /* Pushes the arrow container flush with the right edge of .sliderContainer */
-    right: -46px;  
+    right: 0px;
+  }
+  .customArrow{
+    width: 30px;
+    height: 30px;
+  }
+
 }
 
 /* OPTIONAL: Hide Swiper's default arrows if they somehow still appear */
 :global(.swiper-button-prev),
 :global(.swiper-button-next) {
-    display: none !important;
+  display: none !important;
 }

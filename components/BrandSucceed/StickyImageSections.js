@@ -56,9 +56,25 @@ const SectionItem = ({ section, setActiveImage }) => {
   return (
     <div
       ref={ref}
-      className="content-box  rounded-2xl space-y-5 transition-all duration-300 giftitle flex flex-col items-center md:items-start"
+      className="content-box rounded-2xl space-y-5 transition-all duration-300 giftitle flex flex-col items-start md:items-center mt-15"
     >
-      {/* Mobile image below title */}
+  
+      {/* Desktop button */}
+      <button className="hidden md:inline-block branding-btn-dsk px-5 py-2 rounded-full text-sm uppercase tracking-wide bg-[#D9D9D9] text-black transition-all">
+        {section.button}
+      </button>
+
+
+      {/* Mobile button */}
+      <button className="inline-block md:hidden branding-btn-mob px-5 py-2 rounded-full text-sm uppercase tracking-wide bg-[#D9D9D9] text-black transition-all">
+        {section.button}
+      </button>
+      
+      <p className="font-regular text-gray-800 leading-relaxed giftext text-start md:text-center">
+        {section.title}
+      </p>
+
+          {/* Mobile image below title */}
       <div className="md:hidden w-full flex justify-center mt-4">
         <Image
           src={section.image}
@@ -67,19 +83,6 @@ const SectionItem = ({ section, setActiveImage }) => {
           priority
         />
       </div>
-      {/* Desktop button */}
-      <button className="hidden md:inline-block branding-btn-dsk px-5 py-2 rounded-full text-sm uppercase tracking-wide bg-[#D9D9D9] text-black transition-all">
-        {section.button}
-      </button>
-
-      <p className="font-regular text-gray-800 leading-relaxed giftext text-center md:text-left">
-        {section.title}
-      </p>
-
-      {/* Mobile button */}
-      <button className="inline-block md:hidden branding-btn-mob px-5 py-2 rounded-full text-sm uppercase tracking-wide bg-[#D9D9D9] text-black transition-all">
-        {section.button}
-      </button>
 
 
     </div>
@@ -92,7 +95,7 @@ const ScrollStickySections = () => {
   return (
     <section className="scroll-sticky-section flex flex-col md:flex-row container mx-auto px-2 md:px-6 gap-10">
       {/* Left Side: Sections */}
-      <div className="flex flex-col md:w-1/2 space-y-[0vh] md:space-y-[50vh] mt-0 md:mt-20 pb-35">
+      <div className="flex flex-col md:w-1/2 space-y-[0vh] md:space-y-[50vh] mt-0 md:mt-20 md:pb-35 pb-0">
         {sections.map((section, index) => (
           <SectionItem
             key={index}

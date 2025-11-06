@@ -1,6 +1,8 @@
 /* Navbar.module.css */
 
-
+  .navLink li a {
+    cursor: pointer !important;
+  }
 
 /* Container adjustments for medium screens */
 @media only screen and (max-width: 1180px) {
@@ -81,3 +83,4 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   will-change: auto;
 
 }
+
