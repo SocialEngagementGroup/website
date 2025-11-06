@@ -48,7 +48,6 @@ export const ClientsLogo = [
   { src: "/ClientsLogo/logos/Sporcle-Black.png", alt: "Logo 1" },
   { src: "/ClientsLogo/logos/OSAS-Black.png", alt: "Logo 1" },
   { src: "/ClientsLogo/logos/SC-Black.png", alt: "Logo 1" },
-  
 ];
 
 
@@ -85,7 +84,6 @@ export const tabsData = [
 
 
 export const images = [
-
   { id: 24, src: "/herosliderimage/Rectangle24.png", alt: "Rectangle 24" },
   { id: 25, src: "/herosliderimage/Rectangle25.png", alt: "Rectangle 25" },
   { id: 26, src: "/herosliderimage/Rectangle26.png", alt: "Rectangle 26" },

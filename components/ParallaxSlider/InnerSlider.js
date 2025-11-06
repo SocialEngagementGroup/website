@@ -8,7 +8,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation'; // Keep this, even though we use custom buttons, in case we revert or for other swiper uses
 import styles from './InnerSlider.module.css';
-
+import Image from 'next/image';
 const InnerSlider = ({ items }) => {
   const [loaded, setLoaded] = useState(false);
   const containerRef = useRef(null);
@@ -75,7 +75,7 @@ const InnerSlider = ({ items }) => {
         {items.map((item, idx) => (
           <SwiperSlide key={idx}>
             <div className={styles.innerCard}>
-              <img src={item.icon} alt={`slide-${idx}`} />
+              <Image width={130} height={100} src={item.icon} alt={`slide-${idx}`} />
               <h4 className="mt-5">{item.name}</h4>
             </div>
           </SwiperSlide>
