@@ -15,7 +15,8 @@ const ParallaxSliderSection = () => {
           <SectionTitle
             id="what-we-do"
             title="What We Do"
-            subtitle="We Ignite the Future, One Innovation at a Time!"
+            subtitle="Marketing solutions for every stage of your growth. "
+            description="Crafted to deliver real results through strategy, storytelling, and AI-powered execution, all under one roof."
           />
         </div>
        <div className="mt-20 w-[95%] mx-auto">

@@ -12,11 +12,12 @@ const ClientLogos = () => {
           title="Our Clients"
           subtitle2={
             <>
-              Trusted by brands who care{" "}
-              <br className="hidden sm:block" /> about clients and results
+        
+              Trusted by brands that care{" "}
+              <br className="hidden sm:block" />as much as we do.
             </>
           }
-          description="We design,  write, build, and imagine — creating everything from national campaigns to social posts with intention and edge."
+          description="We partner with businesses that value authenticity, creativity, and real impact, turning ideas into campaigns that bring their visions to life."
         />
       </div>
 

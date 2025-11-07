@@ -6,14 +6,13 @@ const HeroContant = () => {
     <div className="flex flex-col justify-start items-start h-full px-4 py-8 space-y-6">
       <div className={`max-w-screen-xl mx-auto text-center md:text-start ${styles.heroContent}`}>
         <h1 className={`${styles.heroHeading} font-bold leading-snug`}>
-          Where bold brands <br />
-          break through <br />
-          the noise
+         Where Human <br />
+         Creativity Meets <br />
+         AI-Powered Growth.
         </h1>
 
         <p className={`${styles.heroSubtext} text-gray-300 max-w-xl text-center md:text-start`}>
-          From startups to enterprise, we help brands break barriers with
-          tailored ad strategies, striking visuals, and data-driven results.
+         We tell your story across every digital touchpoint — blending creativity and automation so your business grows & converts.
         </p>
 
         <button
@@ -26,7 +25,7 @@ const HeroContant = () => {
             rounded-lg text-base sm:text-lg mt-4
           `}
         >
-          Connect With Us
+         Grow with Purpose
         </button>
       </div>
     </div>

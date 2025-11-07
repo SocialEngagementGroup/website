@@ -11,8 +11,7 @@ const BrandingSection = () => {
           <SectionTitle
             id="We-Ignite-the-Future"
             subtitle={<>How we help <span>your</span> brand succeed</>}
-            description="We combine smart strategy, bold creative, end-to-end execution, and
-actionable insights to ensure every investment drives meaningful impact."
+            description=" Every visual, message, and moment we craft is made to tell your story with intention, evoke emotion, and drive real engagement."
           />
         </div>
         <StickyImageSections />

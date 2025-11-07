@@ -15,7 +15,7 @@ const SectionTitle = ({ title, subtitle, subtitle2, description, id }) => {
 
       {/* Subheading */}
       {subtitle && (
-        <h3 className={`${styles.sectionTitle} text-[26px] sm:text-[32px] md:text-[40px] text-gray-900 mt-5 md:mt-8 leading-tight`}>
+        <h3 className={`${styles.sectionTitle} text-[26px] sm:text-[32px] md:text-[48px] text-gray-900 mt-5 md:mt-8 leading-tight`}>
           {subtitle}
         </h3>
       )}
@@ -28,7 +28,7 @@ const SectionTitle = ({ title, subtitle, subtitle2, description, id }) => {
       )}
       {/* Optional Paragraph */}
       {description && (
-        <p className={`${styles.description} text-gray-900 text-[16px] mt-4 max-w-2xl mx-auto description`}>
+        <p className={`${styles.description} text-gray-900 text-[24px] mt-4 max-w-2xl mx-auto description`}>
           {description}
         </p>
       )}

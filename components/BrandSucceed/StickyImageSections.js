@@ -18,25 +18,25 @@ const sections = [
   {
     button: "Strategy & Research",
     title:
-      "Great marketing doesn’t happen by accident. We take a deep dive into your brand to uncover what makes your brand tick and what will make your audience click. A smart strategy means fewer guesses, better targeting, and way more wins.",
+      "Every successful campaign starts with insight. We analyze your brand, audience, and competitors to build a strategy that eliminates guesswork and drives consistent results.",
     image: a1,
   },
   {
     button: "Creative Design",
     title:
-      "Design isn’t just about looks — it’s about purpose. Every visual element we create helps tell your story, connect emotionally, and convert effectively.",
+      "Great design is more than aesthetic, it's strategic psychology. We craft visuals that tell your story, connect emotionally, and make your brand unforgettable.",
     image: a2,
   },
   {
     button: "Growth Strategy",
     title:
-      "Growth doesn’t happen overnight — it’s engineered. Through strategic campaigns and data-backed optimization, we help you scale effectively.",
+      "Growth is a process, not a moment. We blend creativity and analytics to design campaigns that evolve, adapt, and deliver measurable success.",
     image: a3,
   },
   {
     button: "Launch & Support",
     title:
-      "Your launch isn’t the finish line — it’s the beginning. We ensure your campaigns perform flawlessly and keep growing after day one.",
+      "A launch marks the start of the journey, not the end. We stay by your side to fine-tune performance, uncover new opportunities, and keep your brand evolving.",
     image: a4,
   },
 

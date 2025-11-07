@@ -5,12 +5,12 @@ const BoxTitle = () => {
   return (
     <div className="mb-2 text-center md:text-left">
       <h3 className={styles.title}>
-        Let’s redefine what’s <br />
-        possible together
+        Let’s create the next<br />
+        chapter of your story.
+
       </h3>
       <p className={`${styles.decoration}`}>
-        The future is not coming. It’s here, bold and audacious. Walk with us
-        through the digital transformation journey to the future.
+         Every story deserves to be seen, heard, and remembered. Let’s bring yours to life with clarity and purpose.
       </p>
     </div>
   );
