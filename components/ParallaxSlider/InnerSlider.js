@@ -3,7 +3,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay, Navigation } from 'swiper/modules';
-import { FaLongArrowAltLeft , FaLongArrowAltRight } from 'react-icons/fa'; // ⬅️ NEW: Import Custom Icons
+import { FaLongArrowAltLeft, FaLongArrowAltRight } from 'react-icons/fa'; // ⬅️ NEW: Import Custom Icons
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation'; // Keep this, even though we use custom buttons, in case we revert or for other swiper uses
@@ -30,12 +30,12 @@ const InnerSlider = ({ items }) => {
       {/* ⬅️ NEW: Custom Previous Button */}
       {/* These will be positioned via CSS in InnerSlider.module.css */}
       <div ref={prevRef} className={`${styles.swiperButtonPrev} ${styles.customArrow}`}>
-          <FaLongArrowAltLeft size={24} /> 
+        <FaLongArrowAltLeft size={24} />
       </div>
-      
+
       <Swiper
         // 1. Include Navigation module
-        modules={[Navigation, Pagination, Autoplay]} 
+        modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={25}
         slidesPerView={2}
         pagination={{
@@ -44,19 +44,19 @@ const InnerSlider = ({ items }) => {
         }}
         // 2. Set navigation to use our custom refs
         navigation={{
-            prevEl: prevRef.current,
-            nextEl: nextRef.current,
+          prevEl: prevRef.current,
+          nextEl: nextRef.current,
         }}
         // 3. This crucial step links the custom buttons (rendered outside Swiper) 
         //    to the Swiper instance *after* it initializes.
         onInit={(swiper) => {
-            // Check if the refs are current before assigning
-            if (prevRef.current && nextRef.current) {
-                swiper.params.navigation.prevEl = prevRef.current;
-                swiper.params.navigation.nextEl = nextRef.current;
-                swiper.navigation.init();
-                swiper.navigation.update();
-            }
+          // Check if the refs are current before assigning
+          if (prevRef.current && nextRef.current) {
+            swiper.params.navigation.prevEl = prevRef.current;
+            swiper.params.navigation.nextEl = nextRef.current;
+            swiper.navigation.init();
+            swiper.navigation.update();
+          }
         }}
         autoplay={{
           delay: 2500,
@@ -68,8 +68,10 @@ const InnerSlider = ({ items }) => {
         breakpoints={{
           0: { slidesPerView: 1 },
           450: { slidesPerView: 1 },
-          768: { slidesPerView: 3 },
-          1024: { slidesPerView: 4 },
+          768: { slidesPerView: 2 },
+          986: { slidesPerView: 2 },
+          1276: { slidesPerView: 4 },
+
         }}
       >
         {items.map((item, idx) => (
@@ -81,10 +83,10 @@ const InnerSlider = ({ items }) => {
           </SwiperSlide>
         ))}
       </Swiper>
-      
+
       {/* ⬅️ NEW: Custom Next Button */}
       <div ref={nextRef} className={`${styles.swiperButtonNext} ${styles.customArrow}`}>
-          <FaLongArrowAltRight size={24} />
+        <FaLongArrowAltRight size={24} />
       </div>
     </div>
   );

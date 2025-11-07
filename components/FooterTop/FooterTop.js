@@ -20,10 +20,10 @@ const FooterTop = () => {
               <ContactForm />
             </div>
           </div>
-      
+
         </div>
       </div>
-      <Copyright/>
+      <Copyright />
     </section>
   );
 };

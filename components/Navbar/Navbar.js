@@ -19,11 +19,10 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed inset-x-0 mx-auto z-[999] transition-all duration-500 global-navbar ${
-        isSticky
+      className={`fixed inset-x-0 mx-auto z-[999] transition-all duration-500 global-navbar ${isSticky
           ? " bg-glass shadow-md w-[91%] top-[20px] py-3 rounded-2xl px-2 sm:px-5"
           : "bg-transparent w-full top-0 py-5 px-3 sm:px-22"
-      }`}
+        }`}
     >
       <div className="container-fluid mx-auto transition-all duration-500">
         <div className="flex flex-wrap items-center justify-between">
@@ -45,10 +44,9 @@ export default function Navbar() {
             <button
               onClick={() => (window.location.href = "#contact")}
               className={`Contact-btn border font-bold font-sans text-[18px] rounded-[14px] cursor-pointer md:py-1.5 pb-1.5 pt-1.5 px-3 md:px-8 transition
-                ${
-                  isSticky
-                    ? "border-white text-black bg-white"
-                    : "border-white text-white md:bg-white md:text-black hover:bg-white hover:text-black "
+                ${isSticky
+                  ? "border-white text-black bg-white"
+                  : "border-white text-white md:bg-white md:text-black hover:bg-white hover:text-black "
                 }
               `}
             >
@@ -91,12 +89,11 @@ export default function Navbar() {
 
           {/* Menu Links */}
           <div
-            className={`${
-              isOpen ? "block" : "hidden"
-            } w-full md:flex md:w-auto md:order-1 items-center justify-between transition-all duration-500 md:bg-transparent`}
+            className={`${isOpen ? "block" : "hidden"
+              } w-full md:flex md:w-auto md:order-1 items-center justify-between transition-all duration-500 md:bg-transparent`}
           >
             <ul
-              className={`navlink flex flex-col p-4 md:p-0 border border-gray-700 md:border-0 rounded-lg md:flex-row md:space-x-10 md:mt-0 mt-5 
+              className={`navlink md:ml-26 ml-0  flex flex-col p-4 md:p-0 border border-gray-700 md:border-0 rounded-lg md:flex-row md:space-x-10 md:mt-0 mt-5 
               ${isOpen ? "bg-black md:bg-transparent" : "bg-transparent"}`}
             >
               {[

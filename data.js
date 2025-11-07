@@ -17,14 +17,14 @@ export const projects = [
     title: "Creative",
     color: "#202020",
     sliderData: [
-       
+
       { name: "Branding", icon: "/InnerSlider/Creative/branding.png" },
       { name: "Logo Design", icon: "/InnerSlider/Creative/logo-design.png" },
       { name: "Content creation", icon: "/InnerSlider/Creative/content-creation.png" },
       { name: "3D Animation & Rendering", icon: "/InnerSlider/Creative/3d-animation-and-rendering.png" },
       { name: "Photography & videography", icon: "/InnerSlider/Creative/photography-and-videography.png" },
       { name: "Social media content", icon: "/InnerSlider/Creative/social-media-content.png" },
-      
+
     ],
   },
 ];
@@ -32,21 +32,16 @@ export const projects = [
 
 
 export const ClientsLogo = [
+  { src: "/ClientsLogo/logos/Infuse-Black.png", alt: "Logo 1" },
   { src: "/ClientsLogo/logos/Aref-Black.png", alt: "Logo 1" },
-  { src: "/ClientsLogo/logos/Atams-Black.png", alt: "Logo 1" },
   { src: "/ClientsLogo/logos/FJH-Black.png", alt: "Logo 1" },
-  { src: "/ClientsLogo/logos/Boost-Black.png", alt: "Logo 1" },
-  { src: "/ClientsLogo/logos/BPI-Black.png", alt: "Logo 1" },
   { src: "/ClientsLogo/logos/MFC-Black.png", alt: "Logo 1" },
-  { src: "/ClientsLogo/logos/F-Black.png", alt: "Logo 1" },
+  { src: "/ClientsLogo/logos/SMF-Black.png", alt: "Logo 1" },
   { src: "/ClientsLogo/logos/NIPA-Black.png", alt: "Logo 1" },
   { src: "/ClientsLogo/logos/Gravy-Stack-Black.png", alt: "Logo 1" },
   { src: "/ClientsLogo/logos/Rastegar-Black.png", alt: "Logo 1" },
   { src: "/ClientsLogo/logos/GT-Black.png", alt: "Logo 1" },
-  { src: "/ClientsLogo/logos/SMF-Black.png", alt: "Logo 1" },
-  { src: "/ClientsLogo/logos/Infuse-Black.png", alt: "Logo 1" },
   { src: "/ClientsLogo/logos/Sporcle-Black.png", alt: "Logo 1" },
-  { src: "/ClientsLogo/logos/OSAS-Black.png", alt: "Logo 1" },
   { src: "/ClientsLogo/logos/SC-Black.png", alt: "Logo 1" },
 ];
 
@@ -105,7 +100,6 @@ export const images = [
   { id: 42, src: "/herosliderimage/Rectangle42.png", alt: "Rectangle 42" },
   { id: 43, src: "/herosliderimage/Rectangle43.png", alt: "Rectangle 43" },
   { id: 44, src: "/herosliderimage/Rectangle44.png", alt: "Rectangle 44" },
-  { id: 45, src: "/herosliderimage/Rectangle45.png", alt: "Rectangle 45" },
   { id: 46, src: "/herosliderimage/Rectangle46.png", alt: "Rectangle 46" },
   { id: 47, src: "/herosliderimage/Rectangle47.png", alt: "Rectangle 47" },
   { id: 48, src: "/herosliderimage/Rectangle48.png", alt: "Rectangle 48" },

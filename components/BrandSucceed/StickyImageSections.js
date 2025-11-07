@@ -56,9 +56,9 @@ const SectionItem = ({ section, setActiveImage }) => {
   return (
     <div
       ref={ref}
-      className="content-box rounded-2xl space-y-5 transition-all duration-300 giftitle flex flex-col items-start md:items-center mt-15"
+      className="content-box rounded-2xl space-y-5 transition-all duration-300 giftitle flex flex-col items-start  mt-15"
     >
-  
+
       {/* Desktop button */}
       <button className="hidden md:inline-block branding-btn-dsk px-5 py-2 rounded-full text-sm uppercase tracking-wide bg-[#D9D9D9] text-black transition-all">
         {section.button}
@@ -66,21 +66,22 @@ const SectionItem = ({ section, setActiveImage }) => {
 
 
       {/* Mobile button */}
-      <button className="inline-block md:hidden branding-btn-mob px-5 py-2 rounded-full text-sm uppercase tracking-wide bg-[#D9D9D9] text-black transition-all">
+      <button className="inline-block md:hidden branding-btn-mob  px-5 py-2 rounded-full text-sm uppercase tracking-wide bg-[#D9D9D9] text-black transition-all">
         {section.button}
       </button>
-      
-      <p className="font-regular text-gray-800 leading-relaxed giftext text-start md:text-center">
+
+      <p className="font-regular text-gray-800 leading-relaxed giftext text-start">
         {section.title}
       </p>
 
-          {/* Mobile image below title */}
+      {/* Mobile image below title */}
       <div className="md:hidden w-full flex justify-center mt-4">
         <Image
           src={section.image}
           alt={section.button}
           className="object-cover"
           priority
+          unoptimized
         />
       </div>
 

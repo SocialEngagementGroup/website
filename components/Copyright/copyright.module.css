@@ -1,21 +1,27 @@
-.copyright{
-    font-family: Inter;
-    font-weight: 400;
-    font-style: Regular;
-    font-size: 20px;
-    position: absolute;
-  top: 45px;
+.copyright {
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  color: #fff;
+  font-size: 20px;
   text-decoration: underline;
-  color: white;
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  bottom: 0px;
+  text-align: center;
+  margin: auto;
 }
 
 
 @media only screen and (max-width: 1135px) {
 
-.copyright {
+  .copyright {
 
-  top: 20px;
-}
+    top: 20px;
+  }
 
 }
 
@@ -23,12 +29,12 @@
 
 @media only screen and (max-width: 767px) {
 
-.copyright {
-  position: relative;
-  top: 10px;
-  text-align: center;
-  font-size: 16px;
+  .copyright {
+    position: relative;
+    top: 10px;
+    text-align: center;
+    font-size: 16px;
 
-}
+  }
 
 }
