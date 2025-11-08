@@ -94,7 +94,7 @@ const ContactForm = () => {
           <textarea
             placeholder="Your Message*"
             {...register("message")}
-            className="w-full textarea min-h-[172px] resize-none bg-transparent border border-gray-500 text-gray-100 placeholder-gray-400 rounded-md px-3 py-3 focus:outline-none focus:border-[#c43b3b] transition-all duration-200"
+            className="w-full textarea min-h-[148px] resize-none bg-transparent border border-gray-500 text-gray-100 placeholder-gray-400 rounded-md px-3 py-3 focus:outline-none focus:border-[#c43b3b] transition-all duration-200"
           />
           <p className="text-red-400 text-sm mt-1">{errors.message?.message}</p>
         </div>

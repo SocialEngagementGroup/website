@@ -19,8 +19,8 @@ const HeroContant = () => {
           className={`
             ${styles.heroBtn} 
             bg-[#656565] text-gray-100 font-semibold
-            px-6 py-2 sm:bg-gray-300 sm:text-gray-900
-            sm:px-8 sm:py-2.5 md:px-10 md:py-3.5
+            px-6 py-3 sm:bg-gray-300 sm:text-gray-900
+            sm:px-8 sm:py-3 md:px-10 md:py-4
             hover:bg-gray-400 transition cursor-pointer
             rounded-lg text-base sm:text-lg mt-4
           `}

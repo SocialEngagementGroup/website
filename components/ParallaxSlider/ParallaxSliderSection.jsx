@@ -15,7 +15,14 @@ const ParallaxSliderSection = () => {
           <SectionTitle
             id="what-we-do"
             title="What We Do"
-            subtitle="Marketing solutions for every stage of your growth. "
+                subtitle2={
+            <>
+        
+              Marketing solutions for every{" "}
+              <br className="hidden sm:block" />stage of your growth.
+            </>
+          }
+            
             description="Crafted to deliver real results through strategy, storytelling, and AI-powered execution, all under one roof."
           />
         </div>

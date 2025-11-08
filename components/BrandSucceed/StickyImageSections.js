@@ -75,7 +75,7 @@ const SectionItem = ({ section, setActiveImage }) => {
       </p>
 
       {/* Mobile image below title */}
-      <div className="md:hidden w-full flex justify-center mt-4">
+      <div className="md:hidden w-full flex justify-center mt-4 image-box">
         <Image
           src={section.image}
           alt={section.button}

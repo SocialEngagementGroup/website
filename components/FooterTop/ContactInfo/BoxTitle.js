@@ -3,7 +3,7 @@ import styles from "./BoxTitle.module.css";
 
 const BoxTitle = () => {
   return (
-    <div className="mb-2 text-center md:text-left">
+    <div className="mb-2 text-left">
       <h3 className={styles.title}>
         Let’s create the next<br />
         chapter of your story.

@@ -320,3 +320,9 @@ pre {
   will-change: auto;
 
 }
+
+@media only screen and (max-width: 1276px) and (min-width: 767px) {
+  .swiper.swiper-initialized.swiper-horizontal.InnerSlider-module__0Tpkga__sliderWrapper.mySwiper.swiper-backface-hidden {
+    margin-top: 40px;
+  }
+}
