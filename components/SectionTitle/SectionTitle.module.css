@@ -9,6 +9,9 @@
   position: relative;
 
 }
+.description {
+  margin-top: -10px;
+}
 
 /* Underline */
 .subTitle::after {

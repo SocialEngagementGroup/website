@@ -28,7 +28,7 @@ const SectionTitle = ({ title, subtitle, subtitle2, description, id }) => {
       )}
       {/* Optional Paragraph */}
       {description && (
-        <p className={`${styles.description} text-gray-900 text-[16px] md:text-[24px] mt-4 max-w-2xl mx-auto description`}>
+        <p className={`${styles.description} text-gray-900 text-[16px] md:text-[24px] mt-0 max-w-2xl mx-auto description`}>
           {description}
         </p>
       )}
