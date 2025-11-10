@@ -1,54 +1,61 @@
+/* ✅ Wrapper for the entire section */
 .wrapper {
-  background: linear-gradient(to right, #1a1a1a, #2a2a2a); /* or use bg image */
-  padding: 4rem 2rem;
-  color: white;
+  background: linear-gradient(to right, #1a1a1a, #2a2a2a); /* Gradient background, can also use an image */
+  padding: 4rem 2rem; /* Vertical and horizontal padding */
+  color: white;       /* Default text color */
 }
 
+/* ✅ Container for layout, using flexbox */
 .container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: space-between;
+  flex-wrap: wrap;           /* Allow items to wrap on smaller screens */
+  gap: 2rem;                 /* Spacing between items */
+  justify-content: space-between; /* Spread items evenly */
 }
 
+/* ✅ Info section (text/content) */
 .info {
-  flex: 1;
-  min-width: 300px;
+  flex: 1;                  /* Flexible width */
+  min-width: 300px;         /* Ensure minimum width on smaller screens */
 }
 
+/* ✅ Buttons container inside info section */
 .buttons {
   display: flex;
-  gap: 1rem;
-  margin-top: 1.5rem;
+  gap: 1rem;               /* Space between buttons */
+  margin-top: 1.5rem;      /* Space above buttons */
 }
 
+/* ✅ Form section */
 .form {
-  flex: 1;
-  min-width: 300px;
+  flex: 1;                   /* Flexible width */
+  min-width: 300px;          /* Minimum width for small screens */
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  flex-direction: column;    /* Stack form elements vertically */
+  gap: 1rem;                 /* Spacing between form elements */
 }
 
+/* ✅ Input fields and textarea styling */
 input,
 textarea {
-  padding: 0.8rem;
-  border-radius: 6px;
-  border: none;
+  padding: 0.8rem;          /* Inner padding */
+  border-radius: 6px;       /* Rounded corners */
+  border: none;             /* Remove default border */
 }
 
+/* ✅ Button styling */
 button {
-  background-color: #8b0000;
-  color: white;
-  padding: 0.8rem 1.2rem;
-  border-radius: 6px;
-  cursor: pointer;
+  background-color: #8b0000; /* Dark red button */
+  color: white;              /* Text color */
+  padding: 0.8rem 1.2rem;    /* Button padding */
+  border-radius: 6px;        /* Rounded corners */
+  cursor: pointer;           /* Pointer cursor on hover */
 }
 
+/* ✅ Footer text styling */
 .footer {
-  text-align: center;
-  margin-top: 2rem;
-  font-size: 0.8rem;
-  opacity: 0.6;
+  text-align: center;       /* Centered text */
+  margin-top: 2rem;         /* Spacing above footer */
+  font-size: 0.8rem;        /* Small text */
+  opacity: 0.6;             /* Slightly faded text */
 }
-

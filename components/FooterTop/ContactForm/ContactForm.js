@@ -6,7 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import emailjs from "@emailjs/browser"; // Client-side EmailJS
 
-// Validation Schema
+// ✅ Form validation schema using Yup
 const schema = yup.object().shape({
   name: yup.string().required("Your name is required").min(3, "At least 3 characters"),
   phone: yup
@@ -18,6 +18,7 @@ const schema = yup.object().shape({
 });
 
 const ContactForm = () => {
+  // ✅ Initialize React Hook Form with Yup resolver
   const {
     register,
     handleSubmit,
@@ -25,9 +26,10 @@ const ContactForm = () => {
     formState: { errors, isSubmitting },
   } = useForm({ resolver: yupResolver(schema) });
 
+  // ✅ Submit handler
   const onSubmit = async (data) => {
     try {
-      // 1️⃣ Store contact in Supabase
+      // 1️⃣ Store contact data in backend (Supabase or API endpoint)
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -37,7 +39,7 @@ const ContactForm = () => {
       const result = await response.json();
       if (!result.success) throw new Error(result.error || "Failed to store contact");
 
-      // 2️⃣ Send email using EmailJS (client-side)
+      // 2️⃣ Send email via EmailJS (client-side)
       await emailjs.send(
         "service_xa0hl99",                 // Service ID
         "template_tzphyus",                // Template ID
@@ -45,8 +47,9 @@ const ContactForm = () => {
         "te0AortVTiyGMk9DL"                // Public Key
       );
 
+      // ✅ Success notification
       alert("Your message has been sent successfully!");
-      reset();
+      reset(); // ✅ Reset form after submission
     } catch (err) {
       console.error("Form Error:", err);
       alert("Something went wrong. Please try again later.");
@@ -54,9 +57,11 @@ const ContactForm = () => {
   };
 
   return (
+    // ✅ Form container with backdrop, rounded corners, and padding
     <div className="backdrop-blur-md bg-black/40 rounded-xl border-4 border-gray-700 shadow-lg p-12">
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-4">
-        {/* Name */}
+        
+        {/* ✅ Name Input */}
         <div>
           <input
             type="text"
@@ -64,10 +69,11 @@ const ContactForm = () => {
             {...register("name")}
             className="w-full bg-transparent border border-gray-500 text-gray-100 placeholder-gray-400 rounded-md px-3 py-2 focus:outline-none focus:border-[#c43b3b] transition-all duration-200"
           />
+          {/* ✅ Validation error message */}
           <p className="text-red-400 text-sm mt-1">{errors.name?.message}</p>
         </div>
 
-        {/* Phone */}
+        {/* ✅ Phone Input */}
         <div>
           <input
             type="text"
@@ -78,7 +84,7 @@ const ContactForm = () => {
           <p className="text-red-400 text-sm mt-1">{errors.phone?.message}</p>
         </div>
 
-        {/* Email */}
+        {/* ✅ Email Input */}
         <div>
           <input
             type="email"
@@ -89,7 +95,7 @@ const ContactForm = () => {
           <p className="text-red-400 text-sm mt-1">{errors.email?.message}</p>
         </div>
 
-        {/* Message */}
+        {/* ✅ Message Textarea */}
         <div>
           <textarea
             placeholder="Your Message*"
@@ -99,13 +105,13 @@ const ContactForm = () => {
           <p className="text-red-400 text-sm mt-1">{errors.message?.message}</p>
         </div>
 
-        {/* Privacy Note */}
+        {/* ✅ Privacy consent note */}
         <p className="text-xs text-gray-400 mt-2">
           By submitting this form I consent to processing my personal data as described in the{" "}
           <span className="text-[#c43b3b] underline cursor-pointer">Privacy Policy</span>.
         </p>
 
-        {/* Submit */}
+        {/* ✅ Submit button */}
         <button
           type="submit"
           disabled={isSubmitting}
@@ -113,6 +119,7 @@ const ContactForm = () => {
         >
           {isSubmitting ? "Submitting..." : "SUBMIT"}
         </button>
+
       </form>
     </div>
   );

@@ -1,32 +1,30 @@
-
-.contentboxInnerBox{
+/* ✅ Inner box background for contact info cards */
+.contentboxInnerBox {
   background: #232326;
 }
 
-
-
-
+/* ✅ Responsive adjustments for BoxTitle decoration on small screens (≤ 767px) */
 @media only screen and (max-width: 767px) {
-.BoxTitle-module__dnR0AG__decoration {
-  width: 100%;
-}
-}
-
-
-@media only screen and (max-width: 767px) {
-  .contentboxInnerBox{
- padding: 20px;
+  .BoxTitle-module__dnR0AG__decoration {
+    width: 100%; /* Full width for smaller screens */
   }
-.contentboxInnerBox img {
-  width: 40px;
-}
-  
-.contentboxInnerBox h4 {
-  font-size: 22px;
-}
-.contentboxInner {
-  padding: 10px;
 }
 
+/* ✅ Responsive adjustments for Contact Info inner boxes on small screens (≤ 767px) */
+@media only screen and (max-width: 767px) {
+  .contentboxInnerBox {
+    padding: 20px; /* Reduced padding for smaller screens */
+  }
 
+  .contentboxInnerBox img {
+    width: 40px; /* Smaller icon size */
+  }
+
+  .contentboxInnerBox h4 {
+    font-size: 22px; /* Smaller heading font */
+  }
+
+  .contentboxInner {
+    padding: 10px; /* Adjust inner container padding */
+  }
 }

@@ -1,3 +1,4 @@
+/* ✅ Main copyright text styling */
 .copyright {
   font-family: Inter;
   font-weight: 400;
@@ -5,36 +6,31 @@
   color: #fff;
   font-size: 24px;
   text-decoration: underline;
+
+  /* ✅ Center the text both horizontally and vertically */
   position: absolute;
   top: 30px;
-  left: 0px;
-  right: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0;
   margin: auto;
-  bottom: 0px;
+
   text-align: center;
-  margin: auto;
 }
 
-
+/* ✅ Adjust top spacing for medium-large screens (≤ 1135px) */
 @media only screen and (max-width: 1135px) {
-
   .copyright {
-
     top: 20px;
   }
-
 }
 
-
-
+/* ✅ Mobile responsiveness (≤ 767px) */
 @media only screen and (max-width: 767px) {
-
   .copyright {
-    position: relative;
+    position: relative; /* relative so it flows naturally */
     top: 10px;
     text-align: center;
-    font-size: 16px;
-
+    font-size: 16px; /* smaller font for mobile */
   }
-
 }

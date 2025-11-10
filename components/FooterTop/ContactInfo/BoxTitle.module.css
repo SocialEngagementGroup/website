@@ -1,45 +1,37 @@
-.title{
-font-family: Inter;
-font-weight: 700;
-font-style: Bold;
-font-size: 48px;
-line-height: 53px;
-color: white;
+/* ✅ Main heading styles */
+.title {
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 48px;
+  line-height: 53px;
+  color: white;
 }
 
-.decoration{
-  width: 550px;
+/* ✅ Subtitle / description styles */
+.decoration {
+  width: 550px;          /* Fixed width for large screens */
   font-size: 24px;
   margin-top: 15px;
   color: white;
-
 }
+
+/* ✅ Responsive styles for medium screens (≤ 700px) */
 @media only screen and (max-width: 700px) {
-.title {
-  font-size: 32px !important;
-  line-height: 35px !important;
+  .title {
+    font-size: 32px !important;   /* Smaller heading font */
+    line-height: 35px !important; /* Adjust line-height */
+  }
+
+  .decoration {
+    font-size: 15px;  /* Smaller description font */
+    width: 350px;     /* Reduce width for medium screens */
+  }
 }
 
-.decoration {
-  font-size: 15px;
-  width: 350px;
-
-
-
-}
-
-}
-
-
-
+/* ✅ Responsive styles for small screens (≤ 430px) */
 @media only screen and (max-width: 430px) {
-
-.decoration {
-  width: 100%;
+  .decoration {
+    width: 100%;  /* Full width on very small screens */
+  }
 }
-
-}
-
-
-
-

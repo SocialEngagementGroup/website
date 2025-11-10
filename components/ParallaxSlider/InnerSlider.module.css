@@ -1,29 +1,57 @@
-/* ========== Slider Layout ========== */
+/* ==============================
+   Slider Container & Wrapper
+   ============================== */
+
+/* Main slider container */
 .sliderContainer {
+  position: relative; /* Needed for custom arrows positioning */
   width: 100%;
   max-width: 100%;
   margin: 80px auto 0 auto;
+  opacity: 0; /* Hidden initially, fade in on loaded */
+  transition: opacity 0.5s ease;
 }
 
+/* Fade-in effect when loaded */
+.sliderContainer.loaded {
+  opacity: 1;
+}
+
+/* Swiper wrapper (holds all slides) */
 .sliderWrapper {
   width: 100%;
 }
 
-/* ========== Card Styles ========== */
 
+/* ==============================
+   Inner Card Styles
+   ============================== */
 
-/* Ensure content sits above overlay */
+/* Ensure content (text/images) sits above overlays */
 .innerCard * {
   position: relative;
   z-index: 2;
-
 }
 
-/* Hover animation */
+/* Image inside card */
+.innerCard img {
+  max-width: 180px; /* Default max width */
+}
 
+/* Card title */
+.innerCard h4 {
+  font-family: Inter;
+  font-weight: bold;
+  font-style: Regular;
+  font-size: 24px;
+  line-height: 35px;
+  letter-spacing: 0;
+  width: 90%;
+  color: #fff;
+  text-transform: capitalize;
+}
 
-/* ========== Icon and Text ========== */
-
+/* Optional paragraph inside card */
 .innerCard p {
   margin-top: 0.5rem;
   font-weight: 500;
@@ -32,124 +60,19 @@
   letter-spacing: 0.5px;
 }
 
-/* ========== Swiper Pagination ========== */
 
-.innerCard img {
-  max-width: 180px;
+/* ==============================
+   Custom Navigation Arrows
+   ============================== */
 
-
-}
-
-.innerCard h4 {
-  font-family: Inter;
-  font-weight: bold;
-  font-style: Regular;
-  font-size: 24px;
-  line-height: 35px;
-  letter-spacing: 0%;
-  width: 90%;
-  color: #fff;
-  text-transform: capitalize;
-
-
-}
-
-.sliderContainer {
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.sliderContainer.loaded {
-  opacity: 1;
-}
-
-
-
-
-
-@media only screen and (max-width: 1460px) {
-  .innerCard img {
-    max-width: 120px;
-
-  }
-
-  .InnerSlider-module__0Tpkga__innerCard {
-    height: 300px !important;
-
-  }
-
-  .innerCard h4 {
-    font-size: 26px;
-  }
-}
-
-
-
-@media only screen and (max-width: 1276px) {
-  .innerCard img {
-    max-width: 100px;
-
-  }
-
-  .InnerSlider-module__0Tpkga__innerCard {
-    height: 280px !important;
-
-  }
-
-  .innerCard h4 {
-    font-size: 24px;
-    line-height: 32px;
-  }
-}
-
-
-
-
-
-
-@media only screen and (max-width: 1276px) {
-  .sliderContainer {
-
-    margin: 50px auto 0 auto;
-  }
-}
-
-
-
-@media only screen and (max-width: 500px) {
-
-  .sliderContainer {
-    width: 100%;
-    max-width: 100%;
-    margin: 30px auto 0 auto;
-  }
-}
-
-
-
-
-/* InnerSlider.module.css */
-
-.sliderContainer {
-  position: relative;
-  /* The arrows will be placed relative to this boundary */
-  /* Remove any horizontal padding here if you want arrows to hug the screen edge */
-}
-
-/* ⚠️ Ensure you do NOT have any padding left/right on .sliderContainer if you want the arrows completely at the edge. 
-   If you DO have padding, set the left/right properties below to match the negative of the padding value. */
-
-/* Base style for both custom arrows */
+/* Base style for both prev/next arrows */
 .customArrow {
   position: absolute;
-  top: 50%;
+  top: 50%; /* Center vertically */
   transform: translateY(-50%);
   z-index: 10;
   cursor: pointer;
   color: #e3d3cc;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   border: 2px solid #e3d3cc;
   border-radius: 10%;
   width: 40px;
@@ -158,49 +81,89 @@
   justify-content: center;
   align-items: center;
   transition: background-color 0.3s;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+              rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
-
-
-
+/* Hover effect for arrows */
 .customArrow:hover {
   background-color: #f0f0f0;
   color: black;
 }
 
-/* --- Positioning the arrows --- */
-
+/* Positioning arrows */
 .swiperButtonPrev {
-  /* Pushes the arrow container flush with the left edge of .sliderContainer */
-  left: -46px;
+  left: -46px; /* Moves left arrow outside container */
 }
 
 .swiperButtonNext {
-  /* Pushes the arrow container flush with the right edge of .sliderContainer */
-  right: -46px;
+  right: -46px; /* Moves right arrow outside container */
 }
 
-
+/* Responsive adjustments for small screens */
 @media only screen and (max-width: 767px) {
   .swiperButtonPrev {
-    /* Pushes the arrow container flush with the left edge of .sliderContainer */
     left: 0px;
   }
 
   .swiperButtonNext {
-    /* Pushes the arrow container flush with the right edge of .sliderContainer */
     right: 0px;
   }
-  .customArrow{
+
+  .customArrow {
     width: 30px;
     height: 30px;
   }
-
 }
 
-/* OPTIONAL: Hide Swiper's default arrows if they somehow still appear */
+
+/* ==============================
+   InnerCard Responsive Adjustments
+   ============================== */
+
+/* Medium screens ≤ 1460px */
+@media only screen and (max-width: 1460px) {
+  .innerCard img {
+    max-width: 120px;
+  }
+  .InnerSlider-module__0Tpkga__innerCard {
+    height: 300px !important;
+  }
+  .innerCard h4 {
+    font-size: 26px;
+  }
+}
+
+/* Screens ≤ 1276px */
+@media only screen and (max-width: 1276px) {
+  .innerCard img {
+    max-width: 100px;
+  }
+  .InnerSlider-module__0Tpkga__innerCard {
+    height: 280px !important;
+  }
+  .innerCard h4 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .sliderContainer {
+    margin: 50px auto 0 auto;
+  }
+}
+
+/* Extra small screens ≤ 500px */
+@media only screen and (max-width: 500px) {
+  .sliderContainer {
+    width: 100%;
+    max-width: 100%;
+    margin: 30px auto 0 auto;
+  }
+}
+
+
+/* ==============================
+   Optional: Hide default Swiper buttons
+   ============================== */
 :global(.swiper-button-prev),
 :global(.swiper-button-next) {
   display: none !important;

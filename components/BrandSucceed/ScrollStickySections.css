@@ -1,86 +1,102 @@
+/* ✅ Enable smooth scrolling on the full sticky scroll section */
 .scroll-sticky-section {
   scroll-behavior: smooth;
 }
 
+/* ✅ Subtle zoom effect on images when hovered */
 .scroll-sticky-section img:hover {
   transform: scale(1.02);
 }
 
+/* ✅ Smooth hover animation for content boxes */
 .scroll-sticky-section .content-box {
   transition: all 0.3s ease;
 }
 
+/* ✅ Lift content box slightly on hover */
 .scroll-sticky-section .content-box:hover {
   transform: translateY(-5px);
 }
-.giftext{
+
+/* ✅ Default width adjustment for GIF text */
+.giftext {
   width: 90%;
 }
+
+/* ✅ Button styling inside sticky section */
 .scroll-sticky-section button {
   letter-spacing: 0.05em;
   font-weight: 500;
 }
 
+
+/* ✅ Responsive styles for tablets & mobile (≤ 768px) */
 @media (max-width: 768px) {
+  /* Stack elements vertically instead of side-by-side */
   .scroll-sticky-section {
     flex-direction: column;
   }
-.giftext{
-  width: 100%;
-}
+
+  /* Increase gif text width for small screens */
+  .giftext {
+    width: 100%;
+  }
+
+  /* Reduce image height on mobile */
   .scroll-sticky-section img {
     height: 50vh !important;
   }
+}
 
+/* ✅ By default hide the mobile gif image */
+.gifimagemobile {
+  display: none;
 }
-.gifimagemobile{
- display: none
-}
+
+/* ✅ Show mobile gif image and hide desktop version on small screens */
 @media (max-width: 768px) {
-.gifimagemobile{
- display: block;
+  .gifimagemobile {
+    display: block;
+  }
+
+  .gifimage {
+    display: none;
+  }
 }
-  .gifimage{
-display: none;}
+
+
+/* ✅ Button border styling in content box */
+.content-box button {
+  border: 1px solid #101828;
 }
 
-
-
-
-.content-box button{
-  border:1px solid #101828;
-}
-.content-box p{
+/* ✅ Typography for content text */
+.content-box p {
   font-size: 32px;
   font-weight: 500;
   line-height: 40px;
 }
 
-.content-box img{
+/* ✅ Fixed image width inside content box */
+.content-box img {
   width: 300px !important;
-
-
 }
-/* ≤ 1450px */
+
+
+/* ✅ Extra small screens (≤ 500px) adjustments */
 @media only screen and (max-width: 500px) {
+  .content-box p {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 30px;
+  }
 
+  .content-box img {
+    width: 300px !important;
+  }
 
-.content-box p{
-  font-size: 20px;
-  font-weight: normal;
-  line-height: 30px;
-}
-
-.content-box img{
-  width: 300px !important;
-
-
-}
+  /* Lower image height for small mobile screens */
   .scroll-sticky-section img {
     height: 25vh !important;
   }
-  
-
 }
-
-

@@ -1,31 +1,27 @@
 import React from "react";
-import "./TextSlider.css"; // We'll define animation here
-
+import "./TextSlider.css"; // Animation and styling
 
 const TextSlider = () => {
   return (
-  <>
-    <div className="overflow-hidden  text-white textslide">
+    <div className="overflow-hidden text-white textslide relative">
+      {/* Sliding text container */}
       <div className="slider flex whitespace-nowrap animate-slide py-4">
-        <h5 className="mx-8 text-2xl font-semibold tracking-widest">
-          FREE CONSULTATION
-        </h5>
-        <h5 className="mx-8 text-2xl font-semibold tracking-widest">
-          FREE CONSULTATION
-        </h5>
-        <h5 className="mx-8 text-2xl font-semibold tracking-widest">
-          FREE CONSULTATION
-        </h5>
-        <h5 className="mx-8 text-2xl font-semibold tracking-widest">
-          FREE CONSULTATION
-        </h5>
+        {/* Repeated items for seamless sliding */}
+        {Array(8)
+          .fill(0)
+          .map((_, idx) => (
+            <h5
+              key={idx}
+              className="mx-8 text-2xl md:text-5xl font-semibold tracking-widest"
+            >
+              FREE CONSULTATION
+            </h5>
+          ))}
       </div>
-          <button className="consultant-btn">FREE CONSULTATION</button>
-    </div>
 
-   
-  
-  </>
+      {/* Centered button overlay */}
+      <button className="consultant-btn">FREE CONSULTATION</button>
+    </div>
   );
 };
 

@@ -1,20 +1,21 @@
+/* ✅ Main container background for client logos section */
 .ClientLogos {
-background: #fff;
-
-
+  background: #fff;
 }
+
+/* ✅ Subtitle styling (under 'Our Clients') */
 .sub-title {
   font-family: "Inter", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 18px; /* reduced from 20px */
+  font-size: 18px; /* previously 20px */
   line-height: 36px;
   letter-spacing: 0;
   position: relative;
   display: inline-block;
 }
 
-/* Responsive underline */
+/* ✅ Animated underline centered by default (for small screens) */
 .sub-title::after {
   content: "";
   display: block;
@@ -27,7 +28,7 @@ background: #fff;
   transition: all 0.3s ease;
 }
 
-/* Left align underline on medium screens and up */
+/* ✅ On medium screens and larger, align underline to the left */
 @media (min-width: 768px) {
   .sub-title::after {
     left: 0;
@@ -35,11 +36,10 @@ background: #fff;
   }
 }
 
+/* ✅ Main title styles (‘Our Clients’) */
 .section-title {
   font-family: "Inter", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 22px;
-
 }
-

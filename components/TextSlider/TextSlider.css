@@ -1,46 +1,60 @@
+/* ========== Slide Animation ========== */
 @keyframes slide {
   0% {
-    transform: translateX(0);
+    transform: translateX(0);       /* Start at original position */
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-50%);    /* Slide left by 50% of element width */
   }
 }
 
+/* ========== Animated Slide Container ========== */
 .animate-slide {
-  display: inline-flex;
-  animation: slide 70s linear infinite;
-  background: #975554
+  display: inline-flex;             /* Align child elements horizontally */
+  animation: slide 70s linear infinite; /* Slow continuous horizontal animation */
+  background: #975554;              /* Brand color background */
 }
 
-.animate-slide h5{  font-size: 7rem;}
-
-.textslide{
-  position: relative;
+/* Large text inside the slider */
+.animate-slide h5 {
+  font-size: 7rem;                  /* Very large heading */
 }
-.consultant-btn{
+
+/* Wrapper for slide and other content */
+.textslide {
+  position: relative;               /* For absolutely positioned child elements */
+}
+
+/* Consultant Button overlay */
+.consultant-btn {
   position: absolute;
-  top:0;
+  top: 0;
   right: 0;
   left: 0;
   bottom: 0;
-  margin: auto;
+  margin: auto;                     /* Center vertically & horizontally */
   width: 210px;
   height: 55px;
   border-radius: 5px;
-  z-index: 111;
- background: #232326;
-
+  z-index: 111;                     /* Ensure button is above other content */
+  background: #232326;              /* Dark button background */
+  color: #fff;                       /* Optional: white text for contrast */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
+/* ========== Responsive Styling for Small Screens ≤500px ========== */
 @media only screen and (max-width: 500px) {
-.textslide h5{
- font-size:64px;
-}
-.consultant-btn{
-  width: 180px;
-  height: 40px;
-  font-size: 14px;
-}
-}
+  .textslide h5 {
+    font-size: 64px;                 /* Reduce text size on mobile */
+  }
 
+  .consultant-btn {
+    width: 180px;
+    height: 40px;
+    font-size: 14px;                 /* Adjust button text for mobile */
+  }
+}

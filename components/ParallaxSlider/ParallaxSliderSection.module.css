@@ -1,8 +1,10 @@
-/* ParallaxSliderSection.module.css */
+/* ========== Section Background ========== */
 .parallaxSection {
-background: linear-gradient(180deg, #E3D3CC 62.5%, #FFFFFF 100%);
-
+  /* Smooth vertical gradient from #E3D3CC to white */
+  background: linear-gradient(180deg, #E3D3CC 62.5%, #FFFFFF 100%);
 }
+
+/* ========== Subtitle Styling ========== */
 .subTitle {
   font-family: "Inter", sans-serif;
   font-weight: 700;
@@ -10,31 +12,30 @@ background: linear-gradient(180deg, #E3D3CC 62.5%, #FFFFFF 100%);
   font-size: 18px;
   line-height: 36px;
   letter-spacing: 0;
-  position: relative;
-  display: inline-block;
+  position: relative;      /* Needed for the ::after underline */
+  display: inline-block;   /* So that ::after positions relative to text */
 }
 
-/* Responsive underline */
+/* ========== Responsive Underline ========== */
 .subTitle::after {
   content: "";
   display: block;
   width: 60px;
   height: 5px;
-  background: #975554;
-  border-radius: 14px;
+  background: #975554;     /* Underline color */
+  border-radius: 14px;     /* Rounded edges for modern look */
   position: absolute;
-  bottom: -5px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: -5px;            /* Slightly below text */
+  left: 50%;               /* Center horizontally */
+  transform: translateX(-50%); /* Truly center the underline */
   opacity: 1;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease;   /* Smooth animation if it moves or resizes */
 }
 
-/* Left align underline on medium screens and up */
+/* ========== Medium Screens & Up: Left-Aligned Underline ========== */
 @media (min-width: 768px) {
   .subTitle::after {
-    left: 0;
-    transform: none;
+    left: 0;               /* Align left with text */
+    transform: none;       /* Remove centering transform */
   }
-  
 }

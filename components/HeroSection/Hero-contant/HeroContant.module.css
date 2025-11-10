@@ -1,10 +1,12 @@
-/* HeroContant.module.css */
+/* =========================================================
+   Hero Content Styles
+========================================================= */
 
 /* ---------- Hero Content Container ---------- */
 .heroContent {
-  position: absolute;
-  left: 96px;
-  z-index: 111;
+  position: absolute;      /* Position absolute for layout over hero image */
+  left: 96px;              /* Horizontal offset from left */
+  z-index: 111;            /* Ensure content appears above other elements */
 }
 
 /* ---------- Hero Heading ---------- */
@@ -13,14 +15,14 @@
   font-weight: 700;
   font-style: normal;
   letter-spacing: 0;
-  font-size: 64px;
-  line-height: 95px;
+  font-size: 64px;         /* Default font size */
+  line-height: 95px;       /* Default line height */
   color: #ffffff;
 }
 
 /* ---------- Hero Subtext ---------- */
 .heroSubtext {
-  padding-block: 2rem;
+  padding-block: 2rem;     /* Vertical padding top & bottom */
   font-family: Inter;
   font-weight: 500;
   font-style: normal;
@@ -45,15 +47,15 @@
 /* ≤ 1580px */
 @media only screen and (max-width: 1580px) {
   .heroHeading {
-    font-size: 62px;
+    font-size: 62px;       /* Slightly smaller heading */
     line-height: 76px;
   }
 
   .heroSubtext {
     padding-block: 2.5rem;
-    font-size: 16px;
+    font-size: 16px;       /* Adjust for smaller screens */
     line-height: 24px;
-    width: 90%;
+    width: 90%;            /* Limit width */
   }
 }
 
@@ -74,7 +76,7 @@
 /* ≤ 1180px */
 @media only screen and (max-width: 1180px) {
   .heroContent {
-    position: relative;
+    position: relative;    /* Switch to relative for stacked layout */
     left: 0px;
     z-index: 111;
   }
@@ -84,14 +86,14 @@
   }
 }
 
-/* ≤ 767px */
+/* ≤ 767px - Mobile devices */
 @media only screen and (max-width: 767px) {
   .heroBtn {
-    font-size: 16px;
+    font-size: 16px;       /* Smaller button text on mobile */
   }
 }
 
-/* ≤ 500px */
+/* ≤ 500px - Small mobile devices */
 @media only screen and (max-width: 500px) {
   .heroHeading {
     font-size: 40px;
@@ -111,11 +113,16 @@
   }
 }
 
-/* Optional container classes */
+/* =========================================================
+   Optional container classes
+========================================================= */
+
+/* Hero section background */
 .heroSection {
   background: #232326;
 }
 
+/* Custom padding for hero section */
 .customPadding {
   padding-top: 150px;
   padding-bottom: 80px;

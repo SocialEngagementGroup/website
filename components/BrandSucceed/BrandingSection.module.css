@@ -1,32 +1,41 @@
-
-.customsectiontitle h3{
- width: 100% !important;
+/* ✅ Styling main heading inside custom section title */
+.customsectiontitle h3 {
+  width: 100% !important;
   font-size: 48px;
   line-height: 55px;
 }
-.customsectiontitle h3 span{
-font-family: Lobster;
+
+/* ✅ Apply Lobster font only to highlighted span text */
+.customsectiontitle h3 span {
+  font-family: Lobster;
 }
-.customsectiontitle .description{
+
+/* ✅ Styling description text under the heading */
+.customsectiontitle .description {
   width: 100% !important;
   font-size: 18px;
 }
 
 
+/* ✅ Responsive styles for small screens (mobile view <= 512px) */
 @media only screen and (max-width: 512px) {
-  .customsectiontitle h3{
- width: 100% !important;
-  font-size: 26px !important;
-  line-height: 32px;
 
-  font-weight: bold;
-}
-.customsectiontitle h3 span{
-font-family: Lobster;
-}
-.customsectiontitle .description{
-  width: 100% !important;
-  font-size: 16px;
-}
+  /* ✅ Smaller title size on mobile */
+  .customsectiontitle h3 {
+    width: 100% !important;
+    font-size: 26px !important;
+    line-height: 32px;
+    font-weight: bold;
+  }
 
+  /* ✅ Keep highlighted text in Lobster font */
+  .customsectiontitle h3 span {
+    font-family: Lobster;
+  }
+
+  /* ✅ Make description slightly smaller for mobile */
+  .customsectiontitle .description {
+    width: 100% !important;
+    font-size: 16px;
+  }
 }

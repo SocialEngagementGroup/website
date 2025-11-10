@@ -28,29 +28,21 @@
   border-radius: 0;
 }
 
-
+/* Responsive height adjustments */
 @media only screen and (max-width: 991px) {
- 
-.wrapper {
-  height: 70vh !important;
-}
-}
-@media only screen and (max-width: 991px) {
- 
-.wrapper {
-  height: 60vh !important;
-}
-}
-@media only screen and (max-width: 991px) {
- 
-.wrapper {
-  height: 50vh !important;
-}
+  .wrapper {
+    height: 70vh;
+  }
 }
 
-@media only screen and (max-width: 991px) {
- 
-.wrapper {
-  height: 30vh !important;
+@media only screen and (max-width: 767px) {
+  .wrapper {
+    height: 50vh;
+  }
 }
+
+@media only screen and (max-width: 500px) {
+  .wrapper {
+    height: 30vh;
+  }
 }

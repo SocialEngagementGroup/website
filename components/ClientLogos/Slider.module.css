@@ -1,3 +1,4 @@
+/* ✅ Animation: moves logos from right to left endlessly */
 @keyframes marquee {
   0% {
     transform: translateX(0%);
@@ -7,33 +8,39 @@
   }
 }
 
+/* ✅ Outer container ensures content stays hidden outside boundaries */
 .marquee-wrapper {
   position: relative;
   overflow: hidden;
 }
 
+/* ✅ Marquee flex row — width expands based on content and animates continuously */
 .marquee {
   display: flex;
   width: max-content;
   animation: marquee var(--marquee-speed, 20s) linear infinite;
 }
 
-/* Left and right gradient overlays */
+/* ✅ Fade overlays create smooth gradient on both edges */
+/* Prevents logos from abruptly appearing or disappearing */
+
 .fade-left,
 .fade-right {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 5rem; /* adjust width of fade */
+  width: 5rem; /* Adjust fade width if needed */
   z-index: 10;
-  pointer-events: none;
+  pointer-events: none; /* Allows cursor interactions to pass through */
 }
 
+/* ✅ Left fade — fades from white to transparent */
 .fade-left {
   left: 0;
   background: linear-gradient(to right, white, rgba(255, 255, 255, 0));
 }
 
+/* ✅ Right fade — fades from white to transparent */
 .fade-right {
   right: 0;
   background: linear-gradient(to left, white, rgba(255, 255, 255, 0));

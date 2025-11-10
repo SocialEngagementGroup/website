@@ -5,64 +5,65 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
-import { images } from "../../../data"; // Assumed to be an array of image objects
+import { images } from "../../../data"; // Array of image objects
 
 const MultiRowSlider = () => {
+  // State to trigger fade-in animation once component mounts
   const [visible, setVisible] = useState(false);
+  // State to check if the screen is mobile
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    setVisible(true);
-    const checkScreen = () => setIsMobile(window.innerWidth < 640);
+    setVisible(true); // Make slider visible on mount
+    const checkScreen = () => setIsMobile(window.innerWidth < 640); // Mobile breakpoint
     checkScreen();
-    window.addEventListener("resize", checkScreen);
+    window.addEventListener("resize", checkScreen); // Update on resize
     return () => window.removeEventListener("resize", checkScreen);
   }, []);
 
-  const rows = 3;
+  const rows = 3; // Total number of slider rows
 
-  // ⭐️ NEW LOGIC: Calculate how many images each row should have
+  // Calculate how many images should be in each row
   const imagesPerRow = Math.ceil(images.length / rows);
 
   return (
     <div className={`space-y-4 ${visible ? " visible" : ""}`}>
+      {/* Loop through each row */}
       {Array.from({ length: rows }).map((_, rowIndex) => {
-        const reverse = rowIndex % 2 === 1;
-        const shift = isMobile ? 0 : rowIndex * 80; // no shift on mobile
+        const reverse = rowIndex % 2 === 1; // Reverse direction for every other row
+        const shift = isMobile ? 0 : rowIndex * 80; // Horizontal shift for desktop only
 
-        // ⭐️ NEW LOGIC: Determine the sub-array of images for this specific row
+        // Determine the images that belong to this row
         const startIndex = rowIndex * imagesPerRow;
         const rowImages = images.slice(startIndex, startIndex + imagesPerRow);
 
-        // If the calculated slice is empty (e.g., if you have fewer than 3 images), you can skip the row or handle it.
+        // Skip row if no images are available
         if (rowImages.length === 0) return null;
 
         return (
           <div
             key={rowIndex}
             className="overflow-hidden relative reduce-margin customSwiperSlideShadow"
-            style={{ marginLeft: `${shift}px` }}
+            style={{ marginLeft: `${shift}px` }} // Shift rows slightly for staggered effect
           >
             <Swiper
               modules={[Autoplay]}
-              slidesPerView={"auto"}
-              spaceBetween={20}
-              // You might need to set loop={false} if you don't want the row's set of images to repeat itself.
-              // However, typically for continuous scrolling, you DO want loop={true} as you had it.
-              loop={true} 
-              speed={6000}
+              slidesPerView={"auto"} // Auto width based on content
+              spaceBetween={20}      // Gap between slides
+              loop={true}            // Continuous loop
+              speed={6000}           // Scroll speed
               autoplay={{
-                delay: 1,
+                delay: 1,                 // Minimal delay for continuous motion
                 disableOnInteraction: false,
-                reverseDirection: reverse,
-                pauseOnMouseEnter: true,
+                reverseDirection: reverse, // Alternate row direction
+                pauseOnMouseEnter: true,   // Pause on hover
               }}
             >
-              {/* ⭐️ Use rowImages instead of the full images array */}
+              {/* Map only the images assigned to this row */}
               {rowImages.map((img) => (
                 <SwiperSlide
                   key={`${rowIndex}-${img.id}`}
-                  className="!w-[200px]"
+                  className="!w-[200px]" // Fixed width per slide
                 >
                   <div className="relative imggg border border-[#232326] overflow-hidden rounded-[10px] aspect-square transition-transform duration-500 ease-in-out hover:scale-105">
                     <Image

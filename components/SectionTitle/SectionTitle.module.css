@@ -1,5 +1,4 @@
-
-
+/* ========== Main Title / Section Label ========== */
 .subTitle {
   font-family: "Inter", sans-serif;
   font-weight: 700;
@@ -7,100 +6,89 @@
   line-height: 36px;
   display: inline-block;
   position: relative;
-
 }
 
-/* Underline */
+/* ---------- Underline for subTitle ---------- */
 .subTitle::after {
   content: "";
   display: block;
-  width: 100%;
+  width: 100%;             /* Full width underline */
   height: 5px;
-  background: #975554;
+  background: #975554;     /* Brand color */
   border-radius: 14px;
   position: absolute;
-  bottom: -10px;
+  bottom: -10px;           /* Distance below text */
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); /* Center horizontally */
   transition: all 0.3s ease;
 }
 
-/* Left-align underline on medium+ screens */
+/* ---------- Left-align underline on medium screens and up ---------- */
 @media (min-width: 768px) {
   .subTitle::after {
     left: 0;
     transform: none;
   }
-  
 }
 
+/* ========== First Subheading ========== */
 .sectionTitle {
   font-family: "Inter", sans-serif;
   font-weight: 600;
   font-style: normal;
-  width: 800px !important;
-  margin:20px auto;
-  line-height: 55px;
+  width: 800px !important;    /* Fixed width for layout */
+  margin: 20px auto;           /* Center horizontally */
+  line-height: 55px;           /* Tall line spacing for readability */
 }
 
-
-
-.sectionTitle2{
- font-family: "Inter", sans-serif;
+/* ========== Second Subheading ========== */
+.sectionTitle2 {
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-style: normal;
-  margin:20px auto;
+  margin: 20px auto;           /* Center horizontally */
   line-height: 55px;
-
 }
 
-
+/* ========== Responsive Styling: Small Screens (≤767px) ========== */
 @media only screen and (max-width: 767px) {
-.sectionTitle {
-  width: 100% !important;
-  text-align: center !important;
-  line-height: 35px;
-  max-width: 500px;
+  .sectionTitle {
+    width: 100% !important;   /* Full width on small screens */
+    text-align: center !important;
+    line-height: 35px;        /* Reduce line height for smaller screens */
+    max-width: 500px;         /* Prevent overly long lines */
+  }
 
+  .subTitle {
+    font-size: 20px;           /* Slightly smaller text */
+    text-align: center !important;
+    margin: auto;
+  }
 
-}
-.subTitle{
-  font-size: 20px;
-  text-align: center !important;
-  margin: auto;
-   
+  .description {
+    max-width: 500px;          /* Restrict paragraph width */
+  }
 
-}
-.description{
-  max-width: 500px;
-
-}
-.sectionTitle2{
-
-  line-height: 35px;
-
-}
+  .sectionTitle2 {
+    line-height: 35px;         /* Adjust spacing for smaller screens */
+  }
 }
 
-
+/* ========== Responsive Styling: Extra Small Screens (≤500px) ========== */
 @media only screen and (max-width: 500px) {
   .sectionTitle {
-  line-height: 32px;
-  font-weight: bold;
-  font-size: 22px !important;
+    line-height: 32px;          /* Further reduce line height */
+    font-weight: bold;
+    font-size: 22px !important;
+  }
+
+  .subTitle {
+    font-size: 20px;           /* Maintain readable size */
+  }
+
+  .sectionTitle2 {
+    line-height: 32px;
+    font-weight: bold;
+    font-size: 22px !important;
+  }
 }
-.subTitle{
-  font-size: 20px;
-
-   
-
-}
-.sectionTitle2{
-
-  line-height: 32px;
-  font-weight: bold;
-  font-size: 22px !important;
-
-}
-}
-
