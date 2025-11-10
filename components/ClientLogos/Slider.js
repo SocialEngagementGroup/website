@@ -1,7 +1,8 @@
 "use client";
+import { Import } from "lucide-react";
 import { ClientsLogo } from "../../data";
 import styles from "./Slider.module.css";
-
+import Image from "next/image";
 const LogoMarquee = ({ speed = 100 }) => {
   return (
     <div className="w-full pt-12 md:pt-4 pb:7 md:pb-12 relative">
@@ -20,10 +21,12 @@ const LogoMarquee = ({ speed = 100 }) => {
               key={idx}
               className="flex justify-center items-center"
             >
-              <img
+              <Image
                 src={logo.src}
                 alt={logo.alt}
-                className="h-full w-full"
+                width={140}   // specify number in pixels
+                height={70}   // specify number in pixels
+                className="object-contain"
               />
             </div>
           ))}

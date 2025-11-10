@@ -2,7 +2,7 @@ import React from "react";
 import { ArrowUpRight } from "lucide-react"; // ✅ Lucide icon for arrow (currently not used in JSX)
 import BoxTitle from "./BoxTitle";            // ✅ Section title component
 import style from "./ContactInfo.module.css"; // ✅ CSS module for custom styles
-
+import Image from "next/image";               // ✅ Next.js Image component for optimized images
 const ContactInfo = () => {
   return (
     // ✅ Outer container with backdrop blur, rounded corners, and full-width fluid container
@@ -26,7 +26,7 @@ const ContactInfo = () => {
           >
             {/* ✅ Icon and text */}
             <div className="flex flex-col items-start gap-4">
-              <img src="/Icons/callicon.png" alt="Call Icon" width={60} height={60} />
+              <Image src="/Icons/callicon.png" alt="Call Icon" width={60} height={60} />
               <h4 className="font-semibold text-[32px] text-white">
                 Book A Call
               </h4>
@@ -34,7 +34,7 @@ const ContactInfo = () => {
 
             {/* ✅ Arrow icon at top-right */}
             <div className="absolute top-4 right-4">
-              <img
+              <Image
                 src="/Icons/arrow-up-right-1.png"
                 alt="Arrow Icon"
                 width={60}
@@ -51,7 +51,7 @@ const ContactInfo = () => {
           >
             {/* ✅ Icon and text */}
             <div className="flex flex-col items-start gap-4">
-              <img src="/Icons/mailicon.png" alt="Mail Icon" width={60} height={60} />
+              <Image src="/Icons/mailicon.png" alt="Mail Icon" width={60} height={60} />
               <h4 className="font-semibold text-[32px] text-white">
                 Send Email
               </h4>
@@ -59,7 +59,7 @@ const ContactInfo = () => {
 
             {/* ✅ Arrow icon at top-right */}
             <div className="absolute top-4 right-4">
-              <img
+              <Image
                 src="/Icons/arrow-up-right-1.png"
                 alt="Arrow Icon"
                 width={60}
