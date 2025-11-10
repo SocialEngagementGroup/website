@@ -24,7 +24,7 @@ const Card = ({ i, title, color, progress, range, targetScale, sliderData, isAct
         className={styles.card}
       >
         {/* Card title */}
-        <h3 className="slider-title">{title}</h3>
+        <h4 className="slider-title">{title}</h4>
 
         {/* 🔥 Inner Swiper Slider Component inside the card */}
         <InnerSlider items={sliderData} />

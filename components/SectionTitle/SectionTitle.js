@@ -30,7 +30,7 @@ const SectionTitle = ({ title, subtitle, subtitle2, description, id }) => {
       {/* ---------- Second Subheading (optional) ---------- */}
       {subtitle2 && (
         <h3
-          className={`${styles.sectionTitle2} text-[26px] sm:text-[32px] md:text-[48px] text-gray-900 mt-2 md:mt-8 leading-tight`}
+          className={`${styles.sectionTitle2} text-[24px] sm:text-[32px] md:text-[48px] text-gray-900 mt-2 md:mt-8 leading-tight`}
         >
           {subtitle2}
         </h3>

@@ -83,7 +83,7 @@ const InnerSlider = ({ items }) => {
               {/* Slide image */}
               <Image width={130} height={100} src={item.icon} alt={`slide-${idx}`} />
               {/* Slide title */}
-              <h4 className="mt-5">{item.name}</h4>
+              <h5 className="mt-5 inner-title">{item.name}</h5>
             </div>
           </SwiperSlide>
         ))}

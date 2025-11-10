@@ -61,7 +61,7 @@
 }
 
 /* ---------- Card Title ---------- */
-.card h3 {
+.card h4 {
   font-family: Lobster, sans-serif;
   font-style: Regular;
   font-size: 128px;
@@ -74,7 +74,7 @@
 
 /* ---------- Responsive Styling ≤ 767px ---------- */
 @media only screen and (max-width: 767px) {
-  .card h3 {
+  .card h4 {
     text-align: center;
     font-size: 65px; /* Added missing unit */
   }
@@ -86,7 +86,7 @@
 
 /* ---------- Responsive Styling ≤ 500px ---------- */
 @media only screen and (max-width: 500px) {
-  .card h3 {
+  .card h4 {
     font-size: 52px;
     text-align: center;
     margin-top: 0px;

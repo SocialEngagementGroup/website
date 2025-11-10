@@ -86,7 +86,7 @@
 /* ✅ Extra small screens (≤ 500px) adjustments */
 @media only screen and (max-width: 500px) {
   .content-box p {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: normal;
     line-height: 30px;
   }
