@@ -41,6 +41,6 @@
 /* ✅ Responsive padding for small screens (≤ 767px) */
 @media only screen and (max-width: 767px) {
   .wrapper {
-    padding: 6rem 0rem; /* Smaller vertical padding, remove horizontal */
+    padding: 3rem 0rem; /* Smaller vertical padding, remove horizontal */
   }
 }
