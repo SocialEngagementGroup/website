@@ -15,7 +15,7 @@ const ClientLogos = () => {
           subtitle2={
             <>
               Trusted by brands that care{" "}
-              <br className="hidden sm:block" />as much as we do.
+              <br className="hidden sm:block" />as much as we do
             </>
           }
           description="We partner with businesses that value authenticity, creativity, and real impact, turning ideas into campaigns that bring their visions to life."

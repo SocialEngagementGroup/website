@@ -20,7 +20,7 @@ const TextSlider = () => {
       </div>
 
       {/* Centered button overlay */}
-      <button className="consultant-btn">FREE CONSULTATION</button>
+      {/* <button className="consultant-btn">FREE CONSULTATION</button> */}
     </div>
   );
 };

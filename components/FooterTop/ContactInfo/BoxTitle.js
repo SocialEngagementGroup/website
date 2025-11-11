@@ -10,7 +10,7 @@ const BoxTitle = () => {
       {/* ✅ Main heading */}
       <h3 className={styles.title}>
         Let’s create the next<br />
-        chapter of your story.
+        chapter of your story
       </h3>
 
       {/* ✅ Subtitle/description with custom decoration styles */}
