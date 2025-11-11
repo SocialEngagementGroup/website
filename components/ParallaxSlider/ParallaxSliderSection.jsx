@@ -2,7 +2,7 @@ import React from "react";
 import SectionTitle from "../SectionTitle/SectionTitle"; // Section heading component
 import ParallaxSlider from "./ParallaxSlider";           // Main parallax slider component
 import styles from "./ParallaxSliderSection.module.css"; // CSS module for styling
-import Vdo from "@/components/Vdo/Vdo";                 // Video component
+// import Vdo from "@/components/Vdo/Vdo";                 // Video component
 
 const ParallaxSliderSection = () => {
   return (
@@ -20,7 +20,7 @@ const ParallaxSliderSection = () => {
             subtitle2={
               <>
                 Marketing solutions for every{" "}
-                <br className="hidden sm:block" />stage of your growth.
+                <br className="hidden sm:block" />stage of your growth
               </>
             }
             description="Crafted to deliver real results through strategy, storytelling, and AI-powered execution, all under one roof."
@@ -34,10 +34,10 @@ const ParallaxSliderSection = () => {
       </div>
 
       {/* Video section below slider */}
-      <div className="container-fluid mx-auto">
+      {/* <div className="container-fluid mx-auto">
         <Vdo src={"./videos/vdo.mp4"} />
       </div>
-    
+     */}
     </section>
   );
 };

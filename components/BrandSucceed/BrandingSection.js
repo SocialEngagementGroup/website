@@ -18,6 +18,7 @@ const BrandingSection = () => {
         <div className={`${style.customsectiontitle} text-center section-title-custom mb-10`}>
           <SectionTitle
             id="We-Ignite-the-Future"
+            title="About Us"
             subtitle={<>How we help <span>your</span> brand succeed</>}
             description=" Every visual, message, and moment we craft is made to tell your story with intention, evoke emotion, and drive real engagement."
           />

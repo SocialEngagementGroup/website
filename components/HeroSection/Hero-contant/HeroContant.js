@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./HeroContant.module.css";
-
+import Link from "next/link";
 const HeroContant = () => {
   return (
     // ✅ Main wrapper for hero content
@@ -13,7 +13,7 @@ const HeroContant = () => {
         <h1 className={`${styles.heroHeading} font-bold leading-snug`}>
           Where Human <br />
           Creativity Meets <br />
-          AI-Powered Growth.
+          AI-Powered Growth
         </h1>
 
         {/* ✅ Subtext paragraph */}
@@ -22,7 +22,8 @@ const HeroContant = () => {
         </p>
 
         {/* ✅ Hero button */}
-        <button
+    <Link  href="#contact" >
+        <button  
           className={`
             ${styles.heroBtn} 
             bg-[#656565] text-gray-100 font-semibold
@@ -30,10 +31,11 @@ const HeroContant = () => {
             sm:px-8 sm:py-3 md:px-10 md:py-4
             hover:bg-gray-400 transition cursor-pointer
             rounded-lg text-base sm:text-lg mt-4
-          `}
+          `} 
         >
           Grow with Purpose
         </button>
+    </Link>
       </div>
     </div>
   );
