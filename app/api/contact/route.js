@@ -14,7 +14,7 @@ export async function POST(req) {
 
     return NextResponse.json({ success: true, data });
   } catch (error) {
-    console.error("Contact Form Error:", error);
+    console.error("Contact Form Error:", error.message);
     return NextResponse.json(
       { success: false, error: error.message || "Unknown error" },
       { status: 500 }

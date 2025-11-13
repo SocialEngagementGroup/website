@@ -31,7 +31,7 @@ const MultiRowSlider = () => {
       {/* Loop through each row */}
       {Array.from({ length: rows }).map((_, rowIndex) => {
         const reverse = rowIndex % 2 === 1; // Reverse direction for every other row
-        const shift = isMobile ? 0 : rowIndex * 80; // Horizontal shift for desktop only
+        const shift = isMobile ? 0 : rowIndex * -70; // Horizontal shift for desktop only
 
         // Determine the images that belong to this row
         const startIndex = rowIndex * imagesPerRow;
