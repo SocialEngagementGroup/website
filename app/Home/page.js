@@ -1,31 +1,5 @@
-import React from 'react'
-import HeroSection from "@/components/HomePage/HeroSection/HeroSection"
-import ParallaxSliderSection from '@/components/HomePage/ParallaxSlider/ParallaxSliderSection'
-import ClientsLogo from '@/components/HomePage/ClientLogos/ClientLogos'
-import Slider from '@/components/HomePage/ClientLogos/Slider'
-import BrandingSection from '@/components/HomePage/BrandSucceed/BrandingSection'
+// app/page.js is always treated as the root (home) page.
 
+// This means when someone visits your site at the / URL, Next.js will automatically look for app/page.js.
 
-
-const page = () => {
-  return (
-    <>
-       <HeroSection/>
-        <div className='bg-[#E3D3CC] '>
-             <div className='bg-[#E3D3CC] md:w-[70%] w-[100%] mx-auto herobrandlogo'>
-            <Slider/>
-        </div>
-            
-        </div>
-       <ParallaxSliderSection/>
-         <ClientsLogo />
-    
-       <div className='bg-white'>
-       <BrandingSection/>
-       </div>
-       
-    </>
-  )
-}
-
-export default page
+// If you create a separate file named Home (app/home/page.js), it will be treated as the /home route, not the / route.
