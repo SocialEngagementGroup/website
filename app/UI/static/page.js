@@ -1,7 +1,7 @@
 // if the button need to work with onlclikc it must use "use client" directive at the top of the file
 
 import { getCatFacts } from "@/apis/api";
-import Button from "@/components/button/btn";
+import Button from "@/components/HomePage/button/btn";
 // async
 
 export default async function Static() {

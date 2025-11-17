@@ -1,12 +1,14 @@
 import React from "react";
-import ContactInfo from "@/components/FooterTop/ContactInfo/ContactInfo"; // ✅ Contact info cards
-import ContactForm from "@/components/FooterTop/ContactForm/ContactForm"; // ✅ Contact form component
-import styles from "./FooterTop.module.css"; // ✅ CSS module for styling wrapper and container
-import Copyright from "../Copyright/Copyright"; // ✅ Footer copyright component
+import ContactInfo from "@/components/Footer/ContactInfo/ContactInfo"; // ✅ Contact info cards
+import ContactForm from "@/components/Footer/ContactForm/ContactForm"; // ✅ Contact form component
+import styles from "./Footer.module.css"; // ✅ CSS module for styling wrapper and container
+import Copyright from "../HomePage/Copyright/Copyright"; // ✅ Footer copyright component
+import TextSlider from "../HomePage/TextSlider/TextSlider";
 
-const FooterTop = () => {
+const Footer = () => {
   return (
     // ✅ Main footer section wrapper
+  <>
     <section id="contact" className={styles.wrapper}>
       
       {/* ✅ Inner container for layout */}
@@ -33,8 +35,11 @@ const FooterTop = () => {
 
       {/* ✅ Footer copyright */}
       <Copyright />
+         
     </section>
+      <TextSlider/>
+  </>
   );
 };
 
-export default FooterTop;
+export default Footer;

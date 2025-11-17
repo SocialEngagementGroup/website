@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
-import { images } from "../../../data"; // Array of image objects
+import { images } from "../../../../data"; // Array of image objects
 
 const MultiRowSlider = () => {
   // State to trigger fade-in animation once component mounts
@@ -65,7 +65,7 @@ const MultiRowSlider = () => {
                   key={`${rowIndex}-${img.id}`}
                   className="!w-[200px]" // Fixed width per slide
                 >
-                  <div className="relative imggg border border-[#232326] overflow-hidden rounded-[10px] aspect-square transition-transform duration-500 ease-in-out hover:scale-105">
+                  <div className="relative imggg border border-[#232326] overflow-hidden rounded-[10px] aspect-square transition-transform duration-500 ease-in-out">
                     <Image
                       src={img.src}
                       alt={img.alt}

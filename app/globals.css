@@ -175,7 +175,7 @@ pre {
 }
 
 
-.mySwiper .InnerSlider-module__0Tpkga__innerCard {
+.mySwiper .InnerSlider-module__RgP4Yq__innerCard {
 
   text-align: center;
   height: 382px;
@@ -185,7 +185,7 @@ pre {
   align-items: center;
   justify-content: center;
   transition: box-shadow 0.3s ease;
-  border: 10px solid black;
+  border: 5px solid black;
   border-radius: 20px;
   /* Background and glass effect */
   background-image: url('/bg/innersliderbg.png');
@@ -202,23 +202,23 @@ pre {
 }
 
 @media only screen and (max-width: 500px) {
-  .mySwiper .InnerSlider-module__0Tpkga__innerCard {
+  .mySwiper .InnerSlider-module__RgP4Yq__innerCard {
     border: 5px solid black;
   }
 
-  .mySwiper .InnerSlider-module__0Tpkga__innerCard {
+  .mySwiper .InnerSlider-module__RgP4Yq__innerCard {
     height: 275px;
   }
 }
 
-.herobrandlogo .Slider-module__hWZm5a__fade-left {
+.herobrandlogo .Slider-module__ciU07q__fade-left{
   background: linear-gradient(to right, #e3d3cc, rgba(255, 255, 255, 0));
   left: 0;
 }
 
-.herobrandlogo .Slider-module__hWZm5a__fade-right {
+.herobrandlogo .Slider-module__ciU07q__fade-right {
   right: 0;
-  background: linear-gradient(to left, #e3d3cc, rgba(255, 255, 255, 0));
+  background: linear-gradient(to left, #e3d3cc, rgba(255, 255, 255, 0)) !important;
 }
 
 
@@ -326,3 +326,4 @@ pre {
     margin-top: 40px;
   }
 }
+
