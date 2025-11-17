@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react';
 import { useScroll } from 'framer-motion'; // For scroll-based animations
 import Lenis from '@studio-freight/lenis'; // Smooth scroll library
 import Card from './Card'; // Individual parallax card component
-import { projects } from '../../data'; // Array of project data
+import { projects } from '../../../data'; // Array of project data
 
 export default function ParallaxSlider() {
   // Reference to the main container to track scroll

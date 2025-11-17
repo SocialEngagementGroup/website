@@ -3,7 +3,7 @@
 import { useRef } from 'react';
 import { motion, useTransform } from 'framer-motion';
 import styles from './Card.module.css';
-import InnerSlider from '../../components/ParallaxSlider/InnerSlider';
+import InnerSlider from './InnerSlider';
 
 const Card = ({ i, title, color, progress, range, targetScale, sliderData, isActive }) => {
   // Reference to the card container (can be used for measurements or animations)

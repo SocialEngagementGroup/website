@@ -42,7 +42,7 @@ const sections = [
 ];
 
 // ✅ Single scroll-triggered section component
-const SectionItem = ({ section, setActiveImage }) => {
+const SectionItem = ({ section, setActiveImage, }) => {
   // Detect when this section is in the viewport
   const { ref } = useInView({
     threshold: 0,

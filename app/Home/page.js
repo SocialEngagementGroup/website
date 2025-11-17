@@ -1,13 +1,10 @@
 import React from 'react'
-import HeroSection from "@/components/HeroSection/HeroSection"
-import ParallaxSliderSection from '@/components/ParallaxSlider/ParallaxSliderSection'
+import HeroSection from "@/components/HomePage/HeroSection/HeroSection"
+import ParallaxSliderSection from '@/components/HomePage/ParallaxSlider/ParallaxSliderSection'
+import ClientsLogo from '@/components/HomePage/ClientLogos/ClientLogos'
+import Slider from '@/components/HomePage/ClientLogos/Slider'
+import BrandingSection from '@/components/HomePage/BrandSucceed/BrandingSection'
 
-import FooterTop from '@/components/FooterTop/FooterTop'
-import ClientsLogo from '@/components/ClientLogos/ClientLogos'
-import TextSlider from '@/components/TextSlider/TextSlider'
-import Slider from '@/components/ClientLogos/Slider'
-
-import BrandingSection from '@/components/BrandSucceed/BrandingSection'
 
 
 const page = () => {
@@ -21,14 +18,12 @@ const page = () => {
             
         </div>
        <ParallaxSliderSection/>
-
          <ClientsLogo />
-          
+    
        <div className='bg-white'>
        <BrandingSection/>
        </div>
-       <FooterTop/>
-       <TextSlider/>
+       
     </>
   )
 }

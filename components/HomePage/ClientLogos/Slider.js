@@ -1,6 +1,6 @@
 "use client";
 import { Import } from "lucide-react";
-import { ClientsLogo } from "../../data";
+import { ClientsLogo } from "../../../data";
 import styles from "./Slider.module.css";
 import Image from "next/image";
 const LogoMarquee = ({ speed = 100 }) => {

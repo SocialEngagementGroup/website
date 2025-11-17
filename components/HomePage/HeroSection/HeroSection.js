@@ -1,6 +1,6 @@
 import React from 'react';
-import HeroSlider from '@/components/HeroSection/Hero-slider/HeroSlider';
-import HeroContent from '@/components/HeroSection/Hero-contant/HeroContant';
+import HeroSlider from '@/components/HomePage/HeroSection/Hero-slider/HeroSlider';
+import HeroContent from '@/components/HomePage/HeroSection/Hero-contant/HeroContant';
 
 const page = () => {
   return (

@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Button } from "./button";
 import { ArrowUpRight } from "lucide-react";
-import { tabsData } from "../../../data";
+import { tabsData } from "../../../../data";
 
 const ProductTabs = () => {
   const [activeTab, setActiveTab] = useState(0);

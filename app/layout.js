@@ -3,6 +3,8 @@ import "./globals.css";
 import "@/components/Navbar/Navbar.module.css";
 import Navbar from "../components/Navbar/Navbar";
 import Script from "next/script"; // ✅ import Script from Next.js
+import Footer from "@/components/Footer/Footer";
+
 
 export const metadata = {
   title: "Where human creativity meets AI | SEG",
@@ -52,6 +54,8 @@ export default function RootLayout({ children }) {
 
         <Navbar />
         {children}
+        <Footer/>
+
       </body>
     </html>
   );
