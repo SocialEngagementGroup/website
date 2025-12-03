@@ -1,0 +1,119 @@
+/* ========================================
+   Base / Default Styles
+======================================== */
+.section {
+  background: #fff;
+  padding-bottom: 0; /* keep default aligned */
+}
+
+.heading {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 62px;
+  max-width: 600px;
+}
+
+.textBox {
+  max-width: 700px;
+  margin-top: -60px;
+}
+
+.list {
+  margin-top: 16px;
+  margin-bottom: 10px;
+  max-width: 630px;
+}
+
+.listItem {
+  font-size: 24px;
+  list-style: initial;
+  margin-top: 1rem;
+  margin-left: 30px;
+}
+
+.imagePosition {
+  width: 800px;
+
+}
+
+
+/* ========================================
+   <= 1300px (Large Tablet / Small Desktop)
+======================================== */
+@media only screen and (max-width: 1300px) {
+  .list {
+    width: 100%;
+  }
+}
+
+
+
+/* ========================================
+   <= 1208px (Medium Desktop)
+======================================== */
+@media only screen and (max-width: 1208px) {
+  .heading {
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  .listItem {
+    font-size: 18px;
+  }
+}
+
+
+/* ========================================
+   <= 990px (Tablet)
+======================================== */
+@media only screen and (max-width: 990px) {
+  .imagePosition {
+    margin-top: 170px;
+  }
+
+  .section {
+    padding-bottom: 3rem;
+  }
+
+  .customPadding {
+    padding-top: 20px;
+  }
+}
+
+
+/* ========================================
+   <= 767px (Mobile)
+======================================== */
+@media only screen and (max-width: 767px) {
+  .heading {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .listItem {
+    font-size: 16px;
+    list-style: inside;
+    margin-left: 0;
+  }
+
+  .section {
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+
+  .textBox {
+    margin-top: 0 !important;
+    width: 100% !important;
+  }
+
+  .customPadding {
+    padding-top: 30px;
+    padding-block: 20px;
+  }
+
+  .imagePosition {
+    margin-left: 0;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+}

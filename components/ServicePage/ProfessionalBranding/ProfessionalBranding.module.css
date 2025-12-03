@@ -1,0 +1,91 @@
+/* ========================================
+   Base / Default Styles
+======================================== */
+.section {
+  background: #232326;
+}
+
+.videoBox {
+  border: 10px solid black;
+  border-radius: 20px;
+}
+
+.heading {
+  font-weight: 700;
+  line-height: 62px;
+  max-width: 600px;
+}
+
+.list {
+  margin-top: 16px;
+  margin-bottom: 10px;
+  max-width: 630px;
+}
+
+.listItem {
+  list-style: outside;
+  margin-top: 1rem;
+  margin-left: 30px;
+}
+
+
+/* ========================================
+   <= 1300px
+======================================== */
+@media only screen and (max-width: 1300px) {
+  .list {
+    max-width: 100%;
+  }
+}
+
+
+/* ========================================
+   <= 1208px
+======================================== */
+@media only screen and (max-width: 1208px) {
+  .heading {
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  .listItem {
+    font-size: 18px;
+  }
+}
+
+
+/* ========================================
+   Mobile <= 767px
+======================================== */
+@media only screen and (max-width: 767px) {
+  .heading {
+    font-size: 24px;
+    line-height: 32px;
+    max-width: 100%;
+  }
+
+  .list {
+    max-width: 100%;
+  }
+
+  .listItem {
+    font-size: 16px;
+    list-style: initial;
+    margin-left: 0;
+  }
+
+  .videoBox {
+    border: 5px solid black;
+    border-radius: 20px;
+  }
+}
+
+
+/* ========================================
+   <= 1180px (Container Adjustment)
+======================================== */
+@media only screen and (max-width: 1180px) {
+  .containerCustom {
+    width: 100%;
+  }
+}

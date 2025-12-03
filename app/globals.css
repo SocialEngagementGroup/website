@@ -66,6 +66,50 @@ pre {
 }
 
 
+
+/* =========================================================
+   Responsive Font System (Global)
+========================================================= */
+
+/* Desktop sizes */
+h1 { 
+     font-size: 64px;         /* Default font size */
+     line-height: 75px;
+    }
+
+h2 { font-size: 22px;
+     line-height: 36px;
+    }
+
+h3 { font-size: 48px;   line-height: 55px; }
+
+.p1 { font-size: 24px; line-height: 32px;}
+.p2 { font-size: 32px; }
+.p3 { font-size: 20px; }
+
+button,
+.btn {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ---------- Mobile Screens ---------- */
+@media only screen and (max-width: 767px) {
+  h1 { font-size: 40px; line-height: 50px;}
+  h2 { font-size: 14px;  font-size: 20px; }
+  h3 { font-size: 24px;  line-height: 32px;}
+
+  .p1 { font-size: 16px; }
+  .p2 { font-size: 18px; }
+  .p3 { font-size: 12px; }
+
+  button,
+  .btn {
+    font-size: 15px;
+  }
+}
+
+
 /* =========================================================
    Custom Shadow Overlay
 ========================================================= */
@@ -326,4 +370,7 @@ pre {
     margin-top: 40px;
   }
 }
+
+
+
 

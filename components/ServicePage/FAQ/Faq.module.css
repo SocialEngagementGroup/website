@@ -1,0 +1,61 @@
+/* ========================================
+   Base Styles
+======================================== */
+.section {
+  margin-top: -50px;
+}
+
+.heading {
+  background: #232326;
+  border-radius: 10px;
+  font-size: 24px;
+  width: 200px;
+  text-align: center;
+  line-height: 42px;
+}
+
+.question {
+  font-size: 24px;
+}
+
+/* Smooth Expand Panel System (if needed elsewhere) */
+.answerWrapper {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.answer {
+  font-size: 20px;
+  padding-top: 12px;
+  padding-bottom: 8px;
+  line-height: 1.7;
+}
+
+/* ========================================
+   Tablet <= 990px
+======================================== */
+@media only screen and (max-width: 990px) {
+  .section {
+    margin-top: -80px;
+  }
+}
+
+/* ========================================
+   Mobile <= 767px
+======================================== */
+@media only screen and (max-width: 767px) {
+  .section {
+    margin-top: 0px;
+  }
+
+  .question {
+    font-size: 20px;
+  }
+
+  .answer {
+    font-size: 16px;
+  }
+  
+
+}
