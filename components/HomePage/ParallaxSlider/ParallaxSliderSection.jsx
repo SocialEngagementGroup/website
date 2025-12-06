@@ -2,7 +2,7 @@ import React from "react";
 import SectionTitle from "../SectionTitle/SectionTitle"; // Section heading component
 import ParallaxSlider from "./ParallaxSlider";           // Main parallax slider component
 import styles from "./ParallaxSliderSection.module.css"; // CSS module for styling
-// import Vdo from "@/components/Vdo/Vdo";                 // Video component
+import Vdo from "@/components/HomePage/Vdo/Vdo";                 // Video component
 
 const ParallaxSliderSection = () => {
   return (
@@ -34,10 +34,10 @@ const ParallaxSliderSection = () => {
       </div>
 
       {/* Video section below slider */}
-      {/* <div className="container-fluid mx-auto">
-        <Vdo src={"./videos/vdo.mp4"} />
+      <div className="container-fluid mx-auto">
+        <Vdo src={"./videos/landingpagevideo.mp4"} />
       </div>
-     */}
+    
     </section>
   );
 };

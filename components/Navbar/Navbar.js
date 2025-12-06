@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-
+import Link from "next/link";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false); // Hamburger menu toggle
   const [isSticky, setIsSticky] = useState(false); // Sticky navbar on scroll
@@ -19,17 +19,16 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed inset-x-0 mx-auto z-[999] transition-all duration-500 global-navbar ${
-        isSticky
+      className={`fixed inset-x-0 mx-auto z-[999] transition-all duration-500 global-navbar ${isSticky
           ? "bg-glass shadow-md w-[91%] top-[20px] py-3 rounded-2xl px-2 sm:px-5"
           : "bg-transparent w-full top-0 py-5 px-3 sm:px-22"
-      }`}
+        }`}
     >
       <div className="container-fluid mx-auto transition-all duration-500">
         <div className="flex flex-wrap items-center justify-between">
 
           {/* ---------- Logo ---------- */}
-          <a href="#" className="flex items-center space-x-3">
+          <Link href="/" className="flex items-center space-x-3">
             <div className="relative w-[45px] h-[42px] md:w-[60px] md:h-[42px]">
               <Image
                 src="/SiteLogo/seg.png"
@@ -38,18 +37,17 @@ export default function Navbar() {
                 className="object-contain"
               />
             </div>
-          </a>
+          </Link>
 
           {/* ---------- Contact Button + Hamburger ---------- */}
           <div className="flex md:order-2 items-center">
             {/* Contact Us Button */}
             <button
               onClick={() => (window.location.href = "#contact")}
-              className={`Contact-btn border font-bold font-sans text-[18px] rounded-[14px] cursor-pointer md:py-1.5 pb-1.5 pt-1.5 px-3 md:px-8 transition ${
-                isSticky
+              className={`Contact-btn border font-bold font-sans text-[18px] rounded-[14px] cursor-pointer md:py-1.5 pb-1.5 pt-1.5 px-3 md:px-8 transition ${isSticky
                   ? "border-white text-black bg-white"
                   : "border-white text-white md:bg-white md:text-black hover:bg-white hover:text-black"
-              }`}
+                }`}
             >
               Contact Us
             </button>
@@ -93,9 +91,8 @@ export default function Navbar() {
             className={`${isOpen ? "block" : "hidden"} w-full md:flex md:w-auto md:order-1 items-center justify-between transition-all duration-500 md:bg-transparent`}
           >
             <ul
-              className={`navlink md:ml-26 ml-0 flex flex-col p-4 md:p-0 border border-gray-700 md:border-0 rounded-lg md:flex-row md:space-x-10 md:mt-0 mt-5 ${
-                isOpen ? "bg-black md:bg-transparent" : "bg-transparent"
-              }`}
+              className={`navlink md:ml-26 ml-0 flex flex-col p-4 md:p-0 border border-gray-700 md:border-0 rounded-lg md:flex-row md:space-x-10 md:mt-0 mt-5 ${isOpen ? "bg-black md:bg-transparent" : "bg-transparent"
+                }`}
             >
               {[
                 { name: "Home", href: "#" },
