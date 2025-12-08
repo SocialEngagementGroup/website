@@ -22,20 +22,20 @@ export const VisualMediaData = {
     description:
       "Strong visuals capture attention, build trust, and drive conversions. Poor-quality visuals create doubt, reduce engagement, and weaken your brand image.",
     items: [
-      {
-        img: "/services/creative/branding/versus.png",
-        text: "Ads appear unprofessional, diminishing your brand’s image and appeal.",
+       {
+        img: "/services/creative/videography-photography/Ads-appear-unprofessional.png",
+        text: "Ads appear unprofessional, diminishing your brand's image and appeal.",
       },
       {
-        img: "/services/creative/branding/shared-vision.png",
+        img: "/services/creative/videography-photography/Conversions-drop.png",
         text: "Conversions drop as low-quality visuals fail to engage and persuade.",
       },
       {
-        img: "/services/creative/branding/loyal-customer.png",
-        text: "Customers doubt credibility when visuals lack polish and consistency.",
+        img: "/services/creative/videography-photography/Customers-doubt-credibility.png",
+        text: "Customers doubt your credibility when visuals lack polish and consistency.",
       },
       {
-        img: "/services/creative/branding/return.png",
+        img: "/services/creative/videography-photography/Conversions-drop.png",
         text: "Brand consistency suffers, affecting recognition across all channels.",
       },
     ],

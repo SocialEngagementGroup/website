@@ -20,20 +20,20 @@ export const SocialMediaContentData = {
       "Low-quality social content reduces reach, engagement, and brand trust. Without a professional strategy, your social channels may underperform and your investment goes to waste.",
     items: [
       {
-        img: "/services/creative/branding/versus.png",
-        text: "Low engagement and limited reach hinder social media growth.",
+        img: "/services/creative/social-media-content/Low-engagement.png",
+        text: "<strong>Low engagement</strong> and limited reach hinder social media growth.",
       },
       {
-        img: "/services/creative/branding/shared-vision.png",
-        text: "Missed trends and timing windows reduce content relevance.",
+        img: "/services/creative/social-media-content/Missed-trends-and-timing.png",
+        text: "<strong>Missed trends</strong> and timing windows reduce content relevance.",
       },
       {
-        img: "/services/creative/branding/loyal-customer.png",
-        text: "Slower follower growth and weaker community impact brand loyalty.",
+        img: "/services/creative/social-media-content/lower-follower-growth.png",
+        text: "<strong>Slower follower</strong> growth and weaker community impact brand loyalty.",
       },
       {
-        img: "/services/creative/branding/return.png",
-        text: "Inconsistent presence on social media erodes audience trust.",
+        img: "/services/creative/social-media-content/Inconsistent-presence.png",
+        text: "<strong>Inconsistent presence</strong> on social media erodes audience trust.",
       },
     ],
   },

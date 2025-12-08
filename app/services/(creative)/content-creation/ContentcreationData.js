@@ -22,20 +22,20 @@ export const contentCreationData = {
       "High-quality, engaging content is essential to cut through digital noise, boost online reach, and build trust. Without a professional strategy, your marketing may be ignored, and your investment goes to waste.",
     items: [
       {
-        img: "/services/creative/branding/versus.png",
-        text: "Posts and ads get lost in crowded social feeds, reducing audience engagement.",
+        img: "/services/creative/creative-content/audience-engagement.png",
+        text: "Posts and ads get lost in crowded social feeds, reducing <strong>audience engagement.</strong>",
       },
       {
-        img: "/services/creative/branding/shared-vision.png",
-        text: "Campaigns feel generic and fail to leave a lasting impression.",
+        img: "/services/creative/creative-content/memorable-impact.png",
+        text: "Your campaigns feel <strong>generic</strong> and fail to make a memorable impact.",
       },
       {
-        img: "/services/creative/branding/loyal-customer.png",
-        text: "Brand messaging becomes inconsistent, weakening audience trust.",
+        img: "/services/creative/creative-content/you-struggle-to-build-a-loyal-community.png",
+        text: "Your <strong>brand message</strong> gets diluted, and you struggle to build a loyal community.",
       },
       {
-        img: "/services/creative/branding/return.png",
-        text: "Competitors with stronger content dominate the conversation and capture market share.",
+        img: "/services/creative/creative-content/win-the-online-conversation-and-market-share.png",
+        text: "<strong>Competitors</strong> with stronger content easily win the online conversation and market share.",
       },
     ],
   },

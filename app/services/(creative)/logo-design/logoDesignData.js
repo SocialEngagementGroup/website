@@ -13,7 +13,7 @@ export const logoDesignData = {
     description: "Your logo is the first thing people notice. And the moment they decide whether to trust you or move on. When your Custom logo design works, every part of your marketing works harder. Your ads perform better. Your social posts earn more engagement. Referrals increase because customers can describe and recall you instantly. Because recognition builds trust and trust creates customers. That’s the power of investing in the right business logo design.",
   },
     Costof: {
-    heading: "The Cost of Weak Branding",
+    heading1: "The Cost of Weak Branding",
 
     items: [
   {

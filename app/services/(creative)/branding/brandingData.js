@@ -2,8 +2,8 @@ export const brandingData = {
   hero: {
     title: "Branding",
     description:
-      "Craft a brand that stands out. We develop strategy, voice, and visuals that build recognition, trust, and loyalty.",
-      description2: "Start your branding journey today.",
+      "Your brand is more than a logo, it’s the experience people remember. We build end-to-end branding that defines your voice, crafts a standout visual identity, and positions you clearly in a crowded market. Starting with deep research, we map your audience, differentiation, and story, then translate that into consistent messaging that earns trust. Finally, we design a cohesive visual system, logo, colors, type, imagery and apply it across every touchpoint so you’re instantly recognizable, building loyalty and accelerating growth.",
+      description2: "Build a Brand That Sticks",
     subtitle: "Creative",
     ctaButton: "Connect With Us",
     ctaLink: "/services/logodesign",
@@ -16,28 +16,28 @@ export const brandingData = {
       "Your brand is more than a logo, it’s the experience people remember. We build end-to-end branding that defines your voice, crafts a standout visual identity, and positions you clearly in a crowded market. Starting with deep research, we map your audience, differentiation, and story, then translate that into consistent messaging that earns trust. Finally, we design a cohesive visual system, logo, colors, type, imagery and apply it across every touchpoint so you’re instantly recognizable, building loyalty and accelerating growth.",
   },
   Costof: {
-   
-    heading2: "The Cost of Weak Branding",
+  
     heading1: "Why Your Business Needs Strong Branding ",
-    description:"A cohesive brand makes every interaction seamless and effective. Customers gain instant brand recognition, which builds familiarity and trust. Your marketing efforts become more consistent and impactful, and your reputation for quality and reliability grows with every single touchpoint, creating a loyal customer base.",
+    description:"A <b>cohesive brand</b> makes every interaction seamless and effective. Customers gain instant <b>brand recognition</b>, which builds familiarity and trust. Your marketing efforts become more consistent and impactful, and your reputation for quality and reliability grows with every single touchpoint, creating a loyal customer base.",
     items: [ 
       {
         img: "/services/creative/branding/versus.png",
-        text: "Customers have poor <strong>brand recall</strong> and forget you quickly.",
+        text: "Customers forget your brand quickly due to poor recall.",
       },
       {
         img: "/services/creative/branding/shared-vision.png",
-        text: "You blend in with <strong>competitors</strong>, losing your unique identity.",
+        text: "You blend in with competitors, losing your distinct identity.",
       },
       {
         img: "/services/creative/branding/loyal-customer.png",
-        text: "Your <strong>brand messaging</strong> feels inconsistent and damages <strong>customer trust</strong>.",
+        text: "Inconsistent messaging damages trust with your customers.",
       },
       {
         img: "/services/creative/branding/return.png",
-        text: "Sales teams struggle to pitch a brand that lacks a clear <strong>identity</strong> and confidence.",
+        text: "Sales teams struggle to pitch a brand lacking clear identity.",
       },
     ],
+    heading2: "The Cost of Weak Branding",
   },
   ProfessionalBranding: {
     heading: "What Happens With Professional Branding",
