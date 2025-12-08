@@ -1,95 +1,54 @@
 "use client";
-import React, { useRef, useState, useEffect, useCallback } from "react";
+import React, { useRef, useEffect } from "react";
 import styles from "./Vdo.module.css";
 
-// Easing function for smooth scroll animation
 const easeOut = (t) => 1 - Math.pow(1 - t, 3);
 
-const VideoParallax = ({ src }) => {
+const VideoScroll = ({ src, poster }) => {
   const sectionRef = useRef(null);
   const videoRef = useRef(null);
 
-  const [style, setStyle] = useState({});
-  const [isPlaying, setIsPlaying] = useState(true);
-  const [isMobile, setIsMobile] = useState(false);
-
-  // Detect screen size and update `isMobile` state
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= 767);
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+    const handleScroll = () => {
+      if (!sectionRef.current || !videoRef.current) return;
 
-  // Scroll-based parallax effect
-  const handleScroll = useCallback(() => {
-    if (!sectionRef.current) return;
+      const rect = sectionRef.current.getBoundingClientRect();
+      const vh = window.innerHeight;
 
-    const rect = sectionRef.current.getBoundingClientRect();
-    const vh = window.innerHeight;
+      // progress: 0 = section bottom at bottom of viewport, 1 = section top at top of viewport
+      let progress = 1 - (rect.top + rect.height) / (vh + rect.height);
+      progress = Math.min(1, Math.max(0, progress)); // clamp 0 -> 1
+      const eased = easeOut(progress);
 
-    // Scroll progress calculation (0 to 1)
-    const start = vh * (isMobile ? 0.8 : 1);
-    const end = 0;
-    const progress = Math.min(1, Math.max(0, (start - rect.top) / (start - end)));
-    const eased = easeOut(progress);
+      // Scale from 0.5 -> 1
+      const scale = 0.5 + 0.5 * eased;
+      // Translate Y from initial -50% -> 0%
+      const translateY = -50 + 50 * eased;
 
-    // Dynamic transform values
-    const scaleStart = isMobile ? 0.85 : 0.7;
-    const scale = scaleStart + (1 - scaleStart) * eased;
-    const translateY = (isMobile ? 30 : 50) - (isMobile ? 30 : 50) * eased;
-    const opacity = 0.5 + 0.5 * eased;
+      videoRef.current.style.transform = `translateY(${translateY}%) perspective(1200px) scale(${scale})`;
+    };
 
-    // Optional padding adjustment for visual balance
-    const paddingStart = isMobile ? 80 : 120;
-    const paddingEnd = 0;
-    const dynamicPadding = paddingStart - (paddingStart - paddingEnd) * eased;
-
-    setStyle({
-      transform: `translateY(${translateY}%) scale(${scale})`,
-      opacity,
-      paddingTop: `${dynamicPadding}px`,
-      paddingBottom: `${dynamicPadding}px`,
-    });
-  }, [isMobile]);
-
-  // Toggle video play/pause
-  const togglePlay = () => {
-    if (!videoRef.current) return;
-    if (isPlaying) {
-      videoRef.current.pause();
-    } else {
-      videoRef.current.play();
-    }
-    setIsPlaying((prev) => !prev);
-  };
-
-  // Attach scroll listener
-  useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll(); // initial call
+    handleScroll(); // initialize
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [handleScroll]);
+  }, []);
 
   return (
     <section ref={sectionRef} className={styles.wrapper}>
-      <div className={styles.videoContainer}>
-        <div className={styles.videoBox} style={style}>
-          <video
-            ref={videoRef}
-            className={styles.video}
-            loop
-            autoPlay
-            muted
-            playsInline
-            onClick={togglePlay} // Toggle play/pause on click
-          >
-            <source src={src} type="video/mp4" />
-          </video>
-        </div>
+      <div className={styles.videoWrapper}>
+        <video
+          ref={videoRef}
+          className={styles.video}
+          src={src}
+          poster={poster}
+          loop
+          muted
+          autoPlay
+          playsInline
+        />
       </div>
     </section>
   );
 };
 
-export default VideoParallax;
+export default VideoScroll;
