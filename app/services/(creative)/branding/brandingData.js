@@ -5,7 +5,7 @@ export const brandingData = {
       "Craft a brand that stands out. We develop strategy, voice, and visuals that build recognition, trust, and loyalty. Start your branding journey today.",
     subtitle: "Creative",
     ctaButton: "Connect With Us",
-    ctaLink: "/services/logodesign",
+    ctaLink: "/contact-us",
     img: "/services/creative/branding/heroimg.png",
     bg: "/services/creative/branding/herobg.png",
   },

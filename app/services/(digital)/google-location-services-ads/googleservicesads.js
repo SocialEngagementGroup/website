@@ -5,7 +5,7 @@ export const googleservicesads = {
       "Show up first in local searches with Google Local Service Ads. Verified, high-trust ads that drive calls, bookings, and instant local visibility.",
     subtitle: "digital",
     ctaButton: "Connect With Us",
-    ctaLink: "/services/law-firm-marketing",
+    ctaLink: "/contact-us",
     img: "/services/creative/branding/heroimg.png",
     bg: "/services/creative/branding/herobg.png",
   },

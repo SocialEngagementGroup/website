@@ -5,7 +5,7 @@ export const ReviewReputationData = {
       "Protect and strengthen your online reputation with real-time monitoring, strategic responses, and consistent positive review generation. Build trust and convert more customers.",
     subtitle: "digital",
     ctaButton: "Connect With Us",
-    ctaLink: "/services/reputation-management",
+    ctaLink: "/contact-us",
     img: "/services/creative/branding/heroimg.png",
     bg: "/services/creative/branding/herobg.png",
   },

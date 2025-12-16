@@ -5,7 +5,7 @@ export const RetargetingServiceData = {
       "Re-engage lost visitors with strategic retargeting ads. Personalized, cross-platform campaigns on Google and Meta that boost conversions and maximize ROI.",
     subtitle: "digital",
     ctaButton: "Connect With Us",
-    ctaLink: "/services/retargeting",
+    ctaLink: "/contact-us",
     img: "/services/creative/branding/heroimg.png",
     bg: "/services/creative/branding/herobg.png",
   },

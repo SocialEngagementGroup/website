@@ -4,7 +4,7 @@ export const SocialMediaContentData = {
     description: "Create scroll-stopping social content that engages, converts, and builds community. Expert strategies for Meta, TikTok, and beyond to grow your brand.",
     subtitle: "creative",
     ctaButton: "Connect With Us",
-    ctaLink: "/services/creative/socialmediacontent",
+        ctaLink: "/contact-us",
     img: "/services/creative/branding/heroimg.png",
     bg: "/services/creative/branding/herobg.png",
   },

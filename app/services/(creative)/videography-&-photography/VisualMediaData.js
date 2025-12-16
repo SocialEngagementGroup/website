@@ -5,7 +5,7 @@ export const VisualMediaData = {
       "Capture your brand’s story with stunning visuals. We offer professional videography and photography that build trust, boost engagement, and drive growth.",
     subtitle: "creative",
     ctaButton: "Connect With Us",
-    ctaLink: "/services/creative/videography-photography",
+    ctaLink: "/contact-us",
     img: "/services/creative/branding/heroimg.png",
     bg: "/services/creative/branding/herobg.png",
   },

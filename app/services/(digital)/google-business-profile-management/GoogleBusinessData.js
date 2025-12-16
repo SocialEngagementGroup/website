@@ -5,7 +5,7 @@ export const GoogleBusinessData = {
       "Get more local calls and visits with expert Google Business Profile management. Optimize listings, boost visibility, and build customer trust.",
     subtitle: "digital",
     ctaButton: "Connect With Us",
-    ctaLink: "/services/google-business",
+    ctaLink: "/contact-us",
     img: "/services/creative/branding/heroimg.png",
     bg: "/services/creative/branding/herobg.png",
   },

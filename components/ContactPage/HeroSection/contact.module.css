@@ -1,0 +1,42 @@
+.contactSection {
+  /* Background and glass effect */
+  background-image: url('/contactus/contactus.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contactSection {
+  position: relative;
+  z-index: 111;
+}
+.contactSection:after{
+  content: '';
+  display: block;
+  width:100%;
+  height: 100%;
+  background: rgba(57, 57, 57, 0.54);
+  position: absolute;
+  top:0;
+  z-index: -1;
+ 
+}
+
+.heroHeading {
+  max-width: 900px;
+}
+.description {
+  max-width: 670px;
+}
+
+.heroBtn {
+  border-radius: 14px;
+  font-family: Inter !important;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 20px;
+}

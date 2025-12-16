@@ -5,7 +5,7 @@ export const webdevelopmentData = {
       "Get a fast, SEO-optimized website that drives sales. We design and develop custom sites on WordPress, Shopify, and Next.js to grow your business online.",
     subtitle: "digital",
     ctaButton: "Connect With Us",
-    ctaLink: "/services/web-development",
+        ctaLink: "/contact-us",
     img: "/services/creative/branding/heroimg.png",
     bg: "/services/creative/branding/herobg.png",
   },

@@ -1,0 +1,29 @@
+.section {
+  background: white;
+}
+
+.image {
+  border: 7px solid #000;
+  border-radius: 25px;
+}
+
+.iconBox {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.iconBox img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* NEW: force full width at 767px and below */
+@media (max-width: 767px) {
+  .fullWidth1180 {
+    width: 100% !important;   /* override the inline w-[75%] */
+    margin: 0 auto;           /* keep it centered if needed */
+  }
+}

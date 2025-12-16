@@ -44,7 +44,7 @@ export default function Navbar() {
           {/* ---------- Contact Button + Hamburger ---------- */}
           <div className="flex md:order-2 items-center">
             <button
-              onClick={() => (window.location.href = "#contact")}
+              onClick={() => (window.location.href = "/contact-us")}
               className={`Contact-btn border font-bold font-sans text-[18px] rounded-[14px] cursor-pointer md:py-1.5 pb-1.5 pt-1.5 px-3 md:px-8 transition ${
                 isSticky
                   ? "border-white text-black bg-white"

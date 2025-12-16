@@ -4,7 +4,7 @@ export const logoDesignData = {
     description: "Get a memorable, professional logo that builds trust and recognition. 3–5 original concepts, unlimited revisions, and full ownership included.",
     subtitle: "Creative",
     ctaButton: "Connect With Us",
-    ctaLink: "/services/branding",
+    ctaLink: "/contact-us",
     img: "/services/creative/branding/heroimg.png",
     bg: "/services/creative/branding/herobg.png",
 },
