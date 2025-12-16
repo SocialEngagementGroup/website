@@ -92,7 +92,7 @@
 
   .listItem {
     font-size: 16px;
-    list-style: inside;
+    list-style: outside;
     margin-left: 0;
   }
 

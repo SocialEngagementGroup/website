@@ -1,23 +1,29 @@
 export const SocialMediaContentData = {
   hero: {
     title: "Social Media Content",
-    description: "Create scroll-stopping content that engages, converts, and builds community. We craft graphics, videos, carousels, and campaigns designed for Meta, TikTok, and beyond.",
-    subtitle: "Build Social That Stops the Scroll",
-    ctaButton: "Start Creating",
+    description: "Create scroll-stopping social content that engages, converts, and builds community. Expert strategies for Meta, TikTok, and beyond to grow your brand.",
+    subtitle: "creative",
+    ctaButton: "Connect With Us",
     ctaLink: "/services/creative/socialmediacontent",
     img: "/services/creative/branding/heroimg.png",
     bg: "/services/creative/branding/herobg.png",
   },
   intro: {
-    heading: "Why Your Brand Needs High-Impact Social Content",
+    heading: "Build Social That Stops the Scroll",
     description:
-      "Social is where attention is won and communities are built. Exceptional content drives clicks, shares, and conversions. We create scroll-stopping graphics, high-impact videos, influencer collaborations, and AI-powered assets tailored to your audience.",
+      "Social is where attention is won, and communities are built. We create content that stops the scroll and starts conversations, blending creativity, trend intelligence, and platform psychology for Meta, TikTok, and beyond. From storytelling visuals to high-impact videos and carousels, every asset feels authentically “you” and drives measurable results. We study your voice, audience behavior, and competitors, then design for awareness, engagement, and conversion. The outcome: your social channels become a growth engine, strategic stories that stand out in a fast-scrolling world.",
+  },
+  cta: {
+    bg: "/services/CTA/Digital-google-business-profile.png",
+    title: "<strong>Grow</strong> your business <br/> with at <strong>SEG</strong> ",
+    button: "Book a call",
+    link: "tel:+13479356442",
   },
   Costof: {
-    heading1: "Why Your Business Needs High-Impact Social Content",
+    heading1: "How We Build High-Impact Social",
     heading2: "The Cost of Weak Social Content",
     description:
-      "Low-quality social content reduces reach, engagement, and brand trust. Without a professional strategy, your social channels may underperform and your investment goes to waste.",
+      "We audit channels, map your audience, and find white space to win. Using trend signals and platform-native best practices, we define pillars, hooks, and formats. Then we translate strategy into a distinct voice with thumb-stopping hooks and tight scripts. Motion beats and clear visual frameworks optimize every asset for watch time, saves, shares, and comments. Edits are truly native, TikTok/Reels pacing, meme-speed cuts, Meta carousels, and Stories. We tailor aspect ratios, captions, and cadence per channel to maximize performance. Across the ecosystem, we keep consistency tight so every piece ladders up to the brand.",
     items: [
       {
         img: "/services/creative/social-media-content/Low-engagement.png",
@@ -40,38 +46,40 @@ export const SocialMediaContentData = {
   ProfessionalLogoDesign: {
     heading: "What Happens With High-Impact Social Content",
     items: [
-      {
-        text: "Posts get shared, driving wider reach and engagement.",
-      },
-      {
-        text: "Followers convert into loyal customers and brand advocates.",
-      },
-      {
-        text: "Campaigns trend with perfect relevance and timing, boosting visibility.",
-      },
-      {
-        text: "You lead the conversation in your niche, becoming an industry authority.",
-      },
+   {
+  text: "Posts get shared, driving wider reach and <strong>engagement</strong>.",
+},
+{
+  text: "Followers convert into loyal customers and brand <strong>advocates</strong>.",
+},
+{
+  text: "Campaigns trend with perfect relevance and timing, boosting <strong>visibility</strong>.",
+},
+{
+  text: "You lead the conversation in your niche, becoming an industry <strong>authority</strong>.",
+},
+
     ],
     video: "/videos/vdo.mp4",
   },
   BrandStrategy: {
     heading: "What You Get",
     items: [
-      {
-        text: "Content calendars and strategy to keep your social content on track.",
-      },
-      {
-        text: "Short-form video crafted for TikTok and Reels to maximize engagement.",
-      },
-      {
-        text: "Carousel ads and story content to drive interaction and brand awareness.",
-      },
-      {
-        text: "Engagement tracking and optimization to boost performance and results.",
-      },
+     {
+  text: "Content calendars and <strong>strategy</strong> to keep your social content on track.",
+},
+{
+  text: "Short-form <strong>video</strong> crafted for TikTok and Reels to maximize engagement.",
+},
+{
+  text: "Carousel <strong>ads</strong> and story content to drive interaction and brand awareness.",
+},
+{
+  text: "<strong>Engagement</strong> tracking and optimization to boost performance and results.",
+},
+
     ],
-    img: "/services/BoxImage/brandstrategy.png",
+    img: "/services/creative/social-media-content/creative-social-media-content.png",
   },
   FAQ: {
     heading: "FAQs",

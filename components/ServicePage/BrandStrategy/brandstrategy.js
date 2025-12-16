@@ -45,7 +45,7 @@ const BrandStrategy = ({ heading, items, img }) => {
               <h3 className={styles.heading}>{heading}</h3>
 
               {/* List Items */}
-              <ul className={styles.list}>
+              <ul className={styles.list + " px-5 md:px-0"}>
                 {items?.map((item, index) => (
                   <li
                     key={index}

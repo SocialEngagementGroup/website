@@ -3,8 +3,8 @@ export const SeoServiceData = {
     title: "SEO",
     description:
       "Boost visibility and traffic with expert SEO. We optimize keywords, content, and links so your business ranks higher and attracts qualified customers.",
-    subtitle: "Build Sustainable Visibility That Compounds",
-    ctaButton: "Start Ranking",
+    subtitle: "digital",
+    ctaButton: "Connect With Us",
     ctaLink: "/services/seo",
     img: "/services/creative/branding/heroimg.png",   // original kept
     bg: "/services/creative/branding/herobg.png",     // original kept
@@ -13,31 +13,38 @@ export const SeoServiceData = {
   intro: {
     heading: "Build Sustainable Visibility That Compounds",
     description:
-      "SEO is about visibility, authority, and sustainable growth. We build durable search foundations, optimize on-page and technical performance, and boost authority with white-hat link building. Our strategies create compounding organic traffic that converts.",
+      "SEO is about visibility, authority, and sustainable growth not just keywords. We build a durable search foundation with deep keyword and competitor research, then optimize on-page content and technical performance so your site is faster, clearer, and easier to rank. Next, we grow authority with a smart content plan and white-hat link building, backed by analytics that show real movement. No gimmicks, just compounding visibility that turns organic traffic into qualified leads and loyal customers. When you rank where it matters, every click becomes an opportunity for growth.",
+  },
+  cta: {
+    bg: "/services/CTA/Digital-google-business-profile.png",
+    title: "<strong>Grow</strong> your business <br/> with at <strong>SEG</strong> ",
+    button: "Book a call",
+    link: "tel:+13479356442",
   },
 
   Costof: {
     heading1: "Why SEO Matters",
     heading2: "The Cost of Poor SEO",
     description:
-      "Without strong SEO, customers never discover your brand, competitors take your demand, and acquisition costs rise.",
+      "Search is where most buying journeys start, and if you’re not on page one, you’re effectively invisible. Strong SEO aligns your pages with real buyer intent, pairing relevant content with fast, well-structured experiences that search engines and customers trust. As authority and quality backlinks compound, you earn qualified clicks instead of random traffic, reduce dependence on paid ads, and show up precisely at the moment of need. That visibility turns searches into pipeline and sales.",
     items: [
       {
-        img: "/services/creative/branding/versus.png", // original kept
-        text: "Competitors capture the demand meant for you.",
+        img: "/services/digital/seo/Competitors-capture-the-demand-meant-for-you.png",
+        text: "<strong>Competitors</strong> capture the demand meant for you.",
       },
       {
-        img: "/services/creative/branding/shared-vision.png", // original kept
-        text: "High-intent buyers never discover your brand.",
+        img: "/services/digital/seo/Buyers-never-discover-your-brand.png",
+        text: "<strong>High-intent buyers</strong> never discover your brand.",
       },
       {
-        img: "/services/creative/branding/loyal-customer.png", // original kept
-        text: "You become overly reliant on paid advertising.",
+        img: "/services/digital/seo/You-become-overly-reliant-on-paid-advertising.png",
+        text: "You become overly reliant on <strong>paid advertising</strong>.",
       },
       {
-        img: "/services/creative/branding/return.png", // original kept
-        text: "Customer acquisition costs rise as organic reach declines.",
+        img: "/services/digital/seo/Customer-acquisition-costs-rise-rapidly.png",
+        text: "<strong>Customer acquisition costs</strong> rise as organic reach declines.",
       },
+
     ],
   },
 
@@ -46,8 +53,8 @@ export const SeoServiceData = {
     items: [
       { text: "Rankings climb across valuable, intent-driven keywords." },
       { text: "Organic traffic becomes a predictable growth engine." },
-      { text: "Domain authority and brand trust increase over time." },
-      { text: "Customer acquisition costs drop as organic leads grow." },
+      { text: "Brand trust, credibility, and domain authority grow stronger over time." },
+      { text: "Customer acquisition costs decline naturally as organic momentum builds." },
     ],
     video: "/videos/vdo.mp4", // original kept (same as your structure)
   },
@@ -60,7 +67,7 @@ export const SeoServiceData = {
       { text: "White-hat link building that grows authority steadily." },
       { text: "Monthly performance reports with actionable insights." },
     ],
-    img: "/services/BoxImage/brandstrategy.png", // original kept
+    img: "/services/digital/seo/digital-seo.png", // original kept
   },
 
   FAQ: {
@@ -69,7 +76,7 @@ export const SeoServiceData = {
       {
         question: "1. How long does it take to see SEO results?",
         answer:
-          "Most clients see noticeable improvements in 3–6 months. SEO is a long-term investment.",
+          "SEO is a long-term investment. Most clients see noticeable improvements in 3–6 months.",
       },
       {
         question: "2. What’s included in your SEO services?",

@@ -1,0 +1,111 @@
+/* WRAPPER */
+.wrapper {
+  position: relative;
+  width: 100%;
+  background: white;
+  padding: 2.5rem 0; 
+  overflow: visible; /* important to prevent hover cut-off */
+}
+
+/* CARD BOX */
+.cardBox {
+  width: 320px; /* slightly bigger */
+  height: 220px; 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+
+  border-radius: 12px;
+  color: white;
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  transform-origin: center;
+}
+
+/* HOVER EFFECT — scale + shadow + translate */
+.cardBox:hover {
+  transform: scale(1.1) translateY(-5px);
+box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+/* TITLE */
+.cardTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* SWIPER NAVIGATION BUTTONS */
+.swiper-button-next,
+.swiper-button-prev {
+  color: black;
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0; /* hidden by default */
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+/* Move arrows outside the slider */
+.swiper-button-next {
+  right: -50px; /* outside the right edge */
+}
+.swiper-button-prev {
+  left: -50px; /* outside the left edge */
+}
+
+/* Show arrows on slider hover */
+.wrapper:hover .swiper-button-next,
+.wrapper:hover .swiper-button-prev {
+  opacity: 1;
+}
+
+/* Bold arrow icons */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .cardBox {
+    width: 280px;
+    height: 200px;
+  }
+  .cardTitle {
+    font-size: 18px;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    right: -40px;
+    left: -40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .cardBox {
+    width: 220px;
+    height: 150px;
+    padding: 10px;
+  }
+  .cardTitle {
+    font-size: 14px;
+  }
+  .wrapper {
+    padding: 1.5rem 0;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    right: -30px;
+    left: -30px;
+  }
+}

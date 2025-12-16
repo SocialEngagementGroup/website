@@ -3,8 +3,8 @@ export const socialmediamarketingData = {
     title: "Social Media Marketing",
     description:
       "Boost engagement and sales with data-driven social media marketing. We craft creative, high-performing campaigns across Meta, TikTok, LinkedIn, and more.",
-    subtitle: "Turn Every Scroll Into Impact",
-    ctaButton: "Grow With Social",
+    subtitle: "digital",
+    ctaButton: "Connect With Us",
     ctaLink: "/services/social-media",
     img: "/services/creative/branding/heroimg.png",
     bg: "/services/creative/branding/herobg.png",
@@ -15,39 +15,45 @@ export const socialmediamarketingData = {
     description:
       "Social isn’t optional — it’s where relevance, visibility, and revenue meet. We turn daily scroll time on Meta, TikTok, LinkedIn, and more into measurable growth with full-funnel strategies grounded in audience insight, platform trends, and precision targeting. Every post is built with purpose — to earn attention, spark conversation, and move buyers through the funnel.",
   },
-
+  cta: {
+    bg: "/services/CTA/Digital-google-business-profile.png",
+    title: "<strong>Grow</strong> your business <br/> with at <strong>SEG</strong> ",
+    button: "Book a call",
+    link: "tel:+13479356442",
+  },
   Costof: {
     heading1: "Why It Matters",
     heading2: "The Cost of Weak Social Marketing",
     description:
-      "Social is where your audience already spends hours every day. Strong creative and smart distribution convert attention into measurable outcomes.",
+      "Social is where your audience already spends hours each day. Every swipe is a chance to earn attention and intent. Smart creative and native formats stop the scroll. Precision targeting puts messages in front of buyers, not bystanders. Consistent posting and community management turn reach into relationships. Paid amplification scales what works while suppressing waste. Data loops testing hooks, pacing, and formats, improve performance week over week. Social proof from comments and shares reduces friction and builds trust. Full-funnel orchestration moves people from awareness to conversion and repeat purchase. Done right, social marketing converts casual scrolling into measurable revenue.",
     items: [
       {
-        img: "/services/creative/branding/versus.png",
-        text: "Low engagement and slow audience growth across platforms.",
+        img: "/services/digital/social-media-marketing/low-engagement-and-slow-audience-growth.png",
+        text: "<strong>Low engagement</strong> and slow audience growth across platforms.",
       },
       {
-        img: "/services/creative/branding/shared-vision.png",
-        text: "Missed opportunities to capitalize on trends competitors use.",
+        img: "/services/digital/social-media-marketing/missed-chances-to-capitalize-on-trends.png",
+        text: "<strong>Missed opportunities</strong> to capitalize on trends competitors use.",
       },
       {
-        img: "/services/creative/branding/loyal-customer.png",
-        text: "Weak ROI as campaigns fail to convert attention into revenue.",
+        img: "/services/digital/social-media-marketing/weak-roi.png",
+        text: "<strong>Weak ROI</strong> as campaigns fail to convert attention into revenue.",
       },
       {
-        img: "/services/creative/branding/return.png",
-        text: "Inconsistent presence erodes trust, credibility, and recall.",
+        img: "/services/digital/social-media-marketing/Inconsistent-brand-presence.png",
+        text: "<strong>Inconsistent presence</strong> erodes trust, credibility, and recall.",
       },
+
     ],
   },
 
   ProfessionalSEO: {
     heading: "What Happens With Smart Marketing",
     items: [
-      { text: "More followers and stronger engagement across all platforms." },
-      { text: "Sales pipelines expand as social traffic converts into leads." },
-      { text: "Brand stays top-of-mind through consistent high-impact content." },
-      { text: "Better CAC and ROAS through continuous optimization." },
+      { text: "More followers and stronger engagement across all key social platforms." },
+      { text: "Sales pipelines expand as social traffic converts into real opportunities." },
+      { text: "Your brand stays top-of-mind through consistent, high-impact content." },
+      { text: "Better CAC and ROAS driven by continuous, data-backed optimization." },
     ],
     video: "/videos/vdo.mp4",
   },
@@ -55,20 +61,20 @@ export const socialmediamarketingData = {
   BrandStrategy: {
     heading: "What You Get",
     items: [
-      { text: "Custom social strategy tailored to your audience and goals." },
+      { text: "Social strategy development tailored to your audience and goals." },
       {
         text: "Paid ads executed across Meta, TikTok, LinkedIn, and major platforms.",
       },
-      { text: "Community management to keep your audience active and engaged." },
+      { text: "Community management that keeps your audience active and engaged daily." },
       {
         text: "Monthly reporting with insights on growth, engagement, and performance.",
       },
     ],
-    img: "/services/BoxImage/brandstrategy.png",
+    img: "/services/digital/social-media-marketing/digital-social-media-marketing.png",
   },
 
   FAQ: {
-    heading: "Social Media Marketing – FAQs",
+    heading: "FAQs",
     items: [
       {
         question: "1. Do you handle both organic and paid social campaigns?",

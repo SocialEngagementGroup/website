@@ -1,7 +1,7 @@
 import HeroSection from "@/components/ServicePage/HeroSection/HeroSection";
 import IntroSection from "@/components/ServicePage/IntroSection/IntroSection";
 import { webdevelopmentData } from "@/app/services/(digital)/website-development/webdevelopmentData";
-import PlaceHolder from "@/components/ServicePage/PlaceHolder/PlaceHolder";
+import CTA from "@/components/ServicePage/CTA/CTA";
 import CostofSection from "@/components/ServicePage/CostofSection/CostofSection";
 import ProfessionalBranding from "@/components/ServicePage/ProfessionalBranding/ProfessionalBranding";
 import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrategy";
@@ -22,7 +22,7 @@ export default function Page() {
     <>
       <HeroSection {...webdevelopmentData.hero} />
       <IntroSection {...webdevelopmentData.intro} />
-      <PlaceHolder />
+      <CTA {...webdevelopmentData.cta} />
       <CostofSection
         heading1={webdevelopmentData.Costof.heading1}
         heading2={webdevelopmentData.Costof.heading2}

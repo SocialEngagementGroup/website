@@ -1,20 +1,26 @@
 export const logoDesignData = {
   hero: {
     title: "Logo Design",
-    description: "Your logo is more than a mark, it’s the visual heartbeat of your brand. We design logos that blend creative artistry with brand psychology and market insight, so they communicate your identity, reflect your values, and connect emotionally across every medium. Whether launching or refreshing, our process distills what makes you distinct into a timeless, scalable mark. The result: instant trust, memorability, and stronger performance across all your marketing.",
-    subtitle: "Craft a Logo That’s Instantly Recognizable",
-    ctaButton: "Start Logo Project",
+    description: "Get a memorable, professional logo that builds trust and recognition. 3–5 original concepts, unlimited revisions, and full ownership included.",
+    subtitle: "Creative",
+    ctaButton: "Connect With Us",
     ctaLink: "/services/branding",
-   img: "/services/creative/branding/heroimg.png",
+    img: "/services/creative/branding/heroimg.png",
     bg: "/services/creative/branding/herobg.png",
 },
   intro: {
-    heading: "Why Your Brand Needs a Logo That Actually Works",
+    heading: "Craft a Logo That’s Instantly Recognizable",
     description: "Your logo is the first thing people notice. And the moment they decide whether to trust you or move on. When your Custom logo design works, every part of your marketing works harder. Your ads perform better. Your social posts earn more engagement. Referrals increase because customers can describe and recall you instantly. Because recognition builds trust and trust creates customers. That’s the power of investing in the right business logo design.",
   },
+  cta: {
+    bg: "/services/CTA/Digital-google-business-profile.png",
+    title: "<strong>Grow</strong> your business <br/> with at <strong>SEG</strong> ",
+    button: "Book a call",
+    link: "tel:+13479356442",
+  },
     Costof: {
-    heading1: "The Cost of Weak Branding",
-
+    heading1: "Why Your Brand Needs a Logo That Actually Works",
+    description: "Your logo is the first thing people notice. And the moment they decide whether to trust you or move on. When your <strong>Custom logo design</strong> works, every part of your marketing works harder. Your ads perform better. Your social posts earn more engagement. Referrals increase because customers can describe and recall you instantly. Because recognition builds trust and trust creates customers. That’s the power of investing in the right <strong>business logo design</strong>.",
     items: [
   {
     img: "/services/creative/logodesign/logo-design.png",
@@ -32,7 +38,9 @@ export const logoDesignData = {
     img: "/services/creative/logodesign/You-appear-amateur.png",
     text: "<strong>You appear</strong> amateur, even if your business is professional.",
   },
+
 ],
+heading2: "The Cost of Weak Branding",
   },
    ProfessionalLogoDesign: {
   heading: "Here’s What Happens With Professional Logo Design",
@@ -69,7 +77,7 @@ export const logoDesignData = {
       text: "<strong>Brand guidelines</strong> ensure consistent logo usage across all platforms.",
     },
     ],
-    img: "/services/BoxImage/brandstrategy.png",
+    img: "/services/creative/logodesign/creative-logo-design.png",
   },
   FAQ: {
     heading: "FAQs",

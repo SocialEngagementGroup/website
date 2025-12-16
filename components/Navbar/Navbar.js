@@ -2,27 +2,29 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false); // Hamburger menu toggle
+  const [servicesOpen, setServicesOpen] = useState(false); // Services dropdown toggle
   const [isSticky, setIsSticky] = useState(false); // Sticky navbar on scroll
 
   // ---------- Sticky navbar scroll logic ----------
   useEffect(() => {
     const handleScroll = () => {
-      setIsSticky(window.scrollY > 20); // Add sticky effect after 20px scroll
+      setIsSticky(window.scrollY > 20);
     };
-
-    handleScroll(); // Initial check
-    window.addEventListener("scroll", handleScroll); // Listen for scroll
-    return () => window.removeEventListener("scroll", handleScroll); // Cleanup
+    handleScroll(); 
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav
-      className={`fixed inset-x-0 mx-auto z-[999] transition-all duration-500 global-navbar ${isSticky
+      className={`fixed inset-x-0 mx-auto z-[999] transition-all duration-500 global-navbar ${
+        isSticky
           ? "bg-glass shadow-md w-[91%] top-[20px] py-3 rounded-2xl px-2 sm:px-5"
           : "bg-transparent w-full top-0 py-5 px-3 sm:px-22"
-        }`}
+      }`}
     >
       <div className="container-fluid mx-auto transition-all duration-500">
         <div className="flex flex-wrap items-center justify-between">
@@ -41,13 +43,13 @@ export default function Navbar() {
 
           {/* ---------- Contact Button + Hamburger ---------- */}
           <div className="flex md:order-2 items-center">
-            {/* Contact Us Button */}
             <button
               onClick={() => (window.location.href = "#contact")}
-              className={`Contact-btn border font-bold font-sans text-[18px] rounded-[14px] cursor-pointer md:py-1.5 pb-1.5 pt-1.5 px-3 md:px-8 transition ${isSticky
+              className={`Contact-btn border font-bold font-sans text-[18px] rounded-[14px] cursor-pointer md:py-1.5 pb-1.5 pt-1.5 px-3 md:px-8 transition ${
+                isSticky
                   ? "border-white text-black bg-white"
                   : "border-white text-white md:bg-white md:text-black hover:bg-white hover:text-black"
-                }`}
+              }`}
             >
               Contact Us
             </button>
@@ -71,7 +73,7 @@ export default function Navbar() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2.5"
-                    d="M4 4L20 20M20 4L4 20" // X icon when open
+                    d="M4 4L20 20M20 4L4 20"
                   />
                 ) : (
                   <path
@@ -79,7 +81,7 @@ export default function Navbar() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2.5"
-                    d="M3 6h18M3 14h18" // Hamburger icon when closed
+                    d="M3 6h18M3 14h18"
                   />
                 )}
               </svg>
@@ -94,22 +96,101 @@ export default function Navbar() {
               className={`navlink md:ml-26 ml-0 flex flex-col p-4 md:p-0 border border-gray-700 md:border-0 rounded-lg md:flex-row md:space-x-10 md:mt-0 mt-5 ${isOpen ? "bg-black md:bg-transparent" : "bg-transparent"
                 }`}
             >
-              {[
-                { name: "Home", href: "#" },
-                { name: "Services", href: "#services" },
-                { name: "Clients", href: "#clients" },
-                { name: "About Us", href: "#aboutUs" },
-              ].map((link) => (
-                <li key={link.name}>
-                  <a
-                    href={link.href}
-                    onClick={() => setIsOpen(false)} // Close menu on click
-                    className="block cursor-pointer py-2 px-3 text-white rounded-sm md:bg-transparent md:text-white md:p-0 font-sans font-bold text-[16px] md:text-[20px] hover:text-gray-300 transition"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
+              {/* Home */}
+              <li>
+                <a
+                  href="#"
+                  onClick={() => setIsOpen(false)}
+                  className="block cursor-pointer py-2 px-3 text-white rounded-sm md:bg-transparent md:text-white md:p-0 font-sans font-bold text-[16px] md:text-[20px] hover:text-gray-300 transition"
+                >
+                  Home
+                </a>
+              </li>
+
+              {/* ---------- Services Dropdown ---------- */}
+              {/* ---------- Services Dropdown ---------- */}
+<li className="relative">
+  <button
+    onClick={() => setServicesOpen(!servicesOpen)}
+    className="py-2 px-3 text-white font-sans font-bold text-[16px] md:text-[20px] hover:text-gray-300 transition flex items-center"
+    style={{ lineHeight: '1.2rem' }}
+  >
+    Services
+    <svg className={`w-4 h-4 ml-1 transition-transform ${servicesOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
+
+  {/* Dropdown */}
+  <div
+    className={`
+      absolute md:left-1/2 md:-translate-x-1/2 mt-3
+      w-full md:w-[900px]
+      ${servicesOpen ? "block" : "hidden"}
+      md:group-hover:block
+      bg-black rounded-xl shadow-2xl z-50
+    `}
+  >
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 text-white">
+
+      {/* Creative Services */}
+      <div>
+        <h4 className="mb-3 font-semibold uppercase text-gray-300 text-sm">
+          Creative Services
+        </h4>
+        <ul className="space-y-2 text-sm">
+          <li><Link href="/services/3D-animation-&-rendering" onClick={() => setIsOpen(false)}>3D Animation & Rendering</Link></li>
+          <li><Link href="/services/branding">Branding</Link></li>
+          <li><Link href="/services/content-creation">Content Creation</Link></li>
+          <li><Link href="/services/logo-design">Logo Design</Link></li>
+          <li><Link href="/services/social-media-content">Social Media Content</Link></li>
+          <li><Link href="/services/videography-&-photography">Videography & Photography</Link></li>
+        </ul>
+      </div>
+
+      {/* Digital Services */}
+      <div>
+        <h4 className="mb-3 font-semibold uppercase text-gray-300 text-sm">
+          Digital Services
+        </h4>
+        <ul className="space-y-2 text-sm">
+          <li><Link href="/services/google-business-profile-management">Google Business Profile Management</Link></li>
+          <li><Link href="/services/google-location-services-ads">Google Location Services Ads</Link></li>
+          <li><Link href="/services/ppc-campaigns">PPC Campaigns</Link></li>
+          <li><Link href="/services/retargeting-&-remarketing">Retargeting & Remarketing</Link></li>
+          <li><Link href="/services/review-and-Reputation-management">Review & Reputation Management</Link></li>
+          <li><Link href="/services/seo">SEO</Link></li>
+          <li><Link href="/services/social-media-marketing">Social Media Marketing</Link></li>
+          <li><Link href="/services/website-development">Website Development</Link></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</li>
+
+
+              {/* Clients */}
+              <li>
+                <a
+                  href="#clients"
+                  onClick={() => setIsOpen(false)}
+                  className="block cursor-pointer py-2 px-3 text-white rounded-sm md:bg-transparent md:text-white md:p-0 font-sans font-bold text-[16px] md:text-[20px] hover:text-gray-300 transition"
+                >
+                  Clients
+                </a>
+              </li>
+
+              {/* About Us */}
+              <li>
+                <a
+                  href="#aboutUs"
+                  onClick={() => setIsOpen(false)}
+                  className="block cursor-pointer py-2 px-3 text-white rounded-sm md:bg-transparent md:text-white md:p-0 font-sans font-bold text-[16px] md:text-[20px] hover:text-gray-300 transition"
+                >
+                  About Us
+                </a>
+              </li>
             </ul>
           </div>
 

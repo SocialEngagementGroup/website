@@ -3,7 +3,7 @@ export const solutionforRestaurantsData = {
     title: "Digital Marketing for Restaurants",
     description:
       "Boost your restaurant’s visibility and reservations with smart digital marketing. Rank higher locally, get more bookings, and build loyal customers.",
-    subtitle: "Smart Digital Marketing To Keep Your Tables Full.",
+    subtitle: "industry",
     ctaButton: "Book a Free Restaurant Marketing Consultation",
     ctaLink: "/services/restaurant-marketing",
     img: "/services/creative/branding/heroimg.png", // kept original

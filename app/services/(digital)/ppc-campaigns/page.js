@@ -4,7 +4,7 @@ import CostofSection from "@/components/ServicePage/CostofSection/CostofSection"
 import ProfessionalBranding from "@/components/ServicePage/ProfessionalBranding/ProfessionalBranding";
 import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrategy";
 import FAQ from "@/components/ServicePage/FAQ/FAQ";
-import PlaceHolder from "@/components/ServicePage/PlaceHolder/PlaceHolder";
+import CTA from "@/components/ServicePage/CTA/CTA";
 
 import { PpcServiceData } from "@/app/services/(digital)/ppc-campaigns/ppccampaigns";
 
@@ -21,7 +21,7 @@ export default function Page() {
     <>
       <HeroSection {...PpcServiceData.hero} />
       <IntroSection {...PpcServiceData.intro} />
-      <PlaceHolder />
+      <CTA {...PpcServiceData.cta} />
       <CostofSection
         heading1={PpcServiceData.Costof.heading1}
         heading2={PpcServiceData.Costof.heading2}

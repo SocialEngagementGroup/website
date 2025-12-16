@@ -41,9 +41,6 @@
   line-height: 40px;
 }
 
-.description2 {
-  line-height: 40px;
-}
 
 /* CTA Button */
 .heroBtn {
@@ -65,11 +62,6 @@
 
   .description {
     max-width: 100%;
-    line-height: 25px;
-  }
-
-  .description2 {
-    font-size: 16px;
     line-height: 25px;
   }
 

@@ -1,26 +1,31 @@
 export const solutionforDoctorsData = {
   hero: {
-    title: "Digital Marketing for Doctors",
+    title: "Solution for Doctors",
     description:
       "Grow your clinic’s visibility and patient trust with tailored healthcare marketing. Get found first, attract quality patients, and scale your practice ethically.",
-    subtitle: "Build Trust. Get Patients. Grow Your Practice.",
-    ctaButton: "Book a Free Strategy Call",
+    subtitle: "industry",
+    ctaButton: "Contact With Us",
     ctaLink: "/services/healthcare-marketing",
     img: "/services/creative/branding/heroimg.png",
     bg: "/services/creative/branding/herobg.png",
   },
 
   intro: {
-    heading: "Why Doctors Need Digital Transformation",
+    heading: "Build Trust. Get Patients. Grow Your Practice.",
+    description:
+      "Your reputation as a doctor is built on care and expertise but in today’s digital-first world, that’s not enough. Patients now start their healthcare journey online: searching symptoms, reading reviews, and comparing specialists long before they book an appointment. We help healthcare professionals like you stand out, attract the right patients, and build lasting trust through intelligent digital strategy, targeted visibility, and ethical growth marketing. Whether you’re an independent practitioner, a clinic, or a multi-specialty hospital, we design systems that make your practice discoverable, credible, and consistently growing.",
+  },
+ cta: {
+    bg: "/services/CTA/Creative-Branding.png",
+    title: "<strong>Grow</strong> your business <br/> with at <strong>SEG</strong> ",
+    button: "Book a call",
+    link: "tel:+13479356442",
+  },
+  Costof: {
+    heading1: "Why Doctors Need Digital Transformation",
+    heading2: "The Cost of Staying Traditional",
     description:
       "Patients now begin their healthcare journey online searching symptoms, comparing specialists, and reading reviews long before they book an appointment. If your practice isn’t visible in those moments, it’s effectively invisible. A strong digital presence shapes trust, reputation, and patient decisions before they ever walk through your door. Digital transformation ensures your expertise gets discovered, trusted, and ultimately chosen.",
-  },
-
-  Costof: {
-    heading1: "The Cost of Staying Traditional",
-    heading2: "Missed Opportunities Without Digital Marketing",
-    description:
-      "Remaining offline or outdated can result in missed patients, negative reviews, competitors outranking you, and low patient retention.",
     items: [
       {
         img: "/services/creative/branding/versus.png",
@@ -55,13 +60,13 @@ export const solutionforDoctorsData = {
   BrandStrategy: {
     heading: "What You Get",
     items: [
-      { text: "SEO & Local Visibility: Appear when patients search 'doctor near me' or by specialization." },
-      { text: "Google Business & Review Management: Build credibility with verified reviews and patient engagement." },
-      { text: "PPC & Local Ads: Target high-intent patients looking for immediate consultation." },
-      { text: "Website Optimization: Convert visitors into patients through a clear, comforting experience." },
-      { text: "Social Media & Content Marketing: Educate patients with credible, medically accurate content across Facebook, Instagram, and YouTube." },
-      { text: "Reputation & Compliance Monitoring: Track online mentions, ensure accuracy across directories, and maintain full compliance with healthcare advertising rules." },
-      { text: "Analytics & Growth Reporting: Transparent dashboards showing traffic, leads, appointment trends, and ROI to guide smarter clinical decisions." },
+      { text: "<strong>SEO & Local Visibility:</strong> Appear when patients search 'doctor near me' or by specialization." },
+      { text: "<strong>Google Business & Review Management:</strong> Build credibility with verified reviews and patient engagement." },
+      { text: "<strong>PPC & Local Ads:</strong> Target high-intent patients looking for immediate consultation." },
+      { text: "<strong>Website Optimization:</strong> Convert visitors into patients through a clear, comforting experience." },
+      { text: "<strong>Social Media & Content Marketing:</strong> Educate patients with credible, medically accurate content across Facebook, Instagram, and YouTube." },
+      { text: "<strong>Reputation & Compliance Monitoring:</strong> Track online mentions, ensure accuracy across directories, and maintain full compliance with healthcare advertising rules." },
+      { text: "<strong>Analytics & Lead Tracking:</strong> Transparent dashboards showing traffic, leads, appointment trends, and ROI to guide smarter clinical decisions." },
     ],
     img: "/services/BoxImage/brandstrategy.png",
   },

@@ -1,7 +1,7 @@
 import HeroSection from "@/components/ServicePage/HeroSection/HeroSection";
 import IntroSection from "@/components/ServicePage/IntroSection/IntroSection";
 import { solutionforDoctorsData } from "@/app/services/(industry)/solution-for-doctors/solutionforDoctorsData";
-import PlaceHolder from "@/components/ServicePage/PlaceHolder/PlaceHolder";
+import CTA from "@/components/ServicePage/CTA/CTA";
 import CostofSection from "@/components/ServicePage/CostofSection/CostofSection";
 import ProfessionalBranding from "@/components/ServicePage/ProfessionalBranding/ProfessionalBranding";
 import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrategy";
@@ -21,7 +21,7 @@ export default function Page() {
     <>
       <HeroSection {...solutionforDoctorsData.hero} />
       <IntroSection {...solutionforDoctorsData.intro} />
-      <PlaceHolder />
+      <CTA {...solutionforDoctorsData.cta} />
       <CostofSection
         heading1={solutionforDoctorsData.Costof.heading1}
         heading2={solutionforDoctorsData.Costof.heading2}

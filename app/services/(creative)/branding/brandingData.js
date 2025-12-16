@@ -2,8 +2,7 @@ export const brandingData = {
   hero: {
     title: "Branding",
     description:
-      "Your brand is more than a logo, it’s the experience people remember. We build end-to-end branding that defines your voice, crafts a standout visual identity, and positions you clearly in a crowded market. Starting with deep research, we map your audience, differentiation, and story, then translate that into consistent messaging that earns trust. Finally, we design a cohesive visual system, logo, colors, type, imagery and apply it across every touchpoint so you’re instantly recognizable, building loyalty and accelerating growth.",
-      description2: "Build a Brand That Sticks",
+      "Craft a brand that stands out. We develop strategy, voice, and visuals that build recognition, trust, and loyalty. Start your branding journey today.",
     subtitle: "Creative",
     ctaButton: "Connect With Us",
     ctaLink: "/services/logodesign",
@@ -15,27 +14,34 @@ export const brandingData = {
     description:
       "Your brand is more than a logo, it’s the experience people remember. We build end-to-end branding that defines your voice, crafts a standout visual identity, and positions you clearly in a crowded market. Starting with deep research, we map your audience, differentiation, and story, then translate that into consistent messaging that earns trust. Finally, we design a cohesive visual system, logo, colors, type, imagery and apply it across every touchpoint so you’re instantly recognizable, building loyalty and accelerating growth.",
   },
+  cta: {
+    bg: "/services/CTA/Digital-google-business-profile.png",
+    title: "<strong>Grow</strong> your business <br/> with at <strong>SEG</strong> ",
+    button: "Book a call",
+    link: "tel:+13479356442",
+  },
   Costof: {
-  
+
     heading1: "Why Your Business Needs Strong Branding ",
-    description:"A <b>cohesive brand</b> makes every interaction seamless and effective. Customers gain instant <b>brand recognition</b>, which builds familiarity and trust. Your marketing efforts become more consistent and impactful, and your reputation for quality and reliability grows with every single touchpoint, creating a loyal customer base.",
-    items: [ 
+    description: "A <strong>cohesive brand</strong> makes every interaction seamless and effective. Customers gain instant <strong>brand recognition</strong>, which builds familiarity and trust. Your marketing efforts become more consistent and impactful, and your reputation for quality and reliability grows with every single touchpoint, creating a loyal customer base.",
+    items: [
       {
         img: "/services/creative/branding/versus.png",
-        text: "Customers forget your brand quickly due to poor recall.",
+        text: "Customers forget your brand quickly due to poor <strong>recall</strong>.",
       },
       {
         img: "/services/creative/branding/shared-vision.png",
-        text: "You blend in with competitors, losing your distinct identity.",
+        text: "You blend in with competitors, losing your distinct <strong>identity</strong>.",
       },
       {
         img: "/services/creative/branding/loyal-customer.png",
-        text: "Inconsistent messaging damages trust with your customers.",
+        text: "Inconsistent messaging damages <strong>trust</strong> with your customers.",
       },
       {
         img: "/services/creative/branding/return.png",
-        text: "Sales teams struggle to pitch a brand lacking clear identity.",
+        text: "Sales teams struggle to pitch a brand lacking clear <strong>identity</strong>.",
       },
+
     ],
     heading2: "The Cost of Weak Branding",
   },

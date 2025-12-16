@@ -3,7 +3,7 @@ export const solutionforTechStartupsData = {
     title: "Digital Marketing for Tech Startups",
     description:
       "Accelerate your tech startup’s growth with data-driven marketing. Build traction, attract users, and scale visibility from launch to Series A and beyond.",
-    subtitle: "Launch Fast. Scale Smart. Grow Sustainably.",
+    subtitle: "industry",
     ctaButton: "Book a Free Growth Strategy Call",
     ctaLink: "/services/tech-startup-marketing",
     img: "/services/creative/branding/heroimg.png", // kept original

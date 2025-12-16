@@ -1,7 +1,7 @@
 import HeroSection from "@/components/ServicePage/HeroSection/HeroSection";
 import IntroSection from "@/components/ServicePage/IntroSection/IntroSection";
 import { solutionforRestaurantsData } from "@/app/services/(industry)/solution-for-restaurants/solutionforRestaurantsData";
-import PlaceHolder from "@/components/ServicePage/PlaceHolder/PlaceHolder";
+import PlaceHolder from "@/components/ServicePage/CTA/CTA";
 import CostofSection from "@/components/ServicePage/CostofSection/CostofSection";
 import ProfessionalBranding from "@/components/ServicePage/ProfessionalBranding/ProfessionalBranding";
 import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrategy";

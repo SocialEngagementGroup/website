@@ -12,7 +12,12 @@
   --foreground: #171717;
 }
 
-
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  box-shadow: none; /* For browsers that use box-shadow on focus */
+}
 /* =========================================================
    Custom Theme Variables (Inline)
 ========================================================= */
@@ -118,6 +123,9 @@ button,
   z-index: 11;
 }
 
+.mySwiperSlider{
+ padding: 1.5rem 0rem !important;
+}
 
 @media only screen and (max-width: 767px) {
   .custom-shadow::before {

@@ -14,9 +14,10 @@ const CostofSection = ({ heading1, heading2, description, items }) => {
             {heading1}
           </h3>
 
-          <p className={`${style.description} text-black`}>
-            {description}
-          </p>
+          <p
+            className={`${style.description} text-black`}
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
         </div>
 
         {/* Second Heading */}
@@ -43,7 +44,6 @@ const CostofSection = ({ heading1, heading2, description, items }) => {
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

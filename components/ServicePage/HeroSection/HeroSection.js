@@ -7,7 +7,6 @@ const HeroSection = ({
   title,
   subtitle,
   description,
-  description2,
   ctaButton,
   ctaLink,
   img,
@@ -32,9 +31,6 @@ const HeroSection = ({
               {description}
             </p>
 
-            <p className={`${styles.description2} mb-2 md:mb-12 mt-5 p1`}>
-              {description2}
-            </p>
 
             {ctaButton && (
               <Link href={ctaLink}>
