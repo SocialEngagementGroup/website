@@ -5,7 +5,7 @@ import ProfessionalBranding from "@/components/ServicePage/ProfessionalBranding/
 import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrategy";
 import FAQ from "@/components/ServicePage/FAQ/FAQ";
 import CTA from "@/components/ServicePage/CTA/CTA";
-
+// update url
 import { ReviewReputationData } from "@/app/services/(digital)/review-and-reputation-management/ReviewReputationData";
 
 export const metadata = {
