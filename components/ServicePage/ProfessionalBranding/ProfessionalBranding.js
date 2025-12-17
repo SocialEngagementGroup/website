@@ -5,7 +5,7 @@ const ProfessionalBranding = ({ heading, items, video }) => {
   return (
     <section className={styles.section}>
       <div
-        className={`${styles.containerCustom} container-fluid w-[75%] mx-auto py-6 md:py-28 px-6 md:px-7`}
+        className={`${styles.containerCustom} container-fluid w-[78%] mx-auto py-6 md:py-28 px-6 md:px-7`}
       >
         <div
           className="

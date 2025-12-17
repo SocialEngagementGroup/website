@@ -27,7 +27,7 @@ const HeroSection = ({
             <h2 className={styles.subtitle}>{subtitle}</h2>
             <h1 className={styles.title}>{title}</h1>
 
-            <p className={`${styles.description} mt-4 md:mt-12 p1`}>
+            <p className={`${styles.description} my-4 md:my-12 p1`}>
               {description}
             </p>
 
@@ -36,8 +36,8 @@ const HeroSection = ({
               <Link href={ctaLink}>
                 <button
                   className={`${styles.heroBtn}
-                    bg-[#656565] text-gray-100 font-semibold
-                    px-6 py-3 sm:bg-gray-300 sm:text-gray-900
+                    font-semibold
+                    px-6 py-3 bg-gray-300 text-gray-900
                     sm:px-8 sm:py-3 md:px-10 md:py-4
                     hover:bg-gray-400 transition cursor-pointer
                     rounded-lg text-base sm:text-lg mt-4

@@ -14,11 +14,11 @@ export const brandingData = {
     description:
       "Your brand is more than a logo, it’s the experience people remember. We build end-to-end branding that defines your voice, crafts a standout visual identity, and positions you clearly in a crowded market. Starting with deep research, we map your audience, differentiation, and story, then translate that into consistent messaging that earns trust. Finally, we design a cohesive visual system, logo, colors, type, imagery and apply it across every touchpoint so you’re instantly recognizable, building loyalty and accelerating growth.",
   },
-  cta: {
+    cta: {
     bg: "/services/CTA/Digital-google-business-profile.png",
-    title: "<strong>Grow</strong> your business <br/> with at <strong>SEG</strong> ",
+    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
-    link: "tel:+13479356442",
+    link: "https://calendly.com/itseg/segmeet",
   },
   Costof: {
 

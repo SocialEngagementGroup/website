@@ -16,19 +16,19 @@ export const contentCreationData = {
   },
   cta: {
     bg: "/services/CTA/Digital-google-business-profile.png",
-    title: "<strong>Grow</strong> your business <br/> with at <strong>SEG</strong> ",
+    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
-    link: "tel:+13479356442",
+    link: "https://calendly.com/itseg/segmeet",
   },
   Costof: {
-    heading1: "Why Your Business Needs Professional Content",
+    heading1: "Why Businesses Need Professional Content Creation",
     heading2: "The Cost of Weak Content",
     description:
-      "High-quality, engaging content is essential to cut through digital noise, boost online reach, and build trust. Without a professional strategy, your marketing may be ignored, and your investment goes to waste.",
+      "High-quality visual content and engaging brand storytelling are essential for cutting through the digital noise. They are proven to boost your online reach, build brand trust, and increase conversion rates. Without a professional content strategy, your marketing messages risk being ignored, and your investment goes to waste.",
     items: [
       {
         img: "/services/creative/creative-content/audience-engagement.png",
-        text: "Your Posts and ads get lost in crowded social feeds, reducing <strong>audience engagement.</strong>",
+        text: "Your posts and ads get lost in crowded social media feeds, leading to low <strong>audience engagement.</strong>",
       },
       {
         img: "/services/creative/creative-content/memorable-impact.png",
@@ -54,10 +54,10 @@ export const contentCreationData = {
         text: "Strategic <strong>video marketing</strong> boosts your brand's visibility, reach, and conversions.",
       },
       {
-        text: "Authentic <strong>influencer collaborations</strong> expand your reach and build powerful social trust.",
+        text: "Authentic <strong>influencer campaigns</strong> expand your reach and build powerful social trust.",
       },
       {
-        text: "Innovative <strong>AI-generated content</strong> keeps your brand at the forefront of industry trends.",
+        text: "Innovative <strong>AI-powered content</strong> keeps your brand at the forefront of industry trends.",
       },
     ],
     video: "/videos/vdo.mp4",
@@ -66,16 +66,16 @@ export const contentCreationData = {
     heading: "What You Get",
     items: [
       {
-        text: "Custom <strong>branded graphics</strong> for social media, ads, blogs, and campaigns.",
+        text: "Custom <strong>branded graphics</strong> for social media, ads, blogs, and marketing campaigns.",
       },
       {
         text: "Professional <strong>short-form</strong> and <strong>long-form video production</strong> and editing.",
       },
       {
-        text: "Strategic <strong>Influencer collaboration </strong> management from outreach to execution.",
+        text: "Strategic <strong>Influencer collaboration </strong> management, from outreach to campaign execution.",
       },
       {
-        text: "Scalable <strong>AI-generated content</strong> tailored to your specific niche and brand voice.",
+        text: "Scalable <strong>AI-powered content</strong> tailored to your specific niche and brand voice.",
       },
     ],
     img: "/services/creative/creative-content/creative-content-creation.png",
@@ -86,7 +86,7 @@ export const contentCreationData = {
       {
         question: "1. What types of content do you create?",
         answer:
-          "We produce graphics, social content, videos, influencer campaigns, and AI-generated assets tailored to your industry.",
+          "We produce branded graphics, social content, videos, influencer campaigns, and AI-generated assets tailored to your industry.",
       },
       {
         question: "2. Why should I invest in professional content creation?",
@@ -94,7 +94,7 @@ export const contentCreationData = {
           "High-quality content captures attention, boosts engagement, and converts viewers into customers.",
       },
       {
-        question: "3. Can you create both short-form and long-form videos?",
+        question: "3. Can you create both short-form and long-form video?",
         answer:
           "Yes, we handle everything from TikTok/Reels to corporate videos and brand films.",
       },
@@ -111,7 +111,7 @@ export const contentCreationData = {
       {
         question: "6. How often should I create new content?",
         answer:
-          "Consistency is key. Most brands see results with a steady stream of content aligned to their campaigns, weekly or monthly.",
+          "Consistency is key. Most brands see results with a steady stream of content (weekly or monthly) aligned to their campaigns.",
       },
     ],
   },

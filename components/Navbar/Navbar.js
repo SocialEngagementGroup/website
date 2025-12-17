@@ -158,7 +158,7 @@ export default function Navbar() {
           <li><Link href="/services/google-location-services-ads">Google Location Services Ads</Link></li>
           <li><Link href="/services/ppc-campaigns">PPC Campaigns</Link></li>
           <li><Link href="/services/retargeting-&-remarketing">Retargeting & Remarketing</Link></li>
-          <li><Link href="/services/review-and-Reputation-management">Review & Reputation Management</Link></li>
+          <li><Link href="/services/review-and-reputation-management">Review & Reputation Management</Link></li>
           <li><Link href="/services/seo">SEO</Link></li>
           <li><Link href="/services/social-media-marketing">Social Media Marketing</Link></li>
           <li><Link href="/services/website-development">Website Development</Link></li>

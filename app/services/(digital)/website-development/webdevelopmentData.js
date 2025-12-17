@@ -11,15 +11,15 @@ export const webdevelopmentData = {
   },
 
   intro: {
-    heading: "Your Website Is Your Most Powerful Asset",
+    heading: "Websites That Work as Hard as You Do",
     description:
       "Your website is your most powerful sales and branding asset, not a brochure. We design and develop sites that look sharp, load fast, and convert, pairing striking visuals with seamless UX. Starting from your goals, audience, and competitors, we craft intuitive journeys, responsive layouts, and persuasive content. Built on modern frameworks like WordPress, Next.js, and Shopify, every detail from performance and SEO to analytics and tracking is engineered for results. Whether corporate, e-commerce, or a scalable web app, we ship reliable, flexible sites that drive measurable growth and trust. In a world of split-second decisions, your website is where customers choose you or don’t.",
   },
   cta: {
     bg: "/services/CTA/Digital-google-business-profile.png",
-    title: "<strong>Grow</strong> your business <br/> with at <strong>SEG</strong> ",
+    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
-    link: "tel:+13479356442",
+    link: "https://calendly.com/itseg/segmeet",
   },
   Costof: {
     heading1: "Why It Matters",
@@ -82,27 +82,27 @@ export const webdevelopmentData = {
       {
         question: "1. What platforms do you build websites on?",
         answer:
-          "We work with WordPress, Next.js, Shopify, and fully custom solutions based on your needs.",
+          "We work with WordPress, Next.js, Shopify, and custom solutions.",
       },
       {
         question: "2. Do you handle both design and development?",
         answer:
-          "Yes. We manage UI/UX design, front-end and back-end development, integrations, and testing.",
+          "Yes, our team manages UI/UX design, coding, integrations, and testing.",
       },
       {
         question: "3. Will my website be mobile-friendly?",
         answer:
-          "Always. Every site is fully responsive and optimized for mobile performance.",
+          "Always. Every site is built to be responsive and optimized for mobile.",
       },
       {
         question: "4. Do you integrate SEO into websites?",
         answer:
-          "Yes, we optimize for speed, structure, and SEO best practices from day one.",
+          "Yes, we optimize for speed, structure, and SEO from the start.",
       },
       {
         question: "5. Can you update or maintain my current site?",
         answer:
-          "Yes, we offer ongoing support, maintenance, and performance enhancements.",
+          "Yes, we offer ongoing support and updates to keep your site running smoothly.",
       },
       {
         question: "6. How long does a website project take?",

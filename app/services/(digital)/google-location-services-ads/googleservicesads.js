@@ -15,11 +15,11 @@ export const googleservicesads = {
     description:
       "Google Local Service Ads (LSAs) put you at the very top of local search with the Google Guaranteed badge to build instant trust, so nearby, ready-to-buy customers call you first. We handle verification and eligibility, dial in service areas and categories, craft high-converting profiles, and continuously optimize to lower cost per lead and lift conversion rates. You’ll get transparent reporting that shows exactly where leads come from and how campaigns perform. For service companies, healthcare, and local pros, we make sure you show up first when it matters, turning local searches into calls and booked jobs without wasting budget.",
   },
-   cta: {
+  cta: {
     bg: "/services/CTA/Digital-google-business-profile.png",
-    title: "<strong>Grow</strong> your business <br/> with at <strong>SEG</strong> ",
+    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
-    link: "tel:+13479356442",
+    link: "https://calendly.com/itseg/segmeet",
   },
   Costof: {
     heading1: "Why It Matters",

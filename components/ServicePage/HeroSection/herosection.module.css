@@ -34,6 +34,7 @@
 
 .subtitle {
   font-family: Lobster;
+  text-transform: capitalize;
 }
 
 .description {

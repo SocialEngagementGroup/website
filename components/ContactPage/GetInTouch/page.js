@@ -42,7 +42,7 @@ const GetInTouch = () => {
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  <span className="break-all">{item.text}</span>
+                  <span className="break-all text-[18px] md:text-[24px]">{item.text}</span>
                 </li>
               ))}
             </ul>

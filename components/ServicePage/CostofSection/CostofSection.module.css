@@ -1,17 +1,19 @@
 /* ========================================
    Base Styles
 ======================================== */
+
 .description {
   font-size: 20px;
-  width: 770px;
+  max-width: 1040px;
   margin: 30px auto;
 }
 
 .heading {
   font-size: 48px;
-  width: 600px;
+  max-width: 1130px;
   margin: auto;
   line-height: 62px;
+  color: #000;
 }
 
 .boxheading {
@@ -64,6 +66,9 @@
     line-height: 25px;
  
   }
+  .container{
+  width: 90%;
+}
 }
 
 

@@ -13,13 +13,13 @@ export const socialmediamarketingData = {
   intro: {
     heading: "Turn Every Scroll Into Impact",
     description:
-      "Social isn’t optional — it’s where relevance, visibility, and revenue meet. We turn daily scroll time on Meta, TikTok, LinkedIn, and more into measurable growth with full-funnel strategies grounded in audience insight, platform trends, and precision targeting. Every post is built with purpose — to earn attention, spark conversation, and move buyers through the funnel.",
+      "Social isn’t optional, it’s where relevance, visibility, and revenue meet. We turn daily scroll time on Meta, TikTok, LinkedIn, and more into measurable growth with full-funnel strategies grounded in audience insight, platform trends, and precision targeting. From viral short-form video and influencer collabs to paid funnels and community management, we run the entire social engine. Every post is built for a purpose, to earn attention, spark conversation, and move buyers through the funnel. With transparent reporting and constant optimization, you stay ahead of algorithms and competitors. Social isn’t about likes; it’s about turning every interaction into impact.",
   },
   cta: {
     bg: "/services/CTA/Digital-google-business-profile.png",
-    title: "<strong>Grow</strong> your business <br/> with at <strong>SEG</strong> ",
+    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
-    link: "tel:+13479356442",
+    link: "https://calendly.com/itseg/segmeet",
   },
   Costof: {
     heading1: "Why It Matters",
@@ -33,7 +33,7 @@ export const socialmediamarketingData = {
       },
       {
         img: "/services/digital/social-media-marketing/missed-chances-to-capitalize-on-trends.png",
-        text: "<strong>Missed opportunities</strong> to capitalize on trends competitors use.",
+        text: "<strong>Missed chances</strong> to capitalize on trends your competitors ride.",
       },
       {
         img: "/services/digital/social-media-marketing/weak-roi.png",
@@ -41,7 +41,7 @@ export const socialmediamarketingData = {
       },
       {
         img: "/services/digital/social-media-marketing/Inconsistent-brand-presence.png",
-        text: "<strong>Inconsistent presence</strong> erodes trust, credibility, and recall.",
+        text: "<strong>Inconsistent brand</strong> presence that slowly erodes trust and credibility.",
       },
 
     ],
@@ -63,7 +63,7 @@ export const socialmediamarketingData = {
     items: [
       { text: "Social strategy development tailored to your audience and goals." },
       {
-        text: "Paid ads executed across Meta, TikTok, LinkedIn, and major platforms.",
+        text: "Paid ads executed across Meta, TikTok, LinkedIn, and other major platforms.",
       },
       { text: "Community management that keeps your audience active and engaged daily." },
       {
@@ -84,27 +84,27 @@ export const socialmediamarketingData = {
       {
         question: "2. Which platforms do you focus on?",
         answer:
-          "Meta, TikTok, LinkedIn, Twitter, Pinterest, and more based on your audience.",
+          "Meta, TikTok, LinkedIn, Twitter, Pinterest, and more.",
       },
       {
         question: "3. Can you manage my community and respond to messages?",
         answer:
-          "Yes, our community managers handle engagement across all platforms.",
+          "Yes, our community managers handle engagement to keep your audience active.",
       },
       {
         question: "4. How do you track success on social media?",
         answer:
-          "We monitor reach, engagement, follower growth, conversions, and ROAS.",
+          "We monitor reach, engagement, follower growth, and conversion metrics.",
       },
       {
         question: "5. Do you create ad creatives as well?",
         answer:
-          "Absolutely. We design copy, visuals, short-form videos, and ad assets.",
+          "Absolutely, we handle copywriting, design, and video production for ads.",
       },
       {
         question: "6. How often should I run social media campaigns?",
         answer:
-          "Consistency drives growth. Most brands benefit from ongoing monthly campaigns.",
+          "Consistency drives growth. Most brands benefit from continuous monthly campaigns.",
       },
     ],
   },

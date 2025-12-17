@@ -26,7 +26,7 @@
 }
 
 .answer {
-  font-size: 20px;
+  font-size: 24px !important;
   padding-top: 12px;
   padding-bottom: 8px;
   line-height: 1.7;
@@ -45,6 +45,9 @@
    Mobile <= 767px
 ======================================== */
 @media only screen and (max-width: 767px) {
+  .containerInner{
+    width: 100% !important;
+  }
   .section {
     margin-top: 0px;
   }

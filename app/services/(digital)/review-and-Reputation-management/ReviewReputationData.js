@@ -2,7 +2,7 @@ export const ReviewReputationData = {
   hero: {
     title: "Review & Reputation Management",
     description:
-      "Protect and strengthen your online reputation with real-time monitoring, strategic responses, and consistent positive review generation. Build trust and convert more customers.",
+      "Protect and grow your online reputation. We monitor reviews, manage responses, and generate positive feedback to boost trust and conversions.",
     subtitle: "digital",
     ctaButton: "Connect With Us",
     ctaLink: "/contact-us",
@@ -17,9 +17,9 @@ export const ReviewReputationData = {
   },
   cta: {
     bg: "/services/CTA/Digital-google-business-profile.png",
-    title: "<strong>Grow</strong> your business <br/> with at <strong>SEG</strong> ",
+    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
-    link: "tel:+13479356442",
+    link: "https://calendly.com/itseg/segmeet",
   },
   Costof: {
     heading1: "Why Reputation Matters",
@@ -37,7 +37,7 @@ export const ReviewReputationData = {
       },
       {
         img: "/services/digital/review-and-reputation-management/trust-fades-quickly-when-feedback-isn’t-managed.png",
-        text: "<strong>Trust fades</strong> quickly when feedback is ignored or poorly addressed.",
+        text: "<strong>Trust fades</strong> quickly when feedback isn’t managed or acknowledged.",
       },
       {
         img: "/services/digital/review-and-reputation-management/search-visibility-drops.png",
@@ -62,7 +62,7 @@ export const ReviewReputationData = {
   BrandStrategy: {
     heading: "What You Get",
     items: [
-      { text: "Real-time review monitoring with instant alerts across all platforms." },
+      { text: "Real-time review monitoring with instant alerts across key platforms." },
       { text: "Response templates and full management to handle feedback professionally." },
       { text: "Proven reputation repair strategies to counter negatives and rebuild trust." },
       { text: "Monthly sentiment reports with clear insights and actionable recommendations." },
@@ -76,12 +76,12 @@ export const ReviewReputationData = {
       {
         question: "1. Why should I care about online reviews?",
         answer:
-          "Reviews directly influence trust, conversions, and overall revenue.",
+          "Reviews directly impact customer trust, conversions, and revenue.",
       },
       {
         question: "2. Do you only handle Google reviews?",
         answer:
-          "No. We manage reviews across Google, Yelp, Facebook, and industry-specific review sites.",
+          "No, we manage reviews across Google, Yelp, Facebook, and industry-specific sites.",
       },
       {
         question: "3. Can you remove negative reviews?",
@@ -91,17 +91,17 @@ export const ReviewReputationData = {
       {
         question: "4. How do you get more positive reviews?",
         answer:
-          "We implement feedback systems and automated follow-ups encouraging happy customers to leave reviews.",
+          "We implement feedback systems and follow-ups that encourage happy customers to leave reviews.",
       },
       {
-        question: "5. Do you monitor reviews in real time?",
+        question: "5. Do you monitor reviews in real-time?",
         answer:
-          "Yes. You receive instant alerts when new reviews appear.",
+          "Yes, you’ll be alerted instantly when new reviews appear.",
       },
       {
         question: "6. Does reputation management improve SEO?",
         answer:
-          "Yes. Strong reviews boost local rankings and improve customer trust signals.",
+          "Yes, strong reviews boost local rankings and customer trust signals.",
       },
     ],
   },

@@ -2,7 +2,7 @@ export const RetargetingServiceData = {
   hero: {
     title: "Retargeting & Remarketing",
     description:
-      "Re-engage lost visitors with strategic retargeting ads. Personalized, cross-platform campaigns on Google and Meta that boost conversions and maximize ROI.",
+      "Re-engage lost visitors with smart retargeting ads. Personalized campaigns across Google and Meta that boost conversions and maximize marketing ROI.",
     subtitle: "digital",
     ctaButton: "Connect With Us",
     ctaLink: "/contact-us",
@@ -13,13 +13,13 @@ export const RetargetingServiceData = {
   intro: {
     heading: "Turn Missed Visits Into Revenue",
     description:
-      "Retargeting and remarketing recover lost opportunities by bringing high-intent visitors back to convert. With most users leaving without taking action, we deploy data-driven retargeting campaigns across Google, Meta, and more to keep your brand top-of-mind. Using behavior signals such as product views, cart abandons, and browsing patterns, we serve personalized, dynamic creatives at the exact moment they matter. Advanced audience segmentation, tracking, and continuous optimization reduce waste and boost ROAS—turning warm audiences into paying customers.",
+      "Retargeting and remarketing recover lost opportunities by bringing high-intent visitors back to buy. With most visitors leaving without converting, we run data-driven campaigns across Google, Meta, and more to keep your brand top-of-mind. Using behavior signals, product views, cart abandons, and browsing patterns, we serve dynamic, personalized creatives at the right moment. Advanced tracking, audience segmentation, and continuous testing cut waste and lift ROAS. The result: higher engagement, lower CPA, and a steady stream of returning customers who don’t just click, they convert.",
   },
-   cta: {
+  cta: {
     bg: "/services/CTA/Digital-google-business-profile.png",
-    title: "<strong>Grow</strong> your business <br/> with at <strong>SEG</strong> ",
+    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
-    link: "tel:+13479356442",
+    link: "https://calendly.com/itseg/segmeet",
   },
   Costof: {
     heading1: "Why Retargeting Matters",
@@ -29,19 +29,19 @@ export const RetargetingServiceData = {
     items: [
  {
   img: "/services/digital/Retargeting-Remarketing/Warm-leads-vanish-after-a-single-visit.png",
-  text: "<strong>Warm leads</strong> disappear after a single visit with no chance to reconnect.",
+  text: "<strong>Warm leads</strong> vanish after a single visit with no chance to re-engage.",
 },
 {
   img: "/services/digital/Retargeting-Remarketing/Competitors-step-in-and-reclaim-the-audience.png",
-  text: "<strong>Competitors</strong> re-capture users who initially engaged with your brand.",
+  text: "<strong>Competitors</strong> step in and reclaim the audience you initially attracted",
 },
 {
   img: "/services/digital/Retargeting-Remarketing/ROI-declines.png",
-  text: "Marketing <strong>ROI declines</strong> as valuable conversions slip through the cracks.",
+  text: "<strong>Overall marketing</strong> ROI declines as conversions slip through the cracks.",
 },
 {
   img: "/services/digital/Retargeting-Remarketing/CAC-rises-steadily.png",
-  text: "<strong>CAC rises</strong> steadily as missed opportunities accumulate over time.",
+  text: "CAC rises steadily and <strong>growth slows</strong> as missed opportunities compound.",
 },
 
     ],
@@ -50,10 +50,10 @@ export const RetargetingServiceData = {
   ProfessionalSEO: {
     heading: "What Happens With Smart Retargeting",
     items: [
-      { text: "Visitors return with higher intent and stronger likelihood to convert." },
-      { text: "Your brand stays visible and top-of-mind through the entire journey." },
-      { text: "Revenue increases as retargeting lifts conversions across channels." },
-      { text: "CPAs decrease while ROAS grows as warm audiences convert more efficiently." },
+      { text: "Visitors come back with clearer intent and a higher likelihood of converting." },
+      { text: "Your brand stays visible and top-of-mind throughout their buying journey." },
+      { text: "Revenue increases consistently as retargeting lifts performance across channels." },
+      { text: "CPAs drop while ROAS improves as warm audiences convert more efficiently." },
     ],
     video: "/videos/vdo.mp4",
   },
@@ -62,7 +62,7 @@ export const RetargetingServiceData = {
     heading: "What You Get",
     items: [
       { text: "High-performance retargeting campaigns across Google and Meta." },
-      { text: "Dynamic product remarketing tailored to shopper behavior." },
+      { text: "Dynamic product remarketing tailored to each shopper’s behavior." },
       { text: "Cross-platform audience tracking and smart segmentation at scale." },
       { text: "Frequency control, conversion tracking, and clear ROI reporting." },
     ],
@@ -73,9 +73,9 @@ export const RetargetingServiceData = {
     heading: "FAQs",
     items: [
       {
-        question: "1. What's the difference between retargeting and remarketing?",
+        question: "1. What’s the difference between retargeting and remarketing?",
         answer:
-          "Retargeting uses ads to re-engage website visitors, while remarketing typically refers to email-based re-engagement. We offer both.",
+          "Retargeting uses ads to re-engage visitors, while remarketing often uses email campaigns. We do both.",
       },
       {
         question: "2. Why is retargeting so effective?",
@@ -83,12 +83,12 @@ export const RetargetingServiceData = {
           "Because it targets warm audiences already familiar with your brand, conversion rates are much higher.",
       },
       {
-        question: "3. When should I start retargeting?",
+        question: "3. How soon should I launch retargeting ads?",
         answer:
           "As soon as your website receives steady traffic, retargeting captures lost leads immediately.",
       },
       {
-        question: "4. Can retargeting be customized by product or service?",
+        question: "4. Can I customize retargeting by product or service?",
         answer:
           "Yes, we create dynamic retargeting ads tailored to products users viewed.",
       },
@@ -98,7 +98,7 @@ export const RetargetingServiceData = {
           "Google Display Network, Meta, and other major ad platforms.",
       },
       {
-        question: "6. How do you track retargeting performance?",
+        question: "6. How do you track retargeting success?",
         answer:
           "We use conversion tracking, click-through rates, and ROI reports to measure impact.",
       },

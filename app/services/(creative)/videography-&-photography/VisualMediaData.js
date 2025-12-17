@@ -13,20 +13,20 @@ export const VisualMediaData = {
   intro: {
     heading: "Visuals That People Feel and Remember",
     description:
-      "Great brand stories deserve visuals that do them justice. We craft photography and videography that capture emotion and identity—cinematic films, irresistible product shoots, and lifestyle imagery that humanizes your brand. Every frame is lit, shot, and edited to reflect your values and elevate credibility.",
+      "Great brand stories deserve visuals that do them justice. We create photography and videography that capture emotion, essence, and identity, cinematic films, irresistible product shoots, and lifestyle imagery that humanizes your brand. Our end-to-end process, creative direction, lighting, production, editing, and color ensures every frame reflects your values and elevates credibility. Polished visuals build subconscious trust and signal quality and leadership. In a crowded feed, the right imagery doesn’t just attract attention, it makes your brand unforgettable.",
   },
    cta: {
     bg: "/services/CTA/Digital-google-business-profile.png",
-    title: "<strong>Grow</strong> your business <br/> with at <strong>SEG</strong> ",
+    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
-    link: "tel:+13479356442",
+    link: "https://calendly.com/itseg/segmeet",
   },
 
   Costof: {
     heading1: "Why Businesses Need Professional Visuals",
     heading2: "The Cost of Amateur Visuals",
     description:
-      "Strong visuals capture attention, build trust, and drive conversions. Poor-quality visuals create doubt, reduce engagement, and weaken your brand image.",
+      "Strong imagery is the backbone of every ad, landing page, and post. It stops the scroll, earns attention, and shapes first impressions. Consistent, polished visuals signal quality, credibility, and maturity. Clear product shots and story-led video drive understanding and desire. Better visuals lift click-through, conversion rates, and order value. They make your message memorable and shareable across channels. Without them, you blend into the feed and leak trust. With them, you stay top-of-mind and turn views into customers.",
     items: [
       {
         img: "/services/creative/videography-photography/Ads-appear-unprofessional.png",
@@ -78,10 +78,10 @@ export const VisualMediaData = {
         text: "Commercial & product <strong>videography</strong>, including brand films and ads.",
       },
       {
-        text: "Event <strong>coverage</strong> with full post-production: editing, color, sound.",
+        text: "Event <strong>coverage</strong> with full post-production: editing, color, and sound.",
       },
       {
-        text: "Platform-ready <strong>exports</strong>, social cutdowns, and delivery guidelines.",
+        text: "Platform-ready <strong>exports</strong>, social cutdowns, and delivery guidelines included.",
       },
 
     ],
@@ -99,27 +99,27 @@ export const VisualMediaData = {
       {
         question: "2. Can you shoot on-location or in-studio?",
         answer:
-          "We offer both, depending on the project. Location scouting is included in our service.",
+          "We offer both, depending on the project. Location scouting is part of our service.",
       },
       {
         question: "3. Do you provide editing and post-production?",
         answer:
-          "Yes, all projects include editing, color correction, sound design, and final delivery.",
+          "Yes, all photography and video projects include professional editing, color correction, and delivery.",
       },
       {
         question: "4. How long does a video shoot take?",
         answer:
-          "Small shoots may take a few hours; larger productions typically require 1–3 days.",
+          "Small projects may take a few hours; larger productions typically require 1–3 days.",
       },
       {
         question: "5. Can you create short-form videos for social media?",
         answer:
-          "Absolutely. We specialize in TikTok, Reels, and high-conversion short-form creatives.",
+          "Absolutely, we specialize in TikTok/Reels and other high-engagement formats.",
       },
       {
         question: "6. What’s included in your delivery package?",
         answer:
-          "You’ll receive high-resolution images, video files, and versions formatted for ads and social platforms.",
+          "You’ll receive high-resolution images, video files, and optional formatted versions for ads and social media.",
       },
     ],
   },

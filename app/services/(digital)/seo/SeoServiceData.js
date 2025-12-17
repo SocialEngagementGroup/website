@@ -17,11 +17,10 @@ export const SeoServiceData = {
   },
   cta: {
     bg: "/services/CTA/Digital-google-business-profile.png",
-    title: "<strong>Grow</strong> your business <br/> with at <strong>SEG</strong> ",
+    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
-    link: "tel:+13479356442",
+    link: "https://calendly.com/itseg/segmeet",
   },
-
   Costof: {
     heading1: "Why SEO Matters",
     heading2: "The Cost of Poor SEO",
@@ -42,7 +41,7 @@ export const SeoServiceData = {
       },
       {
         img: "/services/digital/seo/Customer-acquisition-costs-rise-rapidly.png",
-        text: "<strong>Customer acquisition costs</strong> rise as organic reach declines.",
+        text: "<strong>Customer acquisition</strong> costs rise rapidly.",
       },
 
     ],
@@ -51,8 +50,8 @@ export const SeoServiceData = {
   ProfessionalSEO: {
     heading: "What Happens With Smart SEO",
     items: [
-      { text: "Rankings climb across valuable, intent-driven keywords." },
-      { text: "Organic traffic becomes a predictable growth engine." },
+      { text: "Your rankings climb across dozens of valuable, intent-driven keywords." },
+      { text: "Organic traffic turns into a steady and predictable engine for qualified leads." },
       { text: "Brand trust, credibility, and domain authority grow stronger over time." },
       { text: "Customer acquisition costs decline naturally as organic momentum builds." },
     ],
@@ -62,10 +61,10 @@ export const SeoServiceData = {
   BrandStrategy: {
     heading: "What You Get",
     items: [
-      { text: "Deep keyword, intent, and competitor insights." },
-      { text: "On-page and technical enhancements for ranking improvement." },
-      { text: "White-hat link building that grows authority steadily." },
-      { text: "Monthly performance reports with actionable insights." },
+      { text: "Deep keyword, intent, and competitor insights to guide your SEO strategy." },
+      { text: "On-page enhancements plus technical fixes that improve rankings and site health." },
+      { text: "White-hat link building that steadily boosts authority and trust signals." },
+      { text: "Monthly performance reports with clear insights and actionable next steps." },
     ],
     img: "/services/digital/seo/digital-seo.png", // original kept
   },
@@ -86,22 +85,22 @@ export const SeoServiceData = {
       {
         question: "3. Do you guarantee first-page rankings?",
         answer:
-          "No agency can guarantee rankings, but we deliver consistent visibility and traffic growth.",
+          "No agency can guarantee rankings, but we consistently deliver significant traffic and visibility growth.",
       },
       {
-        question: "4. Can you optimize my existing website?",
+        question: "4. Can you optimize existing websites?",
         answer:
-          "Yes, we fully audit and optimize your current site for higher performance.",
+          "Yes, we audit and optimize your current site for better performance.",
       },
       {
         question: "5. Do you provide SEO reports?",
         answer:
-          "Yes, you get monthly keyword and traffic reports with clear next steps.",
+          "Yes, monthly reports with keyword rankings, traffic insights, and actionable recommendations.",
       },
       {
-        question: "6. Will SEO replace paid ads?",
+        question: "6. Will SEO replace my paid ads?",
         answer:
-          "Not immediately. SEO complements PPC and reduces long-term acquisition costs.",
+          "Not immediately. SEO complements PPC, providing sustainable long-term traffic alongside paid campaigns.",
       },
     ],
   },

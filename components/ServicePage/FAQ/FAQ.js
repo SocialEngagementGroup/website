@@ -11,7 +11,7 @@ const FAQ = ({ items, heading }) => {
 
   return (
     <section className={styles.section + " bg-[#8d5454] text-white py-10 md:py-40"}>
-      <div className="px-6 md:px-35">
+      <div className={styles.containerInner + " w-[65%] mx-auto px-10"}>
 
         {/* Heading */}
 
@@ -47,10 +47,10 @@ const FAQ = ({ items, heading }) => {
                       ? `${contentRefs.current[index]?.scrollHeight}px`
                       : "0px",
                 }}
-                className="overflow-hidden transition-[max-height] duration-500 ease-in-out"
+                className="overflow-hidden transition-[max-height] duration-500 ease-in-out "
               >
                 <p
-                  className="text-lg mt-3 leading-relaxed text-gray-100"
+                  className={styles.answer + " mt-3 leading-relaxed text-gray-100"}
                   dangerouslySetInnerHTML={{ __html: faq.answer }}
                 ></p>
               </div>

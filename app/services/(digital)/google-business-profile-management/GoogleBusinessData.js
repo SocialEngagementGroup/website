@@ -13,13 +13,13 @@ export const GoogleBusinessData = {
   intro: {
     heading: "Turn Local Searches Into Store Visits",
     description:
-      "Turn local searches into real customers with a fully optimized Google Business Profile. It’s your digital storefront—the first thing nearby shoppers see when looking for directions, reviews, or services. We optimize every detail, add high-quality visuals, publish keyword-rich posts, maintain consistent updates, and manage reviews. For single or multi-location businesses, we ensure accuracy, consistency, and strong local rankings so your business is not just found—it’s chosen.",
+      "Turn local searches into store visits with an optimized Google Business Profile. It’s your digital storefront, the first thing nearby customers see when they look for directions, reviews, or a place to buy. We audit and perfect every detail (name, categories, descriptions, images, keywords), add high-quality visuals and keyword-rich posts, and keep your listing active with ongoing updates. We also manage reviews and responses, monitor performance, and provide insights. For single or multi-location businesses, our management ensures consistency, higher local rankings, and stronger trust, so you’re not just found, you’re chosen.",
   },
-  cta: {
+    cta: {
     bg: "/services/CTA/Digital-google-business-profile.png",
-    title: "<strong>Grow</strong> your business <br/> with at <strong>SEG</strong> ",
+    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
-    link: "tel:+13479356442",
+    link: "https://calendly.com/itseg/segmeet",
   },
 
   Costof: {
@@ -29,20 +29,20 @@ export const GoogleBusinessData = {
       "Local search is where high-intent decisions happen. Your Google Business Profile is the first impression at that moment. Complete, accurate details help you surface in the local map pack. Strong visuals and keyworded descriptions turn views into clicks. Reviews and timely responses signal trust and reliability. Up-to-date hours and attributes prevent drop-offs and frustration. Regular Posts keep your listing active and favored by the algorithm. UTM-tagged links turn profile engagement into measurable ROI. Consistent NAP across the web reinforces local rankings. Optimize your profile and you convert nearby searches into calls, visits, and customers.",
     items: [
      {
-    img: "/services/digital/Google-Business-Profile-Management/Missed-calls.png",
+    img: "/services/digital/google-business-profile-management/Missed-calls.png",
     text: "<strong>Missed calls</strong>, visits, and customer inquiries that should have come to you.",
   },
   {
-    img: "/services/digital/Google-Business-Profile-Management/Local-visibility-drops.png",
-    text: "<strong>local visibility</strong> drops as competitors appear more often in search results.",
+    img: "/services/digital/google-business-profile-management/Local-visibility-drops.png",
+    text: "Local <strong>visibility drops</strong> as competitors appear more often in search results.",
   },
   {
-    img: "/services/digital/Google-Business-Profile-Management/Your-reputation-weakens.png",
-    text: "<strong>Your reputation</strong> weakens with unbalanced or unmanaged public reviews",
+    img: "/services/digital/google-business-profile-management/Your-reputation-weakens.png",
+    text: "<strong>Your reputation</strong> weakens with unbalanced or unmanaged public reviews.",
   }, 
   {
-    img: "/services/digital/Google-Business-Profile-Management/Outdated-or-inconsistent-listing-details-hurt-credibility.png",
-    text: "Outdated listing information undermines <strong>trust</strong> and hurts search rankings.",
+    img: "/services/digital/google-business-profile-management/Outdated-or-inconsistent-listing-details-hurt-credibility.png",
+    text: "<strong>Outdated or inconsistent</strong> listing details hurt credibility and search ranking.",
   },
     ],
   },
@@ -51,9 +51,9 @@ export const GoogleBusinessData = {
     heading: "What Happens With Management",
     items: [
       { text: "Your business rises steadily in local search and map pack rankings." },
-      { text: "Calls, direction requests, and in-store visits increase consistently." },
-      { text: "Reputation strengthens with consistent review monitoring and responses." },
-      { text: "Accurate, updated business information improves trust and conversions." },
+      { text: "Calls, direction requests, and in-store visits increase across the board." },
+      { text: "Reputation grows stronger with consistent, active review management." },
+      { text: "Accurate, up-to-date business info builds trust and improves conversions." },
     ],
     video: "/videos/vdo.mp4",
   },
@@ -61,9 +61,9 @@ export const GoogleBusinessData = {
   BrandStrategy: {
     heading: "What You Get",
     items: [
-      { text: "Complete profile optimization for maximum local search visibility." },
-      { text: "Regular updates, offers, and Posts to keep your listing active and engaging." },
-      { text: "Review monitoring and tailored response strategies to build trust." },
+      { text: "Complete profile optimization for maximum local visibility." },
+      { text: "Regular updates, offers, and posts to keep your listing active." },
+      { text: "Review monitoring with a tailored response strategy that builds trust." },
       { text: "Clear performance insights with detailed monthly reporting." },
     ],
     img: "/services/digital/google-business-profile-management/digital-google-business-profile-management.png",
@@ -75,7 +75,7 @@ export const GoogleBusinessData = {
       {
         question: "1. Why is Google Business Profile important?",
         answer:
-          "It’s the first thing local customers see. A fully optimized profile drives calls, visits, and trust.",
+          "It’s the first thing local customers see. Optimized profiles drive calls, visits, and trust.",
       },
       {
         question: "2. Can you manage multiple locations?",
