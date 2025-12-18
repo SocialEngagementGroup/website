@@ -55,7 +55,7 @@ export const GoogleBusinessData = {
       { text: "Reputation grows stronger with consistent, active review management." },
       { text: "Accurate, up-to-date business info builds trust and improves conversions." },
     ],
-    video: "/videos/vdo.mp4",
+    video: "/videos/services/digital/Google-Business-Profile-Management.mp4",
   },
 
   BrandStrategy: {

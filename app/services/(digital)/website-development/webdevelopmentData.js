@@ -56,7 +56,7 @@ export const webdevelopmentData = {
       { text: "Robust <strong>analytics</strong>, security, and scalability built for long-term growth." },
 
     ],
-    video: "/videos/vdo.mp4",
+    video: "/videos/services/digital/website-development.mp4",
   },
 
   BrandStrategy: {

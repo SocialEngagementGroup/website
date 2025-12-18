@@ -193,6 +193,7 @@ button,
 
 /* ---------- Layout Spacing ---------- */
 
+
 /* Add to your global CSS or a module */
 .heroSliderFade {
   opacity: 0;
@@ -385,3 +386,36 @@ button,
 
 
 
+
+
+@media only screen and (max-width: 875px) {
+  .AutoSlider-module__nZe61G__wrapper{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+  .AutoSlider-module__nZe61G__wrapper .swiper-button-prev{
+  width: 20px;
+
+   left: 0px !important;
+  }
+.AutoSlider-module__nZe61G__wrapper .swiper-button-next{
+   right: 0px !important;
+  width: 20px;
+  }
+}
+
+
+@media only screen and (max-width: 400px) {
+  .AutoSlider-module__nZe61G__wrapper {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+  .AutoSlider-module__nZe61G__wrapper .swiper-button-prev{
+   width: 20px !important;
+   left: -10px !important;
+  }
+.AutoSlider-module__nZe61G__wrapper .swiper-button-next{
+   right: -10px !important;
+  width: 20px !important;
+  }
+}

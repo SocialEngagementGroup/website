@@ -4,7 +4,6 @@ import React, { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import { FaLongArrowAltLeft, FaLongArrowAltRight } from 'react-icons/fa';
 import "swiper/css";
 import "swiper/css/navigation";
 import styles from "./AutoSlider.module.css";
@@ -20,14 +19,6 @@ const LogoSwiper = ({ slides = [] }) => {
 
   return (
     <div className={styles.wrapper}>
-      {/* Custom Left Arrow */}
-      <div 
-        ref={prevRef} 
-        className={`${styles.customArrow} ${styles.prevArrow}`}
-      >
-        <FaLongArrowAltLeft size={24} />
-      </div>
-
       <Swiper
         key={swiperLoaded ? 'loaded' : 'loading'}
         modules={[Navigation]}
@@ -69,12 +60,21 @@ const LogoSwiper = ({ slides = [] }) => {
         ))}
       </Swiper>
 
-      {/* Custom Right Arrow */}
+      {/* Custom Navigation Buttons */}
+      <div 
+        ref={prevRef} 
+        className="swiper-button-prev" 
+        style={{ color: '#975554', fontSize: '24px', left: '-50px', zIndex: 10 }} 
+      >
+        {/* You can use custom arrows or icons here */}
+    
+      </div>
       <div 
         ref={nextRef} 
-        className={`${styles.customArrow} ${styles.nextArrow}`}
+        className="swiper-button-next" 
+        style={{ color: '#975554', fontSize: '24px', right: '-50px', zIndex: 10 }} 
       >
-        <FaLongArrowAltRight size={24} />
+       
       </div>
     </div>
   );
