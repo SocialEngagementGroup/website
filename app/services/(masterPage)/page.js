@@ -1,7 +1,7 @@
 import React from 'react';
 import HeroSection from '@/components/MasterServicesPage/HeroSection/HeroSection';
 import AutoSlider from '@/components/MasterServicesPage/AutoSlider/AutoSlider';
-import { sliderData1, sliderData2, sliderData3 } from "@/app/services/(masterPage)/sliderData";
+import { CreativeData, Digital, Industry } from "@/app/services/(masterPage)/sliderData";
 import styles from './master.module.css';
 // Function to repeat slides to match a minimum count
 const repeatSlides = (slides, minCount = 8) => {
@@ -14,9 +14,9 @@ const repeatSlides = (slides, minCount = 8) => {
 
 const MasterServicesPage = () => {
   const sliders = [
-    { title: "Creative", data: repeatSlides(sliderData1) },
-    { title: "Digital", data: repeatSlides(sliderData2) },
-    { title: "Industry", data: repeatSlides(sliderData3) }, // now repeated to match others
+    { title: "Creative", data: repeatSlides(CreativeData) },
+    { title: "Digital", data: repeatSlides(Digital) },
+    { title: "Industry", data: repeatSlides(Industry) }, // now repeated to match others
   ];
 
   return (

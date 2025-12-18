@@ -3,7 +3,6 @@
   position: relative;
   width: 100%;
   background: white;
-  padding: 2.5rem 0; 
   overflow: visible; /* important to prevent hover cut-off */
 }
 
@@ -17,25 +16,29 @@
   display: flex;
   align-items: flex-end;
   padding: 16px;
-
   border-radius: 12px;
   color: white;
-
+  z-index: 1;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
   transform-origin: center;
 }
-
-/* HOVER EFFECT — scale + shadow + translate */
 .cardBox:hover {
-  transform: scale(1.1) translateY(-5px);
-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  transform: scale(1.30);
+  z-index: 999; /* Optional: helps bring hovered card above others */
 }
-
+.swiper-slide {
+  overflow: visible !important;
+}
+.sliderWrapper {
+padding-block: 4rem;
+z-index: 999;
+}
 /* TITLE */
 .cardTitle {
   font-size: 20px;
   font-weight: 600;
   margin: 0;
+  z-index: 999;
 }
 
 /* SWIPER NAVIGATION BUTTONS */
@@ -109,3 +112,80 @@ box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     left: -30px;
   }
 }
+
+
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+  overflow: visible;
+}
+
+.sliderWrapper {
+  width: calc(100% - 100px); 
+  margin: 0 auto;
+}
+
+/* 1. Hide arrows by default */
+.customArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  cursor: pointer;
+  color: #fff;
+  background: #975554;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+  /* Initial State: Invisible */
+  opacity: 0; 
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+/* 2. Show arrows when the user hovers over the wrapper */
+.wrapper:hover .customArrow {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Position adjustments */
+.prevArrow {
+  left: 10px;
+}
+
+.nextArrow {
+  right: 10px;
+}
+
+/* Keep the hover effect on the arrow itself */
+.customArrow:hover {
+  background: #000;
+  color: #fff;
+  transform: translateY(-50%) scale(1.1);
+}
+
+
+
+/* Card Hover Logic (Keeping your original) */
+.cardBox {
+  width: 100%;
+  height: 220px; 
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+  border-radius: 12px;
+  transition: transform 0.35s ease;
+}
+

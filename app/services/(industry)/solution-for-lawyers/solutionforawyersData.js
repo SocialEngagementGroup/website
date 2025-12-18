@@ -13,7 +13,7 @@ export const solutionforawyersData = {
   intro: {
     heading: "Build Trust. Win Cases. Grow Your Practice.",
     description:
-      "Your law firm’s reputation runs on trust, but in a digital-first world, credibility alone won’t get you found. Clients research online, check reviews, and compare firms long before they reach out. We help you stand out with intelligent digital strategy, targeted marketing, and data-backed visibility so your firm stays discoverable and consistently wins high-quality cases. Everything is tailored to your practice area—from Google Business Profile optimization and local ads to review management and expert-level content. The result: stronger trust, more qualified inquiries, and a firm clients remember when it matters.",
+      "Your law firm’s reputation runs on trust but in a digital-first world, credibility alone won’t get you found. Clients research online, check reviews, and compare firms long before they reach out. We help you stand out with intelligent digital strategy, targeted marketing, and data-backed visibility so your firm stays discoverable and consistently wins high-quality cases. We tailor everything to your practice area, optimizing your Google Business Profile, running local ads, managing reviews, and publishing expert-level content. The result: stronger trust, more qualified inquiries and firm clients remember when it matters.",
   },
    cta: {
     bg: "/services/CTA/Creative-Branding.png",
@@ -34,7 +34,7 @@ export const solutionforawyersData = {
 },
 {
   img: "/services/creative/branding/shared-vision.png",
-  text: "Negative or <strong>outdated reviews</strong> damage your firm’s credibility.",
+  text: "Negative or <strong>outdated reviews</strong> damage your firm's credibility.",
 },
 {
   img: "/services/creative/branding/loyal-customer.png",
