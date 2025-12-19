@@ -28,19 +28,19 @@ export const solutionforDoctorsData = {
       "Patients now begin their healthcare journey online searching symptoms, comparing specialists, and reading reviews long before they book an appointment. If your practice isn’t visible in those moments, it’s effectively invisible. A strong digital presence shapes trust, reputation, and patient decisions before they ever walk through your door. Digital transformation ensures your expertise gets discovered, trusted, and ultimately chosen.",
     items: [
       {
-        img: "/services/creative/branding/versus.png",
+        img: "/services/industry/Solution-for-Doctors/Missed-patients-who-never-find-you-online.png",
         text: "Missed patients who never find you online.",
       },
       {
-        img: "/services/creative/branding/shared-vision.png",
+        img: "/services/industry/Solution-for-Doctors/Negative-or-outdated-reviews-lowering-patient-confidence.png",
         text: "Negative or outdated reviews lowering patient confidence.",
       },
       {
-        img: "/services/creative/branding/loyal-customer.png",
+        img: "/services/industry/Solution-for-Doctors/Competitors-ranking-higher-in-local-search-results.png",
         text: "Competitors ranking higher in local search results.",
       },
       {
-        img: "/services/creative/branding/return.png",
+        img: "/services/industry/Solution-for-Doctors/Unstable-appointment-flow-and-low-patient-retention.png",
         text: "Unstable appointment flow and low patient retention.",
       },
     ],
@@ -60,29 +60,17 @@ export const solutionforDoctorsData = {
   BrandStrategy: {
     heading: "What You Get",
     items: [
-      { text: "<strong>SEO & Local Visibility:</strong> Appear when patients search 'doctor near me' or by specialization." },
+      { text: "<strong>SEO & Local Visibility:</strong> SEO & Local Visibility: Appear when patients search “doctor near me” or by specialization." },
       { text: "<strong>Google Business & Review Management:</strong> Build credibility with verified reviews and patient engagement." },
       { text: "<strong>PPC & Local Ads:</strong> Target high-intent patients looking for immediate consultation." },
       { text: "<strong>Website Optimization:</strong> Convert visitors into patients through a clear, comforting experience." },
       { text: "<strong>Social Media & Content Marketing:</strong> Educate patients with credible, medically accurate content across Facebook, Instagram, and YouTube." },
       { text: "<strong>Reputation & Compliance Monitoring:</strong> Track online mentions, ensure accuracy across directories, and maintain full compliance with healthcare advertising rules." },
-      { text: "<strong>Analytics & Lead Tracking:</strong> Transparent dashboards showing traffic, leads, appointment trends, and ROI to guide smarter clinical decisions." },
+      { text: "<strong>Analytics & Growth Reporting:</strong> Transparent dashboards showing traffic, leads, appointment trends, and ROI to guide smarter clinical decisions." },
     ],
     img: "/services/masterimagesslider/industry/Solution-for-Doctors.jpg",
   },
 
-  CaseStudy: {
-    heading: "Customer Success Story",
-    stats: {
-      posts: "50+ Educational Posts Building Authority",
-      calls: "20 Calls Generated From $100 in Ads",
-      cpl: "Under $5 CPL",
-    },
-    description:
-      "Through a modernized digital presence and consistent content strategy, we helped North Island Podiatry strengthen visibility, build patient trust, and establish a foundation for long-term growth.",
-    ctaButton: "READ CASE STUDY →",
-    ctaLink: "/case-studies/north-island-podiatry",
-  },
 
   FAQ: {
     heading: "FAQs",

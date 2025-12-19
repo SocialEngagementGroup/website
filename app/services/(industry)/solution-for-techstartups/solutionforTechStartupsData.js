@@ -11,9 +11,9 @@ export const solutionforTechStartupsData = {
   },
 
   intro: {
-    heading: "Why Tech Startups Need Strategic Growth Systems",
+    heading: "Launch Fast. Scale Smart. Grow Sustainably.",
     description:
-      "Every startup begins with an idea, but turning it into traction takes more than innovation. In today’s crowded digital ecosystem, visibility, credibility, and momentum define who wins. We help ambitious tech startups attract early users, earn investor confidence, and accelerate growth through data-driven storytelling, full-funnel marketing, and scalable digital systems built for speed.",
+      "Every startup begins with an idea but turning it into traction takes more than innovation. In today’s crowded digital ecosystem, visibility, credibility, and momentum define who wins. We help ambitious tech startups like yours attract early users, earn investor confidence, and accelerate growth through data-driven storytelling, full-funnel marketing, and scalable digital systems built for speed. Whether you’re in SaaS, AI, FinTech, or eCommerce tech, we design frameworks that make your brand discoverable, credible, and impossible to ignore.",
   },
   cta: {
     bg: "/services/CTA/Digital-google-business-profile.png",
@@ -22,25 +22,25 @@ export const solutionforTechStartupsData = {
     link: "https://calendly.com/itseg/segmeet",
   },
   Costof: {
-    heading1: "The Cost of Staying Reactive",
-    heading2: "Risks of Not Having a Strategic Growth Framework",
+    heading1: "Why Tech Startups Need Strategic Growth Systems",
+    heading2: "The Cost of Staying Reactive",
     description:
-      "Startups that delay marketing often struggle with traction, investor confidence, and growth velocity.",
+      "In the startup world, timing determines who breaks out and who gets buried, and while competitors scale visibility early, many founders are still validating traction. A strong digital growth system ensures your product doesn’t just launch, it lands. Early credibility fuels investor confidence, sharp positioning helps you stand out in a crowded market, and data-driven execution prevents wasted time and budget. Strategic growth systems help you reach the right audience, prove traction early, and scale sustainably.",
     items: [
       {
-        img: "/services/creative/branding/versus.png", // kept original
+        img: "/services/industry/Solution-for-Tech-Startups/Launching-without-consistent-lead-or-user-acquisition.png", // kept original
         text: "Launching without consistent lead or user acquisition.",
       },
       {
-        img: "/services/creative/branding/shared-vision.png", // kept original
+        img: "/services/industry/Solution-for-Tech-Startups/Struggling-to-convert-website-visitors-into-demos.png", // kept original
         text: "Struggling to convert website visitors into demos or signups.",
       },
       {
-        img: "/services/creative/branding/loyal-customer.png", // kept original
+        img: "/services/industry/Solution-for-Tech-Startups/Losing-mindshare-to-faster,-louder-competitors.png", // kept original
         text: "Losing mindshare to faster, louder competitors.",
       },
       {
-        img: "/services/creative/branding/return.png", // kept original
+        img: "/services/industry/Solution-for-Tech-Startups/Relying-only-on-paid-ads-without-building-organic-trust.png", // kept original
         text: "Relying only on paid ads without building organic trust.",
       },
     ],
@@ -54,26 +54,26 @@ export const solutionforTechStartupsData = {
       { text: "Investors see traction through measurable growth signals." },
       { text: "Your marketing scales with your product, not against it." },
     ],
-    video: "/videos/services/industry/Solution-for-tech-startups.mp4", // kept original
+    video: "/videos/services/industry/Solution-for-Tech-Startups.mp4", // kept original
   },
 
   BrandStrategy: {
     heading: "What You Get",
     items: [
       {
-        text: "Launch Marketing & PR: Build buzz before launch, amplify coverage, and secure visibility.",
+        text: "<strong>Launch Marketing & PR:</strong> Build buzz before launch, amplify coverage, and secure visibility.",
       },
       {
-        text: "SEO & Content Engine: Drive organic growth with blogs, playbooks, and thought-leadership content.",
+        text: "<strong>SEO & Content Engine:</strong> Drive organic growth with blogs, playbooks, and thought-leadership content.",
       },
       {
-        text: "Performance & Paid Acquisition: Run precision-targeted ads that convert trials into paying users.",
+        text: "<strong>Performance & Paid Acquisition:</strong> Run precision-targeted ads that convert trials into paying users.",
       },
       {
-        text: "Website & Funnel Optimization: Design pages that capture demand and turn it into a pipeline.",
+        text: "<strong>Website & Funnel Optimization:</strong> Design pages that capture demand and turn it into a pipeline.",
       },
       {
-        text: "Analytics & Growth Reporting: Track the right metrics, uncover insights, and make confident growth decisions.",
+        text: "<strong>Analytics & Growth Reporting:</strong> Track the right metrics, uncover insight patterns, and make confident growth decisions.",
       },
     ],
     img: "/services/masterimagesslider/industry/Solution-for-Tech-Startups.jpg", // kept original

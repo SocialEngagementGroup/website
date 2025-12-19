@@ -29,19 +29,19 @@ export const solutionforawyersData = {
       "Clients today search, compare, and evaluate legal expertise online, which means if your firm isn’t visible, it’s effectively invisible. Digital transformation ensures you show up where decisions begin—through strong search presence, credible reviews, and authority-building content. With the right data-driven marketing in place, trust is established before a client ever contacts you, making your firm the one that gets found, trusted, and ultimately chosen.",
     items: [
   {
-  img: "/services/creative/branding/versus.png",
+  img: "/services/industry/Solution-for-Lawyers/Missed-opportunities.png",
   text: "Missed <strong>opportunities</strong> as clients can’t find your firm online.",
 },
 {
-  img: "/services/creative/branding/shared-vision.png",
+  img: "/services/industry/Solution-for-Lawyers/Negative-or-outdated-reviews.png",
   text: "Negative or <strong>outdated reviews</strong> damage your firm's credibility.",
 },
 {
-  img: "/services/creative/branding/loyal-customer.png",
+  img: "/services/industry/Solution-for-Lawyers/Competitors-dominate-local-search.png",
   text: "<strong>Competitors</strong> dominate local search and online visibility.",
 },
 {
-  img: "/services/creative/branding/return.png",
+  img: "/services/industry/Solution-for-Lawyers/Inconsistent-client-inquiries-lead-to-unstable-case-flow.png",
   text: "Inconsistent <strong>client inquiries</strong> lead to unstable case flow.",
 },
 

@@ -11,9 +11,9 @@ export const solutionforRestaurantsData = {
   },
 
   intro: {
-    heading: "Why Restaurants Need Digital Transformation",
+    heading: "Smart Digital Marketing To Keep Your Tables Full.",
     description:
-      "Diners now discover food online long before they taste it, comparing menus, reading reviews, and scrolling through photos on Google, Instagram, and Maps. If your restaurant isn’t visible in those moments, your competitors will be. A strong digital presence shapes trust, drives foot traffic, and builds loyalty before a guest ever walks in. With the right visibility, reviews, and local SEO, digital transformation ensures your restaurant gets discovered first, chosen quickly, and remembered often.",
+      "Great food brings people together. But in the era of digital-first, great food alone isn’t always enough. Your next customer is scrolling through their social media feeds long before they walk through your doors. Ensuring you appear while they scroll, not just appear, but with visually stunning scroll stopping content will help you stand out and attract more diners. Regardless of the size of your business, whether it's a single store or multi store franchise, we design systems tailored for your business needs to keep your tables full.",
   },
    cta: {
     bg: "/services/CTA/Digital-google-business-profile.png",
@@ -22,34 +22,34 @@ export const solutionforRestaurantsData = {
     link: "https://calendly.com/itseg/segmeet",
   },
   Costof: {
-    heading1: "What It Costs to Be Invisible Online",
-    heading2: "Risks of Not Investing in Digital Marketing",
+    heading1: "Why Restaurants Need Digital Transformation",
+    heading2: "What It Costs to Be Invisible Online",
     description:
-      "Ignoring online visibility can lead to missed diners, lost revenue, and competitors taking your market share.",
+      "Diners now discover food online long before they taste it, comparing menus, reading reviews, and scrolling through photos on Google, Instagram, and Maps. If your restaurant isn’t visible in those moments, your competitors will be. A strong digital presence shapes trust, drives foot traffic, and builds loyalty before a guest ever walks in. With the right visibility, reviews, and local SEO, digital transformation ensures your restaurant gets discovered first, chosen quickly, and remembered often.",
     items: [
       {
-        img: "/services/creative/branding/versus.png", // kept original
+        img: "/services/industry/Solution-for-Restaurant/Diners-can’t-find-you-where-they-look-first.png", // kept original
         text: "Diners can’t find you where they look first.",
       },
       {
-        img: "/services/creative/branding/shared-vision.png", // kept original
+        img: "/services/industry/Solution-for-Restaurant/Your-competitors-set-the-story,-not-you.png", // kept original
         text: "Your competitors set the story, not you.",
       },
       {
-        img: "/services/creative/branding/loyal-customer.png", // kept original
+        img: "/services/industry/Solution-for-Restaurant/Outdated-info-quietly-hurts-trust.png", // kept original
         text: "Outdated info quietly hurts trust.",
       },
       {
-        img: "/services/creative/branding/return.png", // kept original
+        img: "/services/industry/Solution-for-Restaurant/Everyday-near-me-searches-pass-you-by.png", // kept original
         text: "Everyday “near me” searches pass you by.",
       },
     ],
   },
 
   ProfessionalSEO: {
-    heading: "What Happens With a Restaurant Growth Strategy",
+    heading: "What Happens With a Growth Strategy",
     items: [
-      { text: "Show up where diners decide: Google, Maps, Instagram, and TikTok." },
+      { text: "Show up where diners decide: Google, Maps, Instagram and TikTok." },
       { text: "Let your online presence invite guests with clear menus and strong visuals." },
       { text: "Stay top of mind locally with consistent content, promos, and reminders." },
       { text: "Make it easy for happy guests to tag, post, and amplify your restaurant." },
@@ -61,19 +61,19 @@ export const solutionforRestaurantsData = {
     heading: "Services Related to Restaurants",
     items: [
       {
-        text: "Local SEO & Visibility: Rank higher on Google Maps and food discovery apps.",
+        text: "<strong>Local SEO & Visibility:</strong> Rank higher on Google Maps and food discovery apps.",
       },
       {
-        text: "Social Media & Content Strategy: Showcase your dishes, stories, and experiences visually.",
+        text: "<strong>Social Media & Content Strategy:</strong> Showcase your dishes, stories, and experiences visually.",
       },
       {
-        text: "Performance & Local Ads: Run geo-targeted campaigns that fill tables and drive delivery.",
+        text: "<strong>Performance & Local Ads:</strong> Run geo-targeted campaigns that fill tables and drive delivery.",
       },
       {
-        text: "Website & Menu Optimization: Turn browsers into diners with mobile-first ordering and booking.",
+        text: "<strong>Website & Menu Optimization:</strong> Turn browsers into diners with mobile-first ordering and booking.",
       },
       {
-        text: "Review & Reputation Management: Turn positive diner experiences into high-ranking social proof.",
+        text: "<strong>Review & Reputation Management:</strong> Turn positive diner experiences into high-ranking social proof.",
       },
       {
         text: "Influencer & UGC Campaigns: Partner with food creators to spark organic buzz and community-driven discovery.",
