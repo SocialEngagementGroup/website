@@ -1,6 +1,6 @@
 export const solutionforTechStartupsData = {
   hero: {
-    title: "Digital Marketing for Tech Startups",
+    title: "Solution for Tech Startups",
     description:
       "Accelerate your tech startup’s growth with data-driven marketing. Build traction, attract users, and scale visibility from launch to Series A and beyond.",
     subtitle: "industry",

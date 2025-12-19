@@ -12,7 +12,7 @@ export const Digital = [
   { title: "google location services ads", bg: "services/masterimagesslider/digital/Google-Location-Services-Ads.jpg", link: "/services/google-location-services-ads" },
   { title: "PPC Campaigns", bg: "services/masterimagesslider/digital/PPC-Campaigns.jpg", link: "/services/ppc-campaigns" },
   { title: "Retargeting & Remarketing", bg: "services/masterimagesslider/digital/Retargeting-&-Remarketing.jpg", link: "/services/retargeting-&-remarketing" },
-  { title: "review and reputation management", bg: "services/masterimagesslider/digital/Review-and-Reputation-Management.jpg", link: "/services/review-and-reputation-management" },
+  { title: "review & reputation management", bg: "services/masterimagesslider/digital/Review-and-Reputation-Management.jpg", link: "/services/review-&-reputation-management" },
   { title: "SEO", bg: "services/masterimagesslider/digital/SEO.jpg", link: "/services/seo" },
   { title: "Social Media Marketing", bg: "services/masterimagesslider/digital/Social-Media-Marketing.jpg", link: "/services/social-media-marketing" },
   { title: "Website Development", bg: "services/masterimagesslider/digital/Website-Development.jpg", link: "/services/website-development" },

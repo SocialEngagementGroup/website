@@ -1,6 +1,6 @@
 export const solutionforRestaurantsData = {
   hero: {
-    title: "Digital Marketing for Restaurants",
+    title: "Solution for Restaurants",
     description:
       "Boost your restaurant’s visibility and reservations with smart digital marketing. Rank higher locally, get more bookings, and build loyal customers.",
     subtitle: "industry",
