@@ -23,7 +23,7 @@ const LogoSwiper = ({ slides = [] }) => {
         key={swiperLoaded ? 'loaded' : 'loading'}
         modules={[Navigation]}
         spaceBetween={20}
-        slidesPerView={4}
+        slidesPerView={4} // Show exactly 4 slides
         navigation={{
           prevEl: prevRef.current,
           nextEl: nextRef.current,
@@ -42,7 +42,7 @@ const LogoSwiper = ({ slides = [] }) => {
         breakpoints={{
           0: { slidesPerView: 1 },
           640: { slidesPerView: 2 },
-          1024: { slidesPerView: 5 },
+          1024: { slidesPerView: 4 }, // Show 4 slides on large screens
         }}
         className={styles.sliderWrapper}
       >
@@ -67,14 +67,12 @@ const LogoSwiper = ({ slides = [] }) => {
         style={{ color: '#975554', fontSize: '24px', left: '-50px', zIndex: 10 }} 
       >
         {/* You can use custom arrows or icons here */}
-    
       </div>
       <div 
         ref={nextRef} 
         className="swiper-button-next" 
         style={{ color: '#975554', fontSize: '24px', right: '-50px', zIndex: 10 }} 
       >
-       
       </div>
     </div>
   );

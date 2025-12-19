@@ -16,7 +16,7 @@ const MasterServicesPage = () => {
   const sliders = [
     { title: "Creative", data: repeatSlides(CreativeData) },
     { title: "Digital", data: repeatSlides(Digital) },
-    { title: "Industry", data: repeatSlides(Industry) }, // now repeated to match others
+   { title: "Industry", data: Industry.slice(0, 4) }, // Only take the first 4 items
   ];
 
   return (

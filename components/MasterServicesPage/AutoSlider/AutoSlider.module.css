@@ -33,6 +33,7 @@
   font-size: 20px;
   font-weight: 600;
   margin: 0;
+  text-transform: capitalize;
   z-index: 1; /* Ensure the title stays on top of the overlay */
 }
 
@@ -44,6 +45,7 @@
 
   .cardTitle {
     font-size: 18px;
+
   }
 
   /* Adjust Navigation Buttons for tablet size */

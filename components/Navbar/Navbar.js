@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { FaRegHandPointRight, FaPencilAlt, FaCameraRetro, FaGlobeAmericas, FaSearch, FaGoogle, FaPencilRuler, FaChartBar } from "react-icons/fa"; // Importing icons
+import { FaRegHandPointRight, FaPencilAlt, FaCameraRetro, FaGlobeAmericas, FaSearch, FaGoogle, FaPencilRuler, FaChartBar, FaBriefcase, FaHeartbeat, FaUtensils, FaLaptopCode } from "react-icons/fa"; // Importing icons
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
@@ -137,7 +137,7 @@ export default function Navbar() {
                   className={`absolute md:left-1/2 top-[33px] md:-translate-x-1/2 mt-3 w-full md:w-[900px] bg-black rounded-xl shadow-2xl z-50 ${servicesOpen ? "block" : "hidden"
                     }`}
                 >
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 text-white">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 text-white">
                     {/* Creative */}
                     <div>
                       <h4
@@ -212,6 +212,31 @@ export default function Navbar() {
                         <li className="flex items-center">
                           <FaGlobeAmericas className="mr-2" />
                           <Link href="/services/website-development">Website Development</Link>
+                        </li>
+                      </ul>
+                    </div>
+
+                    {/* Digital */}
+                    <div>
+                      <h4 className="mb-3 font-semibold uppercase text-black text-sm group-hover:bg-[#e3d3cc] transition-colors p-2 rounded-md">
+                        Industry Services
+                      </h4>
+                      <ul className={styles.transitionCustom + " space-y-2 text-sm"}>
+                        <li className="flex items-center">
+                          <FaBriefcase className="mr-2" /> {/* Icon for lawyers */}
+                          <Link href="/services/solution-for-lawyers">Solution for Lawyers</Link>
+                        </li>
+                        <li className="flex items-center">
+                          <FaHeartbeat className="mr-2" /> {/* Icon for doctors */}
+                          <Link href="/services/solution-for-doctors">Solution for Doctors</Link>
+                        </li>
+                        <li className="flex items-center">
+                          <FaUtensils className="mr-2" /> {/* Icon for restaurants */}
+                          <Link href="/services/solution-for-restaurants">Solution for Restaurants</Link>
+                        </li>
+                        <li className="flex items-center">
+                          <FaLaptopCode className="mr-2" /> {/* Icon for tech startups */}
+                          <Link href="/services/solution-for-techstartups">Solution for Tech Startups</Link>
                         </li>
                       </ul>
                     </div>
