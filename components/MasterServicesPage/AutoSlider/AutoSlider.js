@@ -6,8 +6,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import styles from "./AutoSlider.module.css";
-
+import styles from "./AutoSlider.module.css"; // Import the styles module
+import { MdOutlineArrowBackIosNew, MdOutlineArrowForwardIos } from 'react-icons/md'; // Import React icons
 const LogoSwiper = ({ slides = [] }) => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
@@ -60,19 +60,12 @@ const LogoSwiper = ({ slides = [] }) => {
         ))}
       </Swiper>
 
-      {/* Custom Navigation Buttons */}
-      <div 
-        ref={prevRef} 
-        className="swiper-button-prev" 
-        style={{ color: '#975554', fontSize: '24px', left: '-50px', zIndex: 10 }} 
-      >
-        {/* You can use custom arrows or icons here */}
+       {/* Custom Navigation Buttons */}
+      <div ref={prevRef} className={styles.swiperButtonPrev}>
+        <MdOutlineArrowBackIosNew size={80} /> {/* Left arrow icon */}
       </div>
-      <div 
-        ref={nextRef} 
-        className="swiper-button-next" 
-        style={{ color: '#975554', fontSize: '24px', right: '-50px', zIndex: 10 }} 
-      >
+      <div ref={nextRef} className={styles.swiperButtonNext}>
+        <MdOutlineArrowForwardIos size={80} /> {/* Right arrow icon */}
       </div>
     </div>
   );

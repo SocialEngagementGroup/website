@@ -91,3 +91,124 @@
   overflow: visible;
 }
 
+/* Default style for the swiper navigation arrows */
+.swiperButtonPrev, .swiperButtonNext {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Vertically center the arrows */
+color: #7e4b3c;
+  font-size: 24px; /* Set the font size */
+  z-index: 10; /* Ensure buttons are on top of other content */
+  width: 40px; /* Width of the button */
+  height: 40px; /* Height of the button */
+  display: flex;
+  justify-content: center; /* Center the icon horizontally */
+  align-items: center; /* Center the icon vertically */
+  border-radius: 50%; /* Make the button circular */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* 'Previous' button style */
+.swiperButtonPrev {
+  left: -50px; /* Position the button on the left */
+}
+
+/* 'Next' button style */
+.swiperButtonNext {
+  right: -50px; /* Position the button on the right */
+}
+
+
+/* Responsive design for tablets */
+@media (max-width: 1024px) {
+  .swiperButtonPrev, .swiperButtonNext {
+    width: 30px; /* Reduce width on tablets */
+    height: 30px; /* Reduce height on tablets */
+  }
+
+  .swiperButtonPrev {
+    left: -30px; /* Adjust positioning */
+  }
+
+  .swiperButtonNext {
+    right: -30px; /* Adjust positioning */
+  }
+}
+
+/* Responsive design for mobile */
+@media (max-width: 767px) {
+  .swiperButtonPrev, .swiperButtonNext {
+    width: 25px; /* Further reduce width for mobile */
+    height: 25px; /* Further reduce height for mobile */
+    font-size: 18px; /* Reduce font size */
+  }
+
+  .swiperButtonPrev {
+    left: -20px; /* Adjust positioning for mobile */
+  }
+
+  .swiperButtonNext {
+    right: -20px; /* Adjust positioning for mobile */
+  }
+}
+/* Default style for the swiper navigation arrows */
+.swiperButtonPrev, .swiperButtonNext {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Vertically center the arrows */
+  z-index: 10; /* Ensure buttons are on top of other content */
+  width: 40px; /* Width of the button */
+  height: 40px; /* Height of the button */
+  display: flex;
+  justify-content: center; /* Center the icon horizontally */
+  align-items: center; /* Center the icon vertically */
+  border-radius: 50%; /* Make the button circular */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* 'Previous' button style */
+.swiperButtonPrev {
+  left: -50px; /* Position the button on the left */
+}
+
+/* 'Next' button style */
+.swiperButtonNext {
+  right: -50px; /* Position the button on the right */
+}
+
+
+
+/* Responsive design for tablets */
+@media (max-width: 1024px) {
+  .swiperButtonPrev, .swiperButtonNext {
+    width: 30px; /* Reduce width on tablets */
+    height: 30px; /* Reduce height on tablets */
+  }
+
+  .swiperButtonPrev {
+    left: -30px; /* Adjust positioning */
+  }
+
+  .swiperButtonNext {
+    right: -30px; /* Adjust positioning */
+  }
+}
+
+/* Responsive design for mobile */
+@media (max-width: 767px) {
+  .swiperButtonPrev, .swiperButtonNext {
+    width: 25px; /* Further reduce width for mobile */
+    height: 25px; /* Further reduce height for mobile */
+    font-size: 18px; /* Reduce font size */
+  }
+
+  .swiperButtonPrev {
+    left: -30px; /* Adjust positioning for mobile */
+  }
+
+  .swiperButtonNext {
+    right: -30px; /* Adjust positioning for mobile */
+  }
+}

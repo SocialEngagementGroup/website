@@ -24,7 +24,7 @@ const MasterServicesPage = () => {
       <HeroSection />
       <div className={styles.fade}></div>
       <div className='bg-white'>
-        <div className="max-w-[90%] w-full mx-auto py-5 md:py-10">
+        <div className="max-w-[90%] w-full mx-auto py-5 md:py-10  px-3 md:px-10">
           {sliders.map((slider, index) => (
             <section key={index} >
               <h3 className="text-black mt-5">{slider.title}</h3>
