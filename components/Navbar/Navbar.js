@@ -107,7 +107,7 @@ export default function Navbar() {
               {/* Services */}
 
               <li
-                className="relative group"
+                className={styles.dropdownScroll + " relative group"}
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
               >
@@ -199,7 +199,7 @@ export default function Navbar() {
                         </li>
                         <li className="flex items-center">
                           <FaPencilAlt className="mr-2" />
-                          <Link href="/services/review-and-reputation-management">Review and Reputation Management</Link>
+                          <Link href="/services/review-&-reputation-management">Review and Reputation Management</Link>
                         </li>
                         <li className="flex items-center">
                           <FaGoogle className="mr-2" />
