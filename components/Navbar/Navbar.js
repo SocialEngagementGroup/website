@@ -45,7 +45,7 @@ export default function Navbar() {
               href="https://calendly.com/itseg/segmeet"
               target="_blank"
               rel="noopener noreferrer"
-              className={`Contact-btn border font-bold font-sans text-[18px] rounded-[14px] cursor-pointer md:py-1.5 pb-1.5 pt-1.5 px-3 md:px-8 transition ${isSticky
+              className={`Contact-btn border capitalize font-bold font-sans text-[18px] rounded-[14px] cursor-pointer md:py-1.5 pb-1.5 pt-1.5 px-3 md:px-8 transition ${isSticky
                 ? "border-white text-black bg-white"
                 : "border-white text-white md:bg-white md:text-black hover:bg-white hover:text-black"
                 }`}

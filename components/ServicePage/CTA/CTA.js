@@ -18,7 +18,7 @@ const PlaceHolder = ({ bg, title, button, link }) => {
 
         {/* ---------- Button (First on mobile, second on desktop) ---------- */}
         <a href={link}>
-          <button className={`${styles.button} py-2 md:py-2 px-5 md:px-8 md:mt-0 mt-5 cursor-pointer`}>
+          <button className={`${styles.button} py-2 md:py-2 px-5 md:px-8 md:mt-0 mt-5 cursor-pointer capitalize`}>
             {button}
           </button>
         </a>

@@ -4,8 +4,8 @@ export const solutionforRestaurantsData = {
     description:
       "Boost your restaurant’s visibility and reservations with smart digital marketing. Rank higher locally, get more bookings, and build loyal customers.",
     subtitle: "industry",
-    ctaButton: "Book a Free Restaurant Marketing Consultation",
-    ctaLink: "/services/restaurant-marketing",
+     ctaButton: "Connect With Us",
+     ctaLink: "/contact-us",
     img: "/services/creative/branding/heroimg.png", // kept original
     bg: "/services/creative/branding/herobg.png",   // kept original
   },
@@ -15,7 +15,12 @@ export const solutionforRestaurantsData = {
     description:
       "Diners now discover food online long before they taste it, comparing menus, reading reviews, and scrolling through photos on Google, Instagram, and Maps. If your restaurant isn’t visible in those moments, your competitors will be. A strong digital presence shapes trust, drives foot traffic, and builds loyalty before a guest ever walks in. With the right visibility, reviews, and local SEO, digital transformation ensures your restaurant gets discovered first, chosen quickly, and remembered often.",
   },
-
+   cta: {
+    bg: "/services/CTA/Digital-google-business-profile.png",
+    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
+    button: "Book a call",
+    link: "https://calendly.com/itseg/segmeet",
+  },
   Costof: {
     heading1: "What It Costs to Be Invisible Online",
     heading2: "Risks of Not Investing in Digital Marketing",
@@ -49,7 +54,7 @@ export const solutionforRestaurantsData = {
       { text: "Stay top of mind locally with consistent content, promos, and reminders." },
       { text: "Make it easy for happy guests to tag, post, and amplify your restaurant." },
     ],
-    video: "/videos/vdo.mp4", // kept original
+    video: "/videos/services/industry/Solution-for-restaurants.mp4", // kept original
   },
 
   BrandStrategy: {
@@ -74,7 +79,7 @@ export const solutionforRestaurantsData = {
         text: "Influencer & UGC Campaigns: Partner with food creators to spark organic buzz and community-driven discovery.",
       },
     ],
-    img: "/services/BoxImage/brandstrategy.png", // kept original
+    img: "/services/masterimagesslider/industry/Solution-for-Restaurant.jpg", // kept original
   },
 
   CaseStudy: {

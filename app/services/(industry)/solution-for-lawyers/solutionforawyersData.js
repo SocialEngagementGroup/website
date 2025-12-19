@@ -5,7 +5,7 @@ export const solutionforawyersData = {
       "Boost your law firm’s visibility and reputation with tailored digital marketing. Get found first, attract quality clients, and grow your practice with trust.",
     subtitle: "industry",
     ctaButton: "Contact With Us",
-    ctaLink: "/services/law-firm-marketing",
+     ctaLink: "/contact-us",
     img: "/services/creative/branding/heroimg.png",
     bg: "/services/creative/branding/herobg.png",
   },
@@ -16,10 +16,10 @@ export const solutionforawyersData = {
       "Your law firm’s reputation runs on trust but in a digital-first world, credibility alone won’t get you found. Clients research online, check reviews, and compare firms long before they reach out. We help you stand out with intelligent digital strategy, targeted marketing, and data-backed visibility so your firm stays discoverable and consistently wins high-quality cases. We tailor everything to your practice area, optimizing your Google Business Profile, running local ads, managing reviews, and publishing expert-level content. The result: stronger trust, more qualified inquiries and firm clients remember when it matters.",
   },
    cta: {
-    bg: "/services/CTA/Creative-Branding.png",
-    title: "<strong>Grow</strong> your business <br/> with at <strong>SEG</strong> ",
+    bg: "/services/CTA/Digital-google-business-profile.png",
+    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
-    link: "tel:+13479356442",
+    link: "https://calendly.com/itseg/segmeet",
   },
 
   Costof: {
@@ -64,14 +64,17 @@ export const solutionforawyersData = {
         text: "You dominate local and practice-area visibility, outshining competitors.",
       },
     ],
-    video: "/videos/vdo.mp4",
+    video: "/videos/services/industry/solution-for-lawyers.mp4",
   },
 
   BrandStrategy: {
     heading: "What You Get",
     items: [
       {
-        text: "<strong>SEO & Local Visibility:</strong> Rank at the top when clients search for your practice. Google Business & Review Management: Build trust with verified reviews and engagement.",
+        text: "<strong>SEO & Local Visibility:</strong> Rank at the top when clients search for your practice.",
+      },
+       {
+        text: "<strong>Google Business & Review Management:</strong> Build trust with verified reviews and engagement.",
       },
       {
         text: "<strong>PPC & Local Ads:</strong> Target ready-to-hire clients with precision and drive conversions.",
@@ -80,25 +83,13 @@ export const solutionforawyersData = {
         text: "<strong>Website Optimization:</strong> Convert visitors into consultations with effective UX and design.",
       },
       {
-        text: "<strong>Social Media Presence:</strong> Strengthen credibility and awareness through professional brand storytelling.",
+        text: "<strong>Social Media Presence:</strong> Strengthen credibility and awareness through consistent, professional brand storytelling.",
       },
       {
-        text: "<strong>Analytics & Lead Tracking:</strong> Measure performance and optimize every channel for higher case acquisition.",
+        text: "<strong>Analytics & Lead Tracking:</strong> Measure performance, track inquiries, and optimize every channel for higher case acquisition.",
       },
     ],
-    img: "/services/BoxImage/brandstrategy.png",
-  },
-
-  CaseStudy: {
-    heading: "Customer Success Story",
-    stats: {
-      clientsPerWeek: "2.6",
-      newReviews: "84",
-    },
-    description:
-      "Through a well-optimized digital strategy, we helped The Law Offices of Michael F. Campopiano consistently attract high-intent clients and turn steady weekly demand into measurable growth.",
-    ctaButton: "Read Case Study",
-    ctaLink: "/case-studies/law-offices-michael-campopiano",
+    img: "/services/masterimagesslider/industry/Solution-for-Lawyers.jpg",
   },
 
   FAQ: {
@@ -117,22 +108,22 @@ export const solutionforawyersData = {
       {
         question: "3. Can you target specific practice areas or locations?",
         answer:
-          "Absolutely. We build hyper-local campaigns targeting exact locations, case types, and audiences most likely to hire you.",
+          "Absolutely. We build hyper-local, practice-specific campaigns that target exact locations, case types, and audiences, ensuring your marketing reaches the people most likely to hire you.",
       },
       {
         question: "4. How long before I see results?",
         answer:
-          "Most firms begin seeing measurable improvements within 6–12 weeks, depending on competition, practice area, and budget.",
+          "Most firms begin seeing measurable improvements in rankings, traffic, and qualified leads within 6–12 weeks, depending on competition, practice area, and budget.",
       },
       {
         question: "5. Do you handle review management for law firms?",
         answer:
-          "Yes. We monitor, respond to, and improve reviews across Google, Avvo, Yelp, and more, protecting your reputation and building trust.",
+          "Yes. We monitor, respond to, and improve reviews across Google, Avvo, Yelp, and more, protecting your reputation and building trust with potential clients.",
       },
       {
         question: "6. Can you work with small or solo practitioners?",
         answer:
-          "Definitely. We support solo attorneys and small firms with scalable and affordable marketing designed to drive consistent inquiries.",
+          "Definitely. We support solo attorneys and small firms with scalable, affordable marketing built to drive consistent inquiries and sustainable growth.",
       },
     ],
   },

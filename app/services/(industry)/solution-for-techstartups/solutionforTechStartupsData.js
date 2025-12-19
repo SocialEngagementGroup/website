@@ -4,8 +4,8 @@ export const solutionforTechStartupsData = {
     description:
       "Accelerate your tech startup’s growth with data-driven marketing. Build traction, attract users, and scale visibility from launch to Series A and beyond.",
     subtitle: "industry",
-    ctaButton: "Book a Free Growth Strategy Call",
-    ctaLink: "/services/tech-startup-marketing",
+      ctaButton: "Connect With Us",
+     ctaLink: "/contact-us",
     img: "/services/creative/branding/heroimg.png", // kept original
     bg: "/services/creative/branding/herobg.png",   // kept original
   },
@@ -15,7 +15,12 @@ export const solutionforTechStartupsData = {
     description:
       "Every startup begins with an idea, but turning it into traction takes more than innovation. In today’s crowded digital ecosystem, visibility, credibility, and momentum define who wins. We help ambitious tech startups attract early users, earn investor confidence, and accelerate growth through data-driven storytelling, full-funnel marketing, and scalable digital systems built for speed.",
   },
-
+  cta: {
+    bg: "/services/CTA/Digital-google-business-profile.png",
+    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
+    button: "Book a call",
+    link: "https://calendly.com/itseg/segmeet",
+  },
   Costof: {
     heading1: "The Cost of Staying Reactive",
     heading2: "Risks of Not Having a Strategic Growth Framework",
@@ -49,7 +54,7 @@ export const solutionforTechStartupsData = {
       { text: "Investors see traction through measurable growth signals." },
       { text: "Your marketing scales with your product, not against it." },
     ],
-    video: "/videos/vdo.mp4", // kept original
+    video: "/videos/services/industry/Solution-for-tech-startups.mp4", // kept original
   },
 
   BrandStrategy: {
@@ -71,7 +76,7 @@ export const solutionforTechStartupsData = {
         text: "Analytics & Growth Reporting: Track the right metrics, uncover insights, and make confident growth decisions.",
       },
     ],
-    img: "/services/BoxImage/brandstrategy.png", // kept original
+    img: "/services/masterimagesslider/industry/Solution-for-Tech-Startups.jpg", // kept original
   },
 
   CaseStudy: {

@@ -29,7 +29,7 @@ export default function Page() {
         items={solutionforDoctorsData.Costof.items}
       />
       <ProfessionalBranding {...solutionforDoctorsData.ProfessionalSEO} />
-      <BrandingStrategy {...solutionforDoctorsData.BrandStrategy} />
+      <BrandingStrategy {...solutionforDoctorsData.BrandStrategy} customClass="solutionForDoctors"/>
       <FAQ items={solutionforDoctorsData.FAQ.items} heading={solutionforDoctorsData.FAQ.heading} />
     </>
   );

@@ -8,14 +8,14 @@ const BrandStrategy = ({ heading, items, img }) => {
       <div
         className={
           styles.customPadding +
-          " container-fluid mx-auto pt-20"
+          " container-fluid mx-auto py-20"
         }
       >
         <div
           className="
             grid grid-cols-1
             md:grid-cols-[50%_50%]
-            [@media(min-width:1300px)]:grid-cols-[40%_58%]
+            [@media(min-width:1300px)]:grid-cols-[50%_50%]
             gap-4 md:gap-10
             items-center justify-center text-start
           "
@@ -26,7 +26,7 @@ const BrandStrategy = ({ heading, items, img }) => {
               <Image
                 src={img}
                 alt="Brand Strategy Image"
-                width={600}
+                width={700}
                 height={400}
                 className={styles.imagePosition}
               />

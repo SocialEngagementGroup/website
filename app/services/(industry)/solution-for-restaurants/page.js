@@ -1,7 +1,7 @@
 import HeroSection from "@/components/ServicePage/HeroSection/HeroSection";
 import IntroSection from "@/components/ServicePage/IntroSection/IntroSection";
 import { solutionforRestaurantsData } from "@/app/services/(industry)/solution-for-restaurants/solutionforRestaurantsData";
-import PlaceHolder from "@/components/ServicePage/CTA/CTA";
+import CTA from "@/components/ServicePage/CTA/CTA";
 import CostofSection from "@/components/ServicePage/CostofSection/CostofSection";
 import ProfessionalBranding from "@/components/ServicePage/ProfessionalBranding/ProfessionalBranding";
 import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrategy";
@@ -21,7 +21,7 @@ export default function Page() {
     <>
       <HeroSection {...solutionforRestaurantsData.hero} />
       <IntroSection {...solutionforRestaurantsData.intro} />
-      <PlaceHolder />
+      <CTA {...solutionforRestaurantsData.cta} />
       <CostofSection
         heading1={solutionforRestaurantsData.Costof.heading1}
         heading2={solutionforRestaurantsData.Costof.heading2}

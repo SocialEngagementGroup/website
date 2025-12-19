@@ -20,7 +20,7 @@ const ContactInfo = () => {
 
           {/* ✅ Call Box */}
           <a
-            href="tel:+13479356442"
+            href="https://calendly.com/itseg/segmeet"
             className={`${style.contentboxInnerBox} border-4 border-gray-700 p-10 rounded-[20px] flex 
               items-center justify-between cursor-pointer hover:shadow-lg transition-shadow flex-1 relative`}
           >
