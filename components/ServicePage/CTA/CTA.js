@@ -12,7 +12,7 @@ const PlaceHolder = ({ bg, title, button, link }) => {
       >
         {/* ---------- Title (Second on mobile, first on desktop) ---------- */}
         <h3
-          className="text-center md:text-left"
+          className="text-center md:text-left text-white"
           dangerouslySetInnerHTML={{ __html: title || ""}}
         />
 

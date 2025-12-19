@@ -54,7 +54,7 @@ export const solutionforDoctorsData = {
       { text: "Online reputation reinforces credibility and expertise." },
       { text: "You dominate your local and specialty visibility." },
     ],
-    video: "/videos/services/industry/Solution-for-Doctors.mp4",
+    video: "/videos/services/Industry/Solution-for-Doctors.mp4",
   },
 
   BrandStrategy: {

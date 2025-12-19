@@ -29,7 +29,7 @@ model Contact {
   name      String
   phone     String
   email     String
-  business  String   // This will be the field name in both the schema and database
+  business  String?  // Make it nullable temporarily
   message   String
   createdAt DateTime @default(now())
 }

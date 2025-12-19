@@ -54,7 +54,7 @@ export const solutionforTechStartupsData = {
       { text: "Investors see traction through measurable growth signals." },
       { text: "Your marketing scales with your product, not against it." },
     ],
-    video: "/videos/services/industry/Solution-for-Tech-Startups.mp4", // kept original
+    video: "/videos/services/Industry/Solution-for-Tech-Startups.mp4", // kept original
   },
 
   BrandStrategy: {
