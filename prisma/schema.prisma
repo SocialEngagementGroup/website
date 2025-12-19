@@ -29,8 +29,7 @@ model Contact {
   name      String
   phone     String
   email     String
+  business  String?  // Make it nullable temporarily
   message   String
   createdAt DateTime @default(now())
 }
-
-

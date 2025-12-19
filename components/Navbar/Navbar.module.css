@@ -92,3 +92,61 @@
   transform-origin: 50% 50% 0px;
   will-change: auto;
 }
+/* Add these styles to your existing CSS */
+
+.group:hover .dropdown {
+  display: block !important;
+}
+
+.dropdown {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  /* Keep the click-to-toggle behavior on mobile */
+  .group:hover .dropdown {
+    display: none;
+  }
+  .dropdown {
+    display: block;
+  }
+}
+
+
+.transitionCustom {
+  transition: all 0.3s ease-in-out;
+}
+
+.transitionCustom {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.transitionCustom li {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent; /* Initial border is transparent */
+}
+
+.transitionCustom li:hover {
+  color: white; /* Text color on hover */
+  border-bottom: 1px solid #e3d3cc; /* Border bottom on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.transitionCustom li svg {
+  margin-right: 8px; /* Add spacing between icon and text */
+  transition: all 0.3s ease; /* Smooth transition for the icon */
+}
+
+.transitionCustom li:hover svg {
+  color: #e3d3cc; /* Icon color on hover */
+  transform: rotate(180deg); /* Optional: Rotate icon on hover */
+}
+
+
+
+

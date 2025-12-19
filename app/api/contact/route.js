@@ -3,12 +3,12 @@ import { supabase } from "@/lib/supabase";
 
 export async function POST(req) {
   try {
-    const { name, phone, email, message } = await req.json();
+    const { name, phone, email, message, business } = await req.json();
 
-    // Save contact data in Supabase only
+    // Save contact data in Supabase
     const { data, error } = await supabase
       .from("Contact")
-      .insert([{ name, phone, email, message }]);
+      .insert([{ name, phone, email, message, business }]);
 
     if (error) throw error;
 

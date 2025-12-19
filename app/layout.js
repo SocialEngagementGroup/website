@@ -7,7 +7,11 @@ import Footer from "@/components/Footer/Footer";
 import Head from "next/head"; // ✅ import Head
 
 export const metadata = {
-  title: "Where human creativity meets AI | SEG",
+  title: {
+    default: "Where human creativity meets AI | SEG", // default for pages without page metadata
+    template: "%s | SEG", // will replace %s with page-level title
+  },
+  description: "Where human creativity meets AI | SEG", // default description
 };
 
 

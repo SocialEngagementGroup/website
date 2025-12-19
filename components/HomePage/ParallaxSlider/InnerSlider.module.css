@@ -165,12 +165,4 @@
 }
 
 
-/* ==============================
-   Optional: Hide default Swiper buttons
-   ============================== */
-:global(.swiper-button-prev),
-:global(.swiper-button-next) {
-  display: none !important;
-}
-
 

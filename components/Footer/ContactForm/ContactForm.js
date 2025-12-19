@@ -14,6 +14,7 @@ const schema = yup.object().shape({
     .required("Phone number is required")
     .matches(/^[0-9+\-()\s]+$/, "Enter a valid phone number"),
   email: yup.string().email("Invalid email address").required("Email is required"),
+  business: yup.string().required("Business name is required").min(3, "At least 3 characters"), // Add this line
   message: yup.string().required("Message cannot be empty").min(10, "Minimum 10 characters"),
 });
 
@@ -93,6 +94,17 @@ const ContactForm = () => {
             className="w-full bg-transparent border border-gray-500 text-gray-100 placeholder-gray-400 rounded-md px-3 py-3 focus:outline-none focus:border-[#c43b3b] transition-all duration-200"
           />
           <p className="text-red-400 text-sm mt-1">{errors.email?.message}</p>
+        </div>
+
+        {/* ✅ Business Input */}
+        <div>
+          <input
+            type="text"
+            placeholder="Your Business*"
+            {...register("business")}
+            className="w-full bg-transparent border border-gray-500 text-gray-100 placeholder-gray-400 rounded-md px-3 py-2 focus:outline-none focus:border-[#c43b3b] transition-all duration-200"
+          />
+          <p className="text-red-400 text-sm mt-1">{errors.business?.message}</p>
         </div>
 
         {/* ✅ Message Textarea */}

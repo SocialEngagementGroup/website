@@ -1,0 +1,111 @@
+export const socialmediamarketingData = {
+  hero: {
+    title: "Social Media Marketing",
+    description:
+      "Boost engagement and sales with data-driven social media marketing. We craft creative, high-performing campaigns across Meta, TikTok, LinkedIn, and more.",
+    subtitle: "digital",
+    ctaButton: "Connect With Us",
+        ctaLink: "/contact-us",
+    img: "/services/creative/branding/heroimg.png",
+    bg: "/services/creative/branding/herobg.png",
+  },
+
+  intro: {
+    heading: "Turn Every Scroll Into Impact",
+    description:
+      "Social isn’t optional, it’s where relevance, visibility, and revenue meet. We turn daily scroll time on Meta, TikTok, LinkedIn, and more into measurable growth with full-funnel strategies grounded in audience insight, platform trends, and precision targeting. From viral short-form video and influencer collabs to paid funnels and community management, we run the entire social engine. Every post is built for a purpose, to earn attention, spark conversation, and move buyers through the funnel. With transparent reporting and constant optimization, you stay ahead of algorithms and competitors. Social isn’t about likes; it’s about turning every interaction into impact.",
+  },
+  cta: {
+    bg: "/services/CTA/Digital-google-business-profile.png",
+    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
+    button: "Book a call",
+    link: "https://calendly.com/itseg/segmeet",
+  },
+  Costof: {
+    heading1: "Why It Matters",
+    heading2: "The Cost of Weak Social Marketing",
+    description:
+      "Social is where your audience already spends hours each day. Every swipe is a chance to earn attention and intent. Smart creative and native formats stop the scroll. Precision targeting puts messages in front of buyers, not bystanders. Consistent posting and community management turn reach into relationships. Paid amplification scales what works while suppressing waste. Data loops testing hooks, pacing, and formats, improve performance week over week. Social proof from comments and shares reduces friction and builds trust. Full-funnel orchestration moves people from awareness to conversion and repeat purchase. Done right, social marketing converts casual scrolling into measurable revenue.",
+    items: [
+      {
+        img: "/services/digital/social-media-marketing/low-engagement-and-slow-audience-growth.png",
+        text: "<strong>Low engagement</strong> and slow audience growth across platforms.",
+      },
+      {
+        img: "/services/digital/social-media-marketing/missed-chances-to-capitalize-on-trends.png",
+        text: "<strong>Missed chances</strong> to capitalize on trends your competitors ride.",
+      },
+      {
+        img: "/services/digital/social-media-marketing/weak-roi.png",
+        text: "<strong>Weak ROI</strong> as campaigns fail to convert attention into revenue.",
+      },
+      {
+        img: "/services/digital/social-media-marketing/Inconsistent-brand-presence.png",
+        text: "<strong>Inconsistent brand</strong> presence that slowly erodes trust and credibility.",
+      },
+
+    ],
+  },
+
+  ProfessionalSEO: {
+    heading: "What Happens With Smart Marketing",
+    items: [
+      { text: "More followers and stronger engagement across all key social platforms." },
+      { text: "Sales pipelines expand as social traffic converts into real opportunities." },
+      { text: "Your brand stays top-of-mind through consistent, high-impact content." },
+      { text: "Better CAC and ROAS driven by continuous, data-backed optimization." },
+    ],
+    video: "/videos/services/digital/Social-Media-Marketing.mp4",
+  },
+
+  BrandStrategy: {
+    heading: "What You Get",
+    items: [
+      { text: "Social strategy development tailored to your audience and goals." },
+      {
+        text: "Paid ads executed across Meta, TikTok, LinkedIn, and other major platforms.",
+      },
+      { text: "Community management that keeps your audience active and engaged daily." },
+      {
+        text: "Monthly reporting with insights on growth, engagement, and performance.",
+      },
+    ],
+    img: "/services/digital/social-media-marketing/digital-social-media-marketing.png",
+  },
+
+  FAQ: {
+    heading: "FAQs",
+    items: [
+      {
+        question: "1. Do you handle both organic and paid social campaigns?",
+        answer:
+          "Yes, we design strategies that combine organic growth with paid amplification.",
+      },
+      {
+        question: "2. Which platforms do you focus on?",
+        answer:
+          "Meta, TikTok, LinkedIn, Twitter, Pinterest, and more.",
+      },
+      {
+        question: "3. Can you manage my community and respond to messages?",
+        answer:
+          "Yes, our community managers handle engagement to keep your audience active.",
+      },
+      {
+        question: "4. How do you track success on social media?",
+        answer:
+          "We monitor reach, engagement, follower growth, and conversion metrics.",
+      },
+      {
+        question: "5. Do you create ad creatives as well?",
+        answer:
+          "Absolutely, we handle copywriting, design, and video production for ads.",
+      },
+      {
+        question: "6. How often should I run social media campaigns?",
+        answer:
+          "Consistency drives growth. Most brands benefit from continuous monthly campaigns.",
+      },
+    ],
+  },
+};
