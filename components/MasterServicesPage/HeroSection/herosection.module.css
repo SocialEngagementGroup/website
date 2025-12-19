@@ -58,6 +58,18 @@
 }
 
 
+
+/* Overlay */
+.herosection:before {
+  content: ""; /* This creates the overlay */
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px; /* Extend the overlay to the bottom */
+  height: 15%; /* Cover the entire height */
+  background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  z-index: 0; /* Ensure overlay stays behind text */
+}
 /* ========================================
    Mobile Styles (<= 767px)
 ======================================== */

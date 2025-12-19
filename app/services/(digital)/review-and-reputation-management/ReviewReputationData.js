@@ -56,7 +56,7 @@ export const ReviewReputationData = {
       { text: "Customer trust and long-term loyalty grow through consistent engagement." },
       { text: "Local rankings and conversion rates improve as sentiment strengthens." },
     ],
-    video: "/videos/services/digital/review-and-reputation-management.mp4",
+    video: "/videos/services/digital/Review-and-Reputation-Management.mp4",
   },
 
   BrandStrategy: {

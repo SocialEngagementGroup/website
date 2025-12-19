@@ -28,19 +28,19 @@ export const RetargetingServiceData = {
       "Most visitors leave without converting. Retargeting keeps your brand visible after they bounce. It reconnects with people who already showed intent. Frequency and sequencing nudge them at the right moments. Dynamic creatives remind them of the products they viewed. Smart exclusions prevent waste and ad fatigue. Cross-channel reach follows them from social to web. Measurable lift shows up in return visits and lower CPA. When intent peaks, your message is there first. The result is more conversions from the traffic you already paid for.",
     items: [
  {
-  img: "/services/digital/Retargeting-Remarketing/Warm-leads-vanish-after-a-single-visit.png",
+  img: "/services/digital/retargeting-remarketing/Warm-leads-vanish-after-a-single-visit.png",
   text: "<strong>Warm leads</strong> vanish after a single visit with no chance to re-engage.",
 },
 {
-  img: "/services/digital/Retargeting-Remarketing/Competitors-step-in-and-reclaim-the-audience.png",
+  img: "/services/digital/retargeting-remarketing/Competitors-step-in-and-reclaim-the-audience.png",
   text: "<strong>Competitors</strong> step in and reclaim the audience you initially attracted",
 },
 {
-  img: "/services/digital/Retargeting-Remarketing/ROI-declines.png",
+  img: "/services/digital/retargeting-remarketing/ROI-declines.png",
   text: "<strong>Overall marketing</strong> ROI declines as conversions slip through the cracks.",
 },
 {
-  img: "/services/digital/Retargeting-Remarketing/CAC-rises-steadily.png",
+  img: "/services/digital/retargeting-remarketing/CAC-rises-steadily.png",
   text: "CAC rises steadily and <strong>growth slows</strong> as missed opportunities compound.",
 },
 

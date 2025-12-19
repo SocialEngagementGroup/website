@@ -61,7 +61,7 @@ export const brandingData = {
         text: "Growth accelerates through positive word-of-mouth and stronger <strong>brand loyalty</strong>.",
       },
     ],
-    video: "/videos/services/creative/branding.mp4",
+    video: "/videos/services/creative/Branding.mp4",
   },
   BrandStrategy: {
     heading: "What You Get",
