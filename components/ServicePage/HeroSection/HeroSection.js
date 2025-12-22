@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./herosection.module.css";
+import ContactForm from "@/components/Footer/ContactForm/ContactForm";
 
 const HeroSection = ({
   title,
@@ -9,7 +10,7 @@ const HeroSection = ({
   description,
   ctaButton,
   ctaLink,
-  img,
+  // img,
   bg
 }) => {
   return (
@@ -50,14 +51,16 @@ const HeroSection = ({
           </div>
 
           {/* ---------- Right Image (First on mobile) ---------- */}
-          <div className="flex justify-center order-1 md:order-2">
-            <Image
+          <div className="justify-center order-1 md:order-2">
+            {/* <Image
               className={styles.heroImage}
               src={img}
               alt="Hero Image"
               width={400}
               height={200}
-            />
+            /> */}
+            {/* new contact form need to pass split layout */}
+            <ContactForm layout="split" />
           </div>
         </div>
       </div>

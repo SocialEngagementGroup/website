@@ -137,9 +137,9 @@ export default function Navbar() {
                   className={`absolute md:left-1/2 top-[33px] md:-translate-x-1/2 mt-3 w-full md:w-[900px] bg-black rounded-xl shadow-2xl z-50 ${servicesOpen ? "block" : "hidden"
                     }`}
                 >
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 text-white">
+                  <div className={styles.dropdownContent + " grid grid-cols-1 md:grid-cols-3 gap-6 p-6 text-white"}>
                     {/* Creative */}
-                    <div>
+                    <div className={styles.creative}>
                       <h4
                         className="mb-3 font-semibold uppercase text-black text-sm group-hover:bg-[#e3d3cc] transition-colors p-2 rounded-md"
                       >
@@ -174,7 +174,7 @@ export default function Navbar() {
                     </div>
 
                     {/* Digital */}
-                    <div>
+                    <div className={styles.digital}>
                       <h4
                         className="mb-3 font-semibold uppercase text-black text-sm group-hover:bg-[#e3d3cc] transition-colors p-2 rounded-md"
                       >
@@ -216,8 +216,8 @@ export default function Navbar() {
                       </ul>
                     </div>
 
-                    {/* Digital */}
-                    <div>
+                    {/* Industry */}
+                    <div className={styles.industry}>
                       <h4 className="mb-3 font-semibold uppercase text-black text-sm group-hover:bg-[#e3d3cc] transition-colors p-2 rounded-md">
                         Industry Services
                       </h4>
@@ -262,3 +262,4 @@ export default function Navbar() {
     </nav>
   );
 }
+
