@@ -26,7 +26,7 @@ const Footer = () => {
 
             {/* ✅ Right: Contact Form */}
             <div>
-              <ContactForm />
+              <ContactForm layout="stacked" />
             </div>
 
           </div>

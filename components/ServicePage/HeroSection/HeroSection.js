@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./herosection.module.css";
+import ContactForm from "@/components/Footer/ContactForm/ContactForm";
 
 const HeroSection = ({
   title,
@@ -9,7 +10,7 @@ const HeroSection = ({
   description,
   ctaButton,
   ctaLink,
-  img,
+  // img,
   bg
 }) => {
   return (
@@ -18,7 +19,7 @@ const HeroSection = ({
       style={{ backgroundImage: `url(${bg})` }}
     >
       <div
-        className={`${styles.containerCustom} container-fluid w-[75%] mx-auto py-6 md:py-25`}
+        className={`${styles.containerCustom} container-fluid w-[75%] mx-auto py-0 md:py-25`}
       >
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-0 text-center md:text-start">
 
@@ -50,16 +51,11 @@ const HeroSection = ({
           </div>
 
           {/* ---------- Right Image (First on mobile) ---------- */}
-          <div className="flex justify-center order-1 md:order-2">
-            <Image
-              className={styles.heroImage}
-              src={img}
-              alt="Hero Image"
-              width={400}
-              height={200}
-            />
+          <div className="justify-center order-2 md:order-1 md:mt-0 mt-5">
+            <ContactForm layout="split" />
           </div>
         </div>
+
       </div>
     </section>
   );

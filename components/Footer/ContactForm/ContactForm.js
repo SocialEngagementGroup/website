@@ -1,137 +1,173 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import emailjs from "@emailjs/browser"; // Client-side EmailJS
+import ReCAPTCHA from "react-google-recaptcha";
 
-// ✅ Form validation schema using Yup
+// Validation schema (still used for isValid logic)
 const schema = yup.object().shape({
-  name: yup.string().required("Your name is required").min(3, "At least 3 characters"),
-  phone: yup
-    .string()
-    .required("Phone number is required")
-    .matches(/^[0-9+\-()\s]+$/, "Enter a valid phone number"),
-  email: yup.string().email("Invalid email address").required("Email is required"),
-  business: yup.string().required("Business name is required").min(3, "At least 3 characters"), // Add this line
-  message: yup.string().required("Message cannot be empty").min(10, "Minimum 10 characters"),
+  name: yup.string().min(3).required(),
+  phone: yup.string().matches(/^[0-9+\-()\s]+$/).required(),
+  email: yup.string().email().required(),
+  business: yup.string().min(3).required(),
+  message: yup.string().min(10).required(),
 });
 
-const ContactForm = () => {
-  // ✅ Initialize React Hook Form with Yup resolver
+const ContactForm = ({ layout = "stacked", className = "" }) => {
   const {
     register,
     handleSubmit,
     reset,
-    formState: { errors, isSubmitting },
-  } = useForm({ resolver: yupResolver(schema) });
+    watch,
+    formState: { isSubmitting, isValid },
+  } = useForm({
+    resolver: yupResolver(schema),
+    mode: "onChange",
+    shouldUseNativeValidation: true, // 👈 browser tooltips
+  });
 
-  // ✅ Submit handler
+  const recaptchaRef = useRef(null);
+  const [captchaError, setCaptchaError] = useState("");
+
+  const [messagePlaceholder, setMessagePlaceholder] = useState("How can we help*");
+
+  useEffect(() => {
+    const updatePlaceholder = () => {
+      setMessagePlaceholder(window.innerWidth <= 767 ? "Your Message*" : "How can we help*");
+    };
+    updatePlaceholder();
+    window.addEventListener("resize", updatePlaceholder);
+    return () => window.removeEventListener("resize", updatePlaceholder);
+  }, []);
+
+  const values = watch();
+  const canShowCaptcha =
+    isValid &&
+    values?.name &&
+    values?.phone &&
+    values?.email &&
+    values?.business &&
+    values?.message;
+
+  useEffect(() => {
+    if (!canShowCaptcha) {
+      recaptchaRef.current?.reset();
+      setCaptchaError("");
+    }
+  }, [canShowCaptcha]);
+
   const onSubmit = async (data) => {
+    setCaptchaError("");
+
+    const token = recaptchaRef.current?.getValue();
+    if (!token) {
+      setCaptchaError("Please verify that you are human.");
+      return;
+    }
+
     try {
-      // 1️⃣ Store contact data in backend (Supabase or API endpoint)
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, recaptchaToken: token }),
       });
 
       const result = await response.json();
-      if (!result.success) throw new Error(result.error || "Failed to store contact");
+      if (!result.success) throw new Error();
 
-      // 2️⃣ Send email via EmailJS (client-side)
-      await emailjs.send(
-        "service_xa0hl99",                 // Service ID
-        "template_tzphyus",                // Template ID
-        { ...data, time: new Date().toLocaleString() }, // Template params
-        "te0AortVTiyGMk9DL"                // Public Key
-      );
-
-      // ✅ Success notification
       alert("Your message has been sent successfully!");
-      reset(); // ✅ Reset form after submission
-    } catch (err) {
-      console.error("Form Error:", err);
+      reset();
+      recaptchaRef.current?.reset();
+    } catch {
       alert("Something went wrong. Please try again later.");
+      recaptchaRef.current?.reset();
     }
   };
 
+  const inputClass =
+    "w-full bg-transparent border border-gray-500 text-gray-100 placeholder-gray-400 rounded-md px-3 py-2 focus:outline-none focus:border-[#c43b3b] transition-all duration-200";
+
+  const textareaClass =
+    "w-full min-h-[148px] resize-none bg-transparent border border-gray-500 text-gray-100 placeholder-gray-400 rounded-md px-3 py-3 focus:outline-none focus:border-[#c43b3b] transition-all duration-200";
+
+  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+
   return (
-    // ✅ Form container with backdrop, rounded corners, and padding
-    <div className="backdrop-blur-md bg-black/40 rounded-xl border-4 border-gray-700 shadow-lg p-12">
-      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-4">
-        
-        {/* ✅ Name Input */}
-        <div>
-          <input
-            type="text"
-            placeholder="Your Name*"
-            {...register("name")}
-            className="w-full bg-transparent border border-gray-500 text-gray-100 placeholder-gray-400 rounded-md px-3 py-2 focus:outline-none focus:border-[#c43b3b] transition-all duration-200"
-          />
-          {/* ✅ Validation error message */}
-          <p className="text-red-400 text-sm mt-1">{errors.name?.message}</p>
-        </div>
+    <div className={`backdrop-blur-md bg-black/40 rounded-xl border-4 border-gray-700 shadow-lg p-12 ${className}`}>
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+        <input
+          type="text"
+          placeholder="Your Name*"
+          {...register("name")}
+          required
+          minLength={3}
+          className={inputClass}
+        />
 
-        {/* ✅ Phone Input */}
-        <div>
-          <input
-            type="text"
-            placeholder="Phone Number*"
-            {...register("phone")}
-            className="w-full bg-transparent border border-gray-500 text-gray-100 placeholder-gray-400 rounded-md px-3 py-2 focus:outline-none focus:border-[#c43b3b] transition-all duration-200"
-          />
-          <p className="text-red-400 text-sm mt-1">{errors.phone?.message}</p>
-        </div>
+        <input
+          type="text"
+          placeholder="Phone Number*"
+          {...register("phone")}
+          required
+          pattern="^[0-9+\-()\s]+$"
+          className={inputClass}
+        />
 
-        {/* ✅ Email Input */}
-        <div>
-          <input
-            type="email"
-            placeholder="Email Address*"
-            {...register("email")}
-            className="w-full bg-transparent border border-gray-500 text-gray-100 placeholder-gray-400 rounded-md px-3 py-3 focus:outline-none focus:border-[#c43b3b] transition-all duration-200"
-          />
-          <p className="text-red-400 text-sm mt-1">{errors.email?.message}</p>
-        </div>
+        <input
+          type="email"
+          placeholder="Email Address*"
+          {...register("email")}
+          required
+          className={inputClass}
+        />
 
-        {/* ✅ Business Input */}
-        <div>
-          <input
-            type="text"
-            placeholder="Your Business*"
-            {...register("business")}
-            className="w-full bg-transparent border border-gray-500 text-gray-100 placeholder-gray-400 rounded-md px-3 py-2 focus:outline-none focus:border-[#c43b3b] transition-all duration-200"
-          />
-          <p className="text-red-400 text-sm mt-1">{errors.business?.message}</p>
-        </div>
+        <input
+          type="text"
+          placeholder="Your Business*"
+          {...register("business")}
+          required
+          minLength={3}
+          className={inputClass}
+        />
 
-        {/* ✅ Message Textarea */}
-        <div>
-          <textarea
-            placeholder="Your Message*"
-            {...register("message")}
-            className="w-full textarea min-h-[148px] resize-none bg-transparent border border-gray-500 text-gray-100 placeholder-gray-400 rounded-md px-3 py-3 focus:outline-none focus:border-[#c43b3b] transition-all duration-200"
-          />
-          <p className="text-red-400 text-sm mt-1">{errors.message?.message}</p>
-        </div>
+        <textarea
+          placeholder={messagePlaceholder}
+          {...register("message")}
+          required
+          minLength={10}
+          className={textareaClass}
+        />
 
-        {/* ✅ Privacy consent note */}
-        <p className="text-xs text-gray-400 mt-2">
-          By submitting this form I consent to processing my personal data as described in the{" "}
-          <span className="text-[#c43b3b] underline cursor-pointer">Privacy Policy</span>.
-        </p>
+     
 
-        {/* ✅ Submit button */}
+     {!siteKey ? (
+  <p className="text-red-400 text-sm">
+    Missing NEXT_PUBLIC_RECAPTCHA_SITE_KEY
+  </p>
+) : canShowCaptcha ? (
+  <div className="pt-2 flex justify-center">
+    <ReCAPTCHA
+      ref={recaptchaRef}
+      sitekey={siteKey}
+      theme="dark"
+    />
+    {captchaError && (
+      <p className="text-red-400 text-sm mt-2">
+        {captchaError}
+      </p>
+    )}
+  </div>
+) : null}
+
         <button
           type="submit"
           disabled={isSubmitting}
-          className="mt-2 bg-gradient-to-r from-[#6a1b1b] to-[#c43b3b] text-white font-semibold py-2 rounded-md hover:opacity-90 transition-all duration-200 disabled:opacity-50"
+          className="mt-2 cursor-pointer w-full bg-gradient-to-r from-[#6a1b1b] to-[#c43b3b] text-white font-semibold py-2 rounded-md hover:opacity-90 transition-all duration-200 disabled:opacity-50"
         >
           {isSubmitting ? "Submitting..." : "SUBMIT"}
         </button>
-
       </form>
     </div>
   );
