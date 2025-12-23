@@ -70,7 +70,7 @@
 }
 
 
-/* <= 300px */
+/* responsive adjustments for very small screens */
 @media only screen and (max-width: 450px) {
   .wrapper {
     margin-top: -300px;
