@@ -3,17 +3,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
+import { schema } from "@/lib/validationSchema"; // Adjust the import path accordingly
 import ReCAPTCHA from "react-google-recaptcha";
-
-// Validation schema (still used for isValid logic)
-const schema = yup.object().shape({
-  name: yup.string().min(3).required(),
-  phone: yup.string().matches(/^[0-9+\-()\s]+$/).required(),
-  email: yup.string().email().required(),
-  business: yup.string().min(3).required(),
-  message: yup.string().min(10).required(),
-});
 
 const ContactForm = ({ layout = "stacked", className = "" }) => {
   const {
@@ -24,8 +15,8 @@ const ContactForm = ({ layout = "stacked", className = "" }) => {
     formState: { isSubmitting, isValid },
   } = useForm({
     resolver: yupResolver(schema),
-    mode: "onChange",
-    shouldUseNativeValidation: true, // 👈 browser tooltips
+    mode: "onSubmit",  // Validation happens only when submitting the form
+    shouldUseNativeValidation: false, // 👈 browser tooltips
   });
 
   const recaptchaRef = useRef(null);
@@ -140,26 +131,25 @@ const ContactForm = ({ layout = "stacked", className = "" }) => {
           className={textareaClass}
         />
 
-     
-
-     {!siteKey ? (
-  <p className="text-red-400 text-sm">
-    Missing NEXT_PUBLIC_RECAPTCHA_SITE_KEY
-  </p>
-) : canShowCaptcha ? (
-  <div className="pt-2 flex justify-center">
-    <ReCAPTCHA
-      ref={recaptchaRef}
-      sitekey={siteKey}
-      theme="dark"
-    />
-    {captchaError && (
-      <p className="text-red-400 text-sm mt-2">
-        {captchaError}
-      </p>
-    )}
-  </div>
-) : null}
+        {/* CAPTCHA */}
+        {!siteKey ? (
+          <p className="text-red-400 text-sm">
+            Missing NEXT_PUBLIC_RECAPTCHA_SITE_KEY
+          </p>
+        ) : canShowCaptcha ? (
+          <div className="recaptcha flex justify-center">
+            <ReCAPTCHA
+              ref={recaptchaRef}
+              sitekey={siteKey}
+              theme="dark"
+            />
+            {captchaError && (
+              <p className="text-red-400 text-sm mt-2">
+                {captchaError}
+              </p>
+            )}
+          </div>
+        ) : null}
 
         <button
           type="submit"

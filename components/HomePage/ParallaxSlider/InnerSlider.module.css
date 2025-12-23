@@ -68,7 +68,7 @@
 /* Base style for both prev/next arrows */
 .customArrow {
   position: absolute;
-  top: 50%; /* Center vertically */
+  top: 48%; /* Center vertically */
   transform: translateY(-50%);
   z-index: 10;
   cursor: pointer;

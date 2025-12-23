@@ -65,11 +65,6 @@
 }
 
 
-/* ✅ Button border styling in content box */
-.content-box button {
-  border: 1px solid #101828;
-}
-
 /* ✅ Typography for content text */
 .content-box p {
   font-size: 32px;
