@@ -27,8 +27,8 @@ export default function VideoScroll({ src }) {
   });
 
   // Defaults ( > 1200px )
-  let springCfg = { stiffness: 260, damping: 100, mass: 0.2 };
-  let range = [0, 0.1];
+  let springCfg = { stiffness: 260, damping: 30, mass: 0.2 };
+  let range = [0, 0.5];
   let wVals = ["40vw", "100dvw"];
   let hVals = ["40vh", "100dvh"];
 

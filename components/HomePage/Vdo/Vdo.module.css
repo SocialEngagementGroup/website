@@ -1,6 +1,5 @@
 .wrapper {
   height: 300vh; /* reduced from 300vh for desktop */
-     background: #e3d3cc;
 }
 
 .stickyStage {
@@ -21,9 +20,66 @@
 .video {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* looks better during full-screen on mobile */
+  object-fit: contain; /* looks better during full-screen on mobile */
   display: block;
 }
 
 /* <= 300px */
 
+
+/* <= 300px */
+@media only screen and (max-width: 1200px) {
+  .wrapper {
+    height: 90vh;
+
+  }
+.stickyStage {
+  height: 120vh;
+
+}
+ 
+}
+
+
+/* <= 300px */
+@media only screen and (max-width: 767px) {
+  .wrapper {
+
+    height:75vh;
+
+  }
+.stickyStage {
+  height: 100vh;
+
+}
+ 
+}
+
+/* <= 300px */
+@media only screen and (max-width: 500px) {
+  .wrapper {
+
+    height:65vh;
+
+  }
+.stickyStage {
+  height: 95vh;
+
+}
+ 
+}
+
+
+/* <= 300px */
+@media only screen and (max-width: 450px) {
+  .wrapper {
+    margin-top: -300px;
+    height:70vh;
+
+  }
+.stickyStage {
+  height: 100vh;
+
+}
+ 
+}
