@@ -1,34 +1,98 @@
-// this is datafile
 export const projects = [
-  {
-    title: "Digital",
-    color: "#1b1b1b",
-    sliderData: [
-      { name: "google business profile management", icon: "/InnerSlider/Digital/google-business-profile-management.png" },
-      { name: "google location and-service ads", icon: "/InnerSlider/Digital/google-location-and-service-ads.png" },
-      { name: "pay-per-click", icon: "/InnerSlider/Digital/pay-per-click.png" },
-      { name: "Retargeting & remarketing", icon: "/InnerSlider/Digital/retargeting-and-remarketing.png" },
-      { name: "Review reputation & management", icon: "/InnerSlider/Digital/review-reputation-and-management.png" },
-      { name: "SEO", icon: "/InnerSlider/Digital/seo.png" },
-      { name: "Social media content", icon: "/InnerSlider/Digital/social-media-content.png" },
-      { name: "web development", icon: "/InnerSlider/Digital/web-development.png" },
-    ],
-  },
   {
     title: "Creative",
     color: "#202020",
     sliderData: [
+      {
+        name: "Branding",
+        img: "/services/masterimagesslider/creative/Branding.jpg",
+      },
+      {
+        name: "Logo Design",
+        img: "/services/masterimagesslider/creative/Logo-Design.jpg",
+      },
+      {
+        name: "Content creation",
+        img: "/services/masterimagesslider/creative/Content-Creation.jpg",
+      },
+      {
+        name: "3D Animation & Rendering",
+        img: "/services/masterimagesslider/creative/3D-Animation-&-Rendering.jpg",
+      },
+      {
+        name: "Photography & videography",
+        img: "/services/masterimagesslider/creative/Videography-&-Photography.jpg",
+      },
+      {
+        name: "Social media content",
+        img: "/services/masterimagesslider/creative/Social-Media-Content.jpg",
+      },
+    ],
+  },
 
-      { name: "Branding", icon: "/InnerSlider/Creative/branding.png" },
-      { name: "Logo Design", icon: "/InnerSlider/Creative/logo-design.png" },
-      { name: "Content creation", icon: "/InnerSlider/Creative/content-creation.png" },
-      { name: "3D Animation & Rendering", icon: "/InnerSlider/Creative/3d-animation-and-rendering.png" },
-      { name: "Photography & videography", icon: "/InnerSlider/Creative/photography-and-videography.png" },
-      { name: "Social media content", icon: "/InnerSlider/Creative/social-media-content.png" },
+  {
+    title: "Digital",
+    color: "#1b1b1b",
+    sliderData: [
+      {
+        name: "google business profile management",
+        img: "/services/masterimagesslider/digital/Google-Business-Profile-Management.jpg",
+      },
+      {
+        name: "google location and-service ads",
+        img: "/services/masterimagesslider/digital/Google-Location-Services-Ads.jpg",
+      },
+      {
+        name: "pay-per-click",
+        img: "/services/masterimagesslider/digital/PPC-Campaigns.jpg",
+      },
+      {
+        name: "Retargeting & remarketing",
+        img: "/services/masterimagesslider/digital/Retargeting-&-Remarketing.jpg",
+      },
+      {
+        name: "Review reputation & management",
+        img: "/services/masterimagesslider/digital/Review-and-Reputation-Management.jpg",
+      },
+      {
+        name: "SEO",
+        img: "/services/masterimagesslider/digital/SEO.jpg",
+      },
+      {
+        name: "Social media content",
+        img: "/services/masterimagesslider/digital/Social-Media-Marketing.jpg",
+      },
+      {
+        name: "web development",
+        img: "/services/masterimagesslider/digital/Website-Development.jpg",
+      },
+    ],
+  },
 
+  {
+    title: "Industry",
+    color: "#202020",
+    sliderData: [
+      {
+        name: "Solution for Lawyers",
+        img: "/services/masterimagesslider/industry/Solution-for-Lawyers.jpg",
+      },
+      {
+        name: "Solution for Doctors",
+        img: "/services/masterimagesslider/industry/Solution-for-Doctors.jpg",
+      },
+      {
+        name: "Solution for Restaurants",
+        img: "/services/masterimagesslider/industry/Solution-for-Restaurant.jpg",
+      },
+      {
+        name: "Solution for Tech Startups",
+        img: "/services/masterimagesslider/industry/Solution-for-Tech-Startups.jpg",
+      },
     ],
   },
 ];
+
 
 
 

@@ -78,12 +78,14 @@ const InnerSlider = ({ items }) => {
       >
         {/* Map through items and render each slide */}
         {items.map((item, idx) => (
-          <SwiperSlide key={idx}>
-            <div className={styles.innerCard}>
+          <SwiperSlide key={idx} >
+            <div className={styles.innerCard} style={{ backgroundImage: `url(${item.img})` }}>
               {/* Slide image */}
-              <Image width={130} height={100} src={item.icon} alt={`slide-${idx}`} />
+             
               {/* Slide title */}
-              <h5 className="mt-5 inner-title">{item.name}</h5>
+              <div className={styles.slideTitle}>
+                <h5 className="mt-5 inner-title px-3">{item.name}</h5>
+              </div>
             </div>
           </SwiperSlide>
         ))}

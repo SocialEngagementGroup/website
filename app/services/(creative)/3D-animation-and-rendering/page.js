@@ -1,6 +1,6 @@
 import HeroSection from "@/components/ServicePage/HeroSection/HeroSection";
 import IntroSection from "@/components/ServicePage/IntroSection/IntroSection";
-import { ThreeDAnimationData } from "@/app/services/(creative)/3D-animation-&-rendering/ThreeDAnimationData";
+import { ThreeDAnimationData } from "@/app/services/(creative)/3D-animation-and-rendering/ThreeDAnimationData";
 import CTA from "@/components/ServicePage/CTA/CTA";
 import CostofSection from "@/components/ServicePage/CostofSection/CostofSection";
 import ProfessionalBranding from "@/components/ServicePage/ProfessionalBranding/ProfessionalBranding";

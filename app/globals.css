@@ -234,26 +234,38 @@ button,
 
 .mySwiper .InnerSlider-module__RgP4Yq__innerCard {
 
-  text-align: center;
+  text-align: start;
   height: 382px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
+  justify-content: end;
   transition: box-shadow 0.3s ease;
   border: 5px solid black;
   border-radius: 20px;
-  /* Background and glass effect */
-  background-image: url('/bg/innersliderbg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
   color: #fff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
 }
+.mySwiper .InnerSlider-module__RgP4Yq__innerCard::after {
+  content: "";
+  position: absolute;
+  inset: 0;
 
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.1)
+  );
+
+  z-index: 0;
+}
 .mySwiper .swiper-slide {
   padding-bottom: 2rem;
 }
@@ -399,3 +411,5 @@ button,
   height: auto !important;
 }
 }
+
+
