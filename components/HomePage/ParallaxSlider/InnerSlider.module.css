@@ -43,12 +43,16 @@
   font-family: Inter;
   font-weight: bold;
   font-style: Regular;
-  font-size: 24px;
-  line-height: 35px;
+  font-size: 18px;
+  line-height: 28px;
   letter-spacing: 0;
-  width: 90%;
   color: #fff;
   text-transform: capitalize;
+}
+.slideTitle{
+  width: 100%;
+  height: 60px;
+
 }
 
 /* Optional paragraph inside card */

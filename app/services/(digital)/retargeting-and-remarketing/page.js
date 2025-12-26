@@ -6,7 +6,7 @@ import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrate
 import FAQ from "@/components/ServicePage/FAQ/FAQ";
 import CTA from "@/components/ServicePage/CTA/CTA";
 
-import { RetargetingServiceData } from "@/app/services/(digital)/retargeting-&-remarketing/RetargetingServiceData";
+import { RetargetingServiceData } from "@/app/services/(digital)/retargeting-and-remarketing/RetargetingServiceData";
 
 export const metadata = {
   title: {

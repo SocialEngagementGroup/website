@@ -164,11 +164,11 @@ export default function Navbar() {
                         </li>
                         <li className="flex items-center">
                           <FaRegHandPointRight className="mr-2" />
-                          <Link href="/services/3D-animation-&-rendering">3D Animation & Rendering</Link>
+                          <Link href="/services/3D-animation-and-rendering">3D Animation & Rendering</Link>
                         </li>
                         <li className="flex items-center">
                           <FaCameraRetro className="mr-2" />
-                          <Link href="/services/videography-&-photography">Videography & Photography</Link>
+                          <Link href="/services/videography-and-photography">Videography & Photography</Link>
                         </li>
                       </ul>
                     </div>
@@ -191,7 +191,7 @@ export default function Navbar() {
                         </li>
                         <li className="flex items-center">
                           <FaRegHandPointRight className="mr-2" />
-                          <Link href="/services/retargeting-&-remarketing">Retargeting & Remarketing</Link>
+                          <Link href="/services/retargeting-and-remarketing">Retargeting & Remarketing</Link>
                         </li>
                         <li className="flex items-center">
                           <FaGoogle className="mr-2" />
@@ -199,7 +199,7 @@ export default function Navbar() {
                         </li>
                         <li className="flex items-center">
                           <FaPencilAlt className="mr-2" />
-                          <Link href="/services/review-&-reputation-management">Review and Reputation Management</Link>
+                          <Link href="/services/review-and-reputation-management">Review & Reputation Management</Link>
                         </li>
                         <li className="flex items-center">
                           <FaGoogle className="mr-2" />

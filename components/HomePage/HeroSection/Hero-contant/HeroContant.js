@@ -33,7 +33,7 @@ const HeroContant = () => {
             rounded-lg text-base sm:text-lg mt-4
           `} 
         >
-          Grow with Purpose
+          Get Your Quote
         </button>
     </Link>
       </div>

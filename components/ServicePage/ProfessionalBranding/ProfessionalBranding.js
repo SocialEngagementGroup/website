@@ -36,9 +36,9 @@ const ProfessionalBranding = ({ heading, items, video }) => {
 
           {/* ---------- RIGHT: Video ---------- */}
           <div className="order-1 md:order-2">
-            <div className="flex justify-center overflow-hidden aspect-[4/3] w-full">
+            <div className="flex justify-center overflow-hidden aspect-[3/3] w-full">
               <video
-                className={`${styles.videoBox} h-full w-full object-cover`}
+                className={`${styles.videoBox} h-full w-full object-contain`}
                 autoPlay
                 loop
                 muted

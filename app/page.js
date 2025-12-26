@@ -19,9 +19,8 @@ const page = () => {
         </div>
        <ParallaxSliderSection/>
          <ClientsLogo />
-    
        <div className='bg-white'>
-       <BrandingSection/>
+         <BrandingSection/>
        </div>
        
     </>

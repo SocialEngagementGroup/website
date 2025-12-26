@@ -1,6 +1,6 @@
 import HeroSection from "@/components/ServicePage/HeroSection/HeroSection";
 import IntroSection from "@/components/ServicePage/IntroSection/IntroSection";
-import { VisualMediaData } from "@/app/services/(creative)/videography-&-photography/VisualMediaData";
+import { VisualMediaData } from "@/app/services/(creative)/videography-and-photography/VisualMediaData";
 import CTA from "@/components/ServicePage/CTA/CTA";
 import CostofSection from "@/components/ServicePage/CostofSection/CostofSection";
 import ProfessionalBranding from "@/components/ServicePage/ProfessionalBranding/ProfessionalBranding";

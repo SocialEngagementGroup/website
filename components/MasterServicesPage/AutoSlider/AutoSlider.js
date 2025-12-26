@@ -24,6 +24,7 @@ const LogoSwiper = ({ slides = [] }) => {
         modules={[Navigation]}
         spaceBetween={20}
         slidesPerView={4} // Show exactly 4 slides
+        loop={true}
         navigation={{
           prevEl: prevRef.current,
           nextEl: nextRef.current,
