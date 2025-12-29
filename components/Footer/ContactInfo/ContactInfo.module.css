@@ -29,3 +29,16 @@
   }
 }
 
+@media only screen and (max-width: 1464px) {
+  .contentboxInner {
+    padding: 24px;
+}
+}
+
+
+@media only screen and (max-width: 1310px) {
+  .contentboxInner {
+    padding: 23px;
+  
+}
+}

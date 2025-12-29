@@ -33,3 +33,5 @@ model Contact {
   message   String
   createdAt DateTime @default(now())
 }
+
+

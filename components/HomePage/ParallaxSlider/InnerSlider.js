@@ -3,12 +3,12 @@
 import { useEffect, useState, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay, Navigation } from 'swiper/modules';
-import { FaLongArrowAltLeft, FaLongArrowAltRight } from 'react-icons/fa'; // Import custom arrow icons
+import {  MdOutlineArrowBackIosNew, MdOutlineArrowForwardIos } from "react-icons/md"; // Import custom arrow icons
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation'; // Required for Swiper functionality
 import styles from './InnerSlider.module.css';
-import Image from 'next/image';
+
 
 const InnerSlider = ({ items }) => {
   // State to handle fade-in or animation after component loads
@@ -36,7 +36,7 @@ const InnerSlider = ({ items }) => {
     >
       {/* Custom Previous Arrow */}
       <div ref={prevRef} className={`${styles.swiperButtonPrev} ${styles.customArrow}`}>
-        <FaLongArrowAltLeft size={24} />
+        <MdOutlineArrowBackIosNew className={styles.arrowIcon} />
       </div>
 
       {/* Swiper Component */}
@@ -93,7 +93,7 @@ const InnerSlider = ({ items }) => {
 
       {/* Custom Next Arrow */}
       <div ref={nextRef} className={`${styles.swiperButtonNext} ${styles.customArrow}`}>
-        <FaLongArrowAltRight size={24} />
+        <MdOutlineArrowForwardIos className={styles.arrowIcon} />
       </div>
     </div>
   );

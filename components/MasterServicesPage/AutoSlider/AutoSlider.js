@@ -82,30 +82,30 @@ const AutoSlider = ({ slides = [] }) => {
       >
         {loading
           ? skeletonSlides.map((_, i) => (
-              <SwiperSlide key={`sk-${i}`}>
-                <div className={styles.cardLink}>
-                  <div className={`${styles.cardBox} ${styles.skeletonCard}`}>
-                    <span className={styles.skeletonText}>Loading...</span>
-                  </div>
+            <SwiperSlide key={`sk-${i}`}>
+              <div className={styles.cardLink}>
+                <div className={`${styles.cardBox} ${styles.skeletonCard}`}>
+                  <span className={styles.skeletonText}>Loading...</span>
                 </div>
-              </SwiperSlide>
-            ))
+              </div>
+            </SwiperSlide>
+          ))
           : slides.map((slide, i) => (
-              <SwiperSlide key={i}>
-                <Link href={slide.link} className={styles.cardLink}>
-                 <div className={styles.cardBox}>
-  <img
-    src={slide.bg}
-    alt={slide.title || "slide image"}
-    className={styles.cardImage}
-    loading="lazy"
-  />
-  <div className={styles.overlay} />
-  <h4 className={styles.cardTitle}>{slide.title}</h4>
-</div>
-                </Link>
-              </SwiperSlide>
-            ))}
+            <SwiperSlide key={i}>
+              <Link href={slide.link} className={styles.cardLink}>
+                <div className={styles.cardBox}>
+                  <img
+                    src={slide.bg}
+                    alt={slide.title || "slide image"}
+                    className={styles.cardImage}
+                    loading="lazy"
+                  />
+                  <div className={styles.overlay} />
+                  <h4 className={styles.cardTitle}>{slide.title}</h4>
+                </div>
+              </Link>
+            </SwiperSlide>
+          ))}
       </Swiper>
 
       <button
@@ -115,7 +115,7 @@ const AutoSlider = ({ slides = [] }) => {
         className={styles.prev}
         disabled={loading}
       >
-        <MdOutlineArrowBackIosNew size={34} />
+        <MdOutlineArrowBackIosNew className={styles.arrowIcon} />
       </button>
 
       <button
@@ -125,7 +125,7 @@ const AutoSlider = ({ slides = [] }) => {
         className={styles.next}
         disabled={loading}
       >
-        <MdOutlineArrowForwardIos size={34} />
+        <MdOutlineArrowForwardIos className={styles.arrowIcon} />
       </button>
     </div>
   );

@@ -10,7 +10,7 @@ const MasterServicesPage = () => {
       <HeroSection />
       <div className={styles.fade}></div>
 
-      <div className="bg-[#232326] py-8">
+      <div className="bg-[#232326] py-2 md:py-8">
         <div className="w-[90%] mx-auto">
           <section className="py-4 mt:4  md:mt-10">
             <h3 className="text-white mb-8">Creative</h3>
