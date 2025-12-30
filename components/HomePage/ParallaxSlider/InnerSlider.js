@@ -8,9 +8,10 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation'; // Required for Swiper functionality
 import styles from './InnerSlider.module.css';
-
+import Link from 'next/link';
 
 const InnerSlider = ({ items }) => {
+
   // State to handle fade-in or animation after component loads
   const [loaded, setLoaded] = useState(false);
 
@@ -79,6 +80,7 @@ const InnerSlider = ({ items }) => {
         {/* Map through items and render each slide */}
         {items.map((item, idx) => (
           <SwiperSlide key={idx} >
+           <Link href={item.link}>
             <div className={styles.innerCard} style={{ backgroundImage: `url(${item.img})` }}>
               {/* Slide image */}
              
@@ -87,6 +89,7 @@ const InnerSlider = ({ items }) => {
                 <h5 className="mt-5 inner-title px-3">{item.name}</h5>
               </div>
             </div>
+           </Link>
           </SwiperSlide>
         ))}
       </Swiper>
