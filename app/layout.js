@@ -8,10 +8,13 @@ import Head from "next/head"; // ✅ import Head
 
 export const metadata = {
   title: {
-    default: "Where human creativity meets AI | SEG", // default for pages without page metadata
-    template: "%s | SEG", // will replace %s with page-level title
+    default: "Where human creativity meets AI | SEG",
+    template: "%s | SEG",
   },
-  description: "Where human creativity meets AI | SEG", // default description
+  description: "Where human creativity meets AI | SEG",
+  icons: {
+    icon: "/favicon.ico", // or "/favicon.png"
+  },
 };
 
 

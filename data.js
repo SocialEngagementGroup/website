@@ -5,27 +5,33 @@ export const projects = [
     sliderData: [
       {
         name: "Branding",
-        img: "/services/masterimagesslider/creative/Branding.jpg",
+        img: "/services/masterimagesslider/creative/Branding.png",
+        link: "/services/branding",
       },
       {
         name: "Logo Design",
-        img: "/services/masterimagesslider/creative/Logo-Design.jpg",
+        img: "/services/masterimagesslider/creative/Logo-Design.png",
+        link: "/services/logo-design",
       },
       {
         name: "Content creation",
-        img: "/services/masterimagesslider/creative/Content-Creation.jpg",
+        img: "/services/masterimagesslider/creative/Content-Creation.png",
+        link: "/services/content-creation",
       },
       {
         name: "3D Animation & Rendering",
-        img: "/services/masterimagesslider/creative/3D-Animation-&-Rendering.jpg",
+        img: "/services/masterimagesslider/creative/3D-Animation-&-Rendering.png",
+        link: "/services/3D-animation-and-rendering",
       },
       {
         name: "Photography & videography",
-        img: "/services/masterimagesslider/creative/Videography-&-Photography.jpg",
+        img: "/services/masterimagesslider/creative/Videography-&-Photography.png",
+        link: "/services/videography-and-photography",
       },
       {
         name: "Social media content",
-        img: "/services/masterimagesslider/creative/Social-Media-Content.jpg",
+        img: "/services/masterimagesslider/creative/Social-Media-Content.png",
+        link: "/services/social-media-content",
       },
     ],
   },
@@ -36,35 +42,43 @@ export const projects = [
     sliderData: [
       {
         name: "google business profile management",
-        img: "/services/masterimagesslider/digital/Google-Business-Profile-Management.jpg",
+        img: "/services/masterimagesslider/digital/Google-Business-Profile-Management.png",
+        link: "/services/google-business-profile-management",
       },
       {
         name: "google location and-service ads",
-        img: "/services/masterimagesslider/digital/Google-Location-Services-Ads.jpg",
+        img: "/services/masterimagesslider/digital/Google-Location-Services-Ads.png",
+        link: "/services/google-location-services-ads",
       },
       {
         name: "pay-per-click",
-        img: "/services/masterimagesslider/digital/PPC-Campaigns.jpg",
+        img: "/services/masterimagesslider/digital/PPC-Campaigns.png",
+        link: "/services/ppc-campaigns",
       },
       {
         name: "Retargeting & remarketing",
-        img: "/services/masterimagesslider/digital/Retargeting-&-Remarketing.jpg",
+        img: "/services/masterimagesslider/digital/Retargeting-&-Remarketing.png",
+        link: "/services/retargeting-and-remarketing",
       },
       {
         name: "Review reputation & management",
-        img: "/services/masterimagesslider/digital/Review-and-Reputation-Management.jpg",
+        img: "/services/masterimagesslider/digital/Review-and-Reputation-Management.png",
+        link: "/services/review-and-reputation-management",
       },
       {
         name: "SEO",
-        img: "/services/masterimagesslider/digital/SEO.jpg",
+        img: "/services/masterimagesslider/digital/SEO.png",
+        link: "/services/seo",
       },
       {
         name: "Social media content",
-        img: "/services/masterimagesslider/digital/Social-Media-Marketing.jpg",
+        img: "/services/masterimagesslider/digital/Social-Media-Marketing.png",
+        link: "/services/social-media-marketing",
       },
       {
         name: "web development",
-        img: "/services/masterimagesslider/digital/Website-Development.jpg",
+        img: "/services/masterimagesslider/digital/Website-Development.png",
+        link: "/services/website-development",
       },
     ],
   },
@@ -75,19 +89,23 @@ export const projects = [
     sliderData: [
       {
         name: "Solution for Lawyers",
-        img: "/services/masterimagesslider/industry/Solution-for-Lawyers.jpg",
+        img: "/services/masterimagesslider/industry/Solution-for-Lawyers.png",
+        link: "/services/solution-for-lawyers",
       },
       {
         name: "Solution for Doctors",
-        img: "/services/masterimagesslider/industry/Solution-for-Doctors.jpg",
+        img: "/services/masterimagesslider/industry/Solution-for-Doctors.png",
+        link: "/services/solution-for-doctors",
       },
       {
         name: "Solution for Restaurants",
-        img: "/services/masterimagesslider/industry/Solution-for-Restaurant.jpg",
+        img: "/services/masterimagesslider/industry/Solution-for-Restaurant.png",
+        link: "/services/solution-for-restaurants",
       },
       {
         name: "Solution for Tech Startups",
-        img: "/services/masterimagesslider/industry/Solution-for-Tech-Startups.jpg",
+        img: "/services/masterimagesslider/industry/Solution-for-Tech-Startups.png",
+        link: "/services/solution-for-techstartups",
       },
     ],
   },

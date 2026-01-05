@@ -1,75 +1,134 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
+import React, { useEffect, useRef, useState, useMemo } from "react";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import styles from "./AutoSlider.module.css"; // Import the styles module
-import { MdOutlineArrowBackIosNew, MdOutlineArrowForwardIos } from 'react-icons/md'; // Import React icons
-const LogoSwiper = ({ slides = [] }) => {
+import styles from "./AutoSlider.module.css";
+import { MdOutlineArrowBackIosNew, MdOutlineArrowForwardIos } from "react-icons/md";
+
+const AutoSlider = ({ slides = [] }) => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
-  const [swiperLoaded, setSwiperLoaded] = useState(false);
+  const wrapperRef = useRef(null);
 
+  const [loading, setLoading] = useState(true);
+
+  // skeleton placeholders
+  const skeletonSlides = useMemo(() => Array.from({ length: 8 }), []);
+
+  // 🔹 control loading via useEffect
   useEffect(() => {
-    setSwiperLoaded(true);
+    if (slides && slides.length > 0) {
+      // small timeout makes it feel fast + smooth
+      const t = setTimeout(() => setLoading(false), 150);
+      return () => clearTimeout(t);
+    }
+  }, [slides]);
+
+  // hovered slide on top
+  useEffect(() => {
+    const wrapper = wrapperRef.current;
+    if (!wrapper) return;
+
+    const onOver = (e) => {
+      const slide = e.target.closest(".swiper-slide");
+      if (slide) slide.classList.add("isHoveredSlide");
+    };
+    const onOut = (e) => {
+      const slide = e.target.closest(".swiper-slide");
+      if (slide) slide.classList.remove("isHoveredSlide");
+    };
+
+    wrapper.addEventListener("pointerover", onOver);
+    wrapper.addEventListener("pointerout", onOut);
+
+    return () => {
+      wrapper.removeEventListener("pointerover", onOver);
+      wrapper.removeEventListener("pointerout", onOut);
+    };
   }, []);
 
   return (
-    <div className={styles.wrapper}>
+    <div ref={wrapperRef} className={styles.wrapper}>
       <Swiper
-        key={swiperLoaded ? 'loaded' : 'loading'}
         modules={[Navigation]}
-        spaceBetween={20}
-        slidesPerView={4} // Show exactly 4 slides
-        loop={true}
+        loop={!loading}
+        spaceBetween={14}
+        speed={450}
+        slidesPerGroup={1}
+        breakpoints={{
+          0: { slidesPerView: 1 },
+          480: { slidesPerView: 2 },
+          768: { slidesPerView: 3 },
+          1024: { slidesPerView: 4 },
+        }}
         navigation={{
           prevEl: prevRef.current,
           nextEl: nextRef.current,
         }}
         onSwiper={(swiper) => {
           setTimeout(() => {
-            if (swiper.params) {
-              swiper.params.navigation.prevEl = prevRef.current;
-              swiper.params.navigation.nextEl = nextRef.current;
-              swiper.navigation.destroy();
-              swiper.navigation.init();
-              swiper.navigation.update();
-            }
+            swiper.params.navigation.prevEl = prevRef.current;
+            swiper.params.navigation.nextEl = nextRef.current;
+            swiper.navigation.destroy();
+            swiper.navigation.init();
+            swiper.navigation.update();
           });
         }}
-        breakpoints={{
-          0: { slidesPerView: 1 },
-          640: { slidesPerView: 2 },
-          1024: { slidesPerView: 4 }, // Show 4 slides on large screens
-        }}
-        className={styles.sliderWrapper}
+        className={styles.slider}
       >
-        {slides.map((slide, i) => (
-          <SwiperSlide key={i}>
-            <Link href={slide.link}>
-              <div
-                className={styles.cardBox}
-                style={{ backgroundImage: `url(${slide.bg})` }}
-              >
-                <h4 className={styles.cardTitle}>{slide.title}</h4>
+        {loading
+          ? skeletonSlides.map((_, i) => (
+            <SwiperSlide key={`sk-${i}`}>
+              <div className={styles.cardLink}>
+                <div className={`${styles.cardBox} ${styles.skeletonCard}`}>
+                  <span className={styles.skeletonText}>Loading...</span>
+                </div>
               </div>
-            </Link>
-          </SwiperSlide>
-        ))}
+            </SwiperSlide>
+          ))
+          : slides.map((slide, i) => (
+            <SwiperSlide key={i}>
+              <Link href={slide.link} className={styles.cardLink}>
+                <div className={styles.cardBox}>
+                  <img
+                    src={slide.bg}
+                    alt={slide.title || "slide image"}
+                    className={styles.cardImage}
+                    loading="lazy"
+                  />
+                  <div className={styles.overlay} />
+                  <h4 className={styles.cardTitle}>{slide.title}</h4>
+                </div>
+              </Link>
+            </SwiperSlide>
+          ))}
       </Swiper>
 
-       {/* Custom Navigation Buttons */}
-      <div ref={prevRef} className={styles.swiperButtonPrev}>
-        <MdOutlineArrowBackIosNew size={80} /> {/* Left arrow icon */}
-      </div>
-      <div ref={nextRef} className={styles.swiperButtonNext}>
-        <MdOutlineArrowForwardIos size={80} /> {/* Right arrow icon */}
-      </div>
+      <button
+        ref={prevRef}
+        type="button"
+        aria-label="Previous"
+        className={styles.prev}
+        disabled={loading}
+      >
+        <MdOutlineArrowBackIosNew className={styles.arrowIcon} />
+      </button>
+
+      <button
+        ref={nextRef}
+        type="button"
+        aria-label="Next"
+        className={styles.next}
+        disabled={loading}
+      >
+        <MdOutlineArrowForwardIos className={styles.arrowIcon} />
+      </button>
     </div>
   );
 };
 
-export default LogoSwiper;
+export default AutoSlider;

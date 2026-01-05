@@ -16,7 +16,7 @@ const HeroSection = ({}) => {
         <div className="text-center">
 
           {/* ---------- Left Text (Second on mobile) ---------- */}
-          <div className="text-white content ">
+          <div className="text-white content">
             <h1 className={`${styles.title} pb-6`}>Where Human Creativity Meets AI-Powered Growth</h1>
             <PageSearch pages={pages} />
             <p className={`${styles.description} mt-4 md:mt-12 p1 pt-6`}>
