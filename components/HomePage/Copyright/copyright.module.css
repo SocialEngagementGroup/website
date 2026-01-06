@@ -1,36 +1,57 @@
 /* ✅ Main copyright text styling */
 .copyright {
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-weight: 400;
-  font-style: Regular;
   color: #fff;
   font-size: 24px;
   text-decoration: underline;
-
-  /* ✅ Center the text both horizontally and vertically */
-  position: absolute;
-  top: 30px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-
-  text-align: center;
+  text-align: start;
+  margin: 0;
 }
-
-/* ✅ Adjust top spacing for medium-large screens (≤ 1135px) */
-@media only screen and (max-width: 1135px) {
-  .copyright {
-    top: 20px;
-  }
+.copyrightContainer{
+  padding-top:5rem;
+ padding-bottom:1rem;
+}
+/* ✅ Footer list styling */
+.footerList {
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  color: #fff;
+  font-size: 24px;
+  text-decoration: underline;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
 }
 
 /* ✅ Mobile responsiveness (≤ 767px) */
 @media only screen and (max-width: 767px) {
-  .copyright {
-    position: relative; /* relative so it flows naturally */
-    top: 10px;
-    text-align: center;
-    font-size: 16px; /* smaller font for mobile */
+  /* Ensure that items stack vertically and change order */
+  .flex {
+    flex-direction: column-reverse; /* Reverse the order on mobile: list first, then copyright */
   }
+
+  /* Footer list styling on mobile: stack vertically */
+  .footerList {
+    display: block; /* Make the list items stack vertically */
+    gap: 10px;
+    text-align: center; /* Center the list items */
+  }
+
+  /* Copyright text styling on mobile: smaller font size */
+  .copyright {
+    font-size: 16px; /* Smaller font size for mobile */
+      text-align: center;
+  }
+
+  .footerList a {
+    font-size: 16px; /* Smaller font for links */
+  }
+  .copyrightContainer{
+  padding-top:1rem;
+ padding-bottom:3rem;
+}
 }
