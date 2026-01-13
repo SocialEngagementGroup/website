@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react"; // Import useRef
 import Link from "next/link";
 import { FaRegHandPointRight, FaPencilAlt, FaCameraRetro, FaGlobeAmericas, FaSearch, FaGoogle, FaPencilRuler, FaChartBar, FaBriefcase, FaHeartbeat, FaUtensils, FaLaptopCode } from "react-icons/fa"; // Importing icons
 import styles from './Navbar.module.css';
@@ -11,11 +11,24 @@ export default function Navbar() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
 
+  // Create refs for the dropdown and button
+  const dropdownRef = useRef(null);
+  const buttonRef = useRef(null);
+
   useEffect(() => {
     const handleScroll = () => setIsSticky(window.scrollY > 20);
     handleScroll();
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    
+    // Close the dropdown if clicked outside
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target) && !buttonRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
@@ -54,6 +67,7 @@ export default function Navbar() {
             </a>
 
             <button
+              ref={buttonRef} // Assign ref to button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center w-10 h-10 justify-center text-sm text-white md:hidden focus:outline-none ml-3"
             >
@@ -105,7 +119,6 @@ export default function Navbar() {
               </li>
 
               {/* Services */}
-
               <li
                 className={styles.dropdownScroll + " relative group"}
                 onMouseEnter={() => setServicesOpen(true)}
@@ -121,7 +134,7 @@ export default function Navbar() {
                       }`}
                     fill="none"
                     stroke="currentColor"
-                    strokeWidth="3" // Increased strokeWidth for bolder icon
+                    strokeWidth="3"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -134,7 +147,8 @@ export default function Navbar() {
 
                 {/* Dropdown */}
                 <div
-                  className={`absolute md:left-1/2 top-[33px] md:-translate-x-1/2 mt-3 w-full md:w-[900px] bg-black rounded-xl shadow-2xl z-50 ${servicesOpen ? "block" : "hidden"
+                  ref={dropdownRef} // Assign ref to dropdown
+                  className={`dropdown absolute md:left-1/2 top-[33px] md:-translate-x-1/2 mt-3 w-full md:w-[900px] bg-black rounded-xl shadow-2xl z-50 ${servicesOpen ? "block" : "hidden"
                     }`}
                 >
                   <div className={styles.dropdownContent + " grid grid-cols-1 md:grid-cols-3 gap-6 p-6 text-white"}>
@@ -244,7 +258,6 @@ export default function Navbar() {
                 </div>
               </li>
 
-
               {/* Contact */}
               <li>
                 <Link
@@ -262,8 +275,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
-
-
-
-

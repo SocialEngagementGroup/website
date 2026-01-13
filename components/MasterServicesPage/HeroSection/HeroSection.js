@@ -11,7 +11,7 @@ const HeroSection = ({}) => {
    
     >
       <div
-        className={`${styles.containerCustom} container-fluid w-[75%] mx-auto py-6 md:py-25`}
+        className={`${styles.containerCustom} container-fluid w-[75%] mx-auto py-6 md:pt-25 pt-16 md:py-25`}
       >
         <div className="text-center">
 
@@ -19,7 +19,7 @@ const HeroSection = ({}) => {
           <div className="text-white content">
             <h1 className={`${styles.title} pb-6`}>Where Human Creativity Meets AI-Powered Growth</h1>
             <PageSearch pages={pages} />
-            <p className={`${styles.description} mt-4 md:mt-12 p1 pt-6`}>
+            <p className={`${styles.description} mt-4 md:mt-12 p1 pt-6 px-5`}>
               We tell your story across every digital touchpoint — blending creativity and automation so your business grows & converts
             </p>
 

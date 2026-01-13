@@ -22,7 +22,7 @@ export const PrivacyPolicy = {
       },
       {
         text:
-          "<strong>Your Rights:</strong> Depending on your location, you may have the right to access, correct, or delete your personal data. To exercise these rights or to withdraw consent for marketing communications, please contact us at our registered business address or via our official contact email.",
+          "<strong>Your Rights:</strong> Depending on your location, you may have the right to access, correct, or delete your personal data. To exercise these rights or to withdraw consent for marketing communications, please <a href='https://www.socialengagementgroup.com/contact-us' target='_blank'>contact us</a> at our registered business address or via our official contact email.",
       },
         {
         text:

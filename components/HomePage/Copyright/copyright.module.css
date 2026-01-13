@@ -3,21 +3,20 @@
   font-family: Inter, sans-serif;
   font-weight: 400;
   color: #fff;
-  font-size: 24px;
-  text-decoration: underline;
+  font-size: 18px;
   text-align: start;
   margin: 0;
 }
 .copyrightContainer{
   padding-top:5rem;
- padding-bottom:1rem;
+  padding-bottom:1rem;
 }
 /* ✅ Footer list styling */
 .footerList {
   font-family: Inter, sans-serif;
   font-weight: 400;
   color: #fff;
-  font-size: 24px;
+  font-size: 18px;
   text-decoration: underline;
   list-style: none;
   padding: 0;
@@ -38,13 +37,13 @@
   .footerList {
     display: block; /* Make the list items stack vertically */
     gap: 10px;
-    text-align: center; /* Center the list items */
+    text-align: start; /* Center the list items */
   }
 
   /* Copyright text styling on mobile: smaller font size */
   .copyright {
     font-size: 16px; /* Smaller font size for mobile */
-      text-align: center;
+      text-align: start;
   }
 
   .footerList a {
@@ -52,6 +51,6 @@
   }
   .copyrightContainer{
   padding-top:1rem;
- padding-bottom:3rem;
+  padding-bottom:1.8rem;
 }
 }

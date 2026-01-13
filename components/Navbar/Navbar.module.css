@@ -146,3 +146,10 @@
   color: #e3d3cc; /* Icon color on hover */
   transform: rotate(180deg); /* Optional: Rotate icon on hover */
 }
+/* Scrollable dropdown */
+@media (max-width: 767px) {
+  .dropdown {
+    max-height: 300px; /* Set a max-height to limit the dropdown height */
+    overflow-y: auto; /* Add scrolling to dropdown */
+  }
+}

@@ -11,7 +11,7 @@ export const termsandconditions = {
       },
       {
         text:
-          "What Are Cookies? Cookies are small text files placed on your device by websites that you visit. They are widely used to make websites function more efficiently and to provide information to the site's owners.",
+          "<strong>What Are Cookies?</strong> Cookies are small text files placed on your device by websites that you visit. They are widely used to make websites function more efficiently and to provide information to the site's owners.",
       },
       {
         title: "Types of Cookies We Use:",
