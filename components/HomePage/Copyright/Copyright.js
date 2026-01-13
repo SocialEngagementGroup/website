@@ -4,6 +4,8 @@ import Link from 'next/link';
 
 // ✅ Simple reusable Copyright component
 const Copyright = () => {
+  const currentYear = new Date().getFullYear(); // Get the current year
+
   return (
     <>
       <div className={`${styles.copyrightContainer} md:flex flex-wrap justify-between mx-auto w-[89%]`}>
@@ -11,7 +13,7 @@ const Copyright = () => {
         {/* ✅ Copyright Text */}
         <div className="md:w-1/2 order-2 md:order-1">
           <p className={styles.copyright}>
-            2025 All Rights Reserved. Social Engagement Group.
+            {currentYear} All Rights Reserved. Social Engagement Group.
           </p>
         </div>
 
@@ -21,6 +23,7 @@ const Copyright = () => {
             {/* Link component without <a> tag (Next.js 13 and above) */}
             <li><Link href="/terms-and-conditions">Terms of Service</Link></li>
             <li><Link href="/legal">Legal</Link></li>
+            <li><Link href="/cookies">Cookies</Link></li>
             {/* <li><Link href="/cookies">Cookies</Link></li> */}
           </ul>
         </div>

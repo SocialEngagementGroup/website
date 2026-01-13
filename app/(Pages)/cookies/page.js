@@ -1,7 +1,7 @@
 import React from 'react'
 import HeroSection from '@/components/LegalPage/HeroSection/HeroSection'
-import { termsandconditions } from '@/app/(Pages)/terms-and-conditions/data'
-import BodyContent from '@/components/LegalPage/Content/BodyContent'
+import { termsandconditions } from '@/app/(Pages)/cookies/data'
+import CookiesBodyContent from '@/components/LegalPage/Content/CookiesBodyContent'
 
 const page = () => {
   return (
@@ -13,7 +13,7 @@ const page = () => {
       />
       
       {/* Pass content sections to BodyContent */}
-      <BodyContent sections={termsandconditions.content.sections} />
+      <CookiesBodyContent sections={termsandconditions.content.sections} />
     </div>
   )
 }
