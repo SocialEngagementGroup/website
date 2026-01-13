@@ -31,7 +31,7 @@ const Copyright = () => {
 
            
         {/* ✅ Copyright Text */}
-        <div className="md:w-1/2 block md:hidden mt-4 md:mt-8">
+        <div className="md:w-1/2 block md:hidden mt-8 md:mt-8">
           <p className={styles.copyright}>
             Social Engagement Group <br/> © {currentYear} | All rights reserved
           </p>

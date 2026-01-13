@@ -37,13 +37,13 @@
   .footerList {
     display: block; /* Make the list items stack vertically */
     gap: 10px;
-    text-align: start; /* Center the list items */
+    text-align: center;
   }
 
   /* Copyright text styling on mobile: smaller font size */
   .copyright {
     font-size: 16px; /* Smaller font size for mobile */
-      text-align: start;
+    text-align: center;
   }
 
   .footerList a {
