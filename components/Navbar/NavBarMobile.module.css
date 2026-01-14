@@ -1,0 +1,45 @@
+.dropdownButton{
+    font-size: 16px;
+    font-weight: normal !important;
+   width: 90%;
+   margin: auto;
+
+}
+
+/* CSS for SVG icons */
+.svgicon svg {
+  color: #232326;  /* Set a dark color */
+  font-size: 28px;
+  background: #d8bfb2;  /* Set the background color */
+  padding: 8px;  /* Add padding */
+  border-radius: 10px;  /* Add rounded corners */
+  transition: transform 0.3s ease;  /* Add smooth rotation transition */
+}
+
+.svgicon svg:hover {
+  transform: scale(1.1);  /* Slightly scale up the icon on hover */
+}
+.svgicon  li{
+    color: black;
+}
+
+.customBorder{
+ position: relative;
+}
+
+
+
+.svgicon {
+  margin-top: 25px;
+}
+
+.svgicon a {
+  font-size: 14px;
+}
+
+.svgicon {
+  width: 90%;
+  margin:20px auto;
+  border-top: 1px solid gray;
+  padding-top: 20px;
+}
