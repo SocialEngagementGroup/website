@@ -140,12 +140,13 @@ export default function Navbar() {
         </div>
 
         {/* UPDATED Menu Items wrapper + scroll on UL */}
-        <div
-          className={`transition-all duration-500 transform fixed top-[65px] w-full bg-white z-[999]
+<div
+  className={`fixed top-[65px] left-0 w-full bg-white z-[999]
     h-[calc(100dvh-65px)] flex flex-col overflow-hidden
-    ${isMobileMenuOpen ? "translate-x-0 left-0" : "translate-x-full left-8"}
+    transition-transform duration-500 ease-in-out
+    ${isMobileMenuOpen ? "translate-x-0" : "translate-x-[calc(100%+2rem)]"}
   `}
-        >
+>
           <ul className="space-y-4 p-5 flex-1 overflow-y-auto overflow-x-hidden overscroll-contain touch-pan-y">
             <li>
               <Link
