@@ -112,7 +112,6 @@ const ContactForm = ({ layout = "stacked", className = "" }) => {
           placeholder="Phone Number*"
           {...register("phone")}
           required
-          pattern="^[0-9+\-()\s]+$"
           className={inputClass}
         />
 
