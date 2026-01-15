@@ -82,7 +82,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`md:hidden ${styles.navbarShell}`}>
+      <nav className={`md:hidden h-full ${styles.navbarShell}`}>
         {/* Inner bar (animates to 95% on sticky via CSS) */}
         <div
           className={`${styles.navbarInner} ${
