@@ -23,9 +23,8 @@ export default function Navbar() {
   const [isSticky, setIsSticky] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Each dropdown has its own open/close state
   const [openDropdown, setOpenDropdown] = useState({
-    creative: true, // default open (Creative Services)
+    creative: true,
     digital: false,
     industry: false,
   });
@@ -82,13 +81,12 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Mobile Navbar */}
       <nav
-        className={`md:hidden fixed top-0 right-0 w-full z-[999] bg-black ${isMobileMenuOpen ? "h-full" : "h-[65px]"
-          } transition-all duration-500`}
+        className={`md:hidden fixed top-0 right-0 w-full z-[999] bg-black ${
+          isMobileMenuOpen ? "h-full" : "h-[65px]"
+        } transition-all duration-500`}
       >
         <div className="container mx-auto flex justify-between items-center py-2 px-2 md:px-0 ">
-          {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 mt-1">
             <div className="relative w-[45px] h-[42px]">
               <Image
@@ -101,17 +99,15 @@ export default function Navbar() {
           </Link>
 
           <div className="flex space-x-5">
-            {/* Contact Us Button */}
             <a
               href="https://calendly.com/itseg/segmeet"
               target="_blank"
               rel="noopener noreferrer"
-              className={`Contact-btn border capitalize font-bold font-sans text-[18px] rounded-[14px] cursor-pointer md:py-1.5 pb-1.5 pt-1.5 px-3 md:px-8 transition border-white text-black bg-white`}
+              className="Contact-btn border capitalize font-bold font-sans text-[18px] rounded-[14px] cursor-pointer md:py-1.5 pb-1.5 pt-1.5 px-3 md:px-8 transition border-white text-black bg-white"
             >
               Book a Call
             </a>
 
-            {/* Burger Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-white z-[1000]"
@@ -143,12 +139,14 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Menu Items */}
+        {/* UPDATED Menu Items wrapper + scroll on UL */}
         <div
-          className={`transition-all duration-500 transform ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-            } fixed right-0 top-[65px] w-full h-[calc(100vh-65px)] bg-white z-[999] overflow-y-auto overflow-x-hidden overscroll-contain touch-pan-y`}
+          className={`transition-all duration-500 transform ${
+            isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          } fixed right-0 top-[65px] w-full bg-white z-[999]
+             h-[calc(100dvh-65px)] flex flex-col overflow-hidden`}
         >
-          <ul className="space-y-4 p-5">
+          <ul className="space-y-4 p-5 flex-1 overflow-y-auto overflow-x-hidden overscroll-contain touch-pan-y">
             <li>
               <Link
                 href="/"
@@ -180,8 +178,9 @@ export default function Navbar() {
               >
                 Creative Services
                 <svg
-                  className={`w-5 h-5 ml-2 transition-transform ${openDropdown.creative ? "rotate-180" : ""
-                    }`}
+                  className={`w-5 h-5 ml-2 transition-transform ${
+                    openDropdown.creative ? "rotate-180" : ""
+                  }`}
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="3"
@@ -266,8 +265,9 @@ export default function Navbar() {
               >
                 Digital Services
                 <svg
-                  className={`w-5 h-5 ml-2 transition-transform ${openDropdown.digital ? "rotate-180" : ""
-                    }`}
+                  className={`w-5 h-5 ml-2 transition-transform ${
+                    openDropdown.digital ? "rotate-180" : ""
+                  }`}
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="3"
@@ -370,8 +370,9 @@ export default function Navbar() {
               >
                 Industry Services
                 <svg
-                  className={`w-5 h-5 ml-2 transition-transform ${openDropdown.industry ? "rotate-180" : ""
-                    }`}
+                  className={`w-5 h-5 ml-2 transition-transform ${
+                    openDropdown.industry ? "rotate-180" : ""
+                  }`}
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="3"
