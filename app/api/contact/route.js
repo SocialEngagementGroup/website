@@ -1,5 +1,14 @@
 import { NextResponse } from "next/server";
 
+function fetchWithTimeout(url, options = {}, timeoutMs = 8000) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+
+  return fetch(url, { ...options, signal: controller.signal }).finally(() =>
+    clearTimeout(timer)
+  );
+}
+
 export async function POST(req) {
   try {
     const { name, phone, email, message, business, recaptchaToken } =
@@ -25,56 +34,99 @@ export async function POST(req) {
       );
     }
 
-    const verifyRes = await fetch(
+    const verifyRes = await fetchWithTimeout(
       "https://www.google.com/recaptcha/api/siteverify",
       {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams({ secret, response: recaptchaToken }),
-      }
+      },
+      8000
     );
+
+    if (!verifyRes.ok) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: "reCAPTCHA verify request failed",
+          status: verifyRes.status,
+        },
+        { status: 502 }
+      );
+    }
 
     const verifyData = await verifyRes.json();
 
     if (!verifyData.success) {
       return NextResponse.json(
-        { success: false, error: "reCAPTCHA verification failed" },
+        {
+          success: false,
+          error: "reCAPTCHA verification failed",
+          verifyData, // ✅ shows exact reason codes
+        },
         { status: 400 }
       );
     }
 
-    // 3) Trigger n8n webhook (fire-and-forget)
+    // 3) Trigger n8n webhook (DEBUG: await so we know if it actually worked)
     const webhookUrl = process.env.N8N_WEBHOOK_URL;
     if (!webhookUrl) {
       return NextResponse.json(
-        { success: false, error: "Missing N8N_WEBHOOK_URL in environment variables" },
+        {
+          success: false,
+          error: "Missing N8N_WEBHOOK_URL in environment variables",
+        },
         { status: 500 }
       );
     }
 
-    fetch(webhookUrl, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name,
-        phone,
-        email,
-        business,
-        message,
-        source: "website-contact-form",
-        submittedAt: new Date().toISOString(),
-      }),
-    }).catch((e) => {
-      console.error("n8n trigger failed:", e);
-    });
+    const n8nRes = await fetchWithTimeout(
+      webhookUrl,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          phone,
+          email,
+          business,
+          message,
+          source: "website-contact-form",
+          submittedAt: new Date().toISOString(),
+        }),
+      },
+      8000
+    );
 
-    // Respond immediately so the request never times out
-    return NextResponse.json({ success: true, n8nTriggered: true });
+    const n8nText = await n8nRes.text();
+
+    if (!n8nRes.ok) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: "n8n webhook failed",
+          n8nStatus: n8nRes.status,
+          n8nBody: n8nText,
+        },
+        { status: 502 }
+      );
+    }
+
+    return NextResponse.json({
+      success: true,
+      n8nTriggered: true,
+      n8nStatus: n8nRes.status,
+    });
   } catch (error) {
+    const isAbort = error?.name === "AbortError";
     console.error("Contact API Error:", error);
+
     return NextResponse.json(
-      { success: false, error: error?.message || "Unknown error" },
-      { status: 500 }
+      {
+        success: false,
+        error: isAbort ? "Request timed out" : error?.message || "Unknown error",
+      },
+      { status: isAbort ? 504 : 500 }
     );
   }
 }
