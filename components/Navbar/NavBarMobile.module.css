@@ -44,25 +44,57 @@
   padding-top: 20px;
 }
 
+/* Navbar shell stays stable */
+.navbarShell {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: top 250ms ease;
+}
 
-.navbarSticky {
-  width:95%;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+/* Inner bar is what animates */
+.navbarInner {
+  height: 65px;
+  width: 100%;
+  margin: 0 auto;
+  background: #212125;
+  transition: transform 350ms cubic-bezier(0.22, 1, 0.36, 1),
+              border-radius 350ms cubic-bezier(0.22, 1, 0.36, 1),
+              background-color 350ms cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 350ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+/* Sticky look */
+.stickyInner {
+  transform: translateY(20px) scaleX(0.95);
   background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
   border-radius: 16px;
-  transition: all 0.5s ease;
 }
 
-.navbarDefault {
+.menuPanel {
+  position: fixed;
+  right: 0;
+  top: 65px;
   width: 100%;
-  top: 0;
-  left: 0;
-  transform: none;
-  background: #212125;
-  transition: all 0.5s ease;
+  height: calc(100dvh - 65px);
+  background: white;
+  z-index: 999;
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 450ms cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 200ms ease;
+  will-change: transform;
+}
+
+.menuPanelOpen {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
 }
