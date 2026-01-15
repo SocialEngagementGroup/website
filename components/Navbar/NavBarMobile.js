@@ -1,15 +1,34 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { FaPencilAlt, FaPencilRuler, FaRegHandPointRight, FaCameraRetro, FaSearch, FaGlobeAmericas, FaChartBar, FaGoogle, FaBriefcase, FaHeartbeat, FaUtensils, FaLaptopCode } from "react-icons/fa";
-import styles from './NavBarMobile.module.css';
+import {
+  FaPencilAlt,
+  FaPencilRuler,
+  FaRegHandPointRight,
+  FaCameraRetro,
+  FaSearch,
+  FaGlobeAmericas,
+  FaChartBar,
+  FaGoogle,
+  FaBriefcase,
+  FaHeartbeat,
+  FaUtensils,
+  FaLaptopCode,
+} from "react-icons/fa";
+import styles from "./NavBarMobile.module.css";
 
 export default function Navbar() {
   const [isSticky, setIsSticky] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(1); // Set to 1 to open the first dropdown (Creative Services) by default
+
+  // Each dropdown has its own open/close state
+  const [openDropdown, setOpenDropdown] = useState({
+    creative: true, // default open (Creative Services)
+    digital: false,
+    industry: false,
+  });
 
   useEffect(() => {
     const handleScroll = () => setIsSticky(window.scrollY > 20);
@@ -17,19 +36,57 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleDropdownToggle = (dropdownId) => {
-    if (openDropdown === dropdownId) {
-      setOpenDropdown(0); // Close the dropdown if the same one is clicked again
-    } else {
-      setOpenDropdown(dropdownId); // Open the clicked dropdown
-    }
+useEffect(() => {
+  const html = document.documentElement;
+  const body = document.body;
+
+  if (!isMobileMenuOpen) return;
+
+  const scrollY = window.scrollY;
+
+  html.style.height = "100%";
+  html.style.overflow = "hidden";
+
+  body.style.position = "fixed";
+  body.style.top = `-${scrollY}px`;
+  body.style.left = "0";
+  body.style.right = "0";
+  body.style.width = "100%";
+  body.style.overflow = "hidden";
+  body.style.touchAction = "none";
+
+  return () => {
+    const y = Math.abs(parseInt(body.style.top || "0", 10));
+
+    html.style.height = "";
+    html.style.overflow = "";
+
+    body.style.position = "";
+    body.style.top = "";
+    body.style.left = "";
+    body.style.right = "";
+    body.style.width = "";
+    body.style.overflow = "";
+    body.style.touchAction = "";
+
+    window.scrollTo(0, y);
+  };
+}, [isMobileMenuOpen]);
+
+  const handleDropdownToggle = (key) => {
+    setOpenDropdown((prev) => ({
+      ...prev,
+      [key]: !prev[key],
+    }));
   };
 
   return (
     <>
       {/* Mobile Navbar */}
       <nav
-        className={`md:hidden fixed top-0 right-0 w-full z-[999] bg-black ${isMobileMenuOpen ? "h-full" : "h-[65px]"} transition-all duration-500`}
+        className={`md:hidden fixed top-0 right-0 w-full z-[999] bg-black ${
+          isMobileMenuOpen ? "h-full" : "h-[65px]"
+        } transition-all duration-500`}
       >
         <div className="container mx-auto flex justify-between items-center py-2 px-2 md:px-0 ">
           {/* Logo */}
@@ -58,7 +115,7 @@ export default function Navbar() {
             {/* Burger Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-white z-[1000]" // Ensuring the button is on top of other elements
+              className="text-white z-[1000]"
             >
               <svg
                 className="w-7 h-7"
@@ -88,70 +145,112 @@ export default function Navbar() {
         </div>
 
         {/* Menu Items */}
-        <div
-          className={`transition-all duration-500 transform ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"} fixed top-0 right-0 w-full mt-15 h-full bg-white z-[999]`}
-        >
+<div
+  className={`transition-all duration-500 transform ${
+    isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+  } fixed right-0 top-[65px] w-full h-[calc(100vh-65px)] bg-white z-[999] overflow-y-auto overflow-x-hidden overscroll-contain touch-pan-y`}
+>
           <ul className="space-y-4 p-5">
             <li>
-              <Link href="/" className="text-black text-lg" onClick={() => setIsMobileMenuOpen(false)}>
+              <Link
+                href="/"
+                className="text-black text-lg"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
                 Home
               </Link>
             </li>
+
             <li>
-              <Link href="/services" className={styles.customBorder + " text-black text-lg"} onClick={() => setIsMobileMenuOpen(false)}>
+              <Link
+                href="/services"
+                className={styles.customBorder + " text-black text-lg"}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
                 Services
               </Link>
             </li>
 
             {/* Creative Services Dropdown */}
             <li>
-              <button className={styles.dropdownButton + " text-black w-full text-left flex justify-between items-center"} onClick={() => handleDropdownToggle(1)}>
+              <button
+                className={
+                  styles.dropdownButton +
+                  " text-black w-full text-left flex justify-between items-center"
+                }
+                onClick={() => handleDropdownToggle("creative")}
+              >
                 Creative Services
                 <svg
-                  className={`w-5 h-5 ml-2 transition-transform ${openDropdown === 1 ? "rotate-180" : ""}`}
+                  className={`w-5 h-5 ml-2 transition-transform ${
+                    openDropdown.creative ? "rotate-180" : ""
+                  }`}
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="3"
                   viewBox="0 0 24 24"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
-              {openDropdown === 1 && (
+
+              {openDropdown.creative && (
                 <ul className={styles.svgicon + " space-y-4"}>
                   <li className="flex items-center">
                     <FaPencilAlt className="mr-2" />
-                    <Link href="/services/branding" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link
+                      href="/services/branding"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
                       Branding
                     </Link>
                   </li>
                   <li className="flex items-center">
                     <FaPencilRuler className="mr-2" />
-                    <Link href="/services/logo-design" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link
+                      href="/services/logo-design"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
                       Logo Design
                     </Link>
                   </li>
                   <li className="flex items-center">
                     <FaRegHandPointRight className="mr-2" />
-                    <Link href="/services/content-creation" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link
+                      href="/services/content-creation"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
                       Content Creation
                     </Link>
                   </li>
                   <li className="flex items-center">
                     <FaCameraRetro className="mr-2" />
-                    <Link href="/services/social-media-content" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link
+                      href="/services/social-media-content"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
                       Social Media Content
                     </Link>
                   </li>
                   <li className="flex items-center">
                     <FaRegHandPointRight className="mr-2" />
-                    <Link href="/services/3D-animation-and-rendering" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link
+                      href="/services/3D-animation-and-rendering"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
                       3D Animation & Rendering
                     </Link>
                   </li>
                   <li className="flex items-center">
                     <FaCameraRetro className="mr-2" />
-                    <Link href="/services/videography-and-photography" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link
+                      href="/services/videography-and-photography"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
                       Videography & Photography
                     </Link>
                   </li>
@@ -161,65 +260,102 @@ export default function Navbar() {
 
             {/* Digital Services Dropdown */}
             <li>
-              <button className={styles.dropdownButton + " text-black w-full text-left flex justify-between items-center"} onClick={() => handleDropdownToggle(2)}>
+              <button
+                className={
+                  styles.dropdownButton +
+                  " text-black w-full text-left flex justify-between items-center"
+                }
+                onClick={() => handleDropdownToggle("digital")}
+              >
                 Digital Services
                 <svg
-                  className={`w-5 h-5 ml-2 transition-transform ${openDropdown === 2 ? "rotate-180" : ""}`}
+                  className={`w-5 h-5 ml-2 transition-transform ${
+                    openDropdown.digital ? "rotate-180" : ""
+                  }`}
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="3"
                   viewBox="0 0 24 24"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
-              {openDropdown === 2 && (
+
+              {openDropdown.digital && (
                 <ul className={styles.svgicon + " space-y-4"}>
                   <li className="flex items-center">
                     <FaSearch className="mr-2" />
-                    <Link href="/services/seo" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link
+                      href="/services/seo"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
                       SEO
                     </Link>
                   </li>
                   <li className="flex items-center">
                     <FaChartBar className="mr-2" />
-                    <Link href="/services/ppc-campaigns" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link
+                      href="/services/ppc-campaigns"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
                       PPC Campaigns
                     </Link>
                   </li>
                   <li className="flex items-center">
                     <FaRegHandPointRight className="mr-2" />
-                    <Link href="/services/retargeting-and-remarketing" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link
+                      href="/services/retargeting-and-remarketing"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
                       Retargeting & Remarketing
                     </Link>
                   </li>
                   <li className="flex items-center">
                     <FaGoogle className="mr-2" />
-                    <Link href="/services/google-business-profile-management" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link
+                      href="/services/google-business-profile-management"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
                       Google Business Profile Management
                     </Link>
                   </li>
                   <li className="flex items-center">
                     <FaPencilAlt className="mr-2" />
-                    <Link href="/services/review-and-reputation-management" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link
+                      href="/services/review-and-reputation-management"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
                       Review & Reputation Management
                     </Link>
                   </li>
                   <li className="flex items-center">
                     <FaGoogle className="mr-2" />
-                    <Link href="/services/google-location-services-ads" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link
+                      href="/services/google-location-services-ads"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
                       Google Location Services Ads
                     </Link>
                   </li>
                   <li className="flex items-center">
                     <FaCameraRetro className="mr-2" />
-                    <Link href="/services/social-media-marketing" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link
+                      href="/services/social-media-marketing"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
                       Social Media Marketing
                     </Link>
                   </li>
                   <li className="flex items-center">
                     <FaGlobeAmericas className="mr-2" />
-                    <Link href="/services/website-development" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link
+                      href="/services/website-development"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
                       Website Development
                     </Link>
                   </li>
@@ -229,46 +365,81 @@ export default function Navbar() {
 
             {/* Industry Services Dropdown */}
             <li>
-              <button className={styles.dropdownButton + " text-black w-full text-left flex justify-between items-center"} onClick={() => handleDropdownToggle(3)}>
+              <button
+                className={
+                  styles.dropdownButton +
+                  " text-black w-full text-left flex justify-between items-center"
+                }
+                onClick={() => handleDropdownToggle("industry")}
+              >
                 Industry Services
                 <svg
-                  className={`w-5 h-5 ml-2 transition-transform ${openDropdown === 3 ? "rotate-180" : ""}`}
+                  className={`w-5 h-5 ml-2 transition-transform ${
+                    openDropdown.industry ? "rotate-180" : ""
+                  }`}
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="3"
                   viewBox="0 0 24 24"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
-              {openDropdown === 3 && (
+
+              {openDropdown.industry && (
                 <ul className={styles.svgicon + " space-y-4"}>
                   <li className="flex items-center">
                     <FaBriefcase className="mr-2" />
-                    <Link href="/services/solution-for-lawyers" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link
+                      href="/services/solution-for-lawyers"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
                       Solution for Lawyers
                     </Link>
                   </li>
                   <li className="flex items-center">
                     <FaHeartbeat className="mr-2" />
-                    <Link href="/services/solution-for-doctors" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link
+                      href="/services/solution-for-doctors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
                       Solution for Doctors
                     </Link>
                   </li>
                   <li className="flex items-center">
                     <FaUtensils className="mr-2" />
-                    <Link href="/services/solution-for-restaurants" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link
+                      href="/services/solution-for-restaurants"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
                       Solution for Restaurants
                     </Link>
                   </li>
                   <li className="flex items-center">
                     <FaLaptopCode className="mr-2" />
-                    <Link href="/services/solution-for-techstartups" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link
+                      href="/services/solution-for-techstartups"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
                       Solution for Tech Startups
                     </Link>
                   </li>
                 </ul>
               )}
+            </li>
+
+            <li>
+              <Link
+                href="/contact-us"
+                className="text-black text-lg"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contact Us
+              </Link>
             </li>
           </ul>
         </div>
