@@ -5,6 +5,16 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { schema } from "@/lib/validationSchema"; // Adjust the import path accordingly
 import ReCAPTCHA from "react-google-recaptcha";
+import styles from "./contactForm.module.css";
+const AnimatedDots = () => {
+  return (
+    <span className={styles.dots} aria-hidden="true">
+      <span className={styles.dot}>.</span>
+      <span className={`${styles.dot} ${styles.dot2}`}>.</span>
+      <span className={`${styles.dot} ${styles.dot3}`}>.</span>
+    </span>
+  );
+};
 
 const ContactForm = ({ layout = "stacked", className = "" }) => {
   const {
@@ -15,7 +25,7 @@ const ContactForm = ({ layout = "stacked", className = "" }) => {
     formState: { isSubmitting, isValid },
   } = useForm({
     resolver: yupResolver(schema),
-    mode: "onSubmit",  // Validation happens only when submitting the form
+    mode: "onChange",  // Validation happens only when submitting the form
     shouldUseNativeValidation: false, // 👈 browser tooltips
   });
 
@@ -35,12 +45,11 @@ const ContactForm = ({ layout = "stacked", className = "" }) => {
 
   const values = watch();
   const canShowCaptcha =
-    isValid &&
-    values?.name &&
-    values?.phone &&
-    values?.email &&
-    values?.business &&
-    values?.message;
+  values?.name &&
+  values?.phone &&
+  values?.email &&
+  values?.business &&
+  values?.message;
 
   useEffect(() => {
     if (!canShowCaptcha) {
@@ -102,7 +111,6 @@ const ContactForm = ({ layout = "stacked", className = "" }) => {
           placeholder="Phone Number*"
           {...register("phone")}
           required
-          pattern="^[0-9+\-()\s]+$"
           className={inputClass}
         />
 
@@ -151,13 +159,21 @@ const ContactForm = ({ layout = "stacked", className = "" }) => {
           </div>
         ) : null}
 
-        <button
-          type="submit"
-          disabled={isSubmitting}
-          className="mt-2 cursor-pointer w-full bg-gradient-to-r from-[#6a1b1b] to-[#c43b3b] text-white font-semibold py-2 rounded-md hover:opacity-90 transition-all duration-200 disabled:opacity-50"
-        >
-          {isSubmitting ? "Submitting..." : "SUBMIT"}
-        </button>
+   <button
+  type="submit"
+  disabled={isSubmitting}
+  className="mt-2 cursor-pointer w-full bg-gradient-to-r from-[#6a1b1b] to-[#c43b3b] text-white font-semibold py-2 rounded-md hover:opacity-90 transition-all duration-200 disabled:opacity-50"
+>
+  {isSubmitting ? (
+    <span className="inline-flex items-center justify-center gap-1">
+      <span>Submitting</span>
+      <AnimatedDots />
+    </span>
+  ) : (
+    "SUBMIT"
+  )}
+</button>
+
       </form>
     </div>
   );

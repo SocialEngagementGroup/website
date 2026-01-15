@@ -1,9 +1,51 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./ProfessionalBranding.module.css";
 
 const ProfessionalBranding = ({ heading, items, video }) => {
+  const sectionRef = useRef(null);
+  const videoRef = useRef(null);
+
+  const [shouldPlay, setShouldPlay] = useState(false);
+
+  useEffect(() => {
+    if (!sectionRef.current) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        // play when at least 35% of the section is visible
+        setShouldPlay(entry.isIntersecting && entry.intersectionRatio >= 0.35);
+      },
+      { threshold: [0, 0.15, 0.35, 0.6, 1] }
+    );
+
+    observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+
+    const playVideo = async () => {
+      try {
+        await v.play();
+      } catch {
+        // iOS may block play in some cases, but this prevents crashes
+      }
+    };
+
+    if (shouldPlay) {
+      playVideo();
+    } else {
+      v.pause();
+      v.currentTime = 0; // optional: reset to start when leaving section
+    }
+  }, [shouldPlay]);
+
   return (
-    <section className={styles.section}>
+    <section ref={sectionRef} className={styles.section}>
       <div
         className={`${styles.containerCustom} container-fluid w-[78%] mx-auto py-6 md:py-28 px-6 md:px-7`}
       >
@@ -19,36 +61,39 @@ const ProfessionalBranding = ({ heading, items, video }) => {
             text-start
           "
         >
-          {/* ---------- LEFT: Heading + List ---------- */}
-          <div className="text-white order-2 md:order-1 mt-4  px-5 md:px-0" >
+          {/* LEFT */}
+          <div className="text-white order-2 md:order-1 mt-4 px-5 md:px-0">
             <h3 className={styles.heading}>{heading}</h3>
 
-            <ul className={styles.list + ""}>
+            <ul className={styles.list}>
               {items?.map((item, index) => (
                 <li
                   key={index}
                   className={`${styles.listItem} p1`}
                   dangerouslySetInnerHTML={{ __html: item.text }}
-                ></li>
+                />
               ))}
             </ul>
           </div>
 
-          {/* ---------- RIGHT: Video ---------- */}
+          {/* RIGHT: Video */}
           <div className="order-1 md:order-2">
             <div className="flex justify-center overflow-hidden aspect-[3/3] w-full">
               <video
+                ref={videoRef}
                 className={`${styles.videoBox} h-full w-full object-contain`}
-                autoPlay
-                loop
                 muted
+                loop
+                playsInline
+                preload="none"
+                controls={false}
+                disablePictureInPicture
+                // do NOT use autoPlay, we handle play/pause via scroll
               >
                 <source src={video} type="video/mp4" />
-             
               </video>
             </div>
           </div>
-
         </div>
       </div>
     </section>

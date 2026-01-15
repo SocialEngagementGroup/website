@@ -1,0 +1,68 @@
+.dropdownButton{
+    font-size: 16px;
+    font-weight: normal !important;
+   width: 90%;
+   margin: auto;
+
+}
+
+/* CSS for SVG icons */
+.svgicon svg {
+  color: #232326;  /* Set a dark color */
+  font-size: 28px;
+  background: #d8bfb2;  /* Set the background color */
+  padding: 8px;  /* Add padding */
+  border-radius: 10px;  /* Add rounded corners */
+  transition: transform 0.3s ease;  /* Add smooth rotation transition */
+}
+
+.svgicon svg:hover {
+  transform: scale(1.1);  /* Slightly scale up the icon on hover */
+}
+.svgicon  li{
+    color: black;
+}
+
+.customBorder{
+ position: relative;
+}
+
+
+
+.svgicon {
+  margin-top: 25px;
+}
+
+.svgicon a {
+  font-size: 14px;
+}
+
+.svgicon {
+  width: 90%;
+  margin:20px auto;
+  border-top: 1px solid gray;
+  padding-top: 20px;
+}
+
+
+.navbarSticky {
+  width:95%;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+  border-radius: 16px;
+  transition: all 0.5s ease;
+}
+
+.navbarDefault {
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: none;
+  background: #212125;
+  transition: all 0.5s ease;
+}

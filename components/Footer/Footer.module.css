@@ -2,7 +2,7 @@
 .wrapper {
   position: relative;           /* Needed for overlay positioning */
   width: 100%;
-  padding: 5rem;                /* Equivalent to Tailwind px-4 py-16 */
+  padding-top:5rem;       /* Equivalent to Tailwind px-4 py-16 */
   background-image: url('/bg/Rectangle1.png'); /* Background image */
   background-size: cover;       /* Cover entire container */
   background-position: center;  /* Center the image */
@@ -30,16 +30,10 @@
   z-index: 2;
 }
 
-/* ✅ Responsive padding for medium screens (≤ 1135px) */
-@media only screen and (max-width: 1135px) {
-  .wrapper {
-    padding: 3rem; /* Reduce padding */
-  }
+@media only screen and (max-width: 767px) {
+.wrapper {
+  padding-top:2rem;       /* Equivalent to Tailwind px-4 py-16 */
+          /* Hide overflow for overlay */
 }
 
-/* ✅ Responsive padding for small screens (≤ 767px) */
-@media only screen and (max-width: 767px) {
-  .wrapper {
-    padding: 3rem 0rem; /* Smaller vertical padding, remove horizontal */
-  }
 }

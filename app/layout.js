@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar/Navbar";
 import Script from "next/script";
 import Footer from "@/components/Footer/Footer";
 import Head from "next/head"; // ✅ import Head
-
+import NavBarMobile from "@/components/Navbar/NavBarMobile";
 export const metadata = {
   title: {
     default: "Where human creativity meets AI | SEG",
@@ -65,6 +65,7 @@ export default function RootLayout({ children }) {
         </Script>
 
         <Navbar />
+        <NavBarMobile />
         {children}
         <Footer />
       </body>
