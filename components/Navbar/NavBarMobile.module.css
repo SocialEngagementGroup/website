@@ -85,6 +85,11 @@
   height: calc(100dvh - 65px);
   background: white;
   z-index: 999;
+
+  display: flex;              /* add */
+  flex-direction: column;     /* add */
+  overflow: hidden;           /* add, keeps scroll inside ul */
+
   transform: translateX(100%);
   opacity: 0;
   pointer-events: none;
@@ -92,7 +97,6 @@
               opacity 200ms ease;
   will-change: transform;
 }
-
 .menuPanelOpen {
   transform: translateX(0);
   opacity: 1;

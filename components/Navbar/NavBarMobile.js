@@ -53,7 +53,7 @@ export default function Navbar() {
     body.style.right = "0";
     body.style.width = "100%";
     body.style.overflow = "hidden";
-    body.style.touchAction = "none";
+  
 
     return () => {
       const y = Math.abs(parseInt(body.style.top || "0", 10));
@@ -67,7 +67,7 @@ export default function Navbar() {
       body.style.right = "";
       body.style.width = "";
       body.style.overflow = "";
-      body.style.touchAction = "";
+    
 
       window.scrollTo(0, y);
     };
@@ -82,7 +82,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`md:hidden h-full ${styles.navbarShell}`}>
+      <nav className={`md:hidden ${styles.navbarShell}`}>
         {/* Inner bar (animates to 95% on sticky via CSS) */}
         <div
           className={`${styles.navbarInner} ${
