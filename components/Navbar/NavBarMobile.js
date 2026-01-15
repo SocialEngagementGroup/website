@@ -81,12 +81,12 @@ export default function Navbar() {
 
   return (
     <>
-<nav
-  className={`md:hidden fixed z-[999] transition-all duration-500 ease-in-out
+      <nav
+        className={`md:hidden fixed z-[999] transition-all duration-500 ease-in-out
     ${isSticky ? styles.navbarSticky : styles.navbarDefault}
     ${isMobileMenuOpen ? "h-full" : "h-[65px]"}
   `}
->
+      >
         <div className="container mx-auto flex justify-between items-center py-2 px-2 md:px-0 ">
           <Link href="/" className="flex items-center space-x-3 mt-1">
             <div className="relative w-[45px] h-[42px]">
@@ -142,13 +142,11 @@ export default function Navbar() {
         </div>
 
         {/* Menu Items wrapper */}
-   <div
-  className={`fixed top-[65px] w-full bg-white z-[999]
+        <div className={`fixed top-[65px] w-full bg-white z-[999]
   h-[calc(100dvh-65px)] flex flex-col overflow-hidden
   transform transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform
   ${isMobileMenuOpen ? "left-0" : "left-8"}
-  ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
->
+  ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}>
           <ul className="space-y-4 p-5 flex-1 overflow-y-auto overflow-x-hidden overscroll-contain touch-pan-y">
             <li>
               <Link
@@ -184,9 +182,8 @@ export default function Navbar() {
               >
                 Creative Services
                 <svg
-                  className={`w-5 h-5 ml-2 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                    openDropdown.creative ? "rotate-180" : ""
-                  }`}
+                  className={`w-5 h-5 ml-2 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${openDropdown.creative ? "rotate-180" : ""
+                    }`}
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="3"
@@ -202,11 +199,10 @@ export default function Navbar() {
 
               {/* Smooth height + fade */}
               <div
-                className={`grid transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                  openDropdown.creative
+                className={`grid transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${openDropdown.creative
                     ? "grid-rows-[1fr] opacity-100"
                     : "grid-rows-[0fr] opacity-0"
-                }`}
+                  }`}
               >
                 <div className="overflow-hidden">
                   <ul className={styles.svgicon + " mt-3 space-y-4"}>
@@ -286,9 +282,8 @@ export default function Navbar() {
               >
                 Digital Services
                 <svg
-                  className={`w-5 h-5 ml-2 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                    openDropdown.digital ? "rotate-180" : ""
-                  }`}
+                  className={`w-5 h-5 ml-2 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${openDropdown.digital ? "rotate-180" : ""
+                    }`}
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="3"
@@ -303,11 +298,10 @@ export default function Navbar() {
               </button>
 
               <div
-                className={`grid transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                  openDropdown.digital
+                className={`grid transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${openDropdown.digital
                     ? "grid-rows-[1fr] opacity-100"
                     : "grid-rows-[0fr] opacity-0"
-                }`}
+                  }`}
               >
                 <div className="overflow-hidden">
                   <ul className={styles.svgicon + " mt-3 space-y-4"}>
@@ -407,9 +401,8 @@ export default function Navbar() {
               >
                 Industry Services
                 <svg
-                  className={`w-5 h-5 ml-2 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                    openDropdown.industry ? "rotate-180" : ""
-                  }`}
+                  className={`w-5 h-5 ml-2 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${openDropdown.industry ? "rotate-180" : ""
+                    }`}
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="3"
@@ -424,11 +417,10 @@ export default function Navbar() {
               </button>
 
               <div
-                className={`grid transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                  openDropdown.industry
+                className={`grid transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${openDropdown.industry
                     ? "grid-rows-[1fr] opacity-100"
                     : "grid-rows-[0fr] opacity-0"
-                }`}
+                  }`}
               >
                 <div className="overflow-hidden">
                   <ul className={styles.svgicon + " mt-3 space-y-4"}>
