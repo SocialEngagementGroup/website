@@ -62,7 +62,7 @@ export default function RootLayout({ children }) {
           `}
         </Script>
 
-        <Navbar  className="hidden md:block"/>
+        <Navbar />
         <NavBarMobile />
         {children}
         <Footer />

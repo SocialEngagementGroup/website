@@ -82,9 +82,9 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`md:hidden fixed top-0 right-0 w-full z-[999] bg-black ${
-          isMobileMenuOpen ? "h-full" : "h-[65px]"
-        } transition-all duration-500`}
+        className={`md:hidden fixed right-0 z-[999] transition-all duration-500 bg-black
+  ${isMobileMenuOpen ? "h-full top-0 w-full rounded-none" : "h-[65px]"}
+  ${!isMobileMenuOpen && isSticky ? styles.navbarSticky : styles.navbarDefault}`}
       >
         <div className="container mx-auto flex justify-between items-center py-2 px-2 md:px-0 ">
           <Link href="/" className="flex items-center space-x-3 mt-1">
@@ -141,10 +141,10 @@ export default function Navbar() {
 
         {/* UPDATED Menu Items wrapper + scroll on UL */}
         <div
-          className={`transition-all duration-500 transform ${
-            isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-          } fixed right-0 top-[65px] w-full bg-white z-[999]
-             h-[calc(100dvh-65px)] flex flex-col overflow-hidden`}
+          className={`transition-all duration-500 transform fixed top-[65px] w-full bg-white z-[999]
+    h-[calc(100dvh-65px)] flex flex-col overflow-hidden
+    ${isMobileMenuOpen ? "translate-x-0 left-0" : "translate-x-full left-8"}
+  `}
         >
           <ul className="space-y-4 p-5 flex-1 overflow-y-auto overflow-x-hidden overscroll-contain touch-pan-y">
             <li>
@@ -178,9 +178,8 @@ export default function Navbar() {
               >
                 Creative Services
                 <svg
-                  className={`w-5 h-5 ml-2 transition-transform ${
-                    openDropdown.creative ? "rotate-180" : ""
-                  }`}
+                  className={`w-5 h-5 ml-2 transition-transform ${openDropdown.creative ? "rotate-180" : ""
+                    }`}
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="3"
@@ -265,9 +264,8 @@ export default function Navbar() {
               >
                 Digital Services
                 <svg
-                  className={`w-5 h-5 ml-2 transition-transform ${
-                    openDropdown.digital ? "rotate-180" : ""
-                  }`}
+                  className={`w-5 h-5 ml-2 transition-transform ${openDropdown.digital ? "rotate-180" : ""
+                    }`}
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="3"
@@ -370,9 +368,8 @@ export default function Navbar() {
               >
                 Industry Services
                 <svg
-                  className={`w-5 h-5 ml-2 transition-transform ${
-                    openDropdown.industry ? "rotate-180" : ""
-                  }`}
+                  className={`w-5 h-5 ml-2 transition-transform ${openDropdown.industry ? "rotate-180" : ""
+                    }`}
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="3"
