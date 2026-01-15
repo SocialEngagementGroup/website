@@ -81,11 +81,12 @@ export default function Navbar() {
 
   return (
     <>
-      <nav
-        className={`md:hidden fixed top-0 right-0 w-full z-[999] bg-black ${
-          isMobileMenuOpen ? "h-full" : "h-[65px]"
-        } transition-all duration-500 ease-in-out`}
-      >
+<nav
+  className={`md:hidden fixed z-[999] transition-all duration-500 ease-in-out
+    ${isSticky ? styles.navbarSticky : styles.navbarDefault}
+    ${isMobileMenuOpen ? "h-full" : "h-[65px]"}
+  `}
+>
         <div className="container mx-auto flex justify-between items-center py-2 px-2 md:px-0 ">
           <Link href="/" className="flex items-center space-x-3 mt-1">
             <div className="relative w-[45px] h-[42px]">
@@ -141,12 +142,13 @@ export default function Navbar() {
         </div>
 
         {/* Menu Items wrapper */}
-        <div
-          className={`fixed right-0 top-[65px] w-full bg-white z-[999]
-          h-[calc(100dvh-65px)] flex flex-col overflow-hidden
-          transform transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform
-          ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
-        >
+   <div
+  className={`fixed top-[65px] w-full bg-white z-[999]
+  h-[calc(100dvh-65px)] flex flex-col overflow-hidden
+  transform transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform
+  ${isMobileMenuOpen ? "left-0" : "left-8"}
+  ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
+>
           <ul className="space-y-4 p-5 flex-1 overflow-y-auto overflow-x-hidden overscroll-contain touch-pan-y">
             <li>
               <Link
