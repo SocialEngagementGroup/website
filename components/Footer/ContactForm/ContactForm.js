@@ -25,7 +25,7 @@ const ContactForm = ({ layout = "stacked", className = "" }) => {
     formState: { isSubmitting, isValid },
   } = useForm({
     resolver: yupResolver(schema),
-    mode: "onSubmit",  // Validation happens only when submitting the form
+    mode: "onChange",  // Validation happens only when submitting the form
     shouldUseNativeValidation: false, // 👈 browser tooltips
   });
 
@@ -45,12 +45,11 @@ const ContactForm = ({ layout = "stacked", className = "" }) => {
 
   const values = watch();
   const canShowCaptcha =
-    isValid &&
-    values?.name &&
-    values?.phone &&
-    values?.email &&
-    values?.business &&
-    values?.message;
+  values?.name &&
+  values?.phone &&
+  values?.email &&
+  values?.business &&
+  values?.message;
 
   useEffect(() => {
     if (!canShowCaptcha) {
