@@ -493,3 +493,4 @@ export default function Navbar() {
     </>
   );
 }
+//use bg color and fix desing
