@@ -31,10 +31,11 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => setIsSticky(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // lock body scroll when menu open
   useEffect(() => {
     const html = document.documentElement;
     const body = document.body;
@@ -52,7 +53,7 @@ export default function Navbar() {
     body.style.right = "0";
     body.style.width = "100%";
     body.style.overflow = "hidden";
-    body.style.touchAction = "none";
+  
 
     return () => {
       const y = Math.abs(parseInt(body.style.top || "0", 10));
@@ -66,87 +67,90 @@ export default function Navbar() {
       body.style.right = "";
       body.style.width = "";
       body.style.overflow = "";
-      body.style.touchAction = "";
+    
 
       window.scrollTo(0, y);
     };
   }, [isMobileMenuOpen]);
 
   const handleDropdownToggle = (key) => {
-    setOpenDropdown((prev) => ({
-      ...prev,
-      [key]: !prev[key],
-    }));
+    setOpenDropdown((prev) => ({ ...prev, [key]: !prev[key] }));
   };
+
+  // avoid sticky animation while menu open (prevents odd movement)
+  const effectiveSticky = isSticky && !isMobileMenuOpen;
 
   return (
     <>
-      <nav
-        className={`md:hidden fixed z-[999] transition-all duration-500 ease-in-out
-    ${isSticky ? styles.navbarSticky : styles.navbarDefault}
-    ${isMobileMenuOpen ? "h-full" : "h-[65px]"}
-  `}
-      >
-        <div className="container mx-auto flex justify-between items-center py-2 px-2 md:px-0 ">
-          <Link href="/" className="flex items-center space-x-3 mt-1">
-            <div className="relative w-[45px] h-[42px]">
-              <Image
-                src="/SiteLogo/seg.png"
-                alt="Site Logo"
-                fill
-                className="object-contain"
-              />
-            </div>
-          </Link>
+      <nav className={`md:hidden ${styles.navbarShell}`}>
+        {/* Inner bar (animates to 95% on sticky via CSS) */}
+        <div
+          className={`${styles.navbarInner} ${
+            effectiveSticky ? styles.stickyInner : ""
+          }`}
+        >
+          <div className="container mx-auto flex justify-between items-center py-2 px-2 md:px-0">
+            <Link href="/" className="flex items-center space-x-3 mt-1">
+              <div className="relative w-[45px] h-[42px]">
+                <Image
+                  src="/SiteLogo/seg.png"
+                  alt="Site Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            </Link>
 
-          <div className="flex space-x-5">
-            <a
-              href="https://calendly.com/itseg/segmeet"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="Contact-btn border capitalize font-bold font-sans text-[18px] rounded-[14px] cursor-pointer md:py-1.5 pb-1.5 pt-1.5 px-3 md:px-8 transition-all duration-200 ease-out border-white text-black bg-white hover:bg-white/90 active:scale-[0.98]"
-            >
-              Book a Call
-            </a>
-
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-white z-[1000] transition-transform duration-200 ease-out active:scale-[0.95]"
-              aria-label="Toggle menu"
-            >
-              <svg
-                className="w-7 h-7"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+            <div className="flex space-x-5">
+              <a
+                href="https://calendly.com/itseg/segmeet"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="Contact-btn border capitalize font-bold font-sans text-[18px] rounded-[14px] cursor-pointer md:py-1.5 pb-1.5 pt-1.5 px-3 md:px-8 transition-all duration-200 ease-out border-white text-black bg-white hover:bg-white/90 active:scale-[0.98]"
               >
-                {isMobileMenuOpen ? (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2.5"
-                    d="M4 4L20 20M20 4L4 20"
-                  />
-                ) : (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2.5"
-                    d="M3 6h18M3 12h18M3 18h18"
-                  />
-                )}
-              </svg>
-            </button>
+                Book a Call
+              </a>
+
+              <button
+                onClick={() => setIsMobileMenuOpen((v) => !v)}
+                className="text-white z-[1000] transition-transform duration-200 ease-out active:scale-[0.95]"
+                aria-label="Toggle menu"
+                aria-expanded={isMobileMenuOpen}
+              >
+                <svg
+                  className="w-7 h-7"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  {isMobileMenuOpen ? (
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2.5"
+                      d="M4 4L20 20M20 4L4 20"
+                    />
+                  ) : (
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2.5"
+                      d="M3 6h18M3 12h18M3 18h18"
+                    />
+                  )}
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
 
-        {/* Menu Items wrapper */}
-        <div className={`fixed top-[65px] w-full bg-white z-[999]
-  h-[calc(100dvh-65px)] flex flex-col overflow-hidden
-  transform transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform
-  ${isMobileMenuOpen ? "left-0" : "left-8"}
-  ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}>
+        {/* Menu panel: fully hidden when closed, slides from right when open */}
+        <div
+          className={`${styles.menuPanel} ${
+            isMobileMenuOpen ? styles.menuPanelOpen : ""
+          }`}
+        >
           <ul className="space-y-4 p-5 flex-1 overflow-y-auto overflow-x-hidden overscroll-contain touch-pan-y">
             <li>
               <Link
@@ -182,8 +186,9 @@ export default function Navbar() {
               >
                 Creative Services
                 <svg
-                  className={`w-5 h-5 ml-2 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${openDropdown.creative ? "rotate-180" : ""
-                    }`}
+                  className={`w-5 h-5 ml-2 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                    openDropdown.creative ? "rotate-180" : ""
+                  }`}
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="3"
@@ -197,12 +202,12 @@ export default function Navbar() {
                 </svg>
               </button>
 
-              {/* Smooth height + fade */}
               <div
-                className={`grid transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${openDropdown.creative
+                className={`grid transition-all bg-[#f4f4f4] rounded-lg duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                  openDropdown.creative
                     ? "grid-rows-[1fr] opacity-100"
                     : "grid-rows-[0fr] opacity-0"
-                  }`}
+                }`}
               >
                 <div className="overflow-hidden">
                   <ul className={styles.svgicon + " mt-3 space-y-4"}>
@@ -282,8 +287,9 @@ export default function Navbar() {
               >
                 Digital Services
                 <svg
-                  className={`w-5 h-5 ml-2 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${openDropdown.digital ? "rotate-180" : ""
-                    }`}
+                  className={`w-5 h-5 ml-2 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                    openDropdown.digital ? "rotate-180" : ""
+                  }`}
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="3"
@@ -298,10 +304,11 @@ export default function Navbar() {
               </button>
 
               <div
-                className={`grid transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${openDropdown.digital
+                className={`grid bg-[#f4f4f4] rounded-lg transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                  openDropdown.digital
                     ? "grid-rows-[1fr] opacity-100"
                     : "grid-rows-[0fr] opacity-0"
-                  }`}
+                }`}
               >
                 <div className="overflow-hidden">
                   <ul className={styles.svgicon + " mt-3 space-y-4"}>
@@ -401,8 +408,9 @@ export default function Navbar() {
               >
                 Industry Services
                 <svg
-                  className={`w-5 h-5 ml-2 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${openDropdown.industry ? "rotate-180" : ""
-                    }`}
+                  className={`w-5 h-5 ml-2 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                    openDropdown.industry ? "rotate-180" : ""
+                  }`}
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="3"
@@ -417,10 +425,11 @@ export default function Navbar() {
               </button>
 
               <div
-                className={`grid transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${openDropdown.industry
+                className={`grid bg-[#f4f4f4] rounded-lg transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                  openDropdown.industry
                     ? "grid-rows-[1fr] opacity-100"
                     : "grid-rows-[0fr] opacity-0"
-                  }`}
+                }`}
               >
                 <div className="overflow-hidden">
                   <ul className={styles.svgicon + " mt-3 space-y-4"}>
@@ -484,3 +493,4 @@ export default function Navbar() {
     </>
   );
 }
+//use bg color and fix desing
