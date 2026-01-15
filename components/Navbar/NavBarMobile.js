@@ -36,42 +36,42 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-useEffect(() => {
-  const html = document.documentElement;
-  const body = document.body;
+  useEffect(() => {
+    const html = document.documentElement;
+    const body = document.body;
 
-  if (!isMobileMenuOpen) return;
+    if (!isMobileMenuOpen) return;
 
-  const scrollY = window.scrollY;
+    const scrollY = window.scrollY;
 
-  html.style.height = "100%";
-  html.style.overflow = "hidden";
+    html.style.height = "100%";
+    html.style.overflow = "hidden";
 
-  body.style.position = "fixed";
-  body.style.top = `-${scrollY}px`;
-  body.style.left = "0";
-  body.style.right = "0";
-  body.style.width = "100%";
-  body.style.overflow = "hidden";
-  body.style.touchAction = "none";
+    body.style.position = "fixed";
+    body.style.top = `-${scrollY}px`;
+    body.style.left = "0";
+    body.style.right = "0";
+    body.style.width = "100%";
+    body.style.overflow = "hidden";
+    body.style.touchAction = "none";
 
-  return () => {
-    const y = Math.abs(parseInt(body.style.top || "0", 10));
+    return () => {
+      const y = Math.abs(parseInt(body.style.top || "0", 10));
 
-    html.style.height = "";
-    html.style.overflow = "";
+      html.style.height = "";
+      html.style.overflow = "";
 
-    body.style.position = "";
-    body.style.top = "";
-    body.style.left = "";
-    body.style.right = "";
-    body.style.width = "";
-    body.style.overflow = "";
-    body.style.touchAction = "";
+      body.style.position = "";
+      body.style.top = "";
+      body.style.left = "";
+      body.style.right = "";
+      body.style.width = "";
+      body.style.overflow = "";
+      body.style.touchAction = "";
 
-    window.scrollTo(0, y);
-  };
-}, [isMobileMenuOpen]);
+      window.scrollTo(0, y);
+    };
+  }, [isMobileMenuOpen]);
 
   const handleDropdownToggle = (key) => {
     setOpenDropdown((prev) => ({
@@ -84,9 +84,8 @@ useEffect(() => {
     <>
       {/* Mobile Navbar */}
       <nav
-        className={`md:hidden fixed top-0 right-0 w-full z-[999] bg-black ${
-          isMobileMenuOpen ? "h-full" : "h-[65px]"
-        } transition-all duration-500`}
+        className={`md:hidden fixed top-0 right-0 w-full z-[999] bg-black ${isMobileMenuOpen ? "h-full" : "h-[65px]"
+          } transition-all duration-500`}
       >
         <div className="container mx-auto flex justify-between items-center py-2 px-2 md:px-0 ">
           {/* Logo */}
@@ -145,11 +144,10 @@ useEffect(() => {
         </div>
 
         {/* Menu Items */}
-<div
-  className={`transition-all duration-500 transform ${
-    isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-  } fixed right-0 top-[65px] w-full h-[calc(100vh-65px)] bg-white z-[999] overflow-y-auto overflow-x-hidden overscroll-contain touch-pan-y`}
->
+        <div
+          className={`transition-all duration-500 transform ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+            } fixed right-0 top-[65px] w-full h-[calc(100vh-65px)] bg-white z-[999] overflow-y-auto overflow-x-hidden overscroll-contain touch-pan-y`}
+        >
           <ul className="space-y-4 p-5">
             <li>
               <Link
@@ -182,9 +180,8 @@ useEffect(() => {
               >
                 Creative Services
                 <svg
-                  className={`w-5 h-5 ml-2 transition-transform ${
-                    openDropdown.creative ? "rotate-180" : ""
-                  }`}
+                  className={`w-5 h-5 ml-2 transition-transform ${openDropdown.creative ? "rotate-180" : ""
+                    }`}
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="3"
@@ -269,9 +266,8 @@ useEffect(() => {
               >
                 Digital Services
                 <svg
-                  className={`w-5 h-5 ml-2 transition-transform ${
-                    openDropdown.digital ? "rotate-180" : ""
-                  }`}
+                  className={`w-5 h-5 ml-2 transition-transform ${openDropdown.digital ? "rotate-180" : ""
+                    }`}
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="3"
@@ -374,9 +370,8 @@ useEffect(() => {
               >
                 Industry Services
                 <svg
-                  className={`w-5 h-5 ml-2 transition-transform ${
-                    openDropdown.industry ? "rotate-180" : ""
-                  }`}
+                  className={`w-5 h-5 ml-2 transition-transform ${openDropdown.industry ? "rotate-180" : ""
+                    }`}
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="3"
