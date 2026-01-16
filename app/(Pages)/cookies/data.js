@@ -1,6 +1,6 @@
 export const termsandconditions = {
   hero: {
-    title: "Cookies Policy",
+    title: "Cookies",
     date: "Last Updated: December 25, 2025",
   },
   content: {
@@ -31,12 +31,12 @@ export const termsandconditions = {
         text:
           "<strong>Managing Your Preferences:</strong> You can choose to accept or decline cookies. Most web browsers automatically accept cookies, but you can usually modify your browser settings to decline them if you prefer. Please note that disabling cookies may prevent you from taking full advantage of the website’s features."
       },
-    
-       {
+
+      {
         text:
           "<strong>Third-Party Cookies:</strong> Some of our service providers may also place cookies on your device to help us analyze site usage or provide targeted advertising. We do not have direct control over these third-party cookies."
       },
- 
+
     ],
   },
 };

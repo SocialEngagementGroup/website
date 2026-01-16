@@ -8,17 +8,17 @@ const PlaceHolder = ({ bg, title, button, link }) => {
       style={{ backgroundImage: `url(${bg})` }}
     >
       <div
-        className={`${styles.bgglass} w-[80%] flex flex-col md:flex-row items-center justify-between  p-10 md:p-20 border-4 border-gray-700`}
+        className={`${styles.bgglass} w-[80%] flex flex-col md:flex-row items-center justify-between  sm:p-4 md:p-8 lg:p-10 xl:p-12 2xl:p-20 border-4 border-gray-700`}
       >
         {/* ---------- Title (Second on mobile, first on desktop) ---------- */}
         <h3
           className="text-center md:text-left text-white"
-          dangerouslySetInnerHTML={{ __html: title || ""}}
+          dangerouslySetInnerHTML={{ __html: title || "" }}
         />
 
         {/* ---------- Button (First on mobile, second on desktop) ---------- */}
         <a href={link}>
-          <button className={`${styles.button} py-2 md:py-2 px-5 md:px-8 md:mt-0 mt-5 cursor-pointer capitalize`}>
+          <button className={`${styles.button} py-2 md:py-2 px-5 md:px-8 md:mt-0 mt-5  cursor-pointer capitalize`}>
             {button}
           </button>
         </a>

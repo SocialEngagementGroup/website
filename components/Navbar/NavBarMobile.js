@@ -203,7 +203,7 @@ export default function Navbar() {
               </button>
 
               <div
-                className={`grid transition-all bg-[#f4f4f4] rounded-lg duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                className={`grid transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                   openDropdown.creative
                     ? "grid-rows-[1fr] opacity-100"
                     : "grid-rows-[0fr] opacity-0"
@@ -304,7 +304,7 @@ export default function Navbar() {
               </button>
 
               <div
-                className={`grid bg-[#f4f4f4] rounded-lg transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                className={`grid transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                   openDropdown.digital
                     ? "grid-rows-[1fr] opacity-100"
                     : "grid-rows-[0fr] opacity-0"
@@ -425,7 +425,7 @@ export default function Navbar() {
               </button>
 
               <div
-                className={`grid bg-[#f4f4f4] rounded-lg transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                className={`grid transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                   openDropdown.industry
                     ? "grid-rows-[1fr] opacity-100"
                     : "grid-rows-[0fr] opacity-0"
