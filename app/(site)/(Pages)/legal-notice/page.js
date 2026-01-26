@@ -1,6 +1,6 @@
 import React from 'react'
 import HeroSection from '@/components/LegalPage/HeroSection/HeroSection'
-import { legal } from '@/app/(Pages)/legal-notice/data'
+import { legal } from "./data";
 import BodyContent from '@/components/LegalPage/Content/BodyContent'
 
 const page = () => {
