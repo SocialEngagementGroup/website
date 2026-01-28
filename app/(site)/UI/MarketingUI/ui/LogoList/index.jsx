@@ -3,23 +3,23 @@ import Div from '../Div';
 
 const partnerLogos = [
   {
-    src: '/images/partner_1.svg',
+    src: 'template/images/partner_1.svg',
     alt: 'Partner',
   },
   {
-    src: '/images/partner_2.svg',
+    src: 'template/images/partner_2.svg',
     alt: 'Partner',
   },
   {
-    src: '/images/partner_3.svg',
+    src: 'template/images/partner_3.svg',
     alt: 'Partner',
   },
   {
-    src: '/images/partner_4.svg',
+    src: 'template/images/partner_4.svg',
     alt: 'Partner',
   },
   {
-    src: '/images/partner_5.svg',
+    src: 'template/images/partner_5.svg',
     alt: 'Partner',
   },
 ];

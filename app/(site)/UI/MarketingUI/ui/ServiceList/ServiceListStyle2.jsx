@@ -1,29 +1,29 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Div from '../Div';
+
+
+
+
+
+
 const serviceData = [
   {
-    title: 'WP Development',
+    title: 'Show Up When It Matters Most',
     subtitle:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium lorema doloremque laudantium, totam rem.',
+      'We make sure your firm appears where real intent exists, so when someone needs a personal injury lawyer, they find you.',
     href: '/service/service-details',
   },
   {
-    title: 'UI/UX Design',
+    title: 'Reinforce Trust at the Point of Decision',
     subtitle:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium lorema doloremque laudantium, totam rem.',
+      'When potential clients compare firms, they look for signals of credibility. We make sure your online presence supports that decision.',
     href: '/service/service-details',
   },
   {
-    title: 'Branding',
+    title: 'See What’s Driving Results',
     subtitle:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium lorema doloremque laudantium, totam rem.',
-    href: '/service/service-details',
-  },
-  {
-    title: 'Social Ad Campaign',
-    subtitle:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium lorema doloremque laudantium, totam rem.',
+      'You’ll have clear visibility into what’s driving calls and where momentum is building, so you can double down on what’s working and adjust what’s not.',
     href: '/service/service-details',
   },
 ];

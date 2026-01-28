@@ -2,24 +2,20 @@
 
 import Header from "@/app/(site)/UI/MarketingUI/ui/Header";
 import Footer from "@/app/(site)/UI/MarketingUI/ui/Footer";
-
 import Cta from "@/app/(site)/UI/MarketingUI/ui/Cta";
 import Div from "@/app/(site)/UI/MarketingUI/ui/Div";
-import FunFact2 from "@/app/(site)/UI/MarketingUI/ui/FunFact/FunFact2";
-import Hero4 from "@/app/(site)/UI/MarketingUI/ui/Hero/Hero4";
+import Accordion from "@/app/(site)/UI/MarketingUI/ui/Accordion/index";
+import Hero5 from "@/app/(site)/UI/MarketingUI/ui/Hero/Hero5";
 import LogoList from "@/app/(site)/UI/MarketingUI/ui/LogoList";
-import MovingText2 from "@/app/(site)/UI/MarketingUI/ui/MovingText/MovingText2";
-import Portfolio from "@/app/(site)/UI/MarketingUI/ui/Portfolio";
-import PostList from "@/app/(site)/UI/MarketingUI/ui/Post/PostList";
 import SectionHeading from "@/app/(site)/UI/MarketingUI/ui/SectionHeading";
 import TestimonialSlider from "@/app/(site)/UI/MarketingUI/ui/Slider/TestimonialSlider";
-import TimelineSlider from "@/app/(site)/UI/MarketingUI/ui/Slider/TimelineSlider";
 import Spacing from "@/app/(site)/UI/MarketingUI/ui/Spacing";
 import VideoModal from "@/app/(site)/UI/MarketingUI/ui/VideoModal";
-
-import { Icon } from "@iconify/react";
+import ServiceListStyle2 from "@/app/(site)/UI/MarketingUI/ui/ServiceList/ServiceListStyle2";
+import ServiceList from "@/app/(site)/UI/MarketingUI/ui/ServiceList";
 import { useState } from "react";
 import ContactPage from "../contacts/page";
+import PostSlider from "@/app/(site)/UI/MarketingUI/ui/Slider/PostSlider";
 
 /* ---------------- DATA ---------------- */
 
@@ -99,170 +95,141 @@ export default function DigitalAgencyHome() {
       <Header />
 
       {/* HERO */}
-      <Hero4
-        title="We Are <span>A</span>rino <br />Digital Agency"
-        subtitle="We deliver best problem solving solution for our client and provide finest finishing product in present and upcoming future."
+      <Hero5
+        title="Marketing for <span>L</span>aw <br /> Firms Built for Consistent Call Volume"
+        subtitle="We help law firms generate inbound calls by understanding your practice and building around what actually matters, so you can focus on your cases, not chasing leads."
         scrollDownId="#service"
         socialLinksHeading="Follow Us"
         heroSocialLinks={heroSocialLinks}
         phoneNumber="+044 546664"
         email="info@arino.com"
+        btnText="Schedule a Strategy Call"
+        btnLink="https://calendly.com/itseg/segmeet"
       />
 
-      {/* FUN FACT */}
-      <Div className="container">
-        <FunFact2
-          data={funfaceData}
-          variant="cs-type1"
-          bgUrl="/template/images/funfact_shape_bg.svg"
-        />
+      {/* Start Video Block Section */}
+      <Div className="cs-video_block_1_wrap">
+        <Div className="container">
+          <VideoModal
+            videoSrc="videos/landingpagevideo.mp4"
+            bgUrl="template/images/video_bg_2.jpeg"
+          />
+        </Div>
       </Div>
 
-      {/* SERVICES */}
+      <section className="cs-shape_wrap_4 cs-parallax">
+        <div className="cs-shape_4 cs-to_up" />
+        <div className="cs-shape_4 cs-to_right" />
+        <Spacing lg="145" md="80" />
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-5 col-xl-4">
+              <SectionHeading
+                title="How We Make This Work"
+                subtitle=""
+                btnLink="/service"
+                btnText="See All Services"
+              />
+              <Spacing lg="45" md="45" />
+            </div>
+            <div className="col-lg-7 offset-xl-1">
+              <ServiceListStyle2 />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Start Services Section */}
       <Spacing lg="145" md="80" />
       <Div className="container">
         <SectionHeading
-          title="What we provide"
-          subtitle="Services"
+          title="Why Firms Choose Us"
+          subtitle=""
           variant="cs-style1 text-center"
         />
-        <Spacing lg="65" md="45" />
+        <Spacing lg="70" md="45" />
+        <ServiceList />
       </Div>
+      {/* End Services Section */}
 
-      <MovingText2 data={serviceData1} />
-      <Spacing lg="20" md="10" />
-      <MovingText2 reverseDirection data={serviceData2} />
-
-      {/* ABOUT */}
+      {/* Start Blog Section */}
+      <Spacing lg="150" md="80" />
       <Div className="cs-shape_wrap_4">
-        <Div className="cs-shape_4" />
-        <Div className="cs-shape_4" />
-        <Spacing lg="150" md="80" />
+        <Div className="cs-shape_4"></Div>
+        <Div className="cs-shape_4"></Div>
         <Div className="container">
           <Div className="row">
-            <Div className="col-lg-5 col-xl-4">
+            <Div className="col-xl-4">
               <SectionHeading
-                title="Uk’s best digital agency ever"
-                subtitle="Why Choose Us"
-                btnText="Learn More"
-                btnLink="/about"
+                title="Featured Case Study"
+                subtitle="The Law Offices of Michael F. Campopiano"
+                btnText=""
+                btnLink="/blog"
               />
-              <Spacing lg="45" md="45" />
+              <Spacing lg="90" md="45" />
             </Div>
-            <Div className="col-lg-7 offset-xl-1">
-              <Div className="cs-half_screen">
-                <VideoModal
-                  videoSrc="https://www.youtube.com/watch?v=VcaAVWtP48A"
-                  bgUrl="/template/images/video_bg.jpeg"
-                  variant="cs-style1 cs-size1"
-                />
+            <Div className="col-xl-7 offset-xl-1">
+              <Div className="cs-half_of_full_width">
+                <PostSlider />
               </Div>
             </Div>
           </Div>
         </Div>
       </Div>
-
-      {/* PORTFOLIO */}
-      <Spacing lg="145" md="80" />
-      <Div className="container">
-        <SectionHeading
-          title="Portfolio to explore"
-          subtitle="Latest Projects"
-          variant="cs-style1 text-center"
-        />
-        <Spacing lg="90" md="45" />
-
-        <Div className="row">
-          {portfolioData.slice(0, itemShow).map((item, index) => (
-            <Div className="col-lg-4" key={index}>
-              <Portfolio {...item} variant="cs-style1 cs-type1" />
-              <Spacing lg="25" md="25" />
-            </Div>
-          ))}
-        </Div>
-
-        {portfolioData.length > itemShow && (
-          <Div className="text-center">
-            <Spacing lg="65" md="40" />
-            <span
-              className="cs-text_btn"
-              onClick={() => setItemShow(itemShow + 3)}
-            >
-              <span>Load More</span>
-              <Icon icon="bi:arrow-right" />
-            </span>
-          </Div>
-        )}
-      </Div>
-
-      {/* AWARDS */}
-      <Spacing lg="140" md="80" />
-      <Div className="container">
-        <Div className="row">
-          <Div className="col-xl-4">
-            <SectionHeading
-              title="We get multiple awards"
-              subtitle="Our Awards"
-              variant="cs-style1"
-            />
-            <Spacing lg="90" md="45" />
-          </Div>
-          <Div className="col-xl-7 offset-xl-1">
-            <TimelineSlider />
-          </Div>
-        </Div>
-      </Div>
+      {/* End Blog Section */}
 
       {/* TESTIMONIAL */}
       <Spacing lg="145" md="80" />
       <TestimonialSlider />
+      <Spacing lg="145" md="80" />
 
-      {/* BLOG */}
-      <Div className="cs-shape_wrap_4">
-        <Div className="cs-shape_4" />
-        <Div className="cs-shape_4" />
+      {/* CLIENTS */}
+      <Div className="container">
+        <SectionHeading
+          title="Trusted by Clients Across Competitive Industries"
+          subtitle="We work closely with law firms, applying systems built from experience across other high-competition industries including healthcare, hospitality, and retail where visibility, trust, and conversion matter just as much."
+          variant="cs-style1 text-center"
+        />
+        <Spacing lg="70" md="45" />
+        <LogoList />
         <Spacing lg="145" md="80" />
+      </Div>
+
+      {/* Start CTA Section */}
+      <Cta
+        title="Let’s Build a System<br /> You <i> Can</i> Rely On"
+        btnText="Schedule a Strategy Call"
+        btnLink="https://calendly.com/itseg/segmeet"
+        bgSrc="template/images/cta_bg_5.jpeg"
+        variant="cs-type_1"
+        description="If your firm is ready for consistent visibility and a clearer path to new cases, we’ll help you build a marketing system you can trust so you can focus on running your practice."
+      />
+      {/* End CTA Section */}
+
+      <Spacing lg='150' md='80' />
+
+      <Div className="container cs-shape_wrap_4">
+        <Div className="cs-shape_4"></Div>
+        <Div className="cs-shape_4"></Div>
         <Div className="container">
           <Div className="row">
-            <Div className="col-lg-5 col-xl-4">
+            <Div className="col-xl-5 col-lg-6">
               <SectionHeading
-                title="Explore recent publication"
-                subtitle="Our Blog"
-                btnText="View More Blog"
-                btnLink="/blog"
+                title='Common Questions From Law Firms'
+                subtitle='FAQ’s'
               />
-              <Spacing lg="45" md="45" />
+              <Spacing lg='90' md='45' />
             </Div>
-            <Div className="col-lg-7 offset-xl-1">
-              <PostList />
+            <Div className="col-lg-6 offset-xl-1">
+              <Accordion />
             </Div>
           </Div>
         </Div>
       </Div>
 
-      {/* CLIENTS */}
-      <Spacing lg="145" md="80" />
-      <Div className="container">
-        <SectionHeading
-          title="Our reputed partner"
-          subtitle="Top Clients"
-          variant="cs-style1 text-center"
-        />
-        <Spacing lg="70" md="45" />
-        <LogoList />
-      </Div>
-
-      {/* CTA */}
-      <Spacing lg="150" md="80" />
-      <Div className="container">
-        <Cta
-          title="Let’s disscuse make <br />something <i>cool</i> together"
-          btnText="Apply For Meeting"
-          btnLink="/contact"
-          bgSrc="/template/images/cta_bg.jpeg"
-        />
-      </Div>
+      <Spacing lg='150' md='80' />
       <ContactPage />
+
       {/* ✅ TEMPLATE FOOTER */}
       <Footer />
     </main>

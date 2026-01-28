@@ -6,37 +6,22 @@ import Div from '../Div';
 import Spacing from '../Spacing';
 const testimonialData = [
   {
-    testimonialThumb: '/images/testimonial_1.jpeg',
+    testimonialThumb: 'template/images/testimonial_1.jpeg',
     testimonialText:
-      'I wish I would have thought of it first. Creative agency is the most tech valuable business resource we have ever purchased. Dude your stuff  is the bomb! eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt to the explicabo.',
-    avatarName: 'Ahon Monsery',
-    avatarDesignation: 'CEO AT TECH',
+      'I“Working with the Social Engagement Group allowed me to focus on my business instead of worrying about marketing.”',
+    avatarName: 'Michael F. Campopiano.',
+    avatarDesignation: 'CEO at MFC Law',
     ratings: '4',
   },
   {
-    testimonialThumb: '/images/testimonial_2.jpeg',
+    testimonialThumb: 'template/images/testimonial_2.jpeg',
     testimonialText:
-      'I wish I would have thought of it first. Creative agency is the most tech valuable business resource we have ever purchased. Dude your stuff  is the bomb! eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt to the explicabo.',
-    avatarName: 'Ahon Monsery',
-    avatarDesignation: 'CEO AT TECH',
+      '“Social Engagement Group built our website from the ground up and gave us a real online presence. We finally started showing up in search.”',
+    avatarName: 'Sharif Aref',
+    avatarDesignation: 'Owner at Aref Law',
     ratings: '5',
   },
-  {
-    testimonialThumb: '/images/testimonial_3.jpeg',
-    testimonialText:
-      'I wish I would have thought of it first. Creative agency is the most tech valuable business resource we have ever purchased. Dude your stuff  is the bomb! eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt to the explicabo.',
-    avatarName: 'Ahon Monsery',
-    avatarDesignation: 'CEO AT TECH',
-    ratings: '4.5',
-  },
-  {
-    testimonialThumb: '/images/testimonial_1.jpeg',
-    testimonialText:
-      'I wish I would have thought of it first. Creative agency is the most tech valuable business resource we have ever purchased. Dude your stuff  is the bomb! eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt to the explicabo.',
-    avatarName: 'Ahon Monsery',
-    avatarDesignation: 'CEO AT TECH',
-    ratings: '3.5',
-  },
+
 ];
 
 export default function TestimonialSlider() {
@@ -73,7 +58,7 @@ export default function TestimonialSlider() {
       <Div className="cs-gradient_bg_1 cs-shape_wrap_3 cs-parallax">
         <Spacing lg="130" md="80" />
         <Div className="cs-shape_3 cs-to_up">
-          <img src="/images/shape_1.svg" alt="Shape" />
+          <img src="template/images/shape_1.svg" alt="Shape" />
         </Div>
         <Div className="container">
           <Div className="cs-testimonial_slider">

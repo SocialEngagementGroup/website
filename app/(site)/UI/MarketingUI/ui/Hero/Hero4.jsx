@@ -15,7 +15,7 @@ export default function Hero4({
   return (
     <Div
       className="cs-hero cs-style1 cs-type1 text-center cs-fixed_bg"
-      style={{ backgroundImage: 'url(/images/hero_bg_2.jpeg)' }}
+      style={{ backgroundImage: 'url(template/images/hero_bg_2.jpeg)' }}
     >
       <Div className="container">
         <Div className="cs-hero_text">
