@@ -34,8 +34,9 @@ select:focus {
   --font-lobster: 'Lobster', cursive;
   /* Hero heading accents */
 }
-
-
+.slick-prev::before {
+  display: none !important;
+}
 /* =========================================================
    Dark Mode Variables
 ========================================================= */

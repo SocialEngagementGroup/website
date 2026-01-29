@@ -4,3 +4,11 @@
 @import 'lightgallery/css/lightgallery.css';
 @import 'lightgallery/css/lg-zoom.css';
 @import 'lightgallery/css/lg-thumbnail.css';
+
+
+.slick-prev::before {
+  display: none !important;
+}
+.slick-next::before {
+  display: none !important;
+}

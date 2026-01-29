@@ -2,29 +2,24 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Div from '../Div';
 
-
-
-
-
-
 const serviceData = [
   {
     title: 'Show Up When It Matters Most',
     subtitle:
       'We make sure your firm appears where real intent exists, so when someone needs a personal injury lawyer, they find you.',
-    href: '/service/service-details',
+    href: '',
   },
   {
     title: 'Reinforce Trust at the Point of Decision',
     subtitle:
       'When potential clients compare firms, they look for signals of credibility. We make sure your online presence supports that decision.',
-    href: '/service/service-details',
+    href: '',
   },
   {
     title: 'See What’s Driving Results',
     subtitle:
       'You’ll have clear visibility into what’s driving calls and where momentum is building, so you can double down on what’s working and adjust what’s not.',
-    href: '/service/service-details',
+    href: '',
   },
 ];
 

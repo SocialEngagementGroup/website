@@ -139,20 +139,8 @@ export default function DigitalAgencyHome() {
         </div>
       </section>
 
-      {/* Start Services Section */}
-      <Spacing lg="145" md="80" />
-      <Div className="container">
-        <SectionHeading
-          title="Why Firms Choose Us"
-          subtitle=""
-          variant="cs-style1 text-center"
-        />
-        <Spacing lg="70" md="45" />
-        <ServiceList />
-      </Div>
-      {/* End Services Section */}
 
-      {/* Start Blog Section */}
+     {/* Start Blog Section */}
       <Spacing lg="150" md="80" />
       <Div className="cs-shape_wrap_4">
         <Div className="cs-shape_4"></Div>
@@ -177,6 +165,23 @@ export default function DigitalAgencyHome() {
         </Div>
       </Div>
       {/* End Blog Section */}
+
+
+
+      {/* Start Services Section */}
+      <Spacing lg="145" md="80" />
+      <Div className="container">
+        <SectionHeading
+          title="Why Firms Choose Us"
+          subtitle=""
+          variant="cs-style1 text-center"
+        />
+        <Spacing lg="70" md="45" />
+        <ServiceList />
+      </Div>
+      {/* End Services Section */}
+
+ 
 
       {/* TESTIMONIAL */}
       <Spacing lg="145" md="80" />

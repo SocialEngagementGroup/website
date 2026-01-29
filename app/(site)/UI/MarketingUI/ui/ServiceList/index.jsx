@@ -8,21 +8,21 @@ const serviceData = [
     subtitle:
       'Every law firm is different. We take the time to understand where your firm is today, what’s already working, and where we can have the biggest impact for your firm. From there, we build a marketing approach that fits your goals—not a one-size-fits-all package.',
     imgUrl: 'template/images/service_7.jpeg',
-    href: '/service/service-details',
+    href: '',
   },
   {
     title: 'We Treat Your Firm Like It’s Our Own',
     subtitle:
       'We don’t “set it and forget it”. We actively manage, monitor, and refine your marketing so you can focus on running your practice, while we focus on making sure you keep getting leads.',
     imgUrl: 'template/images/service_8.jpeg',
-    href: '/service/service-details',
+    href: '',
   },
   {
     title: 'Focused on Outcomes That Matter',
     subtitle:
       'Everything we do ties back to one thing: helping you grow the right way. More of the cases you want, fewer distractions, and a marketing effort you can actually trust.',
     imgUrl: 'template/images/service_9.jpeg',
-    href: '/service/service-details',
+    href: '',
   },
 
 ];
