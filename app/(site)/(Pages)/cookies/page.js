@@ -6,7 +6,7 @@ import CookiesBodyContent from '@/components/LegalPage/Content/CookiesBodyConten
 const page = () => {
   return (
     <div>
-      {/* Pass hero data to HeroSection */}
+      {/* Provide hero data as props to HeroSection. */}
       <HeroSection 
         title={termsandconditions.hero.title} 
         date={termsandconditions.hero.date} 
