@@ -4,6 +4,7 @@ import Script from "next/script";
 import Navbar from "@/components/Navbar/Navbar";
 import NavBarMobile from "@/components/Navbar/NavBarMobile";
 import Footer from "@/components/Footer/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata = {
   title: {
@@ -57,6 +58,7 @@ export default function SiteLayout({ children }) {
         <NavBarMobile />
         {children}
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );
