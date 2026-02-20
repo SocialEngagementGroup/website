@@ -1,50 +1,46 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-import { useScroll } from 'framer-motion'; // For scroll-based animations
-import Lenis from '@studio-freight/lenis'; // Smooth scroll library
+import { useRef, useState, useEffect } from 'react';
 import Card from './Card'; // Individual parallax card component
 import { projects } from '../../../data'; // Array of project data
 
 export default function ParallaxSlider() {
-  // Reference to the main container to track scroll
   const container = useRef(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
-  // Track vertical scroll progress relative to container
-  const { scrollYProgress } = useScroll({
-    target: container,          // Element to track
-    offset: ['start start', 'end end'], // Start/end triggers
-  });
-
-  // Initialize Lenis smooth scrolling
+  // Lightweight scroll tracking - runs only on scroll event
   useEffect(() => {
-    const lenis = new Lenis(); // Create Lenis instance
+    const handleScroll = () => {
+      if (!container.current) return;
+      
+      const element = container.current;
+      const elementTop = element.getBoundingClientRect().top;
+      const elementHeight = element.offsetHeight;
+      const windowHeight = window.innerHeight;
+      
+      // Calculate progress (0 to 1) when element is in view
+      const progress = Math.max(0, Math.min(1, (windowHeight - elementTop) / (windowHeight + elementHeight)));
+      setScrollProgress(progress);
+    };
 
-    // Recursive function to continuously update scroll
-    function raf(time) {
-      lenis.raf(time);             // Update Lenis scroll
-      requestAnimationFrame(raf);  // Continue animation frame loop
-    }
-
-    requestAnimationFrame(raf);    // Start loop
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     // Main slider container
-    <main ref={container}>
+    <main ref={container} className="parallax-slider">
       {projects.map((project, i) => {
-        // Calculate target scale for parallax effect
-        // Cards further down the list scale smaller
+        // Simple scale calculation based on scroll progress
         const targetScale = 1 - (projects.length - i) * 0.05;
+        const cardScale = 1 + (targetScale - 1) * scrollProgress;
 
         return (
           <Card
-            key={`p_${i}`}          // Unique key for React
-            i={i}                   // Index of the card
-            {...project}            // Spread project data (title, color, sliderData)
-            progress={scrollYProgress} // Pass scroll progress for animations
-            range={[i * 0.25, 1]}      // Range of scroll progress for scaling
-            targetScale={targetScale}  // Scale at the end of scroll
+            key={`p_${i}`}
+            i={i}
+            {...project}
+            scale={cardScale}
           />
         );
       })}

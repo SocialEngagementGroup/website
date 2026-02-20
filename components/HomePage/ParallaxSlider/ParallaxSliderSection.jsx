@@ -35,7 +35,7 @@ const ParallaxSliderSection = () => {
 
       {/* Video section below slider */}
       <div className="container-fluid mx-auto">
-        <Vdo src={"./videos/landingpagevideo.mp4"} />
+        <Vdo />
       </div>
     
     </section>

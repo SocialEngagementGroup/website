@@ -17,7 +17,7 @@ function useScreenWidth() {
   return w;
 }
 
-export default function VideoScroll({ src }) {
+export default function VideoScroll() {
   const sectionRef = useRef(null);
   const screen = useScreenWidth();
 
@@ -73,7 +73,19 @@ export default function VideoScroll({ src }) {
             maxHeight: "100dvh",
           }}
         >
-          <video className={styles.video} src={src} loop muted autoPlay playsInline />
+          <iframe
+            className={styles.video}
+            src="https://www.youtube.com/embed/MoGoOZzYXSc?si=No01SSJ5FGOhnwwC"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+            style={{
+              width: "100%",
+              height: "100%",
+              border: "none",
+            }}
+          />
         </motion.div>
       </div>
     </section>
