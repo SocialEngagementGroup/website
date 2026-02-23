@@ -20,25 +20,6 @@ function useScreenWidth() {
 export default function VideoScroll() {
   const sectionRef = useRef(null);
   const screen = useScreenWidth();
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsLoaded(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -92,32 +73,19 @@ export default function VideoScroll() {
             maxHeight: "100dvh",
           }}
         >
-          {!isLoaded ? (
-            <div
-              className={styles.placeholder}
-              style={{
-                width: "100%",
-                height: "100%",
-                backgroundImage: 'url("/bg/Rectangle1.png")',
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            />
-          ) : (
-            <iframe
-              className={styles.video}
-              src="https://www.youtube.com/embed/MoGoOZzYXSc?si=No01SSJ5FGOhnwwC&autoplay=1&mute=1"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-              style={{
-                width: "100%",
-                height: "100%",
-                border: "none",
-              }}
-            />
-          )}
+          <iframe
+            className={styles.video}
+            src="https://www.youtube.com/embed/MoGoOZzYXSc?si=No01SSJ5FGOhnwwC&autoplay=1&mute=1"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+            style={{
+              width: "100%",
+              height: "100%",
+              border: "none",
+            }}
+          />
         </motion.div>
       </div>
     </section>
