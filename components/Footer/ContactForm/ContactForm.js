@@ -45,11 +45,11 @@ const ContactForm = ({ layout = "stacked", className = "" }) => {
 
   const values = watch();
   const canShowCaptcha =
-  values?.name &&
-  values?.phone &&
-  values?.email &&
-  values?.business &&
-  values?.message;
+    values?.name &&
+    values?.phone &&
+    values?.email &&
+    values?.business &&
+    values?.message;
 
   useEffect(() => {
     if (!canShowCaptcha) {
@@ -71,8 +71,13 @@ const ContactForm = ({ layout = "stacked", className = "" }) => {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, recaptchaToken: token }),
+        body: JSON.stringify({
+          ...data,
+          recaptchaToken: token,
+          pageUrl: window.location.href,
+        }),
       });
+
 
       const result = await response.json();
       if (!result.success) throw new Error();
@@ -159,20 +164,20 @@ const ContactForm = ({ layout = "stacked", className = "" }) => {
           </div>
         ) : null}
 
-   <button
-  type="submit"
-  disabled={isSubmitting}
-  className="mt-2 cursor-pointer w-full bg-gradient-to-r from-[#6a1b1b] to-[#c43b3b] text-white font-semibold py-2 rounded-md hover:opacity-90 transition-all duration-200 disabled:opacity-50"
->
-  {isSubmitting ? (
-    <span className="inline-flex items-center justify-center gap-1">
-      <span>Submitting</span>
-      <AnimatedDots />
-    </span>
-  ) : (
-    "SUBMIT"
-  )}
-</button>
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="mt-2 cursor-pointer w-full bg-gradient-to-r from-[#6a1b1b] to-[#c43b3b] text-white font-semibold py-2 rounded-md hover:opacity-90 transition-all duration-200 disabled:opacity-50"
+        >
+          {isSubmitting ? (
+            <span className="inline-flex items-center justify-center gap-1">
+              <span>Submitting</span>
+              <AnimatedDots />
+            </span>
+          ) : (
+            "SUBMIT"
+          )}
+        </button>
 
       </form>
     </div>

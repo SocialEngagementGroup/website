@@ -29,14 +29,14 @@ const ParallaxSliderSection = () => {
 
         {/* Parallax slider with top margin */}
         <div className="mt-20 w-[95%] mx-auto">
-          <ParallaxSlider />
+          {/* <ParallaxSlider /> */}
         </div>
       </div>
 
       {/* Video section below slider */}
-      <div className="container-fluid mx-auto">
+      {/* <div className="container-fluid mx-auto">
         <Vdo />
-      </div>
+      </div> */}
     
     </section>
   );
