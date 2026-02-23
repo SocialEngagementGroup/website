@@ -5,8 +5,6 @@ import Navbar from "@/components/Navbar/Navbar";
 import NavBarMobile from "@/components/Navbar/NavBarMobile";
 import Footer from "@/components/Footer/Footer";
 
-// ✅ add these
-import { SpeedInsights } from "@vercel/speed-insights/next";
 // (optional) if you also want Vercel Analytics:
 // import { Analytics } from "@vercel/analytics/react";
 
@@ -62,8 +60,6 @@ export default function SiteLayout({ children }) {
         {children}
         <Footer />
 
-        {/* ✅ put it near the end of body */}
-        <SpeedInsights />
         {/* optional */}
         {/* <Analytics /> */}
       </body>
