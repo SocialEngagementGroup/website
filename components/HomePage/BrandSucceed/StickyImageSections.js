@@ -5,11 +5,12 @@ import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { motion, AnimatePresence } from "framer-motion";
 
-// ✅ Import local images used across sections
+// ✅ Import local images used across sections - v2
 import a1 from "./Animgif/a1.png";
 import a2 from "./Animgif/a2.png";
 import a3 from "./Animgif/a3.png";
 import a4 from "./Animgif/a4.png";
+
 
 import "./ScrollStickySections.css";
 
@@ -93,7 +94,7 @@ const ScrollStickySections = () => {
 
   return (
     <section className="scroll-sticky-section flex flex-col md:flex-row container mx-auto px-2 md:px-6 gap-10">
-      
+
       {/* ✅ Left: Scrollable content list */}
       <div className="flex flex-col md:w-1/2 space-y-[0vh] md:space-y-[50vh] mt-0 md:mt-20 md:pb-35 pb-0">
         {sections.map((section, index) => (

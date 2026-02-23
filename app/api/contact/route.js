@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-function fetchWithTimeout(url, options = {}, timeoutMs = 8000) {
+function fetchWithTimeout(url, options = {}, timeoutMs = 20000) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeoutMs);
 
@@ -11,8 +11,9 @@ function fetchWithTimeout(url, options = {}, timeoutMs = 8000) {
 
 export async function POST(req) {
   try {
-    const { name, phone, email, message, business, recaptchaToken } =
+    const { name, phone, email, message, business, recaptchaToken, pageUrl } =
       await req.json();
+
 
     // 1) reCAPTCHA token required
     if (!recaptchaToken) {
@@ -41,7 +42,7 @@ export async function POST(req) {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams({ secret, response: recaptchaToken }),
       },
-      8000
+      20000
     );
 
     if (!verifyRes.ok) {
@@ -80,22 +81,26 @@ export async function POST(req) {
       );
     }
 
+
+    const payload = {
+      name,
+      phone,
+      email,
+      business,
+      message,
+      pageUrl,
+      submittedAt: new Date().toISOString(),
+    };
+
+
     const n8nRes = await fetchWithTimeout(
       webhookUrl,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name,
-          phone,
-          email,
-          business,
-          message,
-          source: "website-contact-form",
-          submittedAt: new Date().toISOString(),
-        }),
+        body: JSON.stringify(payload),
       },
-      8000
+      20000
     );
 
     const n8nText = await n8nRes.text();

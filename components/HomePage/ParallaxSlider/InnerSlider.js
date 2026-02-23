@@ -2,94 +2,76 @@
 
 import { useEffect, useState, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Autoplay, Navigation } from 'swiper/modules';
-import {  MdOutlineArrowBackIosNew, MdOutlineArrowForwardIos } from "react-icons/md"; // Import custom arrow icons
+import { Pagination, Navigation } from 'swiper/modules';
+import { MdOutlineArrowBackIosNew, MdOutlineArrowForwardIos } from "react-icons/md";
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/navigation'; // Required for Swiper functionality
+import 'swiper/css/navigation';
 import styles from './InnerSlider.module.css';
 import Link from 'next/link';
 
 const InnerSlider = ({ items }) => {
-
-  // State to handle fade-in or animation after component loads
   const [loaded, setLoaded] = useState(false);
-
-  // Reference to slider container
   const containerRef = useRef(null);
-
-  // References for custom navigation buttons
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
-  // Set loaded to true after component mounts (for animation/CSS)
   useEffect(() => {
     setLoaded(true);
   }, []);
 
-  // Return null if there are no items to display
   if (!items || items.length === 0) return null;
 
   return (
     <div
       ref={containerRef}
-      className={`${styles.sliderContainer} ${loaded ? styles.loaded : ''}`} // Add loaded class after mount
+      className={`${styles.sliderContainer} ${loaded ? styles.loaded : ''}`}
     >
       {/* Custom Previous Arrow */}
       <div ref={prevRef} className={`${styles.swiperButtonPrev} ${styles.customArrow}`}>
         <MdOutlineArrowBackIosNew className={styles.arrowIcon} />
       </div>
 
-      {/* Swiper Component */}
+      {/* Simplified Swiper - removed autoplay */}
       <Swiper
-        modules={[Navigation, Pagination, Autoplay]} // Enable required Swiper modules
-        spaceBetween={25} // Space between slides
-        slidesPerView={2} // Default slides per view
+        modules={[Navigation, Pagination]}
+        spaceBetween={25}
+        slidesPerView={2}
         pagination={{
           clickable: true,
-          dynamicBullets: true, // Adds dynamic bullet navigation
+          dynamicBullets: true,
         }}
         navigation={{
-          prevEl: prevRef.current, // Assign custom previous button
-          nextEl: nextRef.current, // Assign custom next button
+          prevEl: prevRef.current,
+          nextEl: nextRef.current,
         }}
-        // Link the custom buttons to Swiper after initialization
         onInit={(swiper) => {
           if (prevRef.current && nextRef.current) {
             swiper.params.navigation.prevEl = prevRef.current;
             swiper.params.navigation.nextEl = nextRef.current;
-            swiper.navigation.init();   // Initialize navigation
-            swiper.navigation.update(); // Update navigation
+            swiper.navigation.init();
+            swiper.navigation.update();
           }
         }}
-        autoplay={{
-          delay: 2500,              // Autoplay delay
-          disableOnInteraction: false, // Continue autoplay after user interaction
-        }}
-        speed={1000}  // Slide transition speed
-        loop={true}   // Enable infinite loop
-        className={`${styles.sliderWrapper} mySwiper`} // Optional custom classes
+        speed={600}
+        className={`${styles.sliderWrapper} mySwiper`}
         breakpoints={{
-          0: { slidesPerView: 1 },    // Mobile
+          0: { slidesPerView: 1 },
           450: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },  // Tablet
+          768: { slidesPerView: 2 },
           986: { slidesPerView: 2 },
-          1276: { slidesPerView: 4 }, // Desktop
+          1276: { slidesPerView: 4 },
         }}
       >
-        {/* Map through items and render each slide */}
         {items.map((item, idx) => (
-          <SwiperSlide key={idx} >
-           <Link href={item.link}>
-            <div className={styles.innerCard} style={{ backgroundImage: `url(${item.img})` }}>
-              {/* Slide image */}
-             
-              {/* Slide title */}
-              <div className={styles.slideTitle}>
-                <h5 className="mt-5 inner-title px-3">{item.name}</h5>
+          <SwiperSlide key={idx}>
+            <Link href={item.link}>
+              <div className={styles.innerCard} style={{ backgroundImage: `url(${item.img})` }}>
+                <div className={styles.slideTitle}>
+                  <h5 className="mt-5 inner-title px-3">{item.name}</h5>
+                </div>
               </div>
-            </div>
-           </Link>
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>
