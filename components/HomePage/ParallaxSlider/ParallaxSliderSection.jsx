@@ -11,7 +11,7 @@ const ParallaxSliderSection = () => {
 
       {/* Container for section content */}
       <div className={`${styles.customTextCenter} container-fluid w-[95%] mx-auto pt-10 ClientLogos`}>
-        
+
         {/* Section title */}
         <div className="text-center md:text-center section-title-custom md:mt-20 mt-0">
           <SectionTitle
@@ -29,15 +29,15 @@ const ParallaxSliderSection = () => {
 
         {/* Parallax slider with top margin */}
         <div className="mt-20 w-[95%] mx-auto">
-          {/* <ParallaxSlider /> */}
+          <ParallaxSlider />
         </div>
       </div>
 
       {/* Video section below slider */}
-      {/* <div className="container-fluid mx-auto">
+      <div className="container-fluid mx-auto">
         <Vdo />
-      </div> */}
-    
+      </div>
+
     </section>
   );
 };
