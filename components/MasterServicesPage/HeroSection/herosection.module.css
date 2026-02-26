@@ -1,6 +1,7 @@
 .herosection {
-  position: relative; /* Ensure overlay works */
-  background-image: url('/bg/maskgroup.png');
+  position: relative;
+  /* Ensure overlay works */
+  background-image: url('/bg/maskgrou.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -14,13 +15,16 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, #232326, rgba(35, 35, 38, 0));; /* semi-transparent overlay */
+  background: linear-gradient(to top, #232326, rgba(35, 35, 38, 0));
+  ;
+  /* semi-transparent overlay */
   pointer-events: none;
   z-index: 1;
 }
 
 .containerCustom {
-  position: relative; /* above overlay */
+  position: relative;
+  /* above overlay */
   z-index: 10;
 }
 
@@ -60,16 +64,21 @@
 
 /* Overlay */
 .herosection:before {
-  content: ""; /* This creates the overlay */
+  content: "";
+  /* This creates the overlay */
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0px; /* Extend the overlay to the bottom */
-  height: 15%; /* Cover the entire height */
-background: linear-gradient(to top, #232326, rgba(35, 35, 38, 0));
+  bottom: 0px;
+  /* Extend the overlay to the bottom */
+  height: 15%;
+  /* Cover the entire height */
+  background: linear-gradient(to top, #232326, rgba(35, 35, 38, 0));
 
-  z-index: 0; /* Ensure overlay stays behind text */
+  z-index: 0;
+  /* Ensure overlay stays behind text */
 }
+
 /* ========================================
    Mobile Styles (<= 767px)
 ======================================== */
@@ -97,12 +106,14 @@ background: linear-gradient(to top, #232326, rgba(35, 35, 38, 0));
   }
 
   .heroBtn {
-    font-size: 16px; /* Smaller button text */
+    font-size: 16px;
+    /* Smaller button text */
   }
+
   .herosection {
 
-  padding-block: 1rem;
-}
+    padding-block: 1rem;
+  }
 
 }
 

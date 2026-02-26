@@ -11,6 +11,15 @@ import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 export const metadata = {
   title: "Professional Branding Services | Build a Brand That Lasts",
   description: "Craft a brand that stands out. We develop strategy, voice, and visuals that build recognition, trust, and loyalty. Start your branding journey today.",
+  openGraph: {
+    title: "Branding Services | Social Engagement Group",
+    description: "Craft a brand that stands out with SEG's professional branding strategy and visuals.",
+    url: "/services/branding",
+  },
+  twitter: {
+    title: "Branding Services | Social Engagement Group",
+    description: "Craft a brand that stands out with SEG's professional branding strategy and visuals.",
+  },
 };
 
 export default function Page() {
@@ -18,15 +27,15 @@ export default function Page() {
     <>
       <HeroSection {...brandingData.hero} />
       <IntroSection {...brandingData.intro} />
-      <CTA {...brandingData.cta}/>
+      <CTA {...brandingData.cta} />
       <CostofSection
         heading1={brandingData.Costof.heading1}
         heading2={brandingData.Costof.heading2}
         description={brandingData.Costof.description}
         items={brandingData.Costof.items}
       />
-      <ProfessionalBranding {...brandingData.ProfessionalBranding}/>
-      <BrandingStrategy {...brandingData.BrandStrategy}/>
+      <ProfessionalBranding {...brandingData.ProfessionalBranding} />
+      <BrandingStrategy {...brandingData.BrandStrategy} />
       <FAQ items={brandingData.FAQ.items} heading={brandingData.FAQ.heading} />
     </>
   );
