@@ -1,56 +1,46 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { motion, AnimatePresence } from "framer-motion";
-
-// ✅ Import local images used across sections - v2
-import a1 from "./Animgif/a1.png";
-import a2 from "./Animgif/a2.png";
-import a3 from "./Animgif/a3.png";
-import a4 from "./Animgif/a4.png";
-
-
 import "./ScrollStickySections.css";
 
-// ✅ Data list for scroll-based content
+// ✅ Data list for scroll-based content (use public URLs, no imports)
 const sections = [
   {
     button: "Strategy & Research",
     title:
       "Every successful campaign starts with insight. We analyze your brand, audience, and competitors to build a strategy that eliminates guesswork and drives consistent results.",
-    image: a1,
+    video: "/Animgif/1.webm",
   },
   {
     button: "Creative Design",
     title:
       "Great design is more than aesthetic, it's strategic psychology. We craft visuals that tell your story, connect emotionally, and make your brand unforgettable.",
-    image: a2,
+    video: "/Animgif/2.webm",
   },
   {
     button: "Growth Strategy",
     title:
       "Growth is a process, not a moment. We blend creativity and analytics to design campaigns that evolve, adapt, and deliver measurable success.",
-    image: a3,
+    video: "/Animgif/3.webm",
   },
   {
     button: "Launch & Support",
     title:
       "A launch marks the start of the journey, not the end. We stay by your side to fine-tune performance, uncover new opportunities, and keep your brand evolving.",
-    image: a4,
+    video: "/Animgif/4.webm",
   },
 ];
 
 // ✅ Single scroll-triggered section component
-const SectionItem = ({ section, setActiveImage, }) => {
-  // Detect when this section is in the viewport
+const SectionItem = ({ section, setActiveVideo }) => {
   const { ref } = useInView({
     threshold: 0,
-    rootMargin: "-40% 0px -40% 0px", // Fires when section is near center
+    rootMargin: "-40% 0px -40% 0px",
     triggerOnce: false,
     onChange: (inView) => {
-      if (inView) setActiveImage(section.image); // Switch active image on view
+      if (inView) setActiveVideo(section.video);
     },
   });
 
@@ -74,15 +64,18 @@ const SectionItem = ({ section, setActiveImage, }) => {
         {section.title}
       </p>
 
-      {/* ✅ Mobile-only image below text */}
+      {/* ✅ Mobile-only video below text */}
       <div className="md:hidden w-full flex justify-center mt-4 image-box">
-        <Image
-          src={section.image}
-          alt={section.button}
-          className="object-cover"
-          priority
-          unoptimized
-        />
+        <video
+          className="w-full h-auto object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+        >
+          <source src={section.video} type="video/webm" />
+        </video>
       </div>
     </div>
   );
@@ -90,44 +83,44 @@ const SectionItem = ({ section, setActiveImage, }) => {
 
 // ✅ Main Sticky Scroll Section Component
 const ScrollStickySections = () => {
-  const [activeImage, setActiveImage] = useState(sections[0].image); // default first image
+  const [activeVideo, setActiveVideo] = useState(sections[0].video);
 
   return (
     <section className="scroll-sticky-section flex flex-col md:flex-row container mx-auto px-2 md:px-6 gap-10">
-
       {/* ✅ Left: Scrollable content list */}
       <div className="flex flex-col md:w-1/2 space-y-[0vh] md:space-y-[50vh] mt-0 md:mt-20 md:pb-35 pb-0">
         {sections.map((section, index) => (
           <SectionItem
             key={index}
             section={section}
-            setActiveImage={setActiveImage}
+            setActiveVideo={setActiveVideo}
           />
         ))}
       </div>
 
-      {/* ✅ Right: Sticky animated image */}
+      {/* ✅ Right: Sticky animated video */}
       <div className="md:w-1/2 relative">
         <div className="sticky top-60 flex justify-center items-center gifimage">
           <div className="w-full h-full relative">
             <AnimatePresence mode="wait">
               <motion.div
-                key={activeImage.src} // Changes image on scroll
+                key={activeVideo} // change video on scroll
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 className="w-full flex justify-center"
               >
-                <Image
-                  src={activeImage}
-                  alt="Active Section"
-                  width={500}
-                  height={500}
-                  className="aspect-square object-contain"
-                  priority
-                  unoptimized
-                />
+                <video
+                  className="aspect-square w-[500px] h-[500px] object-contain"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="auto"
+                >
+                  <source src={activeVideo} type="video/webm" />
+                </video>
               </motion.div>
             </AnimatePresence>
           </div>
