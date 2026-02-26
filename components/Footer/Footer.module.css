@@ -3,7 +3,7 @@
   position: relative;           /* Needed for overlay positioning */
   width: 100%;
   padding-top:5rem;       /* Equivalent to Tailwind px-4 py-16 */
-  background-image: url('/bg/Rectangle1.png'); /* Background image */
+  background-image: url('/bg/Rectangle1.jpeg'); /* Background image */
   background-size: cover;       /* Cover entire container */
   background-position: center;  /* Center the image */
   background-repeat: no-repeat; /* Prevent repeating */

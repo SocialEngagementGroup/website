@@ -115,17 +115,18 @@ export const projects = [
 
 
 export const ClientsLogo = [
-  { src: "/ClientsLogo/Infuse-Black.svg", alt: "Infuse" },
-  { src: "/ClientsLogo/Aref-Black.svg", alt: "Aref" },
-  { src: "/ClientsLogo/FJH-Black.svg", alt: "FJH" },
-  { src: "/ClientsLogo/MFC-Black.svg", alt: "MFC" },
-  { src: "/ClientsLogo/SMF-Black.svg", alt: "SMF" },
-  { src: "/ClientsLogo/NIPA-Black.svg", alt: "NIPA" },
-  { src: "/ClientsLogo/Gravy-Stack-Black.svg", alt: "Gravy Stack" },
-  { src: "/ClientsLogo/Rastegar-Black.svg", alt: "Rastegar" },
-  { src: "/ClientsLogo/GT-Black.svg", alt: "GT" },
-  { src: "/ClientsLogo/Sporcle-Black.svg", alt: "Sporcle" },
-  { src: "/ClientsLogo/SC-Black.svg", alt: "SC" },
+  { src: "/ClientsLogo/Infuse-Black.png", alt: "Infuse" },
+  { src: "/ClientsLogo/Aref-Black.png", alt: "Aref" },
+  { src: "/ClientsLogo/FJH-Black.png", alt: "FJH" },
+  { src: "/ClientsLogo/MFC-Black.png", alt: "MFC" },
+  { src: "/ClientsLogo/SMF-Black.png", alt: "SMF" },
+  { src: "/ClientsLogo/NIPA-Black.png", alt: "NIPA" },
+  { src: "/ClientsLogo/Gravy-Stack-Black.png", alt: "Gravy Stack" },
+  { src: "/ClientsLogo/Rastegar-Black.png", alt: "Rastegar" },
+  { src: "/ClientsLogo/GT-Black.png", alt: "GT" },
+  { src: "/ClientsLogo/Sporcle-Black.png", alt: "Sporcle" },
+  { src: "/ClientsLogo/SC-Black.png", alt: "SC" },
+  { src: "/ClientsLogo/Capiton-Black.png", alt: "Capiton" },
 ];
 
 

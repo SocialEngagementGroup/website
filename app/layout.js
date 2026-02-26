@@ -9,11 +9,37 @@ import Footer from "@/components/Footer/Footer";
 // import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
+  metadataBase: new URL("https://socialengagementgroup.com"),
   title: {
-    default: "Where human creativity meets AI | SEG",
-    template: "%s | SEG",
+    default: "SEG | Where Human Creativity Meets AI-Powered Digital Growth",
+    template: "%s | SEG - Social Engagement Group",
   },
-  description: "Where human creativity meets AI | SEG",
+  description: "Social Engagement Group (SEG) blends human creativity with AI-powered automation to tell your story and drive business growth across every digital touchpoint.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Social Engagement Group (SEG)",
+    description: "Where Human Creativity Meets AI-Powered Digital Growth.",
+    url: "https://socialengagementgroup.com",
+    siteName: "Social Engagement Group",
+    images: [
+      {
+        url: "/SiteLogo/seg.png",
+        width: 800,
+        height: 600,
+        alt: "SEG Logo",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Social Engagement Group (SEG)",
+    description: "Where Human Creativity Meets AI-Powered Digital Growth.",
+    images: ["/SiteLogo/seg.png"],
+  },
   icons: {
     icon: "/favicon.ico",
   },

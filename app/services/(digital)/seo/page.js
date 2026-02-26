@@ -14,6 +14,15 @@ export const metadata = {
   },
   description:
     "Boost visibility and traffic with expert SEO. We optimize keywords, content, and links to help your business rank higher and convert more customers.",
+  openGraph: {
+    title: "SEO Services | Social Engagement Group",
+    description: "Boost your organic growth and search rankings with SEG's expert SEO services.",
+    url: "/services/seo",
+  },
+  twitter: {
+    title: "SEO Services | Social Engagement Group",
+    description: "Boost your organic growth and search rankings with SEG's expert SEO services.",
+  },
 };
 
 export default function Page() {
