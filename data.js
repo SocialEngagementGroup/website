@@ -171,7 +171,7 @@ export const images = [
   { id: 41, src: "/herosliderimage/Rectangle41.webp", alt: "Rectangle 41" },
   { id: 42, src: "/herosliderimage/Rectangle42.webp", alt: "Rectangle 42" },
   { id: 43, src: "/herosliderimage/Rectangle43.webp", alt: "Rectangle 43" },
-  { id: 44, src: "/herosliderimage/Rectangle44.webp", alt: "Rectangle 44" },
+  { id: 44, src: "/herosliderimage/Rectangle40.webp", alt: "Rectangle 40" },
   { id: 46, src: "/herosliderimage/Rectangle46.webp", alt: "Rectangle 46" },
   { id: 47, src: "/herosliderimage/Rectangle47.webp", alt: "Rectangle 47" },
   { id: 48, src: "/herosliderimage/Rectangle48.webp", alt: "Rectangle 48" },

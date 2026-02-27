@@ -51,6 +51,7 @@ const inter = Inter({
   weight: ["400", "500", "600", "700"],
 });
 
+// Lobster is used in Card.module.css for the parallax card section titles
 const lobster = Lobster({
   variable: "--font-lobster",
   subsets: ["latin"],
