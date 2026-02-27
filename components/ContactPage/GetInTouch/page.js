@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import styles from "./GetInTouch.module.css";
 
 const contactInfo = [
   { icon: "/contactus/icons/email.png", text: "rahee@socialengagementgroup.com" },
@@ -11,8 +10,8 @@ const contactInfo = [
 
 const GetInTouch = () => {
   return (
-    <section className={`${styles.section} py-5 md:py-20`}>
-      <div className={`${styles.fullWidth1180} w-[75%] mx-auto`}>
+    <section className={`bg-white py-5 md:py-20`}>
+      <div className={`max-md:!w-full max-md:mx-auto w-[75%] mx-auto`}>
         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-20 gap-0 items-center px-5 justify-items-center md:justify-items-start">
 
           {/* RIGHT COLUMN: IMAGE */}
@@ -20,7 +19,7 @@ const GetInTouch = () => {
             <Image
               src="/contactus/gitintouch.jpg"
               alt="Contact"
-              className={`${styles.image} w-full object-cover`}
+              className={`border-[7px] border-black rounded-[25px] w-full object-cover`}
               width={569}
               height={343}
             />

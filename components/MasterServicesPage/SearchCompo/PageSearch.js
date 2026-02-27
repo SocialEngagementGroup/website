@@ -3,7 +3,6 @@
 import { useState, useEffect, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { FiSearch } from "react-icons/fi";
-import styles from "./PageSearch.module.css";
 
 const PageSearch = ({ pages = [] }) => {
   const [query, setQuery] = useState("");
@@ -54,8 +53,8 @@ const PageSearch = ({ pages = [] }) => {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.inputWrapper}>
+    <div className="max-w-[400px] mx-auto relative">
+      <div className="relative">
         <input
           type="text"
           value={query}
@@ -65,12 +64,12 @@ const PageSearch = ({ pages = [] }) => {
           }}
           onKeyDown={handleKeyDown}
           placeholder="Search..."
-          className={styles.inputField}
+          className="text-black w-full h-[57px] max-md:w-[85%] max-md:h-[40px] px-[20px] py-[15px] rounded-[20px] border border-[#ccc] bg-white placeholder:text-black placeholder:not-italic"
         />
 
         {/* Clickable search icon */}
         <div
-          className={styles.searchIconWrapper}
+          className="absolute right-[20px] max-md:right-[50px] top-[52%] -translate-y-1/2 cursor-pointer text-[#888]"
           onClick={() => {
             if (filteredPages.length > 0) handleClick(filteredPages[0]);
           }}
@@ -81,7 +80,7 @@ const PageSearch = ({ pages = [] }) => {
 
       {/* Dropdown */}
       {filteredPages.length > 0 && (
-        <ul className={styles.dropdown + " backdrop-blur-md bg-black/40 shadow-lg"}>
+        <ul className="absolute top-full inset-x-0 w-full max-h-[250px] overflow-y-auto mt-[10px] z-[1000] p-0 list-none border border-[#ccc] shadow-lg backdrop-blur-md bg-black/40" style={{ scrollbarWidth: 'thin', scrollbarColor: '#502154 #8a3159' }}>
           {filteredPages.map((page, index) => {
             const displayText = page
               .split(" > ")
@@ -97,8 +96,8 @@ const PageSearch = ({ pages = [] }) => {
               <li
                 key={index}
                 onClick={() => handleClick(page)}
-                className={`${styles.dropdownItem} ${
-                  isSelected ? styles.dropdownItemSelected : ""
+                className={`p-[10px] cursor-pointer transition-colors duration-200 text-start capitalize ${
+                  isSelected ? "bg-[#090414] text-white" : "hover:bg-[#090414] hover:text-white"
                 }`}
                 onMouseEnter={() => setSelectedIndex(index)}
                 onMouseLeave={() => setSelectedIndex(-1)}

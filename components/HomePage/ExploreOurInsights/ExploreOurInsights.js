@@ -10,12 +10,12 @@ const ExploreOurInsights = () => {
       <div className="text-center md:text-center px-4">
 
         {/* ✅ Subtitle above main heading */}
-        <strong className="block mb-2 text-[#0A0A0A] sub-title">
+        <h3 className="block mb-2 text-[#0A0A0A] sub-title">
           Our Resources
-        </strong>
+        </h3>
 
         {/* ✅ Main heading for the section */}
-        <h2 className="text-[26px] sm:text-[32px] md:text-[40px] lg:text-[44px] font-semibold text-gray-900 section-title mt-6 leading-tight">
+        <h2 className="font-semibold text-gray-900 section-title mt-6 leading-tight tracking-tight">
           Explore Our Insights
         </h2>
       </div>

@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import styles from "./herosection.module.css";
 import ContactForm from "@/components/Footer/ContactForm/ContactForm";
 
 const HeroSection = ({
@@ -10,25 +9,31 @@ const HeroSection = ({
   description,
   ctaButton,
   ctaLink,
-  // img,
   bg
 }) => {
   return (
-    <section
-      className={styles.herosection}
-      style={{ backgroundImage: `url(${bg})` }}
-    >
+    <section className="relative w-full flex items-center justify-center overflow-hidden py-0 md:py-25 font-sans md:min-h-[80vh]">
+      {/* Background Image with Blur */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat blur-sm transform scale-105"
+        style={{ backgroundImage: `url(${bg})`, zIndex: 0 }}
+      />
+      {/* Black Overlay */}
+      <div className="absolute inset-0 bg-black/50" style={{ zIndex: 1 }} />
+
       <div
-        className={`${styles.containerCustom} container-fluid w-[75%] mx-auto py-0 md:py-25`}
+        className={`max-[1180px]:w-[100%] md:max-[1180px]:w-[95%] container-fluid w-[75%] mx-auto py-0 relative z-10`}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-0 text-center md:text-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-0 text-center md:text-start w-full">
 
-          {/* ---------- Left Text (Second on mobile) ---------- */}
-          <div className="text-white content order-2 md:order-1">
-            <h2 className={styles.subtitle}>{subtitle}</h2>
-            <h1 className={styles.title}>{title}</h1>
+          {/* ---------- Left Text (95vh on mobile, Auto on desktop) ---------- */}
+          <div className="text-white content order-1 md:order-1 min-h-[95vh] md:min-h-0 flex flex-col justify-center px-6 md:px-0">
+            <h3 className="!capitalize !font-medium opacity-90 mb-4">{subtitle}</h3>
+            <h1 className="!font-serif !font-bold !leading-[1.1] !tracking-tight">
+              {title}
+            </h1>
 
-            <p className={`${styles.description} my-4 md:my-12 p1`}>
+            <p className={`max-w-[665px] max-md:max-w-full my-6 md:my-10 !p1 !leading-relaxed opacity-80 font-light`}>
               {description}
             </p>
 
@@ -36,12 +41,12 @@ const HeroSection = ({
             {ctaButton && (
               <Link href={ctaLink}>
                 <button
-                  className={`${styles.heroBtn}
+                  className={`rounded-[14px]
                     font-semibold
                     px-6 py-3 bg-gray-300 text-gray-900
                     sm:px-8 sm:py-3 md:px-10 md:py-4
                     hover:bg-gray-400 transition cursor-pointer
-                    rounded-lg text-base sm:text-lg mt-4
+                    text-base sm:text-lg mt-4
                   `}
                 >
                   {ctaButton}
@@ -50,9 +55,11 @@ const HeroSection = ({
             )}
           </div>
 
-          {/* ---------- Right Image (First on mobile) ---------- */}
-          <div className="justify-center order-2 md:order-1 md:mt-0 mt-5">
-            <ContactForm layout="split" />
+          {/* ---------- Right Input Form (Hidden on mobile) ---------- */}
+          <div className="hidden md:flex justify-center order-2 md:order-2 mt-0 md:mt-0 mb-20 md:mb-0 px-4 md:px-0">
+            <div className="bg-black/60 md:bg-black/30 backdrop-blur-md border border-white/10 rounded-3xl p-6 md:p-8 shadow-2xl lg:max-w-[600px] lg:ml-auto w-full">
+              <ContactForm layout="split" />
+            </div>
           </div>
         </div>
 

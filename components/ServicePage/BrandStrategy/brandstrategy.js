@@ -1,14 +1,12 @@
 import React from "react";
-import styles from "./Brandstrategy.module.css";
 import Image from "next/image";
 
 const BrandStrategy = ({ heading, items, img }) => {
   return (
-    <section className={styles.section}>
+    <section className="bg-white pb-0 max-[990px]:pb-[3rem] max-md:mt-0 max-md:pb-0">
       <div
         className={
-          styles.customPadding +
-          " container-fluid mx-auto py-20"
+          "max-[990px]:pt-[20px] max-md:pt-[30px] max-md:py-[20px] container-fluid mx-auto py-20"
         }
       >
         <div
@@ -21,14 +19,14 @@ const BrandStrategy = ({ heading, items, img }) => {
           "
         >
           {/* ---------- Left: Image ---------- */}
-          <div className={styles.imageBox + " flex justify-center"}>
-            <div className={styles.imageBoxInner}>
+          <div className="flex justify-center">
+            <div className="">
               <Image
                 src={img}
                 alt="Brand Strategy Image"
                 width={700}
                 height={400}
-                className={styles.imagePosition}
+                className=""
               />
             </div>
           </div>
@@ -36,20 +34,19 @@ const BrandStrategy = ({ heading, items, img }) => {
           {/* ---------- Right: Heading + List ---------- */}
           <div
             className={
-              styles.textContainer +
-              " flex justify-center md:justify-center mr:0 md:mr-10 mt-6  md:mt-0"
+              "flex justify-center md:justify-center mr:0 md:mr-10 mt-6  md:mt-0"
             }
           >
-            <div className={styles.textBox + " text-black  px-5 md:px-0"}>
+            <div className="max-w-[800px] max-md:!mt-0 max-md:!w-full text-black px-5 md:px-0">
               {/* Heading */}
-              <h3 className={styles.heading}>{heading}</h3>
+              <h2 className="!font-serif !font-bold !leading-tight !tracking-tight max-w-[600px]">{heading}</h2>
 
               {/* List Items */}
-              <ul className={styles.list + " px-5 md:px-0"}>
+              <ul className="mt-[16px] mb-[10px] max-w-[630px] max-[1300px]:w-full px-5 md:px-0">
                 {items?.map((item, index) => (
                   <li
                     key={index}
-                    className={styles.listItem + " p1"}
+                    className="list-disc mt-[1rem] ml-[30px] max-md:list-outside max-md:ml-0 !p1 !font-light opacity-90"
                     dangerouslySetInnerHTML={{ __html: item.text }}
                   ></li>
                 ))}

@@ -7,7 +7,7 @@ export const termsandconditions = {
     sections: [
       {
         text:
-          "Social Engagement Group uses cookies to enhance your browsing experience and analyze our website traffic. By continuing to use our site, you consent to our use of cookies.",
+          "<strong><a href=\"/\" style=\"text-decoration: none; color: black;\">Social Engagement Group</a></strong> uses cookies to enhance your browsing experience and analyze our website traffic. By continuing to use our site, you consent to our use of cookies.",
       },
       {
         text:

@@ -8,7 +8,6 @@ import { MdOutlineArrowBackIosNew, MdOutlineArrowForwardIos } from "react-icons/
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import styles from './InnerSlider.module.css';
 import Link from 'next/link';
 
 const InnerSlider = ({ items }) => {
@@ -26,11 +25,11 @@ const InnerSlider = ({ items }) => {
   return (
     <div
       ref={containerRef}
-      className={`${styles.sliderContainer} ${loaded ? styles.loaded : ''}`}
+      className={`relative w-full max-w-full mx-auto mt-[30px] sm:mt-[50px] xl:mt-[80px] transition-opacity duration-500 ${loaded ? 'opacity-100' : 'opacity-0'}`}
     >
       {/* Custom Previous Arrow */}
-      <div ref={prevRef} className={`${styles.swiperButtonPrev} ${styles.customArrow}`}>
-        <MdOutlineArrowBackIosNew className={styles.arrowIcon} />
+      <div ref={prevRef} className={`absolute top-[48%] -translate-y-1/2 z-[60] cursor-pointer text-[#e3d3cc] hover:text-black border-2 border-[#e3d3cc] rounded-full bg-black/45 hover:bg-[#f0f0f0] flex place-items-center transition-colors duration-300 left-0 md:-left-[46px]`}>
+        <MdOutlineArrowBackIosNew className="w-[30px] h-[30px] p-[4px] sm:w-[40px] sm:h-[40px] sm:p-[8px]" />
       </div>
 
       <Swiper
@@ -54,7 +53,7 @@ const InnerSlider = ({ items }) => {
           }
         }}
         speed={600}
-        className={`${styles.sliderWrapper} mySwiper`}
+        className={`w-full mySwiper`}
         breakpoints={{
           0: { slidesPerView: 1 },
           450: { slidesPerView: 1 },
@@ -72,7 +71,7 @@ const InnerSlider = ({ items }) => {
                 - next/image fills the card at z-index:0
                 - .innerCard children retain z-index:2 (from module CSS) so text floats above
               */}
-              <div className={styles.innerCard} style={{ position: 'relative', overflow: 'hidden' }}>
+              <div className="relative overflow-hidden w-full h-[450px] min-[501px]:h-[300px] xl:h-[350px] 2xl:h-[382px] flex flex-col items-start justify-end rounded-[20px] border-[5px] border-black text-white transition-all duration-300 after:absolute after:inset-0 after:bg-[linear-gradient(to_top,rgba(0,0,0,0.85),rgba(0,0,0,0.35),rgba(0,0,0,0.05))] after:z-[1] after:pointer-events-none [&>*]:relative [&>*]:z-[2]">
                 <Image
                   src={item.img}
                   alt={item.name}
@@ -82,8 +81,8 @@ const InnerSlider = ({ items }) => {
                   className="object-cover"
                   style={{ zIndex: 0 }}
                 />
-                <div className={styles.slideTitle}>
-                  <h5 className="mt-5 inner-title px-3">{item.name}</h5>
+                <div className="w-full h-[88px] relative z-[2]">
+                  <h5 className="mt-5 inner-title px-3 text-white capitalize">{item.name}</h5>
                 </div>
               </div>
             </Link>
@@ -92,8 +91,8 @@ const InnerSlider = ({ items }) => {
       </Swiper>
 
       {/* Custom Next Arrow */}
-      <div ref={nextRef} className={`${styles.swiperButtonNext} ${styles.customArrow}`}>
-        <MdOutlineArrowForwardIos className={styles.arrowIcon} />
+      <div ref={nextRef} className={`absolute top-[48%] -translate-y-1/2 z-[60] cursor-pointer text-[#e3d3cc] hover:text-black border-2 border-[#e3d3cc] rounded-full bg-black/45 hover:bg-[#f0f0f0] flex place-items-center transition-colors duration-300 right-0 md:-right-[46px]`}>
+        <MdOutlineArrowForwardIos className="w-[30px] h-[30px] p-[4px] sm:w-[40px] sm:h-[40px] sm:p-[8px]" />
       </div>
     </div>
   );

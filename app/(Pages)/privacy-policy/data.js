@@ -6,7 +6,7 @@ export const PrivacyPolicy = {
   content: {
     sections: [
       {
-        text: "At Social Engagement Group, we are committed to protecting your privacy. This policy explains how we collect, use, and safeguard your personal data in compliance with standard data protection regulations."
+        text: "At <strong><a href=\"/\" style=\"text-decoration: none; color: black;\">Social Engagement Group</a></strong>, we are committed to protecting your privacy. This policy explains how we collect, use, and safeguard your personal data in compliance with standard data protection regulations."
       },
       {
         text:

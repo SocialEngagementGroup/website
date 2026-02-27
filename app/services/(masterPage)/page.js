@@ -2,13 +2,12 @@ import React from "react";
 import HeroSection from "@/components/MasterServicesPage/HeroSection/HeroSection";
 import AutoSlider from "@/components/MasterServicesPage/AutoSlider/AutoSlider";
 import { CreativeData, Digital, Industry } from "./sliderData";
-import styles from "./master.module.css";
 
 const MasterServicesPage = () => {
   return (
     <>
       <HeroSection />
-      <div className={styles.fade}></div>
+      <div className=""></div>
 
       <div className="bg-[#232326] py-2 md:py-8">
         <div className="w-[90%] mx-auto">

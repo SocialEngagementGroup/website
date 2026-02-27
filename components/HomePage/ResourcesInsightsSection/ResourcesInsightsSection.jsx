@@ -3,7 +3,6 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
-import styles from "./ResourcesInsightsSection.module.css";
 
 const BLOGS = [
   {
@@ -41,70 +40,70 @@ export default function ResourcesInsightsSection() {
   const next = () => setIndex((i) => (i === BLOGS.length - 1 ? 0 : i + 1));
 
   return (
-    <section className={styles.section}>
-      <div className={styles.header}>
-        <p className={styles.kicker}>Our Resources</p>
-        <h2 className={styles.title}>Explore Our Insights</h2>
+    <section className="py-[80px]">
+      <div className="text-center mb-[40px]">
+        <p className="opacity-75">Our Resources</p>
+        <h2 className="">Explore Our Insights</h2>
       </div>
 
-      <div className={styles.row}>
+      <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-[20px] items-stretch">
         {/* Left card stays static */}
-        <div className={styles.leftCard}>
-          <h3 className={styles.leftTitle}>LOREM IPSUM</h3>
-          <div className={styles.divider} />
-          <p className={styles.leftDesc}>LOREM IPSUM DOLOR SIT AMET</p>
+        <div className="bg-[#9b5a57] rounded-[16px] p-[32px] text-white flex flex-col justify-center">
+          <h3 className="">LOREM IPSUM</h3>
+          <div className="w-[40px] h-[2px] bg-white my-[12px]" />
+          <p className="mb-[18px]">LOREM IPSUM DOLOR SIT AMET</p>
 
-          <div className={styles.controls}>
-            <button className={styles.ctrlBtn} onClick={prev} type="button" aria-label="Previous">
+          <div className="flex items-center gap-[10px] mt-[6px]">
+            <button className="w-[40px] h-[40px] rounded-full bg-white/[0.18] border border-white/25 text-white cursor-pointer" onClick={prev} type="button" aria-label="Previous">
               ←
             </button>
 
-            <div className={styles.dots}>
+            <div className="flex gap-[8px] items-center">
               {BLOGS.map((b, i) => (
                 <button
                   key={b.id}
                   type="button"
                   onClick={() => setIndex(i)}
-                  className={`${styles.dot} ${i === index ? styles.dotActive : ""}`}
+                  className={`w-[9px] h-[9px] rounded-full cursor-pointer transition-colors ${i === index ? "bg-white/[0.95]" : "bg-white/[0.35]"}`}
                   aria-label={`Go to slide ${i + 1}`}
                 />
               ))}
             </div>
 
-            <button className={styles.ctrlBtn} onClick={next} type="button" aria-label="Next">
+            <button className="w-[40px] h-[40px] rounded-full bg-white/[0.18] border border-white/25 text-white cursor-pointer" onClick={next} type="button" aria-label="Next">
               →
             </button>
           </div>
 
-          <Link href="/blogs" className={styles.leftBtn}>
+          <Link href="/blogs" className="bg-white text-black py-[10px] px-[18px] rounded-[20px] w-fit mt-[18px]">
             View All Blogs
           </Link>
         </div>
 
         {/* Right card transitions */}
-        <div className={styles.rightWrap}>
+        <div className="relative">
           <AnimatePresence mode="wait">
             <motion.div
               key={blog.id}
-              className={styles.rightMotion}
+              className="h-full"
               initial={{ opacity: 0, y: 14, scale: 0.99 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -14, scale: 0.99 }}
               transition={{ duration: 0.28 }}
             >
-              <Link href={blog.href} className={styles.rightCard}>
+              <Link href={blog.href} className="relative rounded-[16px] overflow-hidden text-white min-h-[360px] block">
                 <div
-                  className={styles.bg}
+                  className="absolute inset-0 bg-cover bg-center"
                   style={{ backgroundImage: `url(${blog.image})` }}
                 />
-                <div className={styles.overlay} />
+                <div className="absolute inset-0 bg-black/45" />
 
-                <div className={styles.content}>
-                  <h3>{blog.title}</h3>
-                  <p>{blog.description}</p>
+                <div className="relative z-[2] p-[32px]">
+                  <h3 className="">{blog.title}</h3>
+                  <p className="opacity-90">{blog.description}</p>
                 </div>
 
-                <span className={styles.arrow}>↗</span>
+                <span className="absolute top-[16px] right-[16px] z-[2] bg-white/20 py-[8px] px-[10px] rounded-full">↗</span>
               </Link>
             </motion.div>
           </AnimatePresence>

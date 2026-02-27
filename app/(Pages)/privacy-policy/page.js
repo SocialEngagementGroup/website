@@ -3,7 +3,7 @@ import HeroSection from '@/components/LegalPage/HeroSection/HeroSection'
 import { PrivacyPolicy } from "./data";
 import BodyContent from '@/components/LegalPage/Content/BodyContent'
 
-const page = () => {
+const PrivacyPolicyPage = () => {
   return (
     <div>
       {/* Pass hero data to HeroSection */}
@@ -18,4 +18,4 @@ const page = () => {
   )
 }
 
-export default page
+export default PrivacyPolicyPage

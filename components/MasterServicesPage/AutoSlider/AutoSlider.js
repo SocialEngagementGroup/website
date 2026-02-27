@@ -6,7 +6,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import styles from "./AutoSlider.module.css";
 import { MdOutlineArrowBackIosNew, MdOutlineArrowForwardIos } from "react-icons/md";
 
 const AutoSlider = ({ slides = [] }) => {
@@ -52,7 +51,7 @@ const AutoSlider = ({ slides = [] }) => {
   }, []);
 
   return (
-    <div ref={wrapperRef} className={styles.wrapper}>
+    <div ref={wrapperRef} className="relative w-full pt-[6px] pb-[14px] isolate [&_.swiper]:overflow-hidden hover:[&_.swiper]:overflow-visible hover:[&_.swiper-wrapper]:overflow-visible [&_.swiper-slide]:relative [&_.swiper-slide]:z-[1] [&_.swiper-slide]:transition-transform [&_.swiper-slide]:duration-300 [&_.swiper-slide]:ease-in-out [&_.swiper-slide.isHoveredSlide]:z-10 [&_.swiper-slide:hover]:scale-[1.22] [&_.swiper-slide:hover]:delay-[180ms] [&_.swiper-slide:hover_.scaling-image]:scale-[1.06] [&_.swiper-slide:hover_.scaling-box]:shadow-[0_18px_45px_rgba(0,0,0,0.55)]">
       <Swiper
         modules={[Navigation]}
         loop={!loading}
@@ -78,30 +77,30 @@ const AutoSlider = ({ slides = [] }) => {
             swiper.navigation.update();
           });
         }}
-        className={styles.slider}
+        className=""
       >
         {loading
           ? skeletonSlides.map((_, i) => (
             <SwiperSlide key={`sk-${i}`}>
-              <div className={styles.cardLink}>
-                <div className={`${styles.cardBox} ${styles.skeletonCard}`}>
-                  <span className={styles.skeletonText}>Loading...</span>
+              <div className="block w-full">
+                <div className="scaling-box h-[250px] max-[599px]:h-[200px] max-[599px]:m-auto rounded-[10px] relative overflow-hidden bg-gray-700 animate-pulse">
+                  <span className="text-white drop-shadow-[0_6px_18px_rgba(0,0,0,0.55)]">Loading...</span>
                 </div>
               </div>
             </SwiperSlide>
           ))
           : slides.map((slide, i) => (
             <SwiperSlide key={i}>
-              <Link href={slide.link} className={styles.cardLink}>
-                <div className={styles.cardBox}>
+              <Link href={slide.link} className="block w-full">
+                <div className="scaling-box h-[250px] max-[599px]:h-[200px] max-[599px]:m-auto rounded-[10px] relative overflow-hidden">
                   <img
                     src={slide.bg}
                     alt={slide.title || "slide image"}
-                    className={styles.cardImage}
+                    className="scaling-image w-full h-full block object-cover object-center scale-100 transition-transform duration-300 ease-in-out"
                     loading="lazy"
                   />
-                  <div className={styles.overlay} />
-                  <h4 className={styles.cardTitle}>{slide.title}</h4>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.55)] to-[rgba(0,0,0,0.05)] pointer-events-none z-[1]" />
+                  <h4 className="absolute left-[12px] bottom-[12px] m-0 text-white drop-shadow-[0_6px_18px_rgba(0,0,0,0.55)] z-[2] capitalize">{slide.title}</h4>
                 </div>
               </Link>
             </SwiperSlide>
@@ -112,20 +111,20 @@ const AutoSlider = ({ slides = [] }) => {
         ref={prevRef}
         type="button"
         aria-label="Previous"
-        className={styles.prev}
+        className="absolute left-[6px] top-1/2 -translate-y-1/2 z-[60] cursor-pointer border-2 border-[#e3d3cc] rounded-full bg-[rgba(0,0,0,0.45)] text-white grid place-items-center disabled:opacity-50 disabled:cursor-not-allowed"
         disabled={loading}
       >
-        <MdOutlineArrowBackIosNew className={styles.arrowIcon} />
+        <MdOutlineArrowBackIosNew className="w-[40px] h-[40px] max-[599px]:w-[30px] max-[599px]:h-[30px] p-[8px] max-[599px]:p-[4px]" />
       </button>
 
       <button
         ref={nextRef}
         type="button"
         aria-label="Next"
-        className={styles.next}
+        className="absolute right-[6px] top-1/2 -translate-y-1/2 z-[60] cursor-pointer border-2 border-[#e3d3cc] rounded-full bg-[rgba(0,0,0,0.45)] text-white grid place-items-center disabled:opacity-50 disabled:cursor-not-allowed"
         disabled={loading}
       >
-        <MdOutlineArrowForwardIos className={styles.arrowIcon} />
+        <MdOutlineArrowForwardIos className="w-[40px] h-[40px] max-[599px]:w-[30px] max-[599px]:h-[30px] p-[8px] max-[599px]:p-[4px]" />
       </button>
     </div>
   );

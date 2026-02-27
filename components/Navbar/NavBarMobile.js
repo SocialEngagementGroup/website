@@ -17,7 +17,6 @@ import {
   FaUtensils,
   FaLaptopCode,
 } from "react-icons/fa";
-import styles from "./NavBarMobile.module.css";
 
 export default function Navbar() {
   const [isSticky, setIsSticky] = useState(false);
@@ -82,11 +81,11 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`md:hidden ${styles.navbarShell}`}>
+      <nav className={`md:hidden fixed top-0 left-0 w-full z-[999] transition-[top] duration-250 ease-out`}>
         {/* Inner bar (animates to 95% on sticky via CSS) */}
         <div
-          className={`${styles.navbarInner} ${
-            effectiveSticky ? styles.stickyInner : ""
+          className={`h-[65px] w-full mx-auto bg-[#212125] transition-all duration-350 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+            effectiveSticky ? "translate-y-[20px] scale-x-95 bg-black/75 backdrop-blur-md shadow-2xl rounded-2xl" : ""
           }`}
         >
           <div className="container mx-auto flex justify-between items-center py-2 px-2 md:px-0">
@@ -147,8 +146,8 @@ export default function Navbar() {
 
         {/* Menu panel: fully hidden when closed, slides from right when open */}
         <div
-          className={`${styles.menuPanel} ${
-            isMobileMenuOpen ? styles.menuPanelOpen : ""
+          className={`fixed right-0 top-[65px] w-full h-[calc(100dvh-65px)] bg-white z-[999] flex flex-col overflow-hidden transition-all duration-450 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+            isMobileMenuOpen ? "translate-x-0 opacity-100 pointer-events-auto" : "translate-x-full opacity-0 pointer-events-none"
           }`}
         >
           <ul className="space-y-4 p-5 flex-1 overflow-y-auto overflow-x-hidden overscroll-contain touch-pan-y">
@@ -166,8 +165,7 @@ export default function Navbar() {
               <Link
                 href="/services"
                 className={
-                  styles.customBorder +
-                  " text-black text-lg transition-colors duration-200 hover:text-black/70"
+                  "relative text-black text-lg transition-colors duration-200 hover:text-black/70"
                 }
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -179,8 +177,7 @@ export default function Navbar() {
             <li>
               <button
                 className={
-                  styles.dropdownButton +
-                  " text-black w-full text-left flex justify-between items-center transition-colors duration-200 hover:bg-black/5 rounded-lg px-2 py-2"
+                  "w-[94%] mx-auto text-black text-left flex justify-between items-center transition-colors duration-200 hover:bg-black/5 rounded-lg px-2 py-2"
                 }
                 onClick={() => handleDropdownToggle("creative")}
               >
@@ -210,9 +207,9 @@ export default function Navbar() {
                 }`}
               >
                 <div className="overflow-hidden">
-                  <ul className={styles.svgicon + " mt-3 space-y-4"}>
-                    <li className="flex items-center">
-                      <FaPencilAlt className="mr-2" />
+                  <ul className={"w-[90%] mx-auto border-t border-gray-300 pt-5 mt-[25px] space-y-4"}>
+                    <li className="flex items-center text-black">
+                      <FaPencilAlt className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
                       <Link
                         href="/services/branding"
                         className="text-black transition-colors duration-200 hover:text-black/70"
@@ -221,8 +218,8 @@ export default function Navbar() {
                         Branding
                       </Link>
                     </li>
-                    <li className="flex items-center">
-                      <FaPencilRuler className="mr-2" />
+                    <li className="flex items-center text-black">
+                      <FaPencilRuler className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
                       <Link
                         href="/services/logo-design"
                         className="text-black transition-colors duration-200 hover:text-black/70"
@@ -231,8 +228,8 @@ export default function Navbar() {
                         Logo Design
                       </Link>
                     </li>
-                    <li className="flex items-center">
-                      <FaRegHandPointRight className="mr-2" />
+                    <li className="flex items-center text-black">
+                      <FaRegHandPointRight className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
                       <Link
                         href="/services/content-creation"
                         className="text-black transition-colors duration-200 hover:text-black/70"
@@ -241,8 +238,8 @@ export default function Navbar() {
                         Content Creation
                       </Link>
                     </li>
-                    <li className="flex items-center">
-                      <FaCameraRetro className="mr-2" />
+                    <li className="flex items-center text-black">
+                      <FaCameraRetro className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
                       <Link
                         href="/services/social-media-content"
                         className="text-black transition-colors duration-200 hover:text-black/70"
@@ -251,8 +248,8 @@ export default function Navbar() {
                         Social Media Content
                       </Link>
                     </li>
-                    <li className="flex items-center">
-                      <FaRegHandPointRight className="mr-2" />
+                    <li className="flex items-center text-black">
+                      <FaRegHandPointRight className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
                       <Link
                         href="/services/3D-animation-and-rendering"
                         className="text-black transition-colors duration-200 hover:text-black/70"
@@ -261,8 +258,8 @@ export default function Navbar() {
                         3D Animation &amp; Rendering
                       </Link>
                     </li>
-                    <li className="flex items-center">
-                      <FaCameraRetro className="mr-2" />
+                    <li className="flex items-center text-black">
+                      <FaCameraRetro className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
                       <Link
                         href="/services/videography-and-photography"
                         className="text-black transition-colors duration-200 hover:text-black/70"
@@ -280,8 +277,7 @@ export default function Navbar() {
             <li>
               <button
                 className={
-                  styles.dropdownButton +
-                  " text-black w-full text-left flex justify-between items-center transition-colors duration-200 hover:bg-black/5 rounded-lg px-2 py-2"
+                  "w-[94%] mx-auto text-black text-left flex justify-between items-center transition-colors duration-200 hover:bg-black/5 rounded-lg px-2 py-2"
                 }
                 onClick={() => handleDropdownToggle("digital")}
               >
@@ -311,9 +307,9 @@ export default function Navbar() {
                 }`}
               >
                 <div className="overflow-hidden">
-                  <ul className={styles.svgicon + " mt-3 space-y-4"}>
-                    <li className="flex items-center">
-                      <FaSearch className="mr-2" />
+                  <ul className={"w-[90%] mx-auto border-t border-gray-300 pt-5 mt-[25px] space-y-4"}>
+                    <li className="flex items-center text-black">
+                      <FaSearch className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
                       <Link
                         href="/services/seo"
                         className="text-black transition-colors duration-200 hover:text-black/70"
@@ -322,8 +318,8 @@ export default function Navbar() {
                         SEO
                       </Link>
                     </li>
-                    <li className="flex items-center">
-                      <FaChartBar className="mr-2" />
+                    <li className="flex items-center text-black">
+                      <FaChartBar className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
                       <Link
                         href="/services/ppc-campaigns"
                         className="text-black transition-colors duration-200 hover:text-black/70"
@@ -332,8 +328,8 @@ export default function Navbar() {
                         PPC Campaigns
                       </Link>
                     </li>
-                    <li className="flex items-center">
-                      <FaRegHandPointRight className="mr-2" />
+                    <li className="flex items-center text-black">
+                      <FaRegHandPointRight className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
                       <Link
                         href="/services/retargeting-and-remarketing"
                         className="text-black transition-colors duration-200 hover:text-black/70"
@@ -342,8 +338,8 @@ export default function Navbar() {
                         Retargeting &amp; Remarketing
                       </Link>
                     </li>
-                    <li className="flex items-center">
-                      <FaGoogle className="mr-2" />
+                    <li className="flex items-center text-black">
+                      <FaGoogle className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
                       <Link
                         href="/services/google-business-profile-management"
                         className="text-black transition-colors duration-200 hover:text-black/70"
@@ -352,8 +348,8 @@ export default function Navbar() {
                         Google Business Profile Management
                       </Link>
                     </li>
-                    <li className="flex items-center">
-                      <FaPencilAlt className="mr-2" />
+                    <li className="flex items-center text-black">
+                      <FaPencilAlt className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
                       <Link
                         href="/services/review-and-reputation-management"
                         className="text-black transition-colors duration-200 hover:text-black/70"
@@ -362,8 +358,8 @@ export default function Navbar() {
                         Review &amp; Reputation Management
                       </Link>
                     </li>
-                    <li className="flex items-center">
-                      <FaGoogle className="mr-2" />
+                    <li className="flex items-center text-black">
+                      <FaGoogle className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
                       <Link
                         href="/services/google-location-services-ads"
                         className="text-black transition-colors duration-200 hover:text-black/70"
@@ -372,8 +368,8 @@ export default function Navbar() {
                         Google Location Services Ads
                       </Link>
                     </li>
-                    <li className="flex items-center">
-                      <FaCameraRetro className="mr-2" />
+                    <li className="flex items-center text-black">
+                      <FaCameraRetro className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
                       <Link
                         href="/services/social-media-marketing"
                         className="text-black transition-colors duration-200 hover:text-black/70"
@@ -382,8 +378,8 @@ export default function Navbar() {
                         Social Media Marketing
                       </Link>
                     </li>
-                    <li className="flex items-center">
-                      <FaGlobeAmericas className="mr-2" />
+                    <li className="flex items-center text-black">
+                      <FaGlobeAmericas className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
                       <Link
                         href="/services/website-development"
                         className="text-black transition-colors duration-200 hover:text-black/70"
@@ -401,8 +397,7 @@ export default function Navbar() {
             <li>
               <button
                 className={
-                  styles.dropdownButton +
-                  " text-black w-full text-left flex justify-between items-center transition-colors duration-200 hover:bg-black/5 rounded-lg px-2 py-2"
+                  "w-[94%] mx-auto text-black text-left flex justify-between items-center transition-colors duration-200 hover:bg-black/5 rounded-lg px-2 py-2"
                 }
                 onClick={() => handleDropdownToggle("industry")}
               >
@@ -432,9 +427,9 @@ export default function Navbar() {
                 }`}
               >
                 <div className="overflow-hidden">
-                  <ul className={styles.svgicon + " mt-3 space-y-4"}>
-                    <li className="flex items-center">
-                      <FaBriefcase className="mr-2" />
+                  <ul className={"w-[90%] mx-auto border-t border-gray-300 pt-5 mt-[25px] space-y-4"}>
+                    <li className="flex items-center text-black">
+                      <FaBriefcase className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
                       <Link
                         href="/services/solution-for-lawyers"
                         className="text-black transition-colors duration-200 hover:text-black/70"
@@ -443,8 +438,8 @@ export default function Navbar() {
                         Solution for Lawyers
                       </Link>
                     </li>
-                    <li className="flex items-center">
-                      <FaHeartbeat className="mr-2" />
+                    <li className="flex items-center text-black">
+                      <FaHeartbeat className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
                       <Link
                         href="/services/solution-for-doctors"
                         className="text-black transition-colors duration-200 hover:text-black/70"
@@ -453,8 +448,8 @@ export default function Navbar() {
                         Solution for Doctors
                       </Link>
                     </li>
-                    <li className="flex items-center">
-                      <FaUtensils className="mr-2" />
+                    <li className="flex items-center text-black">
+                      <FaUtensils className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
                       <Link
                         href="/services/solution-for-restaurants"
                         className="text-black transition-colors duration-200 hover:text-black/70"
@@ -463,8 +458,8 @@ export default function Navbar() {
                         Solution for Restaurants
                       </Link>
                     </li>
-                    <li className="flex items-center">
-                      <FaLaptopCode className="mr-2" />
+                    <li className="flex items-center text-black">
+                      <FaLaptopCode className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
                       <Link
                         href="/services/solution-for-techstartups"
                         className="text-black transition-colors duration-200 hover:text-black/70"

@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useRef } from "react";
-import styles from "./Faq.module.css";
 const FAQ = ({ items, heading }) => {
   const [openIndex, setOpenIndex] = useState(0);
   const contentRefs = useRef([]);
@@ -10,14 +9,14 @@ const FAQ = ({ items, heading }) => {
   };
 
   return (
-    <section className={styles.section + " bg-[#8d5454] text-white py-10 md:py-40"}>
-      <div className={styles.containerInner + " w-[65%] mx-auto px-10"}>
+    <section className="bg-[#8d5454] text-white py-10 md:py-40 max-[990px]:-mt-[80px] max-md:mt-0">
+      <div className="w-[65%] mx-auto px-10 max-md:!w-full">
 
         {/* Heading */}
 
-          <h3 className={styles.heading}>
+          <h2 className="bg-[#232326] rounded-[10px] w-[200px] text-center">
             {heading}
-          </h3>
+          </h2>
 
 
         {/* FAQ Items */}
@@ -29,7 +28,7 @@ const FAQ = ({ items, heading }) => {
             >
               {/* Question */}
               <h5
-                className={styles.question + " flex justify-between items-center text-xl font-semibold hover:text-gray-300 transition-colors"}
+                className={"flex justify-between items-center font-semibold hover:text-gray-300 transition-colors"}
                 onClick={() => toggleFAQ(index)}
               >
                 {faq.question}
@@ -50,7 +49,7 @@ const FAQ = ({ items, heading }) => {
                 className="overflow-hidden transition-[max-height] duration-500 ease-in-out "
               >
                 <p
-                  className={styles.answer + " mt-3 leading-relaxed text-gray-100"}
+                  className={"mt-3 leading-relaxed text-gray-100 pt-[12px] pb-[8px] italic"}
                   dangerouslySetInnerHTML={{ __html: faq.answer }}
                 ></p>
               </div>

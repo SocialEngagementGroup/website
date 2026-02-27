@@ -1,44 +1,42 @@
 import React from "react";
-import { ArrowUpRight } from "lucide-react"; // ✅ Lucide icon for arrow (currently not used in JSX)
-import BoxTitle from "./BoxTitle";            // ✅ Section title component
-import style from "./ContactInfo.module.css"; // ✅ CSS module for custom styles
-import Image from "next/image";               // ✅ Next.js Image component for optimized images
+import BoxTitle from "./BoxTitle"; // ✅ Section title component
+import Image from "next/image"; // ✅ Next.js Image component for optimized images
+
 const ContactInfo = () => {
   return (
-    // ✅ Outer container with backdrop blur, rounded corners, and full-width fluid container
-    <div className={`${style.contentbox} container-fluid mx-auto backdrop-blur-md bg-black/40 rounded-[20px]`}>
+    // ✅ Outer container with raw text alignment structure
+    <div className="container-fluid mx-auto">
       
-      {/* ✅ Inner content box with border, padding, shadow, and rounded corners */}
-      <div
-        className={`${style.contentboxInner} border-4 border-gray-700 relative p-11 rounded-[20px] shadow-lg mx-auto`}
-      >
-        {/* ✅ Section Title */}
+      {/* ✅ Inner content box without the previous borders */}
+      <div className="relative mx-auto">
+        
+        {/* ✅ Section Title formatted correctly */}
         <BoxTitle />
 
-        {/* ✅ Grid container for Call and Email boxes */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-5 w-[90%]">
+        {/* ✅ Grid container for Call and Email boxes - Refactored for cleaner design */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mt-8 w-full">
 
           {/* ✅ Call Box */}
           <a
             href="https://calendly.com/itseg/segmeet"
-            className={`${style.contentboxInnerBox} border-4 border-gray-700 p-10 rounded-[20px] flex 
-              items-center justify-between cursor-pointer hover:shadow-lg transition-shadow flex-1 relative`}
+            className="group bg-white/[0.03] border border-white/10 p-8 rounded-2xl flex 
+              flex-col items-start gap-6 cursor-pointer hover:bg-white/10 hover:border-white/20 transition-all shadow-lg relative"
           >
             {/* ✅ Icon and text */}
             <div className="flex flex-col items-start gap-4">
-              <Image src="/Icons/callicon.png" alt="Call Icon" width={60} height={60} />
-              <h4 className="font-semibold text-[32px] text-white">
+              <Image src="/Icons/callicon.png" alt="Call Icon" width={48} height={48} className="opacity-80 group-hover:opacity-100 transition-opacity" />
+              <h3 className="font-semibold text-white tracking-wide">
                 Book A Call
-              </h4>
+              </h3>
             </div>
 
             {/* ✅ Arrow icon at top-right */}
-            <div className="absolute top-4 right-4">
+            <div className="absolute top-6 right-6 opacity-60 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all">
               <Image
                 src="/Icons/arrow-up-right-1.png"
                 alt="Arrow Icon"
-                width={60}
-                height={60}
+                width={32}
+                height={32}
               />
             </div>
           </a>
@@ -46,24 +44,24 @@ const ContactInfo = () => {
           {/* ✅ Email Box */}
           <a
             href="mailto:rahee@socialengagementgroup.com"
-            className={`${style.contentboxInnerBox} border-4 border-gray-700 p-10 rounded-[20px] flex 
-              items-center justify-between cursor-pointer hover:shadow-lg transition-shadow flex-1 relative`}
+             className="group bg-white/[0.03] border border-white/10 p-8 rounded-2xl flex 
+             flex-col items-start gap-6 cursor-pointer hover:bg-white/10 hover:border-white/20 transition-all shadow-lg relative"
           >
             {/* ✅ Icon and text */}
             <div className="flex flex-col items-start gap-4">
-              <Image src="/Icons/mailicon.png" alt="Mail Icon" width={60} height={60} />
-              <h4 className="font-semibold text-[32px] text-white">
+              <Image src="/Icons/mailicon.png" alt="Mail Icon" width={48} height={48} className="opacity-80 group-hover:opacity-100 transition-opacity" />
+              <h3 className="font-semibold text-white tracking-wide">
                 Send Email
-              </h4>
+              </h3>
             </div>
 
             {/* ✅ Arrow icon at top-right */}
-            <div className="absolute top-4 right-4">
+            <div className="absolute top-6 right-6 opacity-60 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all">
               <Image
                 src="/Icons/arrow-up-right-1.png"
                 alt="Arrow Icon"
-                width={60}
-                height={60}
+                width={32}
+                height={32}
               />
             </div>
           </a>

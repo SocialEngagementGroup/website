@@ -1,7 +1,6 @@
 import React from 'react'
 import SectionTitle from '@/components/HomePage/SectionTitle/SectionTitle'
 import StickyImageSections from '@/components/HomePage/BrandSucceed/StickyImageSections'
-import style from './BrandingSection.module.css'
 
 // ✅ Branding section component
 const BrandingSection = () => {
@@ -15,7 +14,7 @@ const BrandingSection = () => {
       <div className="w-full md:w-[80%] max-w-5xl">
 
         {/* ✅ Title section with custom CSS */}
-        <div className={`${style.customsectiontitle} text-center section-title-custom mb-10`}>
+        <div className="text-center section-title-custom mb-10 [&_h3]:!w-full [&_.description]:!w-full">
           <SectionTitle
             id="We-Ignite-the-Future"
             title="About Us"

@@ -2,7 +2,6 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import styles from "./Vdo.module.css";
 
 export default function VdoDesktop() {
   const sectionRef = useRef(null);
@@ -28,10 +27,10 @@ export default function VdoDesktop() {
   const height = useTransform(p, range, hVals);
 
   return (
-    <section ref={sectionRef} className={styles.wrapper}>
-      <div className={styles.stickyStage}>
+    <section ref={sectionRef} className="h-[150vh] xl:h-[300vh]">
+      <div className="sticky top-0 h-[100dvh] grid place-items-center overflow-hidden">
         <motion.div
-          className={styles.videoShell}
+          className="relative overflow-hidden will-change-[width,height,border-radius]"
           style={{
             width,
             height,
@@ -40,7 +39,7 @@ export default function VdoDesktop() {
           }}
         >
           <iframe
-            className={styles.video}
+            className="w-full h-full object-contain block"
             src="https://www.youtube-nocookie.com/embed/MoGoOZzYXSc?si=6_22nGb-opjl1z4W&autoplay=1&mute=1&loop=1&playlist=MoGoOZzYXSc&controls=0&modestbranding=1&rel=0"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

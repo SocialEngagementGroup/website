@@ -1,4 +1,4 @@
-import { Inter, Lobster } from "next/font/google";
+import { Inter, Outfit, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import Navbar from "@/components/Navbar/Navbar";
@@ -14,7 +14,8 @@ export const metadata = {
     default: "SEG | Where Human Creativity Meets AI-Powered Digital Growth",
     template: "%s | SEG - Social Engagement Group",
   },
-  description: "Social Engagement Group (SEG) blends human creativity with AI-powered automation to tell your story and drive business growth across every digital touchpoint.",
+  description:
+    "Social Engagement Group (SEG) blends human creativity with AI-powered automation to tell your story and drive business growth across every digital touchpoint.",
   alternates: {
     canonical: "/",
   },
@@ -41,7 +42,7 @@ export const metadata = {
     images: ["/SiteLogo/seg.png"],
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.png",
   },
 };
 
@@ -51,17 +52,22 @@ const inter = Inter({
   weight: ["400", "500", "600", "700"],
 });
 
-// Lobster is used in Card.module.css for the parallax card section titles
-const lobster = Lobster({
-  variable: "--font-lobster",
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+});
+
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 export default function SiteLayout({ children }) {
   return (
     <html lang="en">
-      <body className="antialiased">
+      <body className={`${inter.variable} ${outfit.variable} ${outfit.className} ${playfair.variable} antialiased`} suppressHydrationWarning>
         {/* Google Tag Manager */}
         <noscript>
           <iframe

@@ -1,11 +1,10 @@
 import React from "react";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import Slider from "./Slider";
-import style from "./ClientLogos.module.css";
 
 const ClientLogos = () => {
   return (
-    <section id="clients" className={`${style.ClientLogos} pt-14`}>
+    <section id="clients" className={`bg-white pt-14`}>
       
       {/* ✅ Section heading wrapper — centered on mobile, aligns left on larger screens */}
       <div className="text-center w-[95%] mx-auto py-0 md:py-15">

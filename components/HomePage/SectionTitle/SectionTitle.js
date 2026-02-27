@@ -1,45 +1,44 @@
 import React from "react";
-import styles from "./SectionTitle.module.css";
 
 const SectionTitle = ({ title, subtitle, subtitle2, description, id }) => {
   // Optional ARIA attribute for accessibility
   const headerProps = id ? { "aria-labelledby": id } : {};
 
   return (
-    <header className={`${styles.sectionHeader} px-2 md:px-10`} {...headerProps}>
+    <header className={`px-2 md:px-10`} {...headerProps}>
       
-      {/* ---------- Main Section Title ---------- */}
+      {/* ---------- Section Label (Top) ---------- */}
       {title && (
-        <h2
-          id={id || undefined} // If `id` exists, use it for accessibility
-          className={`${styles.subTitle} text-[#0A0A0A]`}
+        <h3
+          id={id || undefined}
+          className={`inline-block relative after:content-[''] after:block after:w-full after:h-[5px] after:bg-[#975554] after:rounded-[14px] after:absolute after:bottom-[-10px] after:left-1/2 after:translate-x-[-50%] after:transition-all after:duration-300 md:after:left-0 md:after:translate-x-0 text-[#0A0A0A]`}
         >
           {title}
+        </h3>
+      )}
+
+      {/* ---------- Main Section Title (Bottom) ---------- */}
+      {subtitle && (
+        <h2
+          className={`w-full max-w-[500px] md:max-w-none md:w-[800px] mx-auto text-center text-gray-900 mt-8 leading-tight tracking-tight`}
+        >
+          {subtitle}
         </h2>
       )}
 
-      {/* ---------- First Subheading ---------- */}
-      {subtitle && (
-        <h3
-          className={`${styles.sectionTitle} text-[26px] sm:text-[32px] md:text-[48px] text-gray-900 mt-5 md:mt-8 leading-tight`}
-        >
-          {subtitle}
-        </h3>
-      )}
-
-      {/* ---------- Second Subheading (optional) ---------- */}
+      {/* ---------- Second Heading (optional) ---------- */}
       {subtitle2 && (
-        <h3
-          className={`${styles.sectionTitle2} text-[24px] sm:text-[32px] md:text-[48px] text-gray-900 mt-2 md:mt-8 leading-tight`}
+        <h2
+          className={`mx-auto text-gray-900 mt-2 md:mt-8 leading-tight tracking-tight`}
         >
           {subtitle2}
-        </h3>
+        </h2>
       )}
 
       {/* ---------- Optional Paragraph / Description ---------- */}
       {description && (
         <p
-          className={`${styles.description} text-gray-900 text-[16px] md:text-[24px] mt-4 max-w-2xl mx-auto description`}
+          className={`max-w-[500px] md:max-w-3xl text-gray-700 font-medium mt-6 leading-relaxed mx-auto`}
         >
           {description}
         </p>

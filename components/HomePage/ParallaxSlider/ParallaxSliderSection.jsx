@@ -1,16 +1,15 @@
 import React from "react";
 import SectionTitle from "../SectionTitle/SectionTitle"; // Section heading component
 import ParallaxSlider from "./ParallaxSlider";           // Main parallax slider component
-import styles from "./ParallaxSliderSection.module.css"; // CSS module for styling
 import Vdo from "@/components/HomePage/Vdo/Vdo";                 // Video component
 
 const ParallaxSliderSection = () => {
   return (
     // Section wrapper with ID for navigation
-    <section id="services" className={`${styles.parallaxSection}`}>
+    <section id="services" className="bg-[linear-gradient(180deg,#E3D3CC_62.5%,#FFFFFF_100%)]">
 
       {/* Container for section content */}
-      <div className={`${styles.customTextCenter} container-fluid w-[95%] mx-auto pt-10 ClientLogos`}>
+      <div className="container-fluid w-[95%] mx-auto pt-10 ClientLogos text-center">
 
         {/* Section title */}
         <div className="text-center md:text-center section-title-custom md:mt-20 mt-0">

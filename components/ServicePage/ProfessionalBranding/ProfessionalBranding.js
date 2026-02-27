@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import styles from "./ProfessionalBranding.module.css";
 
 const ProfessionalBranding = ({ heading, items, video }) => {
   const sectionRef = useRef(null);
@@ -45,9 +44,9 @@ const ProfessionalBranding = ({ heading, items, video }) => {
   }, [shouldPlay]);
 
   return (
-    <section ref={sectionRef} className={styles.section}>
+    <section ref={sectionRef} className="bg-[#232326]">
       <div
-        className={`${styles.containerCustom} container-fluid w-[78%] mx-auto py-6 md:py-28 px-6 md:px-7`}
+        className={`max-[1180px]:w-full container-fluid w-[78%] mx-auto py-6 md:py-28 px-6 md:px-7`}
       >
         <div
           className="
@@ -63,15 +62,15 @@ const ProfessionalBranding = ({ heading, items, video }) => {
         >
           {/* LEFT */}
           <div className="text-white order-2 md:order-1 mt-4 px-5 md:px-0">
-            <h3 className={styles.heading}>{heading}</h3>
+            <h2 className="!font-serif !font-bold !leading-tight !tracking-tight max-w-[600px]">{heading}</h2>
 
-            <ul className={styles.list}>
+            <ul className="mt-[16px] mb-[10px] max-w-[630px] max-[1300px]:max-w-full">
               {items?.map((item, index) => (
                 <li
                   key={index}
-                  className={`${styles.listItem} p1`}
+                  className="list-disc mt-[1rem] ml-[30px] max-md:list-outside max-md:ml-0 !p1 !font-light opacity-90"
                   dangerouslySetInnerHTML={{ __html: item.text }}
-                />
+                ></li>
               ))}
             </ul>
           </div>
@@ -81,7 +80,7 @@ const ProfessionalBranding = ({ heading, items, video }) => {
             <div className="flex justify-center overflow-hidden aspect-[3/3] w-full">
               <video
                 ref={videoRef}
-                className={`${styles.videoBox} h-full w-full object-contain`}
+                className={`rounded-[20px] h-full w-full object-contain`}
                 muted
                 loop
                 playsInline
