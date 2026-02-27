@@ -3,17 +3,21 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: sticky;   /* Keep cards sticky on scroll */
-  top: 150px;         /* Distance from top when sticky */
+  position: sticky;
+  /* Keep cards sticky on scroll */
+  top: 150px;
+  /* Distance from top when sticky */
 }
 
 /* ---------- Card Styling ---------- */
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Align children to bottom */
+  justify-content: space-between;
+  /* Align children to bottom */
   position: relative;
-  top: -25%;                       /* Initial offset */
+  top: -25%;
+  /* Initial offset */
   height: 77%;
   width: 100%;
   border-radius: 25px;
@@ -38,15 +42,20 @@
   width: 100%;
   height: 100%;
   /* Linear gradient overlay: top dark → bottom transparent */
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.6) 0%,   /* darker at top */
-    rgba(0, 0, 0, 0.2) 60%,  /* lighter in middle */
-    rgba(0, 0, 0, 0) 100%    /* fully transparent at bottom */
-  );
-  z-index: 1;               /* sits above background but below content */
-  border-radius: 5px;       /* match card border radius */
-  pointer-events: none;     /* allows clicking content */
+  background: linear-gradient(180deg,
+      rgba(0, 0, 0, 0.6) 0%,
+      /* darker at top */
+      rgba(0, 0, 0, 0.2) 60%,
+      /* lighter in middle */
+      rgba(0, 0, 0, 0) 100%
+      /* fully transparent at bottom */
+    );
+  z-index: 1;
+  /* sits above background but below content */
+  border-radius: 5px;
+  /* match card border radius */
+  pointer-events: none;
+  /* allows clicking content */
 }
 
 /* Ensure all card content is above overlay */
@@ -76,11 +85,13 @@
 @media only screen and (max-width: 767px) {
   .card h4 {
     text-align: center;
-    font-size: 65px; /* Added missing unit */
+    font-size: 65px;
+    /* Added missing unit */
   }
 
   .card {
-    padding: 20px;  /* Reduce padding on smaller screens */
+    padding: 20px;
+    /* Reduce padding on smaller screens */
   }
 }
 

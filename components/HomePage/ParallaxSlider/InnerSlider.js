@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState, useRef } from 'react';
+import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper/modules';
 import { MdOutlineArrowBackIosNew, MdOutlineArrowForwardIos } from "react-icons/md";
@@ -32,7 +33,6 @@ const InnerSlider = ({ items }) => {
         <MdOutlineArrowBackIosNew className={styles.arrowIcon} />
       </div>
 
-      {/* Simplified Swiper - removed autoplay */}
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={25}
@@ -66,7 +66,22 @@ const InnerSlider = ({ items }) => {
         {items.map((item, idx) => (
           <SwiperSlide key={idx}>
             <Link href={item.link}>
-              <div className={styles.innerCard} style={{ backgroundImage: `url(${item.img})` }}>
+              {/*
+                Replaced CSS background-image with next/image for full Next.js optimization
+                (WebP conversion, srcset, lazy loading). The card layout is preserved:
+                - next/image fills the card at z-index:0
+                - .innerCard children retain z-index:2 (from module CSS) so text floats above
+              */}
+              <div className={styles.innerCard} style={{ position: 'relative', overflow: 'hidden' }}>
+                <Image
+                  src={item.img}
+                  alt={item.name}
+                  fill
+                  loading="lazy"
+                  sizes="(max-width: 768px) 90vw, (max-width: 1276px) 45vw, 25vw"
+                  className="object-cover"
+                  style={{ zIndex: 0 }}
+                />
                 <div className={styles.slideTitle}>
                   <h5 className="mt-5 inner-title px-3">{item.name}</h5>
                 </div>

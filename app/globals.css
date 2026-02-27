@@ -31,8 +31,6 @@ select:focus {
   /* Body text */
   --font-heading: 'Inter', sans-serif;
   /* Headings */
-  --font-lobster: 'Lobster', cursive;
-  /* Hero heading accents */
 }
 .slick-prev::before {
   display: none !important;

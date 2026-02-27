@@ -12,7 +12,7 @@ const Card = ({ i, title, color, scale, sliderData }) => {
     <div ref={container} className={styles.cardContainer}>
       {/* Animated card with simple scale */}
       <motion.div
-        style={{ 
+        style={{
           backgroundColor: color,
           scale: scale || 1,
           top: `calc(-5vh + ${i * 25}px)`
