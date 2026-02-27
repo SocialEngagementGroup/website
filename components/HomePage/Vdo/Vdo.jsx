@@ -1,20 +1,27 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import VdoDesktop from "./VdoDesktop";
 import VdoMobile from "./VdoMobile";
 
-// Use CSS show/hide instead of JS window.innerWidth.
-// Both components render on the server — no placeholder div, no CLS.
-// Tailwind's `hidden md:block` / `md:hidden` handles the switch at 768px.
+function useScreenWidth() {
+  const [w, setW] = useState(0);
+
+  useEffect(() => {
+    const update = () => setW(window.innerWidth);
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+
+  return w;
+}
+
 export default function VideoSection() {
-  return (
-    <>
-      <div className="hidden md:block">
-        <VdoDesktop />
-      </div>
-      <div className="md:hidden">
-        <VdoMobile />
-      </div>
-    </>
-  );
+  const screen = useScreenWidth();
+
+  // Handle server-side rendering or initial load
+  if (screen === 0) return <div style={{ minHeight: "50vh" }} />;
+
+  return screen <= 768 ? <VdoMobile /> : <VdoDesktop />;
 }
