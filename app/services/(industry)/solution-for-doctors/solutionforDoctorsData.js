@@ -5,9 +5,9 @@ export const solutionforDoctorsData = {
       "Grow your clinic’s visibility and patient trust with tailored healthcare marketing. Get found first, attract quality patients, and scale your practice ethically.",
     subtitle: "industry",
     ctaButton: "Contact With Us",
-     ctaLink: "/contact-us",
+    ctaLink: "/contact-us",
     img: "/services/creative/branding/heroimg.png",
-    bg: "/services/creative/branding/herobg.png",
+    bg: "/services/creative/branding/herobg.webp",
   },
 
   intro: {
@@ -15,8 +15,8 @@ export const solutionforDoctorsData = {
     description:
       "Your reputation as a doctor is built on care and expertise but in today’s digital-first world, that’s not enough. Patients now start their healthcare journey online: searching symptoms, reading reviews, and comparing specialists long before they book an appointment. We help healthcare professionals like you stand out, attract the right patients, and build lasting trust through intelligent digital strategy, targeted visibility, and ethical growth marketing. Whether you’re an independent practitioner, a clinic, or a multi-specialty hospital, we design systems that make your practice discoverable, credible, and consistently growing.",
   },
-   cta: {
-    bg: "/services/CTA/Digital-google-business-profile.png",
+  cta: {
+    bg: "/services/CTA/Digital-google-business-profile.webp",
     title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
     link: "https://calendly.com/itseg/segmeet",
@@ -68,7 +68,7 @@ export const solutionforDoctorsData = {
       { text: "<strong>Reputation & Compliance Monitoring:</strong> Track online mentions, ensure accuracy across directories, and maintain full compliance with healthcare advertising rules." },
       { text: "<strong>Analytics & Growth Reporting:</strong> Transparent dashboards showing traffic, leads, appointment trends, and ROI to guide smarter clinical decisions." },
     ],
-    img: "/services/masterimagesslider/industry/Solution-for-Doctors.jpg",
+    img: "/services/industry/Solution-for-Doctors/Solution-for-Doctors.png",
   },
 
 

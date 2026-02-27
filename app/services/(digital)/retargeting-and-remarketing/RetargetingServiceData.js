@@ -7,7 +7,7 @@ export const RetargetingServiceData = {
     ctaButton: "Connect With Us",
     ctaLink: "/contact-us",
     img: "/services/creative/branding/heroimg.png",
-    bg: "/services/creative/branding/herobg.png",
+    bg: "/services/creative/branding/herobg.webp",
   },
 
   intro: {
@@ -16,7 +16,7 @@ export const RetargetingServiceData = {
       "Retargeting and remarketing recover lost opportunities by bringing high-intent visitors back to buy. With most visitors leaving without converting, we run data-driven campaigns across Google, Meta, and more to keep your brand top-of-mind. Using behavior signals, product views, cart abandons, and browsing patterns, we serve dynamic, personalized creatives at the right moment. Advanced tracking, audience segmentation, and continuous testing cut waste and lift ROAS. The result: higher engagement, lower CPA, and a steady stream of returning customers who don’t just click, they convert.",
   },
   cta: {
-    bg: "/services/CTA/Digital-google-business-profile.png",
+    bg: "/services/CTA/Digital-google-business-profile.webp",
     title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
     link: "https://calendly.com/itseg/segmeet",
@@ -27,22 +27,22 @@ export const RetargetingServiceData = {
     description:
       "Most visitors leave without converting. Retargeting keeps your brand visible after they bounce. It reconnects with people who already showed intent. Frequency and sequencing nudge them at the right moments. Dynamic creatives remind them of the products they viewed. Smart exclusions prevent waste and ad fatigue. Cross-channel reach follows them from social to web. Measurable lift shows up in return visits and lower CPA. When intent peaks, your message is there first. The result is more conversions from the traffic you already paid for.",
     items: [
- {
-  img: "/services/digital/retargeting-remarketing/Warm-leads-vanish-after-a-single-visit.png",
-  text: "<strong>Warm leads</strong> vanish after a single visit with no chance to re-engage.",
-},
-{
-  img: "/services/digital/retargeting-remarketing/Competitors-step-in-and-reclaim-the-audience.png",
-  text: "<strong>Competitors</strong> step in and reclaim the audience you initially attracted",
-},
-{
-  img: "/services/digital/retargeting-remarketing/ROI-declines.png",
-  text: "<strong>Overall marketing</strong> ROI declines as conversions slip through the cracks.",
-},
-{
-  img: "/services/digital/retargeting-remarketing/CAC-rises-steadily.png",
-  text: "CAC rises steadily and <strong>growth slows</strong> as missed opportunities compound.",
-},
+      {
+        img: "/services/digital/retargeting-remarketing/Warm-leads-vanish-after-a-single-visit.png",
+        text: "<strong>Warm leads</strong> vanish after a single visit with no chance to re-engage.",
+      },
+      {
+        img: "/services/digital/retargeting-remarketing/Competitors-step-in-and-reclaim-the-audience.png",
+        text: "<strong>Competitors</strong> step in and reclaim the audience you initially attracted",
+      },
+      {
+        img: "/services/digital/retargeting-remarketing/ROI-declines.png",
+        text: "<strong>Overall marketing</strong> ROI declines as conversions slip through the cracks.",
+      },
+      {
+        img: "/services/digital/retargeting-remarketing/CAC-rises-steadily.png",
+        text: "CAC rises steadily and <strong>growth slows</strong> as missed opportunities compound.",
+      },
 
     ],
   },

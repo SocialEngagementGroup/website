@@ -5,9 +5,9 @@ export const webdevelopmentData = {
       "Get a fast, SEO-optimized website that drives sales. We design and develop custom sites on WordPress, Shopify, and Next.js to grow your business online.",
     subtitle: "digital",
     ctaButton: "Connect With Us",
-        ctaLink: "/contact-us",
+    ctaLink: "/contact-us",
     img: "/services/creative/branding/heroimg.png",
-    bg: "/services/creative/branding/herobg.png",
+    bg: "/services/creative/branding/herobg.webp",
   },
 
   intro: {
@@ -16,7 +16,7 @@ export const webdevelopmentData = {
       "Your website is your most powerful sales and branding asset, not a brochure. We design and develop sites that look sharp, load fast, and convert, pairing striking visuals with seamless UX. Starting from your goals, audience, and competitors, we craft intuitive journeys, responsive layouts, and persuasive content. Built on modern frameworks like WordPress, Next.js, and Shopify, every detail from performance and SEO to analytics and tracking is engineered for results. Whether corporate, e-commerce, or a scalable web app, we ship reliable, flexible sites that drive measurable growth and trust. In a world of split-second decisions, your website is where customers choose you or don’t.",
   },
   cta: {
-    bg: "/services/CTA/Digital-google-business-profile.png",
+    bg: "/services/CTA/Digital-google-business-profile.webp",
     title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
     link: "https://calendly.com/itseg/segmeet",

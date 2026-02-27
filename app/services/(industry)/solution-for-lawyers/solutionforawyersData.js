@@ -5,9 +5,9 @@ export const solutionforawyersData = {
       "Boost your law firm’s visibility and reputation with tailored digital marketing. Get found first, attract quality clients, and grow your practice with trust.",
     subtitle: "industry",
     ctaButton: "Contact With Us",
-     ctaLink: "/contact-us",
+    ctaLink: "/contact-us",
     img: "/services/creative/branding/heroimg.png",
-    bg: "/services/creative/branding/herobg.png",
+    bg: "/services/creative/branding/herobg.webp",
   },
 
   intro: {
@@ -15,8 +15,8 @@ export const solutionforawyersData = {
     description:
       "Your law firm’s reputation runs on trust but in a digital-first world, credibility alone won’t get you found. Clients research online, check reviews, and compare firms long before they reach out. We help you stand out with intelligent digital strategy, targeted marketing, and data-backed visibility so your firm stays discoverable and consistently wins high-quality cases. We tailor everything to your practice area, optimizing your Google Business Profile, running local ads, managing reviews, and publishing expert-level content. The result: stronger trust, more qualified inquiries and firm clients remember when it matters.",
   },
-   cta: {
-    bg: "/services/CTA/Digital-google-business-profile.png",
+  cta: {
+    bg: "/services/CTA/Digital-google-business-profile.webp",
     title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
     link: "https://calendly.com/itseg/segmeet",
@@ -28,22 +28,22 @@ export const solutionforawyersData = {
     description:
       "Clients today search, compare, and evaluate legal expertise online, which means if your firm isn’t visible, it’s effectively invisible. Digital transformation ensures you show up where decisions begin—through strong search presence, credible reviews, and authority-building content. With the right data-driven marketing in place, trust is established before a client ever contacts you, making your firm the one that gets found, trusted, and ultimately chosen.",
     items: [
-  {
-  img: "/services/industry/Solution-for-Lawyers/Missed-opportunities.png",
-  text: "Missed <strong>opportunities</strong> as clients can’t find your firm online.",
-},
-{
-  img: "/services/industry/Solution-for-Lawyers/Negative-or-outdated-reviews.png",
-  text: "Negative or <strong>outdated reviews</strong> damage your firm's credibility.",
-},
-{
-  img: "/services/industry/Solution-for-Lawyers/Competitors-dominate-local-search.png",
-  text: "<strong>Competitors</strong> dominate local search and online visibility.",
-},
-{
-  img: "/services/industry/Solution-for-Lawyers/Inconsistent-client-inquiries-lead-to-unstable-case-flow.png",
-  text: "Inconsistent <strong>client inquiries</strong> lead to unstable case flow.",
-},
+      {
+        img: "/services/industry/Solution-for-Lawyers/Missed-opportunities.png",
+        text: "Missed <strong>opportunities</strong> as clients can’t find your firm online.",
+      },
+      {
+        img: "/services/industry/Solution-for-Lawyers/Negative-or-outdated-reviews.png",
+        text: "Negative or <strong>outdated reviews</strong> damage your firm's credibility.",
+      },
+      {
+        img: "/services/industry/Solution-for-Lawyers/Competitors-dominate-local-search.png",
+        text: "<strong>Competitors</strong> dominate local search and online visibility.",
+      },
+      {
+        img: "/services/industry/Solution-for-Lawyers/Inconsistent-client-inquiries-lead-to-unstable-case-flow.png",
+        text: "Inconsistent <strong>client inquiries</strong> lead to unstable case flow.",
+      },
 
     ],
   },
@@ -73,7 +73,7 @@ export const solutionforawyersData = {
       {
         text: "<strong>SEO & Local Visibility:</strong> Rank at the top when clients search for your practice.",
       },
-       {
+      {
         text: "<strong>Google Business & Review Management:</strong> Build trust with verified reviews and engagement.",
       },
       {
@@ -89,7 +89,7 @@ export const solutionforawyersData = {
         text: "<strong>Analytics & Lead Tracking:</strong> Measure performance, track inquiries, and optimize every channel for higher case acquisition.",
       },
     ],
-    img: "/services/masterimagesslider/industry/Solution-for-Lawyers.jpg",
+    img: "/services/industry/Solution-for-Lawyers/Solution-for-Lawyers.png",
   },
 
   FAQ: {

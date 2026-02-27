@@ -7,7 +7,7 @@ export const googleservicesads = {
     ctaButton: "Connect With Us",
     ctaLink: "/contact-us",
     img: "/services/creative/branding/heroimg.png",
-    bg: "/services/creative/branding/herobg.png",
+    bg: "/services/creative/branding/herobg.webp",
   },
 
   intro: {
@@ -16,7 +16,7 @@ export const googleservicesads = {
       "Google Local Service Ads (LSAs) put you at the very top of local search with the Google Guaranteed badge to build instant trust, so nearby, ready-to-buy customers call you first. We handle verification and eligibility, dial in service areas and categories, craft high-converting profiles, and continuously optimize to lower cost per lead and lift conversion rates. You’ll get transparent reporting that shows exactly where leads come from and how campaigns perform. For service companies, healthcare, and local pros, we make sure you show up first when it matters, turning local searches into calls and booked jobs without wasting budget.",
   },
   cta: {
-    bg: "/services/CTA/Digital-google-business-profile.png",
+    bg: "/services/CTA/Digital-google-business-profile.webp",
     title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
     link: "https://calendly.com/itseg/segmeet",
@@ -27,22 +27,22 @@ export const googleservicesads = {
     description:
       "Location-based ads put you in front of nearby, high-intent customers at the exact moment they’re searching. Proximity targeting and top-of-results placement capture attention, while call-first formats turn interest into appointments fast. Trust signals (e.g., Google Guaranteed), dayparting, and service-area controls improve conversion rates and reduce waste. With pay-per-lead pricing and clear reporting on leads, CPL, and close rate, ROI is transparent. Fast feedback loops let you refine targeting and messaging in real time driving more calls, bookings, and foot traffic.",
     items: [
-   {
-  img: "/services/digital/google-location-services-ads/Missed-local-opportunities-from-customers.png",
-  text: "Missed <strong>local opportunities</strong> from customers searching right in your area.",
-},
-{
-  img: "/services/digital/google-location-services-ads/CAC-increases-as-you-rely-only-on-broad-PPC-or-SEO.png",
-  text: "<strong>Competitors</strong> take over top spots and dominate local search visibility.",
-},
-{
-  img: "/services/digital/google-location-services-ads/Competitors-take-over-top.png",
-  text: "Call <strong>volume drops</strong> and bookings decline without strong local presence.",
-},
-{
-  img: "/services/digital/google-location-services-ads/Missed-local-opportunities-from-customers.png",
-  text: "<strong>CAC increases</strong> as you rely only on broad PPC or SEO without local ads.",
-},
+      {
+        img: "/services/digital/google-location-services-ads/Missed-local-opportunities-from-customers.png",
+        text: "Missed <strong>local opportunities</strong> from customers searching right in your area.",
+      },
+      {
+        img: "/services/digital/google-location-services-ads/CAC-increases-as-you-rely-only-on-broad-PPC-or-SEO.png",
+        text: "<strong>Competitors</strong> take over top spots and dominate local search visibility.",
+      },
+      {
+        img: "/services/digital/google-location-services-ads/Competitors-take-over-top.png",
+        text: "Call <strong>volume drops</strong> and bookings decline without strong local presence.",
+      },
+      {
+        img: "/services/digital/google-location-services-ads/Missed-local-opportunities-from-customers.png",
+        text: "<strong>CAC increases</strong> as you rely only on broad PPC or SEO without local ads.",
+      },
 
     ],
   },

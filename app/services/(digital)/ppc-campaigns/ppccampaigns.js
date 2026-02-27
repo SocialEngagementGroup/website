@@ -7,7 +7,7 @@ export const PpcServiceData = {
     ctaButton: "Connect With Us",
     ctaLink: "/contact-us",
     img: "/services/creative/branding/heroimg.png",
-    bg: "/services/creative/branding/herobg.png",
+    bg: "/services/creative/branding/herobg.webp",
   },
 
   intro: {
@@ -16,7 +16,7 @@ export const PpcServiceData = {
       "PPC is the fastest way to drive qualified traffic when it’s engineered with precision. We build data-driven campaigns that hit the right audience, moment, and message. Starting with deep keyword and competitor research, we craft high-performing copy and creatives, then launch tightly structured accounts to maximize relevance and cut waste. Across Google, Bing, Meta, and LinkedIn, we continuously test, refine targeting, adjust bids, and optimize for higher ROI. You get clear reporting on what’s working, what’s improving, and your exact cost per conversion. Whether the goal is sales, sign-ups, or traffic, our PPC turns every dollar into visible, measurable growth.",
   },
   cta: {
-    bg: "/services/CTA/Digital-google-business-profile.png",
+    bg: "/services/CTA/Digital-google-business-profile.webp",
     title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
     link: "https://calendly.com/itseg/segmeet",

@@ -7,7 +7,7 @@ export const ReviewReputationData = {
     ctaButton: "Connect With Us",
     ctaLink: "/contact-us",
     img: "/services/creative/branding/heroimg.png",
-    bg: "/services/creative/branding/herobg.png",
+    bg: "/services/creative/branding/herobg.webp",
   },
 
   intro: {
@@ -16,7 +16,7 @@ export const ReviewReputationData = {
       "Your online reputation shapes decisions before prospects ever visit your site. With 9 in 10 customers reading reviews, managing it isn’t optional, it’s essential. We monitor reviews in real time, respond strategically, and build a steady flow of genuine, positive feedback across Google, Yelp, Facebook, and industry platforms. Negative comments are handled quickly and professionally to protect credibility, while simple, compliant prompts make it easy for happy customers to share their experiences. Every review becomes a chance to repair or reinforce trust, turning reputation into a growth engine that attracts new business organically.",
   },
   cta: {
-    bg: "/services/CTA/Digital-google-business-profile.png",
+    bg: "/services/CTA/Digital-google-business-profile.webp",
     title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
     link: "https://calendly.com/itseg/segmeet",
