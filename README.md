@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="public/SiteLogo/seg.png" alt="Social Engagement Group" width="200" />
-</p>
-
 <h1 align="center">Social Engagement Group</h1>
 
 <p align="center">
@@ -9,8 +5,8 @@
 </p>
 
 <p align="center">
-  <a href="https://socialengagementgroup.com">🌐 Live Site</a> &nbsp;·&nbsp;
-  <a href="https://github.com/SocialEngagementGroup/website">📦 Repository</a> &nbsp;·&nbsp;
+  <a href="https://socialengagementgroup.com">🌐 Live Site</a>  · 
+  <a href="https://github.com/SocialEngagementGroup/website">📦 Repository</a>  · 
   <a href="https://socialengagementgroup.com/contact-us">📬 Contact Us</a>
 </p>
 
