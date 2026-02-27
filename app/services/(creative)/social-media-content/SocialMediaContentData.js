@@ -4,17 +4,17 @@ export const SocialMediaContentData = {
     description: "Create scroll-stopping social content that engages, converts, and builds community. Expert strategies for Meta, TikTok, and beyond to grow your brand.",
     subtitle: "creative",
     ctaButton: "Connect With Us",
-        ctaLink: "/contact-us",
+    ctaLink: "/contact-us",
     img: "/services/creative/branding/heroimg.png",
-    bg: "/services/creative/branding/herobg.png",
+    bg: "/services/creative/branding/herobg.webp",
   },
   intro: {
     heading: "Build Social That Stops the Scroll",
     description:
       "Social is where attention is won, and communities are built. We create content that stops the scroll and starts conversations, blending creativity, trend intelligence, and platform psychology for Meta, TikTok, and beyond. From storytelling visuals to high-impact videos and carousels, every asset feels authentically “you” and drives measurable results. We study your voice, audience behavior, and competitors, then design for awareness, engagement, and conversion. The outcome: your social channels become a growth engine, strategic stories that stand out in a fast-scrolling world.",
   },
-   cta: {
-    bg: "/services/CTA/Digital-google-business-profile.png",
+  cta: {
+    bg: "/services/CTA/Digital-google-business-profile.webp",
     title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
     link: "https://calendly.com/itseg/segmeet",
@@ -46,18 +46,18 @@ export const SocialMediaContentData = {
   ProfessionalLogoDesign: {
     heading: "What Happens With High-Impact Social Content",
     items: [
-   {
-  text: "Posts get shared, driving wider reach and <strong>engagement</strong>.",
-},
-{
-  text: "Followers convert into loyal customers and brand <strong>advocates</strong>.",
-},
-{
-  text: "Campaigns trend with perfect relevance and timing, boosting <strong>visibility</strong>.",
-},
-{
-  text: "You lead the conversation in your niche, becoming an industry <strong>authority</strong>.",
-},
+      {
+        text: "Posts get shared, driving wider reach and <strong>engagement</strong>.",
+      },
+      {
+        text: "Followers convert into loyal customers and brand <strong>advocates</strong>.",
+      },
+      {
+        text: "Campaigns trend with perfect relevance and timing, boosting <strong>visibility</strong>.",
+      },
+      {
+        text: "You lead the conversation in your niche, becoming an industry <strong>authority</strong>.",
+      },
 
     ],
     video: "/videos/services/creative/Social-Media-Content.mp4",
@@ -65,18 +65,18 @@ export const SocialMediaContentData = {
   BrandStrategy: {
     heading: "What You Get",
     items: [
-     {
-  text: "Content calendars and <strong>strategy</strong> to keep your social content on track.",
-},
-{
-  text: "Short-form <strong>video</strong> crafted for TikTok and Reels to maximize engagement.",
-},
-{
-  text: "Carousel <strong>ads</strong> and story content to drive interaction and brand awareness.",
-},
-{
-  text: "<strong>Engagement</strong> tracking and optimization to boost performance and results.",
-},
+      {
+        text: "Content calendars and <strong>strategy</strong> to keep your social content on track.",
+      },
+      {
+        text: "Short-form <strong>video</strong> crafted for TikTok and Reels to maximize engagement.",
+      },
+      {
+        text: "Carousel <strong>ads</strong> and story content to drive interaction and brand awareness.",
+      },
+      {
+        text: "<strong>Engagement</strong> tracking and optimization to boost performance and results.",
+      },
 
     ],
     img: "/services/creative/social-media-content/creative-social-media-content.png",

@@ -6,7 +6,7 @@ export const ThreeDAnimationData = {
     ctaButton: "Connect With Us",
     ctaLink: "/contact-us",
     img: "/services/creative/branding/heroimg.png",
-    bg: "/services/creative/branding/herobg.png",
+    bg: "/services/creative/branding/herobg.webp",
   },
   intro: {
     heading: "Make People Feel What You Imagine",
@@ -14,7 +14,7 @@ export const ThreeDAnimationData = {
       "3D animation and rendering turn abstract ideas and complex products into visuals that feel tangible and real. We blend creative direction with precision using industry-leading tools and cinematic technique to craft hyper-realistic renders and animations that elevate your brand story. From pre-launch product showcases and architectural visualizations to high-impact campaign films, every frame is built for clarity, emotion, and persuasion. Lighting, materials, textures, movement, and perspective are dialed in to signal quality and innovation. The result is content that captivates across e-commerce, ads, and investor decks and gives you a true competitive edge by letting audiences experience your vision before it exists.",
   },
   cta: {
-    bg: "/services/CTA/Digital-google-business-profile.png",
+    bg: "/services/CTA/Digital-google-business-profile.webp",
     title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
     link: "https://calendly.com/itseg/segmeet",

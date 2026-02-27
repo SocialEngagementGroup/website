@@ -4,10 +4,10 @@ export const solutionforTechStartupsData = {
     description:
       "Accelerate your tech startup’s growth with data-driven marketing. Build traction, attract users, and scale visibility from launch to Series A and beyond.",
     subtitle: "industry",
-      ctaButton: "Connect With Us",
-     ctaLink: "/contact-us",
+    ctaButton: "Connect With Us",
+    ctaLink: "/contact-us",
     img: "/services/creative/branding/heroimg.png", // kept original
-    bg: "/services/creative/branding/herobg.png",   // kept original
+    bg: "/services/creative/branding/herobg.webp",   // kept original
   },
 
   intro: {
@@ -16,7 +16,7 @@ export const solutionforTechStartupsData = {
       "Every startup begins with an idea but turning it into traction takes more than innovation. In today’s crowded digital ecosystem, visibility, credibility, and momentum define who wins. We help ambitious tech startups like yours attract early users, earn investor confidence, and accelerate growth through data-driven storytelling, full-funnel marketing, and scalable digital systems built for speed. Whether you’re in SaaS, AI, FinTech, or eCommerce tech, we design frameworks that make your brand discoverable, credible, and impossible to ignore.",
   },
   cta: {
-    bg: "/services/CTA/Digital-google-business-profile.png",
+    bg: "/services/CTA/Digital-google-business-profile.webp",
     title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
     link: "https://calendly.com/itseg/segmeet",
@@ -76,7 +76,7 @@ export const solutionforTechStartupsData = {
         text: "<strong>Analytics & Growth Reporting:</strong> Track the right metrics, uncover insight patterns, and make confident growth decisions.",
       },
     ],
-    img: "/services/masterimagesslider/industry/Solution-for-Tech-Startups.jpg", // kept original
+    img: "/services/industry/Solution-for-Tech-Startups/Industry-tech-startups.png",
   },
 
   CaseStudy: {

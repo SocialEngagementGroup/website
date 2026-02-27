@@ -7,15 +7,15 @@ export const brandingData = {
     ctaButton: "Connect With Us",
     ctaLink: "/contact-us",
     img: "/services/creative/branding/heroimg.png",
-    bg: "/services/creative/branding/herobg.png",
+    bg: "/services/creative/branding/herobg.webp",
   },
   intro: {
     heading: "Build a brand that sticks",
     description:
       "Your brand is more than a logo, it’s the experience people remember. We build end-to-end branding that defines your voice, crafts a standout visual identity, and positions you clearly in a crowded market. Starting with deep research, we map your audience, differentiation, and story, then translate that into consistent messaging that earns trust. Finally, we design a cohesive visual system, logo, colors, type, imagery and apply it across every touchpoint so you’re instantly recognizable, building loyalty and accelerating growth.",
   },
-    cta: {
-    bg: "/services/CTA/Digital-google-business-profile.png",
+  cta: {
+    bg: "/services/CTA/Digital-google-business-profile.webp",
     title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
     link: "https://calendly.com/itseg/segmeet",

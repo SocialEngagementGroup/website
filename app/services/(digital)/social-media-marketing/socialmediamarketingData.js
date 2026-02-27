@@ -5,9 +5,9 @@ export const socialmediamarketingData = {
       "Boost engagement and sales with data-driven social media marketing. We craft creative, high-performing campaigns across Meta, TikTok, LinkedIn, and more.",
     subtitle: "digital",
     ctaButton: "Connect With Us",
-        ctaLink: "/contact-us",
+    ctaLink: "/contact-us",
     img: "/services/creative/branding/heroimg.png",
-    bg: "/services/creative/branding/herobg.png",
+    bg: "/services/creative/branding/herobg.webp",
   },
 
   intro: {
@@ -16,7 +16,7 @@ export const socialmediamarketingData = {
       "Social isn’t optional, it’s where relevance, visibility, and revenue meet. We turn daily scroll time on Meta, TikTok, LinkedIn, and more into measurable growth with full-funnel strategies grounded in audience insight, platform trends, and precision targeting. From viral short-form video and influencer collabs to paid funnels and community management, we run the entire social engine. Every post is built for a purpose, to earn attention, spark conversation, and move buyers through the funnel. With transparent reporting and constant optimization, you stay ahead of algorithms and competitors. Social isn’t about likes; it’s about turning every interaction into impact.",
   },
   cta: {
-    bg: "/services/CTA/Digital-google-business-profile.png",
+    bg: "/services/CTA/Digital-google-business-profile.webp",
     title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
     link: "https://calendly.com/itseg/segmeet",

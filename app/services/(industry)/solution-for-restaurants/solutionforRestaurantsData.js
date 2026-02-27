@@ -4,10 +4,10 @@ export const solutionforRestaurantsData = {
     description:
       "Boost your restaurant’s visibility and reservations with smart digital marketing. Rank higher locally, get more bookings, and build loyal customers.",
     subtitle: "industry",
-     ctaButton: "Connect With Us",
-     ctaLink: "/contact-us",
+    ctaButton: "Connect With Us",
+    ctaLink: "/contact-us",
     img: "/services/creative/branding/heroimg.png", // kept original
-    bg: "/services/creative/branding/herobg.png",   // kept original
+    bg: "/services/creative/branding/herobg.webp",   // kept original
   },
 
   intro: {
@@ -15,8 +15,8 @@ export const solutionforRestaurantsData = {
     description:
       "Great food brings people together. But in the era of digital-first, great food alone isn’t always enough. Your next customer is scrolling through their social media feeds long before they walk through your doors. Ensuring you appear while they scroll, not just appear, but with visually stunning scroll stopping content will help you stand out and attract more diners. Regardless of the size of your business, whether it's a single store or multi store franchise, we design systems tailored for your business needs to keep your tables full.",
   },
-   cta: {
-    bg: "/services/CTA/Digital-google-business-profile.png",
+  cta: {
+    bg: "/services/CTA/Digital-google-business-profile.webp",
     title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
     link: "https://calendly.com/itseg/segmeet",
@@ -79,7 +79,7 @@ export const solutionforRestaurantsData = {
         text: "Influencer & UGC Campaigns: Partner with food creators to spark organic buzz and community-driven discovery.",
       },
     ],
-    img: "/services/masterimagesslider/industry/Solution-for-Restaurant.jpg", // kept original
+    img: "/services/industry/Solution-for-Restaurant/Solution-for-Restaurant.png",
   },
 
   CaseStudy: {

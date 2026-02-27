@@ -5,9 +5,9 @@ export const contentCreationData = {
       "Create content that converts. From videos and graphics to influencer and AI-generated assets—build engagement, trust, and growth for your brand.",
     subtitle: "Creative",
     ctaButton: "Connect With Us",
-        ctaLink: "/contact-us",
+    ctaLink: "/contact-us",
     img: "/services/creative/branding/heroimg.png",
-    bg: "/services/creative/branding/herobg.png",
+    bg: "/services/creative/branding/herobg.webp",
   },
   intro: {
     heading: "Content That Captures Attention",
@@ -15,7 +15,7 @@ export const contentCreationData = {
       "Exceptional content drives clicks, shares, and conversions. We build a tailored content strategy rooted in deep audience insight then create the assets that make it work: scroll-stopping design, high-impact video, authentic influencer collaborations, and fast, scalable AI content. Every piece is engineered for the platform and purpose, from viral short-form and thought-leadership series to campaign-ready visuals. We don’t just produce content; we craft brand experiences that spark conversation, build trust, and deliver measurable ROI.",
   },
   cta: {
-    bg: "/services/CTA/Digital-google-business-profile.png",
+    bg: "/services/CTA/Digital-google-business-profile.webp",
     title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
     link: "https://calendly.com/itseg/segmeet",

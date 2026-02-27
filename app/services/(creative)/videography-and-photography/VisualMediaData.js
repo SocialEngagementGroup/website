@@ -7,7 +7,7 @@ export const VisualMediaData = {
     ctaButton: "Connect With Us",
     ctaLink: "/contact-us",
     img: "/services/creative/branding/heroimg.png",
-    bg: "/services/creative/branding/herobg.png",
+    bg: "/services/creative/branding/herobg.webp",
   },
 
   intro: {
@@ -15,8 +15,8 @@ export const VisualMediaData = {
     description:
       "Great brand stories deserve visuals that do them justice. We create photography and videography that capture emotion, essence, and identity, cinematic films, irresistible product shoots, and lifestyle imagery that humanizes your brand. Our end-to-end process, creative direction, lighting, production, editing, and color ensures every frame reflects your values and elevates credibility. Polished visuals build subconscious trust and signal quality and leadership. In a crowded feed, the right imagery doesn’t just attract attention, it makes your brand unforgettable.",
   },
-   cta: {
-    bg: "/services/CTA/Digital-google-business-profile.png",
+  cta: {
+    bg: "/services/CTA/Digital-google-business-profile.webp",
     title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
     link: "https://calendly.com/itseg/segmeet",
