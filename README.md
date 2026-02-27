@@ -1,36 +1,199 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">
+  <img src="public/SiteLogo/seg.png" alt="Social Engagement Group" width="200" />
+</p>
 
-## Getting Started
+<h1 align="center">Social Engagement Group</h1>
 
-First, run the development server:
+<p align="center">
+  <strong>Where Human Creativity Meets AI-Powered Digital Growth</strong>
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+<p align="center">
+  <a href="https://socialengagementgroup.com">🌐 Live Site</a> &nbsp;·&nbsp;
+  <a href="https://github.com/SocialEngagementGroup/website">📦 Repository</a> &nbsp;·&nbsp;
+  <a href="https://socialengagementgroup.com/contact-us">📬 Contact Us</a>
+</p>
+
+<br />
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js" />
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss" />
+  <img src="https://img.shields.io/badge/Framer_Motion-12-FF0050?style=for-the-badge&logo=framer" />
+  <img src="https://img.shields.io/badge/Turbopack-Enabled-F7DF1E?style=for-the-badge" />
+</p>
+
+---
+
+## ✨ Overview
+
+The **Social Engagement Group (SEG)** website is a premium, high-performance marketing agency platform built with the latest web technologies. It showcases SEG's full suite of creative, digital, and industry-specific marketing services through immersive animations, smooth scrolling, and a bold typographic system.
+
+---
+
+## 🏗️ Tech Stack
+
+| Layer             | Technology                                                                                                                  |
+| :---------------- | :-------------------------------------------------------------------------------------------------------------------------- |
+| **Framework**     | [Next.js 15](https://nextjs.org/) (App Router + Turbopack)                                                                  |
+| **UI Library**    | [React 19](https://react.dev/)                                                                                              |
+| **Styling**       | [Tailwind CSS 4](https://tailwindcss.com/) + Global CSS Design System                                                       |
+| **Animations**    | [Framer Motion 12](https://www.framer.com/motion/)                                                                          |
+| **Smooth Scroll** | [Lenis](https://github.com/studio-freight/lenis)                                                                            |
+| **Carousels**     | [Swiper 12](https://swiperjs.com/) + [React Slick](https://react-slick.neostack.com/)                                       |
+| **Gallery**       | [LightGallery](https://www.lightgalleryjs.com/)                                                                             |
+| **Forms**         | [React Hook Form](https://react-hook-form.com/) + [Yup](https://github.com/jquense/yup)                                     |
+| **Icons**         | [Lucide React](https://lucide.dev/) + [React Icons](https://react-icons.github.io/) + [Iconify](https://iconify.design/)    |
+| **SEO**           | [next-sitemap](https://github.com/iamvishnusankar/next-sitemap) + reCAPTCHA                                                 |
+| **Fonts**         | [Outfit](https://fonts.google.com/specimen/Outfit) + [Playfair Display](https://fonts.google.com/specimen/Playfair+Display) |
+
+---
+
+## 📂 Project Structure
+
+```
+Website/
+├── app/
+│   ├── (Pages)/              # Legal pages (Cookies, Privacy, Terms, Legal Notice)
+│   ├── Home/                  # Home page
+│   ├── about/                 # About page
+│   ├── contact-us/            # Contact page
+│   ├── services/
+│   │   ├── (creative)/        # Branding, Logo, 3D, Content, Video, Social Media
+│   │   ├── (digital)/         # SEO, PPC, SMM, Web Dev, Google Ads, Reviews
+│   │   ├── (industry)/        # Solutions for Doctors, Lawyers, Restaurants, Startups
+│   │   └── (masterPage)/      # All Services overview
+│   ├── globals.css            # Global design system & typography
+│   ├── layout.js              # Root layout (fonts, metadata, GTM)
+│   └── page.js                # Landing page
+│
+├── components/
+│   ├── ContactPage/           # Contact form & hero
+│   ├── Footer/                # Footer, contact info, copyright
+│   ├── HomePage/              # Hero, parallax slider, brand logos, insights
+│   ├── LegalPage/             # Shared legal page components
+│   ├── MasterServicesPage/    # Services overview components
+│   ├── Navbar/                # Desktop & mobile navigation
+│   └── ServicePage/           # Individual service page components
+│
+├── apis/                      # API utilities
+├── lib/                       # Shared libraries
+├── public/                    # Static assets (images, icons, logos)
+└── data.js                    # Global site data
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🎨 Design System
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The site uses a **custom typographic hierarchy** defined in `globals.css`:
 
-## Learn More
+| Element   | Desktop | Mobile | Purpose                    |
+| :-------- | :-----: | :----: | :------------------------- |
+| `h1`      |  64px   |  42px  | Page titles                |
+| `h2`      |  48px   |  32px  | Section headings           |
+| `h3`      |  24px   |  20px  | Feature / button headings  |
+| `h4`      |  54px   |  38px  | Premium mid-level headings |
+| `h5`      |  24px   |  20px  | Sub-section headers        |
+| `h6`      |  20px   |  18px  | Utility captions           |
+| `p / .p1` |  24px   |  20px  | Body text                  |
+| `.p2`     |  24px   |  18px  | Secondary content          |
+| `.p3`     |  18px   |  16px  | Small utility text         |
 
-To learn more about Next.js, take a look at the following resources:
+**Fonts:** Outfit (sans-serif) for body & headings, Playfair Display (serif) for accents.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Getting Started
 
-## Deploy on Vercel
+### Prerequisites
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Node.js** ≥ 18.x
+- **npm** ≥ 9.x
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/SocialEngagementGroup/website.git
+cd website
+
+# Install dependencies
+npm install
+```
+
+### Development
+
+```bash
+# Start dev server with Turbopack
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Production Build
+
+```bash
+# Build for production
+npm run build
+
+# Start production server
+npm start
+```
+
+---
+
+## 📄 Pages
+
+| Page                          | Route                                | Description                                          |
+| :---------------------------- | :----------------------------------- | :--------------------------------------------------- |
+| **Home**                      | `/`                                  | Hero section, parallax slider, brand logos, insights |
+| **About**                     | `/about`                             | Company story and mission                            |
+| **Contact**                   | `/contact-us`                        | Contact form with reCAPTCHA                          |
+| **All Services**              | `/services`                          | Full services overview with search                   |
+| **Branding**                  | `/services/branding`                 | Brand strategy & identity                            |
+| **SEO**                       | `/services/seo`                      | Search engine optimization                           |
+| **PPC**                       | `/services/ppc-campaigns`            | Pay-per-click advertising                            |
+| **Social Media**              | `/services/social-media-marketing`   | Social media management                              |
+| **Web Development**           | `/services/website-development`      | Custom website development                           |
+| **Solutions for Lawyers**     | `/services/solution-for-lawyers`     | Legal industry marketing                             |
+| **Solutions for Doctors**     | `/services/solution-for-doctors`     | Healthcare marketing                                 |
+| **Solutions for Restaurants** | `/services/solution-for-restaurants` | Restaurant marketing                                 |
+| **Privacy Policy**            | `/privacy-policy`                    | Data protection policy                               |
+| **Terms & Conditions**        | `/terms-and-conditions`              | Usage terms                                          |
+| **Cookies**                   | `/cookies`                           | Cookie usage policy                                  |
+| **Legal Notice**              | `/legal-notice`                      | Legal disclaimers                                    |
+
+---
+
+## 🔧 Key Scripts
+
+| Command         | Description                          |
+| :-------------- | :----------------------------------- |
+| `npm run dev`   | Start development server (Turbopack) |
+| `npm run build` | Create production build              |
+| `npm start`     | Start production server              |
+| `npm run lint`  | Run ESLint checks                    |
+
+---
+
+## 🌐 SEO & Analytics
+
+- **Google Tag Manager** integrated for analytics tracking
+- **next-sitemap** for automatic sitemap generation (`/sitemap.xml`)
+- **robots.txt** configured for search engine crawling
+- **Open Graph & Twitter Card** metadata for rich social sharing
+- **reCAPTCHA v2** on contact forms for spam protection
+
+---
+
+## 📜 License
+
+This project is **proprietary** and owned by **Social Engagement Group LLC**. All rights reserved.
+
+---
+
+<p align="center">
+  <sub>Built with ❤️ by the <strong>Social Engagement Group</strong> team</sub>
+</p>
