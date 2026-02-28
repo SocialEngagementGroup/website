@@ -6,7 +6,7 @@ export const solutionForLawyersData = {
     subtitle: "industry",
     ctaButton: "Contact With Us",
      ctaLink: "#contact",
-   img: "/assets/images/services/creative/branding/heroimg.png",
+   img: "/assets/images/services/creative/branding/heroimg.webp",
    bg: "/assets/images/backgrounds/service-bg.webp",
   },
 
@@ -28,19 +28,19 @@ export const solutionForLawyersData = {
       "Clients today search, compare, and evaluate legal expertise online, which means if your firm isn’t visible, it’s effectively invisible. Digital transformation ensures you show up where decisions begin—through strong search presence, credible reviews, and authority-building content. With the right data-driven marketing in place, trust is established before a client ever contacts you, making your firm the one that gets found, trusted, and ultimately chosen.",
     items: [
   {
- img: "/assets/images/services/industry/solution-for-lawyers/missed-opportunities.png",
+ img: "/assets/images/services/industry/solution-for-lawyers/missed-opportunities.webp",
   text: "Missed <strong>opportunities</strong> as clients can’t find your firm online.",
 },
 {
- img: "/assets/images/services/industry/solution-for-lawyers/negative-or-outdated-reviews.png",
+ img: "/assets/images/services/industry/solution-for-lawyers/negative-or-outdated-reviews.webp",
   text: "Negative or <strong>outdated reviews</strong> damage your firm's credibility.",
 },
 {
- img: "/assets/images/services/industry/solution-for-lawyers/competitors-dominate-local-search.png",
+ img: "/assets/images/services/industry/solution-for-lawyers/competitors-dominate-local-search.webp",
   text: "<strong>Competitors</strong> dominate local search and online visibility.",
 },
 {
- img: "/assets/images/services/industry/solution-for-lawyers/inconsistent-client-inquiries-lead-to-unstable-case-flow.png",
+ img: "/assets/images/services/industry/solution-for-lawyers/inconsistent-client-inquiries-lead-to-unstable-case-flow.webp",
   text: "Inconsistent <strong>client inquiries</strong> lead to unstable case flow.",
 },
 
@@ -88,7 +88,7 @@ export const solutionForLawyersData = {
         text: "<strong>Analytics & Lead Tracking:</strong> Measure performance, track inquiries, and optimize every channel for higher case acquisition.",
       },
     ],
-   img: "/assets/images/services/master-image-slider/industry/solution-for-lawyers.png",
+   img: "/assets/images/services/master-image-slider/industry/solution-for-lawyers.webp",
   },
 
   FAQ: {

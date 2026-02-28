@@ -3,18 +3,18 @@ import Image from "next/image";
 
 const TrustBar = ({ heading, description }) => {
   const logos = [
-    "aref-black.png",
-    "capiton-black.png",
-    "fjh-black.png",
-    "gt-black.png",
-    "gravy-stack-black.png",
-    "infuse-black.png",
-    "mfc-black.png",
-    "nipa-black.png",
-    "rastegar-black.png",
-    "sc-black.png",
-    "smf-black.png",
-    "sporcle-black.png",
+    "aref-black.webp",
+    "capiton-black.webp",
+    "fjh-black.webp",
+    "gt-black.webp",
+    "gravy-stack-black.webp",
+    "infuse-black.webp",
+    "mfc-black.webp",
+    "nipa-black.webp",
+    "rastegar-black.webp",
+    "sc-black.webp",
+    "smf-black.webp",
+    "sporcle-black.webp",
   ];
 
   return (

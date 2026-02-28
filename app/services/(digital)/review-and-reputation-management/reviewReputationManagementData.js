@@ -6,7 +6,7 @@ export const reviewReputationManagementData = {
     subtitle: "digital",
     ctaButton: "Connect With Us",
     ctaLink: "#contact",
-   img: "/assets/images/services/creative/branding/heroimg.png",
+   img: "/assets/images/services/creative/branding/heroimg.webp",
    bg: "/assets/images/backgrounds/service-bg.webp",
   },
 
@@ -27,19 +27,19 @@ export const reviewReputationManagementData = {
       "Most buyers read reviews before they even visit your site. Strong ratings create instant trust and reduce friction in the funnel. Credible, timely responses to feedback signal reliability and care. High review volume and recency boost local SEO and discoverability. A strong reputation lifts conversion rates while lowering acquisition costs. Positive sentiment increases pricing power and average order value. Consistent review management protects brand equity when mistakes happen. Social proof accelerates word-of-mouth and referrals. Transparent handling of negatives can turn skeptics into advocates. In short, reputation turns consideration into confident purchase decisions.",
     items: [
       {
-       img: "/assets/images/services/digital/review-and-reputation-management/bad-reviews.png",
+       img: "/assets/images/services/digital/review-and-reputation-management/bad-reviews.webp",
         text: "<strong>Bad reviews</strong> sit unanswered, damaging credibility and first impressions.",
       },
       {
-       img: "/assets/images/services/digital/review-and-reputation-management/prospects-turn-to-competitors.png",
+       img: "/assets/images/services/digital/review-and-reputation-management/prospects-turn-to-competitors.webp",
         text: "Prospects turn to <strong>competitors</strong> with stronger ratings and responses.",
       },
       {
-       img: "/assets/images/services/digital/review-and-reputation-management/trust-fades-quickly-when-feedback-isn-t-managed.png",
+       img: "/assets/images/services/digital/review-and-reputation-management/trust-fades-quickly-when-feedback-isn-t-managed.webp",
         text: "<strong>Trust fades</strong> quickly when feedback isn’t managed or acknowledged.",
       },
       {
-       img: "/assets/images/services/digital/review-and-reputation-management/search-visibility-drops.png",
+       img: "/assets/images/services/digital/review-and-reputation-management/search-visibility-drops.webp",
         text: "Search <strong>visibility drops</strong> and conversions decline as sentiment worsens.",
       },
 
@@ -66,7 +66,7 @@ export const reviewReputationManagementData = {
       { text: "Proven reputation repair strategies to counter negatives and rebuild trust." },
       { text: "Monthly sentiment reports with clear insights and actionable recommendations." },
     ],
-   img: "/assets/images/services/master-image-slider/digital/review-and-reputation-management.png",
+   img: "/assets/images/services/master-image-slider/digital/review-and-reputation-management.webp",
   },
 
   FAQ: {

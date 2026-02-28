@@ -5,7 +5,7 @@ export const threeDAnimationRenderingData = {
     subtitle: "creative",
     ctaButton: "Connect With Us",
     ctaLink: "#contact",
-   img: "/assets/images/services/creative/branding/heroimg.png",
+   img: "/assets/images/services/creative/branding/heroimg.webp",
    bg: "/assets/images/backgrounds/service-bg.webp",
   },
   intro: {
@@ -24,19 +24,19 @@ export const threeDAnimationRenderingData = {
       "3D animation makes complex ideas instantly clear. It turns products into tangible, premium experiences before they even exist. You can pre-sell and validate concepts without manufacturing. Cinematic motion holds attention longer and boosts recall. Realism and polish lift brand perception across categories. Performance improves across ads, e-commerce, and pitches. Support questions drop when visuals explain what words can’t. Campaigns stand out and get remembered on every channel.",
     items: [
       {
-       img: "/assets/images/services/creative/animation-rendering/look-flat-and-forgettable.png",
+       img: "/assets/images/services/creative/animation-rendering/look-flat-and-forgettable.webp",
         text: "<strong>Products look</strong> flat and forgettable, lacking impact and differentiation.",
       },
       {
-       img: "/assets/images/services/creative/animation-rendering/audiences-disengage-quickly.png",
+       img: "/assets/images/services/creative/animation-rendering/audiences-disengage-quickly.webp",
         text: "<strong>Audiences disengage</strong> quickly, losing interest before they connect.",
       },
       {
-       img: "/assets/images/services/creative/animation-rendering/competitors-look-more-advanced.png",
+       img: "/assets/images/services/creative/animation-rendering/competitors-look-more-advanced.webp",
         text: "<strong>Competitors instantly</strong> appear more advanced with better visuals.",
       },
       {
-       img: "/assets/images/services/creative/animation-rendering/competitors-outshine.png",
+       img: "/assets/images/services/creative/animation-rendering/competitors-outshine.webp",
         text: "<strong>Competitors</strong> outshine your presentation with higher-quality content.",
       },
     ],
@@ -77,7 +77,7 @@ export const threeDAnimationRenderingData = {
       },
 
     ],
-   img: "/assets/images/services/master-image-slider/creative/3d-animation-rendering.png",
+   img: "/assets/images/services/master-image-slider/creative/3d-animation-rendering.webp",
   },
   FAQ: {
     heading: "FAQs",

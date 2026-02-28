@@ -6,7 +6,7 @@ export const seoData = {
     subtitle: "digital",
     ctaButton: "Connect With Us",
         ctaLink: "#contact",
-   img: "/assets/images/services/creative/branding/heroimg.png",   // original kept
+   img: "/assets/images/services/creative/branding/heroimg.webp",   // original kept
    bg: "/assets/images/backgrounds/service-bg.webp",     // original kept
   },
 
@@ -27,19 +27,19 @@ export const seoData = {
       "Search is where most buying journeys start, and if you’re not on page one, you’re effectively invisible. Strong SEO aligns your pages with real buyer intent, pairing relevant content with fast, well-structured experiences that search engines and customers trust. As authority and quality backlinks compound, you earn qualified clicks instead of random traffic, reduce dependence on paid ads, and show up precisely at the moment of need. That visibility turns searches into pipeline and sales.",
     items: [
       {
-       img: "/assets/images/services/digital/seo/competitors-capture-the-demand-meant-for-you.png",
+       img: "/assets/images/services/digital/seo/competitors-capture-the-demand-meant-for-you.webp",
         text: "<strong>Competitors</strong> capture the demand meant for you.",
       },
       {
-       img: "/assets/images/services/digital/seo/buyers-never-discover-your-brand.png",
+       img: "/assets/images/services/digital/seo/buyers-never-discover-your-brand.webp",
         text: "<strong>High-intent buyers</strong> never discover your brand.",
       },
       {
-       img: "/assets/images/services/digital/seo/you-become-overly-reliant-on-paid-advertising.png",
+       img: "/assets/images/services/digital/seo/you-become-overly-reliant-on-paid-advertising.webp",
         text: "You become overly reliant on <strong>paid advertising</strong>.",
       },
       {
-       img: "/assets/images/services/digital/seo/customer-acquisition-costs-rise-rapidly.png",
+       img: "/assets/images/services/digital/seo/customer-acquisition-costs-rise-rapidly.webp",
         text: "<strong>Customer acquisition</strong> costs rise rapidly.",
       },
 
@@ -65,7 +65,7 @@ export const seoData = {
       { text: "White-hat link building that steadily boosts authority and trust signals." },
       { text: "Monthly performance reports with clear insights and actionable next steps." },
     ],
-   img: "/assets/images/services/master-image-slider/digital/seo.png", // original kept
+   img: "/assets/images/services/master-image-slider/digital/seo.webp", // original kept
   },
 
   FAQ: {

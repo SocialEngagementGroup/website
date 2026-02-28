@@ -5,7 +5,7 @@ export const logoDesignData = {
     subtitle: "Creative",
     ctaButton: "Connect With Us",
     ctaLink: "#contact",
-   img: "/assets/images/services/creative/branding/heroimg.png",
+   img: "/assets/images/services/creative/branding/heroimg.webp",
    bg: "/assets/images/backgrounds/service-bg.webp",
 },
   intro: {
@@ -22,19 +22,19 @@ export const logoDesignData = {
     description: "Your logo is the first thing people notice. And the moment they decide whether to trust you or move on. When your <strong>Custom logo design</strong> works, every part of your marketing works harder. Your ads perform better. Your social posts earn more engagement. Referrals increase because customers can describe and recall you instantly. Because recognition builds trust and trust creates customers. That’s the power of investing in the right <strong>business logo design</strong>.",
     items: [
   {
-   img: "/assets/images/services/creative/logo-design/logo-design.png",
+   img: "/assets/images/services/creative/logo-design/logo-design.webp",
     text: "You get <strong>forgotten</strong> within seconds due to poor logo design.",
   },
   {
-   img: "/assets/images/services/creative/logo-design/differentiation-in-the-market.png",
+   img: "/assets/images/services/creative/logo-design/differentiation-in-the-market.webp",
     text: "Your <strong>logo looks</strong> generic and lacks differentiation in the market.",
   },
   {
-   img: "/assets/images/services/creative/logo-design/referrals-fall-flat.png",
+   img: "/assets/images/services/creative/logo-design/referrals-fall-flat.webp",
     text: "<strong>Referrals</strong> fall flat because people can’t describe or recall your logo.",
   },
   {
-   img: "/assets/images/services/creative/logo-design/you-appear-amateur.png",
+   img: "/assets/images/services/creative/logo-design/you-appear-amateur.webp",
     text: "<strong>You appear</strong> amateur, even if your business is professional.",
   },
 
@@ -76,7 +76,7 @@ heading2: "The Cost of Weak Branding",
       text: "<strong>Brand guidelines</strong> ensure consistent logo usage across all platforms.",
     },
     ],
-   img: "/assets/images/services/master-image-slider/creative/logo-design.png",
+   img: "/assets/images/services/master-image-slider/creative/logo-design.webp",
   },
   FAQ: {
     heading: "FAQs",

@@ -43,7 +43,7 @@ export const metadata = {
     images: ["/assets/images/site-logo/logo.svg"],
   },
   icons: {
-    icon: "/favicon.png",
+    icon: "/favicon.webp",
   },
 };
 

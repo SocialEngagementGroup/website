@@ -6,7 +6,7 @@ export const solutionForDoctorsData = {
     subtitle: "industry",
     ctaButton: "Contact With Us",
      ctaLink: "#contact",
-   img: "/assets/images/services/creative/branding/heroimg.png",
+   img: "/assets/images/services/creative/branding/heroimg.webp",
    bg: "/assets/images/backgrounds/service-bg.webp",
   },
 
@@ -27,19 +27,19 @@ export const solutionForDoctorsData = {
       "Patients now begin their healthcare journey online searching symptoms, comparing specialists, and reading reviews long before they book an appointment. If your practice isn’t visible in those moments, it’s effectively invisible. A strong digital presence shapes trust, reputation, and patient decisions before they ever walk through your door. Digital transformation ensures your expertise gets discovered, trusted, and ultimately chosen.",
     items: [
       {
-       img: "/assets/images/services/industry/solution-for-doctors/missed-patients-who-never-find-you-online.png",
+       img: "/assets/images/services/industry/solution-for-doctors/missed-patients-who-never-find-you-online.webp",
         text: "Missed patients who never find you online.",
       },
       {
-       img: "/assets/images/services/industry/solution-for-doctors/negative-or-outdated-reviews-lowering-patient-confidence.png",
+       img: "/assets/images/services/industry/solution-for-doctors/negative-or-outdated-reviews-lowering-patient-confidence.webp",
         text: "Negative or outdated reviews lowering patient confidence.",
       },
       {
-       img: "/assets/images/services/industry/solution-for-doctors/competitors-ranking-higher-in-local-search-results.png",
+       img: "/assets/images/services/industry/solution-for-doctors/competitors-ranking-higher-in-local-search-results.webp",
         text: "Competitors ranking higher in local search results.",
       },
       {
-       img: "/assets/images/services/industry/solution-for-doctors/unstable-appointment-flow-and-low-patient-retention.png",
+       img: "/assets/images/services/industry/solution-for-doctors/unstable-appointment-flow-and-low-patient-retention.webp",
         text: "Unstable appointment flow and low patient retention.",
       },
     ],

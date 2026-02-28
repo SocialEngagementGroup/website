@@ -7,24 +7,24 @@ import { FaLinkedinIn, FaInstagram, FaFacebookF } from "react-icons/fa6";
 
 const contactInfo = [
   { 
-    icon: "/assets/images/icons/email.png", 
+    icon: "/assets/images/icons/email.webp", 
     label: "Email us at",
     text: "rahee@socialengagementgroup.com",
     link: "mailto:rahee@socialengagementgroup.com"
   },
   { 
-    icon: "/assets/images/icons/phone.png", 
+    icon: "/assets/images/icons/phone.webp", 
     label: "Call us",
     text: "+1 (347) 935-6442",
     link: "tel:+13479356442"
   },
   { 
-    icon: "/assets/images/icons/work-time.png", 
+    icon: "/assets/images/icons/work-time.webp", 
     label: "Working hours",
     text: "Mon – Fri: 10:00 AM – 6:00 PM (EST)" 
   },
   { 
-    icon: "/assets/images/icons/pin-map.png", 
+    icon: "/assets/images/icons/pin-map.webp", 
     label: "Our location",
     text: "New York City, USA" 
   },

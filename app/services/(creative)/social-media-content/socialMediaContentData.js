@@ -5,7 +5,7 @@ export const socialMediaContentData = {
     subtitle: "creative",
     ctaButton: "Connect With Us",
         ctaLink: "#contact",
-   img: "/assets/images/services/creative/branding/heroimg.png",
+   img: "/assets/images/services/creative/branding/heroimg.webp",
    bg: "/assets/images/backgrounds/service-bg.webp",
   },
   intro: {
@@ -25,19 +25,19 @@ export const socialMediaContentData = {
       "We audit channels, map your audience, and find white space to win. Using trend signals and platform-native best practices, we define pillars, hooks, and formats. Then we translate strategy into a distinct voice with thumb-stopping hooks and tight scripts. Motion beats and clear visual frameworks optimize every asset for watch time, saves, shares, and comments. Edits are truly native, TikTok/Reels pacing, meme-speed cuts, Meta carousels, and Stories. We tailor aspect ratios, captions, and cadence per channel to maximize performance. Across the ecosystem, we keep consistency tight so every piece ladders up to the brand.",
     items: [
       {
-       img: "/assets/images/services/creative/social-media-content/low-engagement.png",
+       img: "/assets/images/services/creative/social-media-content/low-engagement.webp",
         text: "<strong>Low engagement</strong> and limited reach hinder social media growth.",
       },
       {
-       img: "/assets/images/services/creative/social-media-content/missed-trends-and-timing.png",
+       img: "/assets/images/services/creative/social-media-content/missed-trends-and-timing.webp",
         text: "<strong>Missed trends</strong> and timing windows reduce content relevance.",
       },
       {
-       img: "/assets/images/services/creative/social-media-content/lower-follower-growth.png",
+       img: "/assets/images/services/creative/social-media-content/lower-follower-growth.webp",
         text: "<strong>Slower follower</strong> growth and weaker community impact brand loyalty.",
       },
       {
-       img: "/assets/images/services/creative/social-media-content/inconsistent-presence.png",
+       img: "/assets/images/services/creative/social-media-content/inconsistent-presence.webp",
         text: "<strong>Inconsistent presence</strong> on social media erodes audience trust.",
       },
     ],
@@ -78,7 +78,7 @@ export const socialMediaContentData = {
 },
 
     ],
-   img: "/assets/images/services/master-image-slider/creative/social-media-content.png",
+   img: "/assets/images/services/master-image-slider/creative/social-media-content.webp",
   },
   FAQ: {
     heading: "FAQs",

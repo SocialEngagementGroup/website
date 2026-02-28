@@ -6,7 +6,7 @@ export const brandingData = {
     subtitle: "Creative",
     ctaButton: "Connect With Us",
     ctaLink: "#contact",
-   img: "/assets/images/services/creative/branding/heroimg.png",
+   img: "/assets/images/services/creative/branding/heroimg.webp",
    bg: "/assets/images/backgrounds/service-bg.webp",
   },
   intro: {
@@ -25,19 +25,19 @@ export const brandingData = {
     description: "A <strong>cohesive brand</strong> makes every interaction seamless and effective. Customers gain instant <strong>brand recognition</strong>, which builds familiarity and trust. Your marketing efforts become more consistent and impactful, and your reputation for quality and reliability grows with every single touchpoint, creating a loyal customer base.",
     items: [
       {
-       img: "/assets/images/services/creative/branding/versus.png",
+       img: "/assets/images/services/creative/branding/versus.webp",
         text: "Customers forget your brand quickly due to poor <strong>recall</strong>.",
       },
       {
-       img: "/assets/images/services/creative/branding/shared-vision.png",
+       img: "/assets/images/services/creative/branding/shared-vision.webp",
         text: "You blend in with competitors, losing your distinct <strong>identity</strong>.",
       },
       {
-       img: "/assets/images/services/creative/branding/loyal-customer.png",
+       img: "/assets/images/services/creative/branding/loyal-customer.webp",
         text: "Inconsistent messaging damages <strong>trust</strong> with your customers.",
       },
       {
-       img: "/assets/images/services/creative/branding/return.png",
+       img: "/assets/images/services/creative/branding/return.webp",
         text: "Sales teams struggle to pitch a brand lacking clear <strong>identity</strong>.",
       },
 
@@ -78,7 +78,7 @@ export const brandingData = {
         text: "Detailed <strong>brand guidelines</strong> to ensure perfect consistency everywhere.",
       },
     ],
-   img: "/assets/images/services/master-image-slider/creative/branding.png",
+   img: "/assets/images/services/master-image-slider/creative/branding.webp",
   },
   FAQ: {
     heading: "FAQs",

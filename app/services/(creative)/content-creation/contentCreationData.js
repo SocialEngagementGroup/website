@@ -6,7 +6,7 @@ export const contentCreationData = {
     subtitle: "Creative",
     ctaButton: "Connect With Us",
         ctaLink: "#contact",
-   img: "/assets/images/services/creative/branding/heroimg.png",
+   img: "/assets/images/services/creative/branding/heroimg.webp",
    bg: "/assets/images/backgrounds/service-bg.webp",
   },
   intro: {
@@ -26,19 +26,19 @@ export const contentCreationData = {
       "High-quality visual content and engaging brand storytelling are essential for cutting through the digital noise. They are proven to boost your online reach, build brand trust, and increase conversion rates. Without a professional content strategy, your marketing messages risk being ignored, and your investment goes to waste.",
     items: [
       {
-       img: "/assets/images/services/creative/creative-content/audience-engagement.png",
+       img: "/assets/images/services/creative/creative-content/audience-engagement.webp",
         text: "Your posts and ads get lost in crowded social media feeds, leading to low <strong>audience engagement.</strong>",
       },
       {
-       img: "/assets/images/services/creative/creative-content/memorable-impact.png",
+       img: "/assets/images/services/creative/creative-content/memorable-impact.webp",
         text: "Your campaigns feel <strong>generic</strong> and fail to make a memorable impact.",
       },
       {
-       img: "/assets/images/services/creative/creative-content/you-struggle-to-build-a-loyal-community.png",
+       img: "/assets/images/services/creative/creative-content/you-struggle-to-build-a-loyal-community.webp",
         text: "Your <strong>brand message</strong> gets diluted, and you struggle to build a loyal community.",
       },
       {
-       img: "/assets/images/services/creative/creative-content/win-the-online-conversation-and-market-share.png",
+       img: "/assets/images/services/creative/creative-content/win-the-online-conversation-and-market-share.webp",
         text: "<strong>Competitors</strong> with stronger content easily win the online conversation and market share.",
       },
     ],
@@ -77,7 +77,7 @@ export const contentCreationData = {
         text: "Scalable <strong>AI-powered content</strong> tailored to your specific niche and brand voice.",
       },
     ],
-   img: "/assets/images/services/master-image-slider/creative/content-creation.png",
+   img: "/assets/images/services/master-image-slider/creative/content-creation.webp",
   },
   FAQ: {
     heading: "FAQs",
