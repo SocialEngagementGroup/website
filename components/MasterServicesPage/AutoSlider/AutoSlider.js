@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState, useMemo } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
@@ -101,14 +102,17 @@ const AutoSlider = ({ slides = [] }) => {
             <SwiperSlide key={i}>
               <Link href={slide.link} className="block w-full">
                 <div className="scaling-box h-[250px] max-[599px]:h-[200px] max-[599px]:m-auto rounded-[10px] relative overflow-hidden bg-black transform-gpu will-change-transform">
-                  <img
+                  <Image
                     src={slide.bg}
                     alt={slide.title || "slide image"}
-                    className="scaling-image w-full h-full block object-cover object-center scale-100 transition-transform duration-300 ease-in-out transform-gpu will-change-transform"
-                    loading="lazy"
+                    fill
+                    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    priority={i < 4 && !loading} // Prioritize first few images
+                    quality={85}
+                    className="scaling-image block object-cover object-center scale-100 transition-transform duration-300 ease-in-out transform-gpu will-change-transform"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.55)] to-[rgba(0,0,0,0.05)] pointer-events-none z-[1]" />
-                  <h4 className="absolute left-[12px] bottom-[12px] m-0 text-white text-[16px] md:text-[18px] font-bold drop-shadow-[0_6px_18px_rgba(0,0,0,0.55)] z-[2] capitalize">{slide.title}</h4>
+                  <h4 className="absolute left-[12px] bottom-[12px] m-0 text-white !text-[14px] md:!text-[18px] lg:!text-[22px] font-bold drop-shadow-[0_6px_18px_rgba(0,0,0,0.55)] z-[2] capitalize">{slide.title}</h4>
                 </div>
               </Link>
             </SwiperSlide>

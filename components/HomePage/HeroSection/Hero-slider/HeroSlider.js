@@ -88,13 +88,13 @@ const MultiRowSlider = () => {
                         src={img.src}
                         alt={img.alt}
                         fill
-                        priority={isFirst}
-                        loading={isFirst ? undefined : "lazy"}
-                        sizes="200px"
+                        priority={rowIndex === 0 && imgIndex < 4}
+                        loading={rowIndex === 0 && imgIndex < 4 ? undefined : "lazy"}
+                        sizes="(max-width: 640px) 150px, 200px"
+                        quality={80}
                         className="object-cover will-change-transform"
                       />
-                    </div>
-                  </SwiperSlide>
+                    </div>                  </SwiperSlide>
                 );
               })}
             </Swiper>
