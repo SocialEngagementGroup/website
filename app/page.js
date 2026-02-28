@@ -14,18 +14,21 @@ export const metadata = {
   },
 };
 import HeroSection from "@/components/HomePage/HeroSection/HeroSection"
+import VideoSection from "@/components/HomePage/VideoSection/VideoSection"
 import ParallaxSliderSection from '@/components/HomePage/ParallaxSlider/ParallaxSliderSection'
 import ClientsLogo from '@/components/HomePage/ClientLogos/ClientLogos'
 import BrandingSection from '@/components/HomePage/BrandSucceed/BrandingSection'
-
+import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 
 const page = () => {
   return (
     <>
       <HeroSection />
+      <VideoSection />
       <ParallaxSliderSection />
       <ClientsLogo />
+      <Testimonials />
       <div className='bg-white'>
         <BrandingSection />
       </div>

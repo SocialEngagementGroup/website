@@ -32,10 +32,7 @@ const ParallaxSliderSection = () => {
         </div>
       </div>
 
-      {/* Video section below slider */}
-      <div className="container-fluid mx-auto">
-        <Vdo />
-      </div>
+
 
     </section>
   );

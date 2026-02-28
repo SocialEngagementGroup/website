@@ -47,7 +47,7 @@ const SectionItem = ({ section, setActiveVideo }) => {
   return (
     <div
       ref={ref}
-      className="content-box rounded-2xl space-y-5 transition-all duration-300 giftitle flex flex-col items-start mt-15"
+      className="content-box rounded-2xl space-y-5 transition-all duration-300 giftitle flex flex-col items-center md:items-start mt-15"
     >
       {/* ✅ Desktop button */}
       <button className="hidden md:inline-block branding-btn-dsk px-5 py-2 rounded-full text-sm uppercase tracking-wide bg-[#D9D9D9] text-black transition-all">
@@ -60,7 +60,7 @@ const SectionItem = ({ section, setActiveVideo }) => {
       </button>
 
       {/* ✅ Section text */}
-      <p className="font-regular text-gray-800 leading-relaxed giftext text-start">
+      <p className="font-regular text-gray-800 leading-relaxed giftext text-center md:text-start">
         {section.title}
       </p>
 

@@ -2,44 +2,61 @@
 import { ClientsLogo } from "../../../data/clientsData";
 import Image from "next/image";
 
-const LogoMarquee = ({ speed = 100 }) => {
+const LogoMarquee = () => {
   return (
-    <div className="w-full pt-12 md:pt-4 pb:7 md:pb-12 relative">
+    <div className="w-full relative py-4">
       <style>{`
         @keyframes marquee {
-          0% { transform: translateX(0%); }
+          0% { transform: translateX(0); }
           100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+          display: flex;
+          animation: marquee 30s linear infinite;
+          width: fit-content;
+        }
+        .animate-marquee:hover {
+          animation-play-state: paused;
         }
       `}</style>
       
       {/* ✅ Main marquee wrapper */}
-      <div className="relative overflow-hidden w-full group">
+      <div className="relative overflow-hidden w-full md:max-w-[1200px] mx-auto">
+        <div className="animate-marquee flex items-center">
+          {/* First Set of Logos */}
+          <div className="flex items-center gap-4 md:gap-8 px-4 md:px-6 flex-shrink-0">
+            {ClientsLogo.map((logo, idx) => (
+              <div key={`logo-1-${idx}`} className="relative flex items-center justify-center">
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={140}
+                  height={70}
+                  className="h-7 md:h-10 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                />
+              </div>
+            ))}
+          </div>
 
-        {/* ✅ Moving marquee container (speed controlled via CSS variable) */}
-        <div
-          className="flex w-max"
-          style={{ animation: `marquee ${speed}s linear infinite` }}
-        >
-          {/* ✅ Duplicate array to create seamless infinite loop */}
-          {ClientsLogo.concat(ClientsLogo).map((logo, idx) => (
-            <div
-              key={idx}
-              className="flex justify-center items-center px-8"
-            >
-              <Image
-                src={logo.src}
-                alt={logo.alt}
-                width={140}   // specify number in pixels
-                height={70}   // specify number in pixels
-                className="object-contain"
-              />
-            </div>
-          ))}
+          {/* Second Set of Logos (Duplicate for seamless loop) */}
+          <div className="flex items-center gap-4 md:gap-8 px-4 md:px-6 flex-shrink-0">
+            {ClientsLogo.map((logo, idx) => (
+              <div key={`logo-2-${idx}`} className="relative flex items-center justify-center">
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={140}
+                  height={70}
+                  className="h-7 md:h-10 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                />
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* ✅ Left & right fade gradients for smooth edge fade effect */}
-        <div className="absolute top-0 bottom-0 left-0 w-20 z-10 pointer-events-none bg-gradient-to-r from-white to-transparent"></div>
-        <div className="absolute top-0 bottom-0 right-0 w-20 z-10 pointer-events-none bg-gradient-to-l from-white to-transparent"></div>
+        {/* Responsive Fade Gradients at Edges */}
+        <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
 
       </div>
     </div>

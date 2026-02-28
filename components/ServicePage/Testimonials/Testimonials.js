@@ -49,7 +49,7 @@ const Testimonials = () => {
             <div className="relative">
               {/* Background Quote Mark SVG */}
               <Quote className="absolute -top-[80px] lg:-top-[140px] -left-12 lg:-left-24 w-[300px] h-[300px] lg:w-[450px] lg:h-[450px] text-[#7a4443] opacity-[0.15] pointer-events-none stroke-[1]" />
-              <h2 className="relative z-10 text-3xl md:text-[42px] font-bold text-white mb-4 lg:mb-12 leading-tight text-center lg:text-left">
+              <h2 className="font-heading relative z-10 text-3xl md:text-5xl font-bold text-white mb-4 lg:mb-12 leading-tight text-center lg:text-left">
                 What our clients <br /> are saying
               </h2>
             </div>

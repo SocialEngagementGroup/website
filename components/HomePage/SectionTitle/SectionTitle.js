@@ -11,7 +11,7 @@ const SectionTitle = ({ title, subtitle, subtitle2, description, id }) => {
       {title && (
         <h3
           id={id || undefined}
-          className={`inline-block relative after:content-[''] after:block after:w-full after:h-[5px] after:bg-[#975554] after:rounded-[14px] after:absolute after:bottom-[-10px] after:left-1/2 after:translate-x-[-50%] after:transition-all after:duration-300 md:after:left-0 md:after:translate-x-0 text-[#0A0A0A]`}
+          className={`font-heading inline-block text-[#975554] !font-extrabold !capitalize tracking-[0.2em] text-[13px] md:text-[15px] mb-6`}
         >
           {title}
         </h3>
@@ -20,7 +20,7 @@ const SectionTitle = ({ title, subtitle, subtitle2, description, id }) => {
       {/* ---------- Main Section Title (Bottom) ---------- */}
       {subtitle && (
         <h2
-          className={`w-full max-w-[500px] md:max-w-none md:w-[800px] mx-auto text-center text-gray-900 mt-8 leading-tight tracking-tight`}
+          className={`w-full max-w-[500px] md:max-w-none md:w-[800px] mx-auto text-center text-gray-900 leading-tight tracking-tight text-3xl md:text-5xl font-bold`}
         >
           {subtitle}
         </h2>
@@ -29,7 +29,7 @@ const SectionTitle = ({ title, subtitle, subtitle2, description, id }) => {
       {/* ---------- Second Heading (optional) ---------- */}
       {subtitle2 && (
         <h2
-          className={`mx-auto text-gray-900 mt-2 md:mt-8 leading-tight tracking-tight`}
+          className={`font-heading mx-auto text-gray-900 leading-tight tracking-tight text-3xl md:text-5xl font-bold`}
         >
           {subtitle2}
         </h2>
