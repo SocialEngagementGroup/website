@@ -6,19 +6,22 @@ const page = () => {
   return (
     <>
       {/* ---------- Hero Section Container ---------- */}
-      <div className="container-fluid mx-auto customPadding p-0 hero-section pt-16 pb-5 md:pb-15 md:pt-35 hero-section-bg">
-        
-        {/* ---------- Grid Layout: Hero Content + Hero Slider ---------- */}
-        <div className="grid grid-cols-1 md:grid-cols-[38%_62%]">
+      <div className="min-h-screen w-full flex items-center bg-black pt-24 md:pt-0 overflow-hidden">
+        <div className="w-full grid grid-cols-1 md:grid-cols-[42%_58%] items-center gap-12 md:gap-0">
           
           {/* ---------- Left Column: Hero Text Content ---------- */}
-          <div className="">
+          <div className="relative z-10 w-full pl-6 md:pl-12 lg:pl-20 xl:pl-32 pr-6 md:pr-0">
             <HeroContent />
           </div>
 
           {/* ---------- Right Column: Hero Image Slider ---------- */}
-          <div className="">
-            <HeroSlider />
+          <div className="w-full pr-0 overflow-hidden relative">
+            {/* Left side fade effect */}
+            <div className="absolute left-0 top-0 bottom-0 w-32 lg:w-48 bg-gradient-to-r from-black via-black/50 to-transparent z-20 pointer-events-none" />
+            
+            <div className="md:translate-x-4 lg:translate-x-8">
+              <HeroSlider />
+            </div>
           </div>
 
         </div>
