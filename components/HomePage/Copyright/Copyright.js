@@ -59,7 +59,7 @@ const Copyright = () => {
           {/* Brand Block */}
           <Link href="/" className="flex items-center gap-3 cursor-pointer">
             <Image
-              src="/SiteLogo/logo.svg"
+              src="/site-logo/logo.svg"
               alt="Social Engagement Group"
               width={40}
               height={40}

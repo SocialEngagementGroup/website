@@ -23,19 +23,19 @@ export const logoDesignData = {
     description: "Your logo is the first thing people notice. And the moment they decide whether to trust you or move on. When your <strong>Custom logo design</strong> works, every part of your marketing works harder. Your ads perform better. Your social posts earn more engagement. Referrals increase because customers can describe and recall you instantly. Because recognition builds trust and trust creates customers. That’s the power of investing in the right <strong>business logo design</strong>.",
     items: [
   {
-    img: "/services/creative/logodesign/logo-design.png",
+    img: "/services/creative/logo-design/logo-design.png",
     text: "You get <strong>forgotten</strong> within seconds due to poor logo design.",
   },
   {
-    img: "/services/creative/logodesign/Differentiation-in-the-market.png",
+    img: "/services/creative/logo-design/Differentiation-in-the-market.png",
     text: "Your <strong>logo looks</strong> generic and lacks differentiation in the market.",
   },
   {
-    img: "/services/creative/logodesign/Referrals-fall-flat.png",
+    img: "/services/creative/logo-design/Referrals-fall-flat.png",
     text: "<strong>Referrals</strong> fall flat because people can’t describe or recall your logo.",
   },
   {
-    img: "/services/creative/logodesign/You-appear-amateur.png",
+    img: "/services/creative/logo-design/You-appear-amateur.png",
     text: "<strong>You appear</strong> amateur, even if your business is professional.",
   },
 
@@ -77,7 +77,7 @@ heading2: "The Cost of Weak Branding",
       text: "<strong>Brand guidelines</strong> ensure consistent logo usage across all platforms.",
     },
     ],
-    img: "/services/creative/logodesign/creative-logo-design.png",
+    img: "/services/creative/logo-design/creative-logo-design.png",
   },
   FAQ: {
     heading: "FAQs",

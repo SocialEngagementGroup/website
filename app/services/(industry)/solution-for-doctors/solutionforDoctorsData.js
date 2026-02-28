@@ -28,19 +28,19 @@ export const solutionforDoctorsData = {
       "Patients now begin their healthcare journey online searching symptoms, comparing specialists, and reading reviews long before they book an appointment. If your practice isn’t visible in those moments, it’s effectively invisible. A strong digital presence shapes trust, reputation, and patient decisions before they ever walk through your door. Digital transformation ensures your expertise gets discovered, trusted, and ultimately chosen.",
     items: [
       {
-        img: "/services/industry/Solution-for-Doctors/Missed-patients-who-never-find-you-online.png",
+        img: "/services/industry/solution-for-doctors/Missed-patients-who-never-find-you-online.png",
         text: "Missed patients who never find you online.",
       },
       {
-        img: "/services/industry/Solution-for-Doctors/Negative-or-outdated-reviews-lowering-patient-confidence.png",
+        img: "/services/industry/solution-for-doctors/Negative-or-outdated-reviews-lowering-patient-confidence.png",
         text: "Negative or outdated reviews lowering patient confidence.",
       },
       {
-        img: "/services/industry/Solution-for-Doctors/Competitors-ranking-higher-in-local-search-results.png",
+        img: "/services/industry/solution-for-doctors/Competitors-ranking-higher-in-local-search-results.png",
         text: "Competitors ranking higher in local search results.",
       },
       {
-        img: "/services/industry/Solution-for-Doctors/Unstable-appointment-flow-and-low-patient-retention.png",
+        img: "/services/industry/solution-for-doctors/Unstable-appointment-flow-and-low-patient-retention.png",
         text: "Unstable appointment flow and low patient retention.",
       },
     ],
@@ -68,7 +68,7 @@ export const solutionforDoctorsData = {
       { text: "<strong>Reputation & Compliance Monitoring:</strong> Track online mentions, ensure accuracy across directories, and maintain full compliance with healthcare advertising rules." },
       { text: "<strong>Analytics & Growth Reporting:</strong> Transparent dashboards showing traffic, leads, appointment trends, and ROI to guide smarter clinical decisions." },
     ],
-    img: "/services/masterimagesslider/industry/Solution-for-Doctors.jpg",
+    img: "/services/master-image-slider/industry/Solution-for-Doctors.jpg",
   },
 
 

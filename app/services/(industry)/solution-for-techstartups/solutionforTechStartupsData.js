@@ -28,19 +28,19 @@ export const solutionforTechStartupsData = {
       "In the startup world, timing determines who breaks out and who gets buried, and while competitors scale visibility early, many founders are still validating traction. A strong digital growth system ensures your product doesn’t just launch, it lands. Early credibility fuels investor confidence, sharp positioning helps you stand out in a crowded market, and data-driven execution prevents wasted time and budget. Strategic growth systems help you reach the right audience, prove traction early, and scale sustainably.",
     items: [
       {
-        img: "/services/industry/Solution-for-Tech-Startups/Launching-without-consistent-lead-or-user-acquisition.png", // kept original
+        img: "/services/industry/solution-for-tech-startups/Launching-without-consistent-lead-or-user-acquisition.png", // kept original
         text: "Launching without consistent lead or user acquisition.",
       },
       {
-        img: "/services/industry/Solution-for-Tech-Startups/Struggling-to-convert-website-visitors-into-demos.png", // kept original
+        img: "/services/industry/solution-for-tech-startups/Struggling-to-convert-website-visitors-into-demos.png", // kept original
         text: "Struggling to convert website visitors into demos or signups.",
       },
       {
-        img: "/services/industry/Solution-for-Tech-Startups/Losing-mindshare-to-faster,-louder-competitors.png", // kept original
+        img: "/services/industry/solution-for-tech-startups/Losing-mindshare-to-faster,-louder-competitors.png", // kept original
         text: "Losing mindshare to faster, louder competitors.",
       },
       {
-        img: "/services/industry/Solution-for-Tech-Startups/Relying-only-on-paid-ads-without-building-organic-trust.png", // kept original
+        img: "/services/industry/solution-for-tech-startups/Relying-only-on-paid-ads-without-building-organic-trust.png", // kept original
         text: "Relying only on paid ads without building organic trust.",
       },
     ],
@@ -76,7 +76,7 @@ export const solutionforTechStartupsData = {
         text: "<strong>Analytics & Growth Reporting:</strong> Track the right metrics, uncover insight patterns, and make confident growth decisions.",
       },
     ],
-    img: "/services/masterimagesslider/industry/Solution-for-Tech-Startups.jpg", // kept original
+    img: "/services/master-image-slider/industry/Solution-for-Tech-Startups.jpg", // kept original
   },
 
   CaseStudy: {

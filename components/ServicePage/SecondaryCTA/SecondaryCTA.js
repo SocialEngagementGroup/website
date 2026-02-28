@@ -33,7 +33,7 @@ const SecondaryCTA = () => {
             <div className="absolute top-1/2 left-0 md:left-10 -translate-y-1/2 w-[30vw] h-[30vw] opacity-10 pointer-events-none select-none">
                 <div className="relative w-full h-full">
                     <Image
-                        src="/SiteLogo/logo.svg"
+                        src="/site-logo/logo.svg"
                         alt="Background Logo"
                         fill
                         className="object-contain brightness-0"
@@ -69,7 +69,7 @@ const SecondaryCTA = () => {
                         variants={revealVariants}
                         className="font-serif mb-8 leading-tight tracking-tight"
                     >
-                        Let's Build a System <br />
+                        Let&apos;s Build a System <br />
                         You Can <span className="italic">Rely On</span>
                     </motion.h4>
 

@@ -28,19 +28,19 @@ export const solutionforRestaurantsData = {
       "Diners now discover food online long before they taste it, comparing menus, reading reviews, and scrolling through photos on Google, Instagram, and Maps. If your restaurant isn’t visible in those moments, your competitors will be. A strong digital presence shapes trust, drives foot traffic, and builds loyalty before a guest ever walks in. With the right visibility, reviews, and local SEO, digital transformation ensures your restaurant gets discovered first, chosen quickly, and remembered often.",
     items: [
       {
-        img: "/services/industry/Solution-for-Restaurant/Diners-can’t-find-you-where-they-look-first.png", // kept original
+        img: "/services/industry/solution-for-restaurants/Diners-can’t-find-you-where-they-look-first.png", // kept original
         text: "Diners can’t find you where they look first.",
       },
       {
-        img: "/services/industry/Solution-for-Restaurant/Your-competitors-set-the-story,-not-you.png", // kept original
+        img: "/services/industry/solution-for-restaurants/Your-competitors-set-the-story,-not-you.png", // kept original
         text: "Your competitors set the story, not you.",
       },
       {
-        img: "/services/industry/Solution-for-Restaurant/Outdated-info-quietly-hurts-trust.png", // kept original
+        img: "/services/industry/solution-for-restaurants/Outdated-info-quietly-hurts-trust.png", // kept original
         text: "Outdated info quietly hurts trust.",
       },
       {
-        img: "/services/industry/Solution-for-Restaurant/Everyday-near-me-searches-pass-you-by.png", // kept original
+        img: "/services/industry/solution-for-restaurants/Everyday-near-me-searches-pass-you-by.png", // kept original
         text: "Everyday “near me” searches pass you by.",
       },
     ],
@@ -79,7 +79,7 @@ export const solutionforRestaurantsData = {
         text: "Influencer & UGC Campaigns: Partner with food creators to spark organic buzz and community-driven discovery.",
       },
     ],
-    img: "/services/masterimagesslider/industry/Solution-for-Restaurant.jpg", // kept original
+    img: "/services/master-image-slider/industry/Solution-for-Restaurant.jpg", // kept original
   },
 
   CaseStudy: {

@@ -5,32 +5,32 @@ export const projects = [
     sliderData: [
       {
         name: "Branding",
-        img: "/services/masterimagesslider/creative/Branding.png",
+        img: "/services/master-image-slider/creative/Branding.png",
         link: "/services/branding",
       },
       {
         name: "Logo Design",
-        img: "/services/masterimagesslider/creative/Logo-Design.png",
+        img: "/services/master-image-slider/creative/Logo-Design.png",
         link: "/services/logo-design",
       },
       {
         name: "Content Creation",
-        img: "/services/masterimagesslider/creative/Content-Creation.png",
+        img: "/services/master-image-slider/creative/Content-Creation.png",
         link: "/services/content-creation",
       },
       {
         name: "Social Media Content",
-        img: "/services/masterimagesslider/creative/Social-Media-Content.png",
+        img: "/services/master-image-slider/creative/Social-Media-Content.png",
         link: "/services/social-media-content",
       },
       {
         name: "3D Animation & Rendering",
-        img: "/services/masterimagesslider/creative/3D-Animation-&-Rendering.png",
+        img: "/services/master-image-slider/creative/3D-Animation-&-Rendering.png",
         link: "/services/3D-animation-and-rendering",
       },
       {
         name: "Videography & Photography",
-        img: "/services/masterimagesslider/creative/Videography-&-Photography.png",
+        img: "/services/master-image-slider/creative/Videography-&-Photography.png",
         link: "/services/videography-and-photography",
       },
     ],
@@ -42,42 +42,42 @@ export const projects = [
     sliderData: [
       {
         name: "SEO",
-        img: "/services/masterimagesslider/digital/SEO.png",
+        img: "/services/master-image-slider/digital/SEO.png",
         link: "/services/seo",
       },
       {
         name: "PPC Campaigns",
-        img: "/services/masterimagesslider/digital/PPC-Campaigns.png",
+        img: "/services/master-image-slider/digital/PPC-Campaigns.png",
         link: "/services/ppc-campaigns",
       },
       {
         name: "Retargeting & Remarketing",
-        img: "/services/masterimagesslider/digital/Retargeting-&-Remarketing.png",
+        img: "/services/master-image-slider/digital/Retargeting-&-Remarketing.png",
         link: "/services/retargeting-and-remarketing",
       },
       {
         name: "Google Business Profile Management",
-        img: "/services/masterimagesslider/digital/Google-Business-Profile-Management.png",
+        img: "/services/master-image-slider/digital/Google-Business-Profile-Management.png",
         link: "/services/google-business-profile-management",
       },
       {
         name: "Review & Reputation Management",
-        img: "/services/masterimagesslider/digital/Review-and-Reputation-Management.png",
+        img: "/services/master-image-slider/digital/Review-and-Reputation-Management.png",
         link: "/services/review-and-reputation-management",
       },
       {
         name: "Google Location Services Ads",
-        img: "/services/masterimagesslider/digital/Google-Location-Services-Ads.png",
+        img: "/services/master-image-slider/digital/Google-Location-Services-Ads.png",
         link: "/services/google-location-services-ads",
       },
       {
         name: "Social Media Marketing",
-        img: "/services/masterimagesslider/digital/Social-Media-Marketing.png",
+        img: "/services/master-image-slider/digital/Social-Media-Marketing.png",
         link: "/services/social-media-marketing",
       },
       {
         name: "Website Development",
-        img: "/services/masterimagesslider/digital/Website-Development.png",
+        img: "/services/master-image-slider/digital/Website-Development.png",
         link: "/services/website-development",
       },
     ],
@@ -89,22 +89,22 @@ export const projects = [
     sliderData: [
       {
         name: "Solution for Lawyers",
-        img: "/services/masterimagesslider/industry/Solution-for-Lawyers.png",
+        img: "/services/master-image-slider/industry/Solution-for-Lawyers.png",
         link: "/services/solution-for-lawyers",
       },
       {
         name: "Solution for Doctors",
-        img: "/services/masterimagesslider/industry/Solution-for-Doctors.png",
+        img: "/services/master-image-slider/industry/Solution-for-Doctors.png",
         link: "/services/solution-for-doctors",
       },
       {
         name: "Solution for Restaurants",
-        img: "/services/masterimagesslider/industry/Solution-for-Restaurant.png",
+        img: "/services/master-image-slider/industry/Solution-for-Restaurant.png",
         link: "/services/solution-for-restaurants",
       },
       {
         name: "Solution for Tech Startups",
-        img: "/services/masterimagesslider/industry/Solution-for-Tech-Startups.png",
+        img: "/services/master-image-slider/industry/Solution-for-Tech-Startups.png",
         link: "/services/solution-for-techstartups",
       },
     ],
@@ -115,22 +115,22 @@ export const projects = [
     sliderData: [
       {
         name: "Marketing by SEG",
-        img: "/services/masterimagesslider/industry/Solution-for-Lawyers.png",
+        img: "/services/master-image-slider/industry/Solution-for-Lawyers.png",
         link: "https://digital.socialengagementgroup.com/",
       },
       {
         name: "Marketing for Law Firms",
-        img: "/services/masterimagesslider/industry/Solution-for-Doctors.png",
+        img: "/services/master-image-slider/industry/Solution-for-Doctors.png",
         link: "https://digital.socialengagementgroup.com/marketing-for-law-firm",
       },
       {
         name: "Marketing for Doctors",
-        img: "/services/masterimagesslider/industry/Solution-for-Restaurant.png",
+        img: "/services/master-image-slider/industry/Solution-for-Restaurant.png",
         link: "https://digital.socialengagementgroup.com/marketing-for-doctors",
       },
       {
         name: "Marketing for Restaurants",
-        img: "/services/masterimagesslider/industry/Solution-for-Tech-Startups.png",
+        img: "/services/master-image-slider/industry/Solution-for-Tech-Startups.png",
         link: "https://digital.socialengagementgroup.com/marketing-for-restaurants",
       },
     ],
@@ -141,18 +141,18 @@ export const projects = [
 
 
 export const ClientsLogo = [
-  { src: "/ClientsLogo/Infuse-Black.png", alt: "Infuse" },
-  { src: "/ClientsLogo/Aref-Black.png", alt: "Aref" },
-  { src: "/ClientsLogo/FJH-Black.png", alt: "FJH" },
-  { src: "/ClientsLogo/MFC-Black.png", alt: "MFC" },
-  { src: "/ClientsLogo/SMF-Black.png", alt: "SMF" },
-  { src: "/ClientsLogo/NIPA-Black.png", alt: "NIPA" },
-  { src: "/ClientsLogo/Gravy-Stack-Black.png", alt: "Gravy Stack" },
-  { src: "/ClientsLogo/Rastegar-Black.png", alt: "Rastegar" },
-  { src: "/ClientsLogo/GT-Black.png", alt: "GT" },
-  { src: "/ClientsLogo/Sporcle-Black.png", alt: "Sporcle" },
-  { src: "/ClientsLogo/SC-Black.png", alt: "SC" },
-  { src: "/ClientsLogo/Capiton-Black.png", alt: "Capiton" },
+  { src: "/client-logos/Infuse-Black.png", alt: "Infuse" },
+  { src: "/client-logos/Aref-Black.png", alt: "Aref" },
+  { src: "/client-logos/FJH-Black.png", alt: "FJH" },
+  { src: "/client-logos/MFC-Black.png", alt: "MFC" },
+  { src: "/client-logos/SMF-Black.png", alt: "SMF" },
+  { src: "/client-logos/NIPA-Black.png", alt: "NIPA" },
+  { src: "/client-logos/Gravy-Stack-Black.png", alt: "Gravy Stack" },
+  { src: "/client-logos/Rastegar-Black.png", alt: "Rastegar" },
+  { src: "/client-logos/GT-Black.png", alt: "GT" },
+  { src: "/client-logos/Sporcle-Black.png", alt: "Sporcle" },
+  { src: "/client-logos/SC-Black.png", alt: "SC" },
+  { src: "/client-logos/Capiton-Black.png", alt: "Capiton" },
 ];
 
 

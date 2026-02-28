@@ -79,7 +79,7 @@ export const brandingData = {
         text: "Detailed <strong>brand guidelines</strong> to ensure perfect consistency everywhere.",
       },
     ],
-    img: "/services/BoxImage/brandstrategy.png",
+    img: "/services/box-images/brandstrategy.png",
   },
   FAQ: {
     heading: "FAQs",
