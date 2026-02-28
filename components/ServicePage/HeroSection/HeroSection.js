@@ -64,6 +64,16 @@ const HeroSection = ({
         </div>
 
       </div>
+
+      {/* Scroll Indicator (Visible on Mobile only) */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 pointer-events-none md:hidden z-20">
+        <span className="font-sans text-[10px] tracking-[0.3em] text-white/70 uppercase">
+          Explore
+        </span>
+        <div className="w-5 h-8 border-2 border-white/40 rounded-full flex justify-center p-1.5">
+          <div className="w-1 h-1.5 bg-white/70 rounded-full animate-scroll-dot" />
+        </div>
+      </div>
     </section>
   );
 };

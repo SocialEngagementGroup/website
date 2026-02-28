@@ -109,6 +109,32 @@ export const projects = [
       },
     ],
   },
+  {
+    title: "Marketing",
+    color: "#1b1b1b",
+    sliderData: [
+      {
+        name: "Marketing by SEG",
+        img: "/services/masterimagesslider/industry/Solution-for-Lawyers.png",
+        link: "https://digital.socialengagementgroup.com/",
+      },
+      {
+        name: "Marketing for Law Firms",
+        img: "/services/masterimagesslider/industry/Solution-for-Doctors.png",
+        link: "https://digital.socialengagementgroup.com/marketing-for-law-firm",
+      },
+      {
+        name: "Marketing for Doctors",
+        img: "/services/masterimagesslider/industry/Solution-for-Restaurant.png",
+        link: "https://digital.socialengagementgroup.com/marketing-for-doctors",
+      },
+      {
+        name: "Marketing for Restaurants",
+        img: "/services/masterimagesslider/industry/Solution-for-Tech-Startups.png",
+        link: "https://digital.socialengagementgroup.com/marketing-for-restaurants",
+      },
+    ],
+  },
 ];
 
 

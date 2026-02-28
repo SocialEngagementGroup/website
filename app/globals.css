@@ -32,6 +32,21 @@ select:focus {
   --font-body: var(--font-outfit), "Outfit", sans-serif;
   --font-heading: var(--font-outfit), "Outfit", sans-serif;
   --font-serif: var(--font-playfair), "Playfair Display", serif;
+
+  /* Custom Animations */
+  --animate-scroll-dot: scrollDot 2s ease-in-out infinite;
+
+  @keyframes scrollDot {
+    0%,
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(10px);
+      opacity: 0.5;
+    }
+  }
 }
 .slick-prev::before {
   display: none !important;
@@ -64,7 +79,8 @@ h6 {
   font-weight: 700;
 }
 
-p, .p1 {
+p,
+.p1 {
   font-size: 24px;
   line-height: 1.6;
 }

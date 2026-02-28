@@ -4,6 +4,7 @@ import Script from "next/script";
 import Navbar from "@/components/Navbar/Navbar";
 import NavBarMobile from "@/components/Navbar/NavBarMobile";
 import Footer from "@/components/Footer/Footer";
+import ScrollProgress from "@/components/Common/ScrollProgress";
 
 // (optional) if you also want Vercel Analytics:
 // import { Analytics } from "@vercel/analytics/react";
@@ -26,7 +27,7 @@ export const metadata = {
     siteName: "Social Engagement Group",
     images: [
       {
-        url: "/SiteLogo/seg.png",
+        url: "/SiteLogo/logo.svg",
         width: 800,
         height: 600,
         alt: "SEG Logo",
@@ -39,7 +40,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Social Engagement Group (SEG)",
     description: "Where Human Creativity Meets AI-Powered Digital Growth.",
-    images: ["/SiteLogo/seg.png"],
+    images: ["/SiteLogo/logo.svg"],
   },
   icons: {
     icon: "/favicon.png",
@@ -88,6 +89,7 @@ export default function SiteLayout({ children }) {
           `}
         </Script>
 
+        <ScrollProgress />
         <Navbar />
         <NavBarMobile />
         {children}

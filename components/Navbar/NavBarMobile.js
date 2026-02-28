@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { projects } from "@/data";
+import { Phone } from "lucide-react";
 
 export default function NavBarMobile() {
   const [isSticky, setIsSticky] = useState(false);
@@ -38,10 +39,10 @@ export default function NavBarMobile() {
       >
         <Link href="/" className="relative w-[50px] h-[35px]">
           <Image
-            src="/SiteLogo/seg.png"
+            src="/SiteLogo/logo.svg"
             alt="Site Logo"
             fill
-            className="object-contain"
+            className="object-contain brightness-0 invert"
           />
         </Link>
 
@@ -50,8 +51,9 @@ export default function NavBarMobile() {
             href="https://calendly.com/itseg/segmeet"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#975554] text-white px-5 py-2 rounded-full font-sans font-bold text-[15px] transition-all active:scale-95"
+            className="group flex items-center gap-2 bg-[#975554] text-white px-5 py-2 rounded-full font-sans font-bold text-[15px] transition-all active:scale-95"
           >
+            <Phone className="w-4 h-4" />
             Book a Call
           </a>
 

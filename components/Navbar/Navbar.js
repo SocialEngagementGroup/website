@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { projects } from "@/data";
+import { Phone } from "lucide-react";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -52,10 +53,10 @@ export default function Navbar() {
           <Link href="/" className="flex items-center space-x-3 cursor-pointer">
             <div className="relative w-[45px] h-[42px] md:w-[60px] md:h-[42px]">
               <Image
-                src="/SiteLogo/seg.png"
+                src="/SiteLogo/logo.svg"
                 alt="Site Logo"
                 fill
-                className="object-contain"
+                className="object-contain brightness-0 invert"
               />
             </div>
           </Link>
@@ -68,19 +69,8 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className="group flex items-center gap-2 bg-[#975554] text-white px-6 md:px-8 py-2 md:py-3 rounded-full font-sans font-bold text-[16px] md:text-[18px] transition-all hover:scale-105 active:scale-95"
             >
+              <Phone className="w-4 h-4 md:w-5 md:h-5" />
               <span>Book a Call</span>
-              <svg 
-                className="w-4 h-4 md:w-5 md:h-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                viewBox="0 0 24 24" 
-                fill="none" 
-                stroke="currentColor" 
-                strokeWidth="2.5" 
-                strokeLinecap="round" 
-                strokeLinejoin="round"
-              >
-                <line x1="7" y1="17" x2="17" y2="7"></line>
-                <polyline points="7 7 17 7 17 17"></polyline>
-              </svg>
             </a>
 
             <button
