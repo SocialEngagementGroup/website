@@ -12,8 +12,8 @@ const BrandStrategy = ({ heading, items, img }) => {
         <div
           className="
             grid grid-cols-1
-            md:grid-cols-[50%_50%]
-            [@media(min-width:1300px)]:grid-cols-[50%_50%]
+            md:grid-cols-[40%_60%]
+            [@media(min-width:1300px)]:grid-cols-[40%_60%]
             gap-4 md:gap-10
             items-center justify-center text-start
           "
@@ -33,9 +33,7 @@ const BrandStrategy = ({ heading, items, img }) => {
 
           {/* ---------- Right: Heading + List ---------- */}
           <div
-            className={
-              "flex justify-center md:justify-start mr-0 mt-6 md:mt-0"
-            }
+            className={"flex justify-center md:justify-start mr-0 mt-6 md:mt-0"}
           >
             <div className="max-w-[900px] max-md:!mt-0 max-md:!w-full text-black px-5 md:pl-10 lg:pl-16 md:pr-0">
               {/* Heading */}
