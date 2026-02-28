@@ -37,16 +37,16 @@ const GetInTouch = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
           
           {/* LEFT COLUMN: HEADING */}
-          <div className="space-y-6">
+          <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6">
             <h2 className="text-gray-900 !text-3xl sm:!text-4xl lg:!text-5xl font-bold leading-tight">
               Ways to Reach Us
             </h2>
-            <p className="text-gray-600 !text-lg md:!text-xl max-w-lg leading-relaxed">
+            <p className="text-gray-600 !text-lg md:!text-xl max-w-lg leading-relaxed mx-auto lg:ml-0">
               Have a question or ready to start your next big project? Reach out to us through any of these channels. Our team is here to help you grow with purpose.
             </p>
 
             {/* SOCIAL LINKS */}
-            <div className="flex gap-4 pt-4">
+            <div className="flex justify-center lg:justify-start gap-4 pt-4">
               <Link
                 href="https://www.instagram.com/socialengagementgroup"
                 target="_blank"

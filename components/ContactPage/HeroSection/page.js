@@ -21,7 +21,7 @@ const ContactUsHero = () => {
       <div className="container mx-auto px-4 sm:px-6 max-w-4xl relative z-10 text-center">
         <div>
           {/* Headline */}
-          <h1 className="!text-3xl sm:!text-4xl md:!text-5xl lg:!text-6xl font-bold !leading-[1.1] tracking-tight mb-5 sm:mb-6">
+          <h1 className="!text-[38px] sm:!text-4xl md:!text-5xl lg:!text-6xl font-bold !leading-[1.1] tracking-tight mb-5 sm:mb-6">
             Let&apos;s Build Something That <span className="text-[#e3d3cc]">Moves Your Brand</span> Forward
           </h1>
 

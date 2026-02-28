@@ -18,7 +18,7 @@ const TrustBar = ({ heading, description }) => {
   ];
 
   return (
-    <section className="bg-[#975554] py-16 md:py-24 px-6 overflow-hidden">
+    <section className="bg-[#975554] py-16 md:py-24 overflow-hidden relative">
       <style>
         {`
           @keyframes marquee {
@@ -35,7 +35,9 @@ const TrustBar = ({ heading, description }) => {
           }
         `}
       </style>
-      <div className="container-fluid w-[90%] md:w-[78%] mx-auto text-center text-white relative z-10">
+      
+      {/* Text Content - Constrained */}
+      <div className="container-fluid w-[90%] md:w-[78%] mx-auto text-center text-white relative z-10 px-6">
         <h2 className="text-white text-center mb-6 leading-tight">
           {heading || "Top Clients & Partners"}
         </h2>
@@ -46,45 +48,45 @@ const TrustBar = ({ heading, description }) => {
 
         {/* Divider */}
         <div className="w-16 h-[2px] bg-white/40 mx-auto mb-12"></div>
+      </div>
 
-        {/* Logos Container with Marquee */}
-        <div className="relative overflow-hidden mt-16">
-          <div className="animate-marquee flex items-center">
-            {/* First Set of Logos */}
-            <div className="flex items-center gap-12 md:gap-20 px-8 md:px-12 flex-shrink-0">
-              {logos.map((logo, index) => (
-                <div key={`logo-1-${index}`} className="relative flex items-center justify-center">
-                  <Image
-                    src={`/assets/images/client-logos/${logo}`}
-                    alt="Client Logo"
-                    width={120}
-                    height={60}
-                    className="h-8 md:h-12 w-auto object-contain brightness-0 invert opacity-90"
-                  />
-                </div>
-              ))}
-            </div>
-
-            {/* Second Set of Logos (Duplicate for infinite scroll) */}
-            <div className="flex items-center gap-12 md:gap-20 px-8 md:px-12 flex-shrink-0">
-              {logos.map((logo, index) => (
-                <div key={`logo-2-${index}`} className="relative flex items-center justify-center">
-                  <Image
-                    src={`/assets/images/client-logos/${logo}`}
-                    alt="Client Logo"
-                    width={120}
-                    height={60}
-                    className="h-8 md:h-12 w-auto object-contain brightness-0 invert opacity-90"
-                  />
-                </div>
-              ))}
-            </div>
+      {/* Logos Container with Marquee - Full Width on Mobile, Constrained on Web */}
+      <div className="relative overflow-hidden mt-8 w-full md:max-w-[1200px] mx-auto">
+        <div className="animate-marquee flex items-center">
+          {/* First Set of Logos */}
+          <div className="flex items-center gap-8 md:gap-12 px-4 md:px-6 flex-shrink-0">
+            {logos.map((logo, index) => (
+              <div key={`logo-1-${index}`} className="relative flex items-center justify-center">
+                <Image
+                  src={`/assets/images/client-logos/${logo}`}
+                  alt="Client Logo"
+                  width={140}
+                  height={70}
+                  className="h-7 md:h-10 w-auto object-contain brightness-0 invert opacity-80"
+                />
+              </div>
+            ))}
           </div>
-          
-          {/* Fade Gradients */}
-          <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#975554] to-transparent z-10"></div>
-          <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#975554] to-transparent z-10"></div>
+
+          {/* Second Set of Logos (Duplicate) */}
+          <div className="flex items-center gap-8 md:gap-12 px-4 md:px-6 flex-shrink-0">
+            {logos.map((logo, index) => (
+              <div key={`logo-2-${index}`} className="relative flex items-center justify-center">
+                <Image
+                  src={`/assets/images/client-logos/${logo}`}
+                  alt="Client Logo"
+                  width={140}
+                  height={70}
+                  className="h-7 md:h-10 w-auto object-contain brightness-0 invert opacity-80"
+                />
+              </div>
+            ))}
+          </div>
         </div>
+        
+        {/* Responsive Fade Gradients at Edges */}
+        <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-[#975554] to-transparent z-10"></div>
+        <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-[#975554] to-transparent z-10"></div>
       </div>
     </section>
   );
