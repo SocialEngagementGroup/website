@@ -7,16 +7,15 @@ const BoxTitle = () => {
     <div className="text-center lg:text-left mb-8 lg:mb-12">
       
       {/* Font matching the Marketing screenshot: Serif, tracking-tight */}
-      {/* Font matching the Marketing screenshot: Serif, tracking-tight */}
-      <h4 className="!font-serif !font-medium !leading-[1.1] !tracking-tight">
-        Let’s create the <br />
-        next chapter of <br />
+      <h4 className="!font-serif !font-medium !leading-[1.2] !tracking-tight text-3xl md:text-5xl lg:text-6xl">
+        Let’s create the <br className="hidden md:block" />
+        next chapter of <br className="hidden md:block" />
         Your <span className="italic">Story</span>
       </h4>
 
-      <div className="flex justify-center lg:justify-start pt-5">
+      <div className="flex justify-center lg:justify-start pt-4 md:pt-6">
         {/* Border-l styling and grey text matching the screenshot */}
-        <p className="p3 leading-[1.6] max-w-md font-light border-l-[2px] border-[#8e4545] pl-5 md:pl-6">
+        <p className="p3 leading-[1.6] max-w-md font-light border-l-[2px] border-[#8e4545] pl-4 md:pl-6 text-sm md:text-base text-gray-400">
           Every story deserves to be seen, heard, and remembered. Let’s bring yours to life with clarity and purpose.
         </p>
       </div>

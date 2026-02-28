@@ -6,7 +6,7 @@ import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 const MasterServicesPage = () => {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <HeroSection />
       <div className=""></div>
 
@@ -45,7 +45,7 @@ const MasterServicesPage = () => {
           </section>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
