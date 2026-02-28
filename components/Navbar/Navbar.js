@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { projects } from "@/data";
+import { projects } from "@/data/projectsData";
 import { Phone } from "lucide-react";
 
 export default function Navbar() {

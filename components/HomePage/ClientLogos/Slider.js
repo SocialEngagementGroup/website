@@ -1,5 +1,5 @@
 "use client";
-import { ClientsLogo } from "../../../data";
+import { ClientsLogo } from "../../../data/clientsData";
 import Image from "next/image";
 
 const LogoMarquee = ({ speed = 100 }) => {

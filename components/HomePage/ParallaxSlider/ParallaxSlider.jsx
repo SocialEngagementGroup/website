@@ -2,7 +2,7 @@
 
 import { useRef, useState, useEffect } from 'react';
 import Card from './Card'; // Individual parallax card component
-import { projects } from '../../../data'; // Array of project data
+import { projects } from '../../../data/projectsData'; // Array of project data
 
 export default function ParallaxSlider() {
   const container = useRef(null);

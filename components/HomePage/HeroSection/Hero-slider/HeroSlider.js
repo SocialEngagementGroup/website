@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
-import { images } from "../../../../data"; // Array of image objects
+import { images } from "../../../../data/imagesData"; // Array of image objects
 
 // Tiny 1×1 transparent WebP used as blur placeholder on priority images
 // This avoids a blank flash while the real image loads above the fold
