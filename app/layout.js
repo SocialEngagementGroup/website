@@ -65,10 +65,13 @@ const playfair = Playfair_Display({
   weight: ["400", "500", "600", "700", "800", "900"],
 });
 
+import HardLoader from "@/components/Common/HardLoader";
+
 export default function SiteLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.variable} ${outfit.variable} ${outfit.className} ${playfair.variable} antialiased`} suppressHydrationWarning>
+        <HardLoader />
         {/* Google Tag Manager */}
         <noscript>
           <iframe
