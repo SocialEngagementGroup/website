@@ -108,7 +108,7 @@ const AutoSlider = ({ slides = [] }) => {
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.55)] to-[rgba(0,0,0,0.05)] pointer-events-none z-[1]" />
-                  <h4 className="absolute left-[12px] bottom-[12px] m-0 text-white text-[16px] md:text-[20px] font-bold drop-shadow-[0_6px_18px_rgba(0,0,0,0.55)] z-[2] capitalize">{slide.title}</h4>
+                  <h4 className="absolute left-[12px] bottom-[12px] m-0 text-white text-[16px] md:text-[18px] font-bold drop-shadow-[0_6px_18px_rgba(0,0,0,0.55)] z-[2] capitalize">{slide.title}</h4>
                 </div>
               </Link>
             </SwiperSlide>
