@@ -1,6 +1,6 @@
 import HeroSection from "@/components/ServicePage/HeroSection/HeroSection";
 import IntroSection from "@/components/ServicePage/IntroSection/IntroSection";
-import { VisualMediaData } from "./VisualMediaData";
+import { videographyPhotographyData } from "./videographyPhotographyData";
 import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 import CostofSection from "@/components/ServicePage/CostofSection/CostofSection";
 import ProfessionalBranding from "@/components/ServicePage/ProfessionalBranding/ProfessionalBranding";
@@ -20,22 +20,22 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <HeroSection {...VisualMediaData.hero} />
-      <IntroSection {...VisualMediaData.intro} />
-      <TrustBar {...VisualMediaData.trustBar} />
+      <HeroSection {...videographyPhotographyData.hero} />
+      <IntroSection {...videographyPhotographyData.intro} />
+      <TrustBar {...videographyPhotographyData.trustBar} />
       <CostofSection
-        heading1={VisualMediaData.Costof.heading1}
-        heading2={VisualMediaData.Costof.heading2}
-        description={VisualMediaData.Costof.description}
-        items={VisualMediaData.Costof.items}
+        heading1={videographyPhotographyData.Costof.heading1}
+        heading2={videographyPhotographyData.Costof.heading2}
+        description={videographyPhotographyData.Costof.description}
+        items={videographyPhotographyData.Costof.items}
       />
-      <ProfessionalBranding {...VisualMediaData.ProfessionalLogoDesign} />
+      <ProfessionalBranding {...videographyPhotographyData.ProfessionalLogoDesign} />
       <SecondaryCTA />
-      <BrandingStrategy {...VisualMediaData.BrandStrategy} />
+      <BrandingStrategy {...videographyPhotographyData.BrandStrategy} />
       <Testimonials />
       <FAQ
-        items={VisualMediaData.FAQ.items}
-        heading={VisualMediaData.FAQ.heading}
+        items={videographyPhotographyData.FAQ.items}
+        heading={videographyPhotographyData.FAQ.heading}
       />
     </>
   );

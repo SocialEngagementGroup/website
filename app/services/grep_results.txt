@@ -1,0 +1,32 @@
+./(industry)/solution-for-techstartups/page.js:      <HeroSection {...solutionforTechStartupsData.hero} />
+./(industry)/solution-for-techstartups/page.js:      <IntroSection {...solutionforTechStartupsData.intro} />
+./(industry)/solution-for-techstartups/page.js:      <TrustBar {...solutionforTechStartupsData.trustBar} />
+./(industry)/solution-for-techstartups/page.js:        heading1={solutionforTechStartupsData.Costof.heading1}
+./(industry)/solution-for-techstartups/page.js:        heading2={solutionforTechStartupsData.Costof.heading2}
+./(industry)/solution-for-techstartups/page.js:        description={solutionforTechStartupsData.Costof.description}
+./(industry)/solution-for-techstartups/page.js:        items={solutionforTechStartupsData.Costof.items}
+./(industry)/solution-for-techstartups/page.js:      <ProfessionalBranding {...solutionforTechStartupsData.ProfessionalSEO} />
+./(industry)/solution-for-techstartups/page.js:      <BrandingStrategy {...solutionforTechStartupsData.BrandStrategy} />
+./(industry)/solution-for-techstartups/page.js:        items={solutionforTechStartupsData.FAQ.items}
+./(industry)/solution-for-techstartups/page.js:        heading={solutionforTechStartupsData.FAQ.heading}
+./(industry)/solution-for-restaurants/page.js:      <HeroSection {...solutionforRestaurantsData.hero} />
+./(industry)/solution-for-restaurants/page.js:      <IntroSection {...solutionforRestaurantsData.intro} />
+./(industry)/solution-for-restaurants/page.js:      <TrustBar {...solutionforRestaurantsData.trustBar} />
+./(industry)/solution-for-restaurants/page.js:        heading1={solutionforRestaurantsData.Costof.heading1}
+./(industry)/solution-for-restaurants/page.js:        heading2={solutionforRestaurantsData.Costof.heading2}
+./(industry)/solution-for-restaurants/page.js:        description={solutionforRestaurantsData.Costof.description}
+./(industry)/solution-for-restaurants/page.js:        items={solutionforRestaurantsData.Costof.items}
+./(industry)/solution-for-restaurants/page.js:      <ProfessionalBranding {...solutionforRestaurantsData.ProfessionalSEO} />
+./(industry)/solution-for-restaurants/page.js:      <BrandingStrategy {...solutionforRestaurantsData.BrandStrategy} />
+./(industry)/solution-for-restaurants/page.js:        items={solutionforRestaurantsData.FAQ.items}
+./(industry)/solution-for-restaurants/page.js:        heading={solutionforRestaurantsData.FAQ.heading}
+./(industry)/solution-for-doctors/page.js:      <HeroSection {...solutionforDoctorsData.hero} />
+./(industry)/solution-for-doctors/page.js:      <IntroSection {...solutionforDoctorsData.intro} />
+./(industry)/solution-for-doctors/page.js:      <TrustBar {...solutionforDoctorsData.trustBar} />
+./(industry)/solution-for-doctors/page.js:        heading1={solutionforDoctorsData.Costof.heading1}
+./(industry)/solution-for-doctors/page.js:        heading2={solutionforDoctorsData.Costof.heading2}
+./(industry)/solution-for-doctors/page.js:        description={solutionforDoctorsData.Costof.description}
+./(industry)/solution-for-doctors/page.js:        items={solutionforDoctorsData.Costof.items}
+./(industry)/solution-for-doctors/page.js:      <ProfessionalBranding {...solutionforDoctorsData.ProfessionalSEO} />
+./(industry)/solution-for-doctors/page.js:      <BrandingStrategy {...solutionforDoctorsData.BrandStrategy} customClass="solutionForDoctors"/>
+./(industry)/solution-for-doctors/page.js:      <FAQ items={solutionforDoctorsData.FAQ.items} heading={solutionforDoctorsData.FAQ.heading} />

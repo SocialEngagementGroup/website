@@ -8,7 +8,7 @@ import FAQ from "@/components/ServicePage/FAQ/FAQ";
 import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 // update url
 
-import { ReviewReputationData } from "./ReviewReputationData";
+import { reviewReputationManagementData } from "./reviewReputationManagementData";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 export const metadata = {
@@ -23,22 +23,22 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <HeroSection {...ReviewReputationData.hero} />
-      <IntroSection {...ReviewReputationData.intro} />
-      <TrustBar {...ReviewReputationData.trustBar} />
+      <HeroSection {...reviewReputationManagementData.hero} />
+      <IntroSection {...reviewReputationManagementData.intro} />
+      <TrustBar {...reviewReputationManagementData.trustBar} />
       <CostofSection
-        heading1={ReviewReputationData.Costof.heading1}
-        heading2={ReviewReputationData.Costof.heading2}
-        description={ReviewReputationData.Costof.description}
-        items={ReviewReputationData.Costof.items}
+        heading1={reviewReputationManagementData.Costof.heading1}
+        heading2={reviewReputationManagementData.Costof.heading2}
+        description={reviewReputationManagementData.Costof.description}
+        items={reviewReputationManagementData.Costof.items}
       />
-      <ProfessionalBranding {...ReviewReputationData.ProfessionalSEO} />
+      <ProfessionalBranding {...reviewReputationManagementData.ProfessionalSEO} />
       <SecondaryCTA />
-      <BrandingStrategy {...ReviewReputationData.BrandStrategy} />
+      <BrandingStrategy {...reviewReputationManagementData.BrandStrategy} />
       <Testimonials />
       <FAQ
-        items={ReviewReputationData.FAQ.items}
-        heading={ReviewReputationData.FAQ.heading}
+        items={reviewReputationManagementData.FAQ.items}
+        heading={reviewReputationManagementData.FAQ.heading}
       />
     </>
   );

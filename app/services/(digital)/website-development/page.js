@@ -1,7 +1,7 @@
 import HeroSection from "@/components/ServicePage/HeroSection/HeroSection";
 import IntroSection from "@/components/ServicePage/IntroSection/IntroSection";
 
-import { webdevelopmentData } from "./webdevelopmentData";
+import { websiteDevelopmentData } from "./websiteDevelopmentData";
 
 import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 import CostofSection from "@/components/ServicePage/CostofSection/CostofSection";
@@ -24,20 +24,20 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <HeroSection {...webdevelopmentData.hero} />
-      <IntroSection {...webdevelopmentData.intro} />
-      <TrustBar {...webdevelopmentData.trustBar} />
+      <HeroSection {...websiteDevelopmentData.hero} />
+      <IntroSection {...websiteDevelopmentData.intro} />
+      <TrustBar {...websiteDevelopmentData.trustBar} />
       <CostofSection
-        heading1={webdevelopmentData.Costof.heading1}
-        heading2={webdevelopmentData.Costof.heading2}
-        description={webdevelopmentData.Costof.description}
-        items={webdevelopmentData.Costof.items}
+        heading1={websiteDevelopmentData.Costof.heading1}
+        heading2={websiteDevelopmentData.Costof.heading2}
+        description={websiteDevelopmentData.Costof.description}
+        items={websiteDevelopmentData.Costof.items}
       />
-      <ProfessionalBranding {...webdevelopmentData.ProfessionalSEO} />
+      <ProfessionalBranding {...websiteDevelopmentData.ProfessionalSEO} />
       <SecondaryCTA />
-      <BrandingStrategy {...webdevelopmentData.BrandStrategy} />
+      <BrandingStrategy {...websiteDevelopmentData.BrandStrategy} />
       <Testimonials />
-      <FAQ items={webdevelopmentData.FAQ.items} heading={webdevelopmentData.FAQ.heading} />
+      <FAQ items={websiteDevelopmentData.FAQ.items} heading={websiteDevelopmentData.FAQ.heading} />
     </>
   );
 }

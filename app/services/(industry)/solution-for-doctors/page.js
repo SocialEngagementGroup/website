@@ -1,6 +1,6 @@
 import HeroSection from "@/components/ServicePage/HeroSection/HeroSection";
 import IntroSection from "@/components/ServicePage/IntroSection/IntroSection";
-import { solutionforDoctorsData } from "./solutionforDoctorsData";
+import { solutionForDoctorsData } from "./solutionForDoctorsData";
 import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 import CostofSection from "@/components/ServicePage/CostofSection/CostofSection";
 import ProfessionalBranding from "@/components/ServicePage/ProfessionalBranding/ProfessionalBranding";
@@ -21,20 +21,20 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <HeroSection {...solutionforDoctorsData.hero} />
-      <IntroSection {...solutionforDoctorsData.intro} />
-      <TrustBar {...solutionforDoctorsData.trustBar} />
+      <HeroSection {...solutionForDoctorsData.hero} />
+      <IntroSection {...solutionForDoctorsData.intro} />
+      <TrustBar {...solutionForDoctorsData.trustBar} />
       <CostofSection
-        heading1={solutionforDoctorsData.Costof.heading1}
-        heading2={solutionforDoctorsData.Costof.heading2}
-        description={solutionforDoctorsData.Costof.description}
-        items={solutionforDoctorsData.Costof.items}
+        heading1={solutionForDoctorsData.Costof.heading1}
+        heading2={solutionForDoctorsData.Costof.heading2}
+        description={solutionForDoctorsData.Costof.description}
+        items={solutionForDoctorsData.Costof.items}
       />
-      <ProfessionalBranding {...solutionforDoctorsData.ProfessionalSEO} />
+      <ProfessionalBranding {...solutionForDoctorsData.ProfessionalSEO} />
       <SecondaryCTA />
-      <BrandingStrategy {...solutionforDoctorsData.BrandStrategy} customClass="solutionForDoctors"/>
+      <BrandingStrategy {...solutionForDoctorsData.BrandStrategy} customClass="solutionForDoctors"/>
       <Testimonials />
-      <FAQ items={solutionforDoctorsData.FAQ.items} heading={solutionforDoctorsData.FAQ.heading} />
+      <FAQ items={solutionForDoctorsData.FAQ.items} heading={solutionForDoctorsData.FAQ.heading} />
     </>
   );
 }

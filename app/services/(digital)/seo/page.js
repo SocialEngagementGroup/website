@@ -1,6 +1,6 @@
 import HeroSection from "@/components/ServicePage/HeroSection/HeroSection";
 import IntroSection from "@/components/ServicePage/IntroSection/IntroSection";
-import { SeoServiceData } from "./SeoServiceData";
+import { seoData } from "./seoData";
 import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 import CostofSection from "@/components/ServicePage/CostofSection/CostofSection";
 import ProfessionalBranding from "@/components/ServicePage/ProfessionalBranding/ProfessionalBranding";
@@ -30,20 +30,20 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <HeroSection {...SeoServiceData.hero} />
-      <IntroSection {...SeoServiceData.intro} />
-      <TrustBar {...SeoServiceData.trustBar} />
+      <HeroSection {...seoData.hero} />
+      <IntroSection {...seoData.intro} />
+      <TrustBar {...seoData.trustBar} />
       <CostofSection
-        heading1={SeoServiceData.Costof.heading1}
-        heading2={SeoServiceData.Costof.heading2}
-        description={SeoServiceData.Costof.description}
-        items={SeoServiceData.Costof.items}
+        heading1={seoData.Costof.heading1}
+        heading2={seoData.Costof.heading2}
+        description={seoData.Costof.description}
+        items={seoData.Costof.items}
       />
-      <ProfessionalBranding {...SeoServiceData.ProfessionalSEO} />
-      <SecondaryCTA {...SeoServiceData.SecondaryCTA} />
-      <BrandingStrategy {...SeoServiceData.BrandStrategy} />
+      <ProfessionalBranding {...seoData.ProfessionalSEO} />
+      <SecondaryCTA {...seoData.SecondaryCTA} />
+      <BrandingStrategy {...seoData.BrandStrategy} />
       <Testimonials />
-      <FAQ items={SeoServiceData.FAQ.items} heading={SeoServiceData.FAQ.heading} />
+      <FAQ items={seoData.FAQ.items} heading={seoData.FAQ.heading} />
     </>
   );
 }

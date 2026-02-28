@@ -1,4 +1,4 @@
-export const ThreeDAnimationData = {
+export const threeDAnimationRenderingData = {
   hero: {
     title: "3D Animation & Rendering",
     description: "Transform ideas into stunning 3D visuals. We create hyper-realistic renders, animations, and product demos that captivate audiences and drive engagement.",

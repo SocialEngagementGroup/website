@@ -8,7 +8,7 @@ import FAQ from "@/components/ServicePage/FAQ/FAQ";
 import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 
 
-import { PpcServiceData } from "./ppccampaigns";
+import { ppcCampaignsData } from "./ppcCampaignsData";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 export const metadata = {
@@ -22,20 +22,20 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <HeroSection {...PpcServiceData.hero} />
-      <IntroSection {...PpcServiceData.intro} />
-      <TrustBar {...PpcServiceData.trustBar} />
+      <HeroSection {...ppcCampaignsData.hero} />
+      <IntroSection {...ppcCampaignsData.intro} />
+      <TrustBar {...ppcCampaignsData.trustBar} />
       <CostofSection
-        heading1={PpcServiceData.Costof.heading1}
-        heading2={PpcServiceData.Costof.heading2}
-        description={PpcServiceData.Costof.description}
-        items={PpcServiceData.Costof.items}
+        heading1={ppcCampaignsData.Costof.heading1}
+        heading2={ppcCampaignsData.Costof.heading2}
+        description={ppcCampaignsData.Costof.description}
+        items={ppcCampaignsData.Costof.items}
       />
-      <ProfessionalBranding {...PpcServiceData.ProfessionalSEO} />
+      <ProfessionalBranding {...ppcCampaignsData.ProfessionalSEO} />
       <SecondaryCTA />
-      <BrandingStrategy {...PpcServiceData.BrandStrategy} />
+      <BrandingStrategy {...ppcCampaignsData.BrandStrategy} />
       <Testimonials />
-      <FAQ items={PpcServiceData.FAQ.items} heading={PpcServiceData.FAQ.heading} />
+      <FAQ items={ppcCampaignsData.FAQ.items} heading={ppcCampaignsData.FAQ.heading} />
     </>
   );
 }

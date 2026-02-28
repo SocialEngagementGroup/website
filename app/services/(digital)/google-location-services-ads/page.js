@@ -1,6 +1,6 @@
 import HeroSection from "@/components/ServicePage/HeroSection/HeroSection";
 import IntroSection from "@/components/ServicePage/IntroSection/IntroSection";
-import { googleservicesads } from "./googleservicesads";
+import { googleLocationServicesAdsData } from "./googleLocationServicesAdsData";
 import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 import CostofSection from "@/components/ServicePage/CostofSection/CostofSection";
 import ProfessionalBranding from "@/components/ServicePage/ProfessionalBranding/ProfessionalBranding";
@@ -22,20 +22,20 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <HeroSection {...googleservicesads.hero} />
-      <IntroSection {...googleservicesads.intro} />
-      <TrustBar {...googleservicesads.trustBar} />
+      <HeroSection {...googleLocationServicesAdsData.hero} />
+      <IntroSection {...googleLocationServicesAdsData.intro} />
+      <TrustBar {...googleLocationServicesAdsData.trustBar} />
       <CostofSection
-        heading1={googleservicesads.Costof.heading1}
-        heading2={googleservicesads.Costof.heading2}
-        description={googleservicesads.Costof.description}
-        items={googleservicesads.Costof.items}
+        heading1={googleLocationServicesAdsData.Costof.heading1}
+        heading2={googleLocationServicesAdsData.Costof.heading2}
+        description={googleLocationServicesAdsData.Costof.description}
+        items={googleLocationServicesAdsData.Costof.items}
       />
-      <ProfessionalBranding {...googleservicesads.ProfessionalSEO} />
+      <ProfessionalBranding {...googleLocationServicesAdsData.ProfessionalSEO} />
       <SecondaryCTA />
-      <BrandingStrategy {...googleservicesads.BrandStrategy} />
+      <BrandingStrategy {...googleLocationServicesAdsData.BrandStrategy} />
       <Testimonials />
-      <FAQ items={googleservicesads.FAQ.items} heading={googleservicesads.FAQ.heading} />
+      <FAQ items={googleLocationServicesAdsData.FAQ.items} heading={googleLocationServicesAdsData.FAQ.heading} />
     </>
   );
 }

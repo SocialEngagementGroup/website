@@ -1,4 +1,4 @@
-export const RetargetingServiceData = {
+export const retargetingRemarketingData = {
   hero: {
     title: "Retargeting & Remarketing",
     description:

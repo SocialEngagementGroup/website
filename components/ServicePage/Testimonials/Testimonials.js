@@ -103,7 +103,7 @@ const Testimonials = () => {
                       className="absolute inset-0"
                     >
                        <p className="text-base md:text-[20px] text-[#555] font-medium leading-[1.7]">
-                         "{current.quote}"
+                         &quot;{current.quote}&quot;
                        </p>
                     </motion.div>
                   </AnimatePresence>

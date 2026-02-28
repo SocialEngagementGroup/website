@@ -1,4 +1,4 @@
-export const GoogleBusinessData = {
+export const googleBusinessProfileManagementData = {
   hero: {
     title: "Google Business Profile Management",
     description:

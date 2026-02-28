@@ -24,7 +24,7 @@ const ContactInfo = () => {
           >
             {/* ✅ Icon and text */}
             <div className="flex flex-col items-start gap-4">
-              <Image src="/Icons/callicon.png" alt="Call Icon" width={48} height={48} className="opacity-80 group-hover:opacity-100 transition-opacity" />
+              <Image src="/assets/images/icons/callicon.png" alt="Call Icon" width={48} height={48} className="opacity-80 group-hover:opacity-100 transition-opacity" />
               <h3 className="font-semibold text-white tracking-wide">
                 Book A Call
               </h3>
@@ -33,7 +33,7 @@ const ContactInfo = () => {
             {/* ✅ Arrow icon at top-right */}
             <div className="absolute top-6 right-6 opacity-60 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all">
               <Image
-                src="/Icons/arrow-up-right-1.png"
+                src="/assets/images/icons/arrow-up-right-1.png"
                 alt="Arrow Icon"
                 width={32}
                 height={32}
@@ -49,7 +49,7 @@ const ContactInfo = () => {
           >
             {/* ✅ Icon and text */}
             <div className="flex flex-col items-start gap-4">
-              <Image src="/Icons/mailicon.png" alt="Mail Icon" width={48} height={48} className="opacity-80 group-hover:opacity-100 transition-opacity" />
+              <Image src="/assets/images/icons/mailicon.png" alt="Mail Icon" width={48} height={48} className="opacity-80 group-hover:opacity-100 transition-opacity" />
               <h3 className="font-semibold text-white tracking-wide">
                 Send Email
               </h3>
@@ -58,7 +58,7 @@ const ContactInfo = () => {
             {/* ✅ Arrow icon at top-right */}
             <div className="absolute top-6 right-6 opacity-60 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all">
               <Image
-                src="/Icons/arrow-up-right-1.png"
+                src="/assets/images/icons/arrow-up-right-1.png"
                 alt="Arrow Icon"
                 width={32}
                 height={32}

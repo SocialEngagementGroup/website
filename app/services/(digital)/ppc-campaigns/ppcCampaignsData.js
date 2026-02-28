@@ -1,4 +1,4 @@
-export const PpcServiceData = {
+export const ppcCampaignsData = {
   hero: {
     title: "PPC Campaigns",
     description:

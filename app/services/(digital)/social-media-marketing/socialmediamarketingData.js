@@ -1,4 +1,4 @@
-export const socialmediamarketingData = {
+export const socialMediaMarketingData = {
   hero: {
     title: "Social Media Marketing",
     description:

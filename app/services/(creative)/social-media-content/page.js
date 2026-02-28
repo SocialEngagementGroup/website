@@ -1,7 +1,7 @@
 
 import HeroSection from "@/components/ServicePage/HeroSection/HeroSection";
 import IntroSection from "@/components/ServicePage/IntroSection/IntroSection";
-import { SocialMediaContentData } from "./SocialMediaContentData";
+import { socialMediaContentData } from "./socialMediaContentData";
 
 import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 import CostofSection from "@/components/ServicePage/CostofSection/CostofSection";
@@ -21,20 +21,20 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-  <HeroSection {...SocialMediaContentData.hero} />
-      <IntroSection {...SocialMediaContentData.intro} />
-      <TrustBar {...SocialMediaContentData.trustBar} />
+  <HeroSection {...socialMediaContentData.hero} />
+      <IntroSection {...socialMediaContentData.intro} />
+      <TrustBar {...socialMediaContentData.trustBar} />
       <CostofSection
-        heading1={SocialMediaContentData.Costof.heading1}
-        heading2={SocialMediaContentData.Costof.heading2}
-        description={SocialMediaContentData.Costof.description}
-        items={SocialMediaContentData.Costof.items}
+        heading1={socialMediaContentData.Costof.heading1}
+        heading2={socialMediaContentData.Costof.heading2}
+        description={socialMediaContentData.Costof.description}
+        items={socialMediaContentData.Costof.items}
       />
-      <ProfessionalBranding {...SocialMediaContentData.ProfessionalBranding}/>
+      <ProfessionalBranding {...socialMediaContentData.ProfessionalBranding}/>
       <SecondaryCTA />
-      <BrandingStrategy {...SocialMediaContentData.BrandStrategy}/>
+      <BrandingStrategy {...socialMediaContentData.BrandStrategy}/>
       <Testimonials />
-      <FAQ items={SocialMediaContentData.FAQ.items} heading={SocialMediaContentData.FAQ.heading} />
+      <FAQ items={socialMediaContentData.FAQ.items} heading={socialMediaContentData.FAQ.heading} />
     </>
   );
 }

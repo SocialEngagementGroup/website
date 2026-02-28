@@ -1,4 +1,4 @@
-export const VisualMediaData = {
+export const videographyPhotographyData = {
   hero: {
     title: "Videography & Photography",
     description:

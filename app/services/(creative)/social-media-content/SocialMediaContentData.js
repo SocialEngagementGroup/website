@@ -1,4 +1,4 @@
-export const SocialMediaContentData = {
+export const socialMediaContentData = {
   hero: {
     title: "Social Media Content",
     description: "Create scroll-stopping social content that engages, converts, and builds community. Expert strategies for Meta, TikTok, and beyond to grow your brand.",

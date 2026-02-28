@@ -1,4 +1,4 @@
-export const webdevelopmentData = {
+export const websiteDevelopmentData = {
   hero: {
     title: "Website Development",
     description:

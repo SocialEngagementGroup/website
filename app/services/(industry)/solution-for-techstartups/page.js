@@ -1,6 +1,6 @@
 import HeroSection from "@/components/ServicePage/HeroSection/HeroSection";
 import IntroSection from "@/components/ServicePage/IntroSection/IntroSection";
-import { solutionforTechStartupsData } from "./solutionforTechStartupsData";
+import { solutionForTechStartupsData } from "./solutionForTechStartupsData";
 import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 import CostofSection from "@/components/ServicePage/CostofSection/CostofSection";
 import ProfessionalBranding from "@/components/ServicePage/ProfessionalBranding/ProfessionalBranding";
@@ -21,22 +21,22 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <HeroSection {...solutionforTechStartupsData.hero} />
-      <IntroSection {...solutionforTechStartupsData.intro} />
-      <TrustBar {...solutionforTechStartupsData.trustBar} />
+      <HeroSection {...solutionForTechStartupsData.hero} />
+      <IntroSection {...solutionForTechStartupsData.intro} />
+      <TrustBar {...solutionForTechStartupsData.trustBar} />
       <CostofSection
-        heading1={solutionforTechStartupsData.Costof.heading1}
-        heading2={solutionforTechStartupsData.Costof.heading2}
-        description={solutionforTechStartupsData.Costof.description}
-        items={solutionforTechStartupsData.Costof.items}
+        heading1={solutionForTechStartupsData.Costof.heading1}
+        heading2={solutionForTechStartupsData.Costof.heading2}
+        description={solutionForTechStartupsData.Costof.description}
+        items={solutionForTechStartupsData.Costof.items}
       />
-      <ProfessionalBranding {...solutionforTechStartupsData.ProfessionalSEO} />
+      <ProfessionalBranding {...solutionForTechStartupsData.ProfessionalSEO} />
       <SecondaryCTA />
-      <BrandingStrategy {...solutionforTechStartupsData.BrandStrategy} />
+      <BrandingStrategy {...solutionForTechStartupsData.BrandStrategy} />
       <Testimonials />
       <FAQ
-        items={solutionforTechStartupsData.FAQ.items}
-        heading={solutionforTechStartupsData.FAQ.heading}
+        items={solutionForTechStartupsData.FAQ.items}
+        heading={solutionForTechStartupsData.FAQ.heading}
       />
     </>
   );

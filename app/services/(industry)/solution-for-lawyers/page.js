@@ -1,6 +1,6 @@
 import HeroSection from "@/components/ServicePage/HeroSection/HeroSection";
 import IntroSection from "@/components/ServicePage/IntroSection/IntroSection";
-import { solutionforawyersData } from "./solutionforawyersData";
+import { solutionForLawyersData } from "./solutionForLawyersData";
 import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 import CostofSection from "@/components/ServicePage/CostofSection/CostofSection";
 import ProfessionalBranding from "@/components/ServicePage/ProfessionalBranding/ProfessionalBranding";
@@ -23,20 +23,20 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <HeroSection {...solutionforawyersData.hero} />
-      <IntroSection {...solutionforawyersData.intro} />
-      <TrustBar {...solutionforawyersData.trustBar} />
+      <HeroSection {...solutionForLawyersData.hero} />
+      <IntroSection {...solutionForLawyersData.intro} />
+      <TrustBar {...solutionForLawyersData.trustBar} />
       <CostofSection
-        heading1={solutionforawyersData.Costof.heading1}
-        heading2={solutionforawyersData.Costof.heading2}
-        description={solutionforawyersData.Costof.description}
-        items={solutionforawyersData.Costof.items}
+        heading1={solutionForLawyersData.Costof.heading1}
+        heading2={solutionForLawyersData.Costof.heading2}
+        description={solutionForLawyersData.Costof.description}
+        items={solutionForLawyersData.Costof.items}
       />
-      <ProfessionalBranding {...solutionforawyersData.ProfessionalSEO} />
+      <ProfessionalBranding {...solutionForLawyersData.ProfessionalSEO} />
       <SecondaryCTA />
-      <BrandingStrategy {...solutionforawyersData.BrandStrategy} />
+      <BrandingStrategy {...solutionForLawyersData.BrandStrategy} />
       <Testimonials />
-      <FAQ items={solutionforawyersData.FAQ.items} heading={solutionforawyersData.FAQ.heading} />
+      <FAQ items={solutionForLawyersData.FAQ.items} heading={solutionForLawyersData.FAQ.heading} />
     </>
   );
 }

@@ -1,4 +1,4 @@
-export const ReviewReputationData = {
+export const reviewReputationManagementData = {
   hero: {
     title: "Review & Reputation Management",
     description:

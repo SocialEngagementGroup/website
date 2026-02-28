@@ -7,7 +7,7 @@ import SecondaryCTA from "@/components/ServicePage/SecondaryCTA/SecondaryCTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ";
 import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 
-import { RetargetingServiceData } from "./RetargetingServiceData";
+import { retargetingRemarketingData } from "./retargetingRemarketingData";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 export const metadata = {
   title: {
@@ -21,22 +21,22 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <HeroSection {...RetargetingServiceData.hero} />
-      <IntroSection {...RetargetingServiceData.intro} />
-      <TrustBar {...RetargetingServiceData.trustBar} />
+      <HeroSection {...retargetingRemarketingData.hero} />
+      <IntroSection {...retargetingRemarketingData.intro} />
+      <TrustBar {...retargetingRemarketingData.trustBar} />
       <CostofSection
-        heading1={RetargetingServiceData.Costof.heading1}
-        heading2={RetargetingServiceData.Costof.heading2}
-        description={RetargetingServiceData.Costof.description}
-        items={RetargetingServiceData.Costof.items}
+        heading1={retargetingRemarketingData.Costof.heading1}
+        heading2={retargetingRemarketingData.Costof.heading2}
+        description={retargetingRemarketingData.Costof.description}
+        items={retargetingRemarketingData.Costof.items}
       />
-      <ProfessionalBranding {...RetargetingServiceData.ProfessionalSEO} />
-      <SecondaryCTA {...RetargetingServiceData.SecondaryCTA} />
-      <BrandingStrategy {...RetargetingServiceData.BrandStrategy} />
+      <ProfessionalBranding {...retargetingRemarketingData.ProfessionalSEO} />
+      <SecondaryCTA {...retargetingRemarketingData.SecondaryCTA} />
+      <BrandingStrategy {...retargetingRemarketingData.BrandStrategy} />
       <Testimonials />
       <FAQ
-        items={RetargetingServiceData.FAQ.items}
-        heading={RetargetingServiceData.FAQ.heading}
+        items={retargetingRemarketingData.FAQ.items}
+        heading={retargetingRemarketingData.FAQ.heading}
       />
     </>
   );

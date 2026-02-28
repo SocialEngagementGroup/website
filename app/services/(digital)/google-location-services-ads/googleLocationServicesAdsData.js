@@ -1,4 +1,4 @@
-export const googleservicesads = {
+export const googleLocationServicesAdsData = {
   hero: {
     title: "Google Location Services Ads",
     description:

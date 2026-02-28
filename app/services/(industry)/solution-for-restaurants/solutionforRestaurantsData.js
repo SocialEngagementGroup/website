@@ -1,4 +1,4 @@
-export const solutionforRestaurantsData = {
+export const solutionForRestaurantsData = {
   hero: {
     title: "Solution for Restaurants",
     description:

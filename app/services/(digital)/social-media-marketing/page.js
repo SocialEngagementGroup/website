@@ -1,6 +1,6 @@
 import HeroSection from "@/components/ServicePage/HeroSection/HeroSection";
 import IntroSection from "@/components/ServicePage/IntroSection/IntroSection";
-import { socialmediamarketingData } from "./socialmediamarketingData";
+import { socialMediaMarketingData } from "./socialMediaMarketingData";
 import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 import CostofSection from "@/components/ServicePage/CostofSection/CostofSection";
 import ProfessionalBranding from "@/components/ServicePage/ProfessionalBranding/ProfessionalBranding";
@@ -23,20 +23,20 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <HeroSection {...socialmediamarketingData.hero} />
-      <IntroSection {...socialmediamarketingData.intro} />
-      <TrustBar {...socialmediamarketingData.trustBar} />
+      <HeroSection {...socialMediaMarketingData.hero} />
+      <IntroSection {...socialMediaMarketingData.intro} />
+      <TrustBar {...socialMediaMarketingData.trustBar} />
       <CostofSection
-        heading1={socialmediamarketingData.Costof.heading1}
-        heading2={socialmediamarketingData.Costof.heading2}
-        description={socialmediamarketingData.Costof.description}
-        items={socialmediamarketingData.Costof.items}
+        heading1={socialMediaMarketingData.Costof.heading1}
+        heading2={socialMediaMarketingData.Costof.heading2}
+        description={socialMediaMarketingData.Costof.description}
+        items={socialMediaMarketingData.Costof.items}
       />
-      <ProfessionalBranding {...socialmediamarketingData.ProfessionalSEO} />
+      <ProfessionalBranding {...socialMediaMarketingData.ProfessionalSEO} />
       <SecondaryCTA />
-      <BrandingStrategy {...socialmediamarketingData.BrandStrategy} />
+      <BrandingStrategy {...socialMediaMarketingData.BrandStrategy} />
       <Testimonials />
-      <FAQ items={socialmediamarketingData.FAQ.items} heading={socialmediamarketingData.FAQ.heading} />
+      <FAQ items={socialMediaMarketingData.FAQ.items} heading={socialMediaMarketingData.FAQ.heading} />
     </>
   );
 }

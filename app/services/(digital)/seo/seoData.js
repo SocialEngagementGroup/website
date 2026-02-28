@@ -1,4 +1,4 @@
-export const SeoServiceData = {
+export const seoData = {
   hero: {
     title: "SEO",
     description:

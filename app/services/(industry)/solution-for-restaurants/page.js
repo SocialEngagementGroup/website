@@ -1,6 +1,6 @@
 import HeroSection from "@/components/ServicePage/HeroSection/HeroSection";
 import IntroSection from "@/components/ServicePage/IntroSection/IntroSection";
-import { solutionforRestaurantsData } from "./solutionforRestaurantsData";
+import { solutionForRestaurantsData } from "./solutionForRestaurantsData";
 import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 import CostofSection from "@/components/ServicePage/CostofSection/CostofSection";
 import ProfessionalBranding from "@/components/ServicePage/ProfessionalBranding/ProfessionalBranding";
@@ -21,22 +21,22 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <HeroSection {...solutionforRestaurantsData.hero} />
-      <IntroSection {...solutionforRestaurantsData.intro} />
-      <TrustBar {...solutionforRestaurantsData.trustBar} />
+      <HeroSection {...solutionForRestaurantsData.hero} />
+      <IntroSection {...solutionForRestaurantsData.intro} />
+      <TrustBar {...solutionForRestaurantsData.trustBar} />
       <CostofSection
-        heading1={solutionforRestaurantsData.Costof.heading1}
-        heading2={solutionforRestaurantsData.Costof.heading2}
-        description={solutionforRestaurantsData.Costof.description}
-        items={solutionforRestaurantsData.Costof.items}
+        heading1={solutionForRestaurantsData.Costof.heading1}
+        heading2={solutionForRestaurantsData.Costof.heading2}
+        description={solutionForRestaurantsData.Costof.description}
+        items={solutionForRestaurantsData.Costof.items}
       />
-      <ProfessionalBranding {...solutionforRestaurantsData.ProfessionalSEO} />
+      <ProfessionalBranding {...solutionForRestaurantsData.ProfessionalSEO} />
       <SecondaryCTA />
-      <BrandingStrategy {...solutionforRestaurantsData.BrandStrategy} />
+      <BrandingStrategy {...solutionForRestaurantsData.BrandStrategy} />
       <Testimonials />
       <FAQ
-        items={solutionforRestaurantsData.FAQ.items}
-        heading={solutionforRestaurantsData.FAQ.heading}
+        items={solutionForRestaurantsData.FAQ.items}
+        heading={solutionForRestaurantsData.FAQ.heading}
       />
     </>
   );
