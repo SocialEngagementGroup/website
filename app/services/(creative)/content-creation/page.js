@@ -5,6 +5,7 @@ import CTA from "@/components/ServicePage/CTA/CTA";
 import CostofSection from "@/components/ServicePage/CostofSection/CostofSection";
 import ProfessionalBranding from "@/components/ServicePage/ProfessionalBranding/ProfessionalBranding";
 import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrategy";
+import SecondaryCTA from "@/components/ServicePage/SecondaryCTA/SecondaryCTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 
 export const metadata = {
@@ -25,9 +26,12 @@ export default function Page() {
         description={contentCreationData.Costof.description}
         items={contentCreationData.Costof.items}
       />
-      <ProfessionalBranding {...contentCreationData.ProfessionalContent}/>
-      <BrandingStrategy {...contentCreationData.ContentStrategy}/>
-      <FAQ items={contentCreationData.FAQ.items} heading={contentCreationData.FAQ.heading} />
+      <ProfessionalBranding {...contentCreationData.ProfessionalBranding} />
+      <BrandingStrategy {...contentCreationData.BrandStrategy} />
+      <SecondaryCTA />
+      <FAQ
+        items={contentCreationData.FAQ.items}
+        heading={contentCreationData.FAQ.heading} />
     </>
   );
 }

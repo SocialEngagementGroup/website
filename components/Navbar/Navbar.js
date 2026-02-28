@@ -71,7 +71,7 @@ export default function Navbar() {
               href="https://calendly.com/itseg/segmeet"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-2 bg-[#975554] text-white px-6 md:px-8 py-2 md:py-3 rounded-full font-sans font-bold text-[16px] md:text-[18px] transition-all hover:scale-105 active:scale-95"
+              className="group flex items-center gap-2 bg-[#975554] text-white px-6 md:px-8 py-2 md:py-3 rounded-full font-sans font-bold text-[16px] md:text-[18px] transition-all hover:bg-white hover:text-[#975554] border border-[#975554]"
             >
               <Phone className="w-4 h-4 md:w-5 md:h-5" />
               <span>Book a Call</span>

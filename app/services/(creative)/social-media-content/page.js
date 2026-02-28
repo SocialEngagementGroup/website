@@ -7,6 +7,7 @@ import CTA from "@/components/ServicePage/CTA/CTA";
 import CostofSection from "@/components/ServicePage/CostofSection/CostofSection";
 import ProfessionalBranding from "@/components/ServicePage/ProfessionalBranding/ProfessionalBranding";
 import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrategy";
+import SecondaryCTA from "@/components/ServicePage/SecondaryCTA/SecondaryCTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 
 
@@ -28,12 +29,10 @@ export default function Page() {
         description={SocialMediaContentData.Costof.description}
         items={SocialMediaContentData.Costof.items}
       />
-      <ProfessionalBranding {...SocialMediaContentData.ProfessionalLogoDesign}/>
-      <BrandingStrategy {...SocialMediaContentData.BrandStrategy}/>
-      <FAQ items={SocialMediaContentData.FAQ.items} heading={SocialMediaContentData.FAQ.heading} />
+      <ProfessionalBranding {...socialMediaContentData.ProfessionalBranding}/>
+      <BrandingStrategy {...socialMediaContentData.BrandStrategy}/>
+      <SecondaryCTA />
+      <FAQ items={socialMediaContentData.FAQ.items} heading={SocialMediaContentData.FAQ.heading} />
     </>
   );
 }
-
-
-

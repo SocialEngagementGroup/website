@@ -5,6 +5,7 @@ import CTA from "@/components/ServicePage/CTA/CTA";
 import CostofSection from "@/components/ServicePage/CostofSection/CostofSection";
 import ProfessionalBranding from "@/components/ServicePage/ProfessionalBranding/ProfessionalBranding";
 import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrategy";
+import SecondaryCTA from "@/components/ServicePage/SecondaryCTA/SecondaryCTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 
 
@@ -29,6 +30,7 @@ export default function Page() {
       />
       <ProfessionalBranding {...VisualMediaData.ProfessionalLogoDesign} />
       <BrandingStrategy {...VisualMediaData.BrandStrategy} />
+      <SecondaryCTA />
       <FAQ
         items={VisualMediaData.FAQ.items}
         heading={VisualMediaData.FAQ.heading}

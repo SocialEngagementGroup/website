@@ -6,6 +6,7 @@ import CTA from "@/components/ServicePage/CTA/CTA";
 import CostofSection from "@/components/ServicePage/CostofSection/CostofSection";
 import ProfessionalBranding from "@/components/ServicePage/ProfessionalBranding/ProfessionalBranding";
 import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrategy";
+import SecondaryCTA from "@/components/ServicePage/SecondaryCTA/SecondaryCTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 
 
@@ -37,9 +38,8 @@ export default function Page() {
       />
       <ProfessionalBranding {...logoDesignData.ProfessionalLogoDesign} />
       <BrandingStrategy {...logoDesignData.BrandStrategy} />
+      <SecondaryCTA />
       <FAQ items={logoDesignData.FAQ.items} heading={logoDesignData.FAQ.heading} />
-
-
     </>
   );
 }

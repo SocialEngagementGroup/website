@@ -3,6 +3,7 @@ import IntroSection from "@/components/ServicePage/IntroSection/IntroSection";
 import CostofSection from "@/components/ServicePage/CostofSection/CostofSection";
 import ProfessionalBranding from "@/components/ServicePage/ProfessionalBranding/ProfessionalBranding";
 import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrategy";
+import SecondaryCTA from "@/components/ServicePage/SecondaryCTA/SecondaryCTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ";
 import CTA from "@/components/ServicePage/CTA/CTA";
 // update url
@@ -32,6 +33,7 @@ export default function Page() {
       />
       <ProfessionalBranding {...ReviewReputationData.ProfessionalSEO} />
       <BrandingStrategy {...ReviewReputationData.BrandStrategy} />
+      <SecondaryCTA />
       <FAQ
         items={ReviewReputationData.FAQ.items}
         heading={ReviewReputationData.FAQ.heading}

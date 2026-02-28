@@ -61,7 +61,7 @@ const FAQ = ({ items, heading }) => {
                   >
                     <div className="pt-4 mt-4 border-t border-[#975554]/5">
                       <p
-                        className="text-gray-600 leading-relaxed text-base md:text-lg"
+                        className="text-gray-600 leading-relaxed text-[14px] md:text-[15px]"
                         dangerouslySetInnerHTML={{ __html: faq.answer }}
                       ></p>
                     </div>

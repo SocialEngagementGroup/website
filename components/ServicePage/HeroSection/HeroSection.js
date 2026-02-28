@@ -39,19 +39,21 @@ const HeroSection = ({
 
 
             {ctaButton && (
-              <Link href={ctaLink}>
-                <button
-                  className={`rounded-full
-                    font-semibold
-                    px-6 py-3 bg-gray-300 text-gray-900
-                    sm:px-8 sm:py-3 md:px-10 md:py-4
-                    hover:bg-gray-400 transition cursor-pointer
-                    text-base sm:text-lg mt-4
-                  `}
-                >
-                  {ctaButton}
-                </button>
-              </Link>
+              <div className="flex justify-center md:justify-start">
+                <Link href={ctaLink} className="block w-fit">
+                  <button
+                    className={`rounded-full
+                      font-bold
+                      px-6 py-3 bg-white text-black
+                      sm:px-8 sm:py-3 md:px-10 md:py-4
+                      hover:bg-[#975554] hover:text-white transition-all cursor-pointer
+                      text-base sm:text-lg mt-4 shadow-xl border border-transparent
+                    `}
+                  >
+                    {ctaButton}
+                  </button>
+                </Link>
+              </div>
             )}
           </div>
 

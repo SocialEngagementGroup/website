@@ -50,21 +50,21 @@ const GetInTouch = () => {
               <Link
                 href="https://www.instagram.com/socialengagementgroup"
                 target="_blank"
-                className="w-12 h-12 flex items-center justify-center rounded-full bg-[#975554] text-white hover:scale-110 transition-all duration-300 shadow-lg shadow-[#975554]/20"
+                className="w-12 h-12 flex items-center justify-center rounded-full bg-[#975554] text-white hover:bg-white hover:text-[#975554] border border-[#975554] transition-all duration-300 shadow-lg shadow-[#975554]/20"
               >
                 <FaInstagram size={20} />
               </Link>
               <Link
                 href="https://www.linkedin.com/company/social-engagement-group"
                 target="_blank"
-                className="w-12 h-12 flex items-center justify-center rounded-full bg-[#975554] text-white hover:scale-110 transition-all duration-300 shadow-lg shadow-[#975554]/20"
+                className="w-12 h-12 flex items-center justify-center rounded-full bg-[#975554] text-white hover:bg-white hover:text-[#975554] border border-[#975554] transition-all duration-300 shadow-lg shadow-[#975554]/20"
               >
                 <FaLinkedinIn size={20} />
               </Link>
               <Link
                 href="https://www.facebook.com/seg.socialengagementgroup/"
                 target="_blank"
-                className="w-12 h-12 flex items-center justify-center rounded-full bg-[#975554] text-white hover:scale-110 transition-all duration-300 shadow-lg shadow-[#975554]/20"
+                className="w-12 h-12 flex items-center justify-center rounded-full bg-[#975554] text-white hover:bg-white hover:text-[#975554] border border-[#975554] transition-all duration-300 shadow-lg shadow-[#975554]/20"
               >
                 <FaFacebookF size={20} />
               </Link>
