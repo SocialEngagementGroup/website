@@ -6,8 +6,8 @@ export const socialmediamarketingData = {
     subtitle: "digital",
     ctaButton: "Connect With Us",
         ctaLink: "#contact",
-    img: "/services/creative/branding/heroimg.png",
-    bg: "/services/creative/branding/herobg.png",
+   img: "/assets/services/creative/branding/heroimg.png",
+   bg: "/assets/background/service-bg.png",
   },
 
   intro: {
@@ -16,7 +16,7 @@ export const socialmediamarketingData = {
       "Social isn’t optional, it’s where relevance, visibility, and revenue meet. We turn daily scroll time on Meta, TikTok, LinkedIn, and more into measurable growth with full-funnel strategies grounded in audience insight, platform trends, and precision targeting. From viral short-form video and influencer collabs to paid funnels and community management, we run the entire social engine. Every post is built for a purpose, to earn attention, spark conversation, and move buyers through the funnel. With transparent reporting and constant optimization, you stay ahead of algorithms and competitors. Social isn’t about likes; it’s about turning every interaction into impact.",
   },
   cta: {
-    bg: "/services/CTA/Digital-google-business-profile.png",
+   bg: "/assets/services/cta/Digital-google-business-profile.png",
     title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
     link: "https://calendly.com/itseg/segmeet",
@@ -28,19 +28,19 @@ export const socialmediamarketingData = {
       "Social is where your audience already spends hours each day. Every swipe is a chance to earn attention and intent. Smart creative and native formats stop the scroll. Precision targeting puts messages in front of buyers, not bystanders. Consistent posting and community management turn reach into relationships. Paid amplification scales what works while suppressing waste. Data loops testing hooks, pacing, and formats, improve performance week over week. Social proof from comments and shares reduces friction and builds trust. Full-funnel orchestration moves people from awareness to conversion and repeat purchase. Done right, social marketing converts casual scrolling into measurable revenue.",
     items: [
       {
-        img: "/services/digital/social-media-marketing/low-engagement-and-slow-audience-growth.png",
+       img: "/assets/services/digital/social-media-marketing/low-engagement-and-slow-audience-growth.png",
         text: "<strong>Low engagement</strong> and slow audience growth across platforms.",
       },
       {
-        img: "/services/digital/social-media-marketing/missed-chances-to-capitalize-on-trends.png",
+       img: "/assets/services/digital/social-media-marketing/missed-chances-to-capitalize-on-trends.png",
         text: "<strong>Missed chances</strong> to capitalize on trends your competitors ride.",
       },
       {
-        img: "/services/digital/social-media-marketing/weak-roi.png",
+       img: "/assets/services/digital/social-media-marketing/weak-roi.png",
         text: "<strong>Weak ROI</strong> as campaigns fail to convert attention into revenue.",
       },
       {
-        img: "/services/digital/social-media-marketing/Inconsistent-brand-presence.png",
+       img: "/assets/services/digital/social-media-marketing/Inconsistent-brand-presence.png",
         text: "<strong>Inconsistent brand</strong> presence that slowly erodes trust and credibility.",
       },
 
@@ -55,7 +55,7 @@ export const socialmediamarketingData = {
       { text: "Your brand stays top-of-mind through consistent, high-impact content." },
       { text: "Better CAC and ROAS driven by continuous, data-backed optimization." },
     ],
-    video: "/videos/services/digital/Social-Media-Marketing.mp4",
+    video: "/assets/videos/services/digital/Social-Media-Marketing.mp4",
   },
 
   BrandStrategy: {
@@ -70,7 +70,7 @@ export const socialmediamarketingData = {
         text: "Monthly reporting with insights on growth, engagement, and performance.",
       },
     ],
-    img: "/services/digital/social-media-marketing/digital-social-media-marketing.png",
+   img: "/assets/services/digital/social-media-marketing/digital-social-media-marketing.png",
   },
 
   FAQ: {

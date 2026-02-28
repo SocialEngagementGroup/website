@@ -6,8 +6,8 @@ export const GoogleBusinessData = {
     subtitle: "digital",
     ctaButton: "Connect With Us",
     ctaLink: "#contact",
-    img: "/services/creative/branding/heroimg.png",
-    bg: "/services/creative/branding/herobg.png",
+   img: "/assets/services/creative/branding/heroimg.png",
+   bg: "/assets/background/service-bg.png",
   },
 
   intro: {
@@ -16,7 +16,7 @@ export const GoogleBusinessData = {
       "Turn local searches into store visits with an optimized Google Business Profile. It’s your digital storefront, the first thing nearby customers see when they look for directions, reviews, or a place to buy. We audit and perfect every detail (name, categories, descriptions, images, keywords), add high-quality visuals and keyword-rich posts, and keep your listing active with ongoing updates. We also manage reviews and responses, monitor performance, and provide insights. For single or multi-location businesses, our management ensures consistency, higher local rankings, and stronger trust, so you’re not just found, you’re chosen.",
   },
     cta: {
-    bg: "/services/CTA/Digital-google-business-profile.png",
+   bg: "/assets/services/cta/Digital-google-business-profile.png",
     title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
     link: "https://calendly.com/itseg/segmeet",
@@ -29,19 +29,19 @@ export const GoogleBusinessData = {
       "Local search is where high-intent decisions happen. Your Google Business Profile is the first impression at that moment. Complete, accurate details help you surface in the local map pack. Strong visuals and keyworded descriptions turn views into clicks. Reviews and timely responses signal trust and reliability. Up-to-date hours and attributes prevent drop-offs and frustration. Regular Posts keep your listing active and favored by the algorithm. UTM-tagged links turn profile engagement into measurable ROI. Consistent NAP across the web reinforces local rankings. Optimize your profile and you convert nearby searches into calls, visits, and customers.",
     items: [
      {
-    img: "/services/digital/google-business-profile-management/Missed-calls.png",
+   img: "/assets/services/digital/google-business-profile-management/Missed-calls.png",
     text: "<strong>Missed calls</strong>, visits, and customer inquiries that should have come to you.",
   },
   {
-    img: "/services/digital/google-business-profile-management/Local-visibility-drops.png",
+   img: "/assets/services/digital/google-business-profile-management/Local-visibility-drops.png",
     text: "Local <strong>visibility drops</strong> as competitors appear more often in search results.",
   },
   {
-    img: "/services/digital/google-business-profile-management/Your-reputation-weakens.png",
+   img: "/assets/services/digital/google-business-profile-management/Your-reputation-weakens.png",
     text: "<strong>Your reputation</strong> weakens with unbalanced or unmanaged public reviews.",
   }, 
   {
-    img: "/services/digital/google-business-profile-management/Outdated-or-inconsistent-listing-details-hurt-credibility.png",
+   img: "/assets/services/digital/google-business-profile-management/Outdated-or-inconsistent-listing-details-hurt-credibility.png",
     text: "<strong>Outdated or inconsistent</strong> listing details hurt credibility and search ranking.",
   },
     ],
@@ -55,7 +55,7 @@ export const GoogleBusinessData = {
       { text: "Reputation grows stronger with consistent, active review management." },
       { text: "Accurate, up-to-date business info builds trust and improves conversions." },
     ],
-    video: "/videos/services/digital/Google-Business-Profile-Management.mp4",
+    video: "/assets/videos/services/digital/Google-Business-Profile-Management.mp4",
   },
 
   BrandStrategy: {
@@ -66,7 +66,7 @@ export const GoogleBusinessData = {
       { text: "Review monitoring with a tailored response strategy that builds trust." },
       { text: "Clear performance insights with detailed monthly reporting." },
     ],
-    img: "/services/digital/google-business-profile-management/digital-google-business-profile-management.png",
+   img: "/assets/services/digital/google-business-profile-management/digital-google-business-profile-management.png",
   },
 
   FAQ: {

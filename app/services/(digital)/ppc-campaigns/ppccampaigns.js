@@ -6,8 +6,8 @@ export const PpcServiceData = {
     subtitle: "digital",
     ctaButton: "Connect With Us",
     ctaLink: "#contact",
-    img: "/services/creative/branding/heroimg.png",
-    bg: "/services/creative/branding/herobg.png",
+   img: "/assets/services/creative/branding/heroimg.png",
+   bg: "/assets/background/service-bg.png",
   },
 
   intro: {
@@ -16,7 +16,7 @@ export const PpcServiceData = {
       "PPC is the fastest way to drive qualified traffic when it’s engineered with precision. We build data-driven campaigns that hit the right audience, moment, and message. Starting with deep keyword and competitor research, we craft high-performing copy and creatives, then launch tightly structured accounts to maximize relevance and cut waste. Across Google, Bing, Meta, and LinkedIn, we continuously test, refine targeting, adjust bids, and optimize for higher ROI. You get clear reporting on what’s working, what’s improving, and your exact cost per conversion. Whether the goal is sales, sign-ups, or traffic, our PPC turns every dollar into visible, measurable growth.",
   },
   cta: {
-    bg: "/services/CTA/Digital-google-business-profile.png",
+   bg: "/assets/services/cta/Digital-google-business-profile.png",
     title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
     link: "https://calendly.com/itseg/segmeet",
@@ -28,19 +28,19 @@ export const PpcServiceData = {
       "PPC puts you in front of ready-to-buy customers instantly. It captures high-intent searches and surfaces your offer at the exact moment of need. You control targeting, budgets, and placements with surgical precision. Clear conversion tracking shows what’s working and what’s not. Fast feedback loops let you test messages, creatives, and audiences quickly. Smart bidding and negative keywords minimize waste and protect ROI. Tight landing page alignment turns clicks into customers. Cross-channel reach extends impact across Google, Bing, Meta, and more. Insights from PPC sharpen your broader marketing strategy. Done right, it delivers measurable results today and a scalable growth engine tomorrow.",
     items: [
       {
-        img: "/services/digital/ppc-campaigns/clicks-that-never-turn-into-meaningful-traffic.png",
+       img: "/assets/services/digital/ppc-campaigns/clicks-that-never-turn-into-meaningful-traffic.png",
         text: "Your budget drains on <strong>irrelevant clicks</strong> that never turn into meaningful traffic.",
       },
       {
-        img: "/services/digital/ppc-campaigns/CTR-drops-sharply.png",
+       img: "/assets/services/digital/ppc-campaigns/CTR-drops-sharply.png",
         text: "<strong>CTR drops</strong> sharply because your ads and audience messaging don’t align.",
       },
       {
-        img: "/services/digital/ppc-campaigns/Users-who-have-no-intent-to-convert.png",
+       img: "/assets/services/digital/ppc-campaigns/Users-who-have-no-intent-to-convert.png",
         text: "Landing pages get visits from users who have <strong>no intent</strong> to convert.",
       },
       {
-        img: "/services/digital/ppc-campaigns/ROAS-falls.png",
+       img: "/assets/services/digital/ppc-campaigns/ROAS-falls.png",
         text: "<strong>ROAS falls</strong> as tracking gaps distort attribution and hide true performance.",
       },
 
@@ -55,7 +55,7 @@ export const PpcServiceData = {
       { text: "Conversions increase steadily across all active campaigns." },
       { text: "CPA drops naturally while ROAS strengthens and scales over time." },
     ],
-    video: "/videos/services/digital/PPC-Campaigns.mp4",
+    video: "/assets/videos/services/digital/PPC-Campaigns.mp4",
   },
 
   BrandStrategy: {
@@ -66,7 +66,7 @@ export const PpcServiceData = {
       { text: "Precise conversion tracking and event setup for accurate performance data." },
       { text: "Ongoing optimization with A/B testing to continually improve results." },
     ],
-    img: "/services/digital/ppc-campaigns/digital-ppc.png",
+   img: "/assets/services/digital/ppc-campaigns/digital-ppc.png",
   },
 
   FAQ: {

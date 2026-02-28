@@ -33,7 +33,7 @@ const SecondaryCTA = () => {
             <div className="absolute top-1/2 left-0 md:left-10 -translate-y-1/2 w-[30vw] h-[30vw] opacity-10 pointer-events-none select-none">
                 <div className="relative w-full h-full">
                     <Image
-                        src="/site-logo/logo.svg"
+                        src="/assets/site-logo/logo.svg"
                         alt="Background Logo"
                         fill
                         className="object-contain brightness-0"
