@@ -10,7 +10,7 @@ const MasterServicesPage = () => {
       <HeroSection />
       <div className=""></div>
 
-      <div className="bg-[#232326] py-2 md:py-8">
+      <div className="bg-black py-2 md:py-8">
         <div className="w-[90%] mx-auto">
           <section className="py-6 mt-0 mb-8">
             <div className="mb-4 md:mb-6">
