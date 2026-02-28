@@ -1,7 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FaLinkedinIn, FaInstagram, FaFacebookF } from "react-icons/fa6";
+import { FaLinkedinIn, FaFacebookF } from "react-icons/fa6";
+import { RiInstagramFill } from "react-icons/ri";
 
 const Copyright = () => {
   const currentYear = new Date().getFullYear();
@@ -78,7 +79,7 @@ const Copyright = () => {
               className="w-10 h-10 flex items-center justify-center rounded-full bg-brand-brick border-brand-brick text-white hover:scale-110 transition-all duration-300"
               style={{ backgroundColor: "#975554" }}
             >
-              <FaInstagram size={18} />
+              <RiInstagramFill size={18} />
             </Link>
             <Link
               href="https://www.linkedin.com/company/social-engagement-group"

@@ -3,7 +3,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaLinkedinIn, FaInstagram, FaFacebookF } from "react-icons/fa6";
+import { FaLinkedinIn, FaFacebookF } from "react-icons/fa6";
+import { RiInstagramFill } from "react-icons/ri";
 
 const contactInfo = [
   { 
@@ -52,7 +53,7 @@ const GetInTouch = () => {
                 target="_blank"
                 className="w-12 h-12 flex items-center justify-center rounded-full bg-[#975554] text-white hover:bg-white hover:text-[#975554] border border-[#975554] transition-all duration-300 shadow-lg shadow-[#975554]/20"
               >
-                <FaInstagram size={20} />
+                <RiInstagramFill size={20} />
               </Link>
               <Link
                 href="https://www.linkedin.com/company/social-engagement-group"
