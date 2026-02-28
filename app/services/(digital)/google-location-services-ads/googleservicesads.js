@@ -59,7 +59,7 @@ export const googleservicesads = {
         text: "Better CPL and stronger ROAS through efficient pay-per-lead pricing.",
       },
     ],
-    video: "/assets/videos/services/digital/Google-Location-Services-Ads.webm",
+    video: "/assets/videos/services/digital/google-location-services-ads.webm",
   },
 
   BrandStrategy: {

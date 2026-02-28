@@ -58,7 +58,7 @@ heading2: "The Cost of Weak Branding",
       text: "You become <strong>memorable</strong>, <strong>referable</strong>, and easy to choose over competitors.",
     },
   ],
-  video: "/assets/videos/services/creative/Logo.webm",
+  video: "/assets/videos/services/creative/logo.webm",
 },
 
    BrandStrategy: {

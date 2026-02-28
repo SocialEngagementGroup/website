@@ -36,7 +36,7 @@ export const ReviewReputationData = {
         text: "Prospects turn to <strong>competitors</strong> with stronger ratings and responses.",
       },
       {
-       img: "/assets/images/services/digital/review-and-reputation-management/trust-fades-quickly-when-feedback-isn’t-managed.png",
+       img: "/assets/images/services/digital/review-and-reputation-management/trust-fades-quickly-when-feedback-isn-t-managed.png",
         text: "<strong>Trust fades</strong> quickly when feedback isn’t managed or acknowledged.",
       },
       {
@@ -56,7 +56,7 @@ export const ReviewReputationData = {
       { text: "Customer trust and long-term loyalty grow through consistent engagement." },
       { text: "Local rankings and conversion rates improve as sentiment strengthens." },
     ],
-    video: "/assets/videos/services/digital/Review-and-Reputation-Management.webm",
+    video: "/assets/videos/services/digital/review-and-reputation-management.webm",
   },
 
   BrandStrategy: {

@@ -55,7 +55,7 @@ export const socialmediamarketingData = {
       { text: "Your brand stays top-of-mind through consistent, high-impact content." },
       { text: "Better CAC and ROAS driven by continuous, data-backed optimization." },
     ],
-    video: "/assets/videos/services/digital/Social-Media-Marketing.webm",
+    video: "/assets/videos/services/digital/social-media-marketing.webm",
   },
 
   BrandStrategy: {

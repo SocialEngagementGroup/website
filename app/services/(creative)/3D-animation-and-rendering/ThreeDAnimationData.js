@@ -59,7 +59,7 @@ export const ThreeDAnimationData = {
         text: "Sales cycles <strong>shorten</strong> as visuals accelerate decision-making.",
       },
     ],
-    video: "/assets/videos/services/creative/3D-Animation-&-Rendering.webm",
+    video: "/assets/videos/services/creative/3d-animation-rendering.webm",
   },
   BrandStrategy: {
     heading: "What You Get",

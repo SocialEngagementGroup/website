@@ -60,7 +60,7 @@ export const SocialMediaContentData = {
 },
 
     ],
-    video: "/assets/videos/services/creative/Social-Media-Content.webm",
+    video: "/assets/videos/services/creative/social-media-content.webm",
   },
   BrandStrategy: {
     heading: "What You Get",

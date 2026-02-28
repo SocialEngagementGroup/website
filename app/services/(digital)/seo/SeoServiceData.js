@@ -55,7 +55,7 @@ export const SeoServiceData = {
       { text: "Brand trust, credibility, and domain authority grow stronger over time." },
       { text: "Customer acquisition costs decline naturally as organic momentum builds." },
     ],
-    video: "/assets/videos/services/digital/SEO.webm",
+    video: "/assets/videos/services/digital/seo.webm",
   },
 
   BrandStrategy: {

@@ -55,7 +55,7 @@ export const RetargetingServiceData = {
       { text: "Revenue increases consistently as retargeting lifts performance across channels." },
       { text: "CPAs drop while ROAS improves as warm audiences convert more efficiently." },
     ],
-    video: "/assets/videos/services/digital/Retargeting-&-Remarketing.webm",
+    video: "/assets/videos/services/digital/retargeting-remarketing.webm",
   },
 
   BrandStrategy: {
