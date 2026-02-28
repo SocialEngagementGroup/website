@@ -15,11 +15,10 @@ export const VisualMediaData = {
     description:
       "Great brand stories deserve visuals that do them justice. We create photography and videography that capture emotion, essence, and identity, cinematic films, irresistible product shoots, and lifestyle imagery that humanizes your brand. Our end-to-end process, creative direction, lighting, production, editing, and color ensures every frame reflects your values and elevates credibility. Polished visuals build subconscious trust and signal quality and leadership. In a crowded feed, the right imagery doesn’t just attract attention, it makes your brand unforgettable.",
   },
-   cta: {
-   bg: "/assets/images/services/cta/digital-google-business-profile.png",
-    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
-    button: "Book a call",
-    link: "https://calendly.com/itseg/segmeet",
+   trustBar: {
+    heading: "Top Clients & Partners",
+    description:
+      "We've helped brands across various industries capture their essence through high-quality photography and videography. Join our list of satisfied clients and elevate your brand's visual identity.",
   },
 
   Costof: {

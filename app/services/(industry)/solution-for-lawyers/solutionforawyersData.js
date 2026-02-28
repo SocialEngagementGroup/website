@@ -15,11 +15,10 @@ export const solutionforawyersData = {
     description:
       "Your law firm’s reputation runs on trust but in a digital-first world, credibility alone won’t get you found. Clients research online, check reviews, and compare firms long before they reach out. We help you stand out with intelligent digital strategy, targeted marketing, and data-backed visibility so your firm stays discoverable and consistently wins high-quality cases. We tailor everything to your practice area, optimizing your Google Business Profile, running local ads, managing reviews, and publishing expert-level content. The result: stronger trust, more qualified inquiries and firm clients remember when it matters.",
   },
-   cta: {
-   bg: "/assets/images/services/cta/digital-google-business-profile.png",
-    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
-    button: "Book a call",
-    link: "https://calendly.com/itseg/segmeet",
+  trustBar: {
+    heading: "Top Clients & Partners",
+    description:
+      "We've helped law firms establish strong authority and build lasting trust with their clients. Join our list of satisfied legal partners and take your firm's digital presence to the next level.",
   },
 
   Costof: {

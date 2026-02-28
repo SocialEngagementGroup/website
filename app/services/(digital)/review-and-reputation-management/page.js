@@ -5,7 +5,7 @@ import ProfessionalBranding from "@/components/ServicePage/ProfessionalBranding/
 import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrategy";
 import SecondaryCTA from "@/components/ServicePage/SecondaryCTA/SecondaryCTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ";
-import CTA from "@/components/ServicePage/CTA/CTA";
+import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 // update url
 
 import { ReviewReputationData } from "./ReviewReputationData";
@@ -25,7 +25,7 @@ export default function Page() {
     <>
       <HeroSection {...ReviewReputationData.hero} />
       <IntroSection {...ReviewReputationData.intro} />
-      <CTA {...ReviewReputationData.cta} />
+      <TrustBar {...ReviewReputationData.trustBar} />
       <CostofSection
         heading1={ReviewReputationData.Costof.heading1}
         heading2={ReviewReputationData.Costof.heading2}

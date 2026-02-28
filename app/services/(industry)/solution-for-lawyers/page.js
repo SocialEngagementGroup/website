@@ -1,7 +1,7 @@
 import HeroSection from "@/components/ServicePage/HeroSection/HeroSection";
 import IntroSection from "@/components/ServicePage/IntroSection/IntroSection";
 import { solutionforawyersData } from "./solutionforawyersData";
-import CTA from "@/components/ServicePage/CTA/CTA";
+import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 import CostofSection from "@/components/ServicePage/CostofSection/CostofSection";
 import ProfessionalBranding from "@/components/ServicePage/ProfessionalBranding/ProfessionalBranding";
 import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrategy";
@@ -25,7 +25,7 @@ export default function Page() {
     <>
       <HeroSection {...solutionforawyersData.hero} />
       <IntroSection {...solutionforawyersData.intro} />
-      <CTA {...solutionforawyersData.cta} />
+      <TrustBar {...solutionforawyersData.trustBar} />
       <CostofSection
         heading1={solutionforawyersData.Costof.heading1}
         heading2={solutionforawyersData.Costof.heading2}

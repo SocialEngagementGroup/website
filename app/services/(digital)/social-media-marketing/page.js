@@ -1,7 +1,7 @@
 import HeroSection from "@/components/ServicePage/HeroSection/HeroSection";
 import IntroSection from "@/components/ServicePage/IntroSection/IntroSection";
 import { socialmediamarketingData } from "./socialmediamarketingData";
-import CTA from "@/components/ServicePage/CTA/CTA";
+import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 import CostofSection from "@/components/ServicePage/CostofSection/CostofSection";
 import ProfessionalBranding from "@/components/ServicePage/ProfessionalBranding/ProfessionalBranding";
 import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrategy";
@@ -25,7 +25,7 @@ export default function Page() {
     <>
       <HeroSection {...socialmediamarketingData.hero} />
       <IntroSection {...socialmediamarketingData.intro} />
-      <CTA  {...socialmediamarketingData.cta} />
+      <TrustBar {...socialmediamarketingData.trustBar} />
       <CostofSection
         heading1={socialmediamarketingData.Costof.heading1}
         heading2={socialmediamarketingData.Costof.heading2}

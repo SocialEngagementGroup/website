@@ -15,11 +15,10 @@ export const solutionforTechStartupsData = {
     description:
       "Every startup begins with an idea but turning it into traction takes more than innovation. In today’s crowded digital ecosystem, visibility, credibility, and momentum define who wins. We help ambitious tech startups like yours attract early users, earn investor confidence, and accelerate growth through data-driven storytelling, full-funnel marketing, and scalable digital systems built for speed. Whether you’re in SaaS, AI, FinTech, or eCommerce tech, we design frameworks that make your brand discoverable, credible, and impossible to ignore.",
   },
-  cta: {
-   bg: "/assets/images/services/cta/digital-google-business-profile.png",
-    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
-    button: "Book a call",
-    link: "https://calendly.com/itseg/segmeet",
+  trustBar: {
+    heading: "Top Clients & Partners",
+    description:
+      "We've helped tech startups establish strong digital authority and achieve rapid growth. Join our list of satisfied partners and take your startup to the next level.",
   },
   Costof: {
     heading1: "Why Tech Startups Need Strategic Growth Systems",

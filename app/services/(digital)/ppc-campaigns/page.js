@@ -5,7 +5,7 @@ import ProfessionalBranding from "@/components/ServicePage/ProfessionalBranding/
 import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrategy";
 import SecondaryCTA from "@/components/ServicePage/SecondaryCTA/SecondaryCTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ";
-import CTA from "@/components/ServicePage/CTA/CTA";
+import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 
 
 import { PpcServiceData } from "./ppccampaigns";
@@ -24,7 +24,7 @@ export default function Page() {
     <>
       <HeroSection {...PpcServiceData.hero} />
       <IntroSection {...PpcServiceData.intro} />
-      <CTA {...PpcServiceData.cta} />
+      <TrustBar {...PpcServiceData.trustBar} />
       <CostofSection
         heading1={PpcServiceData.Costof.heading1}
         heading2={PpcServiceData.Costof.heading2}

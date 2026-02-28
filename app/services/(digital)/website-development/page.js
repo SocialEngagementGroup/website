@@ -3,7 +3,7 @@ import IntroSection from "@/components/ServicePage/IntroSection/IntroSection";
 
 import { webdevelopmentData } from "./webdevelopmentData";
 
-import CTA from "@/components/ServicePage/CTA/CTA";
+import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 import CostofSection from "@/components/ServicePage/CostofSection/CostofSection";
 import ProfessionalBranding from "@/components/ServicePage/ProfessionalBranding/ProfessionalBranding";
 import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrategy";
@@ -26,7 +26,7 @@ export default function Page() {
     <>
       <HeroSection {...webdevelopmentData.hero} />
       <IntroSection {...webdevelopmentData.intro} />
-      <CTA {...webdevelopmentData.cta} />
+      <TrustBar {...webdevelopmentData.trustBar} />
       <CostofSection
         heading1={webdevelopmentData.Costof.heading1}
         heading2={webdevelopmentData.Costof.heading2}

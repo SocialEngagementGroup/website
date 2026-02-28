@@ -15,11 +15,10 @@ export const solutionforRestaurantsData = {
     description:
       "Great food brings people together. But in the era of digital-first, great food alone isn’t always enough. Your next customer is scrolling through their social media feeds long before they walk through your doors. Ensuring you appear while they scroll, not just appear, but with visually stunning scroll stopping content will help you stand out and attract more diners. Regardless of the size of your business, whether it's a single store or multi store franchise, we design systems tailored for your business needs to keep your tables full.",
   },
-   cta: {
-   bg: "/assets/images/services/cta/digital-google-business-profile.png",
-    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
-    button: "Book a call",
-    link: "https://calendly.com/itseg/segmeet",
+   trustBar: {
+    heading: "Top Clients & Partners",
+    description:
+      "We've helped restaurants drive more bookings and build a loyal customer base through high-impact digital strategies. Join our list of satisfied hospitality partners and scale your brand.",
   },
   Costof: {
     heading1: "Why Restaurants Need Digital Transformation",

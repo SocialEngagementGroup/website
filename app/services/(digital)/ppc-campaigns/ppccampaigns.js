@@ -15,11 +15,10 @@ export const PpcServiceData = {
     description:
       "PPC is the fastest way to drive qualified traffic when it’s engineered with precision. We build data-driven campaigns that hit the right audience, moment, and message. Starting with deep keyword and competitor research, we craft high-performing copy and creatives, then launch tightly structured accounts to maximize relevance and cut waste. Across Google, Bing, Meta, and LinkedIn, we continuously test, refine targeting, adjust bids, and optimize for higher ROI. You get clear reporting on what’s working, what’s improving, and your exact cost per conversion. Whether the goal is sales, sign-ups, or traffic, our PPC turns every dollar into visible, measurable growth.",
   },
-  cta: {
-   bg: "/assets/images/services/cta/digital-google-business-profile.png",
-    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
-    button: "Book a call",
-    link: "https://calendly.com/itseg/segmeet",
+  trustBar: {
+    heading: "Top Clients & Partners",
+    description:
+      "We've helped businesses across various industries drive high-intent traffic and achieve sustainable growth. Join our list of satisfied partners and scale your PPC performance to the next level.",
   },
   Costof: {
     heading1: "Why PPC Matters",

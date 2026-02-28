@@ -15,11 +15,10 @@ export const solutionforDoctorsData = {
     description:
       "Your reputation as a doctor is built on care and expertise but in today’s digital-first world, that’s not enough. Patients now start their healthcare journey online: searching symptoms, reading reviews, and comparing specialists long before they book an appointment. We help healthcare professionals like you stand out, attract the right patients, and build lasting trust through intelligent digital strategy, targeted visibility, and ethical growth marketing. Whether you’re an independent practitioner, a clinic, or a multi-specialty hospital, we design systems that make your practice discoverable, credible, and consistently growing.",
   },
-   cta: {
-   bg: "/assets/images/services/cta/digital-google-business-profile.png",
-    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
-    button: "Book a call",
-    link: "https://calendly.com/itseg/segmeet",
+  trustBar: {
+    heading: "Top Clients & Partners",
+    description:
+      "We've helped medical practices grow their patient base and establish strong digital authority. Join our list of satisfied healthcare providers and take your practice to the next level.",
   },
   Costof: {
     heading1: "Why Doctors Need Digital Transformation",

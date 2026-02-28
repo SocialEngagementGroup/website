@@ -5,7 +5,7 @@ import ProfessionalBranding from "@/components/ServicePage/ProfessionalBranding/
 import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrategy";
 import SecondaryCTA from "@/components/ServicePage/SecondaryCTA/SecondaryCTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ";
-import CTA from "@/components/ServicePage/CTA/CTA";
+import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 import { GoogleBusinessData } from "./GoogleBusinessData";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
@@ -22,7 +22,7 @@ export default function Page() {
     <>
       <HeroSection {...GoogleBusinessData.hero} />
       <IntroSection {...GoogleBusinessData.intro} />
-      <CTA {...GoogleBusinessData.cta} />
+      <TrustBar {...GoogleBusinessData.trustBar} />
       <CostofSection
         heading1={GoogleBusinessData.Costof.heading1}
         heading2={GoogleBusinessData.Costof.heading2}

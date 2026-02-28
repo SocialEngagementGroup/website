@@ -14,11 +14,10 @@ export const contentCreationData = {
     description:
       "Exceptional content drives clicks, shares, and conversions. We build a tailored content strategy rooted in deep audience insight then create the assets that make it work: scroll-stopping design, high-impact video, authentic influencer collaborations, and fast, scalable AI content. Every piece is engineered for the platform and purpose, from viral short-form and thought-leadership series to campaign-ready visuals. We don’t just produce content; we craft brand experiences that spark conversation, build trust, and deliver measurable ROI.",
   },
-  cta: {
-   bg: "/assets/images/services/cta/digital-google-business-profile.png",
-    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
-    button: "Book a call",
-    link: "https://calendly.com/itseg/segmeet",
+  trustBar: {
+    heading: "Top Clients & Partners",
+    description:
+      "We've helped brands across various industries craft compelling stories that resonate and convert. Join our list of satisfied clients and take your content strategy to the next level.",
   },
   Costof: {
     heading1: "Why Businesses Need Professional Content Creation",

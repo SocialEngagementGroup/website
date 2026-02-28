@@ -15,11 +15,10 @@ export const RetargetingServiceData = {
     description:
       "Retargeting and remarketing recover lost opportunities by bringing high-intent visitors back to buy. With most visitors leaving without converting, we run data-driven campaigns across Google, Meta, and more to keep your brand top-of-mind. Using behavior signals, product views, cart abandons, and browsing patterns, we serve dynamic, personalized creatives at the right moment. Advanced tracking, audience segmentation, and continuous testing cut waste and lift ROAS. The result: higher engagement, lower CPA, and a steady stream of returning customers who don’t just click, they convert.",
   },
-  cta: {
-   bg: "/assets/images/services/cta/digital-google-business-profile.png",
-    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
-    button: "Book a call",
-    link: "https://calendly.com/itseg/segmeet",
+  trustBar: {
+    heading: "Top Clients & Partners",
+    description:
+      "We've helped businesses across various industries re-engage their audience and turn missed opportunities into loyal customers. Join our list of satisfied partners and scale your retargeting performance.",
   },
   Costof: {
     heading1: "Why Retargeting Matters",

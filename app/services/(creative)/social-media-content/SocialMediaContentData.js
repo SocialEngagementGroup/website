@@ -13,11 +13,10 @@ export const SocialMediaContentData = {
     description:
       "Social is where attention is won, and communities are built. We create content that stops the scroll and starts conversations, blending creativity, trend intelligence, and platform psychology for Meta, TikTok, and beyond. From storytelling visuals to high-impact videos and carousels, every asset feels authentically “you” and drives measurable results. We study your voice, audience behavior, and competitors, then design for awareness, engagement, and conversion. The outcome: your social channels become a growth engine, strategic stories that stand out in a fast-scrolling world.",
   },
-   cta: {
-   bg: "/assets/images/services/cta/digital-google-business-profile.png",
-    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
-    button: "Book a call",
-    link: "https://calendly.com/itseg/segmeet",
+   trustBar: {
+    heading: "Top Clients & Partners",
+    description:
+      "We've helped brands across various industries craft scroll-stopping content that resonates and converts. Join our list of satisfied clients and take your social media strategy to the next level.",
   },
   Costof: {
     heading1: "How We Build High-Impact Social",

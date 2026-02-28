@@ -15,11 +15,10 @@ export const SeoServiceData = {
     description:
       "SEO is about visibility, authority, and sustainable growth not just keywords. We build a durable search foundation with deep keyword and competitor research, then optimize on-page content and technical performance so your site is faster, clearer, and easier to rank. Next, we grow authority with a smart content plan and white-hat link building, backed by analytics that show real movement. No gimmicks, just compounding visibility that turns organic traffic into qualified leads and loyal customers. When you rank where it matters, every click becomes an opportunity for growth.",
   },
-  cta: {
-   bg: "/assets/images/services/cta/digital-google-business-profile.png",
-    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
-    button: "Book a call",
-    link: "https://calendly.com/itseg/segmeet",
+  trustBar: {
+    heading: "Top Clients & Partners",
+    description:
+      "We've helped businesses across various industries establish strong digital authority and achieve sustainable growth. Join our list of satisfied partners and take your brand to the next level.",
   },
   Costof: {
     heading1: "Why SEO Matters",

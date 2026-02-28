@@ -12,11 +12,10 @@ export const logoDesignData = {
     heading: "Craft a Logo That’s Instantly Recognizable",
     description: "Your logo is more than a mark, it’s the visual heartbeat of your brand. We design logos that blend creative artistry with brand psychology and market insight, so they communicate your identity, reflect your values, and connect emotionally across every medium. Whether launching or refreshing, our process distills what makes you distinct into a timeless, scalable mark. The result: instant trust, memorability, and stronger performance across all your marketing.",
   },
-   cta: {
-   bg: "/assets/images/services/cta/digital-google-business-profile.png",
-    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
-    button: "Book a call",
-    link: "https://calendly.com/itseg/segmeet",
+  trustBar: {
+    heading: "Top Clients & Partners",
+    description:
+      "We've helped brands across various industries create memorable identities that stand the test of time. Join our list of satisfied clients and elevate your brand recognition.",
   },
     Costof: {
     heading1: "Why Your Brand Needs a Logo That Actually Works",

@@ -15,11 +15,10 @@ export const GoogleBusinessData = {
     description:
       "Turn local searches into store visits with an optimized Google Business Profile. It’s your digital storefront, the first thing nearby customers see when they look for directions, reviews, or a place to buy. We audit and perfect every detail (name, categories, descriptions, images, keywords), add high-quality visuals and keyword-rich posts, and keep your listing active with ongoing updates. We also manage reviews and responses, monitor performance, and provide insights. For single or multi-location businesses, our management ensures consistency, higher local rankings, and stronger trust, so you’re not just found, you’re chosen.",
   },
-    cta: {
-   bg: "/assets/images/services/cta/digital-google-business-profile.png",
-    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
-    button: "Book a call",
-    link: "https://calendly.com/itseg/segmeet",
+    trustBar: {
+    heading: "Top Clients & Partners",
+    description:
+      "We've helped businesses across various industries dominate their local market and build lasting trust with their customers. Join our list of satisfied partners and scale your local performance.",
   },
 
   Costof: {

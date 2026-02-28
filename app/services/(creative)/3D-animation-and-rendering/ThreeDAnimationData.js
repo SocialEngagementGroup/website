@@ -13,11 +13,10 @@ export const ThreeDAnimationData = {
     description:
       "3D animation and rendering turn abstract ideas and complex products into visuals that feel tangible and real. We blend creative direction with precision using industry-leading tools and cinematic technique to craft hyper-realistic renders and animations that elevate your brand story. From pre-launch product showcases and architectural visualizations to high-impact campaign films, every frame is built for clarity, emotion, and persuasion. Lighting, materials, textures, movement, and perspective are dialed in to signal quality and innovation. The result is content that captivates across e-commerce, ads, and investor decks and gives you a true competitive edge by letting audiences experience your vision before it exists.",
   },
-  cta: {
-   bg: "/assets/images/services/cta/digital-google-business-profile.png",
-    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
-    button: "Book a call",
-    link: "https://calendly.com/itseg/segmeet",
+  trustBar: {
+    heading: "Top Clients & Partners",
+    description:
+      "We've helped brands across various industries bring their products to life through stunning 3) animations and renderings. Join our list of satisfied clients and elevate your visual storytelling.",
   },
   Costof: {
     heading1: "Why 3D Animation Matters",

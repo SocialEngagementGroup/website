@@ -5,7 +5,7 @@ import ProfessionalBranding from "@/components/ServicePage/ProfessionalBranding/
 import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrategy";
 import SecondaryCTA from "@/components/ServicePage/SecondaryCTA/SecondaryCTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ";
-import CTA from "@/components/ServicePage/CTA/CTA";
+import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 
 import { RetargetingServiceData } from "./RetargetingServiceData";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
@@ -23,7 +23,7 @@ export default function Page() {
     <>
       <HeroSection {...RetargetingServiceData.hero} />
       <IntroSection {...RetargetingServiceData.intro} />
-      <CTA {...RetargetingServiceData.cta} />
+      <TrustBar {...RetargetingServiceData.trustBar} />
       <CostofSection
         heading1={RetargetingServiceData.Costof.heading1}
         heading2={RetargetingServiceData.Costof.heading2}
