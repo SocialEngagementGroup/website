@@ -1,13 +1,13 @@
-export const websiteDevelopmentData = {
+export const webdevelopmentData = {
   hero: {
     title: "Website Development",
     description:
       "Get a fast, SEO-optimized website that drives sales. We design and develop custom sites on WordPress, Shopify, and Next.js to grow your business online.",
     subtitle: "digital",
     ctaButton: "Connect With Us",
-        ctaLink: "#contact",
-   img: "/assets/images/services/creative/branding/heroimg.png",
-   bg: "/assets/images/backgrounds/service-bg.webp",
+    ctaLink: "/contact-us",
+    img: "/services/creative/branding/heroimg.png",
+    bg: "/services/creative/branding/herobg.webp",
   },
 
   intro: {
@@ -15,10 +15,11 @@ export const websiteDevelopmentData = {
     description:
       "Your website is your most powerful sales and branding asset, not a brochure. We design and develop sites that look sharp, load fast, and convert, pairing striking visuals with seamless UX. Starting from your goals, audience, and competitors, we craft intuitive journeys, responsive layouts, and persuasive content. Built on modern frameworks like WordPress, Next.js, and Shopify, every detail from performance and SEO to analytics and tracking is engineered for results. Whether corporate, e-commerce, or a scalable web app, we ship reliable, flexible sites that drive measurable growth and trust. In a world of split-second decisions, your website is where customers choose you or don’t.",
   },
-  trustBar: {
-    heading: "Top Clients & Partners",
-    description:
-      "We've helped businesses across various industries build high-performance digital platforms that drive results. Join our list of satisfied partners and take your website to the next level.",
+  cta: {
+    bg: "/services/CTA/Digital-google-business-profile.webp",
+    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
+    button: "Book a call",
+    link: "https://calendly.com/itseg/segmeet",
   },
   Costof: {
     heading1: "Why It Matters",
@@ -27,19 +28,19 @@ export const websiteDevelopmentData = {
       "Your website is the first stop for customers and their first impression so speed, design, and usability matter. If it’s slow, people bounce before reading; if it looks dated, credibility drops. Confusing UX leaks clicks and tanks conversions, while mobile hiccups cost high-intent traffic. Broken SEO and poor structure bury you in search, inconsistent branding makes you forgettable, and missing trust cues (like reviews or security) raise doubts. A fast, modern, intuitive experience builds confidence and that confidence turns visits into leads and sales.",
     items: [
       {
-       img: "/assets/images/services/digital/website-development/high-bounce-rates-as-visitors-leave.png",
+        img: "/services/digital/website-development/High-bounce-rates-as-visitors-leave.png",
         text: "<strong>High bounce</strong> rates as visitors leave before exploring your site.",
       },
       {
-       img: "/assets/images/services/digital/website-development/lost-sales-opportunities.png",
+        img: "/services/digital/website-development/Lost-sales-opportunities.png",
         text: "<strong>Lost sales</strong> opportunities from pages that don’t convert effectively.",
       },
       {
-       img: "/assets/images/services/digital/website-development/poor-brand-perception.png",
+        img: "/services/digital/website-development/Poor-brand-perception.png",
         text: "<strong>Poor perception</strong> caused by outdated design or weak UX.",
       },
       {
-       img: "/assets/images/services/digital/website-development/hard-to-maintain-tech-stack.png",
+        img: "/services/digital/website-development/Hard-to-maintain-tech-stack.png",
         text: "<strong>Hard-to-maintain</strong> tech stack and broken tracking hurt performance and insights.",
       },
 
@@ -55,7 +56,7 @@ export const websiteDevelopmentData = {
       { text: "Robust <strong>analytics</strong>, security, and scalability built for long-term growth." },
 
     ],
-    video: "/assets/videos/services/digital/website-development.webm",
+    video: "/videos/services/digital/Website-Development.mp4",
   },
 
   BrandStrategy: {
@@ -72,7 +73,7 @@ export const websiteDevelopmentData = {
         text: "Ongoing support and updates to keep your site fast and reliable.",
       },
     ],
-   img: "/assets/images/services/master-image-slider/digital/website-development.png",
+    img: "/services/digital/website-development/digital-website-development.png",
   },
 
   FAQ: {

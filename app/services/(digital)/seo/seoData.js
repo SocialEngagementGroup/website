@@ -1,13 +1,13 @@
-export const seoData = {
+export const SeoServiceData = {
   hero: {
     title: "SEO",
     description:
       "Boost visibility and traffic with expert SEO. We optimize keywords, content, and links so your business ranks higher and attracts qualified customers.",
     subtitle: "digital",
     ctaButton: "Connect With Us",
-        ctaLink: "#contact",
-   img: "/assets/images/services/creative/branding/heroimg.png",   // original kept
-   bg: "/assets/images/backgrounds/service-bg.webp",     // original kept
+    ctaLink: "/contact-us",
+    img: "/services/creative/branding/heroimg.png",   // original kept
+    bg: "/services/creative/branding/herobg.webp",     // original kept
   },
 
   intro: {
@@ -15,10 +15,11 @@ export const seoData = {
     description:
       "SEO is about visibility, authority, and sustainable growth not just keywords. We build a durable search foundation with deep keyword and competitor research, then optimize on-page content and technical performance so your site is faster, clearer, and easier to rank. Next, we grow authority with a smart content plan and white-hat link building, backed by analytics that show real movement. No gimmicks, just compounding visibility that turns organic traffic into qualified leads and loyal customers. When you rank where it matters, every click becomes an opportunity for growth.",
   },
-  trustBar: {
-    heading: "Top Clients & Partners",
-    description:
-      "We've helped businesses across various industries establish strong digital authority and achieve sustainable growth. Join our list of satisfied partners and take your brand to the next level.",
+  cta: {
+    bg: "/services/CTA/Digital-google-business-profile.webp",
+    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
+    button: "Book a call",
+    link: "https://calendly.com/itseg/segmeet",
   },
   Costof: {
     heading1: "Why SEO Matters",
@@ -27,19 +28,19 @@ export const seoData = {
       "Search is where most buying journeys start, and if you’re not on page one, you’re effectively invisible. Strong SEO aligns your pages with real buyer intent, pairing relevant content with fast, well-structured experiences that search engines and customers trust. As authority and quality backlinks compound, you earn qualified clicks instead of random traffic, reduce dependence on paid ads, and show up precisely at the moment of need. That visibility turns searches into pipeline and sales.",
     items: [
       {
-       img: "/assets/images/services/digital/seo/competitors-capture-the-demand-meant-for-you.png",
+        img: "/services/digital/seo/Competitors-capture-the-demand-meant-for-you.png",
         text: "<strong>Competitors</strong> capture the demand meant for you.",
       },
       {
-       img: "/assets/images/services/digital/seo/buyers-never-discover-your-brand.png",
+        img: "/services/digital/seo/Buyers-never-discover-your-brand.png",
         text: "<strong>High-intent buyers</strong> never discover your brand.",
       },
       {
-       img: "/assets/images/services/digital/seo/you-become-overly-reliant-on-paid-advertising.png",
+        img: "/services/digital/seo/You-become-overly-reliant-on-paid-advertising.png",
         text: "You become overly reliant on <strong>paid advertising</strong>.",
       },
       {
-       img: "/assets/images/services/digital/seo/customer-acquisition-costs-rise-rapidly.png",
+        img: "/services/digital/seo/Customer-acquisition-costs-rise-rapidly.png",
         text: "<strong>Customer acquisition</strong> costs rise rapidly.",
       },
 
@@ -54,7 +55,7 @@ export const seoData = {
       { text: "Brand trust, credibility, and domain authority grow stronger over time." },
       { text: "Customer acquisition costs decline naturally as organic momentum builds." },
     ],
-    video: "/assets/videos/services/digital/seo.webm",
+    video: "/videos/services/digital/SEO.mp4",
   },
 
   BrandStrategy: {
@@ -65,7 +66,7 @@ export const seoData = {
       { text: "White-hat link building that steadily boosts authority and trust signals." },
       { text: "Monthly performance reports with clear insights and actionable next steps." },
     ],
-   img: "/assets/images/services/master-image-slider/digital/seo.png", // original kept
+    img: "/services/digital/seo/digital-seo.png", // original kept
   },
 
   FAQ: {

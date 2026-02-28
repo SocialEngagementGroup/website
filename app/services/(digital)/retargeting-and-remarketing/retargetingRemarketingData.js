@@ -1,13 +1,13 @@
-export const retargetingRemarketingData = {
+export const RetargetingServiceData = {
   hero: {
     title: "Retargeting & Remarketing",
     description:
       "Re-engage lost visitors with smart retargeting ads. Personalized campaigns across Google and Meta that boost conversions and maximize marketing ROI.",
     subtitle: "digital",
     ctaButton: "Connect With Us",
-    ctaLink: "#contact",
-   img: "/assets/images/services/creative/branding/heroimg.png",
-   bg: "/assets/images/backgrounds/service-bg.webp",
+    ctaLink: "/contact-us",
+    img: "/services/creative/branding/heroimg.png",
+    bg: "/services/creative/branding/herobg.webp",
   },
 
   intro: {
@@ -15,10 +15,11 @@ export const retargetingRemarketingData = {
     description:
       "Retargeting and remarketing recover lost opportunities by bringing high-intent visitors back to buy. With most visitors leaving without converting, we run data-driven campaigns across Google, Meta, and more to keep your brand top-of-mind. Using behavior signals, product views, cart abandons, and browsing patterns, we serve dynamic, personalized creatives at the right moment. Advanced tracking, audience segmentation, and continuous testing cut waste and lift ROAS. The result: higher engagement, lower CPA, and a steady stream of returning customers who don’t just click, they convert.",
   },
-  trustBar: {
-    heading: "Top Clients & Partners",
-    description:
-      "We've helped businesses across various industries re-engage their audience and turn missed opportunities into loyal customers. Join our list of satisfied partners and scale your retargeting performance.",
+  cta: {
+    bg: "/services/CTA/Digital-google-business-profile.webp",
+    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
+    button: "Book a call",
+    link: "https://calendly.com/itseg/segmeet",
   },
   Costof: {
     heading1: "Why Retargeting Matters",
@@ -26,22 +27,22 @@ export const retargetingRemarketingData = {
     description:
       "Most visitors leave without converting. Retargeting keeps your brand visible after they bounce. It reconnects with people who already showed intent. Frequency and sequencing nudge them at the right moments. Dynamic creatives remind them of the products they viewed. Smart exclusions prevent waste and ad fatigue. Cross-channel reach follows them from social to web. Measurable lift shows up in return visits and lower CPA. When intent peaks, your message is there first. The result is more conversions from the traffic you already paid for.",
     items: [
- {
- img: "/assets/images/services/digital/retargeting-remarketing/warm-leads-vanish-after-a-single-visit.png",
-  text: "<strong>Warm leads</strong> vanish after a single visit with no chance to re-engage.",
-},
-{
- img: "/assets/images/services/digital/retargeting-remarketing/competitors-step-in-and-reclaim-the-audience.png",
-  text: "<strong>Competitors</strong> step in and reclaim the audience you initially attracted",
-},
-{
- img: "/assets/images/services/digital/retargeting-remarketing/roi-declines.png",
-  text: "<strong>Overall marketing</strong> ROI declines as conversions slip through the cracks.",
-},
-{
- img: "/assets/images/services/digital/retargeting-remarketing/cac-rises-steadily.png",
-  text: "CAC rises steadily and <strong>growth slows</strong> as missed opportunities compound.",
-},
+      {
+        img: "/services/digital/retargeting-remarketing/Warm-leads-vanish-after-a-single-visit.png",
+        text: "<strong>Warm leads</strong> vanish after a single visit with no chance to re-engage.",
+      },
+      {
+        img: "/services/digital/retargeting-remarketing/Competitors-step-in-and-reclaim-the-audience.png",
+        text: "<strong>Competitors</strong> step in and reclaim the audience you initially attracted",
+      },
+      {
+        img: "/services/digital/retargeting-remarketing/ROI-declines.png",
+        text: "<strong>Overall marketing</strong> ROI declines as conversions slip through the cracks.",
+      },
+      {
+        img: "/services/digital/retargeting-remarketing/CAC-rises-steadily.png",
+        text: "CAC rises steadily and <strong>growth slows</strong> as missed opportunities compound.",
+      },
 
     ],
   },
@@ -54,7 +55,7 @@ export const retargetingRemarketingData = {
       { text: "Revenue increases consistently as retargeting lifts performance across channels." },
       { text: "CPAs drop while ROAS improves as warm audiences convert more efficiently." },
     ],
-    video: "/assets/videos/services/digital/retargeting-remarketing.webm",
+    video: "/videos/services/digital/Retargeting-&-Remarketing.mp4",
   },
 
   BrandStrategy: {
@@ -65,7 +66,7 @@ export const retargetingRemarketingData = {
       { text: "Cross-platform audience tracking and smart segmentation at scale." },
       { text: "Frequency control, conversion tracking, and clear ROI reporting." },
     ],
-   img: "/assets/images/services/master-image-slider/digital/retargeting-remarketing.png",
+    img: "/services/digital/retargeting-remarketing/digital-retargeting-and-remarketing.png",
   },
 
   FAQ: {

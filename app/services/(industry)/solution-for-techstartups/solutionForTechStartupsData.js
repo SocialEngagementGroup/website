@@ -1,13 +1,13 @@
-export const solutionForTechStartupsData = {
+export const solutionforTechStartupsData = {
   hero: {
     title: "Solution for Tech Startups",
     description:
       "Accelerate your tech startup’s growth with data-driven marketing. Build traction, attract users, and scale visibility from launch to Series A and beyond.",
     subtitle: "industry",
-      ctaButton: "Connect With Us",
-     ctaLink: "#contact",
-   img: "/assets/images/services/creative/branding/heroimg.png", // kept original
-   bg: "/assets/images/backgrounds/service-bg.webp",   // kept original
+    ctaButton: "Connect With Us",
+    ctaLink: "/contact-us",
+    img: "/services/creative/branding/heroimg.png", // kept original
+    bg: "/services/creative/branding/herobg.webp",   // kept original
   },
 
   intro: {
@@ -15,10 +15,11 @@ export const solutionForTechStartupsData = {
     description:
       "Every startup begins with an idea but turning it into traction takes more than innovation. In today’s crowded digital ecosystem, visibility, credibility, and momentum define who wins. We help ambitious tech startups like yours attract early users, earn investor confidence, and accelerate growth through data-driven storytelling, full-funnel marketing, and scalable digital systems built for speed. Whether you’re in SaaS, AI, FinTech, or eCommerce tech, we design frameworks that make your brand discoverable, credible, and impossible to ignore.",
   },
-  trustBar: {
-    heading: "Top Clients & Partners",
-    description:
-      "We've helped tech startups establish strong digital authority and achieve rapid growth. Join our list of satisfied partners and take your startup to the next level.",
+  cta: {
+    bg: "/services/CTA/Digital-google-business-profile.webp",
+    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
+    button: "Book a call",
+    link: "https://calendly.com/itseg/segmeet",
   },
   Costof: {
     heading1: "Why Tech Startups Need Strategic Growth Systems",
@@ -27,19 +28,19 @@ export const solutionForTechStartupsData = {
       "In the startup world, timing determines who breaks out and who gets buried, and while competitors scale visibility early, many founders are still validating traction. A strong digital growth system ensures your product doesn’t just launch, it lands. Early credibility fuels investor confidence, sharp positioning helps you stand out in a crowded market, and data-driven execution prevents wasted time and budget. Strategic growth systems help you reach the right audience, prove traction early, and scale sustainably.",
     items: [
       {
-       img: "/assets/images/services/industry/solution-for-tech-startups/launching-without-consistent-lead-or-user-acquisition.png", // kept original
+        img: "/services/industry/Solution-for-Tech-Startups/Launching-without-consistent-lead-or-user-acquisition.png", // kept original
         text: "Launching without consistent lead or user acquisition.",
       },
       {
-       img: "/assets/images/services/industry/solution-for-tech-startups/struggling-to-convert-website-visitors-into-demos.png", // kept original
+        img: "/services/industry/Solution-for-Tech-Startups/Struggling-to-convert-website-visitors-into-demos.png", // kept original
         text: "Struggling to convert website visitors into demos or signups.",
       },
       {
-       img: "/assets/images/services/industry/solution-for-tech-startups/losing-mindshare-to-faster-louder-competitors.png", // kept original
+        img: "/services/industry/Solution-for-Tech-Startups/Losing-mindshare-to-faster,-louder-competitors.png", // kept original
         text: "Losing mindshare to faster, louder competitors.",
       },
       {
-       img: "/assets/images/services/industry/solution-for-tech-startups/relying-only-on-paid-ads-without-building-organic-trust.png", // kept original
+        img: "/services/industry/Solution-for-Tech-Startups/Relying-only-on-paid-ads-without-building-organic-trust.png", // kept original
         text: "Relying only on paid ads without building organic trust.",
       },
     ],
@@ -53,7 +54,7 @@ export const solutionForTechStartupsData = {
       { text: "Investors see traction through measurable growth signals." },
       { text: "Your marketing scales with your product, not against it." },
     ],
-    video: "/assets/videos/services/industry/solution-for-tech-startups.webm", // kept original
+    video: "/videos/services/Industry/Solution-for-Tech-Startups.mp4", // kept original
   },
 
   BrandStrategy: {
@@ -75,7 +76,7 @@ export const solutionForTechStartupsData = {
         text: "<strong>Analytics & Growth Reporting:</strong> Track the right metrics, uncover insight patterns, and make confident growth decisions.",
       },
     ],
-   img: "/assets/images/services/master-image-slider/industry/solution-for-tech-startups.png", // kept original
+    img: "/services/industry/Solution-for-Tech-Startups/Industry-tech-startups.png",
   },
 
   CaseStudy: {

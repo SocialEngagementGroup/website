@@ -5,19 +5,20 @@ export const contentCreationData = {
       "Create content that converts. From videos and graphics to influencer and AI-generated assets—build engagement, trust, and growth for your brand.",
     subtitle: "Creative",
     ctaButton: "Connect With Us",
-        ctaLink: "#contact",
-   img: "/assets/images/services/creative/branding/heroimg.png",
-   bg: "/assets/images/backgrounds/service-bg.webp",
+    ctaLink: "/contact-us",
+    img: "/services/creative/branding/heroimg.png",
+    bg: "/services/creative/branding/herobg.webp",
   },
   intro: {
     heading: "Content That Captures Attention",
     description:
       "Exceptional content drives clicks, shares, and conversions. We build a tailored content strategy rooted in deep audience insight then create the assets that make it work: scroll-stopping design, high-impact video, authentic influencer collaborations, and fast, scalable AI content. Every piece is engineered for the platform and purpose, from viral short-form and thought-leadership series to campaign-ready visuals. We don’t just produce content; we craft brand experiences that spark conversation, build trust, and deliver measurable ROI.",
   },
-  trustBar: {
-    heading: "Top Clients & Partners",
-    description:
-      "We've helped brands across various industries craft compelling stories that resonate and convert. Join our list of satisfied clients and take your content strategy to the next level.",
+  cta: {
+    bg: "/services/CTA/Digital-google-business-profile.webp",
+    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
+    button: "Book a call",
+    link: "https://calendly.com/itseg/segmeet",
   },
   Costof: {
     heading1: "Why Businesses Need Professional Content Creation",
@@ -26,19 +27,19 @@ export const contentCreationData = {
       "High-quality visual content and engaging brand storytelling are essential for cutting through the digital noise. They are proven to boost your online reach, build brand trust, and increase conversion rates. Without a professional content strategy, your marketing messages risk being ignored, and your investment goes to waste.",
     items: [
       {
-       img: "/assets/images/services/creative/creative-content/audience-engagement.png",
+        img: "/services/creative/creative-content/audience-engagement.png",
         text: "Your posts and ads get lost in crowded social media feeds, leading to low <strong>audience engagement.</strong>",
       },
       {
-       img: "/assets/images/services/creative/creative-content/memorable-impact.png",
+        img: "/services/creative/creative-content/memorable-impact.png",
         text: "Your campaigns feel <strong>generic</strong> and fail to make a memorable impact.",
       },
       {
-       img: "/assets/images/services/creative/creative-content/you-struggle-to-build-a-loyal-community.png",
+        img: "/services/creative/creative-content/you-struggle-to-build-a-loyal-community.png",
         text: "Your <strong>brand message</strong> gets diluted, and you struggle to build a loyal community.",
       },
       {
-       img: "/assets/images/services/creative/creative-content/win-the-online-conversation-and-market-share.png",
+        img: "/services/creative/creative-content/win-the-online-conversation-and-market-share.png",
         text: "<strong>Competitors</strong> with stronger content easily win the online conversation and market share.",
       },
     ],
@@ -59,7 +60,7 @@ export const contentCreationData = {
         text: "Innovative <strong>AI-powered content</strong> keeps your brand at the forefront of industry trends.",
       },
     ],
-    video: "/assets/videos/services/creative/content-creation.webm",
+    video: "/videos/services/creative/Content-Creation.mp4",
   },
   ContentStrategy: {
     heading: "What You Get",
@@ -77,7 +78,7 @@ export const contentCreationData = {
         text: "Scalable <strong>AI-powered content</strong> tailored to your specific niche and brand voice.",
       },
     ],
-   img: "/assets/images/services/master-image-slider/creative/content-creation.png",
+    img: "/services/creative/creative-content/creative-content-creation.png",
   },
   FAQ: {
     heading: "FAQs",

@@ -1,22 +1,23 @@
-export const threeDAnimationRenderingData = {
+export const ThreeDAnimationData = {
   hero: {
     title: "3D Animation & Rendering",
     description: "Transform ideas into stunning 3D visuals. We create hyper-realistic renders, animations, and product demos that captivate audiences and drive engagement.",
     subtitle: "creative",
     ctaButton: "Connect With Us",
-    ctaLink: "#contact",
-   img: "/assets/images/services/creative/branding/heroimg.png",
-   bg: "/assets/images/backgrounds/service-bg.webp",
+    ctaLink: "/contact-us",
+    img: "/services/creative/branding/heroimg.png",
+    bg: "/services/creative/branding/herobg.webp",
   },
   intro: {
     heading: "Make People Feel What You Imagine",
     description:
       "3D animation and rendering turn abstract ideas and complex products into visuals that feel tangible and real. We blend creative direction with precision using industry-leading tools and cinematic technique to craft hyper-realistic renders and animations that elevate your brand story. From pre-launch product showcases and architectural visualizations to high-impact campaign films, every frame is built for clarity, emotion, and persuasion. Lighting, materials, textures, movement, and perspective are dialed in to signal quality and innovation. The result is content that captivates across e-commerce, ads, and investor decks and gives you a true competitive edge by letting audiences experience your vision before it exists.",
   },
-  trustBar: {
-    heading: "Top Clients & Partners",
-    description:
-      "We've helped brands across various industries bring their products to life through stunning 3) animations and renderings. Join our list of satisfied clients and elevate your visual storytelling.",
+  cta: {
+    bg: "/services/CTA/Digital-google-business-profile.webp",
+    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
+    button: "Book a call",
+    link: "https://calendly.com/itseg/segmeet",
   },
   Costof: {
     heading1: "Why 3D Animation Matters",
@@ -24,19 +25,19 @@ export const threeDAnimationRenderingData = {
       "3D animation makes complex ideas instantly clear. It turns products into tangible, premium experiences before they even exist. You can pre-sell and validate concepts without manufacturing. Cinematic motion holds attention longer and boosts recall. Realism and polish lift brand perception across categories. Performance improves across ads, e-commerce, and pitches. Support questions drop when visuals explain what words can’t. Campaigns stand out and get remembered on every channel.",
     items: [
       {
-       img: "/assets/images/services/creative/animation-rendering/look-flat-and-forgettable.png",
+        img: "/services/creative/animation-rendering/look-flat-and-forgettable.png",
         text: "<strong>Products look</strong> flat and forgettable, lacking impact and differentiation.",
       },
       {
-       img: "/assets/images/services/creative/animation-rendering/audiences-disengage-quickly.png",
+        img: "/services/creative/animation-rendering/audiences-disengage-quickly.png",
         text: "<strong>Audiences disengage</strong> quickly, losing interest before they connect.",
       },
       {
-       img: "/assets/images/services/creative/animation-rendering/competitors-look-more-advanced.png",
+        img: "/services/creative/animation-rendering/competitors-look-more-advanced.png",
         text: "<strong>Competitors instantly</strong> appear more advanced with better visuals.",
       },
       {
-       img: "/assets/images/services/creative/animation-rendering/competitors-outshine.png",
+        img: "/services/creative/animation-rendering/competitors-outshine.png",
         text: "<strong>Competitors</strong> outshine your presentation with higher-quality content.",
       },
     ],
@@ -58,7 +59,7 @@ export const threeDAnimationRenderingData = {
         text: "Sales cycles <strong>shorten</strong> as visuals accelerate decision-making.",
       },
     ],
-    video: "/assets/videos/services/creative/3d-animation-rendering.webm",
+    video: "/videos/services/creative/3D-Animation-&-Rendering.mp4",
   },
   BrandStrategy: {
     heading: "What You Get",
@@ -77,7 +78,7 @@ export const threeDAnimationRenderingData = {
       },
 
     ],
-   img: "/assets/images/services/master-image-slider/creative/3d-animation-rendering.png",
+    img: "/services/creative/animation-rendering/creative-3d-animation-and-rendering.png",
   },
   FAQ: {
     heading: "FAQs",

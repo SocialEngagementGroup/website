@@ -1,13 +1,13 @@
-export const solutionForRestaurantsData = {
+export const solutionforRestaurantsData = {
   hero: {
     title: "Solution for Restaurants",
     description:
       "Boost your restaurant’s visibility and reservations with smart digital marketing. Rank higher locally, get more bookings, and build loyal customers.",
     subtitle: "industry",
-     ctaButton: "Connect With Us",
-     ctaLink: "#contact",
-   img: "/assets/images/services/creative/branding/heroimg.png", // kept original
-   bg: "/assets/images/backgrounds/service-bg.webp",   // kept original
+    ctaButton: "Connect With Us",
+    ctaLink: "/contact-us",
+    img: "/services/creative/branding/heroimg.png", // kept original
+    bg: "/services/creative/branding/herobg.webp",   // kept original
   },
 
   intro: {
@@ -15,10 +15,11 @@ export const solutionForRestaurantsData = {
     description:
       "Great food brings people together. But in the era of digital-first, great food alone isn’t always enough. Your next customer is scrolling through their social media feeds long before they walk through your doors. Ensuring you appear while they scroll, not just appear, but with visually stunning scroll stopping content will help you stand out and attract more diners. Regardless of the size of your business, whether it's a single store or multi store franchise, we design systems tailored for your business needs to keep your tables full.",
   },
-   trustBar: {
-    heading: "Top Clients & Partners",
-    description:
-      "We've helped restaurants drive more bookings and build a loyal customer base through high-impact digital strategies. Join our list of satisfied hospitality partners and scale your brand.",
+  cta: {
+    bg: "/services/CTA/Digital-google-business-profile.webp",
+    title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
+    button: "Book a call",
+    link: "https://calendly.com/itseg/segmeet",
   },
   Costof: {
     heading1: "Why Restaurants Need Digital Transformation",
@@ -27,19 +28,19 @@ export const solutionForRestaurantsData = {
       "Diners now discover food online long before they taste it, comparing menus, reading reviews, and scrolling through photos on Google, Instagram, and Maps. If your restaurant isn’t visible in those moments, your competitors will be. A strong digital presence shapes trust, drives foot traffic, and builds loyalty before a guest ever walks in. With the right visibility, reviews, and local SEO, digital transformation ensures your restaurant gets discovered first, chosen quickly, and remembered often.",
     items: [
       {
-       img: "/assets/images/services/industry/solution-for-restaurants/diners-can-t-find-you-where-they-look-first.png", // kept original
+        img: "/services/industry/Solution-for-Restaurant/Diners-can’t-find-you-where-they-look-first.png", // kept original
         text: "Diners can’t find you where they look first.",
       },
       {
-       img: "/assets/images/services/industry/solution-for-restaurants/your-competitors-set-the-story-not-you.png", // kept original
+        img: "/services/industry/Solution-for-Restaurant/Your-competitors-set-the-story,-not-you.png", // kept original
         text: "Your competitors set the story, not you.",
       },
       {
-       img: "/assets/images/services/industry/solution-for-restaurants/outdated-info-quietly-hurts-trust.png", // kept original
+        img: "/services/industry/Solution-for-Restaurant/Outdated-info-quietly-hurts-trust.png", // kept original
         text: "Outdated info quietly hurts trust.",
       },
       {
-       img: "/assets/images/services/industry/solution-for-restaurants/everyday-near-me-searches-pass-you-by.png", // kept original
+        img: "/services/industry/Solution-for-Restaurant/Everyday-near-me-searches-pass-you-by.png", // kept original
         text: "Everyday “near me” searches pass you by.",
       },
     ],
@@ -53,7 +54,7 @@ export const solutionForRestaurantsData = {
       { text: "Stay top of mind locally with consistent content, promos, and reminders." },
       { text: "Make it easy for happy guests to tag, post, and amplify your restaurant." },
     ],
-    video: "/assets/videos/services/industry/solution-for-restaurants.webm", // kept original
+    video: "/videos/services/Industry/Solution-for-restaurants.mp4", // kept original
   },
 
   BrandStrategy: {
@@ -78,7 +79,7 @@ export const solutionForRestaurantsData = {
         text: "Influencer & UGC Campaigns: Partner with food creators to spark organic buzz and community-driven discovery.",
       },
     ],
-   img: "/assets/images/services/master-image-slider/industry/solution-for-restaurant.png", // kept original
+    img: "/services/industry/Solution-for-Restaurant/Solution-for-Restaurant.png",
   },
 
   CaseStudy: {
