@@ -43,7 +43,7 @@ export const SocialMediaContentData = {
       },
     ],
   },
-  ProfessionalLogoDesign: {
+  ProfessionalBranding: {
     heading: "What Happens With High-Impact Social Content",
     items: [
    {

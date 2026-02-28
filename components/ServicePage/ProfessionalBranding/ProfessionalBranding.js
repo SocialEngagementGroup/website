@@ -62,13 +62,13 @@ const ProfessionalBranding = ({ heading, items, video }) => {
         >
           {/* LEFT */}
           <div className="text-white order-2 md:order-1 mt-4 px-5 md:px-0">
-            <h2 className="!font-serif !font-bold !leading-tight !tracking-tight max-w-[600px]">{heading}</h2>
+            <h2 className="max-w-[600px]">{heading}</h2>
 
             <ul className="mt-[16px] mb-[10px] max-w-[630px] max-[1300px]:max-w-full">
               {items?.map((item, index) => (
                 <li
                   key={index}
-                  className="list-disc mt-[1rem] ml-[30px] max-md:list-outside max-md:ml-0 !p1 !font-light opacity-90"
+                  className="list-disc mt-[1rem] ml-[30px] max-md:list-outside max-md:ml-0 p1 opacity-90"
                   dangerouslySetInnerHTML={{ __html: item.text }}
                 ></li>
               ))}
