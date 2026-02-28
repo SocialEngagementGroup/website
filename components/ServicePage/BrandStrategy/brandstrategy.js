@@ -37,7 +37,7 @@ const BrandStrategy = ({ heading, items, img }) => {
           >
             <div className="max-w-[900px] max-md:!mt-0 max-md:!w-full text-black px-5 md:pl-10 lg:pl-16 md:pr-0">
               {/* Heading */}
-              <h2 className="max-w-[750px] text-center lg:text-left">{heading}</h2>
+              <h2 className="max-w-[750px] text-center mx-auto lg:mx-0">{heading}</h2>
 
               {/* List Items */}
               <ul className="mt-[16px] mb-[10px] max-w-[750px] max-[1300px]:w-full px-5 md:px-0">

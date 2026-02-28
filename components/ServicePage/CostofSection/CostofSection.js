@@ -8,7 +8,7 @@ const CostofSection = ({ heading1, heading2, description, items }) => {
       {/* First Section: Intro Block */}
       <section className="bg-white">
         <div className="w-[78%] mx-auto text-center pt-10 pb-5 md:pt-20 md:pb-10 max-md:w-[90%]">
-          <h2 className="max-w-[1130px] mx-auto max-md:w-full mb-5 text-black text-center lg:text-left">
+          <h2 className="max-w-[1130px] mx-auto max-md:w-full mb-5 text-black text-center">
             {heading1}
           </h2>
           <p
@@ -21,7 +21,7 @@ const CostofSection = ({ heading1, heading2, description, items }) => {
       {/* Second Section: Cards Grid */}
       <section className="bg-[#975554]">
         <div className="w-[78%] mx-auto text-center pt-12 pb-20 md:pt-24 md:pb-32 max-md:w-[90%]">
-          <h2 className="mb-10 md:mb-15 text-white text-center lg:text-left">
+          <h2 className="mb-10 md:mb-15 text-white text-center">
             {heading2}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-[1080px] mx-auto text-left">
