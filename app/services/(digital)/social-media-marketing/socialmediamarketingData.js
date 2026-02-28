@@ -5,7 +5,7 @@ export const socialmediamarketingData = {
       "Boost engagement and sales with data-driven social media marketing. We craft creative, high-performing campaigns across Meta, TikTok, LinkedIn, and more.",
     subtitle: "digital",
     ctaButton: "Connect With Us",
-        ctaLink: "/contact-us",
+        ctaLink: "#contact",
     img: "/services/creative/branding/heroimg.png",
     bg: "/services/creative/branding/herobg.png",
   },

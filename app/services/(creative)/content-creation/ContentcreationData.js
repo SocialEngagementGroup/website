@@ -5,7 +5,7 @@ export const contentCreationData = {
       "Create content that converts. From videos and graphics to influencer and AI-generated assets—build engagement, trust, and growth for your brand.",
     subtitle: "Creative",
     ctaButton: "Connect With Us",
-        ctaLink: "/contact-us",
+        ctaLink: "#contact",
     img: "/services/creative/branding/heroimg.png",
     bg: "/services/creative/branding/herobg.png",
   },

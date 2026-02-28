@@ -5,7 +5,7 @@ export const SeoServiceData = {
       "Boost visibility and traffic with expert SEO. We optimize keywords, content, and links so your business ranks higher and attracts qualified customers.",
     subtitle: "digital",
     ctaButton: "Connect With Us",
-        ctaLink: "/contact-us",
+        ctaLink: "#contact",
     img: "/services/creative/branding/heroimg.png",   // original kept
     bg: "/services/creative/branding/herobg.png",     // original kept
   },

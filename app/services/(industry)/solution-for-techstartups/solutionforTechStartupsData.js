@@ -5,7 +5,7 @@ export const solutionforTechStartupsData = {
       "Accelerate your tech startup’s growth with data-driven marketing. Build traction, attract users, and scale visibility from launch to Series A and beyond.",
     subtitle: "industry",
       ctaButton: "Connect With Us",
-     ctaLink: "/contact-us",
+     ctaLink: "#contact",
     img: "/services/creative/branding/heroimg.png", // kept original
     bg: "/services/creative/branding/herobg.png",   // kept original
   },

@@ -5,7 +5,7 @@ export const PpcServiceData = {
       "Drive instant traffic and sales with expert PPC management. Data-driven ads on Google, Bing, and Meta designed to maximize ROI and minimize wasted spend.",
     subtitle: "digital",
     ctaButton: "Connect With Us",
-    ctaLink: "/contact-us",
+    ctaLink: "#contact",
     img: "/services/creative/branding/heroimg.png",
     bg: "/services/creative/branding/herobg.png",
   },

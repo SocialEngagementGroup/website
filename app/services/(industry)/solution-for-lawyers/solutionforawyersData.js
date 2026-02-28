@@ -5,7 +5,7 @@ export const solutionforawyersData = {
       "Boost your law firm’s visibility and reputation with tailored digital marketing. Get found first, attract quality clients, and grow your practice with trust.",
     subtitle: "industry",
     ctaButton: "Contact With Us",
-     ctaLink: "/contact-us",
+     ctaLink: "#contact",
     img: "/services/creative/branding/heroimg.png",
     bg: "/services/creative/branding/herobg.png",
   },

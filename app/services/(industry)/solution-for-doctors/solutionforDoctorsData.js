@@ -5,7 +5,7 @@ export const solutionforDoctorsData = {
       "Grow your clinic’s visibility and patient trust with tailored healthcare marketing. Get found first, attract quality patients, and scale your practice ethically.",
     subtitle: "industry",
     ctaButton: "Contact With Us",
-     ctaLink: "/contact-us",
+     ctaLink: "#contact",
     img: "/services/creative/branding/heroimg.png",
     bg: "/services/creative/branding/herobg.png",
   },

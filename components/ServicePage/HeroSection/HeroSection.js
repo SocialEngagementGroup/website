@@ -41,7 +41,7 @@ const HeroSection = ({
             {ctaButton && (
               <Link href={ctaLink}>
                 <button
-                  className={`rounded-[14px]
+                  className={`rounded-full
                     font-semibold
                     px-6 py-3 bg-gray-300 text-gray-900
                     sm:px-8 sm:py-3 md:px-10 md:py-4

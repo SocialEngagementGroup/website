@@ -5,7 +5,7 @@ export const solutionforRestaurantsData = {
       "Boost your restaurant’s visibility and reservations with smart digital marketing. Rank higher locally, get more bookings, and build loyal customers.",
     subtitle: "industry",
      ctaButton: "Connect With Us",
-     ctaLink: "/contact-us",
+     ctaLink: "#contact",
     img: "/services/creative/branding/heroimg.png", // kept original
     bg: "/services/creative/branding/herobg.png",   // kept original
   },

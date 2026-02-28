@@ -4,7 +4,7 @@ export const ThreeDAnimationData = {
     description: "Transform ideas into stunning 3D visuals. We create hyper-realistic renders, animations, and product demos that captivate audiences and drive engagement.",
     subtitle: "creative",
     ctaButton: "Connect With Us",
-    ctaLink: "/contact-us",
+    ctaLink: "#contact",
     img: "/services/creative/branding/heroimg.png",
     bg: "/services/creative/branding/herobg.png",
   },
