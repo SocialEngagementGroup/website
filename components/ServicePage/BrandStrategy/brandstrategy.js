@@ -6,7 +6,7 @@ const BrandStrategy = ({ heading, items, img }) => {
     <section className="bg-white pb-0 max-[990px]:pb-[3rem] max-md:mt-0 max-md:pb-0">
       <div
         className={
-          "max-[990px]:pt-[20px] max-md:pt-[30px] max-md:py-[20px] container-fluid mx-auto py-20"
+          "max-[990px]:pt-[20px] max-md:pt-[30px] max-md:py-[20px] w-full max-w-[1400px] mx-auto py-20 px-5 md:px-10"
         }
       >
         <div
@@ -19,8 +19,8 @@ const BrandStrategy = ({ heading, items, img }) => {
           "
         >
           {/* ---------- Left: Image ---------- */}
-          <div className="flex justify-center">
-            <div className="">
+          <div className="flex justify-center md:justify-end">
+            <div className="md:pr-4">
               <Image
                 src={img}
                 alt="Brand Strategy Image"
@@ -34,15 +34,15 @@ const BrandStrategy = ({ heading, items, img }) => {
           {/* ---------- Right: Heading + List ---------- */}
           <div
             className={
-              "flex justify-center md:justify-center mr:0 md:mr-10 mt-6  md:mt-0"
+              "flex justify-center md:justify-start mr-0 mt-6 md:mt-0"
             }
           >
-            <div className="max-w-[800px] max-md:!mt-0 max-md:!w-full text-black px-5 md:px-0">
+            <div className="max-w-[900px] max-md:!mt-0 max-md:!w-full text-black px-5 md:pl-10 lg:pl-16 md:pr-0">
               {/* Heading */}
-              <h2 className="max-w-[600px]">{heading}</h2>
+              <h2 className="max-w-[750px]">{heading}</h2>
 
               {/* List Items */}
-              <ul className="mt-[16px] mb-[10px] max-w-[630px] max-[1300px]:w-full px-5 md:px-0">
+              <ul className="mt-[16px] mb-[10px] max-w-[750px] max-[1300px]:w-full px-5 md:px-0">
                 {items?.map((item, index) => (
                   <li
                     key={index}
