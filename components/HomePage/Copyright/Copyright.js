@@ -16,7 +16,7 @@ const Copyright = () => {
       { name: "Videography & Photography", href: "/services/videography-and-photography" },
     ],
     Digital: [
-      { name: "Search Engine Optimization", href: "/services/seo" },
+      { name: "SEO", href: "/services/seo" },
       { name: "PPC Campaigns", href: "/services/ppc-campaigns" },
       { name: "Retargeting & Remarketing", href: "/services/retargeting-and-remarketing" },
       {
@@ -32,10 +32,10 @@ const Copyright = () => {
       { name: "Website Development", href: "/services/website-development" },
     ],
     Industry: [
-      { name: "Solution For Lawyers", href: "/services/solution-for-lawyers" },
-      { name: "Solution For Doctors", href: "/services/solution-for-doctors" },
-      { name: "Solution For Restaurants", href: "/services/solution-for-restaurants" },
-      { name: "Solution For Tech Startups", href: "/services/solution-for-techstartups" },
+      { name: "Solution for Lawyers", href: "/services/solution-for-lawyers" },
+      { name: "Solution for Doctors", href: "/services/solution-for-doctors" },
+      { name: "Solution for Restaurants", href: "/services/solution-for-restaurants" },
+      { name: "Solution for Tech Startups", href: "/services/solution-for-techstartups" },
     ],
     Company: [
       { name: "About Us", href: "/#aboutUs" },

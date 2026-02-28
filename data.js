@@ -14,9 +14,14 @@ export const projects = [
         link: "/services/logo-design",
       },
       {
-        name: "Content creation",
+        name: "Content Creation",
         img: "/services/masterimagesslider/creative/Content-Creation.png",
         link: "/services/content-creation",
+      },
+      {
+        name: "Social Media Content",
+        img: "/services/masterimagesslider/creative/Social-Media-Content.png",
+        link: "/services/social-media-content",
       },
       {
         name: "3D Animation & Rendering",
@@ -24,14 +29,9 @@ export const projects = [
         link: "/services/3D-animation-and-rendering",
       },
       {
-        name: "Photography & videography",
+        name: "Videography & Photography",
         img: "/services/masterimagesslider/creative/Videography-&-Photography.png",
         link: "/services/videography-and-photography",
-      },
-      {
-        name: "Social media content",
-        img: "/services/masterimagesslider/creative/Social-Media-Content.png",
-        link: "/services/social-media-content",
       },
     ],
   },
@@ -41,42 +41,42 @@ export const projects = [
     color: "#1b1b1b",
     sliderData: [
       {
-        name: "google business profile management",
-        img: "/services/masterimagesslider/digital/Google-Business-Profile-Management.png",
-        link: "/services/google-business-profile-management",
-      },
-      {
-        name: "google location and-service ads",
-        img: "/services/masterimagesslider/digital/Google-Location-Services-Ads.png",
-        link: "/services/google-location-services-ads",
-      },
-      {
-        name: "pay-per-click",
-        img: "/services/masterimagesslider/digital/PPC-Campaigns.png",
-        link: "/services/ppc-campaigns",
-      },
-      {
-        name: "Retargeting & remarketing",
-        img: "/services/masterimagesslider/digital/Retargeting-&-Remarketing.png",
-        link: "/services/retargeting-and-remarketing",
-      },
-      {
-        name: "Review reputation & management",
-        img: "/services/masterimagesslider/digital/Review-and-Reputation-Management.png",
-        link: "/services/review-and-reputation-management",
-      },
-      {
         name: "SEO",
         img: "/services/masterimagesslider/digital/SEO.png",
         link: "/services/seo",
       },
       {
-        name: "Social media content",
+        name: "PPC Campaigns",
+        img: "/services/masterimagesslider/digital/PPC-Campaigns.png",
+        link: "/services/ppc-campaigns",
+      },
+      {
+        name: "Retargeting & Remarketing",
+        img: "/services/masterimagesslider/digital/Retargeting-&-Remarketing.png",
+        link: "/services/retargeting-and-remarketing",
+      },
+      {
+        name: "Google Business Profile Management",
+        img: "/services/masterimagesslider/digital/Google-Business-Profile-Management.png",
+        link: "/services/google-business-profile-management",
+      },
+      {
+        name: "Review & Reputation Management",
+        img: "/services/masterimagesslider/digital/Review-and-Reputation-Management.png",
+        link: "/services/review-and-reputation-management",
+      },
+      {
+        name: "Google Location Services Ads",
+        img: "/services/masterimagesslider/digital/Google-Location-Services-Ads.png",
+        link: "/services/google-location-services-ads",
+      },
+      {
+        name: "Social Media Marketing",
         img: "/services/masterimagesslider/digital/Social-Media-Marketing.png",
         link: "/services/social-media-marketing",
       },
       {
-        name: "web development",
+        name: "Website Development",
         img: "/services/masterimagesslider/digital/Website-Development.png",
         link: "/services/website-development",
       },

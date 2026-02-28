@@ -1,14 +1,18 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect, useRef } from "react"; // Import useRef
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { FaRegHandPointRight, FaPencilAlt, FaCameraRetro, FaGlobeAmericas, FaSearch, FaGoogle, FaPencilRuler, FaChartBar, FaBriefcase, FaHeartbeat, FaUtensils, FaLaptopCode } from "react-icons/fa"; // Importing icons
+import { usePathname } from "next/navigation";
+import { projects } from "@/data";
 
 export default function Navbar() {
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
+  const [activeCategory, setActiveCategory] = useState("Creative");
 
   // Create refs for the dropdown and button
   const dropdownRef = useRef(null);
@@ -18,10 +22,14 @@ export default function Navbar() {
     const handleScroll = () => setIsSticky(window.scrollY > 20);
     handleScroll();
     window.addEventListener("scroll", handleScroll);
-    
+
     // Close the dropdown if clicked outside
     const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target) && !buttonRef.current.contains(event.target)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target) &&
+        !buttonRef.current.contains(event.target)
+      ) {
         setIsOpen(false);
       }
     };
@@ -32,10 +40,11 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`md:block hidden fixed inset-x-0 mx-auto z-[999] transition-all duration-500 global-navbar ${isSticky
-        ? "bg-glass shadow-md w-[91%] top-[20px] py-3 rounded-2xl px-2 sm:px-5"
-        : "bg-transparent w-full top-0 py-5 px-3 sm:px-22"
-        }`}
+      className={`md:block hidden fixed top-0 left-0 w-full z-[999] transition-all duration-500 global-navbar border-b ${
+        isSticky
+          ? "bg-[#0f0f0f] border-white/10 py-3 px-3 sm:px-22"
+          : "bg-transparent border-transparent py-5 px-3 sm:px-22"
+      }`}
     >
       <div className="container-fluid mx-auto transition-all duration-500 max-lg:px-[15px]">
         <div className="flex flex-wrap items-center justify-between">
@@ -57,12 +66,21 @@ export default function Navbar() {
               href="https://calendly.com/itseg/segmeet"
               target="_blank"
               rel="noopener noreferrer"
-              className={`Contact-btn border capitalize font-bold font-sans text-[18px] rounded-[14px] cursor-pointer md:py-1.5 pb-1.5 pt-1.5 px-3 md:px-8 transition max-md:py-[0.2rem] ${isSticky
-                ? "border-white text-black bg-white"
-                : "border-white text-white md:bg-white md:text-black hover:bg-white hover:text-black"
-                }`}
+              className="group flex items-center gap-2 bg-[#975554] text-white px-6 md:px-8 py-2 md:py-3 rounded-full font-sans font-bold text-[16px] md:text-[18px] transition-all hover:scale-105 active:scale-95"
             >
-              Book a Call
+              <span>Book a Call</span>
+              <svg 
+                className="w-4 h-4 md:w-5 md:h-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="2.5" 
+                strokeLinecap="round" 
+                strokeLinejoin="round"
+              >
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
             </a>
 
             <button
@@ -99,12 +117,14 @@ export default function Navbar() {
 
           {/* Navigation */}
           <div
-            className={`${isOpen ? "block" : "hidden"
-              } w-full md:flex md:w-auto md:order-1`}
+            className={`${
+              isOpen ? "block" : "hidden"
+            } w-full md:flex md:w-auto md:order-1`}
           >
             <ul
-              className={`navlink md:ml-26 flex flex-col md:flex-row md:space-x-10 p-4 md:p-0 border md:border-0 rounded-lg mt-5 md:mt-0 ${isOpen ? "bg-black md:bg-transparent" : ""
-                }`}
+              className={`navlink md:ml-26 flex flex-col md:flex-row md:space-x-10 p-4 md:p-0 border md:border-0 rounded-lg mt-5 md:mt-0 ${
+                isOpen ? "bg-black md:bg-transparent" : ""
+              }`}
             >
               {/* Home */}
               <li>
@@ -119,18 +139,20 @@ export default function Navbar() {
 
               {/* Services */}
               <li
-                className={"relative group md:hover:block block max-md:max-h-[300px] max-md:overflow-y-auto"}
+                className={"relative group"}
                 onMouseEnter={() => setServicesOpen(true)}
-                onMouseLeave={() => setServicesOpen(false)}
+                onMouseLeave={() => {
+                  setServicesOpen(false);
+                  setActiveCategory("Creative");
+                }}
               >
-                <a
+                <Link
                   href="/services"
                   className="py-2 px-3 text-white font-sans font-bold text-[16px] md:text-[20px] hover:text-gray-300 transition flex items-center cursor-pointer"
                 >
                   Services
                   <svg
-                    className={`w-5 h-5 ml-1 mt-2 transition-transform ${servicesOpen ? "rotate-180" : ""
-                      }`}
+                    className={`w-5 h-5 ml-1 mt-2 transition-transform ${servicesOpen ? "rotate-180" : ""}`}
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="3"
@@ -142,116 +164,110 @@ export default function Navbar() {
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
-                </a>
+                </Link>
 
-                {/* Dropdown */}
+                {/* Two-Panel Dropdown Wrapper (Desktop) */}
                 <div
-                  ref={dropdownRef} // Assign ref to dropdown
-                  className={`dropdown absolute md:left-1/2 top-[33px] md:-translate-x-1/2 mt-3 w-full md:w-[900px] bg-black rounded-xl shadow-2xl z-50 group-hover:block transition-all ${servicesOpen ? "block" : "hidden md:hidden"
-                    }`}
+                  className={`hidden md:block absolute left-0 top-full transition-all duration-300 ${
+                    isSticky ? "pt-2" : isHomePage ? "pt-4" : "pt-3"
+                  } ${
+                    servicesOpen
+                      ? "opacity-100 pointer-events-auto translate-y-0"
+                      : "opacity-0 pointer-events-none translate-y-[-10px]"
+                  }`}
                 >
-                  <div className={"grid grid-cols-1 md:grid-cols-3 gap-6 p-6 text-white"}>
-                    {/* Creative */}
-                    <div>
-                      <h4
-                        className="mb-3 font-semibold uppercase text-black text-sm group-hover:bg-[#e3d3cc]/80 bg-[#e3d3cc] transition-colors p-2 rounded-md"
-                      >
-                        Creative Services
-                      </h4>
-                      <ul className={"space-y-2 text-sm m-0 p-0"}>
-                        <li className="flex items-center py-2 border-b border-transparent hover:border-[#e3d3cc] hover:text-white hover:scale-105 transition-all duration-300 group/item cursor-pointer">
-                          <FaPencilAlt className="mr-2 transition-all duration-300 group-hover/item:text-[#e3d3cc] group-hover/item:rotate-180" />
-                          <Link href="/services/branding" className="cursor-pointer">Branding</Link>
-                        </li>
-                        <li className="flex items-center py-2 border-b border-transparent hover:border-[#e3d3cc] hover:text-white hover:scale-105 transition-all duration-300 group/item cursor-pointer">
-                          <FaPencilRuler className="mr-2 transition-all duration-300 group-hover/item:text-[#e3d3cc] group-hover/item:rotate-180" />
-                          <Link href="/services/logo-design" className="cursor-pointer">Logo Design</Link>
-                        </li>
-                        <li className="flex items-center py-2 border-b border-transparent hover:border-[#e3d3cc] hover:text-white hover:scale-105 transition-all duration-300 group/item cursor-pointer">
-                          <FaRegHandPointRight className="mr-2 transition-all duration-300 group-hover/item:text-[#e3d3cc] group-hover/item:rotate-180" />
-                          <Link href="/services/content-creation" className="cursor-pointer">Content Creation</Link>
-                        </li>
-                        <li className="flex items-center py-2 border-b border-transparent hover:border-[#e3d3cc] hover:text-white hover:scale-105 transition-all duration-300 group/item cursor-pointer">
-                          <FaCameraRetro className="mr-2 transition-all duration-300 group-hover/item:text-[#e3d3cc] group-hover/item:rotate-180" />
-                          <Link href="/services/social-media-content" className="cursor-pointer">Social Media Content</Link>
-                        </li>
-                        <li className="flex items-center py-2 border-b border-transparent hover:border-[#e3d3cc] hover:text-white hover:scale-105 transition-all duration-300 group/item cursor-pointer">
-                          <FaRegHandPointRight className="mr-2 transition-all duration-300 group-hover/item:text-[#e3d3cc] group-hover/item:rotate-180" />
-                          <Link href="/services/3D-animation-and-rendering" className="cursor-pointer">3D Animation & Rendering</Link>
-                        </li>
-                        <li className="flex items-center py-2 border-b border-transparent hover:border-[#e3d3cc] hover:text-white hover:scale-105 transition-all duration-300 group/item cursor-pointer">
-                          <FaCameraRetro className="mr-2 transition-all duration-300 group-hover/item:text-[#e3d3cc] group-hover/item:rotate-180" />
-                          <Link href="/services/videography-and-photography" className="cursor-pointer">Videography & Photography</Link>
-                        </li>
-                      </ul>
-                    </div>
+                  <div
+                    ref={dropdownRef}
+                    className={`${
+                      activeCategory ? "w-[660px]" : "w-[260px]"
+                    } bg-[#0f0f0f] text-white rounded-2xl shadow-[0_30px_60px_rgba(0,0,0,0.8)] z-50 overflow-hidden transition-[width,height] duration-300 ease-[cubic-bezier(0.25,1,0.5,1)] origin-top`}
+                  >
+                    <div className="flex items-stretch w-[660px]">
+                      {/* Left Panel - Categories */}
+                      <div className="w-[260px] py-4 flex-shrink-0 flex flex-col justify-start">
+                        {projects.map((item) => (
+                          <div
+                            key={item.title}
+                            className={`px-8 h-[56px] cursor-pointer flex items-center justify-between transition-colors duration-200 ${
+                              activeCategory === item.title
+                                ? "bg-white/5 border-l-[3px] border-white"
+                                : "border-l-[3px] border-transparent hover:bg-white/5"
+                            }`}
+                            onMouseEnter={() => setActiveCategory(item.title)}
+                          >
+                            <span
+                              className={`text-[16px] font-sans uppercase tracking-[0.1em] font-bold ${
+                                activeCategory === item.title
+                                  ? "text-white"
+                                  : "text-white/60"
+                              }`}
+                            >
+                              {item.title}
+                            </span>
+                            {/* Only show chevron if active */}
+                            {activeCategory === item.title && (
+                              <svg
+                                className="w-[14px] h-[14px] text-white"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2.5"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  d="M9 5l7 7-7 7"
+                                />
+                              </svg>
+                            )}
+                          </div>
+                        ))}
+                      </div>
 
-                    {/* Digital */}
-                    <div>
-                      <h4
-                        className="mb-3 font-semibold uppercase text-black text-sm group-hover:bg-[#e3d3cc]/80 bg-[#e3d3cc] transition-colors p-2 rounded-md"
+                      {/* Right Panel - Service Links */}
+                      <div
+                        className={`flex-1 py-4 transition-opacity duration-300 delay-100 ${
+                          activeCategory ? "opacity-100" : "opacity-0"
+                        }`}
                       >
-                        Digital Services
-                      </h4>
-                      <ul className={"space-y-2 text-sm m-0 p-0"}>
-                        <li className="flex items-center py-2 border-b border-transparent hover:border-[#e3d3cc] hover:text-white hover:scale-105 transition-all duration-300 group/item cursor-pointer">
-                          <FaSearch className="mr-2 transition-all duration-300 group-hover/item:text-[#e3d3cc] group-hover/item:rotate-180" />
-                          <Link href="/services/seo" className="cursor-pointer">SEO</Link>
-                        </li>
-                        <li className="flex items-center py-2 border-b border-transparent hover:border-[#e3d3cc] hover:text-white hover:scale-105 transition-all duration-300 group/item cursor-pointer">
-                          <FaChartBar className="mr-2 transition-all duration-300 group-hover/item:text-[#e3d3cc] group-hover/item:rotate-180" />
-                          <Link href="/services/ppc-campaigns" className="cursor-pointer">PPC Campaigns</Link>
-                        </li>
-                        <li className="flex items-center py-2 border-b border-transparent hover:border-[#e3d3cc] hover:text-white hover:scale-105 transition-all duration-300 group/item cursor-pointer">
-                          <FaRegHandPointRight className="mr-2 transition-all duration-300 group-hover/item:text-[#e3d3cc] group-hover/item:rotate-180" />
-                          <Link href="/services/retargeting-and-remarketing" className="cursor-pointer">Retargeting & Remarketing</Link>
-                        </li>
-                        <li className="flex items-center py-2 border-b border-transparent hover:border-[#e3d3cc] hover:text-white hover:scale-105 transition-all duration-300 group/item cursor-pointer">
-                          <FaGoogle className="mr-2 transition-all duration-300 group-hover/item:text-[#e3d3cc] group-hover/item:rotate-180" />
-                          <Link href="/services/google-business-profile-management" className="cursor-pointer">Google Business Profile Management</Link>
-                        </li>
-                        <li className="flex items-center py-2 border-b border-transparent hover:border-[#e3d3cc] hover:text-white hover:scale-105 transition-all duration-300 group/item cursor-pointer">
-                          <FaPencilAlt className="mr-2 transition-all duration-300 group-hover/item:text-[#e3d3cc] group-hover/item:rotate-180" />
-                          <Link href="/services/review-and-reputation-management" className="cursor-pointer">Review & Reputation Management</Link>
-                        </li>
-                        <li className="flex items-center py-2 border-b border-transparent hover:border-[#e3d3cc] hover:text-white hover:scale-105 transition-all duration-300 group/item cursor-pointer">
-                          <FaGoogle className="mr-2 transition-all duration-300 group-hover/item:text-[#e3d3cc] group-hover/item:rotate-180" />
-                          <Link href="/services/google-location-services-ads" className="cursor-pointer">Google Location Services Ads</Link>
-                        </li>
-                        <li className="flex items-center py-2 border-b border-transparent hover:border-[#e3d3cc] hover:text-white hover:scale-105 transition-all duration-300 group/item cursor-pointer">
-                          <FaCameraRetro className="mr-2 transition-all duration-300 group-hover/item:text-[#e3d3cc] group-hover/item:rotate-180" />
-                          <Link href="/services/social-media-marketing" className="cursor-pointer">Social Media Marketing</Link>
-                        </li>
-                        <li className="flex items-center py-2 border-b border-transparent hover:border-[#e3d3cc] hover:text-white hover:scale-105 transition-all duration-300 group/item cursor-pointer">
-                          <FaGlobeAmericas className="mr-2 transition-all duration-300 group-hover/item:text-[#e3d3cc] group-hover/item:rotate-180" />
-                          <Link href="/services/website-development" className="cursor-pointer">Website Development</Link>
-                        </li>
-                      </ul>
-                    </div>
-
-                    {/* Industry */}
-                    <div>
-                      <h4 className="mb-3 font-semibold uppercase text-black text-sm group-hover:bg-[#e3d3cc]/80 bg-[#e3d3cc] transition-colors p-2 rounded-md">
-                        Industry Services
-                      </h4>
-                      <ul className={"space-y-2 text-sm m-0 p-0"}>
-                        <li className="flex items-center py-2 border-b border-transparent hover:border-[#e3d3cc] hover:text-white hover:scale-105 transition-all duration-300 group/item cursor-pointer">
-                          <FaBriefcase className="mr-2 transition-all duration-300 group-hover/item:text-[#e3d3cc] group-hover/item:rotate-180" />
-                          <Link href="/services/solution-for-lawyers" className="cursor-pointer">Solution for Lawyers</Link>
-                        </li>
-                        <li className="flex items-center py-2 border-b border-transparent hover:border-[#e3d3cc] hover:text-white hover:scale-105 transition-all duration-300 group/item cursor-pointer">
-                          <FaHeartbeat className="mr-2 transition-all duration-300 group-hover/item:text-[#e3d3cc] group-hover/item:rotate-180" />
-                          <Link href="/services/solution-for-doctors" className="cursor-pointer">Solution for Doctors</Link>
-                        </li>
-                        <li className="flex items-center py-2 border-b border-transparent hover:border-[#e3d3cc] hover:text-white hover:scale-105 transition-all duration-300 group/item cursor-pointer">
-                          <FaUtensils className="mr-2 transition-all duration-300 group-hover/item:text-[#e3d3cc] group-hover/item:rotate-180" />
-                          <Link href="/services/solution-for-restaurants" className="cursor-pointer">Solution for Restaurants</Link>
-                        </li>
-                        <li className="flex items-center py-2 border-b border-transparent hover:border-[#e3d3cc] hover:text-white hover:scale-105 transition-all duration-300 group/item cursor-pointer">
-                          <FaLaptopCode className="mr-2 transition-all duration-300 group-hover/item:text-[#e3d3cc] group-hover/item:rotate-180" />
-                          <Link href="/services/solution-for-techstartups" className="cursor-pointer">Solution for Tech Startups</Link>
-                        </li>
-                      </ul>
+                        {projects.map((item) => (
+                          <div
+                            key={item.title}
+                            className={`${
+                              activeCategory === item.title
+                                ? "flex flex-col"
+                                : "hidden"
+                            }`}
+                          >
+                            {item.sliderData.map((service) => (
+                              <Link
+                                key={service.name}
+                                href={service.link}
+                                className="group/item flex items-center px-8 h-[56px] text-white/60 hover:text-white hover:bg-white/5 border-l-[3px] border-transparent hover:border-white transition-all duration-300"
+                              >
+                                <span className="text-[17px] font-medium">
+                                  {service.name}
+                                </span>
+                                <div className="ml-auto opacity-0 group-hover/item:opacity-100 transition-all duration-300 translate-x-2 group-hover/item:translate-x-0">
+                                  <svg
+                                    className="w-4 h-4 text-white"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2.5"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      d="M9 5l7 7-7 7"
+                                    />
+                                  </svg>
+                                </div>
+                              </Link>
+                            ))}
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -3,30 +3,12 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import {
-  FaPencilAlt,
-  FaPencilRuler,
-  FaRegHandPointRight,
-  FaCameraRetro,
-  FaSearch,
-  FaGlobeAmericas,
-  FaChartBar,
-  FaGoogle,
-  FaBriefcase,
-  FaHeartbeat,
-  FaUtensils,
-  FaLaptopCode,
-} from "react-icons/fa";
+import { projects } from "@/data";
 
-export default function Navbar() {
+export default function NavBarMobile() {
   const [isSticky, setIsSticky] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const [openDropdown, setOpenDropdown] = useState({
-    creative: true,
-    digital: false,
-    industry: false,
-  });
+  const [mobileActiveCategory, setMobileActiveCategory] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => setIsSticky(window.scrollY > 20);
@@ -34,458 +16,161 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // lock body scroll when menu open
+  // Lock body scroll when menu is open
   useEffect(() => {
-    const html = document.documentElement;
-    const body = document.body;
-
-    if (!isMobileMenuOpen) return;
-
-    const scrollY = window.scrollY;
-
-    html.style.height = "100%";
-    html.style.overflow = "hidden";
-
-    body.style.position = "fixed";
-    body.style.top = `-${scrollY}px`;
-    body.style.left = "0";
-    body.style.right = "0";
-    body.style.width = "100%";
-    body.style.overflow = "hidden";
-  
-
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
     return () => {
-      const y = Math.abs(parseInt(body.style.top || "0", 10));
-
-      html.style.height = "";
-      html.style.overflow = "";
-
-      body.style.position = "";
-      body.style.top = "";
-      body.style.left = "";
-      body.style.right = "";
-      body.style.width = "";
-      body.style.overflow = "";
-    
-
-      window.scrollTo(0, y);
+      document.body.style.overflow = "unset";
     };
   }, [isMobileMenuOpen]);
 
-  const handleDropdownToggle = (key) => {
-    setOpenDropdown((prev) => ({ ...prev, [key]: !prev[key] }));
-  };
-
-  // avoid sticky animation while menu open (prevents odd movement)
-  const effectiveSticky = isSticky && !isMobileMenuOpen;
-
   return (
-    <>
-      <nav className={`md:hidden fixed top-0 left-0 w-full z-[999] transition-[top] duration-250 ease-out`}>
-        {/* Inner bar (animates to 95% on sticky via CSS) */}
-        <div
-          className={`h-[65px] w-full mx-auto bg-[#212125] transition-all duration-350 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-            effectiveSticky ? "translate-y-[20px] scale-x-95 bg-black/75 backdrop-blur-md shadow-2xl rounded-2xl" : ""
-          }`}
-        >
-          <div className="container mx-auto flex justify-between items-center py-2 px-2 md:px-0">
-            <Link href="/" className="flex items-center space-x-3 mt-1">
-              <div className="relative w-[45px] h-[42px]">
-                <Image
-                  src="/SiteLogo/seg.png"
-                  alt="Site Logo"
-                  fill
-                  className="object-contain"
-                />
-              </div>
+    <nav className="md:hidden fixed top-0 left-0 w-full z-[999]">
+      {/* Top Bar */}
+      <div
+        className={`h-[70px] w-full flex items-center justify-between px-4 transition-all duration-300 ${
+          isSticky || isMobileMenuOpen ? "bg-[#0f0f0f] border-b border-white/10" : "bg-transparent border-b border-transparent"
+        }`}
+      >
+        <Link href="/" className="relative w-[50px] h-[35px]">
+          <Image
+            src="/SiteLogo/seg.png"
+            alt="Site Logo"
+            fill
+            className="object-contain"
+          />
+        </Link>
+
+        <div className="flex items-center gap-4">
+          <a
+            href="https://calendly.com/itseg/segmeet"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#975554] text-white px-5 py-2 rounded-full font-sans font-bold text-[15px] transition-all active:scale-95"
+          >
+            Book a Call
+          </a>
+
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="text-white p-1 focus:outline-none"
+            aria-label="Toggle menu"
+          >
+            <svg
+              className="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              viewBox="0 0 24 24"
+            >
+              {isMobileMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 8h16M4 16h16" />
+              )}
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      {/* Full Screen Menu Overlay */}
+      <div
+        className={`fixed inset-0 top-[70px] bg-[#0f0f0f] z-[998] transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] ${
+          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="h-full flex flex-col pt-8 pb-10 px-6 overflow-y-auto overscroll-contain">
+          <div className="flex flex-col space-y-2">
+            {/* Regular Links */}
+            <Link
+              href="/"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="py-4 text-white font-sans font-bold text-[22px] border-l-4 border-transparent pl-2 hover:border-white transition-all"
+            >
+              Home
             </Link>
 
-            <div className="flex space-x-5">
-              <a
-                href="https://calendly.com/itseg/segmeet"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="Contact-btn border capitalize font-bold font-sans text-[18px] rounded-[14px] cursor-pointer md:py-1.5 pb-1.5 pt-1.5 px-3 md:px-8 transition-all duration-200 ease-out border-white text-black bg-white hover:bg-white/90 active:scale-[0.98]"
-              >
-                Book a Call
-              </a>
-
-              <button
-                onClick={() => setIsMobileMenuOpen((v) => !v)}
-                className="text-white z-[1000] transition-transform duration-200 ease-out active:scale-[0.95]"
-                aria-label="Toggle menu"
-                aria-expanded={isMobileMenuOpen}
-              >
-                <svg
-                  className="w-7 h-7"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
+            {/* Services Accordion */}
+            <div className="flex flex-col">
+              <div className="flex items-center justify-between py-4 border-l-4 border-transparent pl-2">
+                <Link
+                  href="/services"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-white font-sans font-bold text-[22px]"
                 >
-                  {isMobileMenuOpen ? (
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2.5"
-                      d="M4 4L20 20M20 4L4 20"
-                    />
-                  ) : (
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2.5"
-                      d="M3 6h18M3 12h18M3 18h18"
-                    />
-                  )}
-                </svg>
-              </button>
+                  Services
+                </Link>
+              </div>
+
+              {/* Category Accordion */}
+              <div className="mt-2 space-y-1">
+                {projects.map((item) => (
+                  <div key={item.title} className="flex flex-col">
+                    <button
+                      onClick={() =>
+                        setMobileActiveCategory(
+                          mobileActiveCategory === item.title ? null : item.title
+                        )
+                      }
+                      className={`w-full flex items-center justify-between px-4 py-4 rounded-xl transition-all ${
+                        mobileActiveCategory === item.title ? "bg-white/5 border-l-[3px] border-white" : "border-l-[3px] border-transparent"
+                      }`}
+                    >
+                      <span className={`text-[16px] font-sans uppercase tracking-[0.1em] font-bold ${
+                        mobileActiveCategory === item.title ? "text-white" : "text-white/60"
+                      }`}>
+                        {item.title}
+                      </span>
+                      <svg
+                        className={`w-5 h-5 text-white/40 transition-transform duration-300 ${
+                          mobileActiveCategory === item.title ? "rotate-180" : ""
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+
+                    <div
+                      className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                        mobileActiveCategory === item.title ? "max-h-[800px] opacity-100 mt-2 pb-4" : "max-h-0 opacity-0"
+                      }`}
+                    >
+                      <div className="flex flex-col space-y-5 pl-8 pr-4">
+                        {item.sliderData.map((service) => (
+                          <Link
+                            key={service.name}
+                            href={service.link}
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className="text-[17px] font-sans font-medium text-white/60 hover:text-white transition-colors"
+                          >
+                            {service.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
+
+            <Link
+              href="/contact-us"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="py-4 text-white font-sans font-bold text-[22px] border-l-4 border-transparent pl-2 hover:border-white transition-all"
+            >
+              Contact Us
+            </Link>
           </div>
         </div>
-
-        {/* Menu panel: fully hidden when closed, slides from right when open */}
-        <div
-          className={`fixed right-0 top-[65px] w-full h-[calc(100dvh-65px)] bg-white z-[999] flex flex-col overflow-hidden transition-all duration-450 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-            isMobileMenuOpen ? "translate-x-0 opacity-100 pointer-events-auto" : "translate-x-full opacity-0 pointer-events-none"
-          }`}
-        >
-          <ul className="space-y-4 p-5 flex-1 overflow-y-auto overflow-x-hidden overscroll-contain touch-pan-y">
-            <li>
-              <Link
-                href="/"
-                className="text-black text-lg transition-colors duration-200 hover:text-black/70"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Home
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                href="/services"
-                className={
-                  "relative text-black text-lg transition-colors duration-200 hover:text-black/70"
-                }
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Services
-              </Link>
-            </li>
-
-            {/* Creative Services Dropdown */}
-            <li>
-              <button
-                className={
-                  "w-[94%] mx-auto text-black text-left flex justify-between items-center transition-colors duration-200 hover:bg-black/5 rounded-lg px-2 py-2"
-                }
-                onClick={() => handleDropdownToggle("creative")}
-              >
-                Creative Services
-                <svg
-                  className={`w-5 h-5 ml-2 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                    openDropdown.creative ? "rotate-180" : ""
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="3"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-
-              <div
-                className={`grid transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                  openDropdown.creative
-                    ? "grid-rows-[1fr] opacity-100"
-                    : "grid-rows-[0fr] opacity-0"
-                }`}
-              >
-                <div className="overflow-hidden">
-                  <ul className={"w-[90%] mx-auto border-t border-gray-300 pt-5 mt-[25px] space-y-4"}>
-                    <li className="flex items-center text-black">
-                      <FaPencilAlt className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
-                      <Link
-                        href="/services/branding"
-                        className="text-black transition-colors duration-200 hover:text-black/70"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        Branding
-                      </Link>
-                    </li>
-                    <li className="flex items-center text-black">
-                      <FaPencilRuler className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
-                      <Link
-                        href="/services/logo-design"
-                        className="text-black transition-colors duration-200 hover:text-black/70"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        Logo Design
-                      </Link>
-                    </li>
-                    <li className="flex items-center text-black">
-                      <FaRegHandPointRight className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
-                      <Link
-                        href="/services/content-creation"
-                        className="text-black transition-colors duration-200 hover:text-black/70"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        Content Creation
-                      </Link>
-                    </li>
-                    <li className="flex items-center text-black">
-                      <FaCameraRetro className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
-                      <Link
-                        href="/services/social-media-content"
-                        className="text-black transition-colors duration-200 hover:text-black/70"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        Social Media Content
-                      </Link>
-                    </li>
-                    <li className="flex items-center text-black">
-                      <FaRegHandPointRight className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
-                      <Link
-                        href="/services/3D-animation-and-rendering"
-                        className="text-black transition-colors duration-200 hover:text-black/70"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        3D Animation &amp; Rendering
-                      </Link>
-                    </li>
-                    <li className="flex items-center text-black">
-                      <FaCameraRetro className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
-                      <Link
-                        href="/services/videography-and-photography"
-                        className="text-black transition-colors duration-200 hover:text-black/70"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        Videography &amp; Photography
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-
-            {/* Digital Services Dropdown */}
-            <li>
-              <button
-                className={
-                  "w-[94%] mx-auto text-black text-left flex justify-between items-center transition-colors duration-200 hover:bg-black/5 rounded-lg px-2 py-2"
-                }
-                onClick={() => handleDropdownToggle("digital")}
-              >
-                Digital Services
-                <svg
-                  className={`w-5 h-5 ml-2 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                    openDropdown.digital ? "rotate-180" : ""
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="3"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-
-              <div
-                className={`grid transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                  openDropdown.digital
-                    ? "grid-rows-[1fr] opacity-100"
-                    : "grid-rows-[0fr] opacity-0"
-                }`}
-              >
-                <div className="overflow-hidden">
-                  <ul className={"w-[90%] mx-auto border-t border-gray-300 pt-5 mt-[25px] space-y-4"}>
-                    <li className="flex items-center text-black">
-                      <FaSearch className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
-                      <Link
-                        href="/services/seo"
-                        className="text-black transition-colors duration-200 hover:text-black/70"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        SEO
-                      </Link>
-                    </li>
-                    <li className="flex items-center text-black">
-                      <FaChartBar className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
-                      <Link
-                        href="/services/ppc-campaigns"
-                        className="text-black transition-colors duration-200 hover:text-black/70"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        PPC Campaigns
-                      </Link>
-                    </li>
-                    <li className="flex items-center text-black">
-                      <FaRegHandPointRight className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
-                      <Link
-                        href="/services/retargeting-and-remarketing"
-                        className="text-black transition-colors duration-200 hover:text-black/70"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        Retargeting &amp; Remarketing
-                      </Link>
-                    </li>
-                    <li className="flex items-center text-black">
-                      <FaGoogle className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
-                      <Link
-                        href="/services/google-business-profile-management"
-                        className="text-black transition-colors duration-200 hover:text-black/70"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        Google Business Profile Management
-                      </Link>
-                    </li>
-                    <li className="flex items-center text-black">
-                      <FaPencilAlt className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
-                      <Link
-                        href="/services/review-and-reputation-management"
-                        className="text-black transition-colors duration-200 hover:text-black/70"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        Review &amp; Reputation Management
-                      </Link>
-                    </li>
-                    <li className="flex items-center text-black">
-                      <FaGoogle className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
-                      <Link
-                        href="/services/google-location-services-ads"
-                        className="text-black transition-colors duration-200 hover:text-black/70"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        Google Location Services Ads
-                      </Link>
-                    </li>
-                    <li className="flex items-center text-black">
-                      <FaCameraRetro className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
-                      <Link
-                        href="/services/social-media-marketing"
-                        className="text-black transition-colors duration-200 hover:text-black/70"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        Social Media Marketing
-                      </Link>
-                    </li>
-                    <li className="flex items-center text-black">
-                      <FaGlobeAmericas className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
-                      <Link
-                        href="/services/website-development"
-                        className="text-black transition-colors duration-200 hover:text-black/70"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        Website Development
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-
-            {/* Industry Services Dropdown */}
-            <li>
-              <button
-                className={
-                  "w-[94%] mx-auto text-black text-left flex justify-between items-center transition-colors duration-200 hover:bg-black/5 rounded-lg px-2 py-2"
-                }
-                onClick={() => handleDropdownToggle("industry")}
-              >
-                Industry Services
-                <svg
-                  className={`w-5 h-5 ml-2 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                    openDropdown.industry ? "rotate-180" : ""
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="3"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-
-              <div
-                className={`grid transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                  openDropdown.industry
-                    ? "grid-rows-[1fr] opacity-100"
-                    : "grid-rows-[0fr] opacity-0"
-                }`}
-              >
-                <div className="overflow-hidden">
-                  <ul className={"w-[90%] mx-auto border-t border-gray-300 pt-5 mt-[25px] space-y-4"}>
-                    <li className="flex items-center text-black">
-                      <FaBriefcase className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
-                      <Link
-                        href="/services/solution-for-lawyers"
-                        className="text-black transition-colors duration-200 hover:text-black/70"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        Solution for Lawyers
-                      </Link>
-                    </li>
-                    <li className="flex items-center text-black">
-                      <FaHeartbeat className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
-                      <Link
-                        href="/services/solution-for-doctors"
-                        className="text-black transition-colors duration-200 hover:text-black/70"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        Solution for Doctors
-                      </Link>
-                    </li>
-                    <li className="flex items-center text-black">
-                      <FaUtensils className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
-                      <Link
-                        href="/services/solution-for-restaurants"
-                        className="text-black transition-colors duration-200 hover:text-black/70"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        Solution for Restaurants
-                      </Link>
-                    </li>
-                    <li className="flex items-center text-black">
-                      <FaLaptopCode className="mr-2 text-[#232326] bg-[#d8bfb2] p-2 rounded-lg transition-transform duration-300 hover:scale-110 w-9 h-9" />
-                      <Link
-                        href="/services/solution-for-techstartups"
-                        className="text-black transition-colors duration-200 hover:text-black/70"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        Solution for Tech Startups
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <Link
-                href="/contact-us"
-                className="text-black text-lg transition-colors duration-200 hover:text-black/70"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Contact Us
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </>
+      </div>
+    </nav>
   );
 }
-//use bg color and fix desing
