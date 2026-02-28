@@ -9,6 +9,7 @@ import CTA from "@/components/ServicePage/CTA/CTA";
 // update url
 
 import { ReviewReputationData } from "./ReviewReputationData";
+import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 export const metadata = {
   title: {
@@ -34,6 +35,7 @@ export default function Page() {
       <ProfessionalBranding {...ReviewReputationData.ProfessionalSEO} />
       <SecondaryCTA />
       <BrandingStrategy {...ReviewReputationData.BrandStrategy} />
+      <Testimonials />
       <FAQ
         items={ReviewReputationData.FAQ.items}
         heading={ReviewReputationData.FAQ.heading}

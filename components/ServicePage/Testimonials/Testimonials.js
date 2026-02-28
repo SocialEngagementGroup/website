@@ -1,0 +1,167 @@
+"use client";
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Star, Quote, ArrowDownRight } from 'lucide-react';
+import { allTestimonials } from '../../../data/testimonialsData';
+
+const testimonials = allTestimonials;
+
+const AUTO_PLAY_INTERVAL = 5000;
+const PAUSE_AFTER_CLICK = 8000;
+
+const Testimonials = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const pausedUntilRef = useRef(0);
+  const intervalRef = useRef(null);
+
+  const next = useCallback(() => {
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  }, []);
+
+  const prev = useCallback(() => {
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  }, []);
+
+  const handleManualNav = useCallback((direction) => {
+    pausedUntilRef.current = Date.now() + PAUSE_AFTER_CLICK;
+    direction === 'next' ? next() : prev();
+  }, [next, prev]);
+
+  useEffect(() => {
+    intervalRef.current = setInterval(() => {
+      if (Date.now() >= pausedUntilRef.current) {
+        next();
+      }
+    }, AUTO_PLAY_INTERVAL);
+    return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
+  }, [next]);
+
+  const current = testimonials[currentIndex];
+
+  return (
+    <section className="py-20 md:py-32 bg-[#042B42] overflow-hidden">
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
+        
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center lg:items-start justify-between">
+          
+          {/* Left Column: Intro & Nav */}
+          <div className="w-full lg:w-[35%] lg:sticky lg:top-32 relative">
+            <div className="relative">
+              {/* Background Quote Mark SVG */}
+              <Quote className="absolute -top-[50px] lg:-top-[100px] -left-12 lg:-left-24 w-[300px] h-[300px] lg:w-[450px] lg:h-[450px] text-[#0A3C5C] opacity-[0.15] pointer-events-none stroke-[1]" />
+              <h2 className="relative z-10 text-4xl md:text-[42px] font-bold text-white mb-8 lg:mb-12 leading-tight">
+                What Our Clients <br /> Are Saying
+              </h2>
+            </div>
+            
+            {/* Navigation - Desktop (Shown on LG+) */}
+            <div className="hidden lg:flex items-center gap-6 mt-12 w-full max-w-[280px]">
+              <button 
+                onClick={() => handleManualNav('prev')}
+                className="text-white/40 hover:text-white transition-colors"
+                aria-label="Previous"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+              </button>
+              
+              <div className="flex-grow h-[1px] bg-white/20 relative overflow-hidden">
+                <motion.div 
+                  initial={false}
+                  animate={{ 
+                    left: `${(currentIndex / testimonials.length) * 100}%`,
+                    width: `${(1 / testimonials.length) * 100}%` 
+                  }}
+                  className="absolute top-0 h-full bg-white"
+                />
+              </div>
+
+              <button 
+                onClick={() => handleManualNav('next')}
+                className="text-white/40 hover:text-white transition-colors"
+                aria-label="Next"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </div>
+
+          {/* Right Column: Static Card Shell with Transitioning Content */}
+          <div className="w-full lg:w-[60%] relative z-10 flex justify-end">
+            {/* The Static Card Shell */}
+            <div className="bg-white rounded-[2rem] shadow-lg relative min-h-[420px] sm:min-h-[360px] md:min-h-[340px] flex flex-col w-full lg:max-w-[700px] xl:max-w-[800px] lg:ml-auto">
+              
+              <div className="p-8 md:p-10 lg:p-14 flex-grow overflow-hidden relative flex flex-col">
+                {/* Transitioning Quote Section */}
+                <div className="min-h-[240px] sm:min-h-[180px] md:min-h-[140px] mb-8 relative">
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={currentIndex}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: -20 }}
+                      transition={{ duration: 0.4, ease: "easeOut" }}
+                      className="absolute inset-0"
+                    >
+                       <p className="text-lg md:text-[20px] text-[#555] font-medium leading-[1.7]">
+                         "{current.quote}"
+                       </p>
+                    </motion.div>
+                  </AnimatePresence>
+                </div>
+
+                {/* Fixed Author Info Section (Updates instantly but stays in position) */}
+                <div className="mt-auto flex items-center gap-4">
+                  <div className="w-14 h-14 rounded-full overflow-hidden shrink-0 shadow-sm border border-gray-100 bg-gray-50 flex items-center justify-center">
+                    <img src={current.image} className="w-[120%] h-[120%] object-cover object-top" alt={current.author} />
+                  </div>
+                  <div className="flex flex-col">
+                    <h4 className="!text-[26px] md:!text-[28px] font-bold text-[#0A2647] tracking-tight leading-none mb-1">{current.author}</h4>
+                    <p className="text-[#0A3C5C] !text-[16px] md:!text-[18px] font-medium opacity-90 leading-tight">
+                      {current.role} {current.company}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bubble Tail (Static) */}
+              <div className="absolute -bottom-4 left-16 w-8 h-8 bg-white border-r border-b border-transparent rotate-45 transform origin-top-left" />
+            </div>
+
+            {/* Navigation - Mobile (Shown on LG-) */}
+            <div className="flex lg:hidden items-center gap-6 mt-16 w-full max-w-[280px] mx-auto">
+              <button 
+                onClick={() => handleManualNav('prev')}
+                className="text-white/40 hover:text-white transition-colors"
+                aria-label="Previous"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+              </button>
+              
+              <div className="flex-grow h-[1px] bg-white/20 relative overflow-hidden">
+                <motion.div 
+                  initial={false}
+                  animate={{ 
+                    left: `${(currentIndex / testimonials.length) * 100}%`,
+                    width: `${(1 / testimonials.length) * 100}%` 
+                  }}
+                  className="absolute top-0 h-full bg-white"
+                />
+              </div>
+
+              <button 
+                onClick={() => handleManualNav('next')}
+                className="text-white/40 hover:text-white transition-colors"
+                aria-label="Next"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Testimonials;

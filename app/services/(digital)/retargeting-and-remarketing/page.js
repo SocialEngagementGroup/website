@@ -8,6 +8,7 @@ import FAQ from "@/components/ServicePage/FAQ/FAQ";
 import CTA from "@/components/ServicePage/CTA/CTA";
 
 import { RetargetingServiceData } from "./RetargetingServiceData";
+import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 export const metadata = {
   title: {
     default: "Retargeting & Remarketing Services | Win Back Customers",
@@ -32,6 +33,7 @@ export default function Page() {
       <ProfessionalBranding {...RetargetingServiceData.ProfessionalSEO} />
       <SecondaryCTA {...RetargetingServiceData.SecondaryCTA} />
       <BrandingStrategy {...RetargetingServiceData.BrandStrategy} />
+      <Testimonials />
       <FAQ
         items={RetargetingServiceData.FAQ.items}
         heading={RetargetingServiceData.FAQ.heading}

@@ -2,6 +2,7 @@ import React from "react";
 import HeroSection from "@/components/MasterServicesPage/HeroSection/HeroSection";
 import AutoSlider from "@/components/MasterServicesPage/AutoSlider/AutoSlider";
 import { CreativeData, Digital, Industry } from "./sliderData";
+import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 const MasterServicesPage = () => {
   return (

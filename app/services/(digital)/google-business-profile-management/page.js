@@ -7,6 +7,7 @@ import SecondaryCTA from "@/components/ServicePage/SecondaryCTA/SecondaryCTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ";
 import CTA from "@/components/ServicePage/CTA/CTA";
 import { GoogleBusinessData } from "./GoogleBusinessData";
+import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 export const metadata = {
   title: {
@@ -31,6 +32,7 @@ export default function Page() {
       <ProfessionalBranding {...GoogleBusinessData.ProfessionalSEO} />
       <SecondaryCTA />
       <BrandingStrategy {...GoogleBusinessData.BrandStrategy} />
+      <Testimonials />
       <FAQ
         items={GoogleBusinessData.FAQ.items}
         heading={GoogleBusinessData.FAQ.heading}

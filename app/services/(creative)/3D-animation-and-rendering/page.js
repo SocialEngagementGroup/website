@@ -7,6 +7,7 @@ import ProfessionalBranding from "@/components/ServicePage/ProfessionalBranding/
 import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrategy";
 import SecondaryCTA from "@/components/ServicePage/SecondaryCTA/SecondaryCTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
+import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 export const metadata = {
   title: "3D Animation & Rendering Services | Realistic Visual Design",
@@ -29,6 +30,7 @@ export default function Page() {
       <ProfessionalBranding {...ThreeDAnimationData.ProfessionalLogoDesign} />
       <SecondaryCTA />
       <BrandingStrategy {...ThreeDAnimationData.BrandStrategy} />
+      <Testimonials />
       <FAQ
         items={ThreeDAnimationData.FAQ.items}
         heading={ThreeDAnimationData.FAQ.heading}

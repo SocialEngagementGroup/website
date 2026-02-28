@@ -7,6 +7,7 @@ import ProfessionalBranding from "@/components/ServicePage/ProfessionalBranding/
 import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrategy";
 import SecondaryCTA from "@/components/ServicePage/SecondaryCTA/SecondaryCTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
+import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 export const metadata = {
   title: "Content Creation Services | Graphic, Video & AI Solutions",
@@ -29,6 +30,7 @@ export default function Page() {
       <ProfessionalBranding {...contentCreationData.ProfessionalContent} />
       <SecondaryCTA />
       <BrandingStrategy {...contentCreationData.ContentStrategy} />
+      <Testimonials />
       <FAQ
         items={contentCreationData.FAQ.items}
         heading={contentCreationData.FAQ.heading} />
