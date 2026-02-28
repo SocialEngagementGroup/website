@@ -25,3 +25,10 @@ export const Industry = [
   { title: "Solution for Tech Startups", bg: "/assets/images/services/master-image-slider/industry/solution-for-tech-startups.png", link: "/services/solution-for-techstartups" },
   { title: "Solution for Doctors", bg: "/assets/images/services/master-image-slider/industry/solution-for-doctors.png", link: "/services/solution-for-doctors" },
 ];
+
+export const Marketing = [
+  { title: "Marketing by SEG", bg: "/assets/images/services/master-image-slider/industry/solution-for-lawyers.png", link: "https://digital.socialengagementgroup.com/" },
+  { title: "Marketing for Law Firms", bg: "/assets/images/services/master-image-slider/industry/solution-for-doctors.png", link: "https://digital.socialengagementgroup.com/marketing-for-law-firm" },
+  { title: "Marketing for Doctors", bg: "/assets/images/services/master-image-slider/industry/solution-for-restaurant.png", link: "https://digital.socialengagementgroup.com/marketing-for-doctors" },
+  { title: "Marketing for Restaurants", bg: "/assets/images/services/master-image-slider/industry/solution-for-tech-startups.png", link: "https://digital.socialengagementgroup.com/marketing-for-restaurants" },
+];

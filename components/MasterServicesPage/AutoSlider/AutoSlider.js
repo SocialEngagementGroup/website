@@ -18,6 +18,17 @@ const AutoSlider = ({ slides = [] }) => {
   // skeleton placeholders
   const skeletonSlides = useMemo(() => Array.from({ length: 8 }), []);
 
+  // Ensure enough slides for seamless infinite loop (max slidesPerView is 4, so we need > 4)
+  const displaySlides = useMemo(() => {
+    if (!slides || slides.length === 0) return [];
+    let duplicated = [...slides];
+    // If there are fewer than 10 slides, duplicate them so loop mode has enough DOM elements to shuffle
+    while (duplicated.length < 10) {
+      duplicated = [...duplicated, ...slides];
+    }
+    return duplicated;
+  }, [slides]);
+
   // 🔹 control loading via useEffect
   useEffect(() => {
     if (slides && slides.length > 0) {
@@ -51,13 +62,14 @@ const AutoSlider = ({ slides = [] }) => {
   }, []);
 
   return (
-    <div ref={wrapperRef} className="relative w-full pt-[6px] pb-[14px] isolate [&_.swiper]:overflow-hidden hover:[&_.swiper]:overflow-visible hover:[&_.swiper-wrapper]:overflow-visible [&_.swiper-slide]:relative [&_.swiper-slide]:z-[1] [&_.swiper-slide]:transition-transform [&_.swiper-slide]:duration-300 [&_.swiper-slide]:ease-in-out [&_.swiper-slide.isHoveredSlide]:z-10 [&_.swiper-slide:hover]:scale-[1.22] [&_.swiper-slide:hover]:delay-[180ms] [&_.swiper-slide:hover_.scaling-image]:scale-[1.06] [&_.swiper-slide:hover_.scaling-box]:shadow-[0_18px_45px_rgba(0,0,0,0.55)]">
+    <div ref={wrapperRef} className="relative w-full pt-[6px] pb-[14px] isolate [&_.swiper]:!overflow-visible [&_.swiper-wrapper]:!overflow-visible [&_.swiper-slide]:relative [&_.swiper-slide]:z-[1] [&_.swiper-slide]:transition-transform [&_.swiper-slide]:duration-300 [&_.swiper-slide]:ease-in-out [&_.swiper-slide.isHoveredSlide]:!z-[50] [&_.swiper-slide:hover]:scale-[1.22] [&_.swiper-slide:hover]:delay-[180ms] [&_.swiper-slide:hover_.scaling-image]:scale-[1.06] [&_.swiper-slide:hover_.scaling-box]:shadow-[0_18px_45px_rgba(0,0,0,0.55)] will-change-transform">
       <Swiper
         modules={[Navigation]}
         loop={!loading}
         spaceBetween={14}
         speed={450}
         slidesPerGroup={1}
+        loopAdditionalSlides={2}
         breakpoints={{
           0: { slidesPerView: 1 },
           480: { slidesPerView: 2 },
@@ -68,44 +80,35 @@ const AutoSlider = ({ slides = [] }) => {
           prevEl: prevRef.current,
           nextEl: nextRef.current,
         }}
-        onSwiper={(swiper) => {
-          setTimeout(() => {
-            if (swiper && swiper.params && swiper.params.navigation) {
-              swiper.params.navigation.prevEl = prevRef.current;
-              swiper.params.navigation.nextEl = nextRef.current;
-              
-              if (swiper.navigation) {
-                swiper.navigation.destroy();
-                swiper.navigation.init();
-                swiper.navigation.update();
-              }
-            }
-          });
+        onInit={(swiper) => {
+          swiper.params.navigation.prevEl = prevRef.current;
+          swiper.params.navigation.nextEl = nextRef.current;
+          swiper.navigation.init();
+          swiper.navigation.update();
         }}
-        className=""
       >
         {loading
           ? skeletonSlides.map((_, i) => (
             <SwiperSlide key={`sk-${i}`}>
               <div className="block w-full">
-                <div className="scaling-box h-[250px] max-[599px]:h-[200px] max-[599px]:m-auto rounded-[10px] relative overflow-hidden bg-gray-700 animate-pulse">
+                <div className="scaling-box h-[250px] max-[599px]:h-[200px] max-[599px]:m-auto rounded-[10px] relative overflow-hidden bg-black animate-pulse">
                   <span className="text-white drop-shadow-[0_6px_18px_rgba(0,0,0,0.55)]">Loading...</span>
                 </div>
               </div>
             </SwiperSlide>
           ))
-          : slides.map((slide, i) => (
+          : displaySlides.map((slide, i) => (
             <SwiperSlide key={i}>
               <Link href={slide.link} className="block w-full">
-                <div className="scaling-box h-[250px] max-[599px]:h-[200px] max-[599px]:m-auto rounded-[10px] relative overflow-hidden">
+                <div className="scaling-box h-[250px] max-[599px]:h-[200px] max-[599px]:m-auto rounded-[10px] relative overflow-hidden bg-black transform-gpu will-change-transform">
                   <img
                     src={slide.bg}
                     alt={slide.title || "slide image"}
-                    className="scaling-image w-full h-full block object-cover object-center scale-100 transition-transform duration-300 ease-in-out"
+                    className="scaling-image w-full h-full block object-cover object-center scale-100 transition-transform duration-300 ease-in-out transform-gpu will-change-transform"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.55)] to-[rgba(0,0,0,0.05)] pointer-events-none z-[1]" />
-                  <h4 className="absolute left-[12px] bottom-[12px] m-0 text-white drop-shadow-[0_6px_18px_rgba(0,0,0,0.55)] z-[2] capitalize">{slide.title}</h4>
+                  <h4 className="absolute left-[12px] bottom-[12px] m-0 text-white text-[16px] md:text-[20px] font-bold drop-shadow-[0_6px_18px_rgba(0,0,0,0.55)] z-[2] capitalize">{slide.title}</h4>
                 </div>
               </Link>
             </SwiperSlide>
