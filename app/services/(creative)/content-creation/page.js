@@ -26,8 +26,8 @@ export default function Page() {
         description={contentCreationData.Costof.description}
         items={contentCreationData.Costof.items}
       />
-      <ProfessionalBranding {...contentCreationData.ProfessionalBranding} />
-      <BrandingStrategy {...contentCreationData.BrandStrategy} />
+      <ProfessionalBranding {...contentCreationData.ProfessionalContent} />
+      <BrandingStrategy {...contentCreationData.ContentStrategy} />
       <SecondaryCTA />
       <FAQ
         items={contentCreationData.FAQ.items}

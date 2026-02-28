@@ -146,7 +146,7 @@ export default function Navbar() {
                 >
                   Services
                   <svg
-                    className={`w-5 h-5 ml-1 mt-2 transition-transform ${servicesOpen ? "rotate-180" : ""}`}
+                    className={`w-5 h-5 ml-1 mt-1 transition-transform ${servicesOpen ? "rotate-180" : ""}`}
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="3"
