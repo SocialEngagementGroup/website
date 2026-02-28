@@ -15,7 +15,7 @@ const FAQ = ({ items, heading }) => {
           
           {/* Left Column: Heading */}
           <div className="lg:sticky lg:top-32">
-            <h2 className="text-[#975554] !text-4xl md:!text-5xl font-black leading-[1.1] tracking-tight">
+            <h2 className="text-[#975554] !text-4xl md:!text-5xl font-black leading-[1.1] tracking-tight text-center lg:text-left">
               Frequently <br />
               Asked Questions
             </h2>

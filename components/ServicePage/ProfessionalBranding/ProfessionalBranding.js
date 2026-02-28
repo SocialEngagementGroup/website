@@ -62,7 +62,7 @@ const ProfessionalBranding = ({ heading, items, video }) => {
         >
           {/* LEFT */}
           <div className="text-black order-2 md:order-1 mt-4 px-5 md:px-0">
-            <h2 className="max-w-[800px]">{heading}</h2>
+            <h2 className="max-w-[800px] text-center lg:text-left">{heading}</h2>
 
             <ul className="mt-[16px] mb-[10px] max-w-[850px] max-[1300px]:max-w-full">
               {items?.map((item, index) => (
