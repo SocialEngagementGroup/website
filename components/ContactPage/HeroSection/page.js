@@ -12,7 +12,7 @@ const ContactUsHero = () => {
     <section className="relative pt-25 md:pt-38 pb-15 md:pb-25 overflow-hidden text-white">
       {/* Legal Page Style Background */}
       <div 
-        className="absolute inset-0 bg-[url('/assets/background/contact-bg.png')] bg-cover bg-center bg-no-repeat blur-sm transform scale-105"
+        className="absolute inset-0 bg-[url('/assets/images/backgrounds/contact-bg.png')] bg-cover bg-center bg-no-repeat blur-sm transform scale-105"
         style={{ zIndex: -2 }}
       />
       {/* Black Overlay */}

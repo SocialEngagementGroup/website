@@ -27,7 +27,7 @@ export const metadata = {
     siteName: "Social Engagement Group",
     images: [
       {
-        url: "/assets/site-logo/logo.svg",
+        url: "/assets/images/site-logo/logo.svg",
         width: 800,
         height: 600,
         alt: "SEG Logo",
@@ -40,7 +40,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Social Engagement Group (SEG)",
     description: "Where Human Creativity Meets AI-Powered Digital Growth.",
-    images: ["/assets/site-logo/logo.svg"],
+    images: ["/assets/images/site-logo/logo.svg"],
   },
   icons: {
     icon: "/favicon.png",

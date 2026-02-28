@@ -57,7 +57,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center space-x-3 cursor-pointer">
             <div className="relative w-[45px] h-[42px] md:w-[60px] md:h-[42px]">
               <Image
-                src="/assets/site-logo/logo.svg"
+                src="/assets/images/site-logo/logo.svg"
                 alt="Site Logo"
                 fill
                 className={`object-contain brightness-0 ${useDarkText ? '' : 'invert'}`}

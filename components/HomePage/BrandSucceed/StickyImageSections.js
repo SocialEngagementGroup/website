@@ -11,25 +11,25 @@ const sections = [
     button: "Strategy & Research",
     title:
       "Every successful campaign starts with insight. We analyze your brand, audience, and competitors to build a strategy that eliminates guesswork and drives consistent results.",
-    video: "/assets/animated-gifs/1.webm",
+    video: "/assets/videos/animated-gifs/1.webm",
   },
   {
     button: "Creative Design",
     title:
       "Great design is more than aesthetic, it's strategic psychology. We craft visuals that tell your story, connect emotionally, and make your brand unforgettable.",
-    video: "/assets/animated-gifs/2.webm",
+    video: "/assets/videos/animated-gifs/2.webm",
   },
   {
     button: "Growth Strategy",
     title:
       "Growth is a process, not a moment. We blend creativity and analytics to design campaigns that evolve, adapt, and deliver measurable success.",
-    video: "/assets/animated-gifs/3.webm",
+    video: "/assets/videos/animated-gifs/3.webm",
   },
   {
     button: "Launch & Support",
     title:
       "A launch marks the start of the journey, not the end. We stay by your side to fine-tune performance, uncover new opportunities, and keep your brand evolving.",
-    video: "/assets/animated-gifs/4.webm",
+    video: "/assets/videos/animated-gifs/4.webm",
   },
 ];
 

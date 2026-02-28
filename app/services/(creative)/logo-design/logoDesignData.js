@@ -5,15 +5,15 @@ export const logoDesignData = {
     subtitle: "Creative",
     ctaButton: "Connect With Us",
     ctaLink: "#contact",
-   img: "/assets/services/creative/branding/heroimg.png",
-   bg: "/assets/background/service-bg.png",
+   img: "/assets/images/services/creative/branding/heroimg.png",
+   bg: "/assets/images/backgrounds/service-bg.png",
 },
   intro: {
     heading: "Craft a Logo That’s Instantly Recognizable",
     description: "Your logo is more than a mark, it’s the visual heartbeat of your brand. We design logos that blend creative artistry with brand psychology and market insight, so they communicate your identity, reflect your values, and connect emotionally across every medium. Whether launching or refreshing, our process distills what makes you distinct into a timeless, scalable mark. The result: instant trust, memorability, and stronger performance across all your marketing.",
   },
    cta: {
-   bg: "/assets/services/cta/Digital-google-business-profile.png",
+   bg: "/assets/images/services/cta/Digital-google-business-profile.png",
     title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
     link: "https://calendly.com/itseg/segmeet",
@@ -23,19 +23,19 @@ export const logoDesignData = {
     description: "Your logo is the first thing people notice. And the moment they decide whether to trust you or move on. When your <strong>Custom logo design</strong> works, every part of your marketing works harder. Your ads perform better. Your social posts earn more engagement. Referrals increase because customers can describe and recall you instantly. Because recognition builds trust and trust creates customers. That’s the power of investing in the right <strong>business logo design</strong>.",
     items: [
   {
-   img: "/assets/services/creative/logo-design/logo-design.png",
+   img: "/assets/images/services/creative/logo-design/logo-design.png",
     text: "You get <strong>forgotten</strong> within seconds due to poor logo design.",
   },
   {
-   img: "/assets/services/creative/logo-design/Differentiation-in-the-market.png",
+   img: "/assets/images/services/creative/logo-design/Differentiation-in-the-market.png",
     text: "Your <strong>logo looks</strong> generic and lacks differentiation in the market.",
   },
   {
-   img: "/assets/services/creative/logo-design/Referrals-fall-flat.png",
+   img: "/assets/images/services/creative/logo-design/Referrals-fall-flat.png",
     text: "<strong>Referrals</strong> fall flat because people can’t describe or recall your logo.",
   },
   {
-   img: "/assets/services/creative/logo-design/You-appear-amateur.png",
+   img: "/assets/images/services/creative/logo-design/You-appear-amateur.png",
     text: "<strong>You appear</strong> amateur, even if your business is professional.",
   },
 
@@ -77,7 +77,7 @@ heading2: "The Cost of Weak Branding",
       text: "<strong>Brand guidelines</strong> ensure consistent logo usage across all platforms.",
     },
     ],
-   img: "/assets/services/creative/logo-design/creative-logo-design.png",
+   img: "/assets/images/services/creative/logo-design/creative-logo-design.png",
   },
   FAQ: {
     heading: "FAQs",

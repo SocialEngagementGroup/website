@@ -6,8 +6,8 @@ export const SeoServiceData = {
     subtitle: "digital",
     ctaButton: "Connect With Us",
         ctaLink: "#contact",
-   img: "/assets/services/creative/branding/heroimg.png",   // original kept
-   bg: "/assets/background/service-bg.png",     // original kept
+   img: "/assets/images/services/creative/branding/heroimg.png",   // original kept
+   bg: "/assets/images/backgrounds/service-bg.png",     // original kept
   },
 
   intro: {
@@ -16,7 +16,7 @@ export const SeoServiceData = {
       "SEO is about visibility, authority, and sustainable growth not just keywords. We build a durable search foundation with deep keyword and competitor research, then optimize on-page content and technical performance so your site is faster, clearer, and easier to rank. Next, we grow authority with a smart content plan and white-hat link building, backed by analytics that show real movement. No gimmicks, just compounding visibility that turns organic traffic into qualified leads and loyal customers. When you rank where it matters, every click becomes an opportunity for growth.",
   },
   cta: {
-   bg: "/assets/services/cta/Digital-google-business-profile.png",
+   bg: "/assets/images/services/cta/Digital-google-business-profile.png",
     title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
     link: "https://calendly.com/itseg/segmeet",
@@ -28,19 +28,19 @@ export const SeoServiceData = {
       "Search is where most buying journeys start, and if you’re not on page one, you’re effectively invisible. Strong SEO aligns your pages with real buyer intent, pairing relevant content with fast, well-structured experiences that search engines and customers trust. As authority and quality backlinks compound, you earn qualified clicks instead of random traffic, reduce dependence on paid ads, and show up precisely at the moment of need. That visibility turns searches into pipeline and sales.",
     items: [
       {
-       img: "/assets/services/digital/seo/Competitors-capture-the-demand-meant-for-you.png",
+       img: "/assets/images/services/digital/seo/Competitors-capture-the-demand-meant-for-you.png",
         text: "<strong>Competitors</strong> capture the demand meant for you.",
       },
       {
-       img: "/assets/services/digital/seo/Buyers-never-discover-your-brand.png",
+       img: "/assets/images/services/digital/seo/Buyers-never-discover-your-brand.png",
         text: "<strong>High-intent buyers</strong> never discover your brand.",
       },
       {
-       img: "/assets/services/digital/seo/You-become-overly-reliant-on-paid-advertising.png",
+       img: "/assets/images/services/digital/seo/You-become-overly-reliant-on-paid-advertising.png",
         text: "You become overly reliant on <strong>paid advertising</strong>.",
       },
       {
-       img: "/assets/services/digital/seo/Customer-acquisition-costs-rise-rapidly.png",
+       img: "/assets/images/services/digital/seo/Customer-acquisition-costs-rise-rapidly.png",
         text: "<strong>Customer acquisition</strong> costs rise rapidly.",
       },
 
@@ -66,7 +66,7 @@ export const SeoServiceData = {
       { text: "White-hat link building that steadily boosts authority and trust signals." },
       { text: "Monthly performance reports with clear insights and actionable next steps." },
     ],
-   img: "/assets/services/digital/seo/digital-seo.png", // original kept
+   img: "/assets/images/services/digital/seo/digital-seo.png", // original kept
   },
 
   FAQ: {

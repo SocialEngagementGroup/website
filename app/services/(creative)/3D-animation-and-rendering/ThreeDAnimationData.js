@@ -5,8 +5,8 @@ export const ThreeDAnimationData = {
     subtitle: "creative",
     ctaButton: "Connect With Us",
     ctaLink: "#contact",
-   img: "/assets/services/creative/branding/heroimg.png",
-   bg: "/assets/background/service-bg.png",
+   img: "/assets/images/services/creative/branding/heroimg.png",
+   bg: "/assets/images/backgrounds/service-bg.png",
   },
   intro: {
     heading: "Make People Feel What You Imagine",
@@ -14,7 +14,7 @@ export const ThreeDAnimationData = {
       "3D animation and rendering turn abstract ideas and complex products into visuals that feel tangible and real. We blend creative direction with precision using industry-leading tools and cinematic technique to craft hyper-realistic renders and animations that elevate your brand story. From pre-launch product showcases and architectural visualizations to high-impact campaign films, every frame is built for clarity, emotion, and persuasion. Lighting, materials, textures, movement, and perspective are dialed in to signal quality and innovation. The result is content that captivates across e-commerce, ads, and investor decks and gives you a true competitive edge by letting audiences experience your vision before it exists.",
   },
   cta: {
-   bg: "/assets/services/cta/Digital-google-business-profile.png",
+   bg: "/assets/images/services/cta/Digital-google-business-profile.png",
     title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
     link: "https://calendly.com/itseg/segmeet",
@@ -25,19 +25,19 @@ export const ThreeDAnimationData = {
       "3D animation makes complex ideas instantly clear. It turns products into tangible, premium experiences before they even exist. You can pre-sell and validate concepts without manufacturing. Cinematic motion holds attention longer and boosts recall. Realism and polish lift brand perception across categories. Performance improves across ads, e-commerce, and pitches. Support questions drop when visuals explain what words can’t. Campaigns stand out and get remembered on every channel.",
     items: [
       {
-       img: "/assets/services/creative/animation-rendering/look-flat-and-forgettable.png",
+       img: "/assets/images/services/creative/animation-rendering/look-flat-and-forgettable.png",
         text: "<strong>Products look</strong> flat and forgettable, lacking impact and differentiation.",
       },
       {
-       img: "/assets/services/creative/animation-rendering/audiences-disengage-quickly.png",
+       img: "/assets/images/services/creative/animation-rendering/audiences-disengage-quickly.png",
         text: "<strong>Audiences disengage</strong> quickly, losing interest before they connect.",
       },
       {
-       img: "/assets/services/creative/animation-rendering/competitors-look-more-advanced.png",
+       img: "/assets/images/services/creative/animation-rendering/competitors-look-more-advanced.png",
         text: "<strong>Competitors instantly</strong> appear more advanced with better visuals.",
       },
       {
-       img: "/assets/services/creative/animation-rendering/competitors-outshine.png",
+       img: "/assets/images/services/creative/animation-rendering/competitors-outshine.png",
         text: "<strong>Competitors</strong> outshine your presentation with higher-quality content.",
       },
     ],
@@ -78,7 +78,7 @@ export const ThreeDAnimationData = {
       },
 
     ],
-   img: "/assets/services/creative/animation-rendering/creative-3d-animation-and-rendering.png",
+   img: "/assets/images/services/creative/animation-rendering/creative-3d-animation-and-rendering.png",
   },
   FAQ: {
     heading: "FAQs",

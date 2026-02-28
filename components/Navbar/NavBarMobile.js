@@ -45,7 +45,7 @@ export default function NavBarMobile() {
       >
         <Link href="/" className="relative w-[50px] h-[35px]">
           <Image
-            src="/assets/site-logo/logo.svg"
+            src="/assets/images/site-logo/logo.svg"
             alt="Site Logo"
             fill
             className={`object-contain brightness-0 ${useDarkText ? '' : 'invert'}`}

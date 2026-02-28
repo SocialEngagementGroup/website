@@ -5,8 +5,8 @@ export const SocialMediaContentData = {
     subtitle: "creative",
     ctaButton: "Connect With Us",
         ctaLink: "#contact",
-   img: "/assets/services/creative/branding/heroimg.png",
-   bg: "/assets/background/service-bg.png",
+   img: "/assets/images/services/creative/branding/heroimg.png",
+   bg: "/assets/images/backgrounds/service-bg.png",
   },
   intro: {
     heading: "Build Social That Stops the Scroll",
@@ -14,7 +14,7 @@ export const SocialMediaContentData = {
       "Social is where attention is won, and communities are built. We create content that stops the scroll and starts conversations, blending creativity, trend intelligence, and platform psychology for Meta, TikTok, and beyond. From storytelling visuals to high-impact videos and carousels, every asset feels authentically “you” and drives measurable results. We study your voice, audience behavior, and competitors, then design for awareness, engagement, and conversion. The outcome: your social channels become a growth engine, strategic stories that stand out in a fast-scrolling world.",
   },
    cta: {
-   bg: "/assets/services/cta/Digital-google-business-profile.png",
+   bg: "/assets/images/services/cta/Digital-google-business-profile.png",
     title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
     link: "https://calendly.com/itseg/segmeet",
@@ -26,19 +26,19 @@ export const SocialMediaContentData = {
       "We audit channels, map your audience, and find white space to win. Using trend signals and platform-native best practices, we define pillars, hooks, and formats. Then we translate strategy into a distinct voice with thumb-stopping hooks and tight scripts. Motion beats and clear visual frameworks optimize every asset for watch time, saves, shares, and comments. Edits are truly native, TikTok/Reels pacing, meme-speed cuts, Meta carousels, and Stories. We tailor aspect ratios, captions, and cadence per channel to maximize performance. Across the ecosystem, we keep consistency tight so every piece ladders up to the brand.",
     items: [
       {
-       img: "/assets/services/creative/social-media-content/Low-engagement.png",
+       img: "/assets/images/services/creative/social-media-content/Low-engagement.png",
         text: "<strong>Low engagement</strong> and limited reach hinder social media growth.",
       },
       {
-       img: "/assets/services/creative/social-media-content/Missed-trends-and-timing.png",
+       img: "/assets/images/services/creative/social-media-content/Missed-trends-and-timing.png",
         text: "<strong>Missed trends</strong> and timing windows reduce content relevance.",
       },
       {
-       img: "/assets/services/creative/social-media-content/lower-follower-growth.png",
+       img: "/assets/images/services/creative/social-media-content/lower-follower-growth.png",
         text: "<strong>Slower follower</strong> growth and weaker community impact brand loyalty.",
       },
       {
-       img: "/assets/services/creative/social-media-content/Inconsistent-presence.png",
+       img: "/assets/images/services/creative/social-media-content/Inconsistent-presence.png",
         text: "<strong>Inconsistent presence</strong> on social media erodes audience trust.",
       },
     ],
@@ -79,7 +79,7 @@ export const SocialMediaContentData = {
 },
 
     ],
-   img: "/assets/services/creative/social-media-content/creative-social-media-content.png",
+   img: "/assets/images/services/creative/social-media-content/creative-social-media-content.png",
   },
   FAQ: {
     heading: "FAQs",

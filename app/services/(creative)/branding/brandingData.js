@@ -6,8 +6,8 @@ export const brandingData = {
     subtitle: "Creative",
     ctaButton: "Connect With Us",
     ctaLink: "#contact",
-   img: "/assets/services/creative/branding/heroimg.png",
-   bg: "/assets/background/service-bg.png",
+   img: "/assets/images/services/creative/branding/heroimg.png",
+   bg: "/assets/images/backgrounds/service-bg.png",
   },
   intro: {
     heading: "Build a brand that sticks",
@@ -15,7 +15,7 @@ export const brandingData = {
       "Your brand is more than a logo, it’s the experience people remember. We build end-to-end branding that defines your voice, crafts a standout visual identity, and positions you clearly in a crowded market. Starting with deep research, we map your audience, differentiation, and story, then translate that into consistent messaging that earns trust. Finally, we design a cohesive visual system, logo, colors, type, imagery and apply it across every touchpoint so you’re instantly recognizable, building loyalty and accelerating growth.",
   },
     cta: {
-   bg: "/assets/services/cta/Digital-google-business-profile.png",
+   bg: "/assets/images/services/cta/Digital-google-business-profile.png",
     title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
     link: "https://calendly.com/itseg/segmeet",
@@ -26,19 +26,19 @@ export const brandingData = {
     description: "A <strong>cohesive brand</strong> makes every interaction seamless and effective. Customers gain instant <strong>brand recognition</strong>, which builds familiarity and trust. Your marketing efforts become more consistent and impactful, and your reputation for quality and reliability grows with every single touchpoint, creating a loyal customer base.",
     items: [
       {
-       img: "/assets/services/creative/branding/versus.png",
+       img: "/assets/images/services/creative/branding/versus.png",
         text: "Customers forget your brand quickly due to poor <strong>recall</strong>.",
       },
       {
-       img: "/assets/services/creative/branding/shared-vision.png",
+       img: "/assets/images/services/creative/branding/shared-vision.png",
         text: "You blend in with competitors, losing your distinct <strong>identity</strong>.",
       },
       {
-       img: "/assets/services/creative/branding/loyal-customer.png",
+       img: "/assets/images/services/creative/branding/loyal-customer.png",
         text: "Inconsistent messaging damages <strong>trust</strong> with your customers.",
       },
       {
-       img: "/assets/services/creative/branding/return.png",
+       img: "/assets/images/services/creative/branding/return.png",
         text: "Sales teams struggle to pitch a brand lacking clear <strong>identity</strong>.",
       },
 
@@ -79,7 +79,7 @@ export const brandingData = {
         text: "Detailed <strong>brand guidelines</strong> to ensure perfect consistency everywhere.",
       },
     ],
-   img: "/assets/services/box-images/brandstrategy.png",
+   img: "/assets/images/services/box-images/brandstrategy.png",
   },
   FAQ: {
     heading: "FAQs",
