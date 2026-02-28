@@ -19,14 +19,14 @@ const BrandStrategy = ({ heading, items, img }) => {
           "
         >
           {/* ---------- Left: Image ---------- */}
-          <div className="flex justify-center md:justify-end">
-            <div className="md:pr-4">
+          <div className="flex justify-center md:justify-start w-full">
+            <div className="w-full md:w-[125%] md:-ml-[10%] lg:w-[140%] lg:-ml-[20%]">
               <Image
                 src={img}
                 alt="Brand Strategy Image"
-                width={700}
-                height={400}
-                className=""
+                width={900}
+                height={600}
+                className="w-full h-auto object-contain"
               />
             </div>
           </div>
