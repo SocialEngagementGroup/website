@@ -75,6 +75,7 @@ const ContactForm = ({ layout = "stacked", className = "" }) => {
               required
               minLength={3}
               className={inputClass}
+              suppressHydrationWarning={true}
             />
           </div>
 
@@ -87,6 +88,7 @@ const ContactForm = ({ layout = "stacked", className = "" }) => {
               required
               minLength={3}
               className={inputClass}
+              suppressHydrationWarning={true}
             />
           </div>
 
@@ -98,6 +100,7 @@ const ContactForm = ({ layout = "stacked", className = "" }) => {
               {...register("email")}
               required
               className={inputClass}
+              suppressHydrationWarning={true}
             />
           </div>
 
@@ -109,6 +112,7 @@ const ContactForm = ({ layout = "stacked", className = "" }) => {
               {...register("phone")}
               required
               className={inputClass}
+              suppressHydrationWarning={true}
             />
           </div>
 
@@ -123,6 +127,7 @@ const ContactForm = ({ layout = "stacked", className = "" }) => {
             minLength={10}
             rows={5}
             className={textareaClass}
+            suppressHydrationWarning={true}
           />
         </div>
 
