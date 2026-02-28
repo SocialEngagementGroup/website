@@ -44,16 +44,16 @@ const ProfessionalBranding = ({ heading, items, video }) => {
   }, [shouldPlay]);
 
   return (
-    <section ref={sectionRef} className="bg-[#232326]">
+    <section ref={sectionRef} className="bg-white">
       <div
-        className={`max-[1180px]:w-full container-fluid w-[78%] mx-auto py-6 md:py-28 px-6 md:px-7`}
+        className={`max-[1180px]:w-full container-fluid w-[78%] mx-auto py-6 md:py-12 px-6 md:px-7`}
       >
         <div
           className="
             grid 
             grid-cols-1 
-            md:grid-cols-[50%_50%]
-            [@media(min-width:1300px)]:grid-cols-[60%_35%]
+            md:grid-cols-[60%_40%]
+            [@media(min-width:1300px)]:grid-cols-[60%_40%]
             gap-4 
             md:gap-5
             items-center
@@ -61,10 +61,10 @@ const ProfessionalBranding = ({ heading, items, video }) => {
           "
         >
           {/* LEFT */}
-          <div className="text-white order-2 md:order-1 mt-4 px-5 md:px-0">
-            <h2 className="max-w-[600px]">{heading}</h2>
+          <div className="text-black order-2 md:order-1 mt-4 px-5 md:px-0">
+            <h2 className="max-w-[800px]">{heading}</h2>
 
-            <ul className="mt-[16px] mb-[10px] max-w-[630px] max-[1300px]:max-w-full">
+            <ul className="mt-[16px] mb-[10px] max-w-[850px] max-[1300px]:max-w-full">
               {items?.map((item, index) => (
                 <li
                   key={index}
@@ -76,8 +76,8 @@ const ProfessionalBranding = ({ heading, items, video }) => {
           </div>
 
           {/* RIGHT: Video */}
-          <div className="order-1 md:order-2">
-            <div className="flex justify-center overflow-hidden aspect-[3/3] w-full">
+          <div className="order-1 md:order-2 flex justify-center md:justify-end">
+            <div className="flex justify-center overflow-hidden aspect-[3/3] w-full md:w-[125%] md:-mr-[10%] lg:w-[130%] lg:-mr-[15%]">
               <video
                 ref={videoRef}
                 className={`rounded-[20px] h-full w-full object-contain`}

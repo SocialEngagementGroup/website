@@ -32,8 +32,8 @@ export default function Page() {
         items={socialmediamarketingData.Costof.items}
       />
       <ProfessionalBranding {...socialmediamarketingData.ProfessionalSEO} />
-      <BrandingStrategy {...socialmediamarketingData.BrandStrategy} />
       <SecondaryCTA />
+      <BrandingStrategy {...socialmediamarketingData.BrandStrategy} />
       <FAQ items={socialmediamarketingData.FAQ.items} heading={socialmediamarketingData.FAQ.heading} />
     </>
   );

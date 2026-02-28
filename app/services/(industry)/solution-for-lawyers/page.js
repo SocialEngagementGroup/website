@@ -32,8 +32,8 @@ export default function Page() {
         items={solutionforawyersData.Costof.items}
       />
       <ProfessionalBranding {...solutionforawyersData.ProfessionalSEO} />
-      <BrandingStrategy {...solutionforawyersData.BrandStrategy} />
       <SecondaryCTA />
+      <BrandingStrategy {...solutionforawyersData.BrandStrategy} />
       <FAQ items={solutionforawyersData.FAQ.items} heading={solutionforawyersData.FAQ.heading} />
     </>
   );

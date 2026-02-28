@@ -30,8 +30,8 @@ export default function Page() {
         items={solutionforRestaurantsData.Costof.items}
       />
       <ProfessionalBranding {...solutionforRestaurantsData.ProfessionalSEO} />
-      <BrandingStrategy {...solutionforRestaurantsData.BrandStrategy} />
       <SecondaryCTA />
+      <BrandingStrategy {...solutionforRestaurantsData.BrandStrategy} />
       <FAQ
         items={solutionforRestaurantsData.FAQ.items}
         heading={solutionforRestaurantsData.FAQ.heading}

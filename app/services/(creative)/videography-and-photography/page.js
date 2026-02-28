@@ -29,8 +29,8 @@ export default function Page() {
         items={VisualMediaData.Costof.items}
       />
       <ProfessionalBranding {...VisualMediaData.ProfessionalLogoDesign} />
-      <BrandingStrategy {...VisualMediaData.BrandStrategy} />
       <SecondaryCTA />
+      <BrandingStrategy {...VisualMediaData.BrandStrategy} />
       <FAQ
         items={VisualMediaData.FAQ.items}
         heading={VisualMediaData.FAQ.heading}

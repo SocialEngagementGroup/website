@@ -31,8 +31,8 @@ export default function Page() {
         items={googleservicesads.Costof.items}
       />
       <ProfessionalBranding {...googleservicesads.ProfessionalSEO} />
-      <BrandingStrategy {...googleservicesads.BrandStrategy} />
       <SecondaryCTA />
+      <BrandingStrategy {...googleservicesads.BrandStrategy} />
       <FAQ items={googleservicesads.FAQ.items} heading={googleservicesads.FAQ.heading} />
     </>
   );

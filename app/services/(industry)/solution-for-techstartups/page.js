@@ -30,8 +30,8 @@ export default function Page() {
         items={solutionforTechStartupsData.Costof.items}
       />
       <ProfessionalBranding {...solutionforTechStartupsData.ProfessionalSEO} />
-      <BrandingStrategy {...solutionforTechStartupsData.BrandStrategy} />
       <SecondaryCTA />
+      <BrandingStrategy {...solutionforTechStartupsData.BrandStrategy} />
       <FAQ
         items={solutionforTechStartupsData.FAQ.items}
         heading={solutionforTechStartupsData.FAQ.heading}

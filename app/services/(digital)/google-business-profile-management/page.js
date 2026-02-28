@@ -29,8 +29,8 @@ export default function Page() {
         items={GoogleBusinessData.Costof.items}
       />
       <ProfessionalBranding {...GoogleBusinessData.ProfessionalSEO} />
-      <BrandingStrategy {...GoogleBusinessData.BrandStrategy} />
       <SecondaryCTA />
+      <BrandingStrategy {...GoogleBusinessData.BrandStrategy} />
       <FAQ
         items={GoogleBusinessData.FAQ.items}
         heading={GoogleBusinessData.FAQ.heading}

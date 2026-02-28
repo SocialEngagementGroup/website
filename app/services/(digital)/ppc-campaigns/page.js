@@ -31,8 +31,8 @@ export default function Page() {
         items={PpcServiceData.Costof.items}
       />
       <ProfessionalBranding {...PpcServiceData.ProfessionalSEO} />
-      <BrandingStrategy {...PpcServiceData.BrandStrategy} />
       <SecondaryCTA />
+      <BrandingStrategy {...PpcServiceData.BrandStrategy} />
       <FAQ items={PpcServiceData.FAQ.items} heading={PpcServiceData.FAQ.heading} />
     </>
   );

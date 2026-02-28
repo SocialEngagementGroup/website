@@ -27,8 +27,8 @@ export default function Page() {
         items={ThreeDAnimationData.Costof.items}
       />
       <ProfessionalBranding {...ThreeDAnimationData.ProfessionalLogoDesign} />
-      <BrandingStrategy {...ThreeDAnimationData.BrandStrategy} />
       <SecondaryCTA />
+      <BrandingStrategy {...ThreeDAnimationData.BrandStrategy} />
       <FAQ
         items={ThreeDAnimationData.FAQ.items}
         heading={ThreeDAnimationData.FAQ.heading}

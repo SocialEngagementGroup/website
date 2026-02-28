@@ -30,8 +30,8 @@ export default function Page() {
         items={RetargetingServiceData.Costof.items}
       />
       <ProfessionalBranding {...RetargetingServiceData.ProfessionalSEO} />
-      <BrandingStrategy {...RetargetingServiceData.BrandStrategy} />
       <SecondaryCTA {...RetargetingServiceData.SecondaryCTA} />
+      <BrandingStrategy {...RetargetingServiceData.BrandStrategy} />
       <FAQ
         items={RetargetingServiceData.FAQ.items}
         heading={RetargetingServiceData.FAQ.heading}

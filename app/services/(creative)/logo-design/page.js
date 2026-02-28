@@ -37,8 +37,8 @@ export default function Page() {
         items={logoDesignData.Costof.items}
       />
       <ProfessionalBranding {...logoDesignData.ProfessionalLogoDesign} />
-      <BrandingStrategy {...logoDesignData.BrandStrategy} />
       <SecondaryCTA />
+      <BrandingStrategy {...logoDesignData.BrandStrategy} />
       <FAQ items={logoDesignData.FAQ.items} heading={logoDesignData.FAQ.heading} />
     </>
   );

@@ -33,8 +33,8 @@ export default function Page() {
         items={webdevelopmentData.Costof.items}
       />
       <ProfessionalBranding {...webdevelopmentData.ProfessionalSEO} />
-      <BrandingStrategy {...webdevelopmentData.BrandStrategy} />
       <SecondaryCTA />
+      <BrandingStrategy {...webdevelopmentData.BrandStrategy} />
       <FAQ items={webdevelopmentData.FAQ.items} heading={webdevelopmentData.FAQ.heading} />
     </>
   );

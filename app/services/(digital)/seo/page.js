@@ -39,8 +39,8 @@ export default function Page() {
         items={SeoServiceData.Costof.items}
       />
       <ProfessionalBranding {...SeoServiceData.ProfessionalSEO} />
-      <BrandingStrategy {...SeoServiceData.BrandStrategy} />
       <SecondaryCTA {...SeoServiceData.SecondaryCTA} />
+      <BrandingStrategy {...SeoServiceData.BrandStrategy} />
       <FAQ items={SeoServiceData.FAQ.items} heading={SeoServiceData.FAQ.heading} />
     </>
   );

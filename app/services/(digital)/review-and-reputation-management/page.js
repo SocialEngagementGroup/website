@@ -32,8 +32,8 @@ export default function Page() {
         items={ReviewReputationData.Costof.items}
       />
       <ProfessionalBranding {...ReviewReputationData.ProfessionalSEO} />
-      <BrandingStrategy {...ReviewReputationData.BrandStrategy} />
       <SecondaryCTA />
+      <BrandingStrategy {...ReviewReputationData.BrandStrategy} />
       <FAQ
         items={ReviewReputationData.FAQ.items}
         heading={ReviewReputationData.FAQ.heading}

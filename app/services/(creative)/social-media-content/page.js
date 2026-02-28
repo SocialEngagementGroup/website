@@ -30,8 +30,8 @@ export default function Page() {
         items={SocialMediaContentData.Costof.items}
       />
       <ProfessionalBranding {...SocialMediaContentData.ProfessionalBranding}/>
-      <BrandingStrategy {...SocialMediaContentData.BrandStrategy}/>
       <SecondaryCTA />
+      <BrandingStrategy {...SocialMediaContentData.BrandStrategy}/>
       <FAQ items={SocialMediaContentData.FAQ.items} heading={SocialMediaContentData.FAQ.heading} />
     </>
   );

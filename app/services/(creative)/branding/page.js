@@ -36,8 +36,8 @@ export default function Page() {
         items={brandingData.Costof.items}
       />
       <ProfessionalBranding {...brandingData.ProfessionalBranding} />
-      <BrandingStrategy {...brandingData.BrandStrategy} />
       <SecondaryCTA />
+      <BrandingStrategy {...brandingData.BrandStrategy} />
       <FAQ items={brandingData.FAQ.items} heading={brandingData.FAQ.heading} />
     </>
   );
