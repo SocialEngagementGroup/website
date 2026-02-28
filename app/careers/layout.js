@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Careers | SEG - Social Engagement Group",
+  title: "Careers",
   description:
     "Join our team and be part of our mission. Explore open positions in development, design, marketing, and more.",
 };

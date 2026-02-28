@@ -12,7 +12,7 @@ import ScrollProgress from "@/components/Common/ScrollProgress";
 export const metadata = {
   metadataBase: new URL("https://socialengagementgroup.com"),
   title: {
-    default: "SEG | Where Human Creativity Meets AI-Powered Digital Growth",
+    default: "Human Creativity & AI-Powered Digital Growth | SEG - Social Engagement Group",
     template: "%s | SEG - Social Engagement Group",
   },
   description:
@@ -21,7 +21,7 @@ export const metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Social Engagement Group (SEG)",
+    title: "Social Engagement Group | SEG - Social Engagement Group",
     description: "Where Human Creativity Meets AI-Powered Digital Growth.",
     url: "https://socialengagementgroup.com",
     siteName: "Social Engagement Group",
@@ -38,12 +38,12 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Social Engagement Group (SEG)",
+    title: "Social Engagement Group | SEG - Social Engagement Group",
     description: "Where Human Creativity Meets AI-Powered Digital Growth.",
     images: ["/assets/images/site-logo/logo.svg"],
   },
   icons: {
-    icon: "/favicon.webp",
+    icon: "/favicon.png",
   },
 };
 

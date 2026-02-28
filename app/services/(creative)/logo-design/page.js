@@ -12,15 +12,15 @@ import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 
 export const metadata = {
-  title: "Custom Logo Design Services | Build a Brand That Lasts",
+  title: "Logo Design",
   description: "Get a memorable, professional logo that builds trust and recognition. 3–5 original concepts, unlimited revisions, and full ownership included.",
   openGraph: {
-    title: "Logo Design Services | Social Engagement Group",
+    title: "Logo Design | SEG - Social Engagement Group",
     description: "Create a memorable brand with SEG's custom logo design services.",
     url: "/services/logo-design",
   },
   twitter: {
-    title: "Logo Design Services | Social Engagement Group",
+    title: "Logo Design | SEG - Social Engagement Group",
     description: "Create a memorable brand with SEG's custom logo design services.",
   },
 };

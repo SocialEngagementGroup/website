@@ -10,12 +10,18 @@ import { googleBusinessProfileManagementData } from "./googleBusinessProfileMana
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 export const metadata = {
-  title: {
-    default: "Google Business Profile Management | Boost Local SEO",
-    template: "%s | SEG",
-  },
+  title: "Google Business Profile Management",
   description:
     "Get more local calls and visits with expert Google Business Profile management. Optimize listings, boost visibility, and build customer trust.",
+  openGraph: {
+    title: "Google Business Profile Management | SEG - Social Engagement Group",
+    description: "Get more local calls and visits with SEG's expert Google Business Profile management.",
+    url: "/services/google-business-profile-management",
+  },
+  twitter: {
+    title: "Google Business Profile Management | SEG - Social Engagement Group",
+    description: "Get more local calls and visits with SEG's expert Google Business Profile management.",
+  },
 };
 export default function Page() {
   return (

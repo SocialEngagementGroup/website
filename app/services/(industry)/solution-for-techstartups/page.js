@@ -10,12 +10,18 @@ import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 export const metadata = {
-  title: {
-    default: "Digital Marketing for Tech Startups | Launch & Scale Fast",
-    template: "%s | SEG",
-  },
+  title: "Digital Marketing for Tech Startups",
   description:
     "Accelerate your tech startup’s growth with data-driven marketing. Build traction, attract users, and scale visibility from launch to Series A and beyond.",
+  openGraph: {
+    title: "Digital Marketing for Tech Startups | SEG - Social Engagement Group",
+    description: "Accelerate your tech startup’s growth with SEG's data-driven marketing and traction strategies.",
+    url: "/services/solution-for-techstartups",
+  },
+  twitter: {
+    title: "Digital Marketing for Tech Startups | SEG - Social Engagement Group",
+    description: "Accelerate your tech startup’s growth with SEG's data-driven marketing and traction strategies.",
+  },
 };
 
 export default function Page() {

@@ -13,8 +13,17 @@ import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 
 export const metadata = {
-  title: "Social Media Content Services | Meta & TikTok Experts",
+  title: "Social Media Content",
   description: "Create scroll-stopping social content that engages, converts, and builds community. Expert strategies for Meta, TikTok, and beyond to grow your brand.",
+  openGraph: {
+    title: "Social Media Content | SEG - Social Engagement Group",
+    description: "Create scroll-stopping social content that engages and converts with SEG's expert Meta & TikTok strategies.",
+    url: "/services/social-media-content",
+  },
+  twitter: {
+    title: "Social Media Content | SEG - Social Engagement Group",
+    description: "Create scroll-stopping social content that engages and converts with SEG's expert Meta & TikTok strategies.",
+  },
 };
 
 

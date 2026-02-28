@@ -10,12 +10,18 @@ import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 export const metadata = {
-  title: {
-    default: "Social Media Marketing Services | Grow & Engage Audiences",
-    template: "%s | SEG",
-  },
+  title: "Google Location Services Ads",
   description:
-    "Boost engagement and sales with data-driven social media marketing. We create high-performing campaigns across Meta, TikTok, LinkedIn, and more.",
+    "Drive more foot traffic and local leads with Google Location Services Ads. Target customers exactly when they are searching for services near them.",
+  openGraph: {
+    title: "Google Location Services Ads | SEG - Social Engagement Group",
+    description: "Drive more foot traffic and local leads with SEG's expert Google Location Services Ads.",
+    url: "/services/google-location-services-ads",
+  },
+  twitter: {
+    title: "Google Location Services Ads | SEG - Social Engagement Group",
+    description: "Drive more foot traffic and local leads with SEG's expert Google Location Services Ads.",
+  },
 };
 
 

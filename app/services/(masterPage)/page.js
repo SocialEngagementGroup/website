@@ -3,6 +3,19 @@ import HeroSection from "@/components/MasterServicesPage/HeroSection/HeroSection
 import AutoSlider from "@/components/MasterServicesPage/AutoSlider/AutoSlider";
 import { CreativeData, Digital, Industry, Marketing } from "./sliderData";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
+export const metadata = {
+  title: "Services",
+  description: "Explore our comprehensive range of digital marketing services, from creative branding to AI-powered growth strategies.",
+  openGraph: {
+    title: "Services | SEG - Social Engagement Group",
+    description: "Explore our comprehensive range of digital marketing services at SEG.",
+    url: "/services",
+  },
+  twitter: {
+    title: "Services | SEG - Social Engagement Group",
+    description: "Explore our comprehensive range of digital marketing services at SEG.",
+  },
+};
 
 const MasterServicesPage = () => {
   return (

@@ -10,19 +10,16 @@ import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 export const metadata = {
-  title: {
-    default: "SEO Services | Rank Higher & Drive Organic Growth",
-    template: "%s | SEG",
-  },
+  title: "SEO Services",
   description:
     "Boost visibility and traffic with expert SEO. We optimize keywords, content, and links to help your business rank higher and convert more customers.",
   openGraph: {
-    title: "SEO Services | Social Engagement Group",
+    title: "SEO Services | SEG - Social Engagement Group",
     description: "Boost your organic growth and search rankings with SEG's expert SEO services.",
     url: "/services/seo",
   },
   twitter: {
-    title: "SEO Services | Social Engagement Group",
+    title: "SEO Services | SEG - Social Engagement Group",
     description: "Boost your organic growth and search rankings with SEG's expert SEO services.",
   },
 };

@@ -10,12 +10,18 @@ import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 export const metadata = {
-  title: {
-    default: "Digital Marketing for Doctors | Get Patients & Build Trust",
-    template: "%s | SEG",
-  },
+  title: "Digital Marketing for Doctors",
   description:
     "Grow your clinic’s visibility and patient trust with tailored healthcare marketing. Get found first, attract quality patients, and scale your practice ethically.",
+  openGraph: {
+    title: "Digital Marketing for Doctors | SEG - Social Engagement Group",
+    description: "Grow your clinic’s visibility and patient trust with SEG's tailored healthcare marketing.",
+    url: "/services/solution-for-doctors",
+  },
+  twitter: {
+    title: "Digital Marketing for Doctors | SEG - Social Engagement Group",
+    description: "Grow your clinic’s visibility and patient trust with SEG's tailored healthcare marketing.",
+  },
 };
 
 export default function Page() {

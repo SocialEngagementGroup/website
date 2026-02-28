@@ -1,4 +1,8 @@
 import React from 'react'
+export const metadata = {
+  title: "Terms & Conditions",
+};
+
 import HeroSection from '@/components/LegalPage/HeroSection/HeroSection'
 import { termsandconditions } from "./data";
 import BodyContent from '@/components/LegalPage/Content/BodyContent'

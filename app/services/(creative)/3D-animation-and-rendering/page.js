@@ -10,8 +10,17 @@ import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 export const metadata = {
-  title: "3D Animation & Rendering Services | Realistic Visual Design",
+  title: "3D Animation & Rendering",
   description: "Transform ideas into stunning 3D visuals. We create hyper-realistic renders, animations, and product demos that captivate audiences and drive engagement.",
+  openGraph: {
+    title: "3D Animation & Rendering | SEG - Social Engagement Group",
+    description: "Transform ideas into stunning 3D visuals with SEG's hyper-realistic 3D animation and rendering.",
+    url: "/services/3D-animation-and-rendering",
+  },
+  twitter: {
+    title: "3D Animation & Rendering | SEG - Social Engagement Group",
+    description: "Transform ideas into stunning 3D visuals with SEG's hyper-realistic 3D animation and rendering.",
+  },
 };
 
 

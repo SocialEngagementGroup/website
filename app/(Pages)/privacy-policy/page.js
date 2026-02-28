@@ -1,4 +1,8 @@
 import React from 'react'
+export const metadata = {
+  title: "Privacy Policy",
+};
+
 import HeroSection from '@/components/LegalPage/HeroSection/HeroSection'
 import { PrivacyPolicy } from "./data";
 import BodyContent from '@/components/LegalPage/Content/BodyContent'

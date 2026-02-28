@@ -10,8 +10,17 @@ import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 export const metadata = {
-  title: "Content Creation Services | Graphic, Video & AI Solutions",
+  title: "Content Creation",
   description: "Create content that converts. From videos and graphics to influencer and AI-generated assets—build engagement, trust, and growth for your brand.",
+  openGraph: {
+    title: "Content Creation | SEG - Social Engagement Group",
+    description: "Create content that converts with SEG's expert graphic, video, and AI solutions.",
+    url: "/services/content-creation",
+  },
+  twitter: {
+    title: "Content Creation | SEG - Social Engagement Group",
+    description: "Create content that converts with SEG's expert graphic, video, and AI solutions.",
+  },
 };
 
 export default function Page() {

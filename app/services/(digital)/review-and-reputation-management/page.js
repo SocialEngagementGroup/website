@@ -12,12 +12,18 @@ import { reviewReputationManagementData } from "./reviewReputationManagementData
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 export const metadata = {
-  title: {
-    default: "Review & Reputation Management | Build Customer Trust",
-    template: "%s | SEG",
-  },
+  title: "Review & Reputation Management",
   description:
     "Protect and grow your online reputation. We monitor reviews, manage responses, and generate positive feedback to boost trust and conversions.",
+  openGraph: {
+    title: "Review & Reputation Management | SEG - Social Engagement Group",
+    description: "Protect and grow your online reputation with SEG's expert review management.",
+    url: "/services/review-and-reputation-management",
+  },
+  twitter: {
+    title: "Review & Reputation Management | SEG - Social Engagement Group",
+    description: "Protect and grow your online reputation with SEG's expert review management.",
+  },
 };
 
 export default function Page() {

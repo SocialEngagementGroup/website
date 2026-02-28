@@ -10,12 +10,18 @@ import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 export const metadata = {
-  title: {
-    default: "Website Development Services | Design. Build. Convert.",
-    template: "%s | SEG",
-  },
+  title: "Social Media Marketing Services",
   description:
-    "Get a fast, SEO-optimized website that drives sales. We design and develop custom sites on WordPress, Shopify, and Next.js to grow your business online.",
+    "Boost engagement and sales with data-driven social media marketing. We create high-performing campaigns across Meta, TikTok, LinkedIn, and more.",
+  openGraph: {
+    title: "Social Media Marketing Services | SEG - Social Engagement Group",
+    description: "Boost engagement and sales with SEG's data-driven social media marketing.",
+    url: "/services/social-media-marketing",
+  },
+  twitter: {
+    title: "Social Media Marketing Services | SEG - Social Engagement Group",
+    description: "Boost engagement and sales with SEG's data-driven social media marketing.",
+  },
 };
 
 

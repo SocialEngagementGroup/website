@@ -28,7 +28,7 @@ const HeroSection = ({
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-0 text-center md:text-start w-full">
 
           {/* ---------- Left Text (95vh on mobile, Auto on desktop) ---------- */}
-          <div className="text-white content order-1 md:order-1 min-h-[95vh] md:min-h-0 flex flex-col justify-center px-6 md:px-0">
+          <div className="text-white content order-1 md:order-1 min-h-[95vh] md:min-h-0 flex flex-col justify-center pb-24 md:pb-0 px-6 md:px-0">
             <h3 className="!capitalize !font-medium opacity-90 mb-4">{subtitle}</h3>
             <h1 className="!text-[38px] md:!text-[56px] lg:!text-[64px] !font-serif !font-bold !leading-[1.1] !tracking-tight">
               {title}
@@ -71,7 +71,7 @@ const HeroSection = ({
       </div>
 
       {/* Scroll Indicator (Visible on Mobile only) */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 pointer-events-none md:hidden z-20">
+      <div className="absolute bottom-32 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 pointer-events-none md:hidden z-20">
         <span className="font-sans text-[10px] tracking-[0.3em] text-white/70 uppercase">
           Explore
         </span>

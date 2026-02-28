@@ -4,12 +4,12 @@ export const metadata = {
   title: "Contact Us",
   description: "Ready to grow your business? Contact SEG today for a quote on our creative and AI-powered digital services. Let's start your story together.",
   openGraph: {
-    title: "Contact Us | Social Engagement Group",
+    title: "Contact Us | SEG - Social Engagement Group",
     description: "Get in touch with SEG for creative and AI-powered digital services that drive results.",
     url: "/contact-us",
   },
   twitter: {
-    title: "Contact Us | Social Engagement Group",
+    title: "Contact Us | SEG - Social Engagement Group",
     description: "Get in touch with SEG for creative and AI-powered digital services that drive results.",
   },
 };

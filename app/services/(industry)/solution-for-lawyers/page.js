@@ -10,12 +10,18 @@ import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 export const metadata = {
-  title: {
-    default: "Digital Marketing for Law Firms | Build Trust & Grow",
-    template: "%s | SEG",
-  },
+  title: "Digital Marketing for Law Firms",
   description:
     "Boost your law firm’s visibility and reputation with tailored digital marketing. Get found first, attract quality clients, and grow your practice with trust.",
+  openGraph: {
+    title: "Digital Marketing for Law Firms | SEG - Social Engagement Group",
+    description: "Boost your law firm’s visibility and reputation with SEG's tailored digital marketing.",
+    url: "/services/solution-for-lawyers",
+  },
+  twitter: {
+    title: "Digital Marketing for Law Firms | SEG - Social Engagement Group",
+    description: "Boost your law firm’s visibility and reputation with SEG's tailored digital marketing.",
+  },
 };
 
 

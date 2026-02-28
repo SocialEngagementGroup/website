@@ -10,12 +10,18 @@ import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 export const metadata = {
-  title: {
-    default: "Digital Marketing for Tech Startups | Launch & Scale Fast",
-    template: "%s | SEG",
-  },
+  title: "Digital Marketing for Restaurants",
   description:
-    "Accelerate your tech startup’s growth with data-driven marketing. Build traction, attract users, and scale visibility from launch to Series A and beyond.",
+    "Boost your restaurant's visibility and drive more bookings with tailored digital marketing. Get found by local foodies and grow your business with a strong online presence.",
+  openGraph: {
+    title: "Digital Marketing for Restaurants | SEG - Social Engagement Group",
+    description: "Drive more diners to your restaurant with SEG's specialized digital marketing strategies.",
+    url: "/services/solution-for-restaurants",
+  },
+  twitter: {
+    title: "Digital Marketing for Restaurants | SEG - Social Engagement Group",
+    description: "Drive more diners to your restaurant with SEG's specialized digital marketing strategies.",
+  },
 };
 
 export default function Page() {

@@ -1,4 +1,8 @@
 import React from 'react'
+export const metadata = {
+  title: "Cookies",
+};
+
 import HeroSection from '@/components/LegalPage/HeroSection/HeroSection'
 import { termsandconditions } from "./data";
 import CookiesBodyContent from '@/components/LegalPage/Content/CookiesBodyContent'

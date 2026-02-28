@@ -1,4 +1,8 @@
 import React from 'react'
+export const metadata = {
+  title: "Legal Notice",
+};
+
 import HeroSection from '@/components/LegalPage/HeroSection/HeroSection'
 import { legal } from "./data";
 import BodyContent from '@/components/LegalPage/Content/BodyContent'
