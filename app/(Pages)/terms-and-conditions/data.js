@@ -7,7 +7,7 @@ export const termsandconditions = {
     sections: [
       {
         text:
-          "Welcome to the <strong><a href=\"/\" style=\"text-decoration: none; color: black;\">Social Engagement Group</a></strong>. These Terms and Conditions ('Terms') govern your use of our website located at <a href='https://www.socialengagementgroup.com' target='_blank'>https://www.socialengagementgroup.com/</a> and the digital marketing services provided by <strong><a href=\"/\" style=\"text-decoration: none; color: black;\">Social Engagement Group LLC</a></strong>. By accessing our site or utilizing our services, you agree to comply with and be bound by these Terms.",
+          "Welcome to the <strong><a href=\"/\" style=\"text-decoration: none; color: black;\">Social Engagement Group</a></strong>. These Terms and Conditions ('Terms') govern your use of our website and the digital marketing services provided by <strong><a href=\"/\" style=\"text-decoration: none; color: black;\">Social Engagement Group LLC</a></strong>. By accessing our site or utilizing our services, you agree to comply with and be bound by these Terms.",
       },
       {
         text:
