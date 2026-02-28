@@ -39,9 +39,8 @@ The **Social Engagement Group (SEG)** website is a premium, high-performance mar
 | **Smooth Scroll** | [Lenis](https://github.com/studio-freight/lenis)                                                                            |
 | **Carousels**     | [Swiper 12](https://swiperjs.com/) + [React Slick](https://react-slick.neostack.com/)                                       |
 | **Gallery**       | [LightGallery](https://www.lightgalleryjs.com/)                                                                             |
-| **Forms**         | [React Hook Form](https://react-hook-form.com/) + [Yup](https://github.com/jquense/yup)                                     |
-| **Icons**         | [Lucide React](https://lucide.dev/) + [React Icons](https://react-icons.github.io/) + [Iconify](https://iconify.design/)    |
-| **SEO**           | [next-sitemap](https://github.com/iamvishnusankar/next-sitemap) + reCAPTCHA                                                 |
+| **Icons**         | [React Icons](https://react-icons.github.io/) (FontAwesome 6 + Remix Icons)                                                 |
+| **SEO**           | [next-sitemap](https://github.com/iamvishnusankar/next-sitemap) + reCAPTCHA v2                                              |
 | **Fonts**         | [Outfit](https://fonts.google.com/specimen/Outfit) + [Playfair Display](https://fonts.google.com/specimen/Playfair+Display) |
 
 ---
@@ -52,71 +51,64 @@ The **Social Engagement Group (SEG)** website is a premium, high-performance mar
 Website/
 ├── app/
 │   ├── (Pages)/              # Legal pages (Cookies, Privacy, Terms, Legal Notice)
-│   ├── Home/                  # Home page
+│   ├── Home/                  # Home page modules
 │   ├── about/                 # About page
 │   ├── contact-us/            # Contact page
 │   ├── services/
-│   │   ├── (creative)/        # Branding, Logo, 3D, Content, Video, Social Media
-│   │   ├── (digital)/         # SEO, PPC, SMM, Web Dev, Google Ads, Reviews
-│   │   ├── (industry)/        # Solutions for Doctors, Lawyers, Restaurants, Startups
-│   │   └── (masterPage)/      # All Services overview
-│   ├── globals.css            # Global design system & typography
-│   ├── layout.js              # Root layout (fonts, metadata, GTM, JSON-LD)
-│   ├── page.js                # Landing page
-│   ├── robots.js              # Dynamic robots.txt generation
-│   └── sitemap.js             # Dynamic sitemap.xml generation
+│   │   ├── (creative)/        # Creative & Branding services
+│   │   ├── (digital)/         # Digital Marketing & SEO services
+│   │   ├── (industry)/        # Industry-specific solutions
+│   │   └── (masterPage)/      # All Services overview page
+│   ├── globals.css            # Core design system & CSS variables
+│   ├── layout.js              # Root layout (Metadata, Google Tag Manager, JSON-LD)
+│   ├── page.js                # Core landing page
+│   ├── robots.js              # Advanced crawler permissions (AI Bot friendly)
+│   └── sitemap.js             # High-accuracy dynamic sitemap generation
 │
-├── components/                # Modular UI components
-├── data/                      # Global site and services data
+├── components/                # Reusable UI components & section-specific modules
+├── data/                      # Structured site data & service details
 ├── public/
-│   ├── assets/                # Static assets (optimized WebP images & WebM videos)
-│   └── llms.txt               # AI-friendly site summary for LLM crawlers
-└── next.config.mjs            # Next.js configuration
+│   ├── assets/                # Optimized media assets (WebP & WebM)
+│   ├── favicon.png            # Standardized high-res site icon
+│   ├── llms.txt               # LLM-optimized site index for AI agents
+│   └── sitemap.xml            # Persisted search engine map
+└── next.config.mjs            # Production-ready Next.js config
 ```
 
 ---
 
-## 🎨 Design System
+## 🎨 Design System & Branding
 
-The site uses a **custom typographic hierarchy** defined in `globals.css`:
+The site follows a **premium, precision-driven design system** with a strong focus on typography and motion:
 
-| Element   | Desktop | Mobile | Purpose                    |
-| :-------- | :-----: | :----: | :------------------------- |
-| `h1`      |  64px   |  42px  | Page titles                |
-| `h2`      |  48px   |  32px  | Section headings           |
-| `h3`      |  24px   |  20px  | Feature / button headings  |
-| `h4`      |  54px   |  38px  | Premium mid-level headings |
-| `h5`      |  24px   |  20px  | Sub-section headers        |
-| `h6`      |  20px   |  18px  | Utility captions           |
-| `p / .p1` |  24px   |  20px  | Body text                  |
-| `.p2`     |  24px   |  18px  | Secondary content          |
-| `.p3`     |  18px   |  16px  | Small utility text         |
-
-**Fonts:** Outfit (sans-serif) for body & headings, Playfair Display (serif) for accents.
+- **Typography**: `Outfit` for modern, accessible body text and `Playfair Display` for sophisticated, high-end headings.
+- **Visuals**: Modern circular iconography with custom brand colors (`#975554`).
+- **Standardized Branding**: All page titles are dynamically suffixed with ` | SEG - Social Engagement Group` for maximum brand recall.
 
 ---
 
-## 🚀 Performance & Optimization
+## 🚀 Recent Optimizations (2026)
 
-### 🎥 Asset Optimization
+### 🤖 AI-Ready Infrastructure
 
-- **WebM Video Compression**: All site videos have been compressed under **800KB** using the VP9 codec to ensure fast loading and compliance with Vercel deployment limits.
-- **WebP Image Conversion**: Images are standardized to **WebP** format, offering superior compression and quality compared to legacy PNG/JPG formats.
+- **llms.txt Integration**: Published a standalone site index at `/llms.txt` to help AI models like ChatGPT and Claude understand SEG's offerings instantly.
+- **AI Bot Permissions**: Updated `robots.txt` to explicitly authorize major AI crawlers (`GPTBot`, `Claude-Web`, etc.) while maintaining standard SEO protocols.
 
-### 🤖 AI Accessibility
+### 📈 Advanced SEO & Reach
 
-- **llms.txt**: Implemented the [`llms.txt`](/public/llms.txt) standard to provide Large Language Models (like ChatGPT, Claude, and Perplexity) with a clean, structured Markdown summary of the website's content and services.
-- **AI Crawler Whitelisting**: `robots.js` is explicitly configured to allow major AI bots to crawl and index the site.
+- **JSON-LD Schema**: Implemented `Organization` and `WebSite` structured data for rich search results.
+- **Standardized Metadata**: Overhauled meta descriptions, OG tags, and canonical URLs for all 24+ static and dynamic routes.
+- **Global Suffixing**: Automated branding across browser tabs for visual consistency.
 
----
+### 🎥 High-Performance Assets
 
-## 🌐 SEO & Analytics
+- **WebM Compression**: All background videos and animations are optimized strictly under **800KB** using the high-performance VP9 codec.
+- **WebP Transition**: Completed full migration from PNG/JPG to WebP, resulting in a **60-80% reduction in image payload size**.
 
-- **Structured Data (JSON-LD)**: Integrated `Organization` and `WebSite` schemas in the root layout for rich search results.
-- **Google Tag Manager**: Integrated for advanced analytics tracking (`GTM-KF3BPC8C`).
-- **Dynamic Sitemap**: `next-sitemap` coupled with `app/sitemap.js` for automatic indexing.
-- **Metadata Standardization**: Global title template ensures consistent branding: `"%s | SEG - Social Engagement Group"`.
-- **Social Sharing**: Optimized Open Graph (OG) and Twitter Card tags across all routes.
+### 🛠️ Core Stability
+
+- **Hydration Reliability**: Fixed persistent hydration issues in interactive forms by addressing browser-extension injection conflicts.
+- **Social Icon Standardization**: Unified the visual weight of social icons using filled versions (`RiInstagramFill`) for a consistent design language.
 
 ---
 
@@ -136,36 +128,18 @@ cd website
 
 # Install dependencies
 npm install
-```
-
-### Development
-
-```bash
-# Start dev server with Turbopack
+# Start development
 npm run dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
----
-
-## 🔧 Key Scripts
-
-| Command         | Description                          |
-| :-------------- | :----------------------------------- |
-| `npm run dev`   | Start development server (Turbopack) |
-| `npm run build` | Create production build              |
-| `npm start`     | Start production server              |
-| `npm run lint`  | Run ESLint checks                    |
 
 ---
 
 ## 📜 License
 
-This project is **proprietary** and owned by **Social Engagement Group LLC**. All rights reserved.
+This project and its original assets are **Proprietary** and owned by **Social Engagement Group LLC**. All rights reserved.
 
 ---
 
 <p align="center">
-  <sub>Built with ❤️ by the <strong>Social Engagement Group</strong> team</sub>
+  <sub>Built with Excellence by the <strong>Social Engagement Group</strong> Team</sub>
 </p>
