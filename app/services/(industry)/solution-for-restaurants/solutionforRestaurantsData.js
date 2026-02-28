@@ -54,7 +54,7 @@ export const solutionforRestaurantsData = {
       { text: "Stay top of mind locally with consistent content, promos, and reminders." },
       { text: "Make it easy for happy guests to tag, post, and amplify your restaurant." },
     ],
-    video: "/assets/videos/services/industry/Solution-for-restaurants.mp4", // kept original
+    video: "/assets/videos/services/industry/Solution-for-restaurants.webm", // kept original
   },
 
   BrandStrategy: {

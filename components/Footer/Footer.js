@@ -11,7 +11,7 @@ const Footer = () => {
         
         {/* Background Image with Blur */}
         <div 
-          className="absolute inset-0 bg-[url('/assets/images/backgrounds/contact-form-bd.png')] bg-cover bg-center bg-no-repeat blur-xl transform scale-105"
+          className="absolute inset-0 bg-[url('/assets/images/backgrounds/contact-form-bg.png')] bg-cover bg-center bg-no-repeat blur-xl transform scale-105"
           style={{ zIndex: 0 }}
         />
         {/* Black Overlay */}

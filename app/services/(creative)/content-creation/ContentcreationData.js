@@ -60,7 +60,7 @@ export const contentCreationData = {
         text: "Innovative <strong>AI-powered content</strong> keeps your brand at the forefront of industry trends.",
       },
     ],
-    video: "/assets/videos/services/creative/Content-Creation.mp4",
+    video: "/assets/videos/services/creative/Content-Creation.webm",
   },
   ContentStrategy: {
     heading: "What You Get",

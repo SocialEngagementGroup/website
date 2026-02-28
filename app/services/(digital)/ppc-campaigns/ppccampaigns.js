@@ -55,7 +55,7 @@ export const PpcServiceData = {
       { text: "Conversions increase steadily across all active campaigns." },
       { text: "CPA drops naturally while ROAS strengthens and scales over time." },
     ],
-    video: "/assets/videos/services/digital/PPC-Campaigns.mp4",
+    video: "/assets/videos/services/digital/PPC-Campaigns.webm",
   },
 
   BrandStrategy: {

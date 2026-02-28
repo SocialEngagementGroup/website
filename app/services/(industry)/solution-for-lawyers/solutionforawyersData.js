@@ -64,7 +64,7 @@ export const solutionforawyersData = {
         text: "You dominate local and practice-area visibility, outshining competitors.",
       },
     ],
-    video: "/assets/videos/services/industry/Solution-for-Lawyers.mp4",
+    video: "/assets/videos/services/industry/Solution-for-Lawyers.webm",
   },
 
   BrandStrategy: {

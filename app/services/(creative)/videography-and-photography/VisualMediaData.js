@@ -65,7 +65,7 @@ export const VisualMediaData = {
       },
 
     ],
-    video: "/assets/videos/services/creative/Videography-&-Photography.mp4",
+    video: "/assets/videos/services/creative/Videography-&-Photography.webm",
   },
 
   BrandStrategy: {
