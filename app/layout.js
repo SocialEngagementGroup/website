@@ -98,6 +98,49 @@ export default function SiteLayout({ children }) {
         {children}
         <Footer />
 
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Social Engagement Group",
+              url: "https://socialengagementgroup.com",
+              logo: "https://socialengagementgroup.com/assets/images/site-logo/logo.svg",
+              description: "Social Engagement Group (SEG) blends human creativity with AI-powered automation to drive business growth across every digital touchpoint.",
+              sameAs: [
+                "https://www.facebook.com/socialengagementgroup",
+                "https://twitter.com/seg_agency",
+                "https://www.linkedin.com/company/socialengagementgroup",
+                "https://www.instagram.com/socialengagementgroup"
+              ],
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+1-XXX-XXX-XXXX",
+                contactType: "customer service",
+                email: "info@socialengagementgroup.com"
+              }
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Social Engagement Group",
+              url: "https://socialengagementgroup.com",
+              potentialAction: {
+                "@type": "SearchAction",
+                target: "https://socialengagementgroup.com/services?s={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            })
+          }}
+        />
+
         {/* optional */}
         {/* <Analytics /> */}
       </body>

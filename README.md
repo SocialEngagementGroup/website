@@ -5,8 +5,8 @@
 </p>
 
 <p align="center">
-  <a href="https://socialengagementgroup.com">🌐 Live Site</a>  · 
-  <a href="https://github.com/SocialEngagementGroup/website">📦 Repository</a>  · 
+  <a href="https://socialengagementgroup.com">🌐 Live Site</a>  ·  
+  <a href="https://github.com/SocialEngagementGroup/website">📦 Repository</a>  ·  
   <a href="https://socialengagementgroup.com/contact-us">📬 Contact Us</a>
 </p>
 
@@ -61,22 +61,17 @@ Website/
 │   │   ├── (industry)/        # Solutions for Doctors, Lawyers, Restaurants, Startups
 │   │   └── (masterPage)/      # All Services overview
 │   ├── globals.css            # Global design system & typography
-│   ├── layout.js              # Root layout (fonts, metadata, GTM)
-│   └── page.js                # Landing page
+│   ├── layout.js              # Root layout (fonts, metadata, GTM, JSON-LD)
+│   ├── page.js                # Landing page
+│   ├── robots.js              # Dynamic robots.txt generation
+│   └── sitemap.js             # Dynamic sitemap.xml generation
 │
-├── components/
-│   ├── ContactPage/           # Contact form & hero
-│   ├── Footer/                # Footer, contact info, copyright
-│   ├── HomePage/              # Hero, parallax slider, brand logos, insights
-│   ├── LegalPage/             # Shared legal page components
-│   ├── MasterServicesPage/    # Services overview components
-│   ├── Navbar/                # Desktop & mobile navigation
-│   └── ServicePage/           # Individual service page components
-│
-├── apis/                      # API utilities
-├── lib/                       # Shared libraries
-├── public/                    # Static assets (images, icons, logos)
-└── data.js                    # Global site data
+├── components/                # Modular UI components
+├── data/                      # Global site and services data
+├── public/
+│   ├── assets/                # Static assets (optimized WebP images & WebM videos)
+│   └── llms.txt               # AI-friendly site summary for LLM crawlers
+└── next.config.mjs            # Next.js configuration
 ```
 
 ---
@@ -98,6 +93,30 @@ The site uses a **custom typographic hierarchy** defined in `globals.css`:
 | `.p3`     |  18px   |  16px  | Small utility text         |
 
 **Fonts:** Outfit (sans-serif) for body & headings, Playfair Display (serif) for accents.
+
+---
+
+## 🚀 Performance & Optimization
+
+### 🎥 Asset Optimization
+
+- **WebM Video Compression**: All site videos have been compressed under **800KB** using the VP9 codec to ensure fast loading and compliance with Vercel deployment limits.
+- **WebP Image Conversion**: Images are standardized to **WebP** format, offering superior compression and quality compared to legacy PNG/JPG formats.
+
+### 🤖 AI Accessibility
+
+- **llms.txt**: Implemented the [`llms.txt`](/public/llms.txt) standard to provide Large Language Models (like ChatGPT, Claude, and Perplexity) with a clean, structured Markdown summary of the website's content and services.
+- **AI Crawler Whitelisting**: `robots.js` is explicitly configured to allow major AI bots to crawl and index the site.
+
+---
+
+## 🌐 SEO & Analytics
+
+- **Structured Data (JSON-LD)**: Integrated `Organization` and `WebSite` schemas in the root layout for rich search results.
+- **Google Tag Manager**: Integrated for advanced analytics tracking (`GTM-KF3BPC8C`).
+- **Dynamic Sitemap**: `next-sitemap` coupled with `app/sitemap.js` for automatic indexing.
+- **Metadata Standardization**: Global title template ensures consistent branding: `"%s | SEG - Social Engagement Group"`.
+- **Social Sharing**: Optimized Open Graph (OG) and Twitter Card tags across all routes.
 
 ---
 
@@ -128,39 +147,6 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Production Build
-
-```bash
-# Build for production
-npm run build
-
-# Start production server
-npm start
-```
-
----
-
-## 📄 Pages
-
-| Page                          | Route                                | Description                                          |
-| :---------------------------- | :----------------------------------- | :--------------------------------------------------- |
-| **Home**                      | `/`                                  | Hero section, parallax slider, brand logos, insights |
-| **About**                     | `/about`                             | Company story and mission                            |
-| **Contact**                   | `/contact-us`                        | Contact form with reCAPTCHA                          |
-| **All Services**              | `/services`                          | Full services overview with search                   |
-| **Branding**                  | `/services/branding`                 | Brand strategy & identity                            |
-| **SEO**                       | `/services/seo`                      | Search engine optimization                           |
-| **PPC**                       | `/services/ppc-campaigns`            | Pay-per-click advertising                            |
-| **Social Media**              | `/services/social-media-marketing`   | Social media management                              |
-| **Web Development**           | `/services/website-development`      | Custom website development                           |
-| **Solutions for Lawyers**     | `/services/solution-for-lawyers`     | Legal industry marketing                             |
-| **Solutions for Doctors**     | `/services/solution-for-doctors`     | Healthcare marketing                                 |
-| **Solutions for Restaurants** | `/services/solution-for-restaurants` | Restaurant marketing                                 |
-| **Privacy Policy**            | `/privacy-policy`                    | Data protection policy                               |
-| **Terms & Conditions**        | `/terms-and-conditions`              | Usage terms                                          |
-| **Cookies**                   | `/cookies`                           | Cookie usage policy                                  |
-| **Legal Notice**              | `/legal-notice`                      | Legal disclaimers                                    |
-
 ---
 
 ## 🔧 Key Scripts
@@ -171,16 +157,6 @@ npm start
 | `npm run build` | Create production build              |
 | `npm start`     | Start production server              |
 | `npm run lint`  | Run ESLint checks                    |
-
----
-
-## 🌐 SEO & Analytics
-
-- **Google Tag Manager** integrated for analytics tracking
-- **next-sitemap** for automatic sitemap generation (`/sitemap.xml`)
-- **robots.txt** configured for search engine crawling
-- **Open Graph & Twitter Card** metadata for rich social sharing
-- **reCAPTCHA v2** on contact forms for spam protection
 
 ---
 
