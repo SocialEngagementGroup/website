@@ -115,8 +115,8 @@ const Testimonials = () => {
                     <img src={current.image} className="w-[120%] h-[120%] object-cover object-top" alt={current.author} />
                   </div>
                   <div className="flex flex-col">
-                    <h4 className="!text-[16px] md:!text-[22px] font-bold text-[#0A2647] tracking-tight leading-none mb-1">{current.author}</h4>
-                    <p className="text-[#975554] !text-[13px] md:!text-[18px] font-medium opacity-90 leading-tight">
+                    <h4 className="!text-[16px] md:!text-[22px] font-bold text-[#975554] tracking-tight leading-none mb-1">{current.author}</h4>
+                    <p className="text-[#0A2647] !text-[13px] md:!text-[18px] font-medium opacity-90 leading-tight">
                       {current.role} {current.company}
                     </p>
                   </div>

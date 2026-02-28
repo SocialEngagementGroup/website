@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import ContactForm from "@/components/Footer/ContactForm/ContactForm";
+import { Sparkles } from "lucide-react";
 
 const HeroSection = ({
   title,
@@ -48,8 +49,10 @@ const HeroSection = ({
                       sm:px-8 sm:py-3 md:px-10 md:py-4
                       hover:bg-[#975554] hover:text-white transition-all cursor-pointer
                       text-base sm:text-lg mt-4 shadow-xl border border-transparent
+                      flex items-center gap-2
                     `}
                   >
+                    <Sparkles className="w-5 h-5" />
                     {ctaButton}
                   </button>
                 </Link>
