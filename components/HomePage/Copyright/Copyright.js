@@ -11,7 +11,7 @@ const Copyright = () => {
       { name: "About Us", href: "/#aboutUs" },
       { name: "Services", href: "/services" },
       { name: "Contact Us", href: "/contact-us" },
-      { name: "Careers", href: "https://digital.socialengagementgroup.com/careers" },
+      { name: "Careers", href: "/careers" },
     ],
     Creative: [
       { name: "Branding", href: "/services/branding" },

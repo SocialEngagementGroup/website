@@ -70,11 +70,16 @@ const AutoSlider = ({ slides = [] }) => {
         }}
         onSwiper={(swiper) => {
           setTimeout(() => {
-            swiper.params.navigation.prevEl = prevRef.current;
-            swiper.params.navigation.nextEl = nextRef.current;
-            swiper.navigation.destroy();
-            swiper.navigation.init();
-            swiper.navigation.update();
+            if (swiper && swiper.params && swiper.params.navigation) {
+              swiper.params.navigation.prevEl = prevRef.current;
+              swiper.params.navigation.nextEl = nextRef.current;
+              
+              if (swiper.navigation) {
+                swiper.navigation.destroy();
+                swiper.navigation.init();
+                swiper.navigation.update();
+              }
+            }
           });
         }}
         className=""

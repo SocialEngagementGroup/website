@@ -3,13 +3,19 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { projects } from "@/data";
 import { Phone } from "lucide-react";
 
 export default function NavBarMobile() {
+  const pathname = usePathname();
+  const isCareersPage = pathname.startsWith("/careers");
   const [isSticky, setIsSticky] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mobileActiveCategory, setMobileActiveCategory] = useState(null);
+
+  // On careers pages (light bg), use dark text when not scrolled and menu closed
+  const useDarkText = isCareersPage && !isSticky && !isMobileMenuOpen;
 
   useEffect(() => {
     const handleScroll = () => setIsSticky(window.scrollY > 20);
@@ -42,7 +48,7 @@ export default function NavBarMobile() {
             src="/SiteLogo/logo.svg"
             alt="Site Logo"
             fill
-            className="object-contain brightness-0 invert"
+            className={`object-contain brightness-0 ${useDarkText ? '' : 'invert'}`}
           />
         </Link>
 
@@ -59,7 +65,7 @@ export default function NavBarMobile() {
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="text-white p-1 focus:outline-none"
+            className={`p-1 focus:outline-none ${useDarkText ? 'text-gray-900' : 'text-white'}`}
             aria-label="Toggle menu"
           >
             <svg

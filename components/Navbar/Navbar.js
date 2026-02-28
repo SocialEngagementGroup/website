@@ -10,10 +10,14 @@ import { Phone } from "lucide-react";
 export default function Navbar() {
   const pathname = usePathname();
   const isHomePage = pathname === "/";
+  const isCareersPage = pathname.startsWith("/careers");
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const [activeCategory, setActiveCategory] = useState("Creative");
+
+  // On careers pages (light bg), use dark text when not scrolled
+  const useDarkText = isCareersPage && !isSticky;
 
   // Create refs for the dropdown and button
   const dropdownRef = useRef(null);
@@ -56,7 +60,7 @@ export default function Navbar() {
                 src="/SiteLogo/logo.svg"
                 alt="Site Logo"
                 fill
-                className="object-contain brightness-0 invert"
+                className={`object-contain brightness-0 ${useDarkText ? '' : 'invert'}`}
               />
             </div>
           </Link>
@@ -121,7 +125,7 @@ export default function Navbar() {
                 <Link
                   href="/"
                   onClick={() => setIsOpen(false)}
-                  className="block py-2 px-3 text-white font-sans font-bold text-[16px] md:text-[20px] hover:text-gray-300 transition cursor-pointer"
+                  className={`block py-2 px-3 font-sans font-bold text-[16px] md:text-[20px] transition cursor-pointer ${useDarkText ? 'text-gray-900 hover:text-gray-600' : 'text-white hover:text-gray-300'}`}
                 >
                   Home
                 </Link>
@@ -138,7 +142,7 @@ export default function Navbar() {
               >
                 <Link
                   href="/services"
-                  className="py-2 px-3 text-white font-sans font-bold text-[16px] md:text-[20px] hover:text-gray-300 transition flex items-center cursor-pointer"
+                  className={`py-2 px-3 font-sans font-bold text-[16px] md:text-[20px] transition flex items-center cursor-pointer ${useDarkText ? 'text-gray-900 hover:text-gray-600' : 'text-white hover:text-gray-300'}`}
                 >
                   Services
                   <svg
@@ -268,7 +272,7 @@ export default function Navbar() {
                 <Link
                   href="/contact-us"
                   onClick={() => setIsOpen(false)}
-                  className="block py-2 px-3 text-white font-sans font-bold text-[16px] md:text-[20px] hover:text-gray-300 transition cursor-pointer"
+                  className={`block py-2 px-3 font-sans font-bold text-[16px] md:text-[20px] transition cursor-pointer ${useDarkText ? 'text-gray-900 hover:text-gray-600' : 'text-white hover:text-gray-300'}`}
                 >
                   Contact Us
                 </Link>
