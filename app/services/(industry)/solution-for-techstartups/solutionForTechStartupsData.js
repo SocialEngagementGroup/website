@@ -7,7 +7,7 @@ export const solutionForTechStartupsData = {
       ctaButton: "Connect With Us",
      ctaLink: "#contact",
    img: "/assets/images/services/creative/branding/heroimg.png", // kept original
-   bg: "/assets/images/backgrounds/service-bg.png",   // kept original
+   bg: "/assets/images/backgrounds/service-bg.webp",   // kept original
   },
 
   intro: {

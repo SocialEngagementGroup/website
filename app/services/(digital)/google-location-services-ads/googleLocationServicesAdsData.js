@@ -7,7 +7,7 @@ export const googleLocationServicesAdsData = {
     ctaButton: "Connect With Us",
     ctaLink: "#contact",
    img: "/assets/images/services/creative/branding/heroimg.png",
-   bg: "/assets/images/backgrounds/service-bg.png",
+   bg: "/assets/images/backgrounds/service-bg.webp",
   },
 
   intro: {
@@ -75,7 +75,7 @@ export const googleLocationServicesAdsData = {
         text: "Ongoing optimization plus dispute support to protect your budget",
       },
     ],
-   img: "/assets/images/services/master-image-slider/digital/google-location-services-ads.png",
+   img: "/assets/images/services/master-image-slider/digital/google-location-services-ads.webp",
   },
 
   FAQ: {

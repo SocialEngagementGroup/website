@@ -7,7 +7,7 @@ export const seoData = {
     ctaButton: "Connect With Us",
         ctaLink: "#contact",
    img: "/assets/images/services/creative/branding/heroimg.png",   // original kept
-   bg: "/assets/images/backgrounds/service-bg.png",     // original kept
+   bg: "/assets/images/backgrounds/service-bg.webp",     // original kept
   },
 
   intro: {

@@ -11,7 +11,7 @@ export default function NotFound() {
       {/* Custom Background Image - Sharp and Sharp */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/assets/images/backgrounds/404-bg.jpg"
+          src="/assets/images/backgrounds/404-bg.webp"
           alt="Cosmic Background"
           fill
           className="object-cover object-center"

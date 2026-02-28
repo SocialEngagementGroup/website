@@ -7,7 +7,7 @@ export const googleBusinessProfileManagementData = {
     ctaButton: "Connect With Us",
     ctaLink: "#contact",
    img: "/assets/images/services/creative/branding/heroimg.png",
-   bg: "/assets/images/backgrounds/service-bg.png",
+   bg: "/assets/images/backgrounds/service-bg.webp",
   },
 
   intro: {

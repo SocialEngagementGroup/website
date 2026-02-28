@@ -7,7 +7,7 @@ export const solutionForDoctorsData = {
     ctaButton: "Contact With Us",
      ctaLink: "#contact",
    img: "/assets/images/services/creative/branding/heroimg.png",
-   bg: "/assets/images/backgrounds/service-bg.png",
+   bg: "/assets/images/backgrounds/service-bg.webp",
   },
 
   intro: {
@@ -67,7 +67,7 @@ export const solutionForDoctorsData = {
       { text: "<strong>Reputation & Compliance Monitoring:</strong> Track online mentions, ensure accuracy across directories, and maintain full compliance with healthcare advertising rules." },
       { text: "<strong>Analytics & Growth Reporting:</strong> Transparent dashboards showing traffic, leads, appointment trends, and ROI to guide smarter clinical decisions." },
     ],
-   img: "/assets/images/services/master-image-slider/industry/solution-for-doctors.png",
+   img: "/assets/images/services/master-image-slider/industry/solution-for-doctors.webp",
   },
 
 

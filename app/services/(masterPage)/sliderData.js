@@ -9,8 +9,8 @@ export const CreativeData = [
 
 export const Digital = [
   { title: "google business profile management", bg: "/assets/images/services/master-image-slider/digital/google-business-profile-management.png", link: "/services/google-business-profile-management" },
-  { title: "google location services ads", bg: "/assets/images/services/master-image-slider/digital/google-location-services-ads.png", link: "/services/google-location-services-ads" },
-  { title: "PPC Campaigns", bg: "/assets/images/services/master-image-slider/digital/ppc-campaigns.png", link: "/services/ppc-campaigns" },
+  { title: "google location services ads", bg: "/assets/images/services/master-image-slider/digital/google-location-services-ads.webp", link: "/services/google-location-services-ads" },
+  { title: "PPC Campaigns", bg: "/assets/images/services/master-image-slider/digital/ppc-campaigns.webp", link: "/services/ppc-campaigns" },
   { title: "Retargeting & Remarketing", bg: "/assets/images/services/master-image-slider/digital/retargeting-remarketing.png", link: "/services/retargeting-and-remarketing" },
   { title: "review & reputation management", bg: "/assets/images/services/master-image-slider/digital/review-and-reputation-management.png", link: "/services/review-and-reputation-management" },
   { title: "SEO", bg: "/assets/images/services/master-image-slider/digital/seo.png", link: "/services/seo" },
@@ -20,15 +20,15 @@ export const Digital = [
 
 export const Industry = [
   { title: "Solution for Lawyers", bg: "/assets/images/services/master-image-slider/industry/solution-for-lawyers.png", link: "/services/solution-for-lawyers" },
-  { title: "Solution for Doctors", bg: "/assets/images/services/master-image-slider/industry/solution-for-doctors.png", link: "/services/solution-for-doctors" },
+  { title: "Solution for Doctors", bg: "/assets/images/services/master-image-slider/industry/solution-for-doctors.webp", link: "/services/solution-for-doctors" },
   { title: "Solution for Restaurants", bg: "/assets/images/services/master-image-slider/industry/solution-for-restaurant.png", link: "/services/solution-for-restaurants" },
   { title: "Solution for Tech Startups", bg: "/assets/images/services/master-image-slider/industry/solution-for-tech-startups.png", link: "/services/solution-for-techstartups" },
-  { title: "Solution for Doctors", bg: "/assets/images/services/master-image-slider/industry/solution-for-doctors.png", link: "/services/solution-for-doctors" },
+  { title: "Solution for Doctors", bg: "/assets/images/services/master-image-slider/industry/solution-for-doctors.webp", link: "/services/solution-for-doctors" },
 ];
 
 export const Marketing = [
   { title: "Marketing by SEG", bg: "/assets/images/services/master-image-slider/industry/solution-for-lawyers.png", link: "https://digital.socialengagementgroup.com/" },
-  { title: "Marketing for Law Firms", bg: "/assets/images/services/master-image-slider/industry/solution-for-doctors.png", link: "https://digital.socialengagementgroup.com/marketing-for-law-firm" },
+  { title: "Marketing for Law Firms", bg: "/assets/images/services/master-image-slider/industry/solution-for-doctors.webp", link: "https://digital.socialengagementgroup.com/marketing-for-law-firm" },
   { title: "Marketing for Doctors", bg: "/assets/images/services/master-image-slider/industry/solution-for-restaurant.png", link: "https://digital.socialengagementgroup.com/marketing-for-doctors" },
   { title: "Marketing for Restaurants", bg: "/assets/images/services/master-image-slider/industry/solution-for-tech-startups.png", link: "https://digital.socialengagementgroup.com/marketing-for-restaurants" },
 ];

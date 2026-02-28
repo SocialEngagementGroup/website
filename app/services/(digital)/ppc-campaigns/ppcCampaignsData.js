@@ -7,7 +7,7 @@ export const ppcCampaignsData = {
     ctaButton: "Connect With Us",
     ctaLink: "#contact",
    img: "/assets/images/services/creative/branding/heroimg.png",
-   bg: "/assets/images/backgrounds/service-bg.png",
+   bg: "/assets/images/backgrounds/service-bg.webp",
   },
 
   intro: {
@@ -65,7 +65,7 @@ export const ppcCampaignsData = {
       { text: "Precise conversion tracking and event setup for accurate performance data." },
       { text: "Ongoing optimization with A/B testing to continually improve results." },
     ],
-   img: "/assets/images/services/master-image-slider/digital/ppc-campaigns.png",
+   img: "/assets/images/services/master-image-slider/digital/ppc-campaigns.webp",
   },
 
   FAQ: {

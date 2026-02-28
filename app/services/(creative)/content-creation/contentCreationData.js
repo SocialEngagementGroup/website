@@ -7,7 +7,7 @@ export const contentCreationData = {
     ctaButton: "Connect With Us",
         ctaLink: "#contact",
    img: "/assets/images/services/creative/branding/heroimg.png",
-   bg: "/assets/images/backgrounds/service-bg.png",
+   bg: "/assets/images/backgrounds/service-bg.webp",
   },
   intro: {
     heading: "Content That Captures Attention",

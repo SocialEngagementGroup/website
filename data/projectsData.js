@@ -47,7 +47,7 @@ export const projects = [
       },
       {
         name: "PPC Campaigns",
-        img: "/assets/images/services/master-image-slider/digital/ppc-campaigns.png",
+        img: "/assets/images/services/master-image-slider/digital/ppc-campaigns.webp",
         link: "/services/ppc-campaigns",
       },
       {
@@ -67,7 +67,7 @@ export const projects = [
       },
       {
         name: "Google Location Services Ads",
-        img: "/assets/images/services/master-image-slider/digital/google-location-services-ads.png",
+        img: "/assets/images/services/master-image-slider/digital/google-location-services-ads.webp",
         link: "/services/google-location-services-ads",
       },
       {
@@ -94,7 +94,7 @@ export const projects = [
       },
       {
         name: "Solution for Doctors",
-        img: "/assets/images/services/master-image-slider/industry/solution-for-doctors.png",
+        img: "/assets/images/services/master-image-slider/industry/solution-for-doctors.webp",
         link: "/services/solution-for-doctors",
       },
       {
@@ -120,7 +120,7 @@ export const projects = [
       },
       {
         name: "Marketing for Law Firms",
-        img: "/assets/images/services/master-image-slider/industry/solution-for-doctors.png",
+        img: "/assets/images/services/master-image-slider/industry/solution-for-doctors.webp",
         link: "https://digital.socialengagementgroup.com/marketing-for-law-firm",
       },
       {
