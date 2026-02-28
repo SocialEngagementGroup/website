@@ -8,7 +8,7 @@ const CostofSection = ({ heading1, heading2, description, items }) => {
       {/* First Section: Intro Block */}
       <section className="bg-white">
         <div className="w-[78%] mx-auto text-center pt-10 pb-5 md:pt-20 md:pb-10 max-md:w-[90%]">
-          <h2 className="max-w-[1130px] mx-auto max-md:w-full mb-5 text-black text-center">
+          <h2 className="max-w-[1130px] mx-auto max-md:w-full mb-5 text-[#975554] text-center">
             {heading1}
           </h2>
           <p
