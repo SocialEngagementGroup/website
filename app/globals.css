@@ -75,6 +75,14 @@ body {
   font-family: var(--font-body);
 }
 
+/* Ensure interactive elements show pointer cursor on hover */
+button,
+a,
+[role="button"],
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
 h1,
 h2,
 h3,
