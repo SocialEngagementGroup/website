@@ -16,7 +16,7 @@ export const socialmediamarketingData = {
       "Social isn’t optional, it’s where relevance, visibility, and revenue meet. We turn daily scroll time on Meta, TikTok, LinkedIn, and more into measurable growth with full-funnel strategies grounded in audience insight, platform trends, and precision targeting. From viral short-form video and influencer collabs to paid funnels and community management, we run the entire social engine. Every post is built for a purpose, to earn attention, spark conversation, and move buyers through the funnel. With transparent reporting and constant optimization, you stay ahead of algorithms and competitors. Social isn’t about likes; it’s about turning every interaction into impact.",
   },
   cta: {
-   bg: "/assets/images/services/cta/Digital-google-business-profile.png",
+   bg: "/assets/images/services/cta/digital-google-business-profile.png",
     title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
     link: "https://calendly.com/itseg/segmeet",
@@ -40,7 +40,7 @@ export const socialmediamarketingData = {
         text: "<strong>Weak ROI</strong> as campaigns fail to convert attention into revenue.",
       },
       {
-       img: "/assets/images/services/digital/social-media-marketing/Inconsistent-brand-presence.png",
+       img: "/assets/images/services/digital/social-media-marketing/inconsistent-brand-presence.png",
         text: "<strong>Inconsistent brand</strong> presence that slowly erodes trust and credibility.",
       },
 
@@ -70,7 +70,7 @@ export const socialmediamarketingData = {
         text: "Monthly reporting with insights on growth, engagement, and performance.",
       },
     ],
-   img: "/assets/images/services/digital/social-media-marketing/digital-social-media-marketing.png",
+   img: "/assets/images/services/master-image-slider/digital/social-media-marketing.png",
   },
 
   FAQ: {

@@ -16,7 +16,7 @@ export const PpcServiceData = {
       "PPC is the fastest way to drive qualified traffic when it’s engineered with precision. We build data-driven campaigns that hit the right audience, moment, and message. Starting with deep keyword and competitor research, we craft high-performing copy and creatives, then launch tightly structured accounts to maximize relevance and cut waste. Across Google, Bing, Meta, and LinkedIn, we continuously test, refine targeting, adjust bids, and optimize for higher ROI. You get clear reporting on what’s working, what’s improving, and your exact cost per conversion. Whether the goal is sales, sign-ups, or traffic, our PPC turns every dollar into visible, measurable growth.",
   },
   cta: {
-   bg: "/assets/images/services/cta/Digital-google-business-profile.png",
+   bg: "/assets/images/services/cta/digital-google-business-profile.png",
     title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
     link: "https://calendly.com/itseg/segmeet",
@@ -32,15 +32,15 @@ export const PpcServiceData = {
         text: "Your budget drains on <strong>irrelevant clicks</strong> that never turn into meaningful traffic.",
       },
       {
-       img: "/assets/images/services/digital/ppc-campaigns/CTR-drops-sharply.png",
+       img: "/assets/images/services/digital/ppc-campaigns/ctr-drops-sharply.png",
         text: "<strong>CTR drops</strong> sharply because your ads and audience messaging don’t align.",
       },
       {
-       img: "/assets/images/services/digital/ppc-campaigns/Users-who-have-no-intent-to-convert.png",
+       img: "/assets/images/services/digital/ppc-campaigns/users-who-have-no-intent-to-convert.png",
         text: "Landing pages get visits from users who have <strong>no intent</strong> to convert.",
       },
       {
-       img: "/assets/images/services/digital/ppc-campaigns/ROAS-falls.png",
+       img: "/assets/images/services/digital/ppc-campaigns/roas-falls.png",
         text: "<strong>ROAS falls</strong> as tracking gaps distort attribution and hide true performance.",
       },
 
@@ -66,7 +66,7 @@ export const PpcServiceData = {
       { text: "Precise conversion tracking and event setup for accurate performance data." },
       { text: "Ongoing optimization with A/B testing to continually improve results." },
     ],
-   img: "/assets/images/services/digital/ppc-campaigns/digital-ppc.png",
+   img: "/assets/images/services/master-image-slider/digital/ppc-campaigns.png",
   },
 
   FAQ: {

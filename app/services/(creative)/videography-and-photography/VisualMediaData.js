@@ -16,7 +16,7 @@ export const VisualMediaData = {
       "Great brand stories deserve visuals that do them justice. We create photography and videography that capture emotion, essence, and identity, cinematic films, irresistible product shoots, and lifestyle imagery that humanizes your brand. Our end-to-end process, creative direction, lighting, production, editing, and color ensures every frame reflects your values and elevates credibility. Polished visuals build subconscious trust and signal quality and leadership. In a crowded feed, the right imagery doesn’t just attract attention, it makes your brand unforgettable.",
   },
    cta: {
-   bg: "/assets/images/services/cta/Digital-google-business-profile.png",
+   bg: "/assets/images/services/cta/digital-google-business-profile.png",
     title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
     link: "https://calendly.com/itseg/segmeet",
@@ -29,19 +29,19 @@ export const VisualMediaData = {
       "Strong imagery is the backbone of every ad, landing page, and post. It stops the scroll, earns attention, and shapes first impressions. Consistent, polished visuals signal quality, credibility, and maturity. Clear product shots and story-led video drive understanding and desire. Better visuals lift click-through, conversion rates, and order value. They make your message memorable and shareable across channels. Without them, you blend into the feed and leak trust. With them, you stay top-of-mind and turn views into customers.",
     items: [
       {
-       img: "/assets/images/services/creative/videography-photography/Ads-appear-unprofessional.png",
+       img: "/assets/images/services/creative/videography-photography/ads-appear-unprofessional.png",
         text: "Ads appear unprofessional, diminishing your brand's <strong>image</strong> and appeal.",
       },
       {
-       img: "/assets/images/services/creative/videography-photography/Conversions-drop.png",
+       img: "/assets/images/services/creative/videography-photography/conversions-drop.png",
         text: "Conversions drop as low-quality visuals fail to <strong>engage</strong> and persuade.",
       },
       {
-       img: "/assets/images/services/creative/videography-photography/Customers-doubt-credibility.png",
+       img: "/assets/images/services/creative/videography-photography/customers-doubt-credibility.png",
         text: "Customers doubt your <strong>credibility</strong> when visuals lack polish and consistency.",
       },
       {
-       img: "/assets/images/services/creative/videography-photography/Conversions-drop.png",
+       img: "/assets/images/services/creative/videography-photography/conversions-drop.png",
         text: "Brand <strong>consistency</strong> suffers, affecting recognition across all channels.",
       },
 
@@ -85,7 +85,7 @@ export const VisualMediaData = {
       },
 
     ],
-   img: "/assets/images/services/creative/videography-photography/creative-videography-and-cinematography.png",
+   img: "/assets/images/services/master-image-slider/creative/videography-photography.png",
   },
 
   FAQ: {

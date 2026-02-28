@@ -16,7 +16,7 @@ export const ReviewReputationData = {
       "Your online reputation shapes decisions before prospects ever visit your site. With 9 in 10 customers reading reviews, managing it isn’t optional, it’s essential. We monitor reviews in real time, respond strategically, and build a steady flow of genuine, positive feedback across Google, Yelp, Facebook, and industry platforms. Negative comments are handled quickly and professionally to protect credibility, while simple, compliant prompts make it easy for happy customers to share their experiences. Every review becomes a chance to repair or reinforce trust, turning reputation into a growth engine that attracts new business organically.",
   },
   cta: {
-   bg: "/assets/images/services/cta/Digital-google-business-profile.png",
+   bg: "/assets/images/services/cta/digital-google-business-profile.png",
     title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
     link: "https://calendly.com/itseg/segmeet",
@@ -67,7 +67,7 @@ export const ReviewReputationData = {
       { text: "Proven reputation repair strategies to counter negatives and rebuild trust." },
       { text: "Monthly sentiment reports with clear insights and actionable recommendations." },
     ],
-   img: "/assets/images/services/digital/review-and-reputation-management/digital-review-and-reputation-management.png",
+   img: "/assets/images/services/master-image-slider/digital/review-and-reputation-management.png",
   },
 
   FAQ: {

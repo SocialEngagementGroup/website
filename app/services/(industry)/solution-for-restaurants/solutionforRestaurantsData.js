@@ -16,7 +16,7 @@ export const solutionforRestaurantsData = {
       "Great food brings people together. But in the era of digital-first, great food alone isn’t always enough. Your next customer is scrolling through their social media feeds long before they walk through your doors. Ensuring you appear while they scroll, not just appear, but with visually stunning scroll stopping content will help you stand out and attract more diners. Regardless of the size of your business, whether it's a single store or multi store franchise, we design systems tailored for your business needs to keep your tables full.",
   },
    cta: {
-   bg: "/assets/images/services/cta/Digital-google-business-profile.png",
+   bg: "/assets/images/services/cta/digital-google-business-profile.png",
     title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
     link: "https://calendly.com/itseg/segmeet",
@@ -28,19 +28,19 @@ export const solutionforRestaurantsData = {
       "Diners now discover food online long before they taste it, comparing menus, reading reviews, and scrolling through photos on Google, Instagram, and Maps. If your restaurant isn’t visible in those moments, your competitors will be. A strong digital presence shapes trust, drives foot traffic, and builds loyalty before a guest ever walks in. With the right visibility, reviews, and local SEO, digital transformation ensures your restaurant gets discovered first, chosen quickly, and remembered often.",
     items: [
       {
-       img: "/assets/images/services/industry/solution-for-restaurants/Diners-can’t-find-you-where-they-look-first.png", // kept original
+       img: "/assets/images/services/industry/solution-for-restaurants/diners-can-t-find-you-where-they-look-first.png", // kept original
         text: "Diners can’t find you where they look first.",
       },
       {
-       img: "/assets/images/services/industry/solution-for-restaurants/Your-competitors-set-the-story,-not-you.png", // kept original
+       img: "/assets/images/services/industry/solution-for-restaurants/your-competitors-set-the-story-not-you.png", // kept original
         text: "Your competitors set the story, not you.",
       },
       {
-       img: "/assets/images/services/industry/solution-for-restaurants/Outdated-info-quietly-hurts-trust.png", // kept original
+       img: "/assets/images/services/industry/solution-for-restaurants/outdated-info-quietly-hurts-trust.png", // kept original
         text: "Outdated info quietly hurts trust.",
       },
       {
-       img: "/assets/images/services/industry/solution-for-restaurants/Everyday-near-me-searches-pass-you-by.png", // kept original
+       img: "/assets/images/services/industry/solution-for-restaurants/everyday-near-me-searches-pass-you-by.png", // kept original
         text: "Everyday “near me” searches pass you by.",
       },
     ],
@@ -54,7 +54,7 @@ export const solutionforRestaurantsData = {
       { text: "Stay top of mind locally with consistent content, promos, and reminders." },
       { text: "Make it easy for happy guests to tag, post, and amplify your restaurant." },
     ],
-    video: "/assets/videos/services/industry/Solution-for-restaurants.webm", // kept original
+    video: "/assets/videos/services/industry/solution-for-restaurants.webm", // kept original
   },
 
   BrandStrategy: {
@@ -79,7 +79,7 @@ export const solutionforRestaurantsData = {
         text: "Influencer & UGC Campaigns: Partner with food creators to spark organic buzz and community-driven discovery.",
       },
     ],
-   img: "/assets/images/services/master-image-slider/industry/Solution-for-Restaurant.jpg", // kept original
+   img: "/assets/images/services/master-image-slider/industry/solution-for-restaurant.png", // kept original
   },
 
   CaseStudy: {

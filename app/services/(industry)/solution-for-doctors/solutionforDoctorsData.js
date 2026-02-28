@@ -16,7 +16,7 @@ export const solutionforDoctorsData = {
       "Your reputation as a doctor is built on care and expertise but in today’s digital-first world, that’s not enough. Patients now start their healthcare journey online: searching symptoms, reading reviews, and comparing specialists long before they book an appointment. We help healthcare professionals like you stand out, attract the right patients, and build lasting trust through intelligent digital strategy, targeted visibility, and ethical growth marketing. Whether you’re an independent practitioner, a clinic, or a multi-specialty hospital, we design systems that make your practice discoverable, credible, and consistently growing.",
   },
    cta: {
-   bg: "/assets/images/services/cta/Digital-google-business-profile.png",
+   bg: "/assets/images/services/cta/digital-google-business-profile.png",
     title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
     link: "https://calendly.com/itseg/segmeet",
@@ -28,19 +28,19 @@ export const solutionforDoctorsData = {
       "Patients now begin their healthcare journey online searching symptoms, comparing specialists, and reading reviews long before they book an appointment. If your practice isn’t visible in those moments, it’s effectively invisible. A strong digital presence shapes trust, reputation, and patient decisions before they ever walk through your door. Digital transformation ensures your expertise gets discovered, trusted, and ultimately chosen.",
     items: [
       {
-       img: "/assets/images/services/industry/solution-for-doctors/Missed-patients-who-never-find-you-online.png",
+       img: "/assets/images/services/industry/solution-for-doctors/missed-patients-who-never-find-you-online.png",
         text: "Missed patients who never find you online.",
       },
       {
-       img: "/assets/images/services/industry/solution-for-doctors/Negative-or-outdated-reviews-lowering-patient-confidence.png",
+       img: "/assets/images/services/industry/solution-for-doctors/negative-or-outdated-reviews-lowering-patient-confidence.png",
         text: "Negative or outdated reviews lowering patient confidence.",
       },
       {
-       img: "/assets/images/services/industry/solution-for-doctors/Competitors-ranking-higher-in-local-search-results.png",
+       img: "/assets/images/services/industry/solution-for-doctors/competitors-ranking-higher-in-local-search-results.png",
         text: "Competitors ranking higher in local search results.",
       },
       {
-       img: "/assets/images/services/industry/solution-for-doctors/Unstable-appointment-flow-and-low-patient-retention.png",
+       img: "/assets/images/services/industry/solution-for-doctors/unstable-appointment-flow-and-low-patient-retention.png",
         text: "Unstable appointment flow and low patient retention.",
       },
     ],
@@ -54,7 +54,7 @@ export const solutionforDoctorsData = {
       { text: "Online reputation reinforces credibility and expertise." },
       { text: "You dominate your local and specialty visibility." },
     ],
-    video: "/assets/videos/services/industry/Solution-for-Doctors.webm",
+    video: "/assets/videos/services/industry/solution-for-doctors.webm",
   },
 
   BrandStrategy: {
@@ -68,7 +68,7 @@ export const solutionforDoctorsData = {
       { text: "<strong>Reputation & Compliance Monitoring:</strong> Track online mentions, ensure accuracy across directories, and maintain full compliance with healthcare advertising rules." },
       { text: "<strong>Analytics & Growth Reporting:</strong> Transparent dashboards showing traffic, leads, appointment trends, and ROI to guide smarter clinical decisions." },
     ],
-   img: "/assets/images/services/master-image-slider/industry/Solution-for-Doctors.jpg",
+   img: "/assets/images/services/master-image-slider/industry/solution-for-doctors.png",
   },
 
 

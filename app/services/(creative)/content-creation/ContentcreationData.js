@@ -15,7 +15,7 @@ export const contentCreationData = {
       "Exceptional content drives clicks, shares, and conversions. We build a tailored content strategy rooted in deep audience insight then create the assets that make it work: scroll-stopping design, high-impact video, authentic influencer collaborations, and fast, scalable AI content. Every piece is engineered for the platform and purpose, from viral short-form and thought-leadership series to campaign-ready visuals. We don’t just produce content; we craft brand experiences that spark conversation, build trust, and deliver measurable ROI.",
   },
   cta: {
-   bg: "/assets/images/services/cta/Digital-google-business-profile.png",
+   bg: "/assets/images/services/cta/digital-google-business-profile.png",
     title: "<strong>Grow</strong> your business <br/> with <strong>SEG</strong> ",
     button: "Book a call",
     link: "https://calendly.com/itseg/segmeet",
@@ -60,7 +60,7 @@ export const contentCreationData = {
         text: "Innovative <strong>AI-powered content</strong> keeps your brand at the forefront of industry trends.",
       },
     ],
-    video: "/assets/videos/services/creative/Content-Creation.webm",
+    video: "/assets/videos/services/creative/content-creation.webm",
   },
   ContentStrategy: {
     heading: "What You Get",
@@ -78,7 +78,7 @@ export const contentCreationData = {
         text: "Scalable <strong>AI-powered content</strong> tailored to your specific niche and brand voice.",
       },
     ],
-   img: "/assets/images/services/creative/creative-content/creative-content-creation.png",
+   img: "/assets/images/services/master-image-slider/creative/content-creation.png",
   },
   FAQ: {
     heading: "FAQs",
