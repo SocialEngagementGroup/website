@@ -7,7 +7,6 @@ export const images = [
   { id: 41, src: "/assets/images/hero-slider-images/rectangle41.webp", alt: "Rectangle 41" },
   { id: 42, src: "/assets/images/hero-slider-images/rectangle42.webp", alt: "Rectangle 42" },
   { id: 43, src: "/assets/images/hero-slider-images/rectangle43.webp", alt: "Rectangle 43" },
-  { id: 44, src: "/assets/images/hero-slider-images/rectangle40.webp", alt: "Rectangle 40" },
   { id: 46, src: "/assets/images/hero-slider-images/rectangle46.webp", alt: "Rectangle 46" },
   { id: 47, src: "/assets/images/hero-slider-images/rectangle47.webp", alt: "Rectangle 47" },
   { id: 48, src: "/assets/images/hero-slider-images/rectangle48.webp", alt: "Rectangle 48" },

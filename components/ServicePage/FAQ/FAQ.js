@@ -1,8 +1,9 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
 const FAQ = ({ items, heading }) => {
   const [openIndex, setOpenIndex] = useState(null);
-  const contentRefs = useRef([]);
 
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -50,22 +51,24 @@ const FAQ = ({ items, heading }) => {
                   </div>
 
                   {/* Answer */}
-                  <div
-                    ref={(el) => (contentRefs.current[index] = el)}
-                    style={{
-                      maxHeight: isOpen
-                          ? `${contentRefs.current[index]?.scrollHeight}px`
-                          : "0px",
-                    }}
-                    className="overflow-hidden transition-[max-height] duration-500 ease-in-out"
-                  >
-                    <div className="pt-4 mt-4 border-t border-[#975554]/5">
-                      <p
-                        className="text-gray-600 leading-relaxed text-[14px] md:text-[15px]"
-                        dangerouslySetInnerHTML={{ __html: faq.answer }}
-                      ></p>
-                    </div>
-                  </div>
+                  <AnimatePresence>
+                    {isOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="overflow-hidden"
+                      >
+                        <div className="pt-4 mt-4 border-t border-[#975554]/5">
+                          <p
+                            className="text-gray-600 leading-relaxed text-[14px] md:text-[15px]"
+                            dangerouslySetInnerHTML={{ __html: faq.answer }}
+                          ></p>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
               );
             })}

@@ -12,7 +12,7 @@ const HardLoader = () => {
       // Small buffer after actual load for smoothness
       setTimeout(() => {
         setLoading(false);
-      }, 800);
+      }, 200);
     };
 
     // Check if page is already loaded

@@ -57,17 +57,12 @@ const VideoSection = ({
 
   // Autoplay when in view, pause when out of view
   useEffect(() => {
-    if (isInView) {
-      const timer = setTimeout(() => {
-        sendCommand("playVideo");
-        setIsPlaying(true);
-      }, 500);
-      return () => clearTimeout(timer);
-    } else {
+    if (isInView && isPlaying) {
+      sendCommand("playVideo");
+    } else if (!isInView && isPlaying) {
       sendCommand("pauseVideo");
-      setIsPlaying(false);
     }
-  }, [isInView]);
+  }, [isInView, isPlaying]);
 
   return (
     <section
@@ -82,26 +77,34 @@ const VideoSection = ({
               {label}
             </h3>
             <h2 className="font-heading text-black text-3xl md:text-5xl font-bold leading-tight max-w-4xl mx-auto">
-              Where Strategy Meets Result
+              Where strategy meets result
             </h2>
           </div>
 
           {/* YouTube Video Section */}
           <div className="relative w-full z-0 transition-all duration-1000 opacity-100 translate-y-0">
             <div
-              className="relative aspect-video overflow-hidden group cursor-pointer"
+              className="relative aspect-video overflow-hidden group cursor-pointer bg-black"
               onClick={toggleVideo}
             >
-              <iframe
-                ref={iframeRef}
-                src={`https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&enablejsapi=1&controls=0&iv_load_policy=3&loop=1&playlist=${videoId}&playsinline=1`}
-                title={title}
-                className="absolute inset-0 w-full h-full transform scale-[1.01] pointer-events-none transition-all duration-700"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              />
+              {/* Lazy Loaded Iframe or Placeholder */}
+              {isPlaying || isInView ? (
+                <iframe
+                  ref={iframeRef}
+                  src={`https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1&enablejsapi=1&controls=0&iv_load_policy=3&loop=1&playlist=${videoId}&playsinline=1${isPlaying ? '&autoplay=1' : ''}`}
+                  title={title}
+                  className="absolute inset-0 w-full h-full transform scale-[1.01] pointer-events-none transition-all duration-700"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              ) : (
+                <div className="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" 
+                     style={{ backgroundImage: `url(https://img.youtube.com/vi/${videoId}/maxresdefault.jpg)` }}>
+                  <div className="absolute inset-0 bg-black/20" />
+                </div>
+              )}
 
               {/* Interaction Overlay */}
               <div
