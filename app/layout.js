@@ -79,7 +79,7 @@ import HardLoader from "@/components/Common/HardLoader";
 
 export default function SiteLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${outfit.variable} ${outfit.className} ${playfair.variable} antialiased`} suppressHydrationWarning>
         <HardLoader />
         {/* Google Tag Manager */}

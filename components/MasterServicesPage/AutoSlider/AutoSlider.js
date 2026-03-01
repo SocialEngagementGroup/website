@@ -4,10 +4,10 @@ import React, { useEffect, useRef, useState, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import { MdOutlineArrowBackIosNew, MdOutlineArrowForwardIos } from "react-icons/md";
+import "swiper/css/autoplay";
 
 const AutoSlider = ({ slides = [] }) => {
   const prevRef = useRef(null);
@@ -65,12 +65,17 @@ const AutoSlider = ({ slides = [] }) => {
   }, []);
 
   return (
-    <div ref={wrapperRef} className="relative w-full pt-[6px] pb-[14px] overflow-hidden md:overflow-visible isolate md:[&_.swiper]:!overflow-visible md:[&_.swiper-wrapper]:!overflow-visible [&_.swiper-slide]:relative [&_.swiper-slide]:z-[1] [&_.swiper-slide]:transition-transform [&_.swiper-slide]:duration-300 [&_.swiper-slide]:ease-in-out md:[&_.swiper-slide.isHoveredSlide]:!z-[50] md:[&_.swiper-slide:hover]:scale-[1.22] md:[&_.swiper-slide:hover]:delay-[180ms] md:[&_.swiper-slide:hover_.scaling-image]:scale-[1.06] md:[&_.swiper-slide:hover_.scaling-box]:shadow-[0_18px_45px_rgba(0,0,0,0.55)] will-change-transform">
+    <div ref={wrapperRef} className="relative w-full pt-[6px] pb-[14px] overflow-hidden md:overflow-visible isolate md:[&_.swiper]:!overflow-visible md:[&_.swiper-wrapper]:!overflow-visible [&_.swiper-slide]:relative [&_.swiper-slide]:z-[1] [&_.swiper-slide]:transition-all [&_.swiper-slide]:duration-300 [&_.swiper-slide]:ease-in-out md:[&_.swiper-slide.isHoveredSlide]:!z-[50] group/wrapper">
       <Swiper
-        modules={[Navigation]}
+        modules={[Navigation, Autoplay]}
         loop={!loading}
         spaceBetween={14}
-        speed={450}
+        speed={600}
+        autoplay={{
+          delay: 1500,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
         slidesPerGroup={1}
         loopAdditionalSlides={2}
         breakpoints={{
@@ -98,7 +103,7 @@ const AutoSlider = ({ slides = [] }) => {
           ? skeletonSlides.map((_, i) => (
             <SwiperSlide key={`sk-${i}`}>
               <div className="block w-full">
-                <div className="scaling-box h-[250px] max-[599px]:h-[200px] max-[599px]:m-auto rounded-[10px] relative overflow-hidden bg-black animate-pulse">
+                <div className="scaling-box h-[250px] max-[599px]:h-auto max-[599px]:aspect-[1.5/1] max-[599px]:m-auto rounded-2xl relative overflow-hidden bg-black animate-pulse">
                   <span className="text-white drop-shadow-[0_6px_18px_rgba(0,0,0,0.55)]">Loading...</span>
                 </div>
               </div>
@@ -106,8 +111,11 @@ const AutoSlider = ({ slides = [] }) => {
           ))
           : displaySlides.map((slide, i) => (
             <SwiperSlide key={i}>
-              <Link href={slide.link} className="block w-full">
-                <div className="scaling-box h-[250px] max-[599px]:h-[200px] max-[599px]:m-auto rounded-[10px] relative overflow-hidden bg-black transform-gpu will-change-transform">
+              <Link
+                href={slide.link}
+                className="block w-full group/slide h-[250px] max-[599px]:h-auto max-[599px]:aspect-[1.5/1] max-[599px]:m-auto mt-6 md:mt-12 transition-all duration-300 md:hover:scale-[1.12] md:hover:z-[50] relative overflow-hidden rounded-2xl"
+              >
+                <div className="scaling-box h-full w-full relative overflow-hidden bg-black transform-gpu will-change-transform border-0 outline-none">
                   <Image
                     src={slide.bg}
                     alt={slide.title || "slide image"}
@@ -115,31 +123,48 @@ const AutoSlider = ({ slides = [] }) => {
                     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                     priority={i < 4 && !loading}
                     quality={85}
-                    className="scaling-image block object-cover object-center scale-100 transition-transform duration-300 ease-in-out transform-gpu will-change-transform"
+                    className="scaling-image block object-cover object-center scale-[1.02] opacity-90 transition-all duration-500 ease-out transform-gpu will-change-transform md:group-hover/slide:scale-[1.08] md:group-hover/slide:opacity-100"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.55)] to-[rgba(0,0,0,0.05)] pointer-events-none z-[1]" />
-                  <h4 className="absolute left-[12px] bottom-[12px] m-0 text-white !text-[14px] md:!text-[18px] lg:!text-[22px] font-bold drop-shadow-[0_6px_18px_rgba(0,0,0,0.55)] z-[2] capitalize">{slide.title}</h4>
+                  
+                  {/* Minimal Bottom Gradient Shadow - Slight Increase */}
+                  <div className="absolute bottom-0 left-0 right-0 h-[35%] bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none z-[1]" />
+                  
+                  {/* Polished Text with Heavy Shadow */}
+                  <h4 
+                    className="absolute left-4 bottom-4 lg:left-6 lg:bottom-6 m-0 text-white !text-[16px] md:!text-[20px] lg:!text-[24px] font-heading font-medium tracking-wide z-[2] capitalize transition-all duration-300 ease-out block md:group-hover/slide:-translate-y-1"
+                    style={{ textShadow: '0 2px 10px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,1)' }}
+                  >
+                    {slide.title}
+                  </h4>
                 </div>
               </Link>
             </SwiperSlide>
           ))}
       </Swiper>
 
-      {/* Mobile Navigation: Arrow + Progress Bar (Testimonials style) */}
-      <div className="flex md:hidden items-center gap-4 mt-4 w-full max-w-[260px] mx-auto">
+      {/* Mobile Navigation: Arrow + Progress Bar (Subtle) */}
+      <div className="flex md:hidden items-center gap-4 mt-6 w-full max-w-[260px] mx-auto">
         <button
           type="button"
           aria-label="Previous"
-          className="text-white/40 hover:text-white transition-colors cursor-pointer disabled:opacity-30"
+          className="text-white/70 hover:text-white transition-colors cursor-pointer disabled:opacity-10"
           disabled={loading}
-          onClick={() => swiperRef.current?.slidePrev()}
+          onClick={() => {
+            if (swiperRef.current) {
+              swiperRef.current.slidePrev();
+              swiperRef.current.autoplay.stop();
+              setTimeout(() => {
+                if (swiperRef.current) swiperRef.current.autoplay.start();
+              }, 3000);
+            }
+          }}
         >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
         </button>
 
         <div className="flex-grow h-[2px] bg-white/20 relative overflow-hidden rounded-full">
           <div
-            className="absolute top-0 h-full bg-white rounded-full transition-all duration-300 ease-out"
+            className="absolute top-0 h-full bg-white/80 rounded-full transition-all duration-300 ease-out"
             style={{
               left: `${(activeIndex / totalSlides) * 100}%`,
               width: `${(1 / totalSlides) * 100}%`,
@@ -150,33 +175,57 @@ const AutoSlider = ({ slides = [] }) => {
         <button
           type="button"
           aria-label="Next"
-          className="text-white/40 hover:text-white transition-colors cursor-pointer disabled:opacity-30"
+          className="text-white/70 hover:text-white transition-colors cursor-pointer disabled:opacity-10"
           disabled={loading}
-          onClick={() => swiperRef.current?.slideNext()}
+          onClick={() => {
+            if (swiperRef.current) {
+              swiperRef.current.slideNext();
+              swiperRef.current.autoplay.stop();
+              setTimeout(() => {
+                if (swiperRef.current) swiperRef.current.autoplay.start();
+              }, 3000);
+            }
+          }}
         >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
         </button>
       </div>
 
-      {/* Desktop Navigation: Overlay arrows */}
+      {/* Desktop Navigation: Overlay arrows (Modern Transparent Brown Glass Style) */}
       <button
         ref={prevRef}
         type="button"
         aria-label="Previous"
-        className="hidden md:grid absolute left-[6px] top-1/2 -translate-y-1/2 z-[60] cursor-pointer border-2 border-[#e3d3cc] rounded-full bg-[rgba(0,0,0,0.45)] text-white place-items-center disabled:opacity-50 disabled:cursor-not-allowed group hover:bg-white/20 transition-all"
+        className="hidden md:flex absolute -left-[27px] top-[calc(50%+15px)] -translate-y-1/2 z-[60] w-[54px] h-[54px] cursor-pointer rounded-full bg-[#7A4B4B]/80 backdrop-blur-md text-white shadow-[0_4px_20px_rgba(0,0,0,0.3)] items-center justify-center disabled:opacity-0 disabled:scale-95 group/arrow hover:scale-110 hover:bg-[#8B5A5A] hover:shadow-[0_8px_30px_rgba(0,0,0,0.4)] transition-all duration-300 border border-white/10"
         disabled={loading}
+        onClick={() => {
+          if (swiperRef.current) {
+            swiperRef.current.autoplay.stop();
+            setTimeout(() => {
+              if (swiperRef.current) swiperRef.current.autoplay.start();
+            }, 3000);
+          }
+        }}
       >
-        <MdOutlineArrowBackIosNew className="w-[40px] h-[40px] p-[10px]" />
+        <svg fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" className="w-6 h-6 mr-0.5 transition-transform duration-300 group-hover/arrow:-translate-x-1"><path d="m15 18-6-6 6-6"/></svg>
       </button>
 
       <button
         ref={nextRef}
         type="button"
         aria-label="Next"
-        className="hidden md:grid absolute right-[6px] top-1/2 -translate-y-1/2 z-[60] cursor-pointer border-2 border-[#e3d3cc] rounded-full bg-[rgba(0,0,0,0.45)] text-white place-items-center disabled:opacity-50 disabled:cursor-not-allowed group hover:bg-white/20 transition-all"
+        className="hidden md:flex absolute -right-[27px] top-[calc(50%+15px)] -translate-y-1/2 z-[60] w-[54px] h-[54px] cursor-pointer rounded-full bg-[#7A4B4B]/80 backdrop-blur-md text-white shadow-[0_4px_20px_rgba(0,0,0,0.3)] items-center justify-center disabled:opacity-0 disabled:scale-95 group/arrow hover:scale-110 hover:bg-[#8B5A5A] hover:shadow-[0_8px_30px_rgba(0,0,0,0.4)] transition-all duration-300 border border-white/10"
         disabled={loading}
+        onClick={() => {
+          if (swiperRef.current) {
+            swiperRef.current.autoplay.stop();
+            setTimeout(() => {
+              if (swiperRef.current) swiperRef.current.autoplay.start();
+            }, 3000);
+          }
+        }}
       >
-        <MdOutlineArrowForwardIos className="w-[40px] h-[40px] p-[10px]" />
+        <svg fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" className="w-6 h-6 ml-0.5 transition-transform duration-300 group-hover/arrow:translate-x-1"><path d="m9 18 6-6-6-6"/></svg>
       </button>
     </div>
   );

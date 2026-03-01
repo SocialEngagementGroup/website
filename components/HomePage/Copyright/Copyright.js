@@ -124,13 +124,13 @@ const Copyright = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-10 flex flex-col md:flex-row justify-between items-center gap-10 md:gap-6 px-4 md:px-0">
-          <div className="text-gray-500 text-[14px] md:text-[13px] order-2 md:order-1">
+        <div className="pt-10 flex flex-col md:flex-row items-center justify-between gap-10 md:gap-6 px-4 md:px-0 w-full">
+          <div className="text-gray-500 text-[14px] md:text-[13px] order-2 md:order-1 flex-1 text-center md:text-left">
             All rights reserved © 2026
           </div>
 
           {/* Legal Links (Bottom Middle) */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-6 text-gray-500 text-[14px] md:text-[14px] order-1 md:order-2 tracking-widest uppercase md:normal-case">
+          <div className="flex flex-col md:flex-wrap md:flex-row items-center justify-center gap-3 md:gap-6 text-gray-500 text-[14px] md:text-[14px] order-1 md:order-2 tracking-widest uppercase md:normal-case shrink-0">
             <Link
               href="/terms-and-conditions"
               className="hover:text-white transition-colors"
@@ -156,6 +156,8 @@ const Copyright = () => {
               Legal Notice
             </Link>
           </div>
+
+          <div className="hidden md:block flex-1 order-3 text-right"></div>
         </div>
       </div>
     </div>

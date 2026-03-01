@@ -1,20 +1,29 @@
 'use client';
 
-import { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useMemo } from 'react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from 'swiper/modules';
-import { MdOutlineArrowBackIosNew, MdOutlineArrowForwardIos } from "react-icons/md";
+import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import 'swiper/css/autoplay';
 import Link from 'next/link';
 
 const InnerSlider = ({ items }) => {
   const [loaded, setLoaded] = useState(false);
-  const containerRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const swiperRef = useRef(null);
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+
+  const totalSlides = items?.length || 1;
+
+  // Duplicate slides once if items <= 4 to ensure enough nodes for Swiper loop
+  const displaySlides = React.useMemo(() => {
+    if (!items || items.length === 0) return [];
+    if (items.length > 4) return items;
+    return [...items, ...items];
+  }, [items]);
 
   useEffect(() => {
     setLoaded(true);
@@ -23,37 +32,33 @@ const InnerSlider = ({ items }) => {
   if (!items || items.length === 0) return null;
 
   return (
-    <div
-      ref={containerRef}
-      className={`relative w-full max-w-full mx-auto mt-[10px] sm:mt-[20px] xl:mt-[40px] transition-opacity duration-500 ${loaded ? 'opacity-100' : 'opacity-0'}`}
-    >
-      {/* Custom Previous Arrow */}
-      <div ref={prevRef} className={`absolute top-[48%] -translate-y-1/2 z-[60] cursor-pointer text-[#e3d3cc] hover:text-black border-2 border-[#e3d3cc] rounded-full bg-black/45 hover:bg-[#f0f0f0] flex place-items-center transition-colors duration-300 left-0 md:-left-[46px]`}>
-        <MdOutlineArrowBackIosNew className="w-[30px] h-[30px] p-[4px] sm:w-[40px] sm:h-[40px] sm:p-[8px]" />
-      </div>
-
+    <div className={`relative w-full max-full mx-auto mt-[20px] sm:mt-[20px] xl:mt-[40px] transition-opacity duration-500 ${loaded ? 'opacity-100' : 'opacity-0'}`}>
       <Swiper
-        modules={[Navigation, Pagination]}
+        modules={[Navigation, Autoplay]}
         spaceBetween={25}
         slidesPerView={2}
-        pagination={{
-          clickable: true,
-          dynamicBullets: true,
+        loop={true}
+        autoplay={{
+          delay: 1500,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
         }}
         navigation={{
           prevEl: prevRef.current,
           nextEl: nextRef.current,
         }}
         onInit={(swiper) => {
-          if (prevRef.current && nextRef.current) {
-            swiper.params.navigation.prevEl = prevRef.current;
-            swiper.params.navigation.nextEl = nextRef.current;
-            swiper.navigation.init();
-            swiper.navigation.update();
-          }
+          swiperRef.current = swiper;
+          swiper.params.navigation.prevEl = prevRef.current;
+          swiper.params.navigation.nextEl = nextRef.current;
+          swiper.navigation.init();
+          swiper.navigation.update();
+        }}
+        onSlideChange={(swiper) => {
+          setActiveIndex(swiper.realIndex % totalSlides);
         }}
         speed={600}
-        className={`w-full mySwiper`}
+        className="w-full mySwiper"
         breakpoints={{
           0: { slidesPerView: 1 },
           450: { slidesPerView: 1 },
@@ -61,24 +66,22 @@ const InnerSlider = ({ items }) => {
           986: { slidesPerView: 2 },
           1276: { slidesPerView: 4 },
         }}
+        nested={true}
+        watchOverflow={false}
+        watchSlidesProgress={true}
+        grabCursor={true}
       >
-        {items.map((item, idx) => (
+        {displaySlides.map((item, idx) => (
           <SwiperSlide key={idx}>
             <Link href={item.link}>
-              {/*
-                Replaced CSS background-image with next/image for full Next.js optimization
-                (WebP conversion, srcset, lazy loading). The card layout is preserved:
-                - next/image fills the card at z-index:0
-                - .innerCard children retain z-index:2 (from module CSS) so text floats above
-              */}
-              <div className="relative overflow-hidden w-full h-[320px] sm:h-[300px] xl:h-[350px] 2xl:h-[382px] flex flex-col items-start justify-end rounded-[20px] border-[5px] border-black text-white transition-all duration-300 after:absolute after:inset-0 after:bg-[linear-gradient(to_top,rgba(0,0,0,0.85),rgba(0,0,0,0.35),rgba(0,0,0,0.05))] after:z-[1] after:pointer-events-none [&>*]:relative [&>*]:z-[2]">
+              <div className="relative overflow-hidden w-full h-[340px] sm:h-[300px] xl:h-[300px] 2xl:h-[330px] flex flex-col items-start justify-end rounded-[20px] border-[5px] border-black text-white transition-[transform,opacity] duration-300 after:absolute after:inset-0 after:bg-[linear-gradient(to_top,rgba(0,0,0,0.85),rgba(0,0,0,0.35),rgba(0,0,0,0.05))] after:z-[1] after:pointer-events-none [&>*]:relative [&>*]:z-[2] will-change-transform">
                 <Image
                   src={item.img}
                   alt={item.name}
                   fill
                   loading="lazy"
-                  sizes="(max-width: 768px) 90vw, (max-width: 1276px) 45vw, 25vw"
-                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-500 hover:scale-105"
                   style={{ zIndex: 0 }}
                 />
                 <div className="w-full h-[88px] relative z-[2]">
@@ -90,12 +93,54 @@ const InnerSlider = ({ items }) => {
         ))}
       </Swiper>
 
-      {/* Custom Next Arrow */}
-      <div ref={nextRef} className={`absolute top-[48%] -translate-y-1/2 z-[60] cursor-pointer text-[#e3d3cc] hover:text-black border-2 border-[#e3d3cc] rounded-full bg-black/45 hover:bg-[#f0f0f0] flex place-items-center transition-colors duration-300 right-0 md:-right-[46px]`}>
-        <MdOutlineArrowForwardIos className="w-[30px] h-[30px] p-[4px] sm:w-[40px] sm:h-[40px] sm:p-[8px]" />
+      {/* Modern Navigation: Arrow + Progress Bar (Sync'd with Service Page Style) */}
+      <div className="flex items-center justify-center gap-6 mt-1 sm:mt-4 w-full max-w-[400px] mx-auto">
+        <button
+          ref={prevRef}
+          type="button"
+          aria-label="Previous"
+          className="w-10 h-10 flex items-center justify-center rounded-full text-white/70 hover:text-white transition-all duration-300 cursor-pointer disabled:opacity-20"
+          onClick={() => {
+            if (swiperRef.current) {
+              swiperRef.current.autoplay.stop();
+              setTimeout(() => {
+                if (swiperRef.current) swiperRef.current.autoplay.start();
+              }, 3000);
+            }
+          }}
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+
+        <div className="flex-grow h-[2px] bg-white/20 relative overflow-hidden rounded-full min-w-[50px] sm:min-w-[120px]">
+          <div
+            className="absolute top-0 h-full bg-white/80 rounded-full transition-all duration-500 ease-out"
+            style={{
+              left: `${(activeIndex / totalSlides) * 100}%`,
+              width: `${(1 / totalSlides) * 100}%`,
+            }}
+          />
+        </div>
+
+        <button
+          ref={nextRef}
+          type="button"
+          aria-label="Next"
+          className="w-10 h-10 flex items-center justify-center rounded-full text-white/70 hover:text-white transition-all duration-300 cursor-pointer disabled:opacity-20"
+          onClick={() => {
+            if (swiperRef.current) {
+              swiperRef.current.autoplay.stop();
+              setTimeout(() => {
+                if (swiperRef.current) swiperRef.current.autoplay.start();
+              }, 3000);
+            }
+          }}
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
       </div>
     </div>
   );
 };
 
-export default InnerSlider;
+export default React.memo(InnerSlider);
