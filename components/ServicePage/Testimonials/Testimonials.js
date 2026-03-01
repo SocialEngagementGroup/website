@@ -88,11 +88,11 @@ const Testimonials = () => {
           {/* Right Column: Static Card Shell with Transitioning Content */}
           <div className="w-full lg:w-[60%] relative z-10 flex flex-col justify-end lg:-mt-6">
             {/* The Static Card Shell */}
-            <div className="bg-white rounded-[1.5rem] md:rounded-[2rem] shadow-lg relative min-h-[340px] sm:min-h-[360px] md:min-h-[340px] flex flex-col w-full lg:max-w-[700px] xl:max-w-[800px] lg:ml-auto mx-auto">
+            <div className="bg-white rounded-[1.5rem] md:rounded-[2rem] shadow-lg relative min-h-[380px] sm:min-h-[400px] md:min-h-[340px] flex flex-col w-full lg:max-w-[700px] xl:max-w-[800px] lg:ml-auto mx-auto">
               
               <div className="p-6 md:p-10 lg:p-14 flex-grow overflow-hidden relative flex flex-col">
                 {/* Transitioning Quote Section */}
-                <div className="min-h-[180px] sm:min-h-[180px] md:min-h-[140px] mb-6 md:mb-8 relative">
+                <div className="min-h-[200px] sm:min-h-[200px] md:min-h-[140px] mb-8 md:mb-12 relative">
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={currentIndex}

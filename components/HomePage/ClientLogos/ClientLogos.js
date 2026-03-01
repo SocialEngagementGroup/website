@@ -4,7 +4,7 @@ import Slider from "./Slider";
 
 const ClientLogos = () => {
   return (
-    <section id="clients" className="bg-white py-14 md:py-24 overflow-hidden relative">
+    <section id="clients" className="bg-white pt-34 pb-14 md:py-24 overflow-hidden relative">
       
       {/* Text Content - Constrained following TrustBar style */}
       <div className="container-fluid w-[90%] md:w-[78%] mx-auto text-center relative z-10 px-6">

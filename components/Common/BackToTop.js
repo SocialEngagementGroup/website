@@ -1,24 +1,19 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion';
 
 const BackToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const { scrollY } = useScroll();
 
-  useEffect(() => {
-    const toggleVisibility = () => {
-      // Show button when scrolled down more than 400px
-      if (window.scrollY > 400) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
-
-    window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
-  }, []);
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    if (latest > 400) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  });
 
   const scrollToTop = () => {
     window.scrollTo({

@@ -13,16 +13,21 @@ const BLUR_DATA_URL =
   "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAkA4JZQCdAEO/gHOAAA=";
 
 const MultiRowSlider = () => {
-  const [isMobile, setIsMobile] = useState(false);
   const swiperRefs = useRef([]);
+  const [rowImagesMap, setRowImagesMap] = useState([]);
 
   const rows = 3;
-  const imagesPerRow = Math.ceil(images.length / rows);
 
   useEffect(() => {
-    const checkScreen = () => setIsMobile(window.innerWidth < 640);
-    checkScreen();
-    window.addEventListener("resize", checkScreen);
+    // ── Shuffle and Distribute Images ─────────────────────────────────────
+    const shuffled = [...images].sort(() => Math.random() - 0.5);
+    const distributed = Array.from({ length: rows }).map((_, i) => {
+      const perRow = Math.ceil(shuffled.length / rows);
+      const baseSet = shuffled.slice(i * perRow, (i + 1) * perRow);
+      // Repeat the set to ensure smooth looping without cross-row repetition
+      return [...baseSet, ...baseSet, ...baseSet, ...baseSet];
+    });
+    setRowImagesMap(distributed);
 
     // ── Start autoplay after a slight delay for stability ─────────────────
     const timer = setTimeout(() => {
@@ -34,34 +39,29 @@ const MultiRowSlider = () => {
     }, 500);
 
     return () => {
-      window.removeEventListener("resize", checkScreen);
       clearTimeout(timer);
     };
   }, []);
 
   return (
     <div className="space-y-4">
-      {Array.from({ length: rows }).map((_, rowIndex) => {
+      {rowImagesMap.map((rowImages, rowIndex) => {
         const reverse = rowIndex % 2 === 1;
-        const shift = isMobile ? 0 : rowIndex * -70;
-
-        const startIndex = rowIndex * imagesPerRow;
-        const rowImages = images.slice(startIndex, startIndex + imagesPerRow);
 
         if (rowImages.length === 0) return null;
 
         return (
           <div
             key={rowIndex}
-            className="overflow-hidden relative customSwiperSlideShadow"
-            style={{ marginLeft: `${shift}px` }}
+            className="overflow-hidden relative customSwiperSlideShadow hero-slider-row"
+            style={{ "--row-index": rowIndex }}
           >
             <Swiper
               modules={[Autoplay]}
               slidesPerView={"auto"}
               spaceBetween={20}
               loop={true}
-              speed={8000}
+              speed={5000}
               autoplay={{
                 delay: 0,
                 disableOnInteraction: false,
@@ -74,13 +74,14 @@ const MultiRowSlider = () => {
                 swiperRefs.current[rowIndex] = swiper;
               }}
               className="will-change-transform"
+              style={{ transitionTimingFunction: "linear" }}
             >
               {rowImages.map((img, imgIndex) => {
                 const isFirst = imgIndex === 0;
 
                 return (
                   <SwiperSlide
-                    key={`${rowIndex}-${img.id}`}
+                    key={`${rowIndex}-${img.id}-${imgIndex}`}
                     className="!w-[200px]"
                   >
                     <div className="relative imggg border border-black/20 overflow-hidden rounded-[12px] aspect-square shadow-lg transform-gpu">

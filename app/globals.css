@@ -27,7 +27,7 @@ select:focus {
 
   /* Brand Colors */
   --color-brand-brick: #975554;
-  --color-brand-gray: #F5F5F3;
+  --color-brand-gray: #f5f5f3;
 
   /* Add Outfit to Tailwind's default sans font */
   --font-sans: var(--font-outfit), "Outfit", sans-serif;
@@ -228,10 +228,10 @@ button,
     z-index: 111;
     background: radial-gradient(
       circle at 80% center,
-      rgba(35, 35, 38, 0.9) 0%,
-      rgba(35, 35, 38, 0.6) 30%,
-      rgba(35, 35, 38, 0.3) 60%,
-      rgba(35, 35, 38, 0) 100%
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.6) 30%,
+      rgba(0, 0, 0, 0.3) 60%,
+      rgba(0, 0, 0, 0) 100%
     );
     filter: blur(20px);
     opacity: 0.9;
@@ -253,8 +253,8 @@ button,
   background: linear-gradient(
     to right,
     rgba(0, 0, 0, 0) 0%,
-    #232326 25%,
-    #232326 75%,
+    #000000 25%,
+    #000000 75%,
     rgba(0, 0, 0, 0) 100%
   );
   z-index: 1;
@@ -270,12 +270,38 @@ button,
   height: 100%;
   background: linear-gradient(
     90deg,
-    #232326 0%,
-    rgba(35, 35, 38, 0.93) 30%,
-    rgba(35, 35, 38, 0.33) 60%,
-    rgba(35, 35, 38, 0) 80%
+    #000000 0%,
+    rgba(0, 0, 0, 0.93) 30%,
+    rgba(0, 0, 0, 0.33) 60%,
+    rgba(0, 0, 0, 0) 80%
   );
   z-index: 1;
+}
+
+/* Dual side fade for mobile */
+@media only screen and (max-width: 767px) {
+  .hero-slider-row::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: 100%;
+    background: linear-gradient(to left, #000 0%, transparent 100%);
+    z-index: 10;
+    pointer-events: none;
+  }
+  .hero-slider-row::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: 100%;
+    background: linear-gradient(to right, #000 0%, transparent 100%);
+    z-index: 10;
+    pointer-events: none;
+  }
 }
 
 /* =========================================================
@@ -312,6 +338,20 @@ button,
 
 .hero-section-bg {
   background: #232326 !important;
+}
+
+.hero-slider-row {
+  margin-left: calc(var(--row-index) * -70px);
+}
+
+.hero-slider-row .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+@media only screen and (max-width: 639px) {
+  .hero-slider-row {
+    margin-left: 0;
+  }
 }
 
 .ParallaxSliderSection .sectionTitle {

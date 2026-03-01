@@ -6,7 +6,7 @@ import ParallaxSlider from "./ParallaxSlider";           // Main parallax slider
 const ParallaxSliderSection = () => {
   return (
     // Section wrapper with ID for navigation
-    <section id="services" className="bg-[linear-gradient(180deg,#E3D3CC_62.5%,#FFFFFF_100%)]">
+    <section id="services" className="bg-[linear-gradient(180deg,#E3D3CC_62.5%,#FFFFFF_100%)] relative z-20">
 
       {/* Container for section content */}
       <div className="container-fluid w-[95%] mx-auto pt-10 ClientLogos text-center">
@@ -18,8 +18,7 @@ const ParallaxSliderSection = () => {
             title="What We Do"
             subtitle2={
               <>
-                Marketing solutions for every{" "}
-                <br className="hidden sm:block" />stage of your growth
+                Marketing solutions for every stage of your growth
               </>
             }
             description="Crafted to deliver real results through strategy, storytelling, and AI-powered execution, all under one roof."
