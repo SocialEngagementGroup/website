@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import NavBarMobile from "@/components/Navbar/NavBarMobile";
 import Footer from "@/components/Footer/Footer";
 import ScrollProgress from "@/components/Common/ScrollProgress";
+import BackToTop from "@/components/Common/BackToTop";
 
 // (optional) if you also want Vercel Analytics:
 // import { Analytics } from "@vercel/analytics/react";
@@ -97,6 +98,7 @@ export default function SiteLayout({ children }) {
         <NavBarMobile />
         {children}
         <Footer />
+        <BackToTop />
 
         {/* JSON-LD Structured Data */}
         <script
