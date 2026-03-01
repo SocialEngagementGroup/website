@@ -1,7 +1,7 @@
 import React from "react";
 import SectionTitle from "../SectionTitle/SectionTitle"; // Section heading component
 import ParallaxSlider from "./ParallaxSlider";           // Main parallax slider component
-import Vdo from "@/components/HomePage/Vdo/Vdo";                 // Video component
+
 
 const ParallaxSliderSection = () => {
   return (

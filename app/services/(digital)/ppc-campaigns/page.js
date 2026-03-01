@@ -3,7 +3,7 @@ import IntroSection from "@/components/ServicePage/IntroSection/IntroSection";
 import CostofSection from "@/components/ServicePage/CostofSection/CostofSection";
 import ProfessionalBranding from "@/components/ServicePage/ProfessionalBranding/ProfessionalBranding";
 import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrategy";
-import SecondaryCTA from "@/components/ServicePage/SecondaryCTA/SecondaryCTA";
+import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ";
 import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 
@@ -38,7 +38,7 @@ export default function Page() {
         items={ppcCampaignsData.Costof.items}
       />
       <ProfessionalBranding {...ppcCampaignsData.ProfessionalSEO} />
-      <SecondaryCTA />
+      <CTA />
       <BrandingStrategy {...ppcCampaignsData.BrandStrategy} />
       <Testimonials />
       <FAQ items={ppcCampaignsData.FAQ.items} heading={ppcCampaignsData.FAQ.heading} />

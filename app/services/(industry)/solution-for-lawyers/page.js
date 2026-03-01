@@ -5,7 +5,7 @@ import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 import CostofSection from "@/components/ServicePage/CostofSection/CostofSection";
 import ProfessionalBranding from "@/components/ServicePage/ProfessionalBranding/ProfessionalBranding";
 import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrategy";
-import SecondaryCTA from "@/components/ServicePage/SecondaryCTA/SecondaryCTA";
+import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
@@ -39,7 +39,7 @@ export default function Page() {
         items={solutionForLawyersData.Costof.items}
       />
       <ProfessionalBranding {...solutionForLawyersData.ProfessionalSEO} />
-      <SecondaryCTA />
+      <CTA />
       <BrandingStrategy {...solutionForLawyersData.BrandStrategy} />
       <Testimonials />
       <FAQ items={solutionForLawyersData.FAQ.items} heading={solutionForLawyersData.FAQ.heading} />
