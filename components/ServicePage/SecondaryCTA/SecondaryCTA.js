@@ -30,7 +30,7 @@ const SecondaryCTA = () => {
     return (
         <section className="py-16 md:py-32 bg-[#975554] relative overflow-hidden">
             {/* Background Decoration - Logo Watermark */}
-            <div className="absolute top-1/2 left-0 md:left-10 -translate-y-1/2 w-[30vw] h-[30vw] opacity-10 pointer-events-none select-none">
+            <div className="hidden md:block absolute top-1/2 left-0 md:left-10 -translate-y-1/2 w-[60vw] h-[60vw] md:w-[30vw] md:h-[30vw] opacity-10 pointer-events-none select-none">
                 <div className="relative w-full h-full">
                     <Image
                         src="/assets/images/site-logo/logo.svg"
@@ -43,7 +43,7 @@ const SecondaryCTA = () => {
 
             {/* Background Decoration - "GROW" Watermark */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none select-none">
-                <span className="absolute -bottom-8 -right-10 md:-bottom-8 md:-right-20 text-[15vw] font-serif font-bold text-black leading-none">
+                <span className="absolute -bottom-4 -right-8 md:-bottom-8 md:-right-20 text-[25vw] md:text-[15vw] font-serif font-bold text-black leading-none">
                     GROW
                 </span>
             </div>

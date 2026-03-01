@@ -19,7 +19,7 @@ const Footer = () => {
 
         {/* ✅ Inner container for layout */}
         <div className="container mx-auto px-6 relative z-10 max-w-7xl h-full flex items-center justify-center">
-          <div className="bg-black/60 md:bg-black/30 backdrop-blur-md border border-white/10 rounded-3xl p-6 md:p-12 lg:p-16 shadow-2xl w-full z-50 pointer-events-auto relative">
+          <div className="bg-black/80 md:bg-black/50 backdrop-blur-md border border-white/10 rounded-3xl p-6 md:p-12 lg:p-16 shadow-2xl w-full z-50 pointer-events-auto relative">
   
             {/* ✅ Grid layout for ContactInfo and ContactForm */}
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">

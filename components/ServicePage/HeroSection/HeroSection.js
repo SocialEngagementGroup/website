@@ -62,7 +62,7 @@ const HeroSection = ({
 
           {/* ---------- Right Input Form (Hidden on mobile) ---------- */}
           <div className="hidden md:flex justify-center order-2 md:order-2 mt-0 md:mt-0 mb-20 md:mb-0 px-4 md:px-0">
-            <div className="bg-black/60 md:bg-black/30 backdrop-blur-md border border-white/10 rounded-3xl p-6 md:p-8 shadow-2xl lg:max-w-[600px] lg:ml-auto w-full">
+            <div className="bg-black/80 md:bg-black/50 backdrop-blur-md border border-white/10 rounded-3xl p-6 md:p-8 shadow-2xl lg:max-w-[600px] lg:ml-auto w-full">
               <ContactForm layout="split" />
             </div>
           </div>
