@@ -19,16 +19,10 @@ const ContactForm = ({ layout = "stacked", className = "" }) => {
 
   const [status, setStatus] = useState('idle');
 
-  const [messagePlaceholder, setMessagePlaceholder] = useState("How can we help*");
-
   useEffect(() => {
-    const updatePlaceholder = () => {
-      setMessagePlaceholder(window.innerWidth <= 767 ? "Your Message*" : "How can we help*");
-    };
-    updatePlaceholder();
-    window.addEventListener("resize", updatePlaceholder);
-    return () => window.removeEventListener("resize", updatePlaceholder);
+    setStatus('idle');
   }, []);
+
 
   const onSubmit = async (data) => {
     setStatus('loading');
@@ -66,8 +60,9 @@ const ContactForm = ({ layout = "stacked", className = "" }) => {
         {/* ✅ Grid matching Marketing desktop split layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           
-          <div className="space-y-2 relative">
+          <div className="space-y-2 relative" suppressHydrationWarning={true}>
             <label className={labelClass}>Full Name*</label>
+
             <input
               type="text"
               placeholder="John Doe"
@@ -79,8 +74,9 @@ const ContactForm = ({ layout = "stacked", className = "" }) => {
             />
           </div>
 
-          <div className="space-y-2 relative">
+          <div className="space-y-2 relative" suppressHydrationWarning={true}>
             <label className={labelClass}>Your Business*</label>
+
             <input
               type="text"
               placeholder="Company Name"
@@ -92,8 +88,9 @@ const ContactForm = ({ layout = "stacked", className = "" }) => {
             />
           </div>
 
-          <div className="space-y-2 relative">
+          <div className="space-y-2 relative" suppressHydrationWarning={true}>
             <label className={labelClass}>Email*</label>
+
             <input
               type="email"
               placeholder="john@example.com"
@@ -104,8 +101,9 @@ const ContactForm = ({ layout = "stacked", className = "" }) => {
             />
           </div>
 
-          <div className="space-y-2 relative">
+          <div className="space-y-2 relative" suppressHydrationWarning={true}>
             <label className={labelClass}>Mobile*</label>
+
             <input
               type="tel"
               placeholder="+1 (555) 000-0000"
@@ -118,8 +116,9 @@ const ContactForm = ({ layout = "stacked", className = "" }) => {
 
         </div>
 
-        <div className="space-y-2 relative mt-4">
+        <div className="space-y-2 relative mt-4" suppressHydrationWarning={true}>
           <label className={labelClass}>Message*</label>
+
           <textarea
             placeholder="Tell us about your project..."
             {...register("message")}
