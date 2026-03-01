@@ -25,7 +25,7 @@ const InnerSlider = ({ items }) => {
   return (
     <div
       ref={containerRef}
-      className={`relative w-full max-w-full mx-auto mt-[30px] sm:mt-[50px] xl:mt-[80px] transition-opacity duration-500 ${loaded ? 'opacity-100' : 'opacity-0'}`}
+      className={`relative w-full max-w-full mx-auto mt-[10px] sm:mt-[20px] xl:mt-[40px] transition-opacity duration-500 ${loaded ? 'opacity-100' : 'opacity-0'}`}
     >
       {/* Custom Previous Arrow */}
       <div ref={prevRef} className={`absolute top-[48%] -translate-y-1/2 z-[60] cursor-pointer text-[#e3d3cc] hover:text-black border-2 border-[#e3d3cc] rounded-full bg-black/45 hover:bg-[#f0f0f0] flex place-items-center transition-colors duration-300 left-0 md:-left-[46px]`}>
@@ -71,7 +71,7 @@ const InnerSlider = ({ items }) => {
                 - next/image fills the card at z-index:0
                 - .innerCard children retain z-index:2 (from module CSS) so text floats above
               */}
-              <div className="relative overflow-hidden w-full h-[450px] min-[501px]:h-[300px] xl:h-[350px] 2xl:h-[382px] flex flex-col items-start justify-end rounded-[20px] border-[5px] border-black text-white transition-all duration-300 after:absolute after:inset-0 after:bg-[linear-gradient(to_top,rgba(0,0,0,0.85),rgba(0,0,0,0.35),rgba(0,0,0,0.05))] after:z-[1] after:pointer-events-none [&>*]:relative [&>*]:z-[2]">
+              <div className="relative overflow-hidden w-full h-[320px] sm:h-[300px] xl:h-[350px] 2xl:h-[382px] flex flex-col items-start justify-end rounded-[20px] border-[5px] border-black text-white transition-all duration-300 after:absolute after:inset-0 after:bg-[linear-gradient(to_top,rgba(0,0,0,0.85),rgba(0,0,0,0.35),rgba(0,0,0,0.05))] after:z-[1] after:pointer-events-none [&>*]:relative [&>*]:z-[2]">
                 <Image
                   src={item.img}
                   alt={item.name}
