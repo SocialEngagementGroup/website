@@ -9,7 +9,7 @@ const Copyright = () => {
 
   const footerLinks = {
     Company: [
-      { name: "About Us", href: "/#aboutUs" },
+      { name: "Home", href: "/" },
       { name: "Services", href: "/services" },
       { name: "Careers", href: "/careers" },
       { name: "Contact Us", href: "/contact-us" },
