@@ -12,7 +12,7 @@ const LogoMarquee = () => {
         }
         .animate-marquee {
           display: flex;
-          animation: marquee 30s linear infinite;
+          animation: marquee 18s linear infinite;
           width: fit-content;
         }
         .animate-marquee:hover {
@@ -30,9 +30,9 @@ const LogoMarquee = () => {
                 <Image
                   src={logo.src}
                   alt={logo.alt}
-                  width={140}
-                  height={70}
-                  className="h-7 md:h-10 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                  width={200}
+                  height={100}
+                  className="h-12 md:h-13 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
                 />
               </div>
             ))}
@@ -45,9 +45,9 @@ const LogoMarquee = () => {
                 <Image
                   src={logo.src}
                   alt={logo.alt}
-                  width={140}
-                  height={70}
-                  className="h-7 md:h-10 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                  width={200}
+                  height={100}
+                  className="h-12 md:h-13 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
                 />
               </div>
             ))}

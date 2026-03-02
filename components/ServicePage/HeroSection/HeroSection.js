@@ -29,7 +29,7 @@ const HeroSection = ({
 
           {/* ---------- Left Text (95vh on mobile, Auto on desktop) ---------- */}
           <div className="text-white content order-1 md:order-1 min-h-[95vh] md:min-h-0 flex flex-col justify-center pb-24 md:pb-0 px-6 md:px-0">
-            <h3 className="!capitalize !font-medium opacity-90 mb-4">{subtitle}</h3>
+            <h3 className="!capitalize opacity-90 mb-4">{subtitle}</h3>
             <h1 className="!text-[38px] md:!text-[56px] lg:!text-[64px] !font-serif !font-bold !leading-[1.1] !tracking-tight">
               {title}
             </h1>

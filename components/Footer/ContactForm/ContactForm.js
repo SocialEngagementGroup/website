@@ -52,7 +52,7 @@ const ContactForm = ({ layout = "stacked", className = "" }) => {
   };
 
   const inputClass = "w-full bg-white/[0.03] border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-gray-600 focus:outline-none focus:border-[#975554]/50 focus:bg-white/10 transition-all font-light";
-  const textareaClass = "w-full bg-white/[0.03] border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-gray-600 focus:outline-none focus:border-[#975554]/50 focus:bg-white/10 transition-all font-light min-h-[160px] resize-none";
+  const textareaClass = "w-full bg-white/[0.03] border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-gray-600 focus:outline-none focus:border-[#975554]/50 focus:bg-white/10 transition-all font-light min-h-[130px] resize-none";
   const labelClass = "text-sm font-medium text-gray-300 ml-1 block mb-[6px]";
 
   return (
@@ -130,7 +130,7 @@ const ContactForm = ({ layout = "stacked", className = "" }) => {
               {...register("message")}
               required
               minLength={10}
-              rows={5}
+              rows={4}
               className={textareaClass}
             />
           </div>
