@@ -5,7 +5,6 @@ export const logoDesignData = {
     subtitle: "Creative",
     ctaButton: "Connect With Us",
     ctaLink: "#contact",
-   img: "/assets/images/services/creative/branding/heroimg.webp",
    bg: "/assets/images/backgrounds/service-bg.webp",
 },
   intro: {
@@ -76,7 +75,7 @@ heading2: "The Cost of Weak Branding",
       text: "<strong>Brand guidelines</strong> ensure consistent logo usage across all platforms.",
     },
     ],
-   img: "/assets/images/services/master-image-slider/creative/logo-design.webp",
+   img: "/assets/images/services/master-service-page/creative/logo-design.webp",
   },
   FAQ: {
     heading: "FAQs",

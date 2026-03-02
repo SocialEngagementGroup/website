@@ -6,7 +6,6 @@ export const videographyPhotographyData = {
     subtitle: "creative",
     ctaButton: "Connect With Us",
     ctaLink: "#contact",
-   img: "/assets/images/services/creative/branding/heroimg.webp",
    bg: "/assets/images/backgrounds/service-bg.webp",
   },
 
@@ -40,7 +39,7 @@ export const videographyPhotographyData = {
         text: "Customers doubt your <strong>credibility</strong> when visuals lack polish and consistency.",
       },
       {
-       img: "/assets/images/services/creative/videography-photography/conversions-drop.webp",
+        img: "/assets/images/services/creative/videography-photography/brand-consistency-suffers.webp",
         text: "Brand <strong>consistency</strong> suffers, affecting recognition across all channels.",
       },
 
@@ -84,7 +83,7 @@ export const videographyPhotographyData = {
       },
 
     ],
-   img: "/assets/images/services/master-image-slider/creative/videography-photography.webp",
+   img: "/assets/images/services/master-service-page/creative/videography-photography.webp",
   },
 
   FAQ: {

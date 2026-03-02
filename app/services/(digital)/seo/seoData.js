@@ -6,7 +6,6 @@ export const seoData = {
     subtitle: "digital",
     ctaButton: "Connect With Us",
         ctaLink: "#contact",
-   img: "/assets/images/services/creative/branding/heroimg.webp",   // original kept
    bg: "/assets/images/backgrounds/service-bg.webp",     // original kept
   },
 
@@ -65,7 +64,7 @@ export const seoData = {
       { text: "White-hat link building that steadily boosts authority and trust signals." },
       { text: "Monthly performance reports with clear insights and actionable next steps." },
     ],
-   img: "/assets/images/services/master-image-slider/digital/seo.webp", // original kept
+   img: "/assets/images/services/master-service-page/digital/seo.webp", // original kept
   },
 
   FAQ: {

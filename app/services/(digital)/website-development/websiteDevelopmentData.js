@@ -6,7 +6,6 @@ export const websiteDevelopmentData = {
     subtitle: "digital",
     ctaButton: "Connect With Us",
         ctaLink: "#contact",
-   img: "/assets/images/services/creative/branding/heroimg.webp",
    bg: "/assets/images/backgrounds/service-bg.webp",
   },
 
@@ -72,7 +71,7 @@ export const websiteDevelopmentData = {
         text: "Ongoing support and updates to keep your site fast and reliable.",
       },
     ],
-   img: "/assets/images/services/master-image-slider/digital/website-development.webp",
+   img: "/assets/images/services/master-service-page/digital/website-development.webp",
   },
 
   FAQ: {

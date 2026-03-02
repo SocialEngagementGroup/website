@@ -6,7 +6,6 @@ export const brandingData = {
     subtitle: "Creative",
     ctaButton: "Connect With Us",
     ctaLink: "#contact",
-   img: "/assets/images/services/creative/branding/heroimg.webp",
    bg: "/assets/images/backgrounds/service-bg.webp",
   },
   intro: {
@@ -78,7 +77,7 @@ export const brandingData = {
         text: "Detailed <strong>brand guidelines</strong> to ensure perfect consistency everywhere.",
       },
     ],
-   img: "/assets/images/services/master-image-slider/creative/branding.webp",
+   img: "/assets/images/services/master-service-page/creative/branding.webp",
   },
   FAQ: {
     heading: "FAQs",

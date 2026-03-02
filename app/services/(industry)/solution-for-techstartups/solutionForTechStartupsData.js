@@ -6,7 +6,6 @@ export const solutionForTechStartupsData = {
     subtitle: "industry",
       ctaButton: "Connect With Us",
      ctaLink: "#contact",
-   img: "/assets/images/services/creative/branding/heroimg.webp", // kept original
    bg: "/assets/images/backgrounds/service-bg.webp",   // kept original
   },
 
@@ -75,7 +74,7 @@ export const solutionForTechStartupsData = {
         text: "<strong>Analytics & Growth Reporting:</strong> Track the right metrics, uncover insight patterns, and make confident growth decisions.",
       },
     ],
-   img: "/assets/images/services/master-image-slider/industry/solution-for-tech-startups.webp", // kept original
+   img: "/assets/images/services/master-service-page/industry/solution-for-tech-startups.webp", // kept original
   },
 
   CaseStudy: {

@@ -6,7 +6,6 @@ export const solutionForLawyersData = {
     subtitle: "industry",
     ctaButton: "Contact With Us",
      ctaLink: "#contact",
-   img: "/assets/images/services/creative/branding/heroimg.webp",
    bg: "/assets/images/backgrounds/service-bg.webp",
   },
 
@@ -88,7 +87,7 @@ export const solutionForLawyersData = {
         text: "<strong>Analytics & Lead Tracking:</strong> Measure performance, track inquiries, and optimize every channel for higher case acquisition.",
       },
     ],
-   img: "/assets/images/services/master-image-slider/industry/solution-for-lawyers.webp",
+   img: "/assets/images/services/master-service-page/industry/solution-for-lawyers.webp",
   },
 
   FAQ: {
