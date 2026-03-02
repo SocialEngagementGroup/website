@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     // ✅ Main footer section wrapper - Updated to Marketing Layout!
     <>
-      <section id="contact" className="min-h-screen md:h-screen w-full flex items-center justify-center overflow-hidden relative bg-[#171717] perspective-1000 py-20 md:py-0 font-sans">
+      <section id="contact" className="w-full flex items-center justify-center overflow-hidden relative bg-[#171717] perspective-1000 py-20 md:py-[120px] font-sans">
         
         {/* Background Image with Blur */}
         <div 
@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="absolute inset-0 bg-black/50" style={{ zIndex: 1 }} />
 
         {/* ✅ Inner container for layout */}
-        <div className="container mx-auto px-6 relative z-10 max-w-7xl h-full flex items-center justify-center">
+        <div className="container mx-auto px-6 relative z-10 max-w-7xl flex items-center justify-center">
           <div className="bg-black/80 md:bg-black/50 backdrop-blur-md border border-white/10 rounded-3xl p-6 md:p-12 lg:p-16 shadow-2xl w-full z-50 pointer-events-auto relative">
   
             {/* ✅ Grid layout for ContactInfo and ContactForm */}
