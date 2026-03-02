@@ -5,32 +5,32 @@ export const projects = [
     sliderData: [
       {
         name: "Branding",
-        img: "/assets/images/services/master-image-slider/creative/branding.webp",
+        img: "/assets/images/services/master-service-page/creative/branding.webp",
         link: "/services/branding",
       },
       {
         name: "Logo Design",
-        img: "/assets/images/services/master-image-slider/creative/logo-design.webp",
+        img: "/assets/images/services/master-service-page/creative/logo-design.webp",
         link: "/services/logo-design",
       },
       {
         name: "Content Creation",
-        img: "/assets/images/services/master-image-slider/creative/content-creation.webp",
+        img: "/assets/images/services/master-service-page/creative/content-creation.webp",
         link: "/services/content-creation",
       },
       {
         name: "Social Media Content",
-        img: "/assets/images/services/master-image-slider/creative/social-media-content.webp",
+        img: "/assets/images/services/master-service-page/creative/social-media-content.webp",
         link: "/services/social-media-content",
       },
       {
         name: "3D Animation & Rendering",
-        img: "/assets/images/services/master-image-slider/creative/3d-animation-rendering.webp",
+        img: "/assets/images/services/master-service-page/creative/3d-animation-rendering.webp",
         link: "/services/3D-animation-and-rendering",
       },
       {
         name: "Videography & Photography",
-        img: "/assets/images/services/master-image-slider/creative/videography-photography.webp",
+        img: "/assets/images/services/master-service-page/creative/videography-photography.webp",
         link: "/services/videography-and-photography",
       },
     ],
@@ -42,42 +42,42 @@ export const projects = [
     sliderData: [
       {
         name: "SEO",
-        img: "/assets/images/services/master-image-slider/digital/seo.webp",
+        img: "/assets/images/services/master-service-page/digital/seo.webp",
         link: "/services/seo",
       },
       {
         name: "PPC Campaigns",
-        img: "/assets/images/services/master-image-slider/digital/ppc-campaigns.webp",
+        img: "/assets/images/services/master-service-page/digital/ppc-campaigns.webp",
         link: "/services/ppc-campaigns",
       },
       {
         name: "Retargeting & Remarketing",
-        img: "/assets/images/services/master-image-slider/digital/retargeting-remarketing.webp",
+        img: "/assets/images/services/master-service-page/digital/retargeting-remarketing.webp",
         link: "/services/retargeting-and-remarketing",
       },
       {
         name: "Google Business Profile Management",
-        img: "/assets/images/services/master-image-slider/digital/google-business-profile-management.webp",
+        img: "/assets/images/services/master-service-page/digital/google-business-profile-management.webp",
         link: "/services/google-business-profile-management",
       },
       {
         name: "Review & Reputation Management",
-        img: "/assets/images/services/master-image-slider/digital/review-and-reputation-management.webp",
+        img: "/assets/images/services/master-service-page/digital/review-and-reputation-management.webp",
         link: "/services/review-and-reputation-management",
       },
       {
         name: "Google Location Services Ads",
-        img: "/assets/images/services/master-image-slider/digital/google-location-services-ads.webp",
+        img: "/assets/images/services/master-service-page/digital/google-location-services-ads.webp",
         link: "/services/google-location-services-ads",
       },
       {
         name: "Social Media Marketing",
-        img: "/assets/images/services/master-image-slider/digital/social-media-marketing.webp",
+        img: "/assets/images/services/master-service-page/digital/social-media-marketing.webp",
         link: "/services/social-media-marketing",
       },
       {
         name: "Website Development",
-        img: "/assets/images/services/master-image-slider/digital/website-development.webp",
+        img: "/assets/images/services/master-service-page/digital/website-development.webp",
         link: "/services/website-development",
       },
     ],
@@ -89,22 +89,22 @@ export const projects = [
     sliderData: [
       {
         name: "Solution for Lawyers",
-        img: "/assets/images/services/master-image-slider/industry/solution-for-lawyers.webp",
+        img: "/assets/images/services/master-service-page/industry/solution-for-lawyers.webp",
         link: "/services/solution-for-lawyers",
       },
       {
         name: "Solution for Doctors",
-        img: "/assets/images/services/master-image-slider/industry/solution-for-doctors.webp",
+        img: "/assets/images/services/master-service-page/industry/solution-for-doctors.webp",
         link: "/services/solution-for-doctors",
       },
       {
         name: "Solution for Restaurants",
-        img: "/assets/images/services/master-image-slider/industry/solution-for-restaurant.webp",
+        img: "/assets/images/services/master-service-page/industry/solution-for-restaurant.webp",
         link: "/services/solution-for-restaurants",
       },
       {
         name: "Solution for Tech Startups",
-        img: "/assets/images/services/master-image-slider/industry/solution-for-tech-startups.webp",
+        img: "/assets/images/services/master-service-page/industry/solution-for-tech-startups.webp",
         link: "/services/solution-for-techstartups",
       },
     ],
@@ -115,22 +115,22 @@ export const projects = [
     sliderData: [
       {
         name: "Marketing by SEG",
-        img: "/assets/images/services/master-image-slider/industry/solution-for-lawyers.webp",
+        img: "/assets/images/services/master-service-page/industry/solution-for-lawyers.webp",
         link: "https://digital.socialengagementgroup.com/",
       },
       {
         name: "Marketing for Law Firms",
-        img: "/assets/images/services/master-image-slider/industry/solution-for-doctors.webp",
+        img: "/assets/images/services/master-service-page/industry/solution-for-doctors.webp",
         link: "https://digital.socialengagementgroup.com/marketing-for-law-firm",
       },
       {
         name: "Marketing for Doctors",
-        img: "/assets/images/services/master-image-slider/industry/solution-for-restaurant.webp",
+        img: "/assets/images/services/master-service-page/industry/solution-for-restaurant.webp",
         link: "https://digital.socialengagementgroup.com/marketing-for-doctors",
       },
       {
         name: "Marketing for Restaurants",
-        img: "/assets/images/services/master-image-slider/industry/solution-for-tech-startups.webp",
+        img: "/assets/images/services/master-service-page/industry/solution-for-tech-startups.webp",
         link: "https://digital.socialengagementgroup.com/marketing-for-restaurants",
       },
     ],
