@@ -136,23 +136,17 @@ const VideoSection = ({
                   isPlaying ? "bg-transparent" : "bg-transparent"
                 }`}
               >
-                {/* Custom Play/Pause Button - Only shown when paused or for hoving play state */}
+                {/* Custom Play Button - Only shown when paused */}
                 <div
                   className={`w-20 h-20 md:w-28 md:h-28 bg-[#975554]/90 rounded-full flex items-center justify-center text-white shadow-2xl transform transition-all duration-500 ${
                     isPlaying
-                      ? "opacity-0 group-hover:opacity-100 scale-90"
+                      ? "opacity-0 scale-90 pointer-events-none"
                       : "opacity-100 scale-100 animate-pulse"
                   }`}
                 >
-                  {isPlaying ? (
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
-                    </svg>
-                  ) : (
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  )}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
                 </div>
 
                 {/* Premium Sound Indicator (Tap to Unmute) */}
