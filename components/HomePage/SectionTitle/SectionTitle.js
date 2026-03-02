@@ -11,7 +11,7 @@ const SectionTitle = ({ title, subtitle, subtitle2, description, id }) => {
       {title && (
         <h3
           id={id || undefined}
-          className={`font-heading inline-block text-[#975554] !font-extrabold !capitalize tracking-[0.2em] text-[13px] md:text-[15px] mb-6`}
+          className={`font-heading inline-block text-[#975554] !capitalize text-[13px] md:text-[15px] mb-2`}
         >
           {title}
         </h3>

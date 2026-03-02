@@ -1,6 +1,6 @@
 import React from "react";
 import SectionTitle from "../SectionTitle/SectionTitle"; // Section heading component
-import ParallaxSlider from "./ParallaxSlider"; // Main parallax slider component
+import ParallaxSlider from "./ParallaxSlider.js"; // Main parallax slider component
 
 const ParallaxSliderSection = () => {
   return (

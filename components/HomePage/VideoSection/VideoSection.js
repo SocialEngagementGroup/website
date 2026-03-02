@@ -97,7 +97,7 @@ const VideoSection = ({
         {/* Main Content Wrapper */}
         <div className="relative w-full max-w-7xl mx-auto flex flex-col items-center justify-center transition-all duration-1000">
           <div className="mb-8 md:mb-12">
-            <h3 className="font-heading text-[#975554] text-[13px] md:text-[15px] !font-extrabold !capitalize tracking-[0.2em] mb-6">
+            <h3 className="font-heading text-[#975554] text-[13px] md:text-[15px] !capitalize mb-2">
               {label}
             </h3>
             <h2 className="font-heading text-black text-3xl md:text-5xl font-bold leading-tight max-w-4xl mx-auto">
