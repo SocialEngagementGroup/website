@@ -33,7 +33,7 @@ const sections = [
 ];
 
 // ✅ Single scroll-triggered section component
-const SectionItem = ({ section, setActiveVideo }) => {
+const SectionItem = ({ section, index, setActiveVideo }) => {
   const { ref } = useInView({
     threshold: 0,
     rootMargin: "-40% 0px -40% 0px",
@@ -46,7 +46,7 @@ const SectionItem = ({ section, setActiveVideo }) => {
   return (
     <div
       ref={ref}
-      className="rounded-2xl space-y-5 transition-transform duration-300 flex flex-col items-center md:items-start mt-15 hover:-translate-y-1 transform"
+      className={`rounded-2xl space-y-5 transition-transform duration-300 flex flex-col items-center md:items-start hover:-translate-y-1 transform ${index === 0 ? "mt-4 md:mt-15" : "mt-15 md:mt-15"}`}
     >
       {/* ✅ Desktop button */}
       <h3 className="hidden md:inline-block branding-btn-dsk px-5 py-2 rounded-full !text-[14px] md:!text-[18px] !font-medium !capitalize bg-[#D9D9D9] text-black transition-all">
@@ -64,7 +64,7 @@ const SectionItem = ({ section, setActiveVideo }) => {
       </p>
 
       {/* ✅ Mobile-only video below text */}
-      <div className="md:hidden w-full flex justify-center mt-4">
+      <div className="md:hidden w-full flex justify-center mt-4 mb-10">
         <video
           className="w-full h-[50vh] min-[501px]:h-auto max-[500px]:h-[25vh] object-cover hover:scale-[1.02] transition-transform duration-300"
           autoPlay
@@ -87,10 +87,11 @@ const ScrollStickySections = () => {
   return (
     <section className="scroll-smooth flex flex-col md:flex-row container mx-auto px-2 md:px-6 gap-10">
       {/* ✅ Left: Scrollable content list */}
-      <div className="flex flex-col md:w-1/2 space-y-[0vh] md:space-y-[50vh] mt-0 md:mt-16 md:pb-20 pb-0">
+      <div className="flex flex-col md:w-1/2 space-y-[0vh] md:space-y-[50vh] mt-4 md:mt-16 md:pb-20 pb-0">
         {sections.map((section, index) => (
           <SectionItem
             key={index}
+            index={index}
             section={section}
             setActiveVideo={setActiveVideo}
           />
