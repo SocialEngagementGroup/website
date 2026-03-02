@@ -6,7 +6,7 @@ const page = () => {
   return (
     <>
       {/* ---------- Hero Section Container ---------- */}
-      <div className="min-h-screen w-full flex items-center bg-black pt-24 md:pt-0 overflow-hidden">
+      <div className="min-h-screen w-full flex items-center bg-black pt-24 pb-8 md:pb-0 md:pt-0 overflow-hidden">
         <div className="w-full grid grid-cols-1 md:grid-cols-[42%_58%] items-center gap-12 md:gap-0">
           
           {/* ---------- Left Column: Hero Text Content ---------- */}
