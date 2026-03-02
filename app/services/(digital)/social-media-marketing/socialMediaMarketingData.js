@@ -6,7 +6,6 @@ export const socialMediaMarketingData = {
     subtitle: "digital",
     ctaButton: "Connect With Us",
         ctaLink: "#contact",
-   img: "/assets/images/services/creative/branding/heroimg.webp",
    bg: "/assets/images/backgrounds/service-bg.webp",
   },
 
@@ -69,7 +68,7 @@ export const socialMediaMarketingData = {
         text: "Monthly reporting with insights on growth, engagement, and performance.",
       },
     ],
-   img: "/assets/images/services/master-image-slider/digital/social-media-marketing.webp",
+   img: "/assets/images/services/master-service-page/digital/social-media-marketing.webp",
   },
 
   FAQ: {

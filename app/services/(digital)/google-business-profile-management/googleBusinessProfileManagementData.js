@@ -6,7 +6,6 @@ export const googleBusinessProfileManagementData = {
     subtitle: "digital",
     ctaButton: "Connect With Us",
     ctaLink: "#contact",
-   img: "/assets/images/services/creative/branding/heroimg.webp",
    bg: "/assets/images/backgrounds/service-bg.webp",
   },
 
@@ -65,7 +64,7 @@ export const googleBusinessProfileManagementData = {
       { text: "Review monitoring with a tailored response strategy that builds trust." },
       { text: "Clear performance insights with detailed monthly reporting." },
     ],
-   img: "/assets/images/services/master-image-slider/digital/google-business-profile-management.webp",
+   img: "/assets/images/services/master-service-page/digital/google-business-profile-management.webp",
   },
 
   FAQ: {

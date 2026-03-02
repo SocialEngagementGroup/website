@@ -5,7 +5,6 @@ export const threeDAnimationRenderingData = {
     subtitle: "creative",
     ctaButton: "Connect With Us",
     ctaLink: "#contact",
-   img: "/assets/images/services/creative/branding/heroimg.webp",
    bg: "/assets/images/backgrounds/service-bg.webp",
   },
   intro: {
@@ -77,7 +76,7 @@ export const threeDAnimationRenderingData = {
       },
 
     ],
-   img: "/assets/images/services/master-image-slider/creative/3d-animation-rendering.webp",
+   img: "/assets/images/services/master-service-page/creative/3d-animation-rendering.webp",
   },
   FAQ: {
     heading: "FAQs",

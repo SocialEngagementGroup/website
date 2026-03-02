@@ -6,7 +6,6 @@ export const contentCreationData = {
     subtitle: "Creative",
     ctaButton: "Connect With Us",
         ctaLink: "#contact",
-   img: "/assets/images/services/creative/branding/heroimg.webp",
    bg: "/assets/images/backgrounds/service-bg.webp",
   },
   intro: {
@@ -77,7 +76,7 @@ export const contentCreationData = {
         text: "Scalable <strong>AI-powered content</strong> tailored to your specific niche and brand voice.",
       },
     ],
-   img: "/assets/images/services/master-image-slider/creative/content-creation.webp",
+   img: "/assets/images/services/master-service-page/creative/content-creation.webp",
   },
   FAQ: {
     heading: "FAQs",

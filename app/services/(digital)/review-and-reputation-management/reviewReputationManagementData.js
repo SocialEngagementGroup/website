@@ -6,7 +6,6 @@ export const reviewReputationManagementData = {
     subtitle: "digital",
     ctaButton: "Connect With Us",
     ctaLink: "#contact",
-   img: "/assets/images/services/creative/branding/heroimg.webp",
    bg: "/assets/images/backgrounds/service-bg.webp",
   },
 
@@ -66,7 +65,7 @@ export const reviewReputationManagementData = {
       { text: "Proven reputation repair strategies to counter negatives and rebuild trust." },
       { text: "Monthly sentiment reports with clear insights and actionable recommendations." },
     ],
-   img: "/assets/images/services/master-image-slider/digital/review-and-reputation-management.webp",
+   img: "/assets/images/services/master-service-page/digital/review-and-reputation-management.webp",
   },
 
   FAQ: {

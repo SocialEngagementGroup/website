@@ -6,7 +6,6 @@ export const retargetingRemarketingData = {
     subtitle: "digital",
     ctaButton: "Connect With Us",
     ctaLink: "#contact",
-   img: "/assets/images/services/creative/branding/heroimg.webp",
    bg: "/assets/images/backgrounds/service-bg.webp",
   },
 
@@ -65,7 +64,7 @@ export const retargetingRemarketingData = {
       { text: "Cross-platform audience tracking and smart segmentation at scale." },
       { text: "Frequency control, conversion tracking, and clear ROI reporting." },
     ],
-   img: "/assets/images/services/master-image-slider/digital/retargeting-remarketing.webp",
+   img: "/assets/images/services/master-service-page/digital/retargeting-remarketing.webp",
   },
 
   FAQ: {

@@ -6,7 +6,6 @@ export const solutionForRestaurantsData = {
     subtitle: "industry",
      ctaButton: "Connect With Us",
      ctaLink: "#contact",
-   img: "/assets/images/services/creative/branding/heroimg.webp", // kept original
    bg: "/assets/images/backgrounds/service-bg.webp",   // kept original
   },
 
@@ -78,7 +77,7 @@ export const solutionForRestaurantsData = {
         text: "Influencer & UGC Campaigns: Partner with food creators to spark organic buzz and community-driven discovery.",
       },
     ],
-   img: "/assets/images/services/master-image-slider/industry/solution-for-restaurant.webp", // kept original
+   img: "/assets/images/services/master-service-page/industry/solution-for-restaurant.webp", // kept original
   },
 
   CaseStudy: {

@@ -5,7 +5,6 @@ export const socialMediaContentData = {
     subtitle: "creative",
     ctaButton: "Connect With Us",
         ctaLink: "#contact",
-   img: "/assets/images/services/creative/branding/heroimg.webp",
    bg: "/assets/images/backgrounds/service-bg.webp",
   },
   intro: {
@@ -78,7 +77,7 @@ export const socialMediaContentData = {
 },
 
     ],
-   img: "/assets/images/services/master-image-slider/creative/social-media-content.webp",
+   img: "/assets/images/services/master-service-page/creative/social-media-content.webp",
   },
   FAQ: {
     heading: "FAQs",
