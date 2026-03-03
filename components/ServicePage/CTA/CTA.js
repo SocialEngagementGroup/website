@@ -70,7 +70,7 @@ const CTA = () => {
                         className="font-outfit mb-8 leading-tight tracking-tight"
                     >
                         Let&apos;s Build a System <br />
-                        You Can <span className="italic">Rely</span> On
+                        You Can Rely On
                     </motion.h4>
 
                     <motion.p

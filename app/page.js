@@ -1,4 +1,9 @@
 import React from 'react'
+import HeroSection from "@/components/HomePage/HeroSection/HeroSection"
+import DynamicSections from "@/components/HomePage/DynamicSections"
+
+// HeroSection is above the fold — static import for instant SSR render.
+// All below-fold sections are lazy-loaded via DynamicSections (Client Component).
 
 export const metadata = {
   title: {
@@ -15,26 +20,12 @@ export const metadata = {
     description: "Elevate your brand with SEG's blend of human creativity and AI-powered digital growth strategies.",
   },
 };
-import HeroSection from "@/components/HomePage/HeroSection/HeroSection"
-import VideoSection from "@/components/HomePage/VideoSection/VideoSection"
-import ParallaxSliderSection from '@/components/HomePage/ParallaxSlider/ParallaxSliderSection.js'
-import ClientsLogo from '@/components/HomePage/ClientLogos/ClientLogos'
-import BrandingSection from '@/components/HomePage/BrandSucceed/BrandingSection'
-import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
-
 
 const page = () => {
   return (
     <>
       <HeroSection />
-      <VideoSection />
-      <ParallaxSliderSection />
-      <ClientsLogo />
-      <Testimonials />
-      <div className='bg-white'>
-        <BrandingSection />
-      </div>
-
+      <DynamicSections />
     </>
   )
 }

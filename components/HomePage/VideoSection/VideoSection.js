@@ -97,9 +97,9 @@ const VideoSection = ({
         {/* Main Content Wrapper */}
         <div className="relative w-full max-w-7xl mx-auto flex flex-col items-center justify-center transition-all duration-1000">
           <div className="mb-8 md:mb-12">
-            <h3 className="font-heading text-[#975554] text-[13px] md:text-[15px] !capitalize mb-2">
+            <p className="font-heading text-[#975554] text-[13px] md:text-[15px] capitalize mb-2 font-semibold tracking-wide">
               {label}
-            </h3>
+            </p>
             <h2 className="font-heading text-black text-3xl md:text-5xl font-bold leading-tight max-w-4xl mx-auto">
               Where strategy meets result
             </h2>
@@ -125,7 +125,7 @@ const VideoSection = ({
                 />
               ) : (
                 <div className="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" 
-                     style={{ backgroundImage: `url(https://img.youtube.com/vi/${videoId}/maxresdefault.jpg)` }}>
+                     style={{ backgroundImage: `url(https://img.youtube.com/vi/${videoId}/hqdefault.jpg)` }}>
                   <div className="absolute inset-0 bg-black/20" />
                 </div>
               )}
