@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaLinkedinIn, FaFacebookF } from "react-icons/fa6";
 import { RiInstagramFill } from "react-icons/ri";
+import Newsletter from "@/components/Footer/Newsletter";
 
 const Copyright = () => {
   const currentYear = new Date().getFullYear();
@@ -55,10 +56,10 @@ const Copyright = () => {
   return (
     <div className="text-white pt-20 pb-10 font-sans">
       <div className="container-fluid w-[90%] mx-auto">
-        {/* Top Row: Logo and Socials */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8 pb-12 border-b border-white/10 mb-12">
+        {/* Top Row: Logo, Newsletter and Socials */}
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-12 lg:gap-8 pb-12 border-b border-white/10 mb-12">
           {/* Brand Block */}
-          <Link href="/" className="flex items-center gap-3 cursor-pointer">
+          <Link href="/" className="flex items-center gap-3 cursor-pointer shrink-0">
             <Image
               src="/assets/images/site-logo/logo.svg"
               alt="Social Engagement Group"
@@ -71,8 +72,15 @@ const Copyright = () => {
             </span>
           </Link>
 
-          {/* Social Icons */}
-          <div className="flex gap-4">
+          {/* Newsletter and Socials Wrapper */}
+          <div className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-8 w-full md:w-auto">
+            {/* Newsletter Box */}
+            <div className="w-full md:w-[450px] lg:w-[500px] shrink-0">
+              <Newsletter />
+            </div>
+
+            {/* Social Icons */}
+            <div className="flex gap-4 shrink-0">
             <Link
               href="https://www.instagram.com/socialengagementgroup"
               target="_blank"
@@ -105,6 +113,7 @@ const Copyright = () => {
             </Link>
           </div>
         </div>
+      </div>
 
         {/* Second Row: Main Sitemap Grid (5 Columns) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-16 border-b border-white/10 px-4 md:px-0">

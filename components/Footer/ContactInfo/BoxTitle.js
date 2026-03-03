@@ -7,7 +7,7 @@ const BoxTitle = () => {
     <div className="text-center lg:text-left mb-8 lg:mb-12">
       
       {/* Font matching the Marketing screenshot: Serif, tracking-tight */}
-      <h4 className="!font-outfit !font-medium !leading-[1.2] !tracking-tight text-3xl md:text-5xl lg:text-6xl">
+      <h4 className="!font-outfit !font-medium !leading-[1.2] !tracking-tight text-3xl md:text-5xl lg:text-6xl text-white">
         Let’s create the next <br className="hidden md:block" />
         chapter of Your Story
       </h4>
