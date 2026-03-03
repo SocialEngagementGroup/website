@@ -102,9 +102,9 @@ const InnerSlider = ({ items }) => {
           className="w-10 h-10 flex items-center justify-center rounded-full text-white/70 hover:text-white transition-all duration-300 cursor-pointer disabled:opacity-20"
           onClick={() => {
             if (swiperRef.current) {
-              swiperRef.current.autoplay.stop();
+              swiperRef.current?.autoplay?.stop();
               setTimeout(() => {
-                if (swiperRef.current) swiperRef.current.autoplay.start();
+                swiperRef.current?.autoplay?.start();
               }, 3000);
             }
           }}
@@ -129,9 +129,9 @@ const InnerSlider = ({ items }) => {
           className="w-10 h-10 flex items-center justify-center rounded-full text-white/70 hover:text-white transition-all duration-300 cursor-pointer disabled:opacity-20"
           onClick={() => {
             if (swiperRef.current) {
-              swiperRef.current.autoplay.stop();
+              swiperRef.current?.autoplay?.stop();
               setTimeout(() => {
-                if (swiperRef.current) swiperRef.current.autoplay.start();
+                swiperRef.current?.autoplay?.start();
               }, 3000);
             }
           }}

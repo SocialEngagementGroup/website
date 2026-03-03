@@ -115,22 +115,22 @@ export const projects = [
     sliderData: [
       {
         name: "Marketing by SEG",
-        img: "/assets/images/services/master-service-page/industry/solution-for-lawyers.webp",
+        img: "/assets/images/services/master-service-page/marketing/marketing-by-seg.webp",
         link: "https://digital.socialengagementgroup.com/",
       },
       {
         name: "Marketing for Law Firms",
-        img: "/assets/images/services/master-service-page/industry/solution-for-doctors.webp",
+        img: "/assets/images/services/master-service-page/marketing/marketing-for-law-firms.webp",
         link: "https://digital.socialengagementgroup.com/marketing-for-law-firm",
       },
       {
         name: "Marketing for Doctors",
-        img: "/assets/images/services/master-service-page/industry/solution-for-restaurant.webp",
+        img: "/assets/images/services/master-service-page/marketing/marketing-for-doctors.webp",
         link: "https://digital.socialengagementgroup.com/marketing-for-doctors",
       },
       {
         name: "Marketing for Restaurants",
-        img: "/assets/images/services/master-service-page/industry/solution-for-tech-startups.webp",
+        img: "/assets/images/services/master-service-page/marketing/marketing-for-restaurants.webp",
         link: "https://digital.socialengagementgroup.com/marketing-for-restaurants",
       },
     ],
