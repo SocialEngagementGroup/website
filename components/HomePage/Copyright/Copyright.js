@@ -136,7 +136,7 @@ const Copyright = () => {
           </div>
 
           {/* Legal Links (Bottom Middle) */}
-          <div className="flex flex-col md:flex-wrap md:flex-row items-center justify-center gap-3 md:gap-6 text-gray-400 text-[14px] md:text-[14px] order-1 md:order-2 tracking-widest uppercase md:normal-case shrink-0">
+          <div className="flex flex-col md:flex-wrap md:flex-row items-center justify-center gap-3 md:gap-6 text-gray-400 text-[14px] md:text-[14px] order-1 md:order-2 tracking-widest md:normal-case shrink-0">
             <Link
               href="/terms-and-conditions"
               className="hover:text-white transition-colors"
