@@ -12,6 +12,16 @@ import { images } from "../../../../data/imagesData"; // Array of image objects
 const BLUR_DATA_URL =
   "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAkA4JZQCdAEO/gHOAAA=";
 
+// Skeleton that reserves the exact same space as 3 Swiper rows
+// Prevents CLS when rowImagesMap is populated after mount
+const SliderSkeleton = () => (
+  <div className="space-y-4" aria-hidden="true">
+    {[0, 1, 2].map((i) => (
+      <div key={i} className="h-[200px] w-full rounded-[12px] bg-white/5 animate-pulse" />
+    ))}
+  </div>
+);
+
 const MultiRowSlider = () => {
   const swiperRefs = useRef([]);
   const [rowImagesMap, setRowImagesMap] = useState([]);
@@ -42,6 +52,9 @@ const MultiRowSlider = () => {
       clearTimeout(timer);
     };
   }, []);
+
+  // Show skeleton until images are ready to avoid CLS
+  if (rowImagesMap.length === 0) return <SliderSkeleton />;
 
   return (
     <div className="space-y-4">
@@ -77,7 +90,7 @@ const MultiRowSlider = () => {
               style={{ transitionTimingFunction: "linear" }}
             >
               {rowImages.map((img, imgIndex) => {
-                const isFirst = imgIndex === 0;
+                const isPriority = rowIndex === 0 && imgIndex < 4;
 
                 return (
                   <SwiperSlide
@@ -89,13 +102,16 @@ const MultiRowSlider = () => {
                         src={img.src}
                         alt={img.alt}
                         fill
-                        priority={rowIndex === 0 && imgIndex < 4}
-                        loading={rowIndex === 0 && imgIndex < 4 ? undefined : "lazy"}
+                        priority={isPriority}
+                        loading={isPriority ? undefined : "lazy"}
                         sizes="(max-width: 640px) 150px, 200px"
-                        quality={80}
-                        className="object-cover will-change-transform"
+                        quality={isPriority ? 75 : 60}
+                        className="object-cover"
+                        placeholder={isPriority ? "blur" : "empty"}
+                        blurDataURL={isPriority ? BLUR_DATA_URL : undefined}
                       />
-                    </div>                  </SwiperSlide>
+                    </div>
+                  </SwiperSlide>
                 );
               })}
             </Swiper>

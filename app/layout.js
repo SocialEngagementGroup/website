@@ -1,4 +1,4 @@
-import { Inter, Outfit, Playfair_Display } from "next/font/google";
+import { Outfit, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import Navbar from "@/components/Navbar/Navbar";
@@ -54,12 +54,7 @@ export const metadata = {
   },
 };
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-});
+
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -82,7 +77,7 @@ import { Suspense } from "react";
 export default function SiteLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${outfit.variable} ${outfit.className} ${playfair.variable} antialiased`} suppressHydrationWarning>
+      <body className={`${outfit.variable} ${outfit.className} ${playfair.variable} antialiased`} suppressHydrationWarning>
         <HardLoader />
         <Suspense fallback={null}>
           <TopLoader />
@@ -97,7 +92,7 @@ export default function SiteLayout({ children }) {
           />
         </noscript>
 
-        <Script id="google-tag-manager" strategy="afterInteractive">
+        <Script id="google-tag-manager" strategy="lazyOnload">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
