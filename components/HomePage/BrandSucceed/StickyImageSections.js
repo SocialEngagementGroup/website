@@ -49,12 +49,12 @@ const SectionItem = ({ section, index, setActiveVideo }) => {
       className={`rounded-2xl space-y-5 transition-transform duration-300 flex flex-col items-center md:items-start hover:-translate-y-1 transform ${index === 0 ? "mt-4 md:mt-15" : "mt-15 md:mt-15"}`}
     >
       {/* ✅ Desktop button */}
-      <h3 className="hidden md:inline-block branding-btn-dsk px-5 py-2 rounded-full !text-[14px] md:!text-[18px] !font-medium !capitalize bg-[#D9D9D9] text-black transition-all">
+      <h3 className="hidden md:inline-block branding-btn-dsk px-5 py-2 rounded-full !text-[14px] md:!text-[18px] !font-medium !capitalize bg-[#975554] text-white transition-all">
         {section.button}
       </h3>
 
       {/* ✅ Mobile button */}
-      <h3 className="inline-block md:hidden branding-btn-mob px-5 py-2 rounded-full !text-[14px] md:!text-[18px] !font-medium !capitalize bg-[#D9D9D9] text-black transition-all">
+      <h3 className="inline-block md:hidden branding-btn-mob px-6 py-2.5 rounded-full !text-[16px] md:!text-[18px] !font-medium !capitalize bg-[#975554] text-white transition-all">
         {section.button}
       </h3>
 
@@ -64,7 +64,7 @@ const SectionItem = ({ section, index, setActiveVideo }) => {
       </p>
 
       {/* ✅ Mobile-only video below text */}
-      <div className="md:hidden w-full flex justify-center mt-4 mb-10">
+      <div className="md:hidden w-full flex justify-center mt-2 mb-6">
         <video
           className="w-full h-[50vh] min-[501px]:h-auto max-[500px]:h-[25vh] object-cover hover:scale-[1.02] transition-transform duration-300"
           autoPlay
