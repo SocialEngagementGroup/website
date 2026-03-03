@@ -76,6 +76,8 @@ const Copyright = () => {
             <Link
               href="https://www.instagram.com/socialengagementgroup"
               target="_blank"
+              aria-label="Follow us on Instagram"
+              rel="noopener noreferrer"
               className="w-10 h-10 flex items-center justify-center rounded-full bg-brand-brick border-brand-brick text-white hover:scale-110 transition-all duration-300"
               style={{ backgroundColor: "#975554" }}
             >
@@ -84,6 +86,8 @@ const Copyright = () => {
             <Link
               href="https://www.linkedin.com/company/social-engagement-group"
               target="_blank"
+              aria-label="Follow us on LinkedIn"
+              rel="noopener noreferrer"
               className="w-10 h-10 flex items-center justify-center rounded-full bg-brand-brick border-brand-brick text-white hover:scale-110 transition-all duration-300"
               style={{ backgroundColor: "#975554" }}
             >
@@ -92,6 +96,8 @@ const Copyright = () => {
             <Link
               href="https://www.facebook.com/seg.socialengagementgroup/"
               target="_blank"
+              aria-label="Follow us on Facebook"
+              rel="noopener noreferrer"
               className="w-10 h-10 flex items-center justify-center rounded-full bg-brand-brick border-brand-brick text-white hover:scale-110 transition-all duration-300"
               style={{ backgroundColor: "#975554" }}
             >
@@ -125,12 +131,12 @@ const Copyright = () => {
 
         {/* Bottom Bar */}
         <div className="pt-10 flex flex-col md:flex-row items-center justify-between gap-10 md:gap-6 px-4 md:px-0 w-full">
-          <div className="text-gray-500 text-[14px] md:text-[13px] order-2 md:order-1 flex-1 text-center md:text-left">
+          <div className="text-gray-400 text-[14px] md:text-[13px] order-2 md:order-1 flex-1 text-center md:text-left">
             All rights reserved © 2026
           </div>
 
           {/* Legal Links (Bottom Middle) */}
-          <div className="flex flex-col md:flex-wrap md:flex-row items-center justify-center gap-3 md:gap-6 text-gray-500 text-[14px] md:text-[14px] order-1 md:order-2 tracking-widest uppercase md:normal-case shrink-0">
+          <div className="flex flex-col md:flex-wrap md:flex-row items-center justify-center gap-3 md:gap-6 text-gray-400 text-[14px] md:text-[14px] order-1 md:order-2 tracking-widest uppercase md:normal-case shrink-0">
             <Link
               href="/terms-and-conditions"
               className="hover:text-white transition-colors"
