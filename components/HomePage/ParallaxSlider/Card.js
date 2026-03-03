@@ -33,7 +33,7 @@ const Card = ({ i, title, color, scale, sliderData }) => {
         {/* Content Container */}
         <div className="relative z-[2] w-full flex flex-col justify-center items-center gap-2 sm:gap-4">
           {/* Card title */}
-          <h4 className="slider-title text-white text-center w-full m-0">{title}</h4>
+          <p className="slider-title text-white text-center w-full m-0 !text-[38px] md:!text-[54px] !font-bold !leading-[1.2]">{title}</p>
           
           {/* Inner Swiper Slider Component */}
           <InnerSlider items={sliderData} />

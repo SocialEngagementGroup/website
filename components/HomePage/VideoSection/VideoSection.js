@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
+import Image from "next/image";
 
 const VideoSection = ({ 
   videoId = "ujt54JDgbYo", 
@@ -124,8 +125,14 @@ const VideoSection = ({
                   allowFullScreen
                 />
               ) : (
-                <div className="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" 
-                     style={{ backgroundImage: `url(https://img.youtube.com/vi/${videoId}/hqdefault.jpg)` }}>
+                <div className="absolute inset-0 w-full h-full transition-transform duration-700 group-hover:scale-105">
+                  <Image
+                    src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
+                    alt={title}
+                    fill
+                    className="object-cover"
+                    priority={false}
+                  />
                   <div className="absolute inset-0 bg-black/20" />
                 </div>
               )}

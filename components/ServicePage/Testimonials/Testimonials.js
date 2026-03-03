@@ -117,7 +117,7 @@ const Testimonials = () => {
                     </div>
                   )}
                   <div className="flex flex-col">
-                    <h4 className="!text-[16px] md:!text-[22px] font-bold text-[#975554] tracking-tight leading-none mb-1">{current.author}</h4>
+                    <p className="!text-[16px] md:!text-[22px] font-bold text-[#975554] tracking-tight leading-none mb-1">{current.author}</p>
                     <p className="text-black !text-[13px] md:!text-[18px] font-medium opacity-90 leading-tight">
                       {current.role} {current.company}
                     </p>
