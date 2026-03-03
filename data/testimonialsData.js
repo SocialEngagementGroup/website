@@ -39,14 +39,4 @@ export const allTestimonials = [
     category: "doctor",
     rating: 5,
   },
-  {
-    id: 5,
-    quote: "Social Engagement Group helped us go from 'quiet weekdays' to steady bookings. Guests now find us easily and trust us before they even walk in.",
-    author: "Mohammad Rifahtul Haque",
-    role: "Owner",
-    company: "Flame Japanese Hibachi",
-    image: "/assets/images/testimonial/mohammad-rifahtul-haque.webp",
-    category: "restaurant",
-    rating: 5,
-  },
 ];
