@@ -22,16 +22,14 @@ const TrustBar = ({ heading, description }) => {
       <style>
         {`
           @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-33.3333%, 0, 0); }
           }
           .animate-marquee {
             display: flex;
             animation: marquee 30s linear infinite;
-            width: fit-content;
-          }
-          .animate-marquee:hover {
-            animation-play-state: paused;
+            width: max-content;
+            will-change: transform;
           }
         `}
       </style>
@@ -53,35 +51,21 @@ const TrustBar = ({ heading, description }) => {
       {/* Logos Container with Marquee - Full Width on Mobile, Constrained on Web */}
       <div className="relative overflow-hidden mt-8 w-full md:max-w-[1200px] mx-auto">
         <div className="animate-marquee flex items-center">
-          {/* First Set of Logos */}
-          <div className="flex items-center gap-8 md:gap-12 px-4 md:px-6 flex-shrink-0">
-            {logos.map((logo, index) => (
-              <div key={`logo-1-${index}`} className="relative flex items-center justify-center">
-                <Image
-                  src={`/assets/images/client-logos/${logo}`}
-                  alt="Client Logo"
-                  width={140}
-                  height={70}
-                  className="h-7 md:h-10 w-auto object-contain brightness-0 invert opacity-80"
-                />
-              </div>
-            ))}
-          </div>
-
-          {/* Second Set of Logos (Duplicate) */}
-          <div className="flex items-center gap-8 md:gap-12 px-4 md:px-6 flex-shrink-0">
-            {logos.map((logo, index) => (
-              <div key={`logo-2-${index}`} className="relative flex items-center justify-center">
-                <Image
-                  src={`/assets/images/client-logos/${logo}`}
-                  alt="Client Logo"
-                  width={140}
-                  height={70}
-                  className="h-7 md:h-10 w-auto object-contain brightness-0 invert opacity-80"
-                />
-              </div>
-            ))}
-          </div>
+          {[1, 2, 3].map((setIdx) => (
+            <div key={`logo-set-${setIdx}`} className="flex items-center gap-8 md:gap-12 pr-8 md:pr-12 flex-shrink-0">
+              {logos.map((logo, index) => (
+                <div key={`logo-${setIdx}-${index}`} className="relative flex items-center justify-center">
+                  <Image
+                    src={`/assets/images/client-logos/${logo}`}
+                    alt="Client Logo"
+                    width={200}
+                    height={100}
+                    className="h-12 md:h-13 w-auto object-contain brightness-0 invert opacity-90"
+                  />
+                </div>
+              ))}
+            </div>
+          ))}
         </div>
         
         {/* Responsive Fade Gradients at Edges */}
