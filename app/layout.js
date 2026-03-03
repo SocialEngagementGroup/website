@@ -4,8 +4,7 @@ import Script from "next/script";
 import Navbar from "@/components/Navbar/Navbar";
 import NavBarMobile from "@/components/Navbar/NavBarMobile";
 import Footer from "@/components/Footer/Footer";
-import ScrollProgress from "@/components/Common/ScrollProgress";
-import BackToTop from "@/components/Common/BackToTop";
+import ClientEnhancements from "@/components/Common/ClientEnhancements";
 
 // (optional) if you also want Vercel Analytics:
 // import { Analytics } from "@vercel/analytics/react";
@@ -77,6 +76,13 @@ import { Suspense } from "react";
 export default function SiteLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.youtube-nocookie.com" />
+        <link rel="dns-prefetch" href="https://img.youtube.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+      </head>
       <body className={`${outfit.variable} ${outfit.className} ${playfair.variable} antialiased`} suppressHydrationWarning>
         <HardLoader />
         <Suspense fallback={null}>
@@ -102,12 +108,11 @@ export default function SiteLayout({ children }) {
           `}
         </Script>
 
-        <ScrollProgress />
+        <ClientEnhancements />
         <Navbar />
         <NavBarMobile />
         {children}
         <Footer />
-        <BackToTop />
 
         {/* JSON-LD Structured Data */}
         <script
