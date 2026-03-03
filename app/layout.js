@@ -76,12 +76,17 @@ const playfair = Playfair_Display({
 });
 
 import HardLoader from "@/components/Common/HardLoader";
+import TopLoader from "@/components/Common/TopLoader";
+import { Suspense } from "react";
 
 export default function SiteLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${outfit.variable} ${outfit.className} ${playfair.variable} antialiased`} suppressHydrationWarning>
         <HardLoader />
+        <Suspense fallback={null}>
+          <TopLoader />
+        </Suspense>
         {/* Google Tag Manager */}
         <noscript>
           <iframe
