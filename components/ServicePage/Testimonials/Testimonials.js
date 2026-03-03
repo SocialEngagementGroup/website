@@ -111,9 +111,11 @@ const Testimonials = () => {
 
                 {/* Fixed Author Info Section (Updates instantly but stays in position) */}
                 <div className="mt-auto pt-4 flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-full overflow-hidden shrink-0 shadow-sm border border-gray-100 bg-gray-50 flex items-center justify-center">
-                    <img src={current.image} className="w-[120%] h-[120%] object-cover object-top" alt={current.author} />
-                  </div>
+                  {current.image && (
+                    <div className="w-14 h-14 rounded-full overflow-hidden shrink-0 shadow-sm border border-gray-100 bg-gray-50 flex items-center justify-center">
+                      <img src={current.image} className="w-[120%] h-[120%] object-cover object-top" alt={current.author} />
+                    </div>
+                  )}
                   <div className="flex flex-col">
                     <h4 className="!text-[16px] md:!text-[22px] font-bold text-[#975554] tracking-tight leading-none mb-1">{current.author}</h4>
                     <p className="text-black !text-[13px] md:!text-[18px] font-medium opacity-90 leading-tight">
