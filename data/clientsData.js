@@ -25,5 +25,6 @@ export const ClientsLogo = [
   { src: "/assets/images/client-logos/c-red-black.webp", alt: "C Red" },             // narrow
   { src: "/assets/images/client-logos/ebay-black.webp", alt: "Ebay" },               // wide
   { src: "/assets/images/client-logos/gravy-stack-black.webp", alt: "Gravy Stack" }, // narrow
+  { src: "/assets/images/client-logos/infobahn-black.webp", alt: "Infobahn Softworld" }, // wide
 ];
 
