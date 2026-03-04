@@ -44,6 +44,7 @@ const Copyright = () => {
       { name: "Solution for Doctors", href: "/services/solution-for-doctors" },
       { name: "Solution for Restaurants", href: "/services/solution-for-restaurants" },
       { name: "Solution for Tech Startups", href: "/services/solution-for-techstartups" },
+      { name: "Solution for Jewelers", href: "/services/solution-for-jewelers" },
     ],
     Marketing: [
       { name: "Marketing by SEG", href: "https://digital.socialengagementgroup.com/" },

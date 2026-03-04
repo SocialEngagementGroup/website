@@ -107,6 +107,11 @@ export const projects = [
         img: "/assets/images/services/master-service-page/industry/solution-for-tech-startups.webp",
         link: "/services/solution-for-techstartups",
       },
+      {
+        name: "Solution for Jewelers",
+        img: "/assets/images/services/master-service-page/industry/solution-for-jewelers.webp",
+        link: "/services/solution-for-jewelers",
+      },
     ],
   },
   {
