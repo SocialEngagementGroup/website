@@ -23,6 +23,7 @@ export const Industry = [
   { title: "Solution for Doctors", bg: "/assets/images/services/master-service-page/industry/solution-for-doctors.webp", link: "/services/solution-for-doctors" },
   { title: "Solution for Restaurants", bg: "/assets/images/services/master-service-page/industry/solution-for-restaurant.webp", link: "/services/solution-for-restaurants" },
   { title: "Solution for Tech Startups", bg: "/assets/images/services/master-service-page/industry/solution-for-tech-startups.webp", link: "/services/solution-for-techstartups" },
+  { title: "Solution for Jewelers", bg: "/assets/images/services/master-service-page/industry/solution-for-jewelers.webp", link: "/services/solution-for-jewelers" },
 ];
 
 export const Marketing = [
