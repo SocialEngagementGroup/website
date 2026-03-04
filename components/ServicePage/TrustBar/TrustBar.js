@@ -46,7 +46,11 @@ const TrustBar = ({ heading, description }) => {
                     alt={logo.alt}
                     width={160}
                     height={80}
-                    className="h-8 md:h-10 w-auto max-w-[120px] md:max-w-[140px] object-contain invert opacity-90 contrast-125 hover:opacity-100 transition-opacity duration-300"
+                    className={`h-8 md:h-10 w-auto max-w-[120px] md:max-w-[140px] object-contain opacity-90 contrast-125 hover:opacity-100 transition-opacity duration-300 ${
+                      logo.alt === "Infostride" || logo.alt === "Ebay"
+                        ? "brightness-0 invert"
+                        : "invert"
+                    }`}
                   />
                 </div>
               ))}
