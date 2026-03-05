@@ -304,11 +304,11 @@ export default function Navbar() {
                 >
                   <div className="w-[260px] bg-[#0f0f0f] text-white rounded-2xl shadow-[0_30px_60px_rgba(0,0,0,0.8)] z-50 overflow-hidden py-4">
                     <Link
-                      href="/careers"
+                      href="/tools/converter"
                       onClick={() => setIsOpen(false)}
                       className="group/item flex items-center px-8 h-[56px] text-white/60 hover:text-white hover:bg-white/5 border-l-[3px] border-transparent hover:border-white transition-all duration-300"
                     >
-                      <span className="text-[17px] font-medium">Careers</span>
+                      <span className="text-[17px] font-medium">Converter</span>
                       <div className="ml-auto opacity-0 group-hover/item:opacity-100 transition-all duration-300 translate-x-2 group-hover/item:translate-x-0">
                         <svg
                           className="w-4 h-4 text-white"
@@ -326,11 +326,11 @@ export default function Navbar() {
                       </div>
                     </Link>
                     <Link
-                      href="/tools/converter"
+                      href="/careers"
                       onClick={() => setIsOpen(false)}
                       className="group/item flex items-center px-8 h-[56px] text-white/60 hover:text-white hover:bg-white/5 border-l-[3px] border-transparent hover:border-white transition-all duration-300"
                     >
-                      <span className="text-[17px] font-medium">Converter</span>
+                      <span className="text-[17px] font-medium">Careers</span>
                       <div className="ml-auto opacity-0 group-hover/item:opacity-100 transition-all duration-300 translate-x-2 group-hover/item:translate-x-0">
                         <svg
                           className="w-4 h-4 text-white"

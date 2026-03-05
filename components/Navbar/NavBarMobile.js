@@ -197,18 +197,18 @@ export default function NavBarMobile() {
               >
                 <div className="flex flex-col space-y-5 pl-8 pr-4">
                   <Link
-                    href="/careers"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-[17px] font-sans font-medium text-white/60 hover:text-white transition-colors"
-                  >
-                    Careers
-                  </Link>
-                  <Link
                     href="/tools/converter"
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="text-[17px] font-sans font-medium text-white/60 hover:text-white transition-colors"
                   >
                     Converter
+                  </Link>
+                  <Link
+                    href="/careers"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-[17px] font-sans font-medium text-white/60 hover:text-white transition-colors"
+                  >
+                    Careers
                   </Link>
                 </div>
               </div>
