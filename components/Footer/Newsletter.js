@@ -66,6 +66,7 @@ const Newsletter = () => {
                 {...register("email", { required: true })}
                 className="flex-[5] bg-transparent px-6 py-2 text-white placeholder:text-gray-500 focus:outline-none text-[14px]"
                 required
+                suppressHydrationWarning
               />
               <button
                 type="submit"
