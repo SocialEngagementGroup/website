@@ -26,19 +26,19 @@ export const socialMediaMarketingData = {
       "Social is where your audience already spends hours each day. Every swipe is a chance to earn attention and intent. Smart creative and native formats stop the scroll. Precision targeting puts messages in front of buyers, not bystanders. Consistent posting and community management turn reach into relationships. Paid amplification scales what works while suppressing waste. Data loops testing hooks, pacing, and formats, improve performance week over week. Social proof from comments and shares reduces friction and builds trust. Full-funnel orchestration moves people from awareness to conversion and repeat purchase. Done right, social marketing converts casual scrolling into measurable revenue.",
     items: [
       {
-       img: "/assets/images/services/digital/social-media-marketing/low-engagement-and-slow-audience-growth.webp",
+       img: "/assets/images/services/icons/digital/social-media-marketing/low-engagement-and-slow-audience-growth.webp",
         text: "<strong>Low engagement</strong> and slow audience growth across platforms.",
       },
       {
-       img: "/assets/images/services/digital/social-media-marketing/missed-chances-to-capitalize-on-trends.webp",
+       img: "/assets/images/services/icons/digital/social-media-marketing/missed-chances-to-capitalize-on-trends.webp",
         text: "<strong>Missed chances</strong> to capitalize on trends your competitors ride.",
       },
       {
-       img: "/assets/images/services/digital/social-media-marketing/weak-roi.webp",
+       img: "/assets/images/services/icons/digital/social-media-marketing/weak-roi.webp",
         text: "<strong>Weak ROI</strong> as campaigns fail to convert attention into revenue.",
       },
       {
-       img: "/assets/images/services/digital/social-media-marketing/inconsistent-brand-presence.webp",
+       img: "/assets/images/services/icons/digital/social-media-marketing/inconsistent-brand-presence.webp",
         text: "<strong>Inconsistent brand</strong> presence that slowly erodes trust and credibility.",
       },
 

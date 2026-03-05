@@ -26,19 +26,19 @@ export const solutionForJewelersData = {
       "Buyers today don't walk in blind, they discover jewelry online, compare craftsmanship through photos, and validate trust through reviews long before they make a purchase. If your brand isn't visible in those moments, your competitors are. A strong digital presence shapes desire, builds trust, and drives both foot traffic and online sales before a customer ever contacts you. With the right visibility, reputation, and content strategy, digital transformation ensures your jewelry brand gets discovered first, chosen confidently, and remembered always.",
     items: [
       {
-        img: "/assets/images/services/industry/solution-for-jewelers/buyers-discover-your-competitors.webp",
+        img: "/assets/images/services/icons/industry/solution-for-jewelers/buyers-discover-your-competitors.webp",
         text: "Buyers discover your competitors' collections before they ever find yours.",
       },
       {
-        img: "/assets/images/services/industry/solution-for-jewelers/outdated-or-missing-reviews.webp",
+        img: "/assets/images/services/icons/industry/solution-for-jewelers/outdated-or-missing-reviews.webp",
         text: "Outdated or missing reviews quietly erode trust in high-consideration purchases.",
       },
       {
-        img: "/assets/images/services/industry/solution-for-jewelers/stays-hidden-while-lesser-brands-dominate-local-search.webp",
+        img: "/assets/images/services/icons/industry/solution-for-jewelers/stays-hidden-while-lesser-brands-dominate-local-search.webp",
         text: "Your craftsmanship stays hidden while lesser brands dominate local search.",
       },
       {
-        img: "/assets/images/services/industry/solution-for-jewelers/inconsistent-online-presence-leads.webp",
+        img: "/assets/images/services/icons/industry/solution-for-jewelers/inconsistent-online-presence-leads.webp",
         text: "Inconsistent online presence leads to unpredictable sales and slow seasons.",
       },
     ],

@@ -28,9 +28,9 @@ const LogoMarquee = () => {
               key={`logo-set-${setIdx}`}
               className="flex items-center gap-12 md:gap-16 pr-12 md:pr-16 flex-shrink-0"
             >
-              {ClientsLogo.map((logo, idx) => (
+              {ClientsLogo.map((logo, index) => (
                 <div
-                  key={`logo-${setIdx}-${idx}`}
+                  key={`logo-${setIdx}-${index}`}
                   className="relative flex items-center justify-center"
                 >
                   <Image
@@ -39,7 +39,7 @@ const LogoMarquee = () => {
                     width={160}
                     height={80}
                     className="h-8 md:h-10 w-auto max-w-[120px] md:max-w-[140px] object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
-                    priority={setIdx === 1 && idx < 6}
+                    priority={setIdx === 1 && index < 6}
                   />
                 </div>
               ))}

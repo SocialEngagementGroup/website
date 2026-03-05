@@ -26,19 +26,19 @@ export const solutionForRestaurantsData = {
       "Diners now discover food online long before they taste it, comparing menus, reading reviews, and scrolling through photos on Google, Instagram, and Maps. If your restaurant isn’t visible in those moments, your competitors will be. A strong digital presence shapes trust, drives foot traffic, and builds loyalty before a guest ever walks in. With the right visibility, reviews, and local SEO, digital transformation ensures your restaurant gets discovered first, chosen quickly, and remembered often.",
     items: [
       {
-       img: "/assets/images/services/industry/solution-for-restaurants/diners-can-t-find-you-where-they-look-first.webp", // kept original
+       img: "/assets/images/services/icons/industry/solution-for-restaurants/diners-can-t-find-you-where-they-look-first.webp", // kept original
         text: "Diners can’t find you where they look first.",
       },
       {
-       img: "/assets/images/services/industry/solution-for-restaurants/your-competitors-set-the-story-not-you.webp", // kept original
+       img: "/assets/images/services/icons/industry/solution-for-restaurants/your-competitors-set-the-story-not-you.webp", // kept original
         text: "Your competitors set the story, not you.",
       },
       {
-       img: "/assets/images/services/industry/solution-for-restaurants/outdated-info-quietly-hurts-trust.webp", // kept original
+       img: "/assets/images/services/icons/industry/solution-for-restaurants/outdated-info-quietly-hurts-trust.webp", // kept original
         text: "Outdated info quietly hurts trust.",
       },
       {
-       img: "/assets/images/services/industry/solution-for-restaurants/everyday-near-me-searches-pass-you-by.webp", // kept original
+       img: "/assets/images/services/icons/industry/solution-for-restaurants/everyday-near-me-searches-pass-you-by.webp", // kept original
         text: "Everyday “near me” searches pass you by.",
       },
     ],
