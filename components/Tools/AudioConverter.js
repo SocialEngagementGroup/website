@@ -1,24 +1,23 @@
 "use client";
 
 import React, { useState, useRef } from "react";
+import { fetchFile } from "@ffmpeg/util";
 import JSZip from "jszip";
 import { saveAs } from "file-saver";
 
-const PhotoConverter = () => {
+const AudioConverter = ({ ffmpeg, ffmpegLoaded }) => {
   const [files, setFiles] = useState([]);
-  const [targetFormat, setTargetFormat] = useState("webp");
+  const [targetFormat, setTargetFormat] = useState("mp3");
   const [quality, setQuality] = useState(0.8);
   const [isConverting, setIsConverting] = useState(false);
   const [progress, setProgress] = useState({ current: 0, total: 0 });
-  const [convertedOutput, setConvertedOutput] = useState(null); // { blob, filename, type: 'single' | 'zip' }
+  const [convertedOutput, setConvertedOutput] = useState(null);
   
   const fileInputRef = useRef(null);
-  const canvasRef = useRef(null);
 
   const formats = [
-    { label: "WEBP", value: "webp", mime: "image/webp" },
-    { label: "PNG", value: "png", mime: "image/png" },
-    { label: "JPEG", value: "jpeg", mime: "image/jpeg" },
+    { label: "MP3", value: "mp3", type: "audio" },
+    { label: "WAV", value: "wav", type: "audio" },
   ];
 
   const handleDragOver = (e) => {
@@ -39,24 +38,22 @@ const PhotoConverter = () => {
   };
 
   const handleFiles = (selectedFiles) => {
-    const validImages = selectedFiles.filter(file => {
-      return file.type.startsWith("image/") || file.name.toLowerCase().endsWith(".heic");
+    const validFiles = selectedFiles.filter(file => {
+      return file.type.startsWith("audio/") || file.type.startsWith("video/"); // Allow video for extraction
     });
     
-    if (validImages.length === 0) {
-      alert("Please upload valid image files (JPG, PNG, WEBP, HEIC, GIF).");
+    if (validFiles.length === 0) {
+      alert("Please upload valid audio or video files.");
       return;
     }
     
-    // Create preview URLs for the accepted images
-    const newFiles = validImages.map(file => ({
+    const newFiles = validFiles.map(file => ({
       originalFile: file,
-      preview: URL.createObjectURL(file),
       id: Math.random().toString(36).substring(7)
     }));
     
     setFiles(prev => [...prev, ...newFiles]);
-    setConvertedOutput(null); // Reset output when new files are added
+    setConvertedOutput(null);
   };
 
   const removeFile = (id) => {
@@ -77,85 +74,69 @@ const PhotoConverter = () => {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   };
 
-  const processImage = (fileObj) => {
-    return new Promise((resolve) => {
-      const img = new Image();
-      img.src = fileObj.preview;
-      img.onload = () => {
-        const canvas = canvasRef.current;
-        let targetWidth = img.width;
-        let targetHeight = img.height;
-
-        // For PNG, canvas ignores 'quality' parameter in toBlob. 
-        // To give user actual size reduction, we scale down the dimensions based on quality.
-        if (targetFormat === "png" && quality < 1) {
-             // scale dimensions down proportionally. quality 0.1 = 10% dimensions.
-             // taking sqrt of quality so area scales linearly with quality slider.
-             const scaleFactor = Math.sqrt(quality);
-             targetWidth = Math.max(1, img.width * scaleFactor);
-             targetHeight = Math.max(1, img.height * scaleFactor);
-        }
-
-        canvas.width = targetWidth;
-        canvas.height = targetHeight;
-        const ctx = canvas.getContext("2d");
-
-        // Fill with white background in case converting PNG (transparent) to JPG
-        if (targetFormat === "jpeg") {
-          ctx.fillStyle = "#ffffff";
-          ctx.fillRect(0, 0, canvas.width, canvas.height);
-        } else {
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-        }
-
-        ctx.drawImage(img, 0, 0, targetWidth, targetHeight);
-
-        const mimeType = formats.find(f => f.value === targetFormat).mime;
-        
-        // Export to Blob for JSZip
-        // For png, quality is passed but browsers ignore it. The dimension scaling did the work.
-        canvas.toBlob((blob) => {
-          resolve(blob);
-        }, mimeType, quality);
-      };
-    });
-  };
-
-  const convertAllImages = async () => {
-    if (files.length === 0) return;
+  const convertAll = async () => {
+    if (files.length === 0 || !ffmpegLoaded) return;
     
     setIsConverting(true);
     setProgress({ current: 0, total: files.length });
     setConvertedOutput(null);
+
+    // Log FFmpeg output to console for debugging
+    ffmpeg.on('log', ({ message }) => {
+      console.log('[FFmpeg]', message);
+    });
     
-    // Single file
-    if (files.length === 1) {
-        const fileObj = files[0];
-        const blob = await processImage(fileObj);
-        const baseName = fileObj.originalFile.name.replace(/\.[^/.]+$/, "");
-        const newFileName = `${baseName}.${targetFormat}`;
-        
-        setProgress({ current: 1, total: 1 });
-        setConvertedOutput({ blob, filename: newFileName, type: 'single' });
-        setIsConverting(false);
-        return;
+    try {
+      const bitrate = Math.round(32 + quality * 288) + "k";
+
+      const getFFmpegArgs = (input, output) => {
+          return ["-y", "-i", input, "-b:a", bitrate, output];
+      };
+      
+      if (files.length === 1) {
+          const fileObj = files[0];
+          const { originalFile } = fileObj;
+          const inputName = `input_${Date.now()}.${originalFile.name.split('.').pop()}`;
+          const outputName = `output_${Date.now()}.${targetFormat}`;
+
+          await ffmpeg.writeFile(inputName, await fetchFile(originalFile));
+          await ffmpeg.exec(getFFmpegArgs(inputName, outputName));
+          
+          const data = await ffmpeg.readFile(outputName);
+          const blob = new Blob([data.buffer], { type: 'audio/mpeg' });
+          
+          const downloadName = originalFile.name.replace(/\.[^/.]+$/, "") + "." + targetFormat;
+          setConvertedOutput({ blob, filename: downloadName, type: 'single' });
+          setProgress({ current: 1, total: 1 });
+          setIsConverting(false);
+          return;
+      }
+
+      const zip = new JSZip();
+      for (let i = 0; i < files.length; i++) {
+          const fileObj = files[i];
+          const { originalFile } = fileObj;
+          const inputName = `input_${Date.now()}_${i}.${originalFile.name.split('.').pop()}`;
+          const outputName = `output_${Date.now()}_${i}.${targetFormat}`;
+          const downloadName = originalFile.name.replace(/\.[^/.]+$/, "") + "." + targetFormat;
+
+          await ffmpeg.writeFile(inputName, await fetchFile(originalFile));
+          await ffmpeg.exec(getFFmpegArgs(inputName, outputName));
+          
+          const data = await ffmpeg.readFile(outputName);
+          zip.file(downloadName, data.buffer);
+          
+          setProgress({ current: i + 1, total: files.length });
+      }
+
+      const zipContent = await zip.generateAsync({ type: "blob" });
+      setConvertedOutput({ blob: zipContent, filename: "converted-audio.zip", type: 'zip' });
+    } catch (error) {
+      console.error("Audio conversion error:", error);
+      alert("Audio conversion failed. Please try again or use a different file/format.");
+    } finally {
+      setIsConverting(false);
     }
-    
-    // Bulk files
-    const zip = new JSZip();
-    for (let i = 0; i < files.length; i++) {
-        const fileObj = files[i];
-        const blob = await processImage(fileObj);
-        const baseName = fileObj.originalFile.name.replace(/\.[^/.]+$/, "");
-        const newFileName = `${baseName}.${targetFormat}`;
-        zip.file(newFileName, blob);
-        setProgress({ current: i + 1, total: files.length });
-    }
-    
-    // Generate ZIP file
-    const zipContent = await zip.generateAsync({ type: "blob" });
-    setConvertedOutput({ blob: zipContent, filename: "converted-images.zip", type: 'zip' });
-    setIsConverting(false);
   };
 
   const handleDownload = () => {
@@ -167,25 +148,17 @@ const PhotoConverter = () => {
 
   return (
     <div className="w-full relative z-10 animate-fade-in-up">
-      {/* Hidden canvas for processing */}
-      <canvas ref={canvasRef} className="hidden" />
-
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 mt-12 md:mt-16">
-        {/* Left Side: Upload & Preview List */}
         <div className="lg:col-span-7 flex flex-col gap-6">
           <div className="bg-[#111113] border border-white/5 rounded-[2.5rem] p-6 md:p-12 shadow-2xl relative overflow-hidden group/card shadow-black/50 min-h-[400px] lg:h-[700px] flex flex-col">
-            {/* Subtle top glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
             
             <div className="flex flex-col sm:flex-row justify-between items-center bg-transparent mb-8 gap-4 text-center sm:text-left">
-              <h2 className="text-xl md:text-2xl font-bold text-white tracking-tight">Bulk Upload Images</h2>
+              <h2 className="text-xl md:text-2xl font-bold text-white tracking-tight">Bulk Upload Audio</h2>
               {files.length > 0 && (
                 <div className="flex items-center gap-2 md:gap-3">
-                  <span className="text-xs md:text-sm bg-white/10 text-white px-2 md:px-3 py-1 rounded-full whitespace-nowrap">{files.length} Photo{files.length > 1 ? 's' : ''}</span>
-                  <button 
-                    onClick={clearAllFiles}
-                    className="text-xs md:text-sm bg-red-500/20 text-red-400 hover:bg-red-500 hover:text-white px-3 py-1 rounded-full transition-colors flex items-center gap-1.5 whitespace-nowrap font-medium"
-                  >
+                  <span className="text-xs md:text-sm bg-white/10 text-white px-2 md:px-3 py-1 rounded-full whitespace-nowrap">{files.length} Audio{files.length > 1 ? 's' : ''}</span>
+                  <button onClick={clearAllFiles} className="text-xs md:text-sm bg-red-500/20 text-red-400 hover:bg-red-500 hover:text-white px-3 py-1 rounded-full transition-colors flex items-center gap-1.5 whitespace-nowrap font-medium">
                     <svg className="w-3.5 md:w-4 h-3.5 md:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
                     </svg>
@@ -195,7 +168,6 @@ const PhotoConverter = () => {
               )}
             </div>
             
-            {/* Drag Drop Master Zone */}
             <div
               className={`flex-shrink-0 bg-black/40 border border-dashed ${files.length > 0 ? 'border-white/5 p-4 md:p-6 mb-6' : 'border-white/10 p-8 md:p-12'} rounded-3xl text-center cursor-pointer hover:border-[#975554]/50 hover:bg-[#975554]/5 transition-all duration-300`}
               onDragOver={handleDragOver}
@@ -209,41 +181,36 @@ const PhotoConverter = () => {
                   </svg>
                 </div>
                 <div>
-                  <p className={`${files.length > 0 ? 'text-sm md:text-base' : 'text-base md:text-lg'} text-white font-medium mb-1 whitespace-nowrap md:whitespace-normal`}>Click to upload or drag & drop</p>
-                  {files.length === 0 && <p className="text-xs md:text-sm text-gray-500">Supports JPG, PNG, WEBP, HEIC, AVIF, GIF in bulk</p>}
+                  <p className={`${files.length > 0 ? 'text-sm md:text-base' : 'text-base md:text-lg'} text-white font-medium mb-1`}>Click to upload or drag & drop</p>
+                  {files.length === 0 && <p className="text-xs md:text-sm text-gray-500">
+                    Supports MP3, WAV and Video extraction in bulk
+                  </p>}
                 </div>
               </div>
-              <input
-                type="file"
-                multiple
-                className="hidden"
-                ref={fileInputRef}
-                onChange={handleFileSelect}
-                accept="image/*,.heic"
-              />
+              <input type="file" multiple className="hidden" ref={fileInputRef} onChange={handleFileSelect} accept="audio/*,video/*" />
             </div>
 
-            {/* Uploaded Files Grid */}
             {files.length > 0 && (
-              <div className="overflow-y-auto pr-1 md:pr-2 custom-scrollbar flex-1 min-h-0">
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-3 md:gap-4 pb-4 auto-rows-max">
+              <div className="overflow-y-auto pr-2 custom-scrollbar flex-1 min-h-0">
+                <div className="flex flex-col gap-3">
                   {files.map((fileObj) => (
-                    <div key={fileObj.id} className="relative group bg-black/40 rounded-2xl border border-white/5 overflow-hidden aspect-square">
-                      <img src={fileObj.preview} alt={fileObj.originalFile.name} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
-                      
-                      {/* Hover Overlay with Delete */}
-                      <div className="absolute inset-0 bg-black/60 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-2 md:p-4">
-                        <button 
-                          onClick={(e) => { e.stopPropagation(); removeFile(fileObj.id); }}
-                          className="bg-red-500/80 hover:bg-red-500 text-white p-1.5 md:p-2 rounded-full backdrop-blur-md transition-colors"
-                          title="Remove image"
-                        >
-                          <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                    <div key={fileObj.id} className="flex items-center justify-between bg-black/40 p-4 rounded-2xl border border-white/5 group">
+                      <div className="flex items-center gap-4 overflow-hidden">
+                        <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center flex-shrink-0">
+                          <svg className="w-5 h-5 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
                           </svg>
-                        </button>
-                        <p className="text-[10px] md:text-xs text-white text-center mt-1 md:mt-2 truncate w-full px-1">{fileObj.originalFile.name}</p>
+                        </div>
+                        <div className="overflow-hidden">
+                          <p className="text-white text-sm font-medium truncate">{fileObj.originalFile.name}</p>
+                          <p className="text-gray-500 text-xs">{formatBytes(fileObj.originalFile.size)}</p>
+                        </div>
                       </div>
+                      <button onClick={() => removeFile(fileObj.id)} className="text-gray-500 hover:text-red-400 p-2 transition-colors">
+                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </button>
                     </div>
                   ))}
                 </div>
@@ -252,38 +219,31 @@ const PhotoConverter = () => {
           </div>
         </div>
 
-        {/* Right Side: Options & Output */}
         <div className="lg:col-span-5 flex flex-col gap-6">
-          <div className="bg-[#111113] border border-white/5 rounded-[2.5rem] p-6 md:p-12 shadow-2xl lg:sticky lg:top-24 shadow-black/50 overflow-hidden min-h-[400px] lg:h-[700px] flex flex-col">
-             {/* Subtle top glow */}
-             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+          <div className="bg-[#111113] border border-white/5 rounded-[2.5rem] p-6 md:p-12 shadow-2xl lg:sticky lg:top-24 shadow-black/50 min-h-[400px] lg:h-[700px] flex flex-col">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+            <h3 className="text-xl md:text-2xl font-bold text-white mb-4 tracking-tight">Bulk Settings</h3>
             
-            <h3 className="text-xl md:text-2xl font-bold text-white mb-4 tracking-tight text-center lg:text-left">Bulk Settings</h3>
-            
-            {/* Summary */}
             <div className="bg-black/40 rounded-2xl p-5 mb-8 border border-white/5 flex flex-col gap-2">
               <div className="flex justify-between items-center text-sm md:text-base">
-                <span className="text-gray-500">Total Images</span>
+                <span className="text-gray-500">Total Audios</span>
                 <span className="text-gray-200 font-medium">{files.length}</span>
               </div>
               <div className="flex justify-between items-center text-sm md:text-base">
                 <span className="text-gray-500">Original Size</span>
-                <span className="text-gray-200 font-medium">
-                  {formatBytes(originalTotalSize)}
-                </span>
+                <span className="text-gray-200 font-medium">{formatBytes(originalTotalSize)}</span>
               </div>
             </div>
 
-            {/* Format Selection */}
             <div className="mb-8">
               <label className="block text-gray-300 text-lg font-medium mb-4">Export All To Format</label>
-              <div className="grid grid-cols-3 gap-3">
+              <div className="grid grid-cols-2 gap-3">
                 {formats.map((fmt) => (
                   <button
                     key={fmt.value}
                     onClick={() => {
-                      setTargetFormat(fmt.value);
-                      setConvertedOutput(null);
+                        setTargetFormat(fmt.value);
+                        setConvertedOutput(null);
                     }}
                     className={`py-3 px-2 rounded-xl text-sm md:text-base font-medium transition-all duration-200 border ${
                       targetFormat === fmt.value
@@ -297,12 +257,9 @@ const PhotoConverter = () => {
               </div>
             </div>
 
-            {/* Quality Slider (Now enabled for all formats) */}
             <div className="mb-8">
               <div className="flex justify-between items-center mb-4">
-                <label className="text-gray-300 text-lg font-medium">
-                   {targetFormat === "png" ? "Image Scale (Size)" : "Image Quality"}
-                </label>
+                <label className="text-gray-300 text-lg font-medium">Audio Bitrate (Size)</label>
                 <span className="text-[#975554] font-bold">{Math.round(quality * 100)}%</span>
               </div>
               <input
@@ -319,14 +276,13 @@ const PhotoConverter = () => {
               />
               <div className="flex justify-between text-xs text-gray-500 mt-2">
                 <span>Smaller Files</span>
-                <span>{targetFormat === "png" ? "Original Size" : "Better Quality"}</span>
+                <span>Better Quality</span>
               </div>
             </div>
 
-            {/* Actions */}
             <div className="mt-auto flex flex-col gap-4">
               <button
-                onClick={convertAllImages}
+                onClick={convertAll}
                 disabled={files.length === 0 || isConverting}
                 className="w-full bg-white text-black hover:bg-gray-200 disabled:bg-gray-700 disabled:text-gray-500 py-4 rounded-xl font-bold text-lg transition-all duration-300 flex items-center justify-center gap-2"
               >
@@ -338,6 +294,8 @@ const PhotoConverter = () => {
                     </svg>
                     Converting {progress.current} of {progress.total}...
                   </>
+                ) : !ffmpegLoaded ? (
+                  <>Loading Engine...</>
                 ) : (
                   <>Convert All {files.length > 0 ? `(${files.length})` : ''}</>
                 )}
@@ -351,7 +309,7 @@ const PhotoConverter = () => {
                   <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                   </svg>
-                  {convertedOutput.type === 'zip' ? "Download All (ZIP)" : "Download Image"}
+                  {convertedOutput.type === 'zip' ? "Download All (ZIP)" : "Download Audio"}
                 </button>
               )}
             </div>
@@ -362,4 +320,4 @@ const PhotoConverter = () => {
   );
 };
 
-export default PhotoConverter;
+export default AudioConverter;
