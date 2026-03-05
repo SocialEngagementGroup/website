@@ -20,7 +20,7 @@ const contactInfo = [
   },
   { 
     icon: "/assets/images/icons/pin-map.webp", 
-    label: "Our Location",
+    label: "Based In",
     text: "New York City, USA" 
   },
 ];
