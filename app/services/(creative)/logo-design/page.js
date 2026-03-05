@@ -11,17 +11,19 @@ import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 
+import siteMetadata from "@/data/metadata";
+
 export const metadata = {
-  title: "Logo Design",
-  description: "Get a memorable, professional logo that builds trust and recognition. 3–5 original concepts, unlimited revisions, and full ownership included.",
+  title: siteMetadata.logoDesign.title,
+  description: siteMetadata.logoDesign.description,
   openGraph: {
-    title: "Logo Design | SEG - Social Engagement Group",
-    description: "Create a memorable brand with SEG's custom logo design services.",
+    title: siteMetadata.logoDesign.title,
+    description: siteMetadata.logoDesign.description,
     url: "/services/logo-design",
   },
   twitter: {
-    title: "Logo Design | SEG - Social Engagement Group",
-    description: "Create a memorable brand with SEG's custom logo design services.",
+    title: siteMetadata.logoDesign.title,
+    description: siteMetadata.logoDesign.description,
   },
 };
 

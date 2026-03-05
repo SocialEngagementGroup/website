@@ -9,18 +9,19 @@ import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
+import siteMetadata from "@/data/metadata";
+
 export const metadata = {
-  title: "Digital Marketing for Restaurants",
-  description:
-    "Boost your restaurant's visibility and drive more bookings with tailored digital marketing. Get found by local foodies and grow your business with a strong online presence.",
+  title: siteMetadata.restaurants.title,
+  description: siteMetadata.restaurants.description,
   openGraph: {
-    title: "Digital Marketing for Restaurants | SEG - Social Engagement Group",
-    description: "Drive more diners to your restaurant with SEG's specialized digital marketing strategies.",
+    title: siteMetadata.restaurants.title,
+    description: siteMetadata.restaurants.description,
     url: "/services/solution-for-restaurants",
   },
   twitter: {
-    title: "Digital Marketing for Restaurants | SEG - Social Engagement Group",
-    description: "Drive more diners to your restaurant with SEG's specialized digital marketing strategies.",
+    title: siteMetadata.restaurants.title,
+    description: siteMetadata.restaurants.description,
   },
 };
 

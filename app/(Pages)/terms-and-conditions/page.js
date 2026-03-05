@@ -1,6 +1,18 @@
 import React from 'react'
+import siteMetadata from "@/data/metadata";
+
 export const metadata = {
-  title: "Terms & Conditions",
+  title: siteMetadata.terms.title,
+  description: siteMetadata.terms.description,
+  openGraph: {
+    title: siteMetadata.terms.title,
+    description: siteMetadata.terms.description,
+    url: "/terms-and-conditions",
+  },
+  twitter: {
+    title: siteMetadata.terms.title,
+    description: siteMetadata.terms.description,
+  },
 };
 
 import HeroSection from '@/components/LegalPage/HeroSection/HeroSection'

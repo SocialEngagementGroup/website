@@ -1,7 +1,17 @@
+import siteMetadata from "@/data/metadata";
+
 export const metadata = {
-  title: "Media Conversion Platform | Fast & Private",
-  description:
-    "The most secure way to convert your images, videos, and documents. Process everything locally in your browser with 100% privacy and zero server uploads.",
+  title: siteMetadata.converter.title,
+  description: siteMetadata.converter.description,
+  openGraph: {
+    title: siteMetadata.converter.title,
+    description: siteMetadata.converter.description,
+    url: "/tools/converter",
+  },
+  twitter: {
+    title: siteMetadata.converter.title,
+    description: siteMetadata.converter.description,
+  },
 };
 
 import React from "react";

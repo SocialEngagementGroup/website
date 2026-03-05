@@ -1,16 +1,18 @@
 import React from 'react'
 
+import siteMetadata from "@/data/metadata";
+
 export const metadata = {
-  title: "About Us",
-  description: "Learn how Social Engagement Group (SEG) empowers businesses by blending storytelling with advanced AI automation for sustainable digital growth.",
+  title: siteMetadata.about.title,
+  description: siteMetadata.about.description,
   openGraph: {
-    title: "About Us | SEG - Social Engagement Group",
-    description: "Discover how SEG combines storytelling and AI automation to drive sustainable business growth.",
+    title: siteMetadata.about.title,
+    description: siteMetadata.about.description,
     url: "/about",
   },
   twitter: {
-    title: "About Us | SEG - Social Engagement Group",
-    description: "Discover how SEG combines storytelling and AI automation to drive sustainable business growth.",
+    title: siteMetadata.about.title,
+    description: siteMetadata.about.description,
   },
 };
 

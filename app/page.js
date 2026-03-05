@@ -5,19 +5,19 @@ import DynamicSections from "@/components/HomePage/DynamicSections"
 // HeroSection is above the fold — static import for instant SSR render.
 // All below-fold sections are lazy-loaded via DynamicSections (Client Component).
 
+import siteMetadata from "@/data/metadata";
+
 export const metadata = {
-  title: {
-    absolute: "Human Creativity & AI-Powered Growth | SEG - Social Engagement Group",
-  },
-  description: "Experience the future of digital marketing with SEG. We combine human creativity and AI-powered growth strategies to elevate your brand and drive conversions.",
+  title: siteMetadata.home.title,
+  description: siteMetadata.home.description,
   openGraph: {
-    title: "Human Creativity & AI-Powered Growth | SEG - Social Engagement Group",
-    description: "Elevate your brand with SEG's blend of human creativity and AI-powered digital growth strategies.",
+    title: siteMetadata.home.title,
+    description: siteMetadata.home.description,
     url: "/",
   },
   twitter: {
-    title: "Human Creativity & AI-Powered Growth | SEG - Social Engagement Group",
-    description: "Elevate your brand with SEG's blend of human creativity and AI-powered digital growth strategies.",
+    title: siteMetadata.home.title,
+    description: siteMetadata.home.description,
   },
 };
 

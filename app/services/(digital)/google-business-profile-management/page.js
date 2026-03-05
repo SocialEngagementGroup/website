@@ -9,18 +9,19 @@ import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 import { googleBusinessProfileManagementData } from "./googleBusinessProfileManagementData";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
+import siteMetadata from "@/data/metadata";
+
 export const metadata = {
-  title: "Google Business Profile Management",
-  description:
-    "Get more local calls and visits with expert Google Business Profile management. Optimize listings, boost visibility, and build customer trust.",
+  title: siteMetadata.googleBusiness.title,
+  description: siteMetadata.googleBusiness.description,
   openGraph: {
-    title: "Google Business Profile Management | SEG - Social Engagement Group",
-    description: "Get more local calls and visits with SEG's expert Google Business Profile management.",
+    title: siteMetadata.googleBusiness.title,
+    description: siteMetadata.googleBusiness.description,
     url: "/services/google-business-profile-management",
   },
   twitter: {
-    title: "Google Business Profile Management | SEG - Social Engagement Group",
-    description: "Get more local calls and visits with SEG's expert Google Business Profile management.",
+    title: siteMetadata.googleBusiness.title,
+    description: siteMetadata.googleBusiness.description,
   },
 };
 export default function Page() {

@@ -9,17 +9,19 @@ import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
+import siteMetadata from "@/data/metadata";
+
 export const metadata = {
-  title: "3D Animation & Rendering",
-  description: "Transform ideas into stunning 3D visuals. We create hyper-realistic renders, animations, and product demos that captivate audiences and drive engagement.",
+  title: siteMetadata.animation3d.title,
+  description: siteMetadata.animation3d.description,
   openGraph: {
-    title: "3D Animation & Rendering | SEG - Social Engagement Group",
-    description: "Transform ideas into stunning 3D visuals with SEG's hyper-realistic 3D animation and rendering.",
+    title: siteMetadata.animation3d.title,
+    description: siteMetadata.animation3d.description,
     url: "/services/3D-animation-and-rendering",
   },
   twitter: {
-    title: "3D Animation & Rendering | SEG - Social Engagement Group",
-    description: "Transform ideas into stunning 3D visuals with SEG's hyper-realistic 3D animation and rendering.",
+    title: siteMetadata.animation3d.title,
+    description: siteMetadata.animation3d.description,
   },
 };
 

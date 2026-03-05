@@ -9,18 +9,19 @@ import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
+import siteMetadata from "@/data/metadata";
+
 export const metadata = {
-  title: "SEO Services",
-  description:
-    "Boost visibility and traffic with expert SEO. We optimize keywords, content, and links to help your business rank higher and convert more customers.",
+  title: siteMetadata.seo.title,
+  description: siteMetadata.seo.description,
   openGraph: {
-    title: "SEO Services | SEG - Social Engagement Group",
-    description: "Boost your organic growth and search rankings with SEG's expert SEO services.",
+    title: siteMetadata.seo.title,
+    description: siteMetadata.seo.description,
     url: "/services/seo",
   },
   twitter: {
-    title: "SEO Services | SEG - Social Engagement Group",
-    description: "Boost your organic growth and search rankings with SEG's expert SEO services.",
+    title: siteMetadata.seo.title,
+    description: siteMetadata.seo.description,
   },
 };
 

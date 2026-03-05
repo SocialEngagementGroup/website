@@ -10,17 +10,19 @@ import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
+import siteMetadata from "@/data/metadata";
+
 export const metadata = {
-  title: "Professional Branding Services",
-  description: "Craft a brand that stands out. We develop strategy, voice, and visuals that build recognition, trust, and loyalty. Start your branding journey today.",
+  title: siteMetadata.branding.title,
+  description: siteMetadata.branding.description,
   openGraph: {
-    title: "Branding Services | SEG - Social Engagement Group",
-    description: "Craft a brand that stands out with SEG's professional branding strategy and visuals.",
+    title: siteMetadata.branding.title,
+    description: siteMetadata.branding.description,
     url: "/services/branding",
   },
   twitter: {
-    title: "Branding Services | SEG - Social Engagement Group",
-    description: "Craft a brand that stands out with SEG's professional branding strategy and visuals.",
+    title: siteMetadata.branding.title,
+    description: siteMetadata.branding.description,
   },
 };
 
