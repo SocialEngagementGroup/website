@@ -278,7 +278,7 @@ const PhotoConverter = () => {
 
             {/* Format Selection */}
             <div className="mb-8">
-              <label className="block text-gray-300 text-base md:text-lg font-medium mb-4">Export All To Format</label>
+              <label className="block text-gray-300 text-base md:text-lg font-medium mb-4 text-center lg:text-left">Export All To Format</label>
               <div className="grid grid-cols-3 gap-3">
                 {formats.map((fmt) => (
                   <button
@@ -302,7 +302,7 @@ const PhotoConverter = () => {
             {/* Quality Slider (Now enabled for all formats) */}
             <div className="mb-8">
               <div className="flex justify-between items-center mb-4">
-                <label className="text-gray-300 text-base md:text-lg font-medium">
+                <label className="text-gray-300 text-base md:text-lg font-medium text-center lg:text-left w-full">
                    {targetFormat === "png" ? "Image Scale (Size)" : "Image Quality"}
                 </label>
                 <span className="text-[#975554] font-bold">{Math.round(quality * 100)}%</span>
