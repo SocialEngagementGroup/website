@@ -26,19 +26,19 @@ export const googleLocationServicesAdsData = {
       "Location-based ads put you in front of nearby, high-intent customers at the exact moment they’re searching. Proximity targeting and top-of-results placement capture attention, while call-first formats turn interest into appointments fast. Trust signals (e.g., Google Guaranteed), dayparting, and service-area controls improve conversion rates and reduce waste. With pay-per-lead pricing and clear reporting on leads, CPL, and close rate, ROI is transparent. Fast feedback loops let you refine targeting and messaging in real time driving more calls, bookings, and foot traffic.",
     items: [
       {
-        img: "/assets/images/services/digital/google-location-services-ads/missed-local-opportunities-from-customers.webp",
+        img: "/assets/images/services/icons/digital/google-location-services-ads/missed-local-opportunities-from-customers.webp",
         text: "Missed <strong>local opportunities</strong> from customers searching right in your area.",
       },
       {
-        img: "/assets/images/services/digital/google-location-services-ads/competitors-take-over-top.webp",
+        img: "/assets/images/services/icons/digital/google-location-services-ads/competitors-take-over-top.webp",
         text: "<strong>Competitors</strong> take over top spots and dominate local search visibility.",
       },
       {
-        img: "/assets/images/services/digital/google-location-services-ads/call-volume-drops.webp",
+        img: "/assets/images/services/icons/digital/google-location-services-ads/call-volume-drops.webp",
         text: "Call <strong>volume drops</strong> and bookings decline without strong local presence.",
       },
       {
-        img: "/assets/images/services/digital/google-location-services-ads/cac-increases-as-you-rely-only-on-broad-ppc-or-seo.webp",
+        img: "/assets/images/services/icons/digital/google-location-services-ads/cac-increases-as-you-rely-only-on-broad-ppc-or-seo.webp",
         text: "<strong>CAC increases</strong> as you rely only on broad PPC or SEO without local ads.",
       },
     ],

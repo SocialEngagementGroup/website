@@ -27,19 +27,19 @@ export const videographyPhotographyData = {
       "Strong imagery is the backbone of every ad, landing page, and post. It stops the scroll, earns attention, and shapes first impressions. Consistent, polished visuals signal quality, credibility, and maturity. Clear product shots and story-led video drive understanding and desire. Better visuals lift click-through, conversion rates, and order value. They make your message memorable and shareable across channels. Without them, you blend into the feed and leak trust. With them, you stay top-of-mind and turn views into customers.",
     items: [
       {
-       img: "/assets/images/services/creative/videography-photography/ads-appear-unprofessional.webp",
+       img: "/assets/images/services/icons/creative/videography-photography/ads-appear-unprofessional.webp",
         text: "Ads appear unprofessional, diminishing your brand's <strong>image</strong> and appeal.",
       },
       {
-       img: "/assets/images/services/creative/videography-photography/conversions-drop.webp",
+       img: "/assets/images/services/icons/creative/videography-photography/conversions-drop.webp",
         text: "Conversions drop as low-quality visuals fail to <strong>engage</strong> and persuade.",
       },
       {
-       img: "/assets/images/services/creative/videography-photography/customers-doubt-credibility.webp",
+       img: "/assets/images/services/icons/creative/videography-photography/customers-doubt-credibility.webp",
         text: "Customers doubt your <strong>credibility</strong> when visuals lack polish and consistency.",
       },
       {
-        img: "/assets/images/services/creative/videography-photography/brand-consistency-suffers.webp",
+        img: "/assets/images/services/icons/creative/videography-photography/brand-consistency-suffers.webp",
         text: "Brand <strong>consistency</strong> suffers, affecting recognition across all channels.",
       },
 

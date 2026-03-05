@@ -26,19 +26,19 @@ export const websiteDevelopmentData = {
       "Your website is the first stop for customers and their first impression so speed, design, and usability matter. If it’s slow, people bounce before reading; if it looks dated, credibility drops. Confusing UX leaks clicks and tanks conversions, while mobile hiccups cost high-intent traffic. Broken SEO and poor structure bury you in search, inconsistent branding makes you forgettable, and missing trust cues (like reviews or security) raise doubts. A fast, modern, intuitive experience builds confidence and that confidence turns visits into leads and sales.",
     items: [
       {
-       img: "/assets/images/services/digital/website-development/high-bounce-rates-as-visitors-leave.webp",
+       img: "/assets/images/services/icons/digital/website-development/high-bounce-rates-as-visitors-leave.webp",
         text: "<strong>High bounce</strong> rates as visitors leave before exploring your site.",
       },
       {
-       img: "/assets/images/services/digital/website-development/lost-sales-opportunities.webp",
+       img: "/assets/images/services/icons/digital/website-development/lost-sales-opportunities.webp",
         text: "<strong>Lost sales</strong> opportunities from pages that don’t convert effectively.",
       },
       {
-       img: "/assets/images/services/digital/website-development/poor-brand-perception.webp",
+       img: "/assets/images/services/icons/digital/website-development/poor-brand-perception.webp",
         text: "<strong>Poor perception</strong> caused by outdated design or weak UX.",
       },
       {
-       img: "/assets/images/services/digital/website-development/hard-to-maintain-tech-stack.webp",
+       img: "/assets/images/services/icons/digital/website-development/hard-to-maintain-tech-stack.webp",
         text: "<strong>Hard-to-maintain</strong> tech stack and broken tracking hurt performance and insights.",
       },
 

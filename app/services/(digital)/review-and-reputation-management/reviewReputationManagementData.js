@@ -26,19 +26,19 @@ export const reviewReputationManagementData = {
       "Most buyers read reviews before they even visit your site. Strong ratings create instant trust and reduce friction in the funnel. Credible, timely responses to feedback signal reliability and care. High review volume and recency boost local SEO and discoverability. A strong reputation lifts conversion rates while lowering acquisition costs. Positive sentiment increases pricing power and average order value. Consistent review management protects brand equity when mistakes happen. Social proof accelerates word-of-mouth and referrals. Transparent handling of negatives can turn skeptics into advocates. In short, reputation turns consideration into confident purchase decisions.",
     items: [
       {
-       img: "/assets/images/services/digital/review-and-reputation-management/bad-reviews.webp",
+       img: "/assets/images/services/icons/digital/review-and-reputation-management/bad-reviews.webp",
         text: "<strong>Bad reviews</strong> sit unanswered, damaging credibility and first impressions.",
       },
       {
-       img: "/assets/images/services/digital/review-and-reputation-management/prospects-turn-to-competitors.webp",
+       img: "/assets/images/services/icons/digital/review-and-reputation-management/prospects-turn-to-competitors.webp",
         text: "Prospects turn to <strong>competitors</strong> with stronger ratings and responses.",
       },
       {
-       img: "/assets/images/services/digital/review-and-reputation-management/trust-fades-quickly-when-feedback-isn-t-managed.webp",
+       img: "/assets/images/services/icons/digital/review-and-reputation-management/trust-fades-quickly-when-feedback-isn-t-managed.webp",
         text: "<strong>Trust fades</strong> quickly when feedback isn’t managed or acknowledged.",
       },
       {
-       img: "/assets/images/services/digital/review-and-reputation-management/search-visibility-drops.webp",
+       img: "/assets/images/services/icons/digital/review-and-reputation-management/search-visibility-drops.webp",
         text: "Search <strong>visibility drops</strong> and conversions decline as sentiment worsens.",
       },
 
