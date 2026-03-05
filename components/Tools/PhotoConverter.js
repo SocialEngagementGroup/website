@@ -177,8 +177,8 @@ const PhotoConverter = () => {
             {/* Subtle top glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
             
-            <div className="flex flex-col sm:flex-row justify-between items-center bg-transparent mb-8 gap-4 text-center sm:text-left">
-              <h2 className="text-xl md:text-2xl font-bold text-white tracking-tight">Bulk Upload Images</h2>
+            <div className="flex flex-col sm:flex-row justify-between items-center bg-transparent mb-6 md:mb-8 gap-4 text-center sm:text-left">
+              <h2 className="text-lg md:text-2xl font-bold text-white tracking-tight">Bulk Upload Photos</h2>
               {files.length > 0 && (
                 <div className="flex items-center gap-2 md:gap-3">
                   <span className="text-xs md:text-sm bg-white/10 text-white px-2 md:px-3 py-1 rounded-full whitespace-nowrap">{files.length} Photo{files.length > 1 ? 's' : ''}</span>
@@ -209,8 +209,10 @@ const PhotoConverter = () => {
                   </svg>
                 </div>
                 <div>
-                  <p className={`${files.length > 0 ? 'text-sm md:text-base' : 'text-base md:text-lg'} text-white font-medium mb-1 whitespace-nowrap md:whitespace-normal`}>Click to upload or drag & drop</p>
-                  {files.length === 0 && <p className="text-xs md:text-sm text-gray-500">Supports JPG, PNG, WEBP, HEIC, AVIF, GIF in bulk</p>}
+                  <p className={`${files.length > 0 ? 'text-xs md:text-base' : 'text-base md:text-lg'} text-white font-medium mb-1 whitespace-nowrap md:whitespace-normal`}>
+                    Click to upload <span className="hidden md:inline">or drag & drop</span>
+                  </p>
+                  {files.length === 0 && <p className="text-[10px] md:text-sm text-gray-500">Supports JPG, PNG, WEBP, HEIC, AVIF, GIF in bulk</p>}
                 </div>
               </div>
               <input
@@ -258,7 +260,7 @@ const PhotoConverter = () => {
              {/* Subtle top glow */}
              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
             
-            <h3 className="text-xl md:text-2xl font-bold text-white mb-4 tracking-tight text-center lg:text-left">Bulk Settings</h3>
+            <h3 className="text-lg md:text-2xl font-bold text-white mb-4 tracking-tight text-center lg:text-left">Bulk Settings</h3>
             
             {/* Summary */}
             <div className="bg-black/40 rounded-2xl p-5 mb-8 border border-white/5 flex flex-col gap-2">
@@ -276,7 +278,7 @@ const PhotoConverter = () => {
 
             {/* Format Selection */}
             <div className="mb-8">
-              <label className="block text-gray-300 text-lg font-medium mb-4">Export All To Format</label>
+              <label className="block text-gray-300 text-base md:text-lg font-medium mb-4">Export All To Format</label>
               <div className="grid grid-cols-3 gap-3">
                 {formats.map((fmt) => (
                   <button
@@ -300,7 +302,7 @@ const PhotoConverter = () => {
             {/* Quality Slider (Now enabled for all formats) */}
             <div className="mb-8">
               <div className="flex justify-between items-center mb-4">
-                <label className="text-gray-300 text-lg font-medium">
+                <label className="text-gray-300 text-base md:text-lg font-medium">
                    {targetFormat === "png" ? "Image Scale (Size)" : "Image Quality"}
                 </label>
                 <span className="text-[#975554] font-bold">{Math.round(quality * 100)}%</span>

@@ -174,8 +174,8 @@ const VideoConverter = ({ ffmpeg, ffmpegLoaded }) => {
           <div className="bg-[#111113] border border-white/5 rounded-[2.5rem] p-6 md:p-12 shadow-2xl relative overflow-hidden group/card shadow-black/50 min-h-[400px] lg:h-[700px] flex flex-col">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
             
-            <div className="flex flex-col sm:flex-row justify-between items-center bg-transparent mb-8 gap-4 text-center sm:text-left">
-              <h2 className="text-xl md:text-2xl font-bold text-white tracking-tight">Bulk Upload Video</h2>
+            <div className="flex flex-col sm:flex-row justify-between items-center bg-transparent mb-6 md:mb-8 gap-4 text-center sm:text-left">
+              <h2 className="text-lg md:text-2xl font-bold text-white tracking-tight">Bulk Upload Videos</h2>
               {files.length > 0 && (
                 <div className="flex items-center gap-2 md:gap-3">
                   <span className="text-xs md:text-sm bg-white/10 text-white px-2 md:px-3 py-1 rounded-full whitespace-nowrap">{files.length} Video{files.length > 1 ? 's' : ''}</span>
@@ -202,8 +202,10 @@ const VideoConverter = ({ ffmpeg, ffmpegLoaded }) => {
                   </svg>
                 </div>
                 <div>
-                  <p className={`${files.length > 0 ? 'text-sm md:text-base' : 'text-base md:text-lg'} text-white font-medium mb-1`}>Click to upload or drag & drop</p>
-                  {files.length === 0 && <p className="text-xs md:text-sm text-gray-500">
+                  <p className={`${files.length > 0 ? 'text-xs md:text-base' : 'text-base md:text-lg'} text-white font-medium mb-1`}>
+                    Click to upload <span className="hidden md:inline">or drag & drop</span>
+                  </p>
+                  {files.length === 0 && <p className="text-[10px] md:text-sm text-gray-500">
                     Supports MP4, MOV, WEBM, GIF in bulk
                   </p>}
                 </div>
@@ -243,7 +245,7 @@ const VideoConverter = ({ ffmpeg, ffmpegLoaded }) => {
         <div className="lg:col-span-5 flex flex-col gap-6">
           <div className="bg-[#111113] border border-white/5 rounded-[2.5rem] p-6 md:p-12 shadow-2xl lg:sticky lg:top-24 shadow-black/50 min-h-[400px] lg:h-[700px] flex flex-col">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
-            <h3 className="text-xl md:text-2xl font-bold text-white mb-4 tracking-tight">Bulk Settings</h3>
+            <h3 className="text-lg md:text-2xl font-bold text-white mb-4 tracking-tight">Bulk Settings</h3>
             
             <div className="bg-black/40 rounded-2xl p-5 mb-8 border border-white/5 flex flex-col gap-2">
               <div className="flex justify-between items-center text-sm md:text-base">
@@ -257,7 +259,7 @@ const VideoConverter = ({ ffmpeg, ffmpegLoaded }) => {
             </div>
 
             <div className="mb-8">
-              <label className="block text-gray-300 text-lg font-medium mb-4">Export All To Format</label>
+              <label className="block text-gray-300 text-base md:text-lg font-medium mb-4">Export All To Format</label>
               <div className="grid grid-cols-2 gap-3">
                 {formats.map((fmt) => (
                   <button
@@ -280,7 +282,7 @@ const VideoConverter = ({ ffmpeg, ffmpegLoaded }) => {
 
             <div className="mb-8">
               <div className="flex justify-between items-center mb-4">
-                <label className="text-gray-300 text-lg font-medium">Video Quality (Size)</label>
+                <label className="text-gray-300 text-base md:text-lg font-medium">Video Quality (Size)</label>
                 <span className="text-[#975554] font-bold">{Math.round(quality * 100)}%</span>
               </div>
               <input
