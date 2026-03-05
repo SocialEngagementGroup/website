@@ -1,12 +1,40 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { FFmpeg } from "@ffmpeg/ffmpeg";
+import { toBlobURL } from "@ffmpeg/util";
 import PhotoConverter from "./PhotoConverter";
-import VideoAudioConverter from "./VideoAudioConverter";
-import UnitsConverter from "./UnitsConverter";
+import VideoConverter from "./VideoConverter";
+import AudioConverter from "./AudioConverter";
 
 export default function ConverterPlatform() {
   const [activeTool, setActiveTool] = useState("photo");
+  const [ffmpegLoaded, setFfmpegLoaded] = useState(false);
+  const ffmpegRef = useRef(null);
+
+  useEffect(() => {
+    loadFFmpeg();
+  }, []);
+
+  const loadFFmpeg = async () => {
+    if (ffmpegRef.current) return;
+    
+    try {
+        const ffmpeg = new FFmpeg();
+        ffmpegRef.current = ffmpeg;
+        
+        const baseURL = "https://unpkg.com/@ffmpeg/core-mt@0.12.6/dist/umd";
+        
+        await ffmpeg.load({
+          coreURL: await toBlobURL(`${baseURL}/ffmpeg-core.js`, "text/javascript"),
+          wasmURL: await toBlobURL(`${baseURL}/ffmpeg-core.wasm`, "application/wasm"),
+          workerURL: await toBlobURL(`${baseURL}/ffmpeg-core.worker.js`, "text/javascript"),
+        });
+        setFfmpegLoaded(true);
+    } catch (error) {
+        console.error("FFmpeg Load Error:", error);
+    }
+  };
   const tools = [
     {
       id: "photo",
@@ -21,11 +49,22 @@ export default function ConverterPlatform() {
     },
     {
       id: "video",
-      name: "Video & Audio",
-      shortName: "Video & Audio",
+      name: "Video",
+      shortName: "Video",
       icon: (
         <svg className="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+        </svg>
+      ),
+      disabled: false,
+    },
+    {
+      id: "audio",
+      name: "Audio",
+      shortName: "Audio",
+      icon: (
+        <svg className="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
         </svg>
       ),
       disabled: false,
@@ -70,7 +109,18 @@ export default function ConverterPlatform() {
       {/* Active Tool Workspace */}
       <div className="min-h-[500px] w-full mt-12 relative animate-fade-in-up">
         {activeTool === "photo" && <PhotoConverter />}
-        {activeTool === "video" && <VideoAudioConverter />}
+        {activeTool === "video" && (
+            <VideoConverter 
+                ffmpeg={ffmpegRef.current} 
+                ffmpegLoaded={ffmpegLoaded} 
+            />
+        )}
+        {activeTool === "audio" && (
+            <AudioConverter 
+                ffmpeg={ffmpegRef.current} 
+                ffmpegLoaded={ffmpegLoaded} 
+            />
+        )}
       </div>
 
 
