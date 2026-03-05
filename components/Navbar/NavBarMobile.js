@@ -13,6 +13,7 @@ export default function NavBarMobile() {
   const [isSticky, setIsSticky] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mobileActiveCategory, setMobileActiveCategory] = useState(null);
+  const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
 
   // On careers pages (light bg), use dark text when not scrolled and menu closed
   const useDarkText = isCareersPage && !isSticky && !isMobileMenuOpen;
@@ -166,6 +167,50 @@ export default function NavBarMobile() {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+
+            {/* Resources Accordion */}
+            <div className="flex flex-col">
+              <button
+                onClick={() => setMobileResourcesOpen(!mobileResourcesOpen)}
+                className="w-full flex items-center justify-between py-4 border-l-4 border-transparent pl-2"
+              >
+                <span className="text-white font-sans font-bold text-[22px]">Resources</span>
+                <svg
+                  className={`w-6 h-6 text-white transition-transform duration-300 ${
+                    mobileResourcesOpen ? "rotate-180" : ""
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              <div
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  mobileResourcesOpen ? "max-h-[200px] opacity-100 pb-4" : "max-h-0 opacity-0"
+                }`}
+              >
+                <div className="flex flex-col space-y-5 pl-8 pr-4">
+                  <Link
+                    href="/careers"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-[17px] font-sans font-medium text-white/60 hover:text-white transition-colors"
+                  >
+                    Careers
+                  </Link>
+                  <Link
+                    href="/tools/converter"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-[17px] font-sans font-medium text-white/60 hover:text-white transition-colors"
+                  >
+                    Converter
+                  </Link>
+                </div>
               </div>
             </div>
 

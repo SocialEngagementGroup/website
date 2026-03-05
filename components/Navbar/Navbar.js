@@ -13,6 +13,7 @@ export default function Navbar() {
   const isCareersPage = pathname.startsWith("/careers");
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [resourcesOpen, setResourcesOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const [activeCategory, setActiveCategory] = useState("Creative");
 
@@ -263,6 +264,89 @@ export default function Navbar() {
                         ))}
                       </div>
                     </div>
+                  </div>
+                </div>
+              </li>
+
+              {/* Resources */}
+              <li
+                className={"relative group"}
+                onMouseEnter={() => setResourcesOpen(true)}
+                onMouseLeave={() => setResourcesOpen(false)}
+              >
+                <div
+                  className={`py-2 px-3 font-sans font-bold text-[16px] md:text-[20px] transition flex items-center cursor-pointer ${useDarkText ? 'text-gray-900 hover:text-gray-600' : 'text-white hover:text-gray-300'}`}
+                >
+                  Resources
+                  <svg
+                    className={`w-5 h-5 ml-1 mt-1 transition-transform ${resourcesOpen ? "rotate-180" : ""}`}
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="3"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+
+                <div
+                  className={`absolute left-0 top-full transition-all duration-300 ${
+                    isSticky ? "pt-2" : isHomePage ? "pt-4" : "pt-3"
+                  } ${
+                    resourcesOpen
+                      ? "opacity-100 pointer-events-auto translate-y-0"
+                      : "opacity-0 pointer-events-none translate-y-[-10px]"
+                  }`}
+                >
+                  <div className="w-[260px] bg-[#0f0f0f] text-white rounded-2xl shadow-[0_30px_60px_rgba(0,0,0,0.8)] z-50 overflow-hidden py-4">
+                    <Link
+                      href="/careers"
+                      onClick={() => setIsOpen(false)}
+                      className="group/item flex items-center px-8 h-[56px] text-white/60 hover:text-white hover:bg-white/5 border-l-[3px] border-transparent hover:border-white transition-all duration-300"
+                    >
+                      <span className="text-[17px] font-medium">Careers</span>
+                      <div className="ml-auto opacity-0 group-hover/item:opacity-100 transition-all duration-300 translate-x-2 group-hover/item:translate-x-0">
+                        <svg
+                          className="w-4 h-4 text-white"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2.5"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M9 5l7 7-7 7"
+                          />
+                        </svg>
+                      </div>
+                    </Link>
+                    <Link
+                      href="/tools/converter"
+                      onClick={() => setIsOpen(false)}
+                      className="group/item flex items-center px-8 h-[56px] text-white/60 hover:text-white hover:bg-white/5 border-l-[3px] border-transparent hover:border-white transition-all duration-300"
+                    >
+                      <span className="text-[17px] font-medium">Converter</span>
+                      <div className="ml-auto opacity-0 group-hover/item:opacity-100 transition-all duration-300 translate-x-2 group-hover/item:translate-x-0">
+                        <svg
+                          className="w-4 h-4 text-white"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2.5"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M9 5l7 7-7 7"
+                          />
+                        </svg>
+                      </div>
+                    </Link>
                   </div>
                 </div>
               </li>

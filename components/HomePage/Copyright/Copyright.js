@@ -13,6 +13,7 @@ const Copyright = () => {
       { name: "Home", href: "/" },
       { name: "Services", href: "/services" },
       { name: "Careers", href: "/careers" },
+      { name: "Converter", href: "/tools/converter" },
       { name: "Contact Us", href: "/contact-us" },
     ],
     Creative: [
