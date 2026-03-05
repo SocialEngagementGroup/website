@@ -87,25 +87,28 @@ const VideoConverter = ({ ffmpeg, ffmpegLoaded }) => {
     });
     
     try {
-      const crf = Math.round(18 + (1 - quality) * 32);
+      const crf = Math.round(18 + (1 - quality) * 33);
 
       const getFFmpegArgs = (input, output) => {
-          const scaleFactor = Math.sqrt(quality);
+          // Clamp scale factor: min 0.25 (25% of original) to avoid too-tiny output
+          const scaleFactor = Math.max(0.25, quality);
           const scaleFilter = `scale=trunc(iw*${scaleFactor}/2)*2:trunc(ih*${scaleFactor}/2)*2`;
 
           if (targetFormat === "gif") {
               return ["-y", "-i", input, "-vf", `fps=10,scale=320:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse`, "-t", "10", output];
           }
           if (targetFormat === "webm") {
-              // Use simple bitrate-based encoding for speed in WASM
-              const videoBitrate = Math.round(500 + quality * 1500) + "k";
-              const args = ["-y", "-i", input, "-c:v", "libvpx", "-b:v", videoBitrate, "-deadline", "realtime", "-cpu-used", "16", "-threads", "4", "-c:a", "libvorbis", "-b:a", "128k"];
+              // Bitrate range: 150k at lowest, 2000k at highest
+              const videoBitrate = Math.round(150 + quality * 1850) + "k";
+              const audioBitrate = Math.round(48 + quality * 80) + "k";
+              const args = ["-y", "-i", input, "-c:v", "libvpx", "-b:v", videoBitrate, "-deadline", "realtime", "-cpu-used", "16", "-threads", "4", "-c:a", "libvorbis", "-b:a", audioBitrate];
               if (quality < 1) args.push("-vf", scaleFilter);
               args.push("-shortest", output);
               return args;
           }
           // Default MP4/MOV
-          const args = ["-y", "-i", input, "-c:v", "libx264", "-crf", crf.toString(), "-preset", "ultrafast", "-threads", "4", "-c:a", "aac", "-b:a", "128k"];
+          const audioBitrate = Math.round(48 + quality * 80) + "k";
+          const args = ["-y", "-i", input, "-c:v", "libx264", "-crf", crf.toString(), "-preset", "ultrafast", "-threads", "4", "-c:a", "aac", "-b:a", audioBitrate];
           if (quality < 1) args.push("-vf", scaleFilter);
           args.push(output);
           return args;
@@ -240,7 +243,7 @@ const VideoConverter = ({ ffmpeg, ffmpegLoaded }) => {
         <div className="lg:col-span-5 flex flex-col gap-6">
           <div className="bg-[#111113] border border-white/5 rounded-[2.5rem] p-6 md:p-12 shadow-2xl lg:sticky lg:top-24 shadow-black/50 min-h-[400px] lg:h-[700px] flex flex-col">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
-            <h3 className="text-xl md:text-2xl font-bold text-white mb-8 tracking-tight">Bulk Settings</h3>
+            <h3 className="text-xl md:text-2xl font-bold text-white mb-4 tracking-tight">Bulk Settings</h3>
             
             <div className="bg-black/40 rounded-2xl p-5 mb-8 border border-white/5 flex flex-col gap-2">
               <div className="flex justify-between items-center text-sm md:text-base">

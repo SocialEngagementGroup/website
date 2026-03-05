@@ -258,7 +258,7 @@ const PhotoConverter = () => {
              {/* Subtle top glow */}
              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
             
-            <h3 className="text-xl md:text-2xl font-bold text-white mb-6 md:mb-8 tracking-tight text-center lg:text-left">Bulk Settings</h3>
+            <h3 className="text-xl md:text-2xl font-bold text-white mb-4 tracking-tight text-center lg:text-left">Bulk Settings</h3>
             
             {/* Summary */}
             <div className="bg-black/40 rounded-2xl p-5 mb-8 border border-white/5 flex flex-col gap-2">

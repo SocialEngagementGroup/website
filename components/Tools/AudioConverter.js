@@ -222,7 +222,7 @@ const AudioConverter = ({ ffmpeg, ffmpegLoaded }) => {
         <div className="lg:col-span-5 flex flex-col gap-6">
           <div className="bg-[#111113] border border-white/5 rounded-[2.5rem] p-6 md:p-12 shadow-2xl lg:sticky lg:top-24 shadow-black/50 min-h-[400px] lg:h-[700px] flex flex-col">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
-            <h3 className="text-xl md:text-2xl font-bold text-white mb-8 tracking-tight">Bulk Settings</h3>
+            <h3 className="text-xl md:text-2xl font-bold text-white mb-4 tracking-tight">Bulk Settings</h3>
             
             <div className="bg-black/40 rounded-2xl p-5 mb-8 border border-white/5 flex flex-col gap-2">
               <div className="flex justify-between items-center text-sm md:text-base">
