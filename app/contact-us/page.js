@@ -1,16 +1,18 @@
 import React from 'react'
 
+import siteMetadata from "@/data/metadata";
+
 export const metadata = {
-  title: "Contact Us",
-  description: "Ready to grow your business? Contact SEG today for a quote on our creative and AI-powered digital services. Let's start your story together.",
+  title: siteMetadata.contact.title,
+  description: siteMetadata.contact.description,
   openGraph: {
-    title: "Contact Us | SEG - Social Engagement Group",
-    description: "Get in touch with SEG for creative and AI-powered digital services that drive results.",
+    title: siteMetadata.contact.title,
+    description: siteMetadata.contact.description,
     url: "/contact-us",
   },
   twitter: {
-    title: "Contact Us | SEG - Social Engagement Group",
-    description: "Get in touch with SEG for creative and AI-powered digital services that drive results.",
+    title: siteMetadata.contact.title,
+    description: siteMetadata.contact.description,
   },
 };
 import ContactPage from "@/components/ContactPage/HeroSection/page";

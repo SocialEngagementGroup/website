@@ -9,18 +9,19 @@ import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
+import siteMetadata from "@/data/metadata";
+
 export const metadata = {
-  title: "Digital Marketing for Jewelers | Shine Online & Attract Buyers",
-  description:
-    "Grow your jewelry brand's visibility and customer trust with tailored digital marketing. Get found first, attract quality buyers and build a brand people return to.",
+  title: siteMetadata.jewelers.title,
+  description: siteMetadata.jewelers.description,
   openGraph: {
-    title: "Digital Marketing for Jewelers | SEG - Social Engagement Group",
-    description: "Grow your jewelry brand's visibility and customer trust with SEG's tailored jewelry marketing.",
+    title: siteMetadata.jewelers.title,
+    description: siteMetadata.jewelers.description,
     url: "/services/solution-for-jewelers",
   },
   twitter: {
-    title: "Digital Marketing for Jewelers | SEG - Social Engagement Group",
-    description: "Grow your jewelry brand's visibility and customer trust with SEG's tailored jewelry marketing.",
+    title: siteMetadata.jewelers.title,
+    description: siteMetadata.jewelers.description,
   },
 };
 

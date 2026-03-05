@@ -9,18 +9,19 @@ import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 
 import { retargetingRemarketingData } from "./retargetingRemarketingData";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
+import siteMetadata from "@/data/metadata";
+
 export const metadata = {
-  title: "Retargeting & Remarketing Services",
-  description:
-    "Re-engage lost visitors with smart retargeting ads. Personalized campaigns across Google and Meta that boost conversions and maximize marketing ROI.",
+  title: siteMetadata.retargeting.title,
+  description: siteMetadata.retargeting.description,
   openGraph: {
-    title: "Retargeting & Remarketing Services | SEG - Social Engagement Group",
-    description: "Re-engage lost visitors and win back customers with SEG's smart retargeting ads.",
+    title: siteMetadata.retargeting.title,
+    description: siteMetadata.retargeting.description,
     url: "/services/retargeting-and-remarketing",
   },
   twitter: {
-    title: "Retargeting & Remarketing Services | SEG - Social Engagement Group",
-    description: "Re-engage lost visitors and win back customers with SEG's smart retargeting ads.",
+    title: siteMetadata.retargeting.title,
+    description: siteMetadata.retargeting.description,
   },
 };
 

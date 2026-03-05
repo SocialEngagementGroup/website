@@ -71,7 +71,7 @@ const SectionItem = ({ section, index, setActiveVideo }) => {
           muted
           loop
           playsInline
-          preload="none"
+          preload="auto"
         >
           <source src={section.video} type="video/webm" />
         </video>
@@ -117,7 +117,7 @@ const ScrollStickySections = () => {
                   muted
                   loop
                   playsInline
-                  preload="none"
+                  preload="auto"
                 >
                   <source src={activeVideo} type="video/webm" />
                 </video>

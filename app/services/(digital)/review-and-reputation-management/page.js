@@ -11,18 +11,19 @@ import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 import { reviewReputationManagementData } from "./reviewReputationManagementData";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
+import siteMetadata from "@/data/metadata";
+
 export const metadata = {
-  title: "Review & Reputation Management",
-  description:
-    "Protect and grow your online reputation. We monitor reviews, manage responses, and generate positive feedback to boost trust and conversions.",
+  title: siteMetadata.reputationManagement.title,
+  description: siteMetadata.reputationManagement.description,
   openGraph: {
-    title: "Review & Reputation Management | SEG - Social Engagement Group",
-    description: "Protect and grow your online reputation with SEG's expert review management.",
+    title: siteMetadata.reputationManagement.title,
+    description: siteMetadata.reputationManagement.description,
     url: "/services/review-and-reputation-management",
   },
   twitter: {
-    title: "Review & Reputation Management | SEG - Social Engagement Group",
-    description: "Protect and grow your online reputation with SEG's expert review management.",
+    title: siteMetadata.reputationManagement.title,
+    description: siteMetadata.reputationManagement.description,
   },
 };
 

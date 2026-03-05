@@ -9,17 +9,19 @@ import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
+import siteMetadata from "@/data/metadata";
+
 export const metadata = {
-  title: "Content Creation",
-  description: "Create content that converts. From videos and graphics to influencer and AI-generated assets—build engagement, trust, and growth for your brand.",
+  title: siteMetadata.contentCreation.title,
+  description: siteMetadata.contentCreation.description,
   openGraph: {
-    title: "Content Creation | SEG - Social Engagement Group",
-    description: "Create content that converts with SEG's expert graphic, video, and AI solutions.",
+    title: siteMetadata.contentCreation.title,
+    description: siteMetadata.contentCreation.description,
     url: "/services/content-creation",
   },
   twitter: {
-    title: "Content Creation | SEG - Social Engagement Group",
-    description: "Create content that converts with SEG's expert graphic, video, and AI solutions.",
+    title: siteMetadata.contentCreation.title,
+    description: siteMetadata.contentCreation.description,
   },
 };
 

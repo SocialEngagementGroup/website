@@ -1,6 +1,18 @@
 import React from 'react'
+import siteMetadata from "@/data/metadata";
+
 export const metadata = {
-  title: "Legal Notice",
+  title: siteMetadata.legal.title,
+  description: siteMetadata.legal.description,
+  openGraph: {
+    title: siteMetadata.legal.title,
+    description: siteMetadata.legal.description,
+    url: "/legal-notice",
+  },
+  twitter: {
+    title: siteMetadata.legal.title,
+    description: siteMetadata.legal.description,
+  },
 };
 
 import HeroSection from '@/components/LegalPage/HeroSection/HeroSection'

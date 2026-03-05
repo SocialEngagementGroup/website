@@ -11,17 +11,19 @@ import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 
 
+import siteMetadata from "@/data/metadata";
+
 export const metadata = {
-  title: "Videography & Photography",
-  description: "Capture your brand’s story with stunning visuals. We offer professional videography and photography that build trust, boost engagement, and drive growth.",
+  title: siteMetadata.videographyPhotography.title,
+  description: siteMetadata.videographyPhotography.description,
   openGraph: {
-    title: "Videography & Photography | SEG - Social Engagement Group",
-    description: "Capture your brand’s story with stunning visuals through SEG's professional videography and photography.",
+    title: siteMetadata.videographyPhotography.title,
+    description: siteMetadata.videographyPhotography.description,
     url: "/services/videography-and-photography",
   },
   twitter: {
-    title: "Videography & Photography | SEG - Social Engagement Group",
-    description: "Capture your brand’s story with stunning visuals through SEG's professional videography and photography.",
+    title: siteMetadata.videographyPhotography.title,
+    description: siteMetadata.videographyPhotography.description,
   },
 };
 

@@ -9,12 +9,11 @@ import ClientEnhancements from "@/components/Common/ClientEnhancements";
 // (optional) if you also want Vercel Analytics:
 // import { Analytics } from "@vercel/analytics/react";
 
+import siteMetadata from "@/data/metadata";
+
 export const metadata = {
   metadataBase: new URL("https://socialengagementgroup.com"),
-  title: {
-    default: "Human Creativity & AI-Powered Digital Growth | SEG - Social Engagement Group",
-    template: "%s | SEG - Social Engagement Group",
-  },
+  title: siteMetadata.home.title,
   description:
     "Social Engagement Group (SEG) blends human creativity with AI-powered automation to tell your story and drive business growth across every digital touchpoint.",
   alternates: {

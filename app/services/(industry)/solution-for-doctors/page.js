@@ -9,18 +9,19 @@ import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
+import siteMetadata from "@/data/metadata";
+
 export const metadata = {
-  title: "Digital Marketing for Doctors",
-  description:
-    "Grow your clinic’s visibility and patient trust with tailored healthcare marketing. Get found first, attract quality patients, and scale your practice ethically.",
+  title: siteMetadata.doctors.title,
+  description: siteMetadata.doctors.description,
   openGraph: {
-    title: "Digital Marketing for Doctors | SEG - Social Engagement Group",
-    description: "Grow your clinic’s visibility and patient trust with SEG's tailored healthcare marketing.",
+    title: siteMetadata.doctors.title,
+    description: siteMetadata.doctors.description,
     url: "/services/solution-for-doctors",
   },
   twitter: {
-    title: "Digital Marketing for Doctors | SEG - Social Engagement Group",
-    description: "Grow your clinic’s visibility and patient trust with SEG's tailored healthcare marketing.",
+    title: siteMetadata.doctors.title,
+    description: siteMetadata.doctors.description,
   },
 };
 

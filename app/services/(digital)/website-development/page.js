@@ -11,18 +11,19 @@ import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
+import siteMetadata from "@/data/metadata";
+
 export const metadata = {
-  title: "Website Development Services",
-  description:
-    "Get a fast, SEO-optimized website that drives sales. We design and develop custom sites on WordPress, Shopify, and Next.js to grow your business online.",
+  title: siteMetadata.websiteDevelopment.title,
+  description: siteMetadata.websiteDevelopment.description,
   openGraph: {
-    title: "Website Development Services | SEG - Social Engagement Group",
-    description: "Get a fast, SEO-optimized website that drives sales with SEG's custom development.",
+    title: siteMetadata.websiteDevelopment.title,
+    description: siteMetadata.websiteDevelopment.description,
     url: "/services/website-development",
   },
   twitter: {
-    title: "Website Development Services | SEG - Social Engagement Group",
-    description: "Get a fast, SEO-optimized website that drives sales with SEG's custom development.",
+    title: siteMetadata.websiteDevelopment.title,
+    description: siteMetadata.websiteDevelopment.description,
   },
 };
 

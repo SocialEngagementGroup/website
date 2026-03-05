@@ -9,18 +9,19 @@ import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
+import siteMetadata from "@/data/metadata";
+
 export const metadata = {
-  title: "Google Location Services Ads",
-  description:
-    "Drive more foot traffic and local leads with Google Location Services Ads. Target customers exactly when they are searching for services near them.",
+  title: siteMetadata.googleLocalAds.title,
+  description: siteMetadata.googleLocalAds.description,
   openGraph: {
-    title: "Google Location Services Ads | SEG - Social Engagement Group",
-    description: "Drive more foot traffic and local leads with SEG's expert Google Location Services Ads.",
+    title: siteMetadata.googleLocalAds.title,
+    description: siteMetadata.googleLocalAds.description,
     url: "/services/google-location-services-ads",
   },
   twitter: {
-    title: "Google Location Services Ads | SEG - Social Engagement Group",
-    description: "Drive more foot traffic and local leads with SEG's expert Google Location Services Ads.",
+    title: siteMetadata.googleLocalAds.title,
+    description: siteMetadata.googleLocalAds.description,
   },
 };
 

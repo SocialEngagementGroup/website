@@ -11,18 +11,19 @@ import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 import { ppcCampaignsData } from "./ppcCampaignsData";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
+import siteMetadata from "@/data/metadata";
+
 export const metadata = {
-  title: "PPC Campaign Management",
-  description:
-    "Drive instant traffic and sales with expert PPC management. Data-driven ads on Google, Bing, and Meta designed to maximize ROI and reduce wasted spend.",
+  title: siteMetadata.ppc.title,
+  description: siteMetadata.ppc.description,
   openGraph: {
-    title: "PPC Campaign Management | SEG - Social Engagement Group",
-    description: "Maximize ROI and conversions with SEG's expert PPC campaign management.",
+    title: siteMetadata.ppc.title,
+    description: siteMetadata.ppc.description,
     url: "/services/ppc-campaigns",
   },
   twitter: {
-    title: "PPC Campaign Management | SEG - Social Engagement Group",
-    description: "Maximize ROI and conversions with SEG's expert PPC campaign management.",
+    title: siteMetadata.ppc.title,
+    description: siteMetadata.ppc.description,
   },
 };
 export default function Page() {
