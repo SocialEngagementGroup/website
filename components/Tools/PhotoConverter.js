@@ -38,24 +38,41 @@ const PhotoConverter = () => {
     }
   };
 
-  const handleFiles = (selectedFiles) => {
-    const validImages = selectedFiles.filter(file => {
-      return file.type.startsWith("image/") || file.name.toLowerCase().endsWith(".heic");
-    });
+  const handleFiles = async (selectedFiles) => {
+    // All files are accepted
+    const validImages = selectedFiles;
     
     if (validImages.length === 0) {
-      alert("Please upload valid image files (JPG, PNG, WEBP, HEIC, GIF).");
+      alert("Please upload valid files.");
       return;
     }
     
-    // Create preview URLs for the accepted images
-    const newFiles = validImages.map(file => ({
-      originalFile: file,
-      preview: URL.createObjectURL(file),
-      id: Math.random().toString(36).substring(7)
+    const processedFiles = await Promise.all(validImages.map(async (file) => {
+      let previewFile = file;
+      if (file.name.toLowerCase().endsWith(".heic")) {
+        try {
+          // Dynamically import heic2any only when needed
+          const heic2any = (await import("heic2any")).default;
+          const convertedBlob = await heic2any({
+            blob: file,
+            toType: "image/jpeg",
+            quality: 0.8
+          });
+          const blob = Array.isArray(convertedBlob) ? convertedBlob[0] : convertedBlob;
+          previewFile = new File([blob], file.name.replace(/\.heic$/i, ".jpeg"), { type: "image/jpeg" });
+        } catch (error) {
+          console.error("HEIC conversion failed", error);
+        }
+      }
+      
+      return {
+        originalFile: file,
+        preview: URL.createObjectURL(previewFile),
+        id: Math.random().toString(36).substring(7)
+      };
     }));
     
-    setFiles(prev => [...prev, ...newFiles]);
+    setFiles(prev => [...prev, ...processedFiles]);
     setConvertedOutput(null); // Reset output when new files are added
   };
 
@@ -212,7 +229,7 @@ const PhotoConverter = () => {
                   <p className={`${files.length > 0 ? 'text-xs md:text-base' : 'text-base md:text-lg'} text-white font-medium mb-1 whitespace-nowrap md:whitespace-normal`}>
                     Click to upload <span className="hidden md:inline">or drag & drop</span>
                   </p>
-                  {files.length === 0 && <p className="text-[10px] md:text-sm text-gray-500">Supports JPG, PNG, WEBP, HEIC, AVIF, GIF in bulk</p>}
+                  {files.length === 0 && <p className="text-[10px] md:text-sm text-gray-500">Supports all file types in bulk</p>}
                 </div>
               </div>
               <input
@@ -221,7 +238,7 @@ const PhotoConverter = () => {
                 className="hidden"
                 ref={fileInputRef}
                 onChange={handleFileSelect}
-                accept="image/*,.heic"
+                // Removed accept attribute to allow all file types
               />
             </div>
 
