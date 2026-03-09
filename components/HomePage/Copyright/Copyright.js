@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaLinkedinIn, FaFacebookF } from "react-icons/fa6";
 import { RiInstagramFill } from "react-icons/ri";
+import Newsletter from "@/components/Footer/Newsletter";
 
 const Copyright = () => {
   const currentYear = new Date().getFullYear();
@@ -11,6 +12,7 @@ const Copyright = () => {
     Company: [
       { name: "Home", href: "/" },
       { name: "Services", href: "/services" },
+      { name: "Media Converter", href: "/media-converter" },
       { name: "Careers", href: "/careers" },
       { name: "Contact Us", href: "/contact-us" },
     ],
@@ -43,6 +45,7 @@ const Copyright = () => {
       { name: "Solution for Doctors", href: "/services/solution-for-doctors" },
       { name: "Solution for Restaurants", href: "/services/solution-for-restaurants" },
       { name: "Solution for Tech Startups", href: "/services/solution-for-techstartups" },
+      { name: "Solution for Jewelers", href: "/services/solution-for-jewelers" },
     ],
     Marketing: [
       { name: "Marketing by SEG", href: "https://digital.socialengagementgroup.com/" },
@@ -50,15 +53,22 @@ const Copyright = () => {
       { name: "Marketing for Doctors", href: "https://digital.socialengagementgroup.com/marketing-for-doctors" },
       { name: "Marketing for Restaurants", href: "https://digital.socialengagementgroup.com/marketing-for-restaurants" },
     ],
+    Technology: [
+      { name: "AI Automation", href: "/services/ai-automation-for-business-growth" },
+      { name: "Cloud Modernization", href: "/services/cloud-modernization" },
+      { name: "IT Consultation", href: "/services/it-consultation" },
+      { name: "SaaS Implementation", href: "/services/saas-implementation" },
+      { name: "Web Application", href: "/services/web-application" },
+    ],
   };
 
   return (
     <div className="text-white pt-20 pb-10 font-sans">
       <div className="container-fluid w-[90%] mx-auto">
-        {/* Top Row: Logo and Socials */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8 pb-12 border-b border-white/10 mb-12">
+        {/* Top Row: Logo, Newsletter and Socials */}
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-12 lg:gap-8 pb-12 border-b border-white/10 mb-12">
           {/* Brand Block */}
-          <Link href="/" className="flex items-center gap-3 cursor-pointer">
+          <Link href="/" className="flex items-center gap-3 cursor-pointer shrink-0">
             <Image
               src="/assets/images/site-logo/logo.svg"
               alt="Social Engagement Group"
@@ -71,37 +81,51 @@ const Copyright = () => {
             </span>
           </Link>
 
-          {/* Social Icons */}
-          <div className="flex gap-4">
-            <Link
-              href="https://www.instagram.com/socialengagementgroup"
-              target="_blank"
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-brand-brick border-brand-brick text-white hover:scale-110 transition-all duration-300"
-              style={{ backgroundColor: "#975554" }}
-            >
-              <RiInstagramFill size={18} />
-            </Link>
-            <Link
-              href="https://www.linkedin.com/company/social-engagement-group"
-              target="_blank"
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-brand-brick border-brand-brick text-white hover:scale-110 transition-all duration-300"
-              style={{ backgroundColor: "#975554" }}
-            >
-              <FaLinkedinIn size={18} />
-            </Link>
-            <Link
-              href="https://www.facebook.com/seg.socialengagementgroup/"
-              target="_blank"
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-brand-brick border-brand-brick text-white hover:scale-110 transition-all duration-300"
-              style={{ backgroundColor: "#975554" }}
-            >
-              <FaFacebookF size={18} />
-            </Link>
+          {/* Newsletter and Socials Wrapper */}
+          <div className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-8 w-full md:w-auto">
+            {/* Newsletter Box */}
+            <div className="w-full md:w-[450px] lg:w-[500px] shrink-0">
+              <Newsletter />
+            </div>
+
+            {/* Social Icons */}
+            <div className="flex gap-4 shrink-0">
+              <Link
+                href="https://www.instagram.com/socialengagementgroup"
+                target="_blank"
+                aria-label="Follow us on Instagram"
+                rel="noopener noreferrer"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-brand-brick border-brand-brick text-white hover:scale-110 transition-all duration-300"
+                style={{ backgroundColor: "#975554" }}
+              >
+                <RiInstagramFill size={18} />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/company/social-engagement-group"
+                target="_blank"
+                aria-label="Follow us on LinkedIn"
+                rel="noopener noreferrer"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-brand-brick border-brand-brick text-white hover:scale-110 transition-all duration-300"
+                style={{ backgroundColor: "#975554" }}
+              >
+                <FaLinkedinIn size={18} />
+              </Link>
+              <Link
+                href="https://www.facebook.com/seg.socialengagementgroup/"
+                target="_blank"
+                aria-label="Follow us on Facebook"
+                rel="noopener noreferrer"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-brand-brick border-brand-brick text-white hover:scale-110 transition-all duration-300"
+                style={{ backgroundColor: "#975554" }}
+              >
+                <FaFacebookF size={18} />
+              </Link>
+            </div>
           </div>
         </div>
 
         {/* Second Row: Main Sitemap Grid (5 Columns) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-16 border-b border-white/10 px-4 md:px-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-12 pb-16 border-b border-white/10 px-4 md:px-0">
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category} className="space-y-4 text-center md:text-left">
               <h4 className="!text-[16px] md:!text-[14px] font-bold text-white tracking-wide uppercase">
@@ -125,12 +149,12 @@ const Copyright = () => {
 
         {/* Bottom Bar */}
         <div className="pt-10 flex flex-col md:flex-row items-center justify-between gap-10 md:gap-6 px-4 md:px-0 w-full">
-          <div className="text-gray-500 text-[14px] md:text-[13px] order-2 md:order-1 flex-1 text-center md:text-left">
+          <div className="text-gray-400 text-[14px] md:text-[13px] order-2 md:order-1 flex-1 text-center md:text-left">
             All rights reserved © 2026
           </div>
 
           {/* Legal Links (Bottom Middle) */}
-          <div className="flex flex-col md:flex-wrap md:flex-row items-center justify-center gap-3 md:gap-6 text-gray-500 text-[14px] md:text-[14px] order-1 md:order-2 tracking-widest uppercase md:normal-case shrink-0">
+          <div className="flex flex-col md:flex-wrap md:flex-row items-center justify-center gap-3 md:gap-6 text-gray-400 text-[14px] md:text-[14px] order-1 md:order-2 tracking-widest md:normal-case shrink-0">
             <Link
               href="/terms-and-conditions"
               className="hover:text-white transition-colors"
