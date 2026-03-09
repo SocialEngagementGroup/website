@@ -129,7 +129,7 @@ export default function NavBarMobile() {
                         mobileActiveCategory === item.title ? "bg-white/5 border-l-[3px] border-white" : "border-l-[3px] border-transparent"
                       }`}
                     >
-                      <span className={`text-[16px] font-sans uppercase tracking-[0.1em] font-bold ${
+                      <span className={`text-[16px] font-sans capitalize tracking-[0.1em] font-bold ${
                         mobileActiveCategory === item.title ? "text-white" : "text-white/60"
                       }`}>
                         {item.title}
@@ -195,18 +195,18 @@ export default function NavBarMobile() {
                   mobileResourcesOpen ? "max-h-[200px] opacity-100 pb-4" : "max-h-0 opacity-0"
                 }`}
               >
-                <div className="flex flex-col space-y-5 pl-8 pr-4">
+                <div className="flex flex-col space-y-1 mt-2">
                   <Link
-                    href="/tools/converter"
+                    href="/media-converter"
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-[17px] font-sans font-medium text-white/60 hover:text-white transition-colors"
+                    className="w-full flex items-center px-4 py-4 rounded-xl transition-all border-l-[3px] border-transparent hover:bg-white/5 text-[16px] font-sans tracking-[0.1em] font-bold text-white/60 hover:text-white"
                   >
-                    Converter
+                    Media Converter
                   </Link>
                   <Link
                     href="/careers"
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-[17px] font-sans font-medium text-white/60 hover:text-white transition-colors"
+                    className="w-full flex items-center px-4 py-4 rounded-xl transition-all border-l-[3px] border-transparent hover:bg-white/5 text-[16px] font-sans tracking-[0.1em] font-bold text-white/60 hover:text-white"
                   >
                     Careers
                   </Link>

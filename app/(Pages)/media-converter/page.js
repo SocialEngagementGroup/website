@@ -6,7 +6,7 @@ export const metadata = {
   openGraph: {
     title: siteMetadata.converter.title,
     description: siteMetadata.converter.description,
-    url: "/tools/converter",
+    url: "/media-converter",
   },
   twitter: {
     title: siteMetadata.converter.title,
@@ -15,7 +15,7 @@ export const metadata = {
 };
 
 import React from "react";
-import ConverterPlatform from "../../../../components/Tools/ConverterPlatform";
+import ConverterPlatform from "@/components/Tools/ConverterPlatform";
 
 export default function ConverterPage() {
   return (
