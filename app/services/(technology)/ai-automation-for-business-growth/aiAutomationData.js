@@ -20,19 +20,20 @@ export const aiAutomationData = {
         description: "The competitive gap between companies that leverage AI and those that don't is widening rapidly. Manual processes that once felt manageable now create scaling limitations, while AI-powered competitors operate faster, more accurately, and at lower costs. AI automation transforms how work gets done handling repetitive tasks instantly, analyzing data patterns humans would miss, and operating 24/7 without breaks or errors. With intelligent automation, your business doesn't just work harder, it works exponentially smarter. Early adopters gain compounding advantages in efficiency, customer experience, and market responsiveness that become difficult for competitors to match.",
         items: [
             {
-                img: "/assets/images/services/technology/ai-automation-for-business-growth/human-error-creates-costly-mistakes.webp",
+
+                img: "/assets/images/services/icons/technology/ai-automation-for-business-growth/human-error-creates-costly-mistakes.webp",
                 text: "Human error creates <strong>costly mistakes</strong> and inconsistent quality.",
             },
             {
-                img: "/assets/images/services/technology/ai-automation-for-business-growth/repetitive-tasks-consume-hours.webp",
+                img: "/assets/images/services/icons/technology/ai-automation-for-business-growth/repetitive-tasks-consume-hours.webp",
                 text: "Repetitive tasks <strong>consume hours</strong> that could drive strategic growth.",
             },
             {
-                img: "/assets/images/services/technology/ai-automation-for-business-growth/scaling-requires-linear-increases-in-headcount-and-overhead.webp",
+                img: "/assets/images/services/icons/technology/ai-automation-for-business-growth/scaling-requires-linear-increases-in-headcount-and-overhead.webp",
                 text: "Scaling requires <strong>linear increases</strong> in headcount and overhead.",
             },
             {
-                img: "/assets/images/services/technology/ai-automation-for-business-growth/slow-response-times-frustrate-customers.webp",
+                img: "/assets/images/services/icons/technology/ai-automation-for-business-growth/slow-response-times-frustrate-customers.webp",
                 text: "Slow response times <strong>frustrate customers</strong> and lose deals.",
             },
         ],

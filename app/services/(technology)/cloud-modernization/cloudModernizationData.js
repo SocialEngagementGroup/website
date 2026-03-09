@@ -20,6 +20,7 @@ export const cloudModernizationData = {
         description: "Legacy infrastructure creates invisible ceilings on what's possible. While competitors deploy features weekly, legacy systems require months of planning. While modern companies scale instantly during demand spikes, traditional infrastructure buckles or over-provisions. Cloud modernization eliminates these constraints, reducing operational costs, improving performance, and enabling rapid innovation. Modern cloud architecture provides elasticity that matches business needs, resilience that prevents costly downtime, and flexibility that supports experimentation without risk. The gap between cloud-native companies and those stuck on legacy systems widens daily, and strategic modernization ensures you're not left behind.",
         items: [
             {
+
                 img: "/assets/images/services/technology/cloud-modernization/forced-workarounds-slow-operations-and-frustrate-teams.webp",
                 text: "High maintenance costs <strong>drain budgets</strong> without delivering innovation.",
             },

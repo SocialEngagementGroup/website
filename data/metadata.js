@@ -1,4 +1,4 @@
-export const siteMetadata = {
+const siteMetadata = {
     home: {
         title: "AI-Powered Digital Marketing Agency | Social Engagement Group - SEG",
         description: "Social Engagement Group blends human creativity with AI-powered execution to grow your brand across every digital touchpoint. Ads, SEO, content, branding, all under one roof."
@@ -111,10 +111,6 @@ export const siteMetadata = {
         title: "Digital Marketing for Jewelers & Jewelry Brands | Social Engagement Group - SEG",
         description: "Showcase your craft to the right buyers. Social Engagement Group helps jewelers build stunning brand identities, run targeted ad campaigns, and grow sales through strategic digital marketing."
     },
-    converter: {
-        title: "Free Media Converter Tool | Social Engagement Group - SEG",
-        description: "Convert images, videos, and audio files instantly with Social Engagement Group's free online media conversion platform. Fast, simple, and built for creators and marketers."
-    },
     aiAutomation: {
         title: "AI Automation for Business Growth | Scale Smarter & Faster",
         description: "Transform operations with AI automation. Boost efficiency, reduce costs, and unlock growth with intelligent systems that work 24/7 for your business."
@@ -134,6 +130,10 @@ export const siteMetadata = {
     webApplication: {
         title: "Web Application Development | Build Scalable Digital Solutions",
         description: "Transform your business with custom web applications. Build powerful, scalable solutions that streamline operations and drive growth."
+    },
+    converter: {
+        title: "Free Media Converter Tool | Social Engagement Group - SEG",
+        description: "Convert images, videos, and audio files instantly with Social Engagement Group's free online media conversion platform. Fast, simple, and built for creators and marketers."
     }
 };
 

@@ -20,19 +20,21 @@ export const itConsultationData = {
         description: "Technology decisions made today shape your business trajectory for years yet many companies operate on reactive IT, fixing problems instead of preventing them. Strategic IT consulting ensures your infrastructure supports growth, not limits it. The right systems improve operational efficiency, reduce downtime, and protect against evolving threats. With expert guidance, your technology becomes a competitive advantage: scalable, secure, and aligned with business goals. Strategic IT consulting transforms how your business operates, competes, and grows.",
         items: [
             {
-                img: "/assets/images/services/technology/it-consultation/frequent-downtime-disrupts-operations.webp",
+
+                img: "/assets/images/services/icons/technology/it-consultation/frequent-downtime-disrupts-operations.webp",
                 text: "Frequent downtime <strong>disrupts operations</strong> and frustrates teams.",
             },
             {
-                img: "/assets/images/services/technology/it-consultation/security-vulnerabilities-expose-your-business.webp",
+                img: "/assets/images/services/icons/technology/it-consultation/outdated-systems-slow-productivity.webp",
                 text: "Security vulnerabilities <strong>expose your business</strong> to costly breaches.",
             },
             {
-                img: "/assets/images/services/technology/it-consultation/outdated-systems-slow-productivity.webp",
+                img: "/assets/images/services/icons/technology/it-consultation/security-vulnerabilities-expose-your-business.webp",
                 text: "Outdated systems <strong>slow productivity</strong> and limit scalability.",
             },
             {
-                img: "/assets/images/services/technology/it-consultation/technology-investments-fail.webp",
+                img: "/assets/images/services/icons/technology/it-consultation/technology-investments-fail.webp",
+
                 text: "Technology investments <strong>fail to deliver</strong> measurable ROI.",
             },
         ],

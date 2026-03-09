@@ -20,19 +20,21 @@ export const saasImplementationData = {
         description: "Most SaaS failures aren't software problems, they're implementation problems. Companies rush deployment without proper planning, skip critical integration steps, or neglect change management, leaving teams confused and systems underutilized. Expert SaaS implementation ensures software aligns with workflows, connects seamlessly with existing tools, and gets adopted organization-wide. The difference between wasted licenses and transformative ROI comes down to strategic deployment: proper configuration, data migration done right, team training that sticks, and ongoing optimization. With the right implementation partner, your SaaS stack becomes a competitive advantage instead of a compliance checkbox.",
         items: [
             {
-                img: "/assets/images/services/technology/saas-implementation/teams-abandon-new-software-reverting-to-old-inefficient-processes.webp",
+
+                img: "/assets/images/services/icons/technology/saas-implementation/teams-abandon-new-software,-reverting-to-old-inefficient-processes.webp",
                 text: "Teams <strong>abandon new software</strong>, reverting to old inefficient processes.",
             },
             {
-                img: "/assets/images/services/technology/saas-implementation/data-silos-persist-when-systems-don_t-integrate-properly.webp",
+                img: "/assets/images/services/icons/technology/saas-implementation/data-silos-persist-when-systems-don_t-integrate-properly.webp",
                 text: "Data silos persist when systems <strong>don't integrate</strong> properly.",
             },
             {
-                img: "/assets/images/services/technology/saas-implementation/implementation-delays-disrupt-operations-and-drain-budgets.webp",
+                img: "/assets/images/services/icons/technology/saas-implementation/implementation-delays-disrupt-operations-and-drain-budgets.webp",
                 text: "Implementation delays <strong>disrupt operations</strong> and drain budgets.",
             },
             {
-                img: "/assets/images/services/technology/saas-implementation/features-go-unused-because-no-one-knows-they-exist.webp",
+                img: "/assets/images/services/icons/technology/saas-implementation/features-go-unused-because-no-one-knows-they-exist.webp",
+
                 text: "Features <strong>go unused</strong> because no one knows they exist.",
             },
         ],

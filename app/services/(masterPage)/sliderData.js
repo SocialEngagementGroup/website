@@ -34,7 +34,8 @@ export const Marketing = [
 ];
 
 export const Technology = [
-  { title: "AI Automation", bg: "/assets/images/services/master-service-page/technology/ai-automation-for-business-growth.webp", link: "/services/ai-automation-for-business-growth" },
+  { title: "AI Automation for Business Growth", bg: "/assets/images/services/master-service-page/technology/ai-automation-for-business-growth.webp", link: "/services/ai-automation-for-business-growth" },
+
   { title: "Cloud Modernization", bg: "/assets/images/services/master-service-page/technology/cloud-modernization.webp", link: "/services/cloud-modernization" },
   { title: "IT Consultation", bg: "/assets/images/services/master-service-page/technology/it-consultation.webp", link: "/services/it-consultation" },
   { title: "SaaS Implementation", bg: "/assets/images/services/master-service-page/technology/saas-implementation.webp", link: "/services/saas-implementation" },
