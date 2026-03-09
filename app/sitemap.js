@@ -42,6 +42,12 @@ export default function sitemap() {
     "/services/solution-for-lawyers",
     "/services/solution-for-restaurants",
     "/services/solution-for-techstartups",
+    // Technology
+    "/services/ai-automation-for-business-growth",
+    "/services/cloud-modernization",
+    "/services/it-consultation",
+    "/services/saas-implementation",
+    "/services/web-application",
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),

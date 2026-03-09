@@ -1,7 +1,7 @@
 import React from "react";
 import HeroSection from "@/components/MasterServicesPage/HeroSection/HeroSection";
 import AutoSlider from "@/components/MasterServicesPage/AutoSlider/AutoSlider";
-import { CreativeData, Digital, Industry, Marketing } from "./sliderData";
+import { CreativeData, Digital, Industry, Marketing, Technology } from "./sliderData";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 export const metadata = {
   title: "Services",
@@ -39,6 +39,14 @@ const MasterServicesPage = () => {
               <h3 className="text-white !text-[28px] md:!text-[36px] lg:!text-[44px] font-serif capitalize leading-tight">Next-Gen Digital Marketing</h3>
             </div>
             <AutoSlider slides={Digital} />
+          </section>
+
+          <section className="py-6 mt-4 md:mt-12 mb-8">
+            <div className="mb-4 md:mb-6">
+              <span className="text-[#975554] text-[12px] md:text-[14px] tracking-[0.2em] font-semibold uppercase block mb-1 md:mb-2">Technology</span>
+              <h3 className="text-white !text-[28px] md:!text-[36px] lg:!text-[44px] font-serif capitalize leading-tight">AI & Scalable Architecture</h3>
+            </div>
+            <AutoSlider slides={Technology} />
           </section>
 
           <section className="py-6 mt-4 md:mt-12 mb-8">

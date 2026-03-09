@@ -32,3 +32,11 @@ export const Marketing = [
   { title: "Marketing for Doctors", bg: "/assets/images/services/master-service-page/industry/solution-for-restaurant.webp", link: "https://digital.socialengagementgroup.com/marketing-for-doctors" },
   { title: "Marketing for Restaurants", bg: "/assets/images/services/master-service-page/industry/solution-for-tech-startups.webp", link: "https://digital.socialengagementgroup.com/marketing-for-restaurants" },
 ];
+
+export const Technology = [
+  { title: "AI Automation", bg: "/assets/images/services/master-service-page/technology/ai-automation-for-business-growth.webp", link: "/services/ai-automation-for-business-growth" },
+  { title: "Cloud Modernization", bg: "/assets/images/services/master-service-page/technology/cloud-modernization.webp", link: "/services/cloud-modernization" },
+  { title: "IT Consultation", bg: "/assets/images/services/master-service-page/technology/it-consultation.webp", link: "/services/it-consultation" },
+  { title: "SaaS Implementation", bg: "/assets/images/services/master-service-page/technology/saas-implementation.webp", link: "/services/saas-implementation" },
+  { title: "Web Application", bg: "/assets/images/services/master-service-page/technology/web-application.webp", link: "/services/web-application" },
+];

@@ -50,6 +50,13 @@ const Copyright = () => {
       { name: "Marketing for Doctors", href: "https://digital.socialengagementgroup.com/marketing-for-doctors" },
       { name: "Marketing for Restaurants", href: "https://digital.socialengagementgroup.com/marketing-for-restaurants" },
     ],
+    Technology: [
+      { name: "AI Automation", href: "/services/ai-automation-for-business-growth" },
+      { name: "Cloud Modernization", href: "/services/cloud-modernization" },
+      { name: "IT Consultation", href: "/services/it-consultation" },
+      { name: "SaaS Implementation", href: "/services/saas-implementation" },
+      { name: "Web Application", href: "/services/web-application" },
+    ],
   };
 
   return (
@@ -100,8 +107,8 @@ const Copyright = () => {
           </div>
         </div>
 
-        {/* Second Row: Main Sitemap Grid (5 Columns) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-16 border-b border-white/10 px-4 md:px-0">
+        {/* Second Row: Main Sitemap Grid (6 Columns) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-12 pb-16 border-b border-white/10 px-4 md:px-0">
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category} className="space-y-4 text-center md:text-left">
               <h4 className="!text-[16px] md:!text-[14px] font-bold text-white tracking-wide uppercase">
