@@ -43,14 +43,6 @@ const MasterServicesPage = () => {
 
           <section className="py-6 mt-4 md:mt-12 mb-8">
             <div className="mb-4 md:mb-6">
-              <span className="text-[#975554] text-[12px] md:text-[14px] tracking-[0.2em] font-semibold uppercase block mb-1 md:mb-2">Technology</span>
-              <h3 className="text-white !text-[28px] md:!text-[36px] lg:!text-[44px] font-serif capitalize leading-tight">AI & Scalable Architecture</h3>
-            </div>
-            <AutoSlider slides={Technology} />
-          </section>
-
-          <section className="py-6 mt-4 md:mt-12 mb-8">
-            <div className="mb-4 md:mb-6">
               <span className="text-[#975554] text-[12px] md:text-[14px] tracking-[0.2em] font-semibold uppercase block mb-1 md:mb-2">Industry</span>
               <h3 className="text-white !text-[28px] md:!text-[36px] lg:!text-[44px] font-serif capitalize leading-tight">Tailored Industry Solutions</h3>
             </div>
@@ -68,7 +60,7 @@ const MasterServicesPage = () => {
           <section className="py-6 mt-4 md:mt-12 mb-12">
             <div className="mb-4 md:mb-6">
               <span className="text-[#975554] text-[12px] md:text-[14px] tracking-[0.2em] font-semibold uppercase block mb-1 md:mb-2">Technology</span>
-              <h3 className="text-white !text-[28px] md:!text-[36px] lg:!text-[44px] font-serif capitalize leading-tight">Advanced Technical Solutions</h3>
+              <h3 className="text-white !text-[28px] md:!text-[36px] lg:!text-[44px] font-serif capitalize leading-tight">AI & Scalable Architecture</h3>
             </div>
             <AutoSlider slides={Technology} />
           </section>

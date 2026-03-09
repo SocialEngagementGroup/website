@@ -20,19 +20,19 @@ export const webApplicationData = {
         description: "Generic software solves common problems, but breakthrough growth requires solutions built for your specific advantage. Custom web applications adapt to your workflows instead of forcing workarounds, integrate perfectly with existing systems, and scale as your business evolves. While competitors struggle with software limitations, custom applications give you flexibility, control, and capabilities that become competitive moats. The right web application doesn't just digitize processes, it transforms how you operate, serve customers, and capture opportunities. Strategic custom development turns unique business logic into sustainable competitive advantage.",
         items: [
             {
-                img: "/assets/images/services/icons/technology/web-application/forced-workarounds-slow-operations-and-frustrate-teams.webp",
+                img: "/assets/images/services/technology/web-application/forced-workarounds-slow-operations-and-frustrate-teams.webp",
                 text: "Forced workarounds <strong>slow operations</strong> and frustrate teams.",
             },
             {
-                img: "/assets/images/services/icons/technology/web-application/integration-gaps-create-data-silos-and-manual-redundancies.webp",
+                img: "/assets/images/services/technology/web-application/integration-gaps-create-data-silos-and-manual-redundancies.webp",
                 text: "Integration gaps create <strong>data silos</strong> and manual redundancies.",
             },
             {
-                img: "/assets/images/services/icons/technology/web-application/inflexible-features-limit-growth-and-innovation-opportunities.webp",
+                img: "/assets/images/services/technology/web-application/inflexible-features-limit-growth-and-innovation-opportunities.webp",
                 text: "Inflexible features <strong>limit growth</strong> and innovation opportunities.",
             },
             {
-                img: "/assets/images/services/icons/technology/web-application/monthly-subscriptions-compound-without-delivering-unique-value.webp",
+                img: "/assets/images/services/technology/web-application/monthly-subscriptions-compound-without-delivering-unique-value.webp",
 
                 text: "Monthly subscriptions <strong>compound without delivering</strong> unique value.",
             },
