@@ -9,18 +9,19 @@ import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
+import siteMetadata from "@/data/metadata";
+
 export const metadata = {
-  title: "Digital Marketing for Law Firms",
-  description:
-    "Boost your law firm’s visibility and reputation with tailored digital marketing. Get found first, attract quality clients, and grow your practice with trust.",
+  title: siteMetadata.lawyers.title,
+  description: siteMetadata.lawyers.description,
   openGraph: {
-    title: "Digital Marketing for Law Firms | SEG - Social Engagement Group",
-    description: "Boost your law firm’s visibility and reputation with SEG's tailored digital marketing.",
+    title: siteMetadata.lawyers.title,
+    description: siteMetadata.lawyers.description,
     url: "/services/solution-for-lawyers",
   },
   twitter: {
-    title: "Digital Marketing for Law Firms | SEG - Social Engagement Group",
-    description: "Boost your law firm’s visibility and reputation with SEG's tailored digital marketing.",
+    title: siteMetadata.lawyers.title,
+    description: siteMetadata.lawyers.description,
   },
 };
 

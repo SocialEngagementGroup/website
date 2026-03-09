@@ -14,7 +14,7 @@ const ContactInfo = () => {
         <BoxTitle />
 
         {/* ✅ Grid container for Call and Email boxes - Refactored for cleaner design */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-8 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-8 md:mt-12 w-full">
 
           {/* ✅ Call Box */}
           <a

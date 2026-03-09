@@ -1,7 +1,17 @@
+import siteMetadata from "@/data/metadata";
+
 export const metadata = {
-  title: "Careers",
-  description:
-    "Join our team and be part of our mission. Explore open positions in development, design, marketing, and more.",
+  title: siteMetadata.careers.title,
+  description: siteMetadata.careers.description,
+  openGraph: {
+    title: siteMetadata.careers.title,
+    description: siteMetadata.careers.description,
+    url: "/careers",
+  },
+  twitter: {
+    title: siteMetadata.careers.title,
+    description: siteMetadata.careers.description,
+  },
 };
 
 export default function CareersLayout({ children }) {

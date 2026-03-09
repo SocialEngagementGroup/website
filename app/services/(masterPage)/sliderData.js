@@ -23,14 +23,14 @@ export const Industry = [
   { title: "Solution for Doctors", bg: "/assets/images/services/master-service-page/industry/solution-for-doctors.webp", link: "/services/solution-for-doctors" },
   { title: "Solution for Restaurants", bg: "/assets/images/services/master-service-page/industry/solution-for-restaurant.webp", link: "/services/solution-for-restaurants" },
   { title: "Solution for Tech Startups", bg: "/assets/images/services/master-service-page/industry/solution-for-tech-startups.webp", link: "/services/solution-for-techstartups" },
-  { title: "Solution for Doctors", bg: "/assets/images/services/master-service-page/industry/solution-for-doctors.webp", link: "/services/solution-for-doctors" },
+  { title: "Solution for Jewelers", bg: "/assets/images/services/master-service-page/industry/solution-for-jewelers.webp", link: "/services/solution-for-jewelers" },
 ];
 
 export const Marketing = [
-  { title: "Marketing by SEG", bg: "/assets/images/services/master-service-page/industry/solution-for-lawyers.webp", link: "https://digital.socialengagementgroup.com/" },
-  { title: "Marketing for Law Firms", bg: "/assets/images/services/master-service-page/industry/solution-for-doctors.webp", link: "https://digital.socialengagementgroup.com/marketing-for-law-firm" },
-  { title: "Marketing for Doctors", bg: "/assets/images/services/master-service-page/industry/solution-for-restaurant.webp", link: "https://digital.socialengagementgroup.com/marketing-for-doctors" },
-  { title: "Marketing for Restaurants", bg: "/assets/images/services/master-service-page/industry/solution-for-tech-startups.webp", link: "https://digital.socialengagementgroup.com/marketing-for-restaurants" },
+  { title: "Marketing by SEG", bg: "/assets/images/services/master-service-page/marketing/marketing-by-seg.webp", link: "https://digital.socialengagementgroup.com/" },
+  { title: "Marketing for Law Firms", bg: "/assets/images/services/master-service-page/marketing/marketing-for-law-firms.webp", link: "https://digital.socialengagementgroup.com/marketing-for-law-firm" },
+  { title: "Marketing for Doctors", bg: "/assets/images/services/master-service-page/marketing/marketing-for-doctors.webp", link: "https://digital.socialengagementgroup.com/marketing-for-doctors" },
+  { title: "Marketing for Restaurants", bg: "/assets/images/services/master-service-page/marketing/marketing-for-restaurants.webp", link: "https://digital.socialengagementgroup.com/marketing-for-restaurants" },
 ];
 
 export const Technology = [

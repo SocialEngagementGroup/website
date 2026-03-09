@@ -26,19 +26,19 @@ export const ppcCampaignsData = {
       "PPC puts you in front of ready-to-buy customers instantly. It captures high-intent searches and surfaces your offer at the exact moment of need. You control targeting, budgets, and placements with surgical precision. Clear conversion tracking shows what’s working and what’s not. Fast feedback loops let you test messages, creatives, and audiences quickly. Smart bidding and negative keywords minimize waste and protect ROI. Tight landing page alignment turns clicks into customers. Cross-channel reach extends impact across Google, Bing, Meta, and more. Insights from PPC sharpen your broader marketing strategy. Done right, it delivers measurable results today and a scalable growth engine tomorrow.",
     items: [
       {
-       img: "/assets/images/services/digital/ppc-campaigns/clicks-that-never-turn-into-meaningful-traffic.webp",
+       img: "/assets/images/services/icons/digital/ppc-campaigns/clicks-that-never-turn-into-meaningful-traffic.webp",
         text: "Your budget drains on <strong>irrelevant clicks</strong> that never turn into meaningful traffic.",
       },
       {
-       img: "/assets/images/services/digital/ppc-campaigns/ctr-drops-sharply.webp",
+       img: "/assets/images/services/icons/digital/ppc-campaigns/ctr-drops-sharply.webp",
         text: "<strong>CTR drops</strong> sharply because your ads and audience messaging don’t align.",
       },
       {
-       img: "/assets/images/services/digital/ppc-campaigns/users-who-have-no-intent-to-convert.webp",
+       img: "/assets/images/services/icons/digital/ppc-campaigns/users-who-have-no-intent-to-convert.webp",
         text: "Landing pages get visits from users who have <strong>no intent</strong> to convert.",
       },
       {
-       img: "/assets/images/services/digital/ppc-campaigns/roas-falls.webp",
+       img: "/assets/images/services/icons/digital/ppc-campaigns/roas-falls.webp",
         text: "<strong>ROAS falls</strong> as tracking gaps distort attribution and hide true performance.",
       },
 

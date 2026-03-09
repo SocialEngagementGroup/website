@@ -1,6 +1,18 @@
 import React from 'react'
+import siteMetadata from "@/data/metadata";
+
 export const metadata = {
-  title: "Cookies",
+  title: siteMetadata.cookies.title,
+  description: siteMetadata.cookies.description,
+  openGraph: {
+    title: siteMetadata.cookies.title,
+    description: siteMetadata.cookies.description,
+    url: "/cookies",
+  },
+  twitter: {
+    title: siteMetadata.cookies.title,
+    description: siteMetadata.cookies.description,
+  },
 };
 
 import HeroSection from '@/components/LegalPage/HeroSection/HeroSection'

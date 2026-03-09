@@ -1,21 +1,19 @@
-import { Inter, Outfit, Playfair_Display } from "next/font/google";
+import { Outfit, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import Navbar from "@/components/Navbar/Navbar";
 import NavBarMobile from "@/components/Navbar/NavBarMobile";
 import Footer from "@/components/Footer/Footer";
-import ScrollProgress from "@/components/Common/ScrollProgress";
-import BackToTop from "@/components/Common/BackToTop";
+import ClientEnhancements from "@/components/Common/ClientEnhancements";
 
 // (optional) if you also want Vercel Analytics:
 // import { Analytics } from "@vercel/analytics/react";
 
+import siteMetadata from "@/data/metadata";
+
 export const metadata = {
   metadataBase: new URL("https://socialengagementgroup.com"),
-  title: {
-    default: "Human Creativity & AI-Powered Digital Growth | SEG - Social Engagement Group",
-    template: "%s | SEG - Social Engagement Group",
-  },
+  title: siteMetadata.home.title,
   description:
     "Social Engagement Group (SEG) blends human creativity with AI-powered automation to tell your story and drive business growth across every digital touchpoint.",
   alternates: {
@@ -54,12 +52,7 @@ export const metadata = {
   },
 };
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-});
+
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -76,12 +69,24 @@ const playfair = Playfair_Display({
 });
 
 import HardLoader from "@/components/Common/HardLoader";
+import TopLoader from "@/components/Common/TopLoader";
+import { Suspense } from "react";
 
 export default function SiteLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${outfit.variable} ${outfit.className} ${playfair.variable} antialiased`} suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.youtube-nocookie.com" />
+        <link rel="dns-prefetch" href="https://img.youtube.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+      </head>
+      <body className={`${outfit.variable} ${outfit.className} ${playfair.variable} antialiased`} suppressHydrationWarning>
         <HardLoader />
+        <Suspense fallback={null}>
+          <TopLoader />
+        </Suspense>
         {/* Google Tag Manager */}
         <noscript>
           <iframe
@@ -92,7 +97,7 @@ export default function SiteLayout({ children }) {
           />
         </noscript>
 
-        <Script id="google-tag-manager" strategy="afterInteractive">
+        <Script id="google-tag-manager" strategy="lazyOnload">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -102,12 +107,11 @@ export default function SiteLayout({ children }) {
           `}
         </Script>
 
-        <ScrollProgress />
+        <ClientEnhancements />
         <Navbar />
         <NavBarMobile />
         {children}
         <Footer />
-        <BackToTop />
 
         {/* JSON-LD Structured Data */}
         <script

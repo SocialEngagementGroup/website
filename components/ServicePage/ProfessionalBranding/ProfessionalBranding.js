@@ -39,7 +39,6 @@ const ProfessionalBranding = ({ heading, items, video }) => {
       playVideo();
     } else {
       v.pause();
-      v.currentTime = 0; // optional: reset to start when leaving section
     }
   }, [shouldPlay]);
 
@@ -84,10 +83,10 @@ const ProfessionalBranding = ({ heading, items, video }) => {
                 muted
                 loop
                 playsInline
-                preload="none"
+                preload="auto"
                 controls={false}
                 disablePictureInPicture
-                // do NOT use autoPlay, we handle play/pause via scroll
+                // handled via useEffect
               >
                 <source src={video} type="video/mp4" />
               </video>

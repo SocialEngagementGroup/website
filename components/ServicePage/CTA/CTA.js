@@ -43,7 +43,7 @@ const CTA = () => {
 
             {/* Background Decoration - "GROW" Watermark */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none select-none">
-                <span className="absolute -bottom-4 -right-8 md:-bottom-8 md:-right-20 text-[25vw] md:text-[15vw] font-serif font-bold text-black leading-none">
+                <span className="absolute -bottom-4 -right-8 md:-bottom-8 md:-right-20 text-[25vw] md:text-[15vw] font-outfit font-bold text-black leading-none">
                     GROW
                 </span>
             </div>
@@ -67,10 +67,10 @@ const CTA = () => {
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={revealVariants}
-                        className="font-serif mb-8 leading-tight tracking-tight"
+                        className="font-outfit mb-8 leading-tight tracking-tight"
                     >
                         Let&apos;s Build a System <br />
-                        You Can <span className="italic">Rely On</span>
+                        You Can Rely On
                     </motion.h4>
 
                     <motion.p

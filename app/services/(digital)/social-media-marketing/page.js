@@ -9,18 +9,19 @@ import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
+import siteMetadata from "@/data/metadata";
+
 export const metadata = {
-  title: "Social Media Marketing Services",
-  description:
-    "Boost engagement and sales with data-driven social media marketing. We create high-performing campaigns across Meta, TikTok, LinkedIn, and more.",
+  title: siteMetadata.socialMediaMarketing.title,
+  description: siteMetadata.socialMediaMarketing.description,
   openGraph: {
-    title: "Social Media Marketing Services | SEG - Social Engagement Group",
-    description: "Boost engagement and sales with SEG's data-driven social media marketing.",
+    title: siteMetadata.socialMediaMarketing.title,
+    description: siteMetadata.socialMediaMarketing.description,
     url: "/services/social-media-marketing",
   },
   twitter: {
-    title: "Social Media Marketing Services | SEG - Social Engagement Group",
-    description: "Boost engagement and sales with SEG's data-driven social media marketing.",
+    title: siteMetadata.socialMediaMarketing.title,
+    description: siteMetadata.socialMediaMarketing.description,
   },
 };
 

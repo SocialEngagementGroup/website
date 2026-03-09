@@ -9,18 +9,19 @@ import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
+import siteMetadata from "@/data/metadata";
+
 export const metadata = {
-  title: "Digital Marketing for Tech Startups",
-  description:
-    "Accelerate your tech startup’s growth with data-driven marketing. Build traction, attract users, and scale visibility from launch to Series A and beyond.",
+  title: siteMetadata.techStartups.title,
+  description: siteMetadata.techStartups.description,
   openGraph: {
-    title: "Digital Marketing for Tech Startups | SEG - Social Engagement Group",
-    description: "Accelerate your tech startup’s growth with SEG's data-driven marketing and traction strategies.",
+    title: siteMetadata.techStartups.title,
+    description: siteMetadata.techStartups.description,
     url: "/services/solution-for-techstartups",
   },
   twitter: {
-    title: "Digital Marketing for Tech Startups | SEG - Social Engagement Group",
-    description: "Accelerate your tech startup’s growth with SEG's data-driven marketing and traction strategies.",
+    title: siteMetadata.techStartups.title,
+    description: siteMetadata.techStartups.description,
   },
 };
 

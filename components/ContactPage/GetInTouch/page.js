@@ -9,24 +9,18 @@ import { RiInstagramFill } from "react-icons/ri";
 const contactInfo = [
   { 
     icon: "/assets/images/icons/email.webp", 
-    label: "Email us at",
+    label: "Email ",
     text: "rahee@socialengagementgroup.com",
     link: "mailto:rahee@socialengagementgroup.com"
   },
   { 
-    icon: "/assets/images/icons/phone.webp", 
-    label: "Call us",
-    text: "+1 (347) 935-6442",
-    link: "tel:+13479356442"
-  },
-  { 
     icon: "/assets/images/icons/work-time.webp", 
-    label: "Working hours",
+    label: "Working Hours",
     text: "Mon – Fri: 10:00 AM – 6:00 PM (EST)" 
   },
   { 
     icon: "/assets/images/icons/pin-map.webp", 
-    label: "Our location",
+    label: "Based In",
     text: "New York City, USA" 
   },
 ];
@@ -40,7 +34,7 @@ const GetInTouch = () => {
           {/* LEFT COLUMN: HEADING */}
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6">
             <h2 className="text-gray-900 !text-3xl sm:!text-4xl lg:!text-5xl font-bold leading-tight">
-              Ways to Reach Us
+              Ways to Reach
             </h2>
             <p className="text-gray-600 !text-lg md:!text-xl max-w-lg leading-relaxed mx-auto lg:ml-0">
               Have a question or ready to start your next big project? Reach out to us through any of these channels. Our team is here to help you grow with purpose.
@@ -92,8 +86,8 @@ const GetInTouch = () => {
                   <div className="w-[2px] md:w-[3px] h-10 md:h-14 bg-[#975554]/30 flex-shrink-0" />
 
                   {/* Text Details Column */}
-                  <div className="flex flex-col gap-0.5 md:gap-1 min-w-0">
-                    <p className="text-[#975554] text-sm md:text-xl font-bold uppercase tracking-widest leading-none">
+                  <div className="flex flex-col gap-1 md:gap-2 min-w-0">
+                    <p className="text-[#975554] text-sm md:text-xl font-bold tracking-wide leading-none">
                       {item.label}
                     </p>
                     {item.link ? (

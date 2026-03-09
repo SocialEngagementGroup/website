@@ -13,6 +13,7 @@ export default function NavBarMobile() {
   const [isSticky, setIsSticky] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mobileActiveCategory, setMobileActiveCategory] = useState(null);
+  const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
 
   // On careers pages (light bg), use dark text when not scrolled and menu closed
   const useDarkText = isCareersPage && !isSticky && !isMobileMenuOpen;
@@ -128,7 +129,7 @@ export default function NavBarMobile() {
                         mobileActiveCategory === item.title ? "bg-white/5 border-l-[3px] border-white" : "border-l-[3px] border-transparent"
                       }`}
                     >
-                      <span className={`text-[16px] font-sans uppercase tracking-[0.1em] font-bold ${
+                      <span className={`text-[16px] font-sans capitalize tracking-[0.1em] font-bold ${
                         mobileActiveCategory === item.title ? "text-white" : "text-white/60"
                       }`}>
                         {item.title}
@@ -166,6 +167,50 @@ export default function NavBarMobile() {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+
+            {/* Resources Accordion */}
+            <div className="flex flex-col">
+              <button
+                onClick={() => setMobileResourcesOpen(!mobileResourcesOpen)}
+                className="w-full flex items-center justify-between py-4 border-l-4 border-transparent pl-2"
+              >
+                <span className="text-white font-sans font-bold text-[22px]">Resources</span>
+                <svg
+                  className={`w-6 h-6 text-white transition-transform duration-300 ${
+                    mobileResourcesOpen ? "rotate-180" : ""
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              <div
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  mobileResourcesOpen ? "max-h-[200px] opacity-100 pb-4" : "max-h-0 opacity-0"
+                }`}
+              >
+                <div className="flex flex-col space-y-1 mt-2">
+                  <Link
+                    href="/media-converter"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="w-full flex items-center px-4 py-4 rounded-xl transition-all border-l-[3px] border-transparent hover:bg-white/5 text-[16px] font-sans tracking-[0.1em] font-bold text-white/60 hover:text-white"
+                  >
+                    Media Converter
+                  </Link>
+                  <Link
+                    href="/careers"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="w-full flex items-center px-4 py-4 rounded-xl transition-all border-l-[3px] border-transparent hover:bg-white/5 text-[16px] font-sans tracking-[0.1em] font-bold text-white/60 hover:text-white"
+                  >
+                    Careers
+                  </Link>
+                </div>
               </div>
             </div>
 

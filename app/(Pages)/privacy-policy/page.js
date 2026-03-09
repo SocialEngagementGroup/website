@@ -1,6 +1,18 @@
 import React from 'react'
+import siteMetadata from "@/data/metadata";
+
 export const metadata = {
-  title: "Privacy Policy",
+  title: siteMetadata.privacy.title,
+  description: siteMetadata.privacy.description,
+  openGraph: {
+    title: siteMetadata.privacy.title,
+    description: siteMetadata.privacy.description,
+    url: "/privacy-policy",
+  },
+  twitter: {
+    title: siteMetadata.privacy.title,
+    description: siteMetadata.privacy.description,
+  },
 };
 
 import HeroSection from '@/components/LegalPage/HeroSection/HeroSection'

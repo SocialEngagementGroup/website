@@ -20,6 +20,7 @@
 <url><loc>http://localhost:3000/services/social-media-marketing</loc><lastmod>2026-03-09T20:03:36.282Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>http://localhost:3000/services/solution-for-restaurants</loc><lastmod>2026-03-09T20:03:36.282Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>http://localhost:3000/services/solution-for-techstartups</loc><lastmod>2026-03-09T20:03:36.282Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/services/solution-for-jewelers</loc><lastmod>2026-03-05T20:43:08.758Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>http://localhost:3000/services/3D-animation-and-rendering</loc><lastmod>2026-03-09T20:03:36.282Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>http://localhost:3000/services/ai-automation-for-business-growth</loc><lastmod>2026-03-09T20:03:36.282Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>http://localhost:3000/services/seo</loc><lastmod>2026-03-09T20:03:36.282Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -34,4 +35,5 @@
 <url><loc>http://localhost:3000/cookies</loc><lastmod>2026-03-09T20:03:36.282Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>http://localhost:3000/terms-and-conditions</loc><lastmod>2026-03-09T20:03:36.282Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>http://localhost:3000/careers</loc><lastmod>2026-03-09T20:03:36.282Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/tools/converter</loc><lastmod>2026-03-05T20:43:08.758Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 </urlset>

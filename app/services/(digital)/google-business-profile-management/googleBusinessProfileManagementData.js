@@ -27,19 +27,19 @@ export const googleBusinessProfileManagementData = {
       "Local search is where high-intent decisions happen. Your Google Business Profile is the first impression at that moment. Complete, accurate details help you surface in the local map pack. Strong visuals and keyworded descriptions turn views into clicks. Reviews and timely responses signal trust and reliability. Up-to-date hours and attributes prevent drop-offs and frustration. Regular Posts keep your listing active and favored by the algorithm. UTM-tagged links turn profile engagement into measurable ROI. Consistent NAP across the web reinforces local rankings. Optimize your profile and you convert nearby searches into calls, visits, and customers.",
     items: [
      {
-   img: "/assets/images/services/digital/google-business-profile-management/missed-calls.webp",
+   img: "/assets/images/services/icons/digital/google-business-profile-management/missed-calls.webp",
     text: "<strong>Missed calls</strong>, visits, and customer inquiries that should have come to you.",
   },
   {
-   img: "/assets/images/services/digital/google-business-profile-management/local-visibility-drops.webp",
+   img: "/assets/images/services/icons/digital/google-business-profile-management/local-visibility-drops.webp",
     text: "Local <strong>visibility drops</strong> as competitors appear more often in search results.",
   },
   {
-   img: "/assets/images/services/digital/google-business-profile-management/your-reputation-weakens.webp",
+   img: "/assets/images/services/icons/digital/google-business-profile-management/your-reputation-weakens.webp",
     text: "<strong>Your reputation</strong> weakens with unbalanced or unmanaged public reviews.",
   }, 
   {
-   img: "/assets/images/services/digital/google-business-profile-management/outdated-or-inconsistent-listing-details-hurt-credibility.webp",
+   img: "/assets/images/services/icons/digital/google-business-profile-management/outdated-or-inconsistent-listing-details-hurt-credibility.webp",
     text: "<strong>Outdated or inconsistent</strong> listing details hurt credibility and search ranking.",
   },
     ],

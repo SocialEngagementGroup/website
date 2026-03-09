@@ -26,19 +26,19 @@ export const solutionForTechStartupsData = {
       "In the startup world, timing determines who breaks out and who gets buried, and while competitors scale visibility early, many founders are still validating traction. A strong digital growth system ensures your product doesn’t just launch, it lands. Early credibility fuels investor confidence, sharp positioning helps you stand out in a crowded market, and data-driven execution prevents wasted time and budget. Strategic growth systems help you reach the right audience, prove traction early, and scale sustainably.",
     items: [
       {
-       img: "/assets/images/services/industry/solution-for-tech-startups/launching-without-consistent-lead-or-user-acquisition.webp", // kept original
+       img: "/assets/images/services/icons/industry/solution-for-tech-startups/launching-without-consistent-lead-or-user-acquisition.webp", // kept original
         text: "Launching without consistent lead or user acquisition.",
       },
       {
-       img: "/assets/images/services/industry/solution-for-tech-startups/struggling-to-convert-website-visitors-into-demos.webp", // kept original
+       img: "/assets/images/services/icons/industry/solution-for-tech-startups/struggling-to-convert-website-visitors-into-demos.webp", // kept original
         text: "Struggling to convert website visitors into demos or signups.",
       },
       {
-       img: "/assets/images/services/industry/solution-for-tech-startups/losing-mindshare-to-faster-louder-competitors.webp", // kept original
+       img: "/assets/images/services/icons/industry/solution-for-tech-startups/losing-mindshare-to-faster-louder-competitors.webp", // kept original
         text: "Losing mindshare to faster, louder competitors.",
       },
       {
-       img: "/assets/images/services/industry/solution-for-tech-startups/relying-only-on-paid-ads-without-building-organic-trust.webp", // kept original
+       img: "/assets/images/services/icons/industry/solution-for-tech-startups/relying-only-on-paid-ads-without-building-organic-trust.webp", // kept original
         text: "Relying only on paid ads without building organic trust.",
       },
     ],

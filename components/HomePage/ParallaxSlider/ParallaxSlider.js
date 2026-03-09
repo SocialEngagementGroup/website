@@ -2,7 +2,7 @@
 
 import { useRef } from 'react';
 import { useScroll, useTransform } from 'framer-motion';
-import Card from './Card'; // Individual parallax card component
+import Card from './Card.js'; // Individual parallax card component
 import { projects } from '../../../data/projectsData'; // Array of project data
 
 export default function ParallaxSlider() {

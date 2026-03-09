@@ -48,6 +48,7 @@ export default function sitemap() {
     "/services/it-consultation",
     "/services/saas-implementation",
     "/services/web-application",
+    "/services/solution-for-jewelers",
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),

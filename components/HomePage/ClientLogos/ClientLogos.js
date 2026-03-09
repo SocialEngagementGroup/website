@@ -8,7 +8,7 @@ const ClientLogos = () => {
       
       {/* Text Content - Constrained following TrustBar style */}
       <div className="container-fluid w-[90%] md:w-[78%] mx-auto text-center relative z-10 px-6">
-        <h3 className="font-heading text-[#975554] text-[13px] md:text-[15px] tracking-[0.2em] !font-extrabold !capitalize block mb-6">
+        <h3 className="font-heading text-[#975554] text-[13px] md:text-[15px] !capitalize block mb-2">
           Our Clients
         </h3>
         <h2 className="font-heading text-gray-900 text-3xl md:text-5xl font-bold mb-6 leading-tight">

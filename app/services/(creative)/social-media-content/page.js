@@ -12,17 +12,19 @@ import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 
+import siteMetadata from "@/data/metadata";
+
 export const metadata = {
-  title: "Social Media Content",
-  description: "Create scroll-stopping social content that engages, converts, and builds community. Expert strategies for Meta, TikTok, and beyond to grow your brand.",
+  title: siteMetadata.socialMediaContent.title,
+  description: siteMetadata.socialMediaContent.description,
   openGraph: {
-    title: "Social Media Content | SEG - Social Engagement Group",
-    description: "Create scroll-stopping social content that engages and converts with SEG's expert Meta & TikTok strategies.",
+    title: siteMetadata.socialMediaContent.title,
+    description: siteMetadata.socialMediaContent.description,
     url: "/services/social-media-content",
   },
   twitter: {
-    title: "Social Media Content | SEG - Social Engagement Group",
-    description: "Create scroll-stopping social content that engages and converts with SEG's expert Meta & TikTok strategies.",
+    title: siteMetadata.socialMediaContent.title,
+    description: siteMetadata.socialMediaContent.description,
   },
 };
 
