@@ -1,8 +1,5 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
-import { useParams } from "next/navigation";
 import {
   ArrowLeft,
   Globe,
@@ -12,6 +9,31 @@ import {
   Check,
 } from "lucide-react";
 import { getJobBySlug } from "@/data/jobsData";
+import siteMetadata from "@/data/metadata";
+
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const job = getJobBySlug(slug);
+  
+  if (!job) return {};
+
+  const title = `${job.title} | ${siteMetadata.careers.title}`;
+  const description = job.summary || siteMetadata.careers.description;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: `/careers/${slug}`,
+    },
+    twitter: {
+      title,
+      description,
+    },
+  };
+}
 
 /**
  * JobDetailPage
@@ -19,9 +41,8 @@ import { getJobBySlug } from "@/data/jobsData";
  * Full job description page with clean, minimal design.
  * Uses global CSS heading/paragraph sizing from globals.css.
  */
-export default function JobDetailPage() {
-  const params = useParams();
-  const slug = params?.slug;
+export default async function JobDetailPage({ params }) {
+  const { slug } = await params;
   const job = slug ? getJobBySlug(slug) : undefined;
 
   return (

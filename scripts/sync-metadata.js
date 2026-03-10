@@ -29,33 +29,39 @@ function pathToKey(filePath) {
   
   if (routePath === '.') return 'home';
   
-  // Clean up the path
-  routePath = routePath
-    .replace(/\/\(Pages\)/g, '')         // Remove (Pages)
-    .replace(/\(Pages\)\//g, '')
-    .replace(/\/\(digital\)/g, '')       // Remove (digital)
-    .replace(/\(digital\)\//g, '')
-    .replace(/\/\(creative\)/g, '')      // Remove (creative)
-    .replace(/\(creative\)\//g, '')
-    .replace(/\/\(industry\)/g, '')      // Remove (industry)
-    .replace(/\(industry\)\//g, '')
-    .replace(/\/\(masterPage\)/g, '')    // Remove (masterPage)
-    .replace(/\(masterPage\)\//g, '');
+  // Clean up the path by removing all route groups (segments in parentheses)
+  routePath = routePath.replace(/\/\([^)]+\)/g, '').replace(/^\([^)]+\)\//, '').replace(/^\([^)]+\)$/, '');
+  
+  if (routePath === '' || routePath === '.') return 'home';
 
   // Handle specific manual renames
-  if (routePath === '3D-animation-and-rendering') return 'animation3d';
-  if (routePath === 'videography-and-photography') return 'videographyPhotography';
-  if (routePath === 'google-business-profile-management') return 'googleBusiness';
-  if (routePath === 'google-location-services-ads') return 'googleLocalAds';
-  if (routePath === 'ppc-campaigns') return 'ppc';
-  if (routePath === 'retargeting-and-remarketing') return 'retargeting';
-  if (routePath === 'review-and-reputation-management') return 'reputationManagement';
-  if (routePath === 'solution-for-doctors') return 'doctors';
-  if (routePath === 'solution-for-lawyers') return 'lawyers';
-  if (routePath === 'solution-for-restaurants') return 'restaurants';
-  if (routePath === 'solution-for-techstartups') return 'techStartups';
-  if (routePath === 'solution-for-jewelers') return 'jewelers';
-  if (routePath === 'tools/converter') return 'converter';
+  if (routePath === 'services/3D-animation-and-rendering') return 'animation3d';
+  if (routePath === 'services/branding') return 'branding';
+  if (routePath === 'services/content-creation') return 'contentCreation';
+  if (routePath === 'services/logo-design') return 'logoDesign';
+  if (routePath === 'services/social-media-content') return 'socialMediaContent';
+  if (routePath === 'services/videography-and-photography') return 'videographyPhotography';
+  if (routePath === 'services/google-business-profile-management') return 'googleBusiness';
+  if (routePath === 'services/google-location-services-ads') return 'googleLocalAds';
+  if (routePath === 'services/ppc-campaigns') return 'ppc';
+  if (routePath === 'services/retargeting-and-remarketing') return 'retargeting';
+  if (routePath === 'services/review-and-reputation-management') return 'reputationManagement';
+  if (routePath === 'services/seo') return 'seo';
+  if (routePath === 'services/social-media-marketing') return 'socialMediaMarketing';
+  if (routePath === 'services/website-development') return 'websiteDevelopment';
+  if (routePath === 'services/solution-for-doctors') return 'doctors';
+  if (routePath === 'services/solution-for-lawyers') return 'lawyers';
+  if (routePath === 'services/solution-for-restaurants') return 'restaurants';
+  if (routePath === 'services/solution-for-techstartups') return 'techStartups';
+  if (routePath === 'services/solution-for-jewelers') return 'jewelers';
+  if (routePath === 'services/ai-automation-for-business-growth') return 'aiAutomation';
+  if (routePath === 'services/cloud-modernization') return 'cloudModernization';
+  if (routePath === 'services/it-consultation') return 'itConsultation';
+  if (routePath === 'services/saas-implementation') return 'saasImplementation';
+  if (routePath === 'services/web-application') return 'webApplication';
+
+  if (routePath === 'media-converter') return 'converter';
+  if (routePath === 'website-audit') return 'websiteAudit';
   if (routePath === 'privacy-policy') return 'privacy';
   if (routePath === 'legal-notice') return 'legal';
   if (routePath === 'terms-and-conditions') return 'terms';

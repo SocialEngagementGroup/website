@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, Quote, ArrowDownRight } from 'lucide-react';
+import Image from 'next/image';
 import { allTestimonials } from '../../../data/testimonialsData';
 
 const testimonials = allTestimonials;
@@ -112,8 +113,8 @@ const Testimonials = () => {
                 {/* Fixed Author Info Section (Updates instantly but stays in position) */}
                 <div className="mt-auto pt-4 flex items-center gap-4">
                   {current.image && (
-                    <div className="w-13 h-13 rounded-full overflow-hidden shrink-0 shadow-sm border border-gray-100 bg-gray-50">
-                      <img src={current.image} className="w-full h-full object-cover object-center" alt={current.author} />
+                    <div className="w-13 h-13 rounded-full overflow-hidden shrink-0 shadow-sm border border-gray-100 bg-gray-50 relative">
+                      <Image src={current.image} fill className="object-cover object-center" alt={current.author} />
                     </div>
                   )}
                   <div className="flex flex-col gap-0">
