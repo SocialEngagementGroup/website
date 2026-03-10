@@ -197,6 +197,13 @@ export default function NavBarMobile() {
               >
                 <div className="flex flex-col space-y-1 mt-2">
                   <Link
+                    href="/website-audit"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="w-full flex items-center px-4 py-4 rounded-xl transition-all border-l-[3px] border-transparent hover:bg-white/5 text-[16px] font-sans tracking-[0.1em] font-bold text-white/60 hover:text-white"
+                  >
+                    Website Audit
+                  </Link>
+                  <Link
                     href="/media-converter"
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="w-full flex items-center px-4 py-4 rounded-xl transition-all border-l-[3px] border-transparent hover:bg-white/5 text-[16px] font-sans tracking-[0.1em] font-bold text-white/60 hover:text-white"

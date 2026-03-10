@@ -50,7 +50,7 @@ The **Social Engagement Group (SEG)** website is a premium, high-performance mar
 ```
 Website/
 ├── app/
-│   ├── (Pages)/              # Legal pages (Cookies, Privacy, Terms, Legal Notice)
+│   ├── (pages)/              # Legal pages (Cookies, Privacy, Terms, Legal Notice)
 │   ├── Home/                  # Home page modules
 │   ├── about/                 # About page
 │   ├── contact-us/            # Contact page

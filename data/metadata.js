@@ -3,10 +3,7 @@ const siteMetadata = {
     title: "AI-Powered Digital Marketing Agency | Social Engagement Group - SEG",
     description: "Social Engagement Group blends human creativity with AI-powered execution to grow your brand across every digital touchpoint. Ads, SEO, content, branding, all under one roof."
   },
-  about: {
-    title: "About Social Engagement Group - SEG | Where Human Creativity Meets AI-Powered Growth",
-    description: "Learn how Social Engagement Group helps brands grow through strategy, storytelling, and AI-powered marketing. Meet the team behind your next chapter."
-  },
+
   contact: {
     title: "Contact Social Engagement Group - SEG | Book a Free Strategy Call",
     description: "Ready to grow your brand? Get in touch with Social Engagement Group to book a free strategy call. We partner with businesses ready for real, measurable results."
@@ -132,9 +129,17 @@ const siteMetadata = {
     description: "Transform your business with custom web applications. Build powerful, scalable solutions that streamline operations and drive growth."
   },
   converter: {
-    title: "Free Media Converter Tool | Social Engagement Group - SEG",
-    description: "Convert images, videos, and audio files instantly with Social Engagement Group's free online media conversion platform. Fast, simple, and built for creators and marketers."
-  }
+    title: "Professional Media Converter | Social Engagement Group - SEG",
+    description: "Convert, compress, and optimize your media files instantly with high quality results and complete on-device privacy."
+  },
+  websiteAudit: {
+    title: "Free Website Performance Audit | Social Engagement Group - SEG",
+    description: "Unlock your website's full potential with a free performance audit. Discover actionable insights to improve speed, SEO, and conversion rates today."
+  },
+  careersSlug: {
+    title: "TODO: Careers Slug Title",
+    description: "TODO: Careers Slug Description"
+  },
 };
 
 export default siteMetadata;

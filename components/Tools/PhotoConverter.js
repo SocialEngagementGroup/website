@@ -3,6 +3,7 @@
 import React, { useState, useRef } from "react";
 import JSZip from "jszip";
 import { saveAs } from "file-saver";
+import Image from "next/image";
 
 const PhotoConverter = () => {
   const [files, setFiles] = useState([]);
@@ -229,7 +230,7 @@ const PhotoConverter = () => {
                   <p className={`${files.length > 0 ? 'text-xs md:text-base' : 'text-base md:text-lg'} text-white font-medium mb-1 whitespace-nowrap md:whitespace-normal`}>
                     Click to upload <span className="hidden md:inline">or drag & drop</span>
                   </p>
-                  {files.length === 0 && <p className="text-[10px] md:text-sm text-gray-500">Supports all file types in bulk</p>}
+                  {files.length === 0 && <p className="text-[10px] md:text-sm text-gray-500">Supports JPG, PNG, WEBP, HEIC, GIF in bulk</p>}
                 </div>
               </div>
               <input
@@ -248,7 +249,7 @@ const PhotoConverter = () => {
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-3 md:gap-4 pb-4 auto-rows-max">
                   {files.map((fileObj) => (
                     <div key={fileObj.id} className="relative group bg-black/40 rounded-2xl border border-white/5 overflow-hidden aspect-square">
-                      <img src={fileObj.preview} alt={fileObj.originalFile.name} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
+                      <Image src={fileObj.preview} alt={fileObj.originalFile.name} fill className="object-cover opacity-80 group-hover:opacity-100 transition-opacity" unoptimized />
                       
                       {/* Hover Overlay with Delete */}
                       <div className="absolute inset-0 bg-black/60 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-2 md:p-4">
