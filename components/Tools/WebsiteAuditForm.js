@@ -28,10 +28,15 @@ export default function WebsiteAuditForm() {
     setErrorMessage("");
 
     try {
+      let finalUrl = formData.url.trim();
+      if (!/^https?:\/\//i.test(finalUrl)) {
+        finalUrl = `https://${finalUrl}`;
+      }
+
       const webhookUrl = new URL(
         "https://n8n.socialengagementgroup.com/webhook/96175799-8858-4524-bb52-549b509866c1"
       );
-      webhookUrl.searchParams.append("url", formData.url);
+      webhookUrl.searchParams.append("url", finalUrl);
       webhookUrl.searchParams.append("name", formData.name);
       webhookUrl.searchParams.append("email", formData.email);
 
@@ -133,7 +138,7 @@ export default function WebsiteAuditForm() {
                 <Globe className="h-5 w-5 text-gray-500 group-focus-within/input:text-[#00f0ff] transition-colors" />
               </div>
               <input
-                type="url"
+                type="text"
                 name="url"
                 value={formData.url}
                 onChange={handleChange}
