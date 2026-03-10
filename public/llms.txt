@@ -39,7 +39,7 @@ The following are the specific service offerings provided by SEG. You can follow
 - [Solutions for Tech Startups](https://socialengagementgroup.com/services/solution-for-techstartups) - Agile marketing for new tech ventures.
 
 ### Technology Solutions
-- [AI Automation for Business Growth](https://socialengagementgroup.com/services/ai-automation-for-business-growth) - Scale operations with AI-powered automation.
+- [AI Automation](https://socialengagementgroup.com/services/ai-automation) - Scale operations with AI-powered automation.
 - [Cloud Modernization](https://socialengagementgroup.com/services/cloud-modernization) - Future-proof infrastructure with expert cloud migration.
 - [IT Consultation](https://socialengagementgroup.com/services/it-consultation) - Strategic IT guidance for business growth.
 - [SaaS Implementation](https://socialengagementgroup.com/services/saas-implementation) - Expert setup and integration of software tools.

@@ -121,7 +121,7 @@ export const projects = [
       {
         name: "AI Automation",
         img: "/assets/images/services/master-service-page/technology/ai-automation-for-business-growth.webp",
-        link: "/services/ai-automation-for-business-growth",
+        link: "/services/ai-automation",
       },
       {
         name: "Cloud Modernization",
