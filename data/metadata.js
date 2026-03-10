@@ -109,7 +109,7 @@ const siteMetadata = {
     description: "Showcase your craft to the right buyers. Social Engagement Group helps jewelers build stunning brand identities, run targeted ad campaigns, and grow sales through strategic digital marketing."
   },
   aiAutomation: {
-    title: "AI Automation for Business Growth | Scale Smarter & Faster",
+    title: "AI Automation | Scale Smarter & Faster",
     description: "Transform operations with AI automation. Boost efficiency, reduce costs, and unlock growth with intelligent systems that work 24/7 for your business."
   },
   cloudModernization: {

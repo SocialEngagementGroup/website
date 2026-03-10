@@ -44,7 +44,7 @@ export default function sitemap() {
     "/services/solution-for-techstartups",
     "/services/solution-for-jewelers",
     // Technology
-    "/services/ai-automation-for-business-growth",
+    "/services/ai-automation",
     "/services/cloud-modernization",
     "/services/it-consultation",
     "/services/saas-implementation",

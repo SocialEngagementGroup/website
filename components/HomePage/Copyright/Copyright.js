@@ -49,7 +49,7 @@ const Copyright = () => {
       { name: "Solution for Jewelers", href: "/services/solution-for-jewelers" },
     ],
     Technology: [
-      { name: "AI Automation", href: "/services/ai-automation-for-business-growth" },
+      { name: "AI Automation", href: "/services/ai-automation" },
       { name: "Cloud Modernization", href: "/services/cloud-modernization" },
       { name: "IT Consultation", href: "/services/it-consultation" },
       { name: "SaaS Implementation", href: "/services/saas-implementation" },

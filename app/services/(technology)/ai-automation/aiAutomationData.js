@@ -1,6 +1,6 @@
 export const aiAutomationData = {
     hero: {
-        title: "AI Automation for Business Growth",
+        title: "AI Automation",
         description: "Transform operations with AI automation. Boost efficiency, reduce costs, and unlock growth with intelligent systems that work 24/7 for your business.",
         subtitle: "Technology",
         ctaButton: "Connect with us",

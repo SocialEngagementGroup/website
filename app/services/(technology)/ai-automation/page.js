@@ -17,7 +17,7 @@ export const metadata = {
     openGraph: {
         title: siteMetadata.aiAutomation.title,
         description: siteMetadata.aiAutomation.description,
-        url: "/services/ai-automation-for-business-growth",
+        url: "/services/ai-automation",
     },
     twitter: {
         title: siteMetadata.aiAutomation.title,
