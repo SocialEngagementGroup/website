@@ -1,6 +1,6 @@
 export const cloudModernizationData = {
     hero: {
-        title: "Cloud Modernization Services | Transform Legacy Into Agility",
+        title: "Cloud Modernization",
         description: "Modernize your infrastructure with strategic cloud migration. Reduce costs, boost performance, and scale effortlessly with future-ready architecture.",
         subtitle: "Technology",
         ctaButton: "Connect with us",
@@ -21,19 +21,19 @@ export const cloudModernizationData = {
         items: [
             {
 
-                img: "/assets/images/services/technology/cloud-modernization/forced-workarounds-slow-operations-and-frustrate-teams.webp",
+                img: "/assets/images/services/icons/technology/cloud-modernization/forced-workarounds-slow-operations-and-frustrate-teams.webp",
                 text: "High maintenance costs <strong>drain budgets</strong> without delivering innovation.",
             },
             {
-                img: "/assets/images/services/technology/cloud-modernization/inflexible-features-limit-growth-and-innovation-opportunities.webp",
+                img: "/assets/images/services/icons/technology/cloud-modernization/inflexible-features-limit-growth-and-innovation-opportunities.webp",
                 text: "Limited scalability <strong>prevents rapid growth</strong> and market responsiveness.",
             },
             {
-                img: "/assets/images/services/technology/cloud-modernization/integration-gaps-create-data-silos-and-manual-redundancies.webp",
+                img: "/assets/images/services/icons/technology/cloud-modernization/integration-gaps-create-data-silos-and-manual-redundancies.webp",
                 text: "Frequent downtime <strong>disrupts operations</strong> and damages customer trust.",
             },
             {
-                img: "/assets/images/services/technology/cloud-modernization/monthly-subscriptions-compound-without-delivering-unique-value.webp",
+                img: "/assets/images/services/icons/technology/cloud-modernization/monthly-subscriptions-compound-without-delivering-unique-value.webp",
                 text: "Security vulnerabilities <strong>expose your business</strong> to evolving threats.",
             },
         ],

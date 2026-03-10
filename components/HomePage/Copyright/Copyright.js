@@ -47,18 +47,18 @@ const Copyright = () => {
       { name: "Solution for Tech Startups", href: "/services/solution-for-techstartups" },
       { name: "Solution for Jewelers", href: "/services/solution-for-jewelers" },
     ],
-    Marketing: [
-      { name: "Marketing by SEG", href: "https://digital.socialengagementgroup.com/" },
-      { name: "Marketing for Law Firms", href: "https://digital.socialengagementgroup.com/marketing-for-law-firm" },
-      { name: "Marketing for Doctors", href: "https://digital.socialengagementgroup.com/marketing-for-doctors" },
-      { name: "Marketing for Restaurants", href: "https://digital.socialengagementgroup.com/marketing-for-restaurants" },
-    ],
     Technology: [
       { name: "AI Automation", href: "/services/ai-automation-for-business-growth" },
       { name: "Cloud Modernization", href: "/services/cloud-modernization" },
       { name: "IT Consultation", href: "/services/it-consultation" },
       { name: "SaaS Implementation", href: "/services/saas-implementation" },
       { name: "Web Application", href: "/services/web-application" },
+    ],
+    Marketing: [
+      { name: "Marketing by SEG", href: "https://digital.socialengagementgroup.com/" },
+      { name: "Marketing for Law Firms", href: "https://digital.socialengagementgroup.com/marketing-for-law-firm" },
+      { name: "Marketing for Doctors", href: "https://digital.socialengagementgroup.com/marketing-for-doctors" },
+      { name: "Marketing for Restaurants", href: "https://digital.socialengagementgroup.com/marketing-for-restaurants" },
     ],
   };
 

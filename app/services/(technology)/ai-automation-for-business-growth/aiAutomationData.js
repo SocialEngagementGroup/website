@@ -1,6 +1,6 @@
 export const aiAutomationData = {
     hero: {
-        title: "AI Automation for Business Growth | Scale Smarter & Faster",
+        title: "AI Automation for Business Growth",
         description: "Transform operations with AI automation. Boost efficiency, reduce costs, and unlock growth with intelligent systems that work 24/7 for your business.",
         subtitle: "Technology",
         ctaButton: "Connect with us",
@@ -21,19 +21,19 @@ export const aiAutomationData = {
         items: [
             {
 
-                img: "/assets/images/services/technology/ai-automation-for-business-growth/human-error-creates-costly-mistakes.webp",
+                img: "/assets/images/services/icons/technology/ai-automation-for-business-growth/human-error-creates-costly-mistakes.webp",
                 text: "Human error creates <strong>costly mistakes</strong> and inconsistent quality.",
             },
             {
-                img: "/assets/images/services/technology/ai-automation-for-business-growth/repetitive-tasks-consume-hours.webp",
+                img: "/assets/images/services/icons/technology/ai-automation-for-business-growth/repetitive-tasks-consume-hours.webp",
                 text: "Repetitive tasks <strong>consume hours</strong> that could drive strategic growth.",
             },
             {
-                img: "/assets/images/services/technology/ai-automation-for-business-growth/scaling-requires-linear-increases-in-headcount-and-overhead.webp",
+                img: "/assets/images/services/icons/technology/ai-automation-for-business-growth/scaling-requires-linear-increases-in-headcount-and-overhead.webp",
                 text: "Scaling requires <strong>linear increases</strong> in headcount and overhead.",
             },
             {
-                img: "/assets/images/services/technology/ai-automation-for-business-growth/slow-response-times-frustrate-customers.webp",
+                img: "/assets/images/services/icons/technology/ai-automation-for-business-growth/slow-response-times-frustrate-customers.webp",
                 text: "Slow response times <strong>frustrate customers</strong> and lose deals.",
             },
         ],

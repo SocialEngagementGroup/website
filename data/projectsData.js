@@ -115,32 +115,6 @@ export const projects = [
     ],
   },
   {
-    title: "Marketing",
-    color: "#1b1b1b",
-    sliderData: [
-      {
-        name: "Marketing by SEG",
-        img: "/assets/images/services/master-service-page/marketing/marketing-by-seg.webp",
-        link: "https://digital.socialengagementgroup.com/",
-      },
-      {
-        name: "Marketing for Law Firms",
-        img: "/assets/images/services/master-service-page/marketing/marketing-for-law-firms.webp",
-        link: "https://digital.socialengagementgroup.com/marketing-for-law-firm",
-      },
-      {
-        name: "Marketing for Doctors",
-        img: "/assets/images/services/master-service-page/marketing/marketing-for-doctors.webp",
-        link: "https://digital.socialengagementgroup.com/marketing-for-doctors",
-      },
-      {
-        name: "Marketing for Restaurants",
-        img: "/assets/images/services/master-service-page/marketing/marketing-for-restaurants.webp",
-        link: "https://digital.socialengagementgroup.com/marketing-for-restaurants",
-      },
-    ],
-  },
-  {
     title: "Technology",
     color: "#202020",
     sliderData: [
@@ -168,6 +142,32 @@ export const projects = [
         name: "Web Application",
         img: "/assets/images/services/master-service-page/technology/web-application.webp",
         link: "/services/web-application",
+      },
+    ],
+  },
+  {
+    title: "Marketing",
+    color: "#1b1b1b",
+    sliderData: [
+      {
+        name: "Marketing by SEG",
+        img: "/assets/images/services/master-service-page/marketing/marketing-by-seg.webp",
+        link: "https://digital.socialengagementgroup.com/",
+      },
+      {
+        name: "Marketing for Law Firms",
+        img: "/assets/images/services/master-service-page/marketing/marketing-for-law-firms.webp",
+        link: "https://digital.socialengagementgroup.com/marketing-for-law-firm",
+      },
+      {
+        name: "Marketing for Doctors",
+        img: "/assets/images/services/master-service-page/marketing/marketing-for-doctors.webp",
+        link: "https://digital.socialengagementgroup.com/marketing-for-doctors",
+      },
+      {
+        name: "Marketing for Restaurants",
+        img: "/assets/images/services/master-service-page/marketing/marketing-for-restaurants.webp",
+        link: "https://digital.socialengagementgroup.com/marketing-for-restaurants",
       },
     ],
   },

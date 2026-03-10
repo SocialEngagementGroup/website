@@ -1,6 +1,6 @@
 export const saasImplementationData = {
     hero: {
-        title: "SaaS Implementation Services | Deploy Software That Drives Results",
+        title: "SaaS Implementation",
         description: "Seamlessly implement SaaS solutions that transform operations. Expert deployment, integration, and optimization for maximum adoption and ROI.",
         subtitle: "Technology",
         ctaButton: "Connect with us",
@@ -21,19 +21,19 @@ export const saasImplementationData = {
         items: [
             {
 
-                img: "/assets/images/services/technology/saas-implementation/teams-abandon-new-software,-reverting-to-old-inefficient-processes.webp",
+                img: "/assets/images/services/icons/technology/saas-implementation/teams-abandon-new-software,-reverting-to-old-inefficient-processes.webp",
                 text: "Teams <strong>abandon new software</strong>, reverting to old inefficient processes.",
             },
             {
-                img: "/assets/images/services/technology/saas-implementation/data-silos-persist-when-systems-don_t-integrate-properly.webp",
+                img: "/assets/images/services/icons/technology/saas-implementation/data-silos-persist-when-systems-don_t-integrate-properly.webp",
                 text: "Data silos persist when systems <strong>don't integrate</strong> properly.",
             },
             {
-                img: "/assets/images/services/technology/saas-implementation/implementation-delays-disrupt-operations-and-drain-budgets.webp",
+                img: "/assets/images/services/icons/technology/saas-implementation/implementation-delays-disrupt-operations-and-drain-budgets.webp",
                 text: "Implementation delays <strong>disrupt operations</strong> and drain budgets.",
             },
             {
-                img: "/assets/images/services/technology/saas-implementation/features-go-unused-because-no-one-knows-they-exist.webp",
+                img: "/assets/images/services/icons/technology/saas-implementation/features-go-unused-because-no-one-knows-they-exist.webp",
 
                 text: "Features <strong>go unused</strong> because no one knows they exist.",
             },

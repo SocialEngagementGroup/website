@@ -1,6 +1,6 @@
 export const itConsultationData = {
     hero: {
-        title: "IT Consulting Services | Transform Technology Into Growth",
+        title: "IT Consultation",
         description: "Scale your business with strategic IT consulting. Modernize infrastructure, optimize systems, and drive efficiency with expert technology solutions.",
         subtitle: "Technology",
         ctaButton: "Connect with us",
@@ -21,19 +21,19 @@ export const itConsultationData = {
         items: [
             {
 
-                img: "/assets/images/services/technology/it-consultation/frequent-downtime-disrupts-operations.webp",
+                img: "/assets/images/services/icons/technology/it-consultation/frequent-downtime-disrupts-operations.webp",
                 text: "Frequent downtime <strong>disrupts operations</strong> and frustrates teams.",
             },
             {
-                img: "/assets/images/services/technology/it-consultation/outdated-systems-slow-productivity.webp",
+                img: "/assets/images/services/icons/technology/it-consultation/outdated-systems-slow-productivity.webp",
                 text: "Security vulnerabilities <strong>expose your business</strong> to costly breaches.",
             },
             {
-                img: "/assets/images/services/technology/it-consultation/security-vulnerabilities-expose-your-business.webp",
+                img: "/assets/images/services/icons/technology/it-consultation/security-vulnerabilities-expose-your-business.webp",
                 text: "Outdated systems <strong>slow productivity</strong> and limit scalability.",
             },
             {
-                img: "/assets/images/services/technology/it-consultation/technology-investments-fail.webp",
+                img: "/assets/images/services/icons/technology/it-consultation/technology-investments-fail.webp",
 
                 text: "Technology investments <strong>fail to deliver</strong> measurable ROI.",
             },
