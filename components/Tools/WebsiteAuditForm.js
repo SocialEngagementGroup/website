@@ -1,9 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { ArrowRight, Loader2, CheckCircle, Globe, Mail, User, Settings } from "lucide-react";
 
 export default function WebsiteAuditForm() {
+  const { executeRecaptcha } = useGoogleReCaptcha();
   const [formData, setFormData] = useState({
     url: "",
     name: "",
@@ -27,24 +29,32 @@ export default function WebsiteAuditForm() {
     setStatus("loading");
     setErrorMessage("");
 
+    if (!executeRecaptcha) {
+      setErrorMessage("reCAPTCHA not initialized. Please refresh and try again.");
+      setStatus("error");
+      return;
+    }
+
     try {
+      const token = await executeRecaptcha("website_audit");
+      if (!token) {
+        throw new Error("reCAPTCHA verification failed.");
+      }
+
       let finalUrl = formData.url.trim();
       if (!/^https?:\/\//i.test(finalUrl)) {
         finalUrl = `https://${finalUrl}`;
       }
 
-      const webhookUrl = new URL(
-        "https://n8n.socialengagementgroup.com/webhook/96175799-8858-4524-bb52-549b509866c1"
-      );
-      webhookUrl.searchParams.append("url", finalUrl);
-      webhookUrl.searchParams.append("name", formData.name);
-      webhookUrl.searchParams.append("email", formData.email);
-
-      const fetchPromise = fetch(webhookUrl.toString(), {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-        },
+      const fetchPromise = fetch("/api/audit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          url: finalUrl,
+          name: formData.name,
+          email: formData.email,
+          recaptchaToken: token,
+        }),
       });
 
       // 20 second artificial delay

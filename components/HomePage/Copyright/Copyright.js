@@ -151,7 +151,13 @@ const Copyright = () => {
         <div className="pt-10 flex flex-col md:flex-row items-center justify-between gap-10 md:gap-6 px-4 md:px-0 w-full">
           <div className="text-gray-400 text-[14px] md:text-[13px] order-2 md:order-1 flex-1 text-center md:text-left">
             All rights reserved © 2026
+            <p className="mt-2 text-[10px] opacity-40">
+              This site is protected by reCAPTCHA and the Google{" "}
+              <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer" className="underline">Privacy Policy</a> and{" "}
+              <a href="https://policies.google.com/terms" target="_blank" rel="noreferrer" className="underline">Terms of Service</a> apply.
+            </p>
           </div>
+
 
           {/* Legal Links (Bottom Middle) */}
           <div className="flex flex-col md:flex-wrap md:flex-row items-center justify-center gap-3 md:gap-6 text-gray-400 text-[14px] md:text-[14px] order-1 md:order-2 tracking-widest md:normal-case shrink-0">

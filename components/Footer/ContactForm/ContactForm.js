@@ -2,10 +2,12 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { schema } from "@/lib/validationSchema";
 
 const ContactForm = ({ layout = "stacked", className = "" }) => {
+  const { executeRecaptcha } = useGoogleReCaptcha();
   const {
     register,
     handleSubmit,
@@ -29,13 +31,24 @@ const ContactForm = ({ layout = "stacked", className = "" }) => {
   const onSubmit = async (data) => {
     setStatus('loading');
     
+    if (!executeRecaptcha) {
+      setStatus('error');
+      return;
+    }
+
     try {
-      const response = await fetch("https://n8n.socialengagementgroup.com/webhook/form-submission", {
+      const token = await executeRecaptcha("contact_form");
+      if (!token) {
+        throw new Error("reCAPTCHA failed");
+      }
+
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...data,
           pageUrl: window.location.href,
+          recaptchaToken: token,
         }),
       });
 
