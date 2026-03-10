@@ -71,6 +71,7 @@ const playfair = Playfair_Display({
 import HardLoader from "@/components/Common/HardLoader";
 import TopLoader from "@/components/Common/TopLoader";
 import { Suspense } from "react";
+import ReCaptchaProvider from "@/components/Common/ReCaptchaProvider";
 
 export default function SiteLayout({ children }) {
   return (
@@ -108,10 +109,12 @@ export default function SiteLayout({ children }) {
         </Script>
 
         <ClientEnhancements />
-        <Navbar />
-        <NavBarMobile />
-        {children}
-        <Footer />
+        <ReCaptchaProvider>
+          <Navbar />
+          <NavBarMobile />
+          {children}
+          <Footer />
+        </ReCaptchaProvider>
 
         {/* JSON-LD Structured Data */}
         <script

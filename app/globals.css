@@ -543,3 +543,10 @@ button,
     display: none;
   }
 }
+
+/* =========================================================
+   reCAPTCHA Concealment
+========================================================= */
+.grecaptcha-badge { 
+  visibility: hidden !important; 
+}

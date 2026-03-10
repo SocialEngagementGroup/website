@@ -2,9 +2,11 @@
 
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { LuArrowUpRight } from "react-icons/lu";
 
 const Newsletter = () => {
+  const { executeRecaptcha } = useGoogleReCaptcha();
   const {
     register,
     handleSubmit,
@@ -16,20 +18,27 @@ const Newsletter = () => {
 
   const onSubmit = async (data) => {
     setStatus("loading");
-    try {
-      const queryParams = new URLSearchParams({
-        Email: data.email,
-        "Lead From": window.location.href,
-        Date: new Date().toISOString().split("T")[0],
-      }).toString();
+    
+    if (!executeRecaptcha) {
+      setStatus("error");
+      return;
+    }
 
-      const response = await fetch(
-        `https://n8n.socialengagementgroup.com/webhook/f919de32-0556-47c2-ad79-460241398f9d?${queryParams}`,
-        {
-          method: "GET",
-          headers: { Accept: "application/json" },
-        }
-      );
+    try {
+      const token = await executeRecaptcha("newsletter");
+      if (!token) {
+        throw new Error("reCAPTCHA failed");
+      }
+
+      const response = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: data.email,
+          leadFrom: window.location.href,
+          recaptchaToken: token,
+        }),
+      });
 
       if (response.ok) {
         setStatus("success");
