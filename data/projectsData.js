@@ -115,6 +115,37 @@ export const projects = [
     ],
   },
   {
+    title: "Technology",
+    color: "#202020",
+    sliderData: [
+      {
+        name: "AI Automation",
+        img: "/assets/images/services/master-service-page/technology/ai-automation-for-business-growth.webp",
+        link: "/services/ai-automation-for-business-growth",
+      },
+      {
+        name: "Cloud Modernization",
+        img: "/assets/images/services/master-service-page/technology/cloud-modernization.webp",
+        link: "/services/cloud-modernization",
+      },
+      {
+        name: "IT Consultation",
+        img: "/assets/images/services/master-service-page/technology/it-consultation.webp",
+        link: "/services/it-consultation",
+      },
+      {
+        name: "SaaS Implementation",
+        img: "/assets/images/services/master-service-page/technology/saas-implementation.webp",
+        link: "/services/saas-implementation",
+      },
+      {
+        name: "Web Application",
+        img: "/assets/images/services/master-service-page/technology/web-application.webp",
+        link: "/services/web-application",
+      },
+    ],
+  },
+  {
     title: "Marketing",
     color: "#1b1b1b",
     sliderData: [

@@ -111,6 +111,26 @@ const siteMetadata = {
     title: "Digital Marketing for Jewelers & Jewelry Brands | Social Engagement Group - SEG",
     description: "Showcase your craft to the right buyers. Social Engagement Group helps jewelers build stunning brand identities, run targeted ad campaigns, and grow sales through strategic digital marketing."
   },
+  aiAutomation: {
+    title: "AI Automation for Business Growth | Scale Smarter & Faster",
+    description: "Transform operations with AI automation. Boost efficiency, reduce costs, and unlock growth with intelligent systems that work 24/7 for your business."
+  },
+  cloudModernization: {
+    title: "Cloud Modernization Services | Transform Legacy Into Agility",
+    description: "Modernize your infrastructure with strategic cloud migration. Reduce costs, boost performance, and scale effortlessly with future-ready architecture."
+  },
+  itConsultation: {
+    title: "IT Consulting Services | Transform Technology Into Growth",
+    description: "Scale your business with strategic IT consulting. Modernize infrastructure, optimize systems, and drive efficiency with expert technology solutions."
+  },
+  saasImplementation: {
+    title: "SaaS Implementation Services | Deploy Software That Drives Results",
+    description: "Seamlessly implement SaaS solutions that transform operations. Expert deployment, integration, and optimization for maximum adoption and ROI."
+  },
+  webApplication: {
+    title: "Web Application Development | Build Scalable Digital Solutions",
+    description: "Transform your business with custom web applications. Build powerful, scalable solutions that streamline operations and drive growth."
+  },
   converter: {
     title: "Free Media Converter Tool | Social Engagement Group - SEG",
     description: "Convert images, videos, and audio files instantly with Social Engagement Group's free online media conversion platform. Fast, simple, and built for creators and marketers."

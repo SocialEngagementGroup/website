@@ -47,6 +47,13 @@ const Copyright = () => {
       { name: "Solution for Tech Startups", href: "/services/solution-for-techstartups" },
       { name: "Solution for Jewelers", href: "/services/solution-for-jewelers" },
     ],
+    Technology: [
+      { name: "AI Automation", href: "/services/ai-automation-for-business-growth" },
+      { name: "Cloud Modernization", href: "/services/cloud-modernization" },
+      { name: "IT Consultation", href: "/services/it-consultation" },
+      { name: "SaaS Implementation", href: "/services/saas-implementation" },
+      { name: "Web Application", href: "/services/web-application" },
+    ],
     Marketing: [
       { name: "Marketing by SEG", href: "https://digital.socialengagementgroup.com/" },
       { name: "Marketing for Law Firms", href: "https://digital.socialengagementgroup.com/marketing-for-law-firm" },
@@ -83,42 +90,41 @@ const Copyright = () => {
 
             {/* Social Icons */}
             <div className="flex gap-4 shrink-0">
-            <Link
-              href="https://www.instagram.com/socialengagementgroup"
-              target="_blank"
-              aria-label="Follow us on Instagram"
-              rel="noopener noreferrer"
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-brand-brick border-brand-brick text-white hover:scale-110 transition-all duration-300"
-              style={{ backgroundColor: "#975554" }}
-            >
-              <RiInstagramFill size={18} />
-            </Link>
-            <Link
-              href="https://www.linkedin.com/company/social-engagement-group"
-              target="_blank"
-              aria-label="Follow us on LinkedIn"
-              rel="noopener noreferrer"
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-brand-brick border-brand-brick text-white hover:scale-110 transition-all duration-300"
-              style={{ backgroundColor: "#975554" }}
-            >
-              <FaLinkedinIn size={18} />
-            </Link>
-            <Link
-              href="https://www.facebook.com/seg.socialengagementgroup/"
-              target="_blank"
-              aria-label="Follow us on Facebook"
-              rel="noopener noreferrer"
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-brand-brick border-brand-brick text-white hover:scale-110 transition-all duration-300"
-              style={{ backgroundColor: "#975554" }}
-            >
-              <FaFacebookF size={18} />
-            </Link>
+              <Link
+                href="https://www.instagram.com/socialengagementgroup"
+                target="_blank"
+                aria-label="Follow us on Instagram"
+                rel="noopener noreferrer"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-brand-brick border-brand-brick text-white hover:scale-110 transition-all duration-300"
+                style={{ backgroundColor: "#975554" }}
+              >
+                <RiInstagramFill size={18} />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/company/social-engagement-group"
+                target="_blank"
+                aria-label="Follow us on LinkedIn"
+                rel="noopener noreferrer"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-brand-brick border-brand-brick text-white hover:scale-110 transition-all duration-300"
+                style={{ backgroundColor: "#975554" }}
+              >
+                <FaLinkedinIn size={18} />
+              </Link>
+              <Link
+                href="https://www.facebook.com/seg.socialengagementgroup/"
+                target="_blank"
+                aria-label="Follow us on Facebook"
+                rel="noopener noreferrer"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-brand-brick border-brand-brick text-white hover:scale-110 transition-all duration-300"
+                style={{ backgroundColor: "#975554" }}
+              >
+                <FaFacebookF size={18} />
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
 
-        {/* Second Row: Main Sitemap Grid (5 Columns) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-16 border-b border-white/10 px-4 md:px-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-12 pb-16 border-b border-white/10 px-4 md:px-0">
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category} className="space-y-4 text-center md:text-left">
               <h4 className="!text-[16px] md:!text-[14px] font-bold text-white tracking-wide uppercase">
