@@ -1,4 +1,13 @@
 import { NextResponse } from "next/server";
+import { rateLimit } from "@/lib/rate-limit";
+import * as yup from "yup";
+
+const auditSchema = yup.object({
+  url: yup.string().required().max(500),
+  name: yup.string().required().max(100),
+  email: yup.string().email().required().max(150),
+  recaptchaToken: yup.string().required(),
+});
 
 function fetchWithTimeout(url, options = {}, timeoutMs = 20000) {
   const controller = new AbortController();
@@ -9,16 +18,24 @@ function fetchWithTimeout(url, options = {}, timeoutMs = 20000) {
 }
 
 export async function POST(req) {
-  try {
-    const { url, name, email, recaptchaToken } = await req.json();
+  // Rate Limit: Max 3 requests per 1 minute per IP
+  const rateLimitError = rateLimit(req, 3, 60 * 1000);
+  if (rateLimitError) return rateLimitError;
 
-    // 1) reCAPTCHA token required
-    if (!recaptchaToken) {
+  try {
+    const body = await req.json();
+    let validatedData;
+    
+    try {
+      validatedData = await auditSchema.validate(body, { abortEarly: false });
+    } catch (validationError) {
       return NextResponse.json(
-        { success: false, error: "Missing reCAPTCHA token" },
+        { success: false, error: "Validation failed", details: validationError.errors },
         { status: 400 }
       );
     }
+    
+    const { url, name, email, recaptchaToken } = validatedData;
 
     // 2) Verify reCAPTCHA with Google
     const secret = process.env.RECAPTCHA_SECRET_KEY;
@@ -41,12 +58,21 @@ export async function POST(req) {
 
     const verifyData = await verifyRes.json();
 
-    if (!verifyData.success || verifyData.score < 0.5) {
+    const actualHostname = verifyData.hostname || "";
+    const expectedHostname = process.env.NEXT_PUBLIC_SITE_URL 
+      ? new URL(process.env.NEXT_PUBLIC_SITE_URL).hostname 
+      : "socialengagementgroup.com";
+
+    if (
+      !verifyData.success ||
+      verifyData.score < 0.5 ||
+      verifyData.action !== "website_audit" ||
+      !(actualHostname === expectedHostname || actualHostname === "localhost" || actualHostname === "127.0.0.1")
+    ) {
       return NextResponse.json(
         {
           success: false,
           error: "reCAPTCHA verification failed",
-          score: verifyData.score,
         },
         { status: 400 }
       );
@@ -62,15 +88,13 @@ export async function POST(req) {
     }
 
     const targetUrl = new URL(webhookUrl);
-    targetUrl.searchParams.append("url", url);
-    targetUrl.searchParams.append("name", name);
-    targetUrl.searchParams.append("email", email);
 
     const n8nRes = await fetchWithTimeout(
       targetUrl.toString(),
       {
-        method: "GET",
-        headers: { Accept: "application/json" },
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({ url, name, email }),
       },
       20000
     );

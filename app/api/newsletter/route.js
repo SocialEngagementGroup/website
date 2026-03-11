@@ -1,4 +1,12 @@
 import { NextResponse } from "next/server";
+import { rateLimit } from "@/lib/rate-limit";
+import * as yup from "yup";
+
+const newsletterSchema = yup.object({
+  email: yup.string().email().required().max(150),
+  leadFrom: yup.string().max(150).optional(),
+  recaptchaToken: yup.string().required(),
+});
 
 function fetchWithTimeout(url, options = {}, timeoutMs = 20000) {
   const controller = new AbortController();
@@ -9,16 +17,24 @@ function fetchWithTimeout(url, options = {}, timeoutMs = 20000) {
 }
 
 export async function POST(req) {
-  try {
-    const { email, leadFrom, recaptchaToken } = await req.json();
+  // Rate Limit: Max 5 requests per 1 minute per IP
+  const rateLimitError = rateLimit(req, 5, 60 * 1000);
+  if (rateLimitError) return rateLimitError;
 
-    // 1) reCAPTCHA token required
-    if (!recaptchaToken) {
+  try {
+    const body = await req.json();
+    let validatedData;
+    
+    try {
+      validatedData = await newsletterSchema.validate(body, { abortEarly: false });
+    } catch (validationError) {
       return NextResponse.json(
-        { success: false, error: "Missing reCAPTCHA token" },
+        { success: false, error: "Validation failed", details: validationError.errors },
         { status: 400 }
       );
     }
+    
+    const { email, leadFrom, recaptchaToken } = validatedData;
 
     // 2) Verify reCAPTCHA with Google
     const secret = process.env.RECAPTCHA_SECRET_KEY;
@@ -42,14 +58,22 @@ export async function POST(req) {
     const verifyData = await verifyRes.json();
     console.log("reCAPTCHA verify response:", JSON.stringify(verifyData));
 
-    if (!verifyData.success || verifyData.score < 0.5) {
-      console.log("reCAPTCHA REJECTED - success:", verifyData.success, "score:", verifyData.score, "error-codes:", verifyData["error-codes"]);
+    const actualHostname = verifyData.hostname || "";
+    const expectedHostname = process.env.NEXT_PUBLIC_SITE_URL 
+      ? new URL(process.env.NEXT_PUBLIC_SITE_URL).hostname 
+      : "socialengagementgroup.com";
+
+    if (
+      !verifyData.success ||
+      verifyData.score < 0.5 ||
+      verifyData.action !== "newsletter" ||
+      !(actualHostname === expectedHostname || actualHostname === "localhost" || actualHostname === "127.0.0.1")
+    ) {
+      console.log("reCAPTCHA REJECTED - success:", verifyData.success, "score:", verifyData.score, "action:", verifyData.action, "hostname:", actualHostname);
       return NextResponse.json(
         {
           success: false,
           error: "reCAPTCHA verification failed",
-          score: verifyData.score,
-          details: verifyData,
         },
         { status: 400 }
       );
@@ -64,17 +88,16 @@ export async function POST(req) {
       );
     }
 
-    const queryParams = new URLSearchParams({
-      Email: email,
-      "Lead From": leadFrom,
-      Date: new Date().toISOString().split("T")[0],
-    }).toString();
-
     const n8nRes = await fetchWithTimeout(
-      `${webhookUrl}?${queryParams}`,
+      webhookUrl,
       {
-        method: "GET",
-        headers: { Accept: "application/json" },
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          Email: email,
+          "Lead From": leadFrom,
+          Date: new Date().toISOString().split("T")[0],
+        }),
       },
       20000
     );
