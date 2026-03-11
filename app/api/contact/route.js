@@ -76,16 +76,10 @@ export async function POST(req) {
 
     const verifyData = await verifyRes.json();
 
-    const actualHostname = verifyData.hostname || "";
-    const expectedHostname = process.env.NEXT_PUBLIC_SITE_URL 
-      ? new URL(process.env.NEXT_PUBLIC_SITE_URL).hostname 
-      : "socialengagementgroup.com";
-
     if (
       !verifyData.success ||
       verifyData.score < 0.5 ||
-      verifyData.action !== "contact_form" ||
-      !(actualHostname === expectedHostname || actualHostname === "localhost" || actualHostname === "127.0.0.1")
+      verifyData.action !== "contact_form"
     ) {
       return NextResponse.json(
         {
