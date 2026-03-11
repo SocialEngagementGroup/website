@@ -58,16 +58,10 @@ export async function POST(req) {
     const verifyData = await verifyRes.json();
     console.log("reCAPTCHA verify response:", JSON.stringify(verifyData));
 
-    const actualHostname = verifyData.hostname || "";
-    const expectedHostname = process.env.NEXT_PUBLIC_SITE_URL 
-      ? new URL(process.env.NEXT_PUBLIC_SITE_URL).hostname 
-      : "socialengagementgroup.com";
-
     if (
       !verifyData.success ||
       verifyData.score < 0.5 ||
-      verifyData.action !== "newsletter" ||
-      !(actualHostname === expectedHostname || actualHostname === "localhost" || actualHostname === "127.0.0.1")
+      verifyData.action !== "newsletter"
     ) {
       console.log("reCAPTCHA REJECTED - success:", verifyData.success, "score:", verifyData.score, "action:", verifyData.action, "hostname:", actualHostname);
       return NextResponse.json(
