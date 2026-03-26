@@ -86,9 +86,21 @@ const ProfessionalBranding = ({ heading, items, video }) => {
                 preload="auto"
                 controls={false}
                 disablePictureInPicture
-                // handled via useEffect
+                key={video} // Add key to force reload if video path changes
               >
-                <source src={video} type="video/mp4" />
+                {/* 
+                  Prioritize MP4 for Safari/iOS compatibility. 
+                  If the source is already webm, we check for a corresponding mp4.
+                */}
+                {video.endsWith(".webm") ? (
+                  <>
+                    <source src={video.replace(".webm", ".mp4")} type="video/mp4" />
+                    <source src={video} type="video/webm" />
+                  </>
+                ) : (
+                  <source src={video} type="video/mp4" />
+                )}
+                Your browser does not support the video tag.
               </video>
             </div>
           </div>
