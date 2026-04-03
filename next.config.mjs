@@ -30,6 +30,21 @@ const nextConfig = {
           },
         ],
       },
+      {
+        // iOS Safari requires byte-range support to stream MP4 video.
+        // Without Accept-Ranges it may silently refuse to play even with a valid source.
+        source: "/assets/videos/:path*",
+        headers: [
+          {
+            key: "Accept-Ranges",
+            value: "bytes",
+          },
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
     ];
   },
 };

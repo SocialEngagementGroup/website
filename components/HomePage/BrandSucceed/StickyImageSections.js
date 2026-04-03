@@ -71,9 +71,10 @@ const SectionItem = ({ section, index, setActiveVideo }) => {
           muted
           loop
           playsInline
-          preload="auto"
+          preload="metadata"
         >
           <source src={section.video} type="video/webm" />
+          <source src={section.video?.replace(".webm", ".mp4")} type="video/mp4" />
         </video>
       </div>
     </div>
@@ -117,9 +118,10 @@ const ScrollStickySections = () => {
                   muted
                   loop
                   playsInline
-                  preload="auto"
+                  preload="metadata"
                 >
                   <source src={activeVideo} type="video/webm" />
+                  <source src={activeVideo?.replace(".webm", ".mp4")} type="video/mp4" />
                 </video>
               </motion.div>
             </AnimatePresence>

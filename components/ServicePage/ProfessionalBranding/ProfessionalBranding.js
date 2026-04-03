@@ -83,23 +83,22 @@ const ProfessionalBranding = ({ heading, items, video }) => {
                 muted
                 loop
                 playsInline
-                preload="auto"
+                preload="metadata"
                 controls={false}
                 disablePictureInPicture
                 key={video} // Add key to force reload if video path changes
               >
-                {/* 
-                  Prioritize MP4 for Safari/iOS compatibility. 
-                  If the source is already webm, we check for a corresponding mp4.
+                {/*
+                  WebM (VP9) for modern browsers; H.264 MP4 fallback for iOS Safari & older browsers.
                 */}
-                {video.endsWith(".webm") ? (
+                {video && video.endsWith(".webm") ? (
                   <>
-                    <source src={video.replace(".webm", ".mp4")} type="video/mp4" />
                     <source src={video} type="video/webm" />
+                    <source src={video.replace(".webm", ".mp4")} type="video/mp4" />
                   </>
-                ) : (
+                ) : video ? (
                   <source src={video} type="video/mp4" />
-                )}
+                ) : null}
                 Your browser does not support the video tag.
               </video>
             </div>
