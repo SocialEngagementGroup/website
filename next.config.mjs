@@ -47,6 +47,16 @@ const nextConfig = {
       },
     ];
   },
+  redirects: async () => {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "socialengagementgroup.com" }],
+        destination: "https://www.socialengagementgroup.com/:path*",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

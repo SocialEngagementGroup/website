@@ -8,12 +8,16 @@ import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrate
 import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
+import ServiceSeoJsonLd from "@/components/Seo/ServiceSeoJsonLd";
 
 import siteMetadata from "@/data/metadata";
 
 export const metadata = {
   title: siteMetadata.animation3d.title,
   description: siteMetadata.animation3d.description,
+  alternates: {
+    canonical: "/services/3D-animation-and-rendering",
+  },
   openGraph: {
     title: siteMetadata.animation3d.title,
     description: siteMetadata.animation3d.description,
@@ -29,6 +33,12 @@ export const metadata = {
 export default function Page() {
   return (
     <>
+      <ServiceSeoJsonLd
+        title={siteMetadata.animation3d.title}
+        description={siteMetadata.animation3d.description}
+        path="/services/3D-animation-and-rendering"
+        faqItems={threeDAnimationRenderingData.FAQ.items}
+      />
       <HeroSection {...threeDAnimationRenderingData.hero} />
       <IntroSection {...threeDAnimationRenderingData.intro} />
       <TrustBar {...threeDAnimationRenderingData.trustBar} />

@@ -10,6 +10,7 @@ import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrate
 import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
+import ServiceSeoJsonLd from "@/components/Seo/ServiceSeoJsonLd";
 
 
 import siteMetadata from "@/data/metadata";
@@ -17,6 +18,9 @@ import siteMetadata from "@/data/metadata";
 export const metadata = {
   title: siteMetadata.socialMediaContent.title,
   description: siteMetadata.socialMediaContent.description,
+  alternates: {
+    canonical: "/services/social-media-content",
+  },
   openGraph: {
     title: siteMetadata.socialMediaContent.title,
     description: siteMetadata.socialMediaContent.description,
@@ -32,6 +36,12 @@ export const metadata = {
 export default function Page() {
   return (
     <>
+      <ServiceSeoJsonLd
+        title={siteMetadata.socialMediaContent.title}
+        description={siteMetadata.socialMediaContent.description}
+        path="/services/social-media-content"
+        faqItems={socialMediaContentData.FAQ.items}
+      />
   <HeroSection {...socialMediaContentData.hero} />
       <IntroSection {...socialMediaContentData.intro} />
       <TrustBar {...socialMediaContentData.trustBar} />

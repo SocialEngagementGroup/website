@@ -9,11 +9,15 @@ import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 
 import { retargetingRemarketingData } from "./retargetingRemarketingData";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
+import ServiceSeoJsonLd from "@/components/Seo/ServiceSeoJsonLd";
 import siteMetadata from "@/data/metadata";
 
 export const metadata = {
   title: siteMetadata.retargeting.title,
   description: siteMetadata.retargeting.description,
+  alternates: {
+    canonical: "/services/retargeting-and-remarketing",
+  },
   openGraph: {
     title: siteMetadata.retargeting.title,
     description: siteMetadata.retargeting.description,
@@ -28,6 +32,12 @@ export const metadata = {
 export default function Page() {
   return (
     <>
+      <ServiceSeoJsonLd
+        title={siteMetadata.retargeting.title}
+        description={siteMetadata.retargeting.description}
+        path="/services/retargeting-and-remarketing"
+        faqItems={retargetingRemarketingData.FAQ.items}
+      />
       <HeroSection {...retargetingRemarketingData.hero} />
       <IntroSection {...retargetingRemarketingData.intro} />
       <TrustBar {...retargetingRemarketingData.trustBar} />

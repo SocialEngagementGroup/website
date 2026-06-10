@@ -4,6 +4,9 @@ import siteMetadata from "@/data/metadata";
 export const metadata = {
   title: siteMetadata.legal.title,
   description: siteMetadata.legal.description,
+  alternates: {
+    canonical: "/legal-notice",
+  },
   openGraph: {
     title: siteMetadata.legal.title,
     description: siteMetadata.legal.description,

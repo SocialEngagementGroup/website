@@ -8,12 +8,16 @@ import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrate
 import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
+import ServiceSeoJsonLd from "@/components/Seo/ServiceSeoJsonLd";
 
 import siteMetadata from "@/data/metadata";
 
 export const metadata = {
   title: siteMetadata.googleLocalAds.title,
   description: siteMetadata.googleLocalAds.description,
+  alternates: {
+    canonical: "/services/google-location-services-ads",
+  },
   openGraph: {
     title: siteMetadata.googleLocalAds.title,
     description: siteMetadata.googleLocalAds.description,
@@ -29,6 +33,12 @@ export const metadata = {
 export default function Page() {
   return (
     <>
+      <ServiceSeoJsonLd
+        title={siteMetadata.googleLocalAds.title}
+        description={siteMetadata.googleLocalAds.description}
+        path="/services/google-location-services-ads"
+        faqItems={googleLocationServicesAdsData.FAQ.items}
+      />
       <HeroSection {...googleLocationServicesAdsData.hero} />
       <IntroSection {...googleLocationServicesAdsData.intro} />
       <TrustBar {...googleLocationServicesAdsData.trustBar} />

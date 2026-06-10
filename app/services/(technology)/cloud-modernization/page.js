@@ -8,12 +8,16 @@ import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrate
 import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
+import ServiceSeoJsonLd from "@/components/Seo/ServiceSeoJsonLd";
 
 import siteMetadata from "@/data/metadata";
 
 export const metadata = {
     title: siteMetadata.cloudModernization.title,
     description: siteMetadata.cloudModernization.description,
+  alternates: {
+    canonical: "/services/cloud-modernization",
+  },
     openGraph: {
         title: siteMetadata.cloudModernization.title,
         description: siteMetadata.cloudModernization.description,
@@ -28,6 +32,12 @@ export const metadata = {
 export default function Page() {
     return (
         <>
+      <ServiceSeoJsonLd
+        title={siteMetadata.cloudModernization.title}
+        description={siteMetadata.cloudModernization.description}
+        path="/services/cloud-modernization"
+        faqItems={cloudModernizationData.FAQ.items}
+      />
             <HeroSection {...cloudModernizationData.hero} />
             <IntroSection {...cloudModernizationData.intro} />
             <TrustBar {...cloudModernizationData.trustBar} />

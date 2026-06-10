@@ -8,12 +8,16 @@ import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrate
 import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
+import ServiceSeoJsonLd from "@/components/Seo/ServiceSeoJsonLd";
 
 import siteMetadata from "@/data/metadata";
 
 export const metadata = {
     title: siteMetadata.aiAutomation.title,
     description: siteMetadata.aiAutomation.description,
+  alternates: {
+    canonical: "/services/ai-automation-for-business-growth",
+  },
     openGraph: {
         title: siteMetadata.aiAutomation.title,
         description: siteMetadata.aiAutomation.description,
@@ -28,6 +32,12 @@ export const metadata = {
 export default function Page() {
     return (
         <>
+      <ServiceSeoJsonLd
+        title={siteMetadata.aiAutomation.title}
+        description={siteMetadata.aiAutomation.description}
+        path="/services/ai-automation-for-business-growth"
+        faqItems={aiAutomationData.FAQ.items}
+      />
             <HeroSection {...aiAutomationData.hero} />
             <IntroSection {...aiAutomationData.intro} />
             <TrustBar {...aiAutomationData.trustBar} />

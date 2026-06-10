@@ -10,12 +10,16 @@ import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 
 import { ppcCampaignsData } from "./ppcCampaignsData";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
+import ServiceSeoJsonLd from "@/components/Seo/ServiceSeoJsonLd";
 
 import siteMetadata from "@/data/metadata";
 
 export const metadata = {
   title: siteMetadata.ppc.title,
   description: siteMetadata.ppc.description,
+  alternates: {
+    canonical: "/services/ppc-campaigns",
+  },
   openGraph: {
     title: siteMetadata.ppc.title,
     description: siteMetadata.ppc.description,
@@ -29,6 +33,12 @@ export const metadata = {
 export default function Page() {
   return (
     <>
+      <ServiceSeoJsonLd
+        title={siteMetadata.ppc.title}
+        description={siteMetadata.ppc.description}
+        path="/services/ppc-campaigns"
+        faqItems={ppcCampaignsData.FAQ.items}
+      />
       <HeroSection {...ppcCampaignsData.hero} />
       <IntroSection {...ppcCampaignsData.intro} />
       <TrustBar {...ppcCampaignsData.trustBar} />

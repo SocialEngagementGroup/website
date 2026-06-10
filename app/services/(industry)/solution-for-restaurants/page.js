@@ -8,12 +8,16 @@ import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrate
 import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
+import ServiceSeoJsonLd from "@/components/Seo/ServiceSeoJsonLd";
 
 import siteMetadata from "@/data/metadata";
 
 export const metadata = {
   title: siteMetadata.restaurants.title,
   description: siteMetadata.restaurants.description,
+  alternates: {
+    canonical: "/services/solution-for-restaurants",
+  },
   openGraph: {
     title: siteMetadata.restaurants.title,
     description: siteMetadata.restaurants.description,
@@ -28,6 +32,12 @@ export const metadata = {
 export default function Page() {
   return (
     <>
+      <ServiceSeoJsonLd
+        title={siteMetadata.restaurants.title}
+        description={siteMetadata.restaurants.description}
+        path="/services/solution-for-restaurants"
+        faqItems={solutionForRestaurantsData.FAQ.items}
+      />
       <HeroSection {...solutionForRestaurantsData.hero} />
       <IntroSection {...solutionForRestaurantsData.intro} />
       <TrustBar {...solutionForRestaurantsData.trustBar} />

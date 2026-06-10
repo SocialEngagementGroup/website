@@ -4,6 +4,9 @@ import siteMetadata from "@/data/metadata";
 export const metadata = {
   title: siteMetadata.cookies.title,
   description: siteMetadata.cookies.description,
+  alternates: {
+    canonical: "/cookies",
+  },
   openGraph: {
     title: siteMetadata.cookies.title,
     description: siteMetadata.cookies.description,

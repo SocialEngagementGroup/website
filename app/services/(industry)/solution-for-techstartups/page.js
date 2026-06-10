@@ -8,12 +8,16 @@ import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrate
 import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
+import ServiceSeoJsonLd from "@/components/Seo/ServiceSeoJsonLd";
 
 import siteMetadata from "@/data/metadata";
 
 export const metadata = {
   title: siteMetadata.techStartups.title,
   description: siteMetadata.techStartups.description,
+  alternates: {
+    canonical: "/services/solution-for-techstartups",
+  },
   openGraph: {
     title: siteMetadata.techStartups.title,
     description: siteMetadata.techStartups.description,
@@ -28,6 +32,12 @@ export const metadata = {
 export default function Page() {
   return (
     <>
+      <ServiceSeoJsonLd
+        title={siteMetadata.techStartups.title}
+        description={siteMetadata.techStartups.description}
+        path="/services/solution-for-techstartups"
+        faqItems={solutionForTechStartupsData.FAQ.items}
+      />
       <HeroSection {...solutionForTechStartupsData.hero} />
       <IntroSection {...solutionForTechStartupsData.intro} />
       <TrustBar {...solutionForTechStartupsData.trustBar} />

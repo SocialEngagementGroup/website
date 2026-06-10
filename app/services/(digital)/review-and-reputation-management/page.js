@@ -10,12 +10,16 @@ import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 
 import { reviewReputationManagementData } from "./reviewReputationManagementData";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
+import ServiceSeoJsonLd from "@/components/Seo/ServiceSeoJsonLd";
 
 import siteMetadata from "@/data/metadata";
 
 export const metadata = {
   title: siteMetadata.reputationManagement.title,
   description: siteMetadata.reputationManagement.description,
+  alternates: {
+    canonical: "/services/review-and-reputation-management",
+  },
   openGraph: {
     title: siteMetadata.reputationManagement.title,
     description: siteMetadata.reputationManagement.description,
@@ -30,6 +34,12 @@ export const metadata = {
 export default function Page() {
   return (
     <>
+      <ServiceSeoJsonLd
+        title={siteMetadata.reputationManagement.title}
+        description={siteMetadata.reputationManagement.description}
+        path="/services/review-and-reputation-management"
+        faqItems={reviewReputationManagementData.FAQ.items}
+      />
       <HeroSection {...reviewReputationManagementData.hero} />
       <IntroSection {...reviewReputationManagementData.intro} />
       <TrustBar {...reviewReputationManagementData.trustBar} />

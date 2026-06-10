@@ -4,6 +4,9 @@ import siteMetadata from "@/data/metadata";
 export const metadata = {
   title: siteMetadata.terms.title,
   description: siteMetadata.terms.description,
+  alternates: {
+    canonical: "/terms-and-conditions",
+  },
   openGraph: {
     title: siteMetadata.terms.title,
     description: siteMetadata.terms.description,

@@ -5,6 +5,9 @@ import siteMetadata from "@/data/metadata";
 export const metadata = {
   title: siteMetadata.contact.title,
   description: siteMetadata.contact.description,
+  alternates: {
+    canonical: "/contact-us",
+  },
   openGraph: {
     title: siteMetadata.contact.title,
     description: siteMetadata.contact.description,

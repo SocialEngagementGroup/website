@@ -4,6 +4,9 @@ import siteMetadata from "@/data/metadata";
 export const metadata = {
   title: siteMetadata.privacy.title,
   description: siteMetadata.privacy.description,
+  alternates: {
+    canonical: "/privacy-policy",
+  },
   openGraph: {
     title: siteMetadata.privacy.title,
     description: siteMetadata.privacy.description,

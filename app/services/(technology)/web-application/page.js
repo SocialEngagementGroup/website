@@ -8,12 +8,16 @@ import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrate
 import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
+import ServiceSeoJsonLd from "@/components/Seo/ServiceSeoJsonLd";
 
 import siteMetadata from "@/data/metadata";
 
 export const metadata = {
     title: siteMetadata.webApplication.title,
     description: siteMetadata.webApplication.description,
+  alternates: {
+    canonical: "/services/web-application",
+  },
     openGraph: {
         title: siteMetadata.webApplication.title,
         description: siteMetadata.webApplication.description,
@@ -28,6 +32,12 @@ export const metadata = {
 export default function Page() {
     return (
         <>
+      <ServiceSeoJsonLd
+        title={siteMetadata.webApplication.title}
+        description={siteMetadata.webApplication.description}
+        path="/services/web-application"
+        faqItems={webApplicationData.FAQ.items}
+      />
             <HeroSection {...webApplicationData.hero} />
             <IntroSection {...webApplicationData.intro} />
             <TrustBar {...webApplicationData.trustBar} />
