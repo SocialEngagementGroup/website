@@ -7,8 +7,9 @@ import {
   Briefcase,
   Calendar,
   Check,
+  Lock,
 } from "lucide-react";
-import { getJobBySlug } from "@/data/jobsData";
+import { getJobBySlug, isJobOpen } from "@/data/jobsData";
 import siteMetadata from "@/data/metadata";
 
 export async function generateMetadata({ params }) {
@@ -44,6 +45,7 @@ export async function generateMetadata({ params }) {
 export default async function JobDetailPage({ params }) {
   const { slug } = await params;
   const job = slug ? getJobBySlug(slug) : undefined;
+  const open = job ? isJobOpen(job) : false;
 
   return (
     <main className="min-h-screen bg-brand-gray relative overflow-hidden">
@@ -95,10 +97,17 @@ export default async function JobDetailPage({ params }) {
                   <Briefcase className="w-3.5 h-3.5" />
                   {job.experience}
                 </span>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium bg-white border border-gray-200 text-gray-600">
-                  <Calendar className="w-3.5 h-3.5" />
-                  Apply by {job.deadline}
-                </span>
+                {open ? (
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium bg-white border border-gray-200 text-gray-600">
+                    <Calendar className="w-3.5 h-3.5" />
+                    Apply by {job.deadline}
+                  </span>
+                ) : (
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium bg-red-50 border border-red-200 text-red-600">
+                    <Lock className="w-3.5 h-3.5" />
+                    Application Closed
+                  </span>
+                )}
                 <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium bg-white border border-gray-200 text-gray-600">
                   <Globe className="w-3.5 h-3.5" />
                   {job.location}
@@ -217,26 +226,41 @@ export default async function JobDetailPage({ params }) {
 
               {/* Apply CTA */}
               <section className="pt-6 border-t border-gray-200">
-                <div className="bg-white rounded-2xl p-6 sm:p-8 border border-gray-200">
-                  <h3 className="!text-lg sm:!text-xl font-bold text-gray-900 mb-3" style={{ textTransform: 'none' }}>
-                    Interested in this role?
-                  </h3>
-                  <p className="p3 text-gray-600 leading-relaxed mb-3">
-                    Send your resume and portfolio (if applicable) to{" "}
-                    <a
-                      href={`mailto:communications@socialengagementgroup.com?subject=${encodeURIComponent(`${job.title} - [Your Name]`)}`}
-                      className="text-brand-brick font-semibold hover:text-gray-900 hover:underline transition-colors break-all cursor-pointer"
+                {open ? (
+                  <div className="bg-white rounded-2xl p-6 sm:p-8 border border-gray-200">
+                    <h3 className="!text-lg sm:!text-xl font-bold text-gray-900 mb-3" style={{ textTransform: 'none' }}>
+                      Interested in this role?
+                    </h3>
+                    <p className="p3 text-gray-600 leading-relaxed mb-5">
+                      We&apos;d love to hear from you. Reach out through our
+                      contact page and we&apos;ll get back to you about next
+                      steps.
+                    </p>
+                    <Link
+                      href="/contact-us"
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-brand-brick text-white font-medium rounded-full hover:bg-gray-900 transition-all duration-200 cursor-pointer"
                     >
-                      communications@socialengagementgroup.com
-                    </a>
-                  </p>
-                  <p className="p3 text-gray-500">
-                    Use subject format:{" "}
-                    <span className="font-medium text-gray-700">
-                      {job.title} - [Your Name]
-                    </span>
-                  </p>
-                </div>
+                      Apply Now
+                    </Link>
+                  </div>
+                ) : (
+                  <div className="bg-red-50 rounded-2xl p-6 sm:p-8 border border-red-200">
+                    <h3 className="!text-lg sm:!text-xl font-bold text-gray-900 mb-3 inline-flex items-center gap-2" style={{ textTransform: 'none' }}>
+                      <Lock className="w-5 h-5 text-red-600" />
+                      Application Closed
+                    </h3>
+                    <p className="p3 text-gray-600 leading-relaxed mb-5">
+                      We&apos;re no longer accepting applications for this role.
+                      Browse our other opportunities to find your fit.
+                    </p>
+                    <Link
+                      href="/careers"
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-brand-brick text-white font-medium rounded-full hover:bg-gray-900 transition-all duration-200 cursor-pointer"
+                    >
+                      View Open Jobs
+                    </Link>
+                  </div>
+                )}
               </section>
             </div>
           </div>

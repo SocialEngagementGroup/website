@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowUpRight, Clock, Calendar } from "lucide-react";
+import { ArrowUpRight, Clock, Calendar, Lock } from "lucide-react";
+import { isJobOpen } from "@/data/jobsData";
 
 /**
  * JobCard Component
@@ -9,6 +10,8 @@ import { ArrowUpRight, Clock, Calendar } from "lucide-react";
  * Primary: brand-brick, Hover: black
  */
 const JobCard = ({ job }) => {
+  const open = isJobOpen(job);
+
   return (
     <div className="group py-5 sm:py-6 border-b border-gray-200 last:border-b-0">
       <div className="flex flex-col gap-3 sm:gap-4">
@@ -44,10 +47,17 @@ const JobCard = ({ job }) => {
             <Clock className="w-3.5 h-3.5" />
             {job.type}
           </span>
-          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium bg-white border border-gray-200 text-gray-600">
-            <Calendar className="w-3.5 h-3.5" />
-            Apply by {job.deadline}
-          </span>
+          {open ? (
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium bg-white border border-gray-200 text-gray-600">
+              <Calendar className="w-3.5 h-3.5" />
+              Apply by {job.deadline}
+            </span>
+          ) : (
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium bg-red-50 border border-red-200 text-red-600">
+              <Lock className="w-3.5 h-3.5" />
+              Application Closed
+            </span>
+          )}
         </div>
       </div>
     </div>

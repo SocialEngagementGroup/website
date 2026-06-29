@@ -5,8 +5,8 @@
  */
 
 export const jobFilters = [
+  { value: "open", label: "Open Jobs" },
   { value: "all", label: "View All" },
-  { value: "open", label: "Open Positions" },
 ];
 
 export const allJobs = [
@@ -179,6 +179,15 @@ export const allJobs = [
 
 // Active/open jobs only
 export const jobs = allJobs.filter((job) => job.active);
+
+// Whether a job is still open for applications (deadline today or in the future)
+export const isJobOpen = (job) => {
+  if (!job?.deadline || job.deadline.trim() === "") return false;
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const deadlineDate = new Date(job.deadline);
+  return deadlineDate >= today;
+};
 
 // Get a single job by slug
 export const getJobBySlug = (slug) => {
