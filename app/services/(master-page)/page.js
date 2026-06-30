@@ -3,6 +3,7 @@ import HeroSection from "@/components/MasterServicesPage/HeroSection/HeroSection
 import AutoSlider from "@/components/MasterServicesPage/AutoSlider/AutoSlider";
 import { CreativeData, Digital, Industry, Marketing, Technology } from "./sliderData";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
+import RelatedBlogs from "@/components/BlogPage/RelatedBlogs";
 import siteMetadata from "@/data/metadata";
 
 export const metadata = {
@@ -68,6 +69,8 @@ const MasterServicesPage = () => {
           </section>
         </div>
       </div>
+
+      <RelatedBlogs />
     </div>
   );
 };

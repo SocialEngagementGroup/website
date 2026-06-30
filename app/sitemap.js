@@ -1,3 +1,5 @@
+import { blogs } from "@/data/blogsData";
+
 export default function sitemap() {
   const baseUrl = "https://socialengagementgroup.com";
 
@@ -7,6 +9,7 @@ export default function sitemap() {
 
     "/contact-us",
     "/careers",
+    "/blog",
     "/services",
     "/cookies",
     "/legal-notice",
@@ -56,5 +59,15 @@ export default function sitemap() {
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...serviceRoutes];
+  // Blog post pages (published articles only)
+  const blogRoutes = blogs.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: post.dateModified || post.datePublished
+      ? new Date(post.dateModified || post.datePublished)
+      : new Date(),
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  return [...staticRoutes, ...serviceRoutes, ...blogRoutes];
 }
