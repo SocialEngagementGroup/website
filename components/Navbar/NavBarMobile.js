@@ -9,7 +9,8 @@ import { Phone } from "lucide-react";
 
 export default function NavBarMobile() {
   const pathname = usePathname();
-  const isCareersPage = pathname.startsWith("/careers");
+  const isCareersPage =
+    pathname.startsWith("/careers") || pathname.startsWith("/blog");
   const [isSticky, setIsSticky] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mobileActiveCategory, setMobileActiveCategory] = useState(null);
@@ -192,10 +193,17 @@ export default function NavBarMobile() {
 
               <div
                 className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                  mobileResourcesOpen ? "max-h-[200px] opacity-100 pb-4" : "max-h-0 opacity-0"
+                  mobileResourcesOpen ? "max-h-[300px] opacity-100 pb-4" : "max-h-0 opacity-0"
                 }`}
               >
                 <div className="flex flex-col space-y-1 mt-2">
+                  <Link
+                    href="/blog"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="w-full flex items-center px-4 py-4 rounded-xl transition-all border-l-[3px] border-transparent hover:bg-white/5 text-[16px] font-sans tracking-[0.1em] font-bold text-white/60 hover:text-white"
+                  >
+                    Blog
+                  </Link>
                   <Link
                     href="/careers"
                     onClick={() => setIsMobileMenuOpen(false)}

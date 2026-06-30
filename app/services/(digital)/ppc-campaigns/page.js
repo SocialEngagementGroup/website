@@ -10,6 +10,7 @@ import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 
 import { ppcCampaignsData } from "./ppcCampaignsData";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
+import RelatedBlogs from "@/components/BlogPage/RelatedBlogs";
 
 import siteMetadata from "@/data/metadata";
 
@@ -43,6 +44,7 @@ export default function Page() {
       <BrandingStrategy {...ppcCampaignsData.BrandStrategy} />
       <Testimonials />
       <FAQ items={ppcCampaignsData.FAQ.items} heading={ppcCampaignsData.FAQ.heading} />
+      <RelatedBlogs />
     </>
   );
 }

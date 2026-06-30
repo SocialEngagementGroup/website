@@ -10,6 +10,7 @@ import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 import siteMetadata from "@/data/metadata";
+import RelatedBlogs from "@/components/BlogPage/RelatedBlogs";
 
 export const metadata = {
     title: siteMetadata.cloudModernization.title,
@@ -42,6 +43,7 @@ export default function Page() {
             <BrandingStrategy {...cloudModernizationData.BrandStrategy} />
             <Testimonials />
             <FAQ items={cloudModernizationData.FAQ.items} heading={cloudModernizationData.FAQ.heading} />
-        </>
+        <RelatedBlogs />
+      </>
     );
 }

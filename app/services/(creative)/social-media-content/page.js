@@ -13,6 +13,7 @@ import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 
 import siteMetadata from "@/data/metadata";
+import RelatedBlogs from "@/components/BlogPage/RelatedBlogs";
 
 export const metadata = {
   title: siteMetadata.socialMediaContent.title,
@@ -46,6 +47,7 @@ export default function Page() {
       <BrandingStrategy {...socialMediaContentData.BrandStrategy}/>
       <Testimonials />
       <FAQ items={socialMediaContentData.FAQ.items} heading={socialMediaContentData.FAQ.heading} />
-    </>
+    <RelatedBlogs />
+      </>
   );
 }

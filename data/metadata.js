@@ -12,6 +12,10 @@ const siteMetadata = {
     title: "Careers at Social Engagement Group - SEG | Join a Creative & AI-Driven Marketing Team",
     description: "We're building something different. Explore open roles at Social Engagement Group and join a team that blends creativity, strategy, and cutting-edge technology."
   },
+  blog: {
+    title: "Blog | Social Engagement Group - SEG | Marketing, Branding & Growth Insights",
+    description: "Practical insights on marketing, branding, SEO, and technology from the Social Engagement Group team. Strategies and ideas to help your brand grow."
+  },
   services: {
     title: "Marketing Services | Social Engagement Group - SEG",
     description: "From branding and SEO to paid ads and website development, Social Engagement Group offers full-service digital marketing solutions crafted to deliver real results at every stage of growth."

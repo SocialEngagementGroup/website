@@ -8,6 +8,7 @@ import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrate
 import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
+import RelatedBlogs from "@/components/BlogPage/RelatedBlogs";
 
 import siteMetadata from "@/data/metadata";
 
@@ -42,6 +43,7 @@ export default function Page() {
       <BrandingStrategy {...seoData.BrandStrategy} />
       <Testimonials />
       <FAQ items={seoData.FAQ.items} heading={seoData.FAQ.heading} />
+      <RelatedBlogs />
     </>
   );
 }

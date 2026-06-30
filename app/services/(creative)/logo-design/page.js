@@ -12,6 +12,7 @@ import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 
 import siteMetadata from "@/data/metadata";
+import RelatedBlogs from "@/components/BlogPage/RelatedBlogs";
 
 export const metadata = {
   title: siteMetadata.logoDesign.title,
@@ -44,7 +45,8 @@ export default function Page() {
       <BrandingStrategy {...logoDesignData.BrandStrategy} />
       <Testimonials />
       <FAQ items={logoDesignData.FAQ.items} heading={logoDesignData.FAQ.heading} />
-    </>
+    <RelatedBlogs />
+      </>
   );
 }
 

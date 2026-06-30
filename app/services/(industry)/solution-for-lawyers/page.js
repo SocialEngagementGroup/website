@@ -10,6 +10,7 @@ import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 import siteMetadata from "@/data/metadata";
+import RelatedBlogs from "@/components/BlogPage/RelatedBlogs";
 
 export const metadata = {
   title: siteMetadata.lawyers.title,
@@ -44,6 +45,7 @@ export default function Page() {
       <BrandingStrategy {...solutionForLawyersData.BrandStrategy} />
       <Testimonials />
       <FAQ items={solutionForLawyersData.FAQ.items} heading={solutionForLawyersData.FAQ.heading} />
-    </>
+    <RelatedBlogs />
+      </>
   );
 }

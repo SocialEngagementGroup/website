@@ -1,6 +1,7 @@
 import React from 'react'
 import HeroSection from "@/components/HomePage/HeroSection/HeroSection"
 import DynamicSections from "@/components/HomePage/DynamicSections"
+import LatestBlogs from "@/components/HomePage/LatestBlogs/LatestBlogs"
 
 // HeroSection is above the fold — static import for instant SSR render.
 // All below-fold sections are lazy-loaded via DynamicSections (Client Component).
@@ -26,6 +27,7 @@ const page = () => {
     <>
       <HeroSection />
       <DynamicSections />
+      <LatestBlogs />
     </>
   )
 }

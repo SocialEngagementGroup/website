@@ -10,6 +10,7 @@ import { googleBusinessProfileManagementData } from "./googleBusinessProfileMana
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 import siteMetadata from "@/data/metadata";
+import RelatedBlogs from "@/components/BlogPage/RelatedBlogs";
 
 export const metadata = {
   title: siteMetadata.googleBusiness.title,
@@ -44,6 +45,7 @@ export default function Page() {
         items={googleBusinessProfileManagementData.FAQ.items}
         heading={googleBusinessProfileManagementData.FAQ.heading}
       />
-    </>
+    <RelatedBlogs />
+      </>
   );
 }

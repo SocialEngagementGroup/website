@@ -10,6 +10,7 @@ import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 import { retargetingRemarketingData } from "./retargetingRemarketingData";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 import siteMetadata from "@/data/metadata";
+import RelatedBlogs from "@/components/BlogPage/RelatedBlogs";
 
 export const metadata = {
   title: siteMetadata.retargeting.title,
@@ -45,6 +46,7 @@ export default function Page() {
         items={retargetingRemarketingData.FAQ.items}
         heading={retargetingRemarketingData.FAQ.heading}
       />
-    </>
+    <RelatedBlogs />
+      </>
   );
 }

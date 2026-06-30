@@ -10,6 +10,7 @@ import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 import siteMetadata from "@/data/metadata";
+import RelatedBlogs from "@/components/BlogPage/RelatedBlogs";
 
 export const metadata = {
   title: siteMetadata.techStartups.title,
@@ -45,6 +46,7 @@ export default function Page() {
         items={solutionForTechStartupsData.FAQ.items}
         heading={solutionForTechStartupsData.FAQ.heading}
       />
-    </>
+    <RelatedBlogs />
+      </>
   );
 }

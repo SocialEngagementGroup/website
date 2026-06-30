@@ -12,6 +12,7 @@ import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 
 import siteMetadata from "@/data/metadata";
+import RelatedBlogs from "@/components/BlogPage/RelatedBlogs";
 
 export const metadata = {
   title: siteMetadata.videographyPhotography.title,
@@ -48,6 +49,7 @@ export default function Page() {
         items={videographyPhotographyData.FAQ.items}
         heading={videographyPhotographyData.FAQ.heading}
       />
-    </>
+    <RelatedBlogs />
+      </>
   );
 }
