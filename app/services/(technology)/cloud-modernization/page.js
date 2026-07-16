@@ -9,18 +9,24 @@ import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
-import siteMetadata from "@/data/metadata";
+import siteMetadata, { ogDefaults, twitterDefaults } from "@/data/metadata";
+import ServiceSchema from "@/components/ServicePage/ServiceSchema";
 import RelatedBlogs from "@/components/BlogPage/RelatedBlogs";
 
 export const metadata = {
+  alternates: {
+    canonical: "/services/cloud-modernization",
+  },
     title: siteMetadata.cloudModernization.title,
     description: siteMetadata.cloudModernization.description,
     openGraph: {
+      ...ogDefaults,
         title: siteMetadata.cloudModernization.title,
         description: siteMetadata.cloudModernization.description,
         url: "/services/cloud-modernization",
     },
     twitter: {
+      ...twitterDefaults,
         title: siteMetadata.cloudModernization.title,
         description: siteMetadata.cloudModernization.description,
     },
@@ -29,6 +35,11 @@ export const metadata = {
 export default function Page() {
     return (
         <>
+          <ServiceSchema
+        title={siteMetadata.cloudModernization.title}
+        description={siteMetadata.cloudModernization.description}
+        url="/services/cloud-modernization" faqs={cloudModernizationData.FAQ.items}
+      />
             <HeroSection {...cloudModernizationData.hero} />
             <IntroSection {...cloudModernizationData.intro} />
             <TrustBar {...cloudModernizationData.trustBar} />

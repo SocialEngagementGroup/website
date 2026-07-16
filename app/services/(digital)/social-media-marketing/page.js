@@ -10,17 +10,23 @@ import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 import RelatedBlogs from "@/components/BlogPage/RelatedBlogs";
 
-import siteMetadata from "@/data/metadata";
+import siteMetadata, { ogDefaults, twitterDefaults } from "@/data/metadata";
+import ServiceSchema from "@/components/ServicePage/ServiceSchema";
 
 export const metadata = {
+  alternates: {
+    canonical: "/services/social-media-marketing",
+  },
   title: siteMetadata.socialMediaMarketing.title,
   description: siteMetadata.socialMediaMarketing.description,
   openGraph: {
+    ...ogDefaults,
     title: siteMetadata.socialMediaMarketing.title,
     description: siteMetadata.socialMediaMarketing.description,
     url: "/services/social-media-marketing",
   },
   twitter: {
+    ...twitterDefaults,
     title: siteMetadata.socialMediaMarketing.title,
     description: siteMetadata.socialMediaMarketing.description,
   },
@@ -31,6 +37,11 @@ export const metadata = {
 export default function Page() {
   return (
     <>
+      <ServiceSchema
+        title={siteMetadata.socialMediaMarketing.title}
+        description={siteMetadata.socialMediaMarketing.description}
+        url="/services/social-media-marketing" faqs={socialMediaMarketingData.FAQ.items}
+      />
       <HeroSection {...socialMediaMarketingData.hero} />
       <IntroSection {...socialMediaMarketingData.intro} />
       <TrustBar {...socialMediaMarketingData.trustBar} />

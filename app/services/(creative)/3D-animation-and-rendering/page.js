@@ -9,18 +9,24 @@ import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
-import siteMetadata from "@/data/metadata";
+import siteMetadata, { ogDefaults, twitterDefaults } from "@/data/metadata";
+import ServiceSchema from "@/components/ServicePage/ServiceSchema";
 import RelatedBlogs from "@/components/BlogPage/RelatedBlogs";
 
 export const metadata = {
+  alternates: {
+    canonical: "/services/3D-animation-and-rendering",
+  },
   title: siteMetadata.animation3d.title,
   description: siteMetadata.animation3d.description,
   openGraph: {
+    ...ogDefaults,
     title: siteMetadata.animation3d.title,
     description: siteMetadata.animation3d.description,
     url: "/services/3D-animation-and-rendering",
   },
   twitter: {
+    ...twitterDefaults,
     title: siteMetadata.animation3d.title,
     description: siteMetadata.animation3d.description,
   },
@@ -30,6 +36,11 @@ export const metadata = {
 export default function Page() {
   return (
     <>
+      <ServiceSchema
+        title={siteMetadata.animation3d.title}
+        description={siteMetadata.animation3d.description}
+        url="/services/3D-animation-and-rendering" faqs={threeDAnimationRenderingData.FAQ.items}
+      />
       <HeroSection {...threeDAnimationRenderingData.hero} />
       <IntroSection {...threeDAnimationRenderingData.intro} />
       <TrustBar {...threeDAnimationRenderingData.trustBar} />

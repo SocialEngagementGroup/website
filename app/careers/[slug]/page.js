@@ -10,7 +10,7 @@ import {
   Lock,
 } from "lucide-react";
 import { getJobBySlug, isJobOpen } from "@/data/jobsData";
-import siteMetadata from "@/data/metadata";
+import siteMetadata, { ogDefaults, twitterDefaults } from "@/data/metadata";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -24,12 +24,17 @@ export async function generateMetadata({ params }) {
   return {
     title,
     description,
+    alternates: {
+      canonical: `/careers/${slug}`,
+    },
     openGraph: {
+      ...ogDefaults,
       title,
       description,
       url: `/careers/${slug}`,
     },
     twitter: {
+      ...twitterDefaults,
       title,
       description,
     },

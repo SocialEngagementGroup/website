@@ -33,7 +33,12 @@ const CostofSection = ({ heading1, heading2, description, items }) => {
                 <div className="relative z-10 md:pr-6 flex flex-col sm:flex-row items-start sm:items-center gap-5 md:gap-6">
                   <Image
                     src={item.img}
-                    alt="icon"
+                    alt={
+                      (item.text || "")
+                        .replace(/<[^>]*>/g, "")
+                        .trim()
+                        .slice(0, 80) || "Service benefit illustration"
+                    }
                     width={140}
                     height={140}
                     className="w-[70px] md:w-[80px] flex-shrink-0"

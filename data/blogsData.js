@@ -60,7 +60,7 @@ export const allBlogs = [
     datePublished: "2026-05-12",
     dateModified: "2026-06-20",
     readTime: "7 min read",
-    image: "",
+    image: "/assets/images/blog/ai-powered-digital-marketing-2026.webp",
     imageAlt:
       "Illustration of AI automation working alongside a human marketing team",
     featured: true,
@@ -185,7 +185,7 @@ export const allBlogs = [
     datePublished: "2026-04-28",
     dateModified: "2026-06-10",
     readTime: "8 min read",
-    image: "",
+    image: "/assets/images/blog/local-seo-guide-service-businesses.webp",
     imageAlt: "Map pin marking a local service business in search results",
     featured: false,
     comingSoon: false,
@@ -306,7 +306,7 @@ export const allBlogs = [
     datePublished: "2026-03-30",
     dateModified: "2026-05-18",
     readTime: "6 min read",
-    image: "",
+    image: "/assets/images/blog/branding-fundamentals-that-convert.webp",
     imageAlt: "Brand identity elements arranged on a designer's workspace",
     featured: false,
     comingSoon: false,
@@ -423,7 +423,7 @@ export const allBlogs = [
     datePublished: "2026-06-28",
     dateModified: "2026-06-29",
     readTime: "7 min read",
-    image: "",
+    image: "/assets/images/blog/newsjacking-world-cup-small-business.webp",
     imageAlt: "Small business owner planning a World Cup marketing campaign",
     featured: true,
     comingSoon: false,
@@ -539,7 +539,7 @@ export const allBlogs = [
     datePublished: "2026-06-21",
     dateModified: "2026-06-24",
     readTime: "6 min read",
-    image: "",
+    image: "/assets/images/blog/world-cup-road-trip-auto-repair-search-surge.webp",
     imageAlt: "Mechanic performing a pre-trip inspection on a car before a road trip",
     featured: false,
     comingSoon: false,
@@ -647,7 +647,7 @@ export const allBlogs = [
     datePublished: "2026-06-23",
     dateModified: "2026-06-26",
     readTime: "6 min read",
-    image: "",
+    image: "/assets/images/blog/world-cup-watch-parties-repeat-restaurant-customers.webp",
     imageAlt: "Crowd watching a soccer match on screens at a local restaurant",
     featured: false,
     comingSoon: false,
@@ -752,7 +752,7 @@ export const allBlogs = [
     datePublished: "2026-06-16",
     dateModified: "2026-06-20",
     readTime: "7 min read",
-    image: "",
+    image: "/assets/images/blog/winning-world-cup-foot-traffic-fifa-trademark-rules.webp",
     imageAlt: "Brewery taproom decorated for game day with generic soccer theme",
     featured: false,
     comingSoon: false,
@@ -860,7 +860,7 @@ export const allBlogs = [
     datePublished: "2026-06-19",
     dateModified: "2026-06-22",
     readTime: "6 min read",
-    image: "",
+    image: "/assets/images/blog/travel-surge-personal-injury-law-firm-marketing.webp",
     imageAlt: "Busy city intersection with heavy pedestrian and rideshare traffic",
     featured: false,
     comingSoon: false,
@@ -962,7 +962,7 @@ export const allBlogs = [
     datePublished: "2026-06-25",
     dateModified: "2026-06-27",
     readTime: "6 min read",
-    image: "",
+    image: "/assets/images/blog/urgent-care-marketing-visitor-wave-summer-heat.webp",
     imageAlt: "Urgent care clinic entrance on a hot summer day",
     featured: false,
     comingSoon: false,
@@ -1066,7 +1066,7 @@ export const allBlogs = [
     datePublished: "2026-06-14",
     dateModified: "2026-06-18",
     readTime: "5 min read",
-    image: "",
+    image: "/assets/images/blog/small-budget-world-cup-tourist-spending-retail.webp",
     imageAlt: "Shoppers walking past a local retail storefront near a fan zone",
     featured: false,
     comingSoon: false,
@@ -1380,7 +1380,7 @@ export const allBlogs = [
     datePublished: "2026-05-20",
     dateModified: "2026-05-20",
     readTime: "7 min read",
-    image: "",
+    image: "/assets/images/blog/turning-paid-campaigns-into-predictable-growth.webp",
     imageAlt: "Marketer reviewing paid campaign performance dashboards",
     featured: false,
     comingSoon: false,
@@ -1456,6 +1456,1151 @@ export const allBlogs = [
         question: "What has the biggest impact on paid campaign performance?",
         answer:
           "After tracking and targeting are solid, creative is the biggest lever. The hook, message, and offer drive performance more than incremental bid adjustments, so test creative continuously.",
+      },
+    ],
+  },
+  {
+    id: "business-website-cost-2026",
+    slug: "business-website-cost-2026",
+    title:
+      "How Much Does a Business Website Cost in 2026? An Honest Breakdown",
+    metaTitle:
+      "Business Website Cost in 2026: Pricing Breakdown & What You Get",
+    metaDescription:
+      "What does a professional business website actually cost in 2026? An honest breakdown of pricing tiers, what drives cost up or down, and how to budget for a site that pays for itself.",
+    excerpt:
+      "Website quotes range from $500 to $50,000 — and most business owners have no idea why. Here's an honest breakdown of what drives the price and what you should actually budget for.",
+    category: "technology",
+    categoryLabel: "Technology",
+    tags: ["Website Development", "Pricing", "Small Business", "Web Design"],
+    keywords: [
+      "business website cost 2026",
+      "how much does a website cost",
+      "website development pricing",
+      "small business website budget",
+      "professional website cost",
+    ],
+    author: { name: "SEG Team", role: "Social Engagement Group" },
+    datePublished: "2026-01-06",
+    dateModified: "2026-01-06",
+    readTime: "7 min read",
+    image: "",
+    imageAlt: "Business owner comparing website development quotes at a desk",
+    featured: false,
+    comingSoon: false,
+    content: [
+      {
+        type: "paragraph",
+        text: "Ask five agencies what a website costs and you'll get five wildly different numbers. That's not because someone is lying to you — it's because 'a website' can mean anything from a five-page template to a custom-built platform that runs your entire business. Understanding what actually drives the price is the difference between a smart investment and an expensive regret.",
+      },
+      {
+        type: "heading",
+        text: "The real pricing tiers in 2026",
+      },
+      {
+        type: "list",
+        items: [
+          "DIY builders ($10–$50/month): Wix, Squarespace, and similar tools. Cheap to start, but your time is the hidden cost — and the ceiling comes fast.",
+          "Template-based sites ($1,000–$5,000): a professional sets up a pre-built theme with your content. Fine for a simple online presence.",
+          "Custom professional sites ($5,000–$25,000): designed and built around your business goals, with real SEO architecture, performance optimization, and conversion-focused pages.",
+          "Web applications ($25,000+): booking systems, customer portals, dashboards — software, not just pages.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "What actually drives the cost up or down",
+      },
+      {
+        type: "paragraph",
+        text: "The number of pages matters far less than most owners think. What moves the price is the work behind the pages: custom design versus a template, copywriting, SEO structure, integrations with your booking or payment tools, and how much strategy goes in before anyone touches code. A cheap site skips those steps — which is exactly why cheap sites rarely generate business.",
+      },
+      {
+        type: "quote",
+        text: "The most expensive website is the one that doesn't bring you customers.",
+      },
+      {
+        type: "heading",
+        text: "Think in return, not in price",
+      },
+      {
+        type: "paragraph",
+        text: "A $7,000 website that brings in two new clients a month isn't a cost — it's the best-performing employee you have. It works around the clock, never calls in sick, and every improvement compounds. That's why the right question isn't 'what's the cheapest site I can get?' but 'what will this site earn back?' Our [[/services/website-development|website development]] projects start with exactly that math: what a new customer is worth to you, and what the site needs to do to deliver them.",
+      },
+      {
+        type: "subheading",
+        text: "Don't forget the running costs",
+      },
+      {
+        type: "paragraph",
+        text: "Budget for hosting, domain renewal, security updates, and occasional content changes — typically a small monthly amount for a professionally built site. Beware of platforms or agencies that lock you in with high mandatory monthly fees but no ongoing improvements.",
+      },
+      {
+        type: "callout",
+        title: "A sensible budget rule",
+        text: "For most small businesses, a professional website should cost roughly what one to three new customers are worth. If a single client brings you $3,000 over their lifetime, a $6,000 site that lands a handful of clients a year pays for itself many times over.",
+      },
+      {
+        type: "heading",
+        text: "How to compare quotes fairly",
+      },
+      {
+        type: "paragraph",
+        text: "When quotes vary, compare what's inside them: Is copywriting included? Is the site built for [[/services/seo|SEO]] from day one, or is that 'extra'? Who owns the site when it's done? Is it mobile-first and fast? Two quotes that look $4,000 apart are often describing two completely different products. For a deeper look at what separates a site that converts from one that just exists, see [[anatomy-of-a-high-converting-website]] — and when you're ready to evaluate vendors, [[how-to-choose-web-development-partner]] walks through the exact questions to ask.",
+      },
+    ],
+    faqs: [
+      {
+        question: "How much should a small business spend on a website in 2026?",
+        answer:
+          "Most small businesses should budget $5,000–$25,000 for a custom professional website, depending on complexity. A useful rule: the site should cost roughly what one to three new customers are worth to your business over their lifetime.",
+      },
+      {
+        question: "Why do website quotes vary so much?",
+        answer:
+          "Because the work behind the pages varies: custom design versus templates, copywriting, SEO architecture, integrations, and strategy. Two quotes thousands of dollars apart are often describing completely different products — always compare what's included, not just the total.",
+      },
+      {
+        question: "Is a cheap DIY website good enough for a business?",
+        answer:
+          "It can work as a temporary placeholder, but DIY builders hit a ceiling quickly: limited SEO control, slower performance, generic design, and hours of your own time. If your website is meant to generate customers, a professionally built site almost always pays for itself.",
+      },
+    ],
+  },
+  {
+    id: "signs-your-business-needs-website-redesign",
+    slug: "signs-your-business-needs-website-redesign",
+    title: "9 Signs Your Website Is Quietly Costing You Customers",
+    metaTitle:
+      "9 Signs Your Business Website Needs a Redesign | Losing Customers?",
+    metaDescription:
+      "Outdated design, slow load times, no mobile experience, invisible on Google — 9 clear signs your business website is driving customers away and what to do about each one.",
+    excerpt:
+      "Your website never complains, so it's easy to assume it's doing fine. But if it shows any of these 9 signs, it's actively sending customers to your competitors.",
+    category: "technology",
+    categoryLabel: "Technology",
+    tags: ["Website Redesign", "Web Design", "Conversion", "Small Business"],
+    keywords: [
+      "signs website needs redesign",
+      "outdated website losing customers",
+      "when to redesign website",
+      "website redesign small business",
+      "old website hurting business",
+    ],
+    author: { name: "SEG Team", role: "Social Engagement Group" },
+    datePublished: "2026-01-14",
+    dateModified: "2026-01-14",
+    readTime: "6 min read",
+    image: "",
+    imageAlt: "Frustrated visitor leaving an outdated business website",
+    featured: false,
+    comingSoon: false,
+    content: [
+      {
+        type: "paragraph",
+        text: "Most business owners look at their website the way they look at their office plumbing: as long as nothing is visibly broken, it must be fine. But a website doesn't have to be broken to be losing you money. It just has to be slightly worse than your competitor's — because that's who your customer visits next.",
+      },
+      {
+        type: "heading",
+        text: "The 9 signs, in order of how much they cost you",
+      },
+      {
+        type: "list",
+        ordered: true,
+        items: [
+          "It's awkward on a phone. More than half of your visitors are on mobile. If they have to pinch and zoom, they leave.",
+          "It takes more than 3 seconds to load. Every extra second of load time cuts conversions measurably.",
+          "You're invisible on Google. If your site wasn't built with SEO structure, it can't rank — no matter how good your service is.",
+          "It looks dated. Visitors judge credibility in about 50 milliseconds, and design is the first thing they judge.",
+          "There's no clear next step. No prominent call button, booking link, or contact form above the fold.",
+          "You can't update it yourself. If every text change requires a developer, your content goes stale.",
+          "It doesn't reflect your current business. Old services, old prices, old photos — visitors notice.",
+          "There's no proof. No reviews, no work samples, no faces. Trust is built on evidence.",
+          "It's not secure. Browsers actively warn visitors away from sites without HTTPS.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Why 'it still works' is the wrong test",
+      },
+      {
+        type: "paragraph",
+        text: "A website's job isn't to exist — it's to convert attention into inquiries. The honest test is simple: in the last month, how many customers can you trace directly to your site? If the answer is 'not sure' or 'not many', the site is functioning as an online business card, and business cards don't sell.",
+      },
+      {
+        type: "quote",
+        text: "Visitors don't compare your website to your old website. They compare it to the best site they visited today.",
+      },
+      {
+        type: "heading",
+        text: "Redesign or rebuild?",
+      },
+      {
+        type: "paragraph",
+        text: "If your site fails one or two cosmetic checks, a focused refresh may be enough. But if it fails on mobile, speed, and SEO structure at the same time, those problems live in the foundation — and repainting a cracked foundation is money wasted. A modern rebuild through a proper [[/services/website-development|website development]] process usually costs less than years of gradual patching, and it resets your performance baseline entirely. Not sure what a rebuild involves financially? We broke down real numbers in [[business-website-cost-2026]].",
+      },
+      {
+        type: "callout",
+        title: "One warning before you redesign",
+        text: "If your current site has any Google rankings at all, a careless redesign can wipe them out overnight. Redirects, URL structure, and content need to be migrated deliberately — we covered the full process in [[website-redesign-seo-checklist]].",
+      },
+      {
+        type: "heading",
+        text: "The 10-minute self-audit",
+      },
+      {
+        type: "paragraph",
+        text: "Open your site on your phone right now, as if you were a customer who'd never heard of you. Can you tell what the business does in five seconds? Can you contact them in one tap? Does anything feel slow, cramped, or old? Then do the same on your top competitor's site. If theirs feels better, you already know where your missing customers went.",
+      },
+    ],
+    faqs: [
+      {
+        question: "How often should a business website be redesigned?",
+        answer:
+          "Most business websites need a significant refresh every 3–5 years, but the real trigger is performance: if the site is slow, awkward on mobile, invisible on Google, or no longer generating inquiries, it's due regardless of age.",
+      },
+      {
+        question: "What is the biggest sign a website needs a redesign?",
+        answer:
+          "A poor mobile experience. More than half of web traffic is mobile, and visitors who have to pinch, zoom, or hunt for a contact button simply leave. If your site wasn't designed mobile-first, it's losing customers daily.",
+      },
+      {
+        question: "Will redesigning my website hurt my Google rankings?",
+        answer:
+          "It can if done carelessly — changed URLs without redirects and removed content are the usual culprits. A professional redesign includes an SEO migration plan that preserves existing rankings and usually improves them.",
+      },
+    ],
+  },
+  {
+    id: "custom-website-vs-diy-builders",
+    slug: "custom-website-vs-diy-builders",
+    title:
+      "Custom Website vs. DIY Builders: What Growing Businesses Need to Know",
+    metaTitle:
+      "Custom Website vs. Wix & Squarespace: Which Is Right for Your Business?",
+    metaDescription:
+      "Wix and Squarespace look cheap until you count the hidden costs. An honest comparison of DIY website builders vs. custom development — and when each one makes sense.",
+    excerpt:
+      "DIY builders promise a website in an afternoon. Custom development promises a website that grows your business. Here's an honest look at when each one actually makes sense.",
+    category: "technology",
+    categoryLabel: "Technology",
+    tags: ["Website Development", "Wix", "Squarespace", "Small Business"],
+    keywords: [
+      "custom website vs wix",
+      "custom website vs squarespace",
+      "diy website builder vs professional",
+      "website builder limitations",
+      "when to hire web developer",
+    ],
+    author: { name: "SEG Team", role: "Social Engagement Group" },
+    datePublished: "2026-01-27",
+    dateModified: "2026-01-27",
+    readTime: "7 min read",
+    image: "",
+    imageAlt:
+      "Split view comparing a DIY website builder with custom code development",
+    featured: false,
+    comingSoon: false,
+    content: [
+      {
+        type: "paragraph",
+        text: "Let's be fair to the DIY builders first: Wix, Squarespace, and their cousins are genuinely good at what they promise. If you need a simple online presence this weekend for very little money, they deliver. The problem isn't that DIY builders are bad — it's that businesses outgrow them faster than anyone expects, and the switching cost arrives right when you can least afford the distraction.",
+      },
+      {
+        type: "heading",
+        text: "When a DIY builder is the right call",
+      },
+      {
+        type: "list",
+        items: [
+          "You're validating a brand-new idea and don't know if it will survive six months.",
+          "You genuinely just need a digital business card — name, story, contact info.",
+          "Your budget is under $1,000 and your customers come entirely from referrals.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "In those situations, a builder is the honest choice — and any agency that pushes you toward a custom build anyway isn't advising you, they're selling you.",
+      },
+      {
+        type: "heading",
+        text: "The ceiling nobody mentions in the ads",
+      },
+      {
+        type: "paragraph",
+        text: "The trouble starts when your website needs to compete rather than just exist. DIY platforms share the same structural limits: you don't control page speed, your SEO options are capped by the platform, your design comes from the same template pool as thousands of other businesses, and integrations only go as far as the platform's app store allows. Worst of all, you can't take the site with you — cancel the subscription and the website effectively disappears.",
+      },
+      {
+        type: "list",
+        items: [
+          "Performance: builder sites carry platform code you can't remove, which drags load times — and speed directly affects both rankings and conversions.",
+          "SEO ceiling: limited control over technical structure, schema, and site architecture that professional [[/services/seo|SEO]] work depends on.",
+          "Sameness: templates optimize for looking acceptable, not for standing out or converting your specific customer.",
+          "Ownership: you're renting, not owning. Your monthly fee never builds equity.",
+        ],
+      },
+      {
+        type: "quote",
+        text: "A template asks 'what do you want your site to look like?' A custom build asks 'what do you need your site to do?'",
+      },
+      {
+        type: "heading",
+        text: "What custom development actually buys you",
+      },
+      {
+        type: "paragraph",
+        text: "A custom site is built backwards from your business goals: pages engineered to convert, structure engineered to rank, speed engineered to keep impatient visitors, and room to grow into whatever you need next — booking systems, customer portals, or a full [[/services/web-application|web application]]. You own every line of it. The design is yours alone, built around your brand rather than squeezed into a template. And when something needs to change, the answer is 'yes' instead of 'the platform doesn't support that.'",
+      },
+      {
+        type: "callout",
+        title: "The break-even question",
+        text: "If a better website brought you just one extra customer a month, what would that be worth over a year? For most service businesses that number alone covers the difference between DIY and custom — everything beyond it is profit.",
+      },
+      {
+        type: "heading",
+        text: "A practical way to decide",
+      },
+      {
+        type: "paragraph",
+        text: "Ask yourself one question: is your website meant to be a brochure or an employee? Brochures can be cheap. Employees need to perform — and performance is exactly what template platforms can't guarantee. If you're weighing the investment, [[business-website-cost-2026]] breaks down real pricing, and our [[/services/website-development|website development]] team is happy to give an honest assessment of whether your current setup is actually holding you back.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Is Wix or Squarespace good enough for a small business?",
+        answer:
+          "For a simple online presence or testing a new idea, yes. But businesses that rely on their website to generate customers usually outgrow DIY builders: limited SEO control, slower performance, template sameness, and no true ownership cap what the site can achieve.",
+      },
+      {
+        question: "What are the main advantages of a custom website?",
+        answer:
+          "Full control over speed, SEO architecture, and design; pages engineered around your specific customer and conversion goals; unlimited integrations; and true ownership — the site is an asset you keep, not a subscription you rent.",
+      },
+      {
+        question: "When should a business switch from a website builder to a custom site?",
+        answer:
+          "When the website becomes part of how you win customers: you need to rank on Google, convert paid traffic, integrate booking or payments, or simply stand out from competitors using the same templates. If the site is meant to perform, not just exist, it's time.",
+      },
+    ],
+  },
+  {
+    id: "anatomy-of-a-high-converting-website",
+    slug: "anatomy-of-a-high-converting-website",
+    title: "The Anatomy of a Website That Turns Visitors Into Customers",
+    metaTitle:
+      "High-Converting Website Anatomy: 7 Elements That Turn Visitors Into Customers",
+    metaDescription:
+      "Traffic means nothing if visitors don't act. The 7 elements every high-converting business website shares — from above-the-fold clarity to trust signals and CTAs that get clicked.",
+    excerpt:
+      "Two websites can get identical traffic and wildly different results. The difference is anatomy — a handful of elements that quietly decide whether visitors call you or close the tab.",
+    category: "marketing",
+    categoryLabel: "Marketing",
+    tags: ["Conversion", "Web Design", "CRO", "Lead Generation"],
+    keywords: [
+      "high converting website design",
+      "website conversion elements",
+      "how to convert website visitors",
+      "website call to action best practices",
+      "lead generating website",
+    ],
+    author: { name: "SEG Team", role: "Social Engagement Group" },
+    datePublished: "2026-02-05",
+    dateModified: "2026-02-05",
+    readTime: "7 min read",
+    image: "",
+    imageAlt:
+      "Wireframe of a business website annotated with conversion elements",
+    featured: false,
+    comingSoon: false,
+    content: [
+      {
+        type: "paragraph",
+        text: "Most websites don't fail because of traffic. They fail because visitors arrive, glance around for a few seconds, and leave without doing anything. Conversion isn't a mysterious art — it's anatomy. High-performing sites across every industry share the same working parts, and once you know them, you can spot exactly which ones your site is missing.",
+      },
+      {
+        type: "heading",
+        text: "1. A five-second first screen",
+      },
+      {
+        type: "paragraph",
+        text: "Before scrolling, a visitor should know three things: what you do, who it's for, and what to do next. That's it. Clever taglines, autoplaying sliders, and vague headlines like 'Welcome to our website' all burn the only five seconds you're guaranteed to get.",
+      },
+      {
+        type: "heading",
+        text: "2. One primary call to action, repeated",
+      },
+      {
+        type: "paragraph",
+        text: "Pick the single action that matters most — book a call, request a quote, order online — and make it the most visible element on the page. Repeat it as the visitor scrolls. Sites that present five equally-weighted options convert worse than sites that present one, because a confused visitor doesn't choose the best option; they choose none.",
+      },
+      {
+        type: "heading",
+        text: "3. Proof before promises",
+      },
+      {
+        type: "list",
+        items: [
+          "Reviews and star ratings, ideally near your calls to action.",
+          "Real photos of your team and work — stock photos actively erode trust.",
+          "Numbers where you have them: years in business, customers served, results delivered.",
+          "Logos of clients, certifications, or associations your audience recognizes.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Visitors have been burned before, and skepticism is their default. Every claim your site makes should be sitting next to the evidence for it. This is where strong [[/services/review-and-reputation-management|review management]] and consistent [[/services/branding|branding]] compound the site's effect.",
+      },
+      {
+        type: "heading",
+        text: "4. Speed and mobile as table stakes",
+      },
+      {
+        type: "paragraph",
+        text: "None of the above matters if the page takes six seconds to appear or breaks on a phone. Conversion starts with the site actually loading — fast, on every device. We dug into the numbers behind this in [[website-speed-conversions-core-web-vitals]], but the short version: every second of delay costs you a measurable slice of inquiries.",
+      },
+      {
+        type: "heading",
+        text: "5. Friction-free contact",
+      },
+      {
+        type: "paragraph",
+        text: "Every field you add to a form lowers completion. Ask for what you need to respond — usually a name, a contact method, and a sentence about what they want — and nothing more. On mobile, phone numbers should be tap-to-call. If you take bookings, let people book directly instead of emailing to ask.",
+      },
+      {
+        type: "quote",
+        text: "Visitors don't leave because they're not interested. They leave because you made acting on their interest feel like work.",
+      },
+      {
+        type: "heading",
+        text: "6. Pages that match search intent",
+      },
+      {
+        type: "paragraph",
+        text: "A visitor searching 'emergency plumber near me' and one searching 'how to winterize pipes' need different pages. Sites that convert build dedicated pages for each service and each intent, rather than funneling everyone to a generic homepage. This is also exactly what Google rewards — the overlap between conversion design and [[/services/seo|SEO]] is bigger than most owners realize.",
+      },
+      {
+        type: "heading",
+        text: "7. A reason to act now",
+      },
+      {
+        type: "paragraph",
+        text: "Genuine urgency — limited availability, seasonal timing, a first-visit offer — gives fence-sitters the nudge they need. It must be honest; fake countdown timers destroy the trust everything above just built.",
+      },
+      {
+        type: "callout",
+        title: "The takeaway",
+        text: "Conversion is a system, not a lucky accident. Clarity in five seconds, one strong call to action, visible proof, fast mobile-first pages, and effortless contact. If your site is missing several of these, that's not a design problem — it's a revenue problem. Our [[/services/website-development|website development]] process builds all seven in from day one.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What makes a website high-converting?",
+        answer:
+          "Clarity within five seconds of landing, one prominent repeated call to action, visible proof like reviews and real photos, fast mobile-first performance, short low-friction contact forms, and dedicated pages that match what each visitor searched for.",
+      },
+      {
+        question: "What is the most common conversion mistake on business websites?",
+        answer:
+          "A vague first screen. If visitors can't immediately tell what you do, who it's for, and what to do next, they leave before seeing anything else. The second most common: burying or diluting the call to action.",
+      },
+      {
+        question: "How many fields should a contact form have?",
+        answer:
+          "As few as possible — typically a name, one contact method, and a short message. Every additional field measurably reduces completions. You can always gather more detail after the lead has made contact.",
+      },
+    ],
+  },
+  {
+    id: "website-speed-conversions-core-web-vitals",
+    slug: "website-speed-conversions-core-web-vitals",
+    title: "Slow Websites Lose Customers: Speed, Core Web Vitals & Your Revenue",
+    metaTitle:
+      "Website Speed & Core Web Vitals: How Slow Load Times Kill Conversions",
+    metaDescription:
+      "A one-second delay can cut conversions by 7% — and Google ranks slow sites lower too. What Core Web Vitals mean for your business and how to make your website fast.",
+    excerpt:
+      "Your customers won't email you to say your website felt slow. They'll just leave. Here's how speed quietly shapes your rankings, your conversions, and your revenue.",
+    category: "seo",
+    categoryLabel: "SEO",
+    tags: ["Website Speed", "Core Web Vitals", "SEO", "Performance"],
+    keywords: [
+      "website speed conversions",
+      "core web vitals 2026",
+      "slow website losing customers",
+      "page speed seo ranking",
+      "how to speed up business website",
+    ],
+    author: { name: "SEG Team", role: "Social Engagement Group" },
+    datePublished: "2026-02-12",
+    dateModified: "2026-02-12",
+    readTime: "6 min read",
+    image: "",
+    imageAlt: "Stopwatch over a loading website illustrating page speed",
+    featured: false,
+    comingSoon: false,
+    content: [
+      {
+        type: "paragraph",
+        text: "Nobody has ever called a business to complain that its website loaded slowly. They just leave — silently, in the first few seconds, before your homepage has even finished appearing. Speed is the most invisible problem a website can have: it never shows up as an error, but it shows up in your revenue every single day.",
+      },
+      {
+        type: "heading",
+        text: "What slow actually costs",
+      },
+      {
+        type: "list",
+        items: [
+          "Roughly half of visitors abandon a page that takes more than 3 seconds to load on mobile.",
+          "Each additional second of load time cuts conversions by an estimated 5–10%.",
+          "Speed is a confirmed Google ranking factor — slow sites get fewer visitors before design even enters the picture.",
+          "Paid traffic hurts most: you pay per click, and slow landing pages send that money straight to bounces.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Core Web Vitals, translated into English",
+      },
+      {
+        type: "paragraph",
+        text: "Google measures every site against three user-experience metrics called Core Web Vitals. Behind the acronyms, they ask three simple questions.",
+      },
+      {
+        type: "list",
+        items: [
+          "LCP (Largest Contentful Paint): how quickly does the main content actually appear? Target: under 2.5 seconds.",
+          "INP (Interaction to Next Paint): when a visitor taps something, does the site respond instantly? Target: under 200 milliseconds.",
+          "CLS (Cumulative Layout Shift): does the page hold still, or do buttons jump around as things load? Target: near zero.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "You can check your own scores free with Google's PageSpeed Insights — just paste in your web address. If you're in the orange or red, so is your ranking potential.",
+      },
+      {
+        type: "quote",
+        text: "Speed is the first impression your website makes — before your design, before your offer, before a single word is read.",
+      },
+      {
+        type: "heading",
+        text: "Why sites get slow",
+      },
+      {
+        type: "paragraph",
+        text: "The usual suspects: huge unoptimized images, bloated themes and page builders carrying code you never use, too many plugins and tracking scripts, and cheap hosting that buckles under real traffic. DIY platform sites often can't fix these even if you want to — the weight is baked into the platform, one of the ceilings we covered in [[custom-website-vs-diy-builders]].",
+      },
+      {
+        type: "heading",
+        text: "The fixes, from easiest to most powerful",
+      },
+      {
+        type: "list",
+        ordered: true,
+        items: [
+          "Compress and modernize images — converting to WebP format alone often cuts page weight in half.",
+          "Remove plugins, widgets, and tracking scripts you don't actually use.",
+          "Upgrade hosting or add a CDN so your site is served from somewhere near your visitors.",
+          "Rebuild on a modern, performance-first stack when the slowness lives in the foundation — patching a heavy theme has limits.",
+        ],
+      },
+      {
+        type: "callout",
+        title: "Quick win",
+        text: "Run PageSpeed Insights on your homepage and your busiest service page today. If either scores below 70 on mobile, you have a measurable revenue leak — and it's very fixable.",
+      },
+      {
+        type: "paragraph",
+        text: "Speed work sits at the junction of [[/services/seo|SEO]] and [[/services/website-development|website development]] — the sites we build are engineered to pass Core Web Vitals from launch, because bolting performance on afterwards is always more expensive than building with it.",
+      },
+    ],
+    faqs: [
+      {
+        question: "How fast should a business website load in 2026?",
+        answer:
+          "Main content should appear in under 2.5 seconds on mobile — that's Google's Core Web Vitals threshold. Around half of visitors abandon pages that take longer than 3 seconds, so every fraction of a second matters.",
+      },
+      {
+        question: "Does website speed affect Google rankings?",
+        answer:
+          "Yes. Core Web Vitals — Google's speed and experience metrics — are a confirmed ranking factor. A slow site starts every search result behind faster competitors, regardless of content quality.",
+      },
+      {
+        question: "What slows down business websites the most?",
+        answer:
+          "Large unoptimized images, bloated themes and page builders, excessive plugins and tracking scripts, and underpowered hosting. Image optimization is usually the fastest fix; foundational bloat sometimes requires a rebuild on a modern stack.",
+      },
+    ],
+  },
+  {
+    id: "website-redesign-seo-checklist",
+    slug: "website-redesign-seo-checklist",
+    title:
+      "How to Redesign Your Website Without Losing Your Google Rankings",
+    metaTitle:
+      "Website Redesign SEO Checklist: Keep Your Google Rankings Intact",
+    metaDescription:
+      "A careless redesign can erase years of Google rankings overnight. The complete SEO migration checklist — redirects, URLs, content, and testing — for a safe website relaunch.",
+    excerpt:
+      "The scariest sentence in web design: 'We launched the new site and our traffic disappeared.' Here's the migration checklist that makes sure it never happens to you.",
+    category: "seo",
+    categoryLabel: "SEO",
+    tags: ["Website Redesign", "SEO Migration", "301 Redirects", "Rankings"],
+    keywords: [
+      "website redesign seo checklist",
+      "redesign without losing rankings",
+      "seo migration checklist",
+      "301 redirects website relaunch",
+      "website relaunch traffic drop",
+    ],
+    author: { name: "SEG Team", role: "Social Engagement Group" },
+    datePublished: "2026-02-24",
+    dateModified: "2026-02-24",
+    readTime: "7 min read",
+    image: "",
+    imageAlt:
+      "Checklist beside a website mockup representing a safe SEO migration",
+    featured: false,
+    comingSoon: false,
+    content: [
+      {
+        type: "paragraph",
+        text: "Every ranking your website holds today was earned — by content, by links, by years of Google slowly building trust in your pages. A redesign done carelessly can hand all of that back in a single afternoon. The good news: ranking losses from redesigns are almost entirely preventable. They come from a short list of known mistakes, and every one of them has a checklist answer.",
+      },
+      {
+        type: "heading",
+        text: "Why redesigns tank rankings",
+      },
+      {
+        type: "paragraph",
+        text: "Google doesn't rank your website — it ranks individual pages at individual addresses. When a redesign changes those addresses without forwarding instructions, deletes pages that were quietly earning traffic, or strips out the content Google was ranking, the search engine treats your relaunch like a brand-new site. The authority you built doesn't transfer automatically. You have to carry it across.",
+      },
+      {
+        type: "heading",
+        text: "Before the redesign: take inventory",
+      },
+      {
+        type: "list",
+        ordered: true,
+        items: [
+          "Crawl your current site and export every URL that exists today.",
+          "Pull your top pages by traffic and by keyword rankings from Google Search Console — these are the pages you cannot afford to lose.",
+          "Note every page that has backlinks from other websites; those links are transferable authority.",
+          "Benchmark current traffic and rankings so you'll know within days if something breaks after launch.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "During the build: protect what works",
+      },
+      {
+        type: "list",
+        items: [
+          "Keep URL structures where possible — the safest redirect is the one you never need.",
+          "Map every old URL to its new equivalent with a 301 redirect. One-to-one, not everything-to-homepage.",
+          "Carry over the content that ranks. Rewrite for the new design, but don't delete the substance Google rewarded.",
+          "Preserve titles, meta descriptions, and heading structure on pages that perform.",
+          "Make sure the new site is faster than the old one — a redesign is your best chance to fix [[website-speed-conversions-core-web-vitals|Core Web Vitals]] at the foundation.",
+        ],
+      },
+      {
+        type: "quote",
+        text: "A redirect map is cheap insurance. Rebuilding lost rankings costs a year.",
+      },
+      {
+        type: "heading",
+        text: "At launch: the first 48 hours",
+      },
+      {
+        type: "list",
+        ordered: true,
+        items: [
+          "Test your redirect map — old URLs should land on the right new pages, not error pages.",
+          "Submit the new XML sitemap in Google Search Console.",
+          "Crawl the live site for broken links and missing pages.",
+          "Check that the site isn't accidentally blocking search engines — a shockingly common launch mistake left over from the staging environment.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "After launch: watch the data",
+      },
+      {
+        type: "paragraph",
+        text: "Monitor Search Console daily for the first few weeks. Some ranking wobble is normal as Google re-crawls; sustained drops on specific pages usually mean a missed redirect or lost content — both fixable fast if you catch them early. Expect full stabilization within four to eight weeks.",
+      },
+      {
+        type: "callout",
+        title: "The takeaway",
+        text: "A redesign should be an SEO upgrade, not a gamble. If your current site has rankings worth protecting, make the migration plan part of the project from day one — it's a standard part of every [[/services/website-development|website development]] project we run alongside our [[/services/seo|SEO]] team.",
+      },
+      {
+        type: "paragraph",
+        text: "Wondering whether your site is due for that redesign in the first place? Start with [[signs-your-business-needs-website-redesign]] — and if local search drives your business, make sure the relaunch also strengthens the fundamentals in [[local-seo-guide-service-businesses]].",
+      },
+    ],
+    faqs: [
+      {
+        question: "Why do websites lose Google rankings after a redesign?",
+        answer:
+          "Usually because page addresses changed without 301 redirects, ranking content was deleted or rewritten away, or the new site accidentally blocks search engines. Google ranks individual pages — when they move or vanish without forwarding instructions, the earned authority doesn't transfer.",
+      },
+      {
+        question: "What is a 301 redirect and why does it matter in a redesign?",
+        answer:
+          "A 301 redirect permanently forwards an old page address to its new one, telling Google to transfer that page's authority and rankings. Every old URL should redirect one-to-one to its closest new equivalent — not just to the homepage.",
+      },
+      {
+        question: "How long does it take rankings to stabilize after a website relaunch?",
+        answer:
+          "With a proper migration, expect minor fluctuations for four to eight weeks as Google re-crawls the site. Sustained drops beyond that usually indicate missed redirects or removed content, which should be diagnosed in Google Search Console quickly.",
+      },
+    ],
+  },
+  {
+    id: "mobile-first-website-design",
+    slug: "mobile-first-website-design",
+    title:
+      "Mobile-First Website Design: Winning the Customers Who Find You on a Phone",
+    metaTitle:
+      "Mobile-First Website Design: Why Your Business Site Must Start on the Phone",
+    metaDescription:
+      "Over 60% of your visitors are on a phone — and Google ranks your mobile site, not your desktop one. What mobile-first design really means and how to tell if your site passes.",
+    excerpt:
+      "Your website was probably designed on a big monitor and checked on a phone as an afterthought. Your customers experience it in exactly the opposite order.",
+    category: "technology",
+    categoryLabel: "Technology",
+    tags: ["Mobile-First", "Responsive Design", "Web Design", "UX"],
+    keywords: [
+      "mobile first website design",
+      "mobile friendly business website",
+      "responsive design 2026",
+      "mobile website conversion",
+      "google mobile first indexing",
+    ],
+    author: { name: "SEG Team", role: "Social Engagement Group" },
+    datePublished: "2026-03-05",
+    dateModified: "2026-03-05",
+    readTime: "6 min read",
+    image: "",
+    imageAlt: "Customer browsing a local business website on a smartphone",
+    featured: false,
+    comingSoon: false,
+    content: [
+      {
+        type: "paragraph",
+        text: "Here's an uncomfortable exercise: pull out your phone and open your own website. Not to admire it — to use it. Try to find your prices, tap your phone number, fill in your contact form with your thumb. That experience, not the polished desktop version you approved, is what the majority of your customers actually get. For most businesses, well over 60% of visits now happen on a phone — and for local searches like 'near me', it's closer to 80%.",
+      },
+      {
+        type: "heading",
+        text: "Google only sees your mobile site",
+      },
+      {
+        type: "paragraph",
+        text: "This isn't just about user experience. Google uses mobile-first indexing, which means it ranks your website based on the mobile version — the desktop version is essentially a bonus. A site that looks impressive on a monitor but cramped on a phone isn't just annoying mobile visitors; it's competing in search with one hand tied behind its back.",
+      },
+      {
+        type: "heading",
+        text: "Mobile-friendly vs. mobile-first: the difference that matters",
+      },
+      {
+        type: "paragraph",
+        text: "Most sites today are technically 'responsive' — they shrink to fit a phone screen. But shrinking a desktop design isn't designing for mobile. Mobile-first means the phone experience is designed first, around what a phone visitor is actually trying to do, and the desktop version expands from there.",
+      },
+      {
+        type: "list",
+        items: [
+          "Thumb-reach navigation: key actions where a thumb naturally rests, not hidden in tiny menus.",
+          "Tap-to-call phone numbers and one-tap directions — mobile visitors are disproportionately ready to act.",
+          "Forms built for thumbs: few fields, large inputs, the right keyboard for each field.",
+          "Text readable without zooming, and buttons that can't be mis-tapped.",
+          "Speed as a design constraint — phones on cellular connections are exactly where [[website-speed-conversions-core-web-vitals|slow pages]] lose the most visitors.",
+        ],
+      },
+      {
+        type: "quote",
+        text: "Your desktop site is your showroom. Your mobile site is your front door — and most customers never make it past a bad front door.",
+      },
+      {
+        type: "heading",
+        text: "The mobile visitor is your highest-intent visitor",
+      },
+      {
+        type: "paragraph",
+        text: "Someone browsing on a laptop is often researching. Someone searching on a phone is often standing somewhere, ready to buy — looking for a restaurant tonight, a plumber right now, a shop that's open. Mobile visitors convert to calls and visits at dramatically higher rates when the site lets them. That's why mobile experience and [[local-seo-guide-service-businesses|local SEO]] are inseparable: local search delivers the visitor, and the mobile site either converts them or loses them in seconds.",
+      },
+      {
+        type: "callout",
+        title: "The 30-second test",
+        text: "On your phone: Can you tell what the business does instantly? Call in one tap? Find location and hours in two? Complete the contact form in under a minute? Each 'no' is a leak in your funnel.",
+      },
+      {
+        type: "heading",
+        text: "Retrofit or rebuild?",
+      },
+      {
+        type: "paragraph",
+        text: "If your site fails the test above, small fixes — larger buttons, tap-to-call, form trims — can stop the worst bleeding. But if the site was fundamentally designed desktop-first, retrofitting has a ceiling. Modern [[/services/website-development|website development]] starts from the phone screen because that's where your customers start. If you're already weighing that decision, [[business-website-cost-2026]] covers what the investment actually looks like.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What is mobile-first website design?",
+        answer:
+          "Designing the phone experience first — navigation, content, forms, and speed built around mobile visitors — then expanding to desktop. It differs from 'responsive' design, which typically shrinks a desktop layout to fit smaller screens as an afterthought.",
+      },
+      {
+        question: "Does Google rank mobile and desktop sites differently?",
+        answer:
+          "Google uses mobile-first indexing: it evaluates and ranks your website based on its mobile version. If your mobile experience is weak — slow, cramped, or missing content — your rankings suffer even if the desktop site is excellent.",
+      },
+      {
+        question: "How do I know if my website is truly mobile-friendly?",
+        answer:
+          "Test it like a customer: on your phone, you should understand what the business does in seconds, call in one tap, find location and hours in two taps, and complete the contact form in under a minute without zooming. Any failure point is costing conversions.",
+      },
+    ],
+  },
+  {
+    id: "website-vs-web-application",
+    slug: "website-vs-web-application",
+    title:
+      "Website or Web Application? When Your Business Needs More Than Pages",
+    metaTitle:
+      "Website vs. Web Application: Which Does Your Business Actually Need?",
+    metaDescription:
+      "Booking systems, client portals, dashboards — when a business outgrows a brochure website, it needs a web application. How to tell which one you need and what each involves.",
+    excerpt:
+      "A website tells customers about your business. A web application runs part of it. Knowing which one you actually need saves you from paying for the wrong thing.",
+    category: "technology",
+    categoryLabel: "Technology",
+    tags: ["Web Application", "Website Development", "Business Software", "Automation"],
+    keywords: [
+      "website vs web application",
+      "does my business need a web app",
+      "custom web application for business",
+      "client portal development",
+      "business process automation web app",
+    ],
+    author: { name: "SEG Team", role: "Social Engagement Group" },
+    datePublished: "2026-03-17",
+    dateModified: "2026-03-17",
+    readTime: "6 min read",
+    image: "",
+    imageAlt:
+      "Business dashboard interface representing a custom web application",
+    featured: false,
+    comingSoon: false,
+    content: [
+      {
+        type: "paragraph",
+        text: "Somewhere between 'we need a website' and 'we need custom software' sits a question most business owners never get a straight answer to: what's the difference, and which one do I actually need? The distinction is simple. A website communicates — it presents your services, builds trust, and converts visitors into inquiries. A web application does work — it takes bookings, manages clients, processes orders, and automates the tasks currently living in your spreadsheets and inboxes.",
+      },
+      {
+        type: "heading",
+        text: "Signs you've outgrown a plain website",
+      },
+      {
+        type: "list",
+        items: [
+          "Your team re-types the same information between emails, spreadsheets, and tools every day.",
+          "Customers constantly call or email for things they could do themselves — booking, checking status, downloading documents.",
+          "You juggle five subscription tools that don't talk to each other, and things fall through the cracks between them.",
+          "Off-the-shelf software almost fits, but you've built a mess of workarounds where it doesn't.",
+          "Growth means hiring more admin staff, because every new customer adds manual work.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "If several of those sound familiar, your bottleneck isn't marketing — it's operations. And operations problems don't get fixed by a prettier homepage.",
+      },
+      {
+        type: "heading",
+        text: "What a web application looks like in practice",
+      },
+      {
+        type: "paragraph",
+        text: "Web applications aren't just for tech companies. A clinic gives patients a portal to book and view results. A gym automates memberships, class bookings, and renewals. A wholesaler lets trade customers order at their negotiated prices without phoning in. A service company routes jobs, quotes, and invoices through one dashboard instead of four apps. In each case the pattern is the same: repetitive human work becomes software.",
+      },
+      {
+        type: "quote",
+        text: "A website is your best salesperson. A web application is your best operations manager. Growing businesses eventually need both.",
+      },
+      {
+        type: "heading",
+        text: "Build, buy, or both?",
+      },
+      {
+        type: "paragraph",
+        text: "Off-the-shelf software makes sense when your process is standard — accounting is accounting. Custom [[/services/web-application|web application]] development earns its cost when the process is your competitive advantage, when subscriptions for tools you half-use exceed the cost of owning something that fits exactly, or when integration gaps between tools are creating real errors. Often the right answer is hybrid: keep the standard tools, build the custom layer that connects them, and add [[/services/ai-automation|AI automation]] where judgment-free work still eats staff hours.",
+      },
+      {
+        type: "heading",
+        text: "Start with the workflow, not the wishlist",
+      },
+      {
+        type: "paragraph",
+        text: "The best web application projects start embarrassingly small: one workflow that visibly drains time — booking, quoting, onboarding — built well, measured, then extended. Wishlists produce bloated software; workflows produce ROI. It's the same philosophy behind our approach to [[/services/saas-implementation|SaaS implementation]] and [[/services/it-consultation|IT consultation]]: fix the process first, then scale what works.",
+      },
+      {
+        type: "callout",
+        title: "The takeaway",
+        text: "If your website's job is to win customers, judge it as marketing. The moment its job includes running the business — bookings, portals, orders, dashboards — you're in web application territory, and building it properly beats stretching a brochure site past its limits.",
+      },
+      {
+        type: "paragraph",
+        text: "Still at the 'we just need a great website' stage? That's most businesses — start with [[anatomy-of-a-high-converting-website]] to make sure the site you build actually converts.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What is the difference between a website and a web application?",
+        answer:
+          "A website communicates — it presents your business and converts visitors into inquiries. A web application performs work: bookings, client portals, ordering, dashboards, and process automation. Websites inform; web applications operate.",
+      },
+      {
+        question: "How do I know if my business needs a web application?",
+        answer:
+          "Watch for operational pain: staff re-typing data between tools, customers calling for things they could self-serve, disconnected subscriptions, and manual work growing with every new customer. Those are workflow problems a normal website can't solve.",
+      },
+      {
+        question: "Should I buy off-the-shelf software or build a custom web application?",
+        answer:
+          "Buy when your process is standard; build when the process is your competitive edge, when subscription costs exceed ownership, or when tool-to-tool gaps cause errors. Many businesses do both — standard tools plus a custom layer connecting them.",
+      },
+    ],
+  },
+  {
+    id: "ai-search-website-optimization",
+    slug: "ai-search-website-optimization",
+    title:
+      "Your Next Customer Might Ask ChatGPT: Preparing Your Website for AI Search",
+    metaTitle:
+      "AI Search Optimization 2026: Get Your Website Cited by ChatGPT & Google AI",
+    metaDescription:
+      "Customers increasingly ask ChatGPT, Perplexity, and Google AI for recommendations. How to structure your website so AI assistants find, trust, and recommend your business.",
+    excerpt:
+      "Search is splitting: some customers Google you, others ask an AI assistant. The businesses that show up in both are structuring their websites for it deliberately — here's how.",
+    category: "seo",
+    categoryLabel: "SEO",
+    tags: ["AI Search", "AEO", "SEO", "ChatGPT"],
+    keywords: [
+      "ai search optimization",
+      "answer engine optimization aeo",
+      "get business recommended by chatgpt",
+      "ai overviews website optimization",
+      "llm seo 2026",
+    ],
+    author: { name: "SEG Team", role: "Social Engagement Group" },
+    datePublished: "2026-04-07",
+    dateModified: "2026-04-07",
+    readTime: "7 min read",
+    image: "",
+    imageAlt:
+      "Person asking an AI assistant for a local business recommendation",
+    featured: false,
+    comingSoon: false,
+    content: [
+      {
+        type: "paragraph",
+        text: "A growing share of your potential customers no longer scroll through ten blue links. They ask ChatGPT which agency to hire, ask Perplexity for the best options near them, or read Google's AI Overview and never click further. This isn't the death of SEO — but it is a new front door, and most business websites were never built to be read by machines that answer on their behalf.",
+      },
+      {
+        type: "heading",
+        text: "How AI assistants decide who to recommend",
+      },
+      {
+        type: "paragraph",
+        text: "AI search tools synthesize answers from content they can crawl, parse, and trust. When someone asks 'best web design agency for restaurants', the AI looks for pages that answer clearly, demonstrate real expertise, and are corroborated elsewhere — reviews, directories, mentions. Sites that bury information in vague copy, images of text, or scripts the crawler can't read simply don't make it into the answer.",
+      },
+      {
+        type: "heading",
+        text: "What to change on your website",
+      },
+      {
+        type: "subheading",
+        text: "1. Answer questions the way they're asked",
+      },
+      {
+        type: "paragraph",
+        text: "AI queries are conversational: 'how much does X cost', 'who's the best Y for Z'. Pages that pose those questions as headings and answer them directly in the first sentence are dramatically easier for an AI to quote. This is why FAQ sections have quietly become one of the highest-leverage blocks on any page — and why every article on this blog carries one.",
+      },
+      {
+        type: "subheading",
+        text: "2. Add structured data",
+      },
+      {
+        type: "paragraph",
+        text: "Schema markup — machine-readable labels for your business, services, reviews, FAQs, and articles — tells crawlers exactly what your content is instead of forcing them to guess. It's invisible to visitors and invaluable to machines, and most templated websites ship without it.",
+      },
+      {
+        type: "subheading",
+        text: "3. Make sure AI crawlers can actually read you",
+      },
+      {
+        type: "list",
+        items: [
+          "Don't block AI crawlers like GPTBot, ClaudeBot, or PerplexityBot in robots.txt unless that's a deliberate choice.",
+          "Keep key content as real text on real pages — not locked inside images, PDFs, or scripts that render late.",
+          "Fast, clean pages get crawled more completely; [[website-speed-conversions-core-web-vitals|slow bloated sites]] get sampled.",
+        ],
+      },
+      {
+        type: "subheading",
+        text: "4. Build the evidence trail",
+      },
+      {
+        type: "paragraph",
+        text: "AI assistants cross-reference. A consistent business profile, steady reviews, and mentions on other credible sites all raise the odds you're the name the AI surfaces. Your [[/services/google-business-profile-management|Google Business Profile]] and [[/services/review-and-reputation-management|review presence]] now feed two audiences: humans and the machines that advise them.",
+      },
+      {
+        type: "quote",
+        text: "Classic SEO earns you a spot in the list. AI search optimization earns you a spot in the answer.",
+      },
+      {
+        type: "heading",
+        text: "The good news: it's the same foundation",
+      },
+      {
+        type: "paragraph",
+        text: "Everything that helps AI assistants — clear answers, structured data, crawlable text, speed, genuine expertise — also helps classic Google rankings and human visitors. There's no separate 'AI version' of your website to maintain. There's just a well-built website, engineered the way modern [[/services/website-development|website development]] and [[/services/seo|SEO]] should be by default. The businesses losing this shift aren't doing AI optimization wrong; they're running sites too old to be read at all.",
+      },
+      {
+        type: "callout",
+        title: "Quick win",
+        text: "Ask ChatGPT and Perplexity the question your customers would ask — 'best [your service] in [your city]'. If competitors appear and you don't, check what their websites answer clearly that yours doesn't.",
+      },
+    ],
+    faqs: [
+      {
+        question: "How do I get my business recommended by ChatGPT and AI search tools?",
+        answer:
+          "Publish pages that answer customer questions directly and clearly, add schema markup so machines understand your content, keep your site fast and crawlable, allow AI crawlers in robots.txt, and build corroborating signals — reviews, directory listings, and mentions on credible sites.",
+      },
+      {
+        question: "Is AI search optimization different from normal SEO?",
+        answer:
+          "It's an extension, not a replacement. The same foundations — clear content, structured data, crawlability, speed, and demonstrated expertise — power both. The main shift is writing pages that answer conversational questions directly enough for an AI to quote them.",
+      },
+      {
+        question: "Should I block AI crawlers from my website?",
+        answer:
+          "For most businesses, no. Blocking crawlers like GPTBot or PerplexityBot removes you from AI-generated recommendations entirely — the modern equivalent of asking Google not to index you. Block only if you have a deliberate content-protection reason.",
+      },
+    ],
+  },
+  {
+    id: "how-to-choose-web-development-partner",
+    slug: "how-to-choose-web-development-partner",
+    title:
+      "How to Choose a Web Development Partner (Without Getting Burned)",
+    metaTitle:
+      "How to Choose a Web Development Agency: Questions, Red Flags & Checklist",
+    metaDescription:
+      "Horror stories about website projects are common — and avoidable. The questions to ask, red flags to watch for, and a practical checklist for choosing a web development partner.",
+    excerpt:
+      "Everyone knows a website horror story: blown budgets, missed deadlines, a site the owner can't even log into. Here's how to vet a web development partner before you sign anything.",
+    category: "technology",
+    categoryLabel: "Technology",
+    tags: ["Website Development", "Hiring an Agency", "Small Business", "Checklist"],
+    keywords: [
+      "how to choose web development agency",
+      "hiring web developer for business",
+      "web design agency red flags",
+      "questions to ask web developer",
+      "website project gone wrong",
+    ],
+    author: { name: "SEG Team", role: "Social Engagement Group" },
+    datePublished: "2026-04-16",
+    dateModified: "2026-04-16",
+    readTime: "8 min read",
+    image: "",
+    imageAlt:
+      "Business owner reviewing proposals from web development agencies",
+    featured: false,
+    comingSoon: false,
+    content: [
+      {
+        type: "paragraph",
+        text: "Choosing a web development partner is a strange purchase: you're buying something you can't inspect beforehand, in a field you may not know deeply, from vendors whose pitches all sound alike. That's exactly why website horror stories are so common — and why the businesses that avoid them aren't luckier, they just ask better questions before signing.",
+      },
+      {
+        type: "heading",
+        text: "Start with outcomes, not aesthetics",
+      },
+      {
+        type: "paragraph",
+        text: "The single biggest filter: does the agency talk about your business or about their design? A portfolio full of beautiful sites tells you they can decorate. What you need to know is whether those sites ranked, converted, and generated customers. Ask every candidate the same question — 'what business result did this project produce?' — and listen for specifics. Agencies that build for performance will have answers; agencies that build for awards will change the subject.",
+      },
+      {
+        type: "heading",
+        text: "The questions that reveal everything",
+      },
+      {
+        type: "list",
+        ordered: true,
+        items: [
+          "Who owns the website when it's done — domain, code, content, and hosting accounts? (The only acceptable answer: you do.)",
+          "Is SEO built in from the start, or an add-on later? Structure, speed, and metadata should be foundations, not upsells.",
+          "Will the site pass Google's Core Web Vitals on mobile at launch? Ask them to show a recent project's scores.",
+          "Who writes the content? 'You send us the text' is how projects stall for months.",
+          "What happens after launch — updates, security, support, and at what cost?",
+          "Can I update content myself without paying for every change?",
+          "What's the payment structure and what exactly triggers each payment?",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Red flags worth walking away from",
+      },
+      {
+        type: "list",
+        items: [
+          "Vague proposals: 'modern professional website' with no scope, page list, or deliverables in writing.",
+          "No questions about your business, customers, or goals — they're selling a product, not solving your problem.",
+          "Ownership kept hostage: the agency holds your domain or hosting so leaving them means losing the site.",
+          "Prices that seem impossibly low — the gap gets recovered later in change fees, lock-in, or an abandoned project.",
+          "No live sites you can visit and test on your phone, or references they won't let you contact.",
+        ],
+      },
+      {
+        type: "quote",
+        text: "The cheapest quote and the most expensive quote are rarely the best value. The best value is the partner who understands what the website is supposed to earn.",
+      },
+      {
+        type: "heading",
+        text: "Judge their own shop window",
+      },
+      {
+        type: "paragraph",
+        text: "An agency's own website is the one project with no client constraints — pure them. Is it fast on your phone? Clear about what they do? Easy to contact? Do they practice the fundamentals covered in [[anatomy-of-a-high-converting-website]]? If their own site fails the tests they should be applying to yours, believe what you see.",
+      },
+      {
+        type: "heading",
+        text: "Set the project up to succeed",
+      },
+      {
+        type: "paragraph",
+        text: "Once you've chosen: get the scope in writing with a page list and deliverables, agree on who provides what by when, review work at milestones rather than at the end, and — if you have an existing site with rankings — insist on a migration plan like the one in [[website-redesign-seo-checklist]]. Good partners welcome this structure; it protects them too. And before any of it, know your budget's shape: [[business-website-cost-2026]] covers what realistic pricing looks like at each tier.",
+      },
+      {
+        type: "callout",
+        title: "The takeaway",
+        text: "Vet the partner, not the pitch. Outcomes over aesthetics, ownership in your name, SEO and speed as foundations, and everything in writing. Ten minutes of hard questions upfront prevents a year of regret — and any agency worth hiring will respect you more for asking. Ours included: our [[/services/website-development|website development]] team answers every one of these questions before a contract is ever signed.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What should I ask before hiring a web development agency?",
+        answer:
+          "The essentials: Who owns the site, domain, and hosting when it's done? Is SEO and performance built in from the start? Who writes the content? What does post-launch support cost? Can I update the site myself? And what business results have your past projects produced?",
+      },
+      {
+        question: "What are the biggest red flags when choosing a web developer?",
+        answer:
+          "Vague proposals without written scope, no curiosity about your business goals, keeping ownership of your domain or hosting, impossibly low prices, and no live projects or contactable references. Any one of these predicts a painful project.",
+      },
+      {
+        question: "Should the business or the agency own the finished website?",
+        answer:
+          "The business, always — domain, hosting accounts, code, and content. Arrangements where the agency retains ownership make it expensive or impossible to leave, and are one of the most common sources of website horror stories.",
       },
     ],
   },
@@ -1546,10 +2691,10 @@ export const servicesByCategory = {
     { name: "Social Media Content", href: "/services/social-media-content" },
   ],
   technology: [
-    { name: "AI Automation", href: "/services/ai-automation" },
+    { name: "Website Development", href: "/services/website-development" },
     { name: "Web Application", href: "/services/web-application" },
+    { name: "AI Automation", href: "/services/ai-automation" },
     { name: "SaaS Implementation", href: "/services/saas-implementation" },
-    { name: "Cloud Modernization", href: "/services/cloud-modernization" },
   ],
 };
 

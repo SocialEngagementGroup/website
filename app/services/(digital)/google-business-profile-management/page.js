@@ -9,18 +9,24 @@ import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 import { googleBusinessProfileManagementData } from "./googleBusinessProfileManagementData";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
-import siteMetadata from "@/data/metadata";
+import siteMetadata, { ogDefaults, twitterDefaults } from "@/data/metadata";
+import ServiceSchema from "@/components/ServicePage/ServiceSchema";
 import RelatedBlogs from "@/components/BlogPage/RelatedBlogs";
 
 export const metadata = {
+  alternates: {
+    canonical: "/services/google-business-profile-management",
+  },
   title: siteMetadata.googleBusiness.title,
   description: siteMetadata.googleBusiness.description,
   openGraph: {
+    ...ogDefaults,
     title: siteMetadata.googleBusiness.title,
     description: siteMetadata.googleBusiness.description,
     url: "/services/google-business-profile-management",
   },
   twitter: {
+    ...twitterDefaults,
     title: siteMetadata.googleBusiness.title,
     description: siteMetadata.googleBusiness.description,
   },
@@ -28,6 +34,11 @@ export const metadata = {
 export default function Page() {
   return (
     <>
+      <ServiceSchema
+        title={siteMetadata.googleBusiness.title}
+        description={siteMetadata.googleBusiness.description}
+        url="/services/google-business-profile-management" faqs={googleBusinessProfileManagementData.FAQ.items}
+      />
       <HeroSection {...googleBusinessProfileManagementData.hero} />
       <IntroSection {...googleBusinessProfileManagementData.intro} />
       <TrustBar {...googleBusinessProfileManagementData.trustBar} />

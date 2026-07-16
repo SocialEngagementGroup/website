@@ -6,17 +6,22 @@ import LatestBlogs from "@/components/HomePage/LatestBlogs/LatestBlogs"
 // HeroSection is above the fold — static import for instant SSR render.
 // All below-fold sections are lazy-loaded via DynamicSections (Client Component).
 
-import siteMetadata from "@/data/metadata";
+import siteMetadata, { ogDefaults, twitterDefaults } from "@/data/metadata";
 
 export const metadata = {
+  alternates: {
+    canonical: "/",
+  },
   title: siteMetadata.home.title,
   description: siteMetadata.home.description,
   openGraph: {
+    ...ogDefaults,
     title: siteMetadata.home.title,
     description: siteMetadata.home.description,
     url: "/",
   },
   twitter: {
+    ...twitterDefaults,
     title: siteMetadata.home.title,
     description: siteMetadata.home.description,
   },

@@ -1,15 +1,20 @@
 import React from 'react'
-import siteMetadata from "@/data/metadata";
+import siteMetadata, { ogDefaults, twitterDefaults } from "@/data/metadata";
 
 export const metadata = {
+  alternates: {
+    canonical: "/privacy-policy",
+  },
   title: siteMetadata.privacy.title,
   description: siteMetadata.privacy.description,
   openGraph: {
+    ...ogDefaults,
     title: siteMetadata.privacy.title,
     description: siteMetadata.privacy.description,
     url: "/privacy-policy",
   },
   twitter: {
+    ...twitterDefaults,
     title: siteMetadata.privacy.title,
     description: siteMetadata.privacy.description,
   },

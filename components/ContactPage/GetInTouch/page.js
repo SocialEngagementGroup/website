@@ -78,7 +78,7 @@ const GetInTouch = () => {
                   <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-gray-50 border border-gray-100 flex items-center justify-center flex-shrink-0 shadow-sm group-hover:border-[#975554]/30 group-hover:bg-white transition-all duration-300">
                     <Image
                       src={item.icon}
-                      alt="icon"
+                      alt={item.label ? `${item.label} icon` : "Contact icon"}
                       width={24}
                       height={24}
                       className="w-5 h-5 md:w-6 md:h-6 opacity-70 group-hover:opacity-100 transition-opacity"

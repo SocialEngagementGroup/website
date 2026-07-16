@@ -16,9 +16,9 @@ export const metadata = {
   title: siteMetadata.home.title,
   description:
     "Social Engagement Group (SEG) blends human creativity with AI-powered automation to tell your story and drive business growth across every digital touchpoint.",
-  alternates: {
-    canonical: "/",
-  },
+  // NOTE: no global `alternates.canonical` here — a layout-level canonical
+  // cascades to every child page that doesn't override it, which made all
+  // subpages canonicalize to the homepage. Each page/layout sets its own.
   openGraph: {
     title: "Social Engagement Group | SEG - Social Engagement Group",
     description: "Where Human Creativity Meets AI-Powered Digital Growth.",
@@ -133,9 +133,10 @@ export default function SiteLayout({ children }) {
                 "https://www.linkedin.com/company/socialengagementgroup",
                 "https://www.instagram.com/socialengagementgroup"
               ],
+              // No telephone here until a real number is available —
+              // placeholder values in structured data hurt trust signals.
               contactPoint: {
                 "@type": "ContactPoint",
-                telephone: "+1-XXX-XXX-XXXX",
                 contactType: "customer service",
                 email: "info@socialengagementgroup.com"
               }

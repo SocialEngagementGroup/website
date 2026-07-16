@@ -1,3 +1,31 @@
+/**
+ * Shared Open Graph / Twitter defaults.
+ *
+ * Next.js does NOT deep-merge metadata: a page that defines its own
+ * `openGraph` object replaces the root layout's entirely, silently dropping
+ * the image, siteName, locale, and card type. Every page-level `openGraph`
+ * and `twitter` block must spread these defaults first, then override
+ * title/description/url.
+ */
+export const ogDefaults = {
+  siteName: "Social Engagement Group",
+  locale: "en_US",
+  type: "website",
+  images: [
+    {
+      url: "/assets/images/brand/og-image.png",
+      width: 1200,
+      height: 630,
+      alt: "Social Engagement Group - Human Creativity & AI-Powered Digital Growth",
+    },
+  ],
+};
+
+export const twitterDefaults = {
+  card: "summary_large_image",
+  images: ["/assets/images/brand/og-image.png"],
+};
+
 const siteMetadata = {
   home: {
     title: "AI-Powered Digital Marketing Agency | Social Engagement Group - SEG",

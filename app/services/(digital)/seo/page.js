@@ -10,17 +10,23 @@ import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 import RelatedBlogs from "@/components/BlogPage/RelatedBlogs";
 
-import siteMetadata from "@/data/metadata";
+import siteMetadata, { ogDefaults, twitterDefaults } from "@/data/metadata";
+import ServiceSchema from "@/components/ServicePage/ServiceSchema";
 
 export const metadata = {
+  alternates: {
+    canonical: "/services/seo",
+  },
   title: siteMetadata.seo.title,
   description: siteMetadata.seo.description,
   openGraph: {
+    ...ogDefaults,
     title: siteMetadata.seo.title,
     description: siteMetadata.seo.description,
     url: "/services/seo",
   },
   twitter: {
+    ...twitterDefaults,
     title: siteMetadata.seo.title,
     description: siteMetadata.seo.description,
   },
@@ -29,6 +35,11 @@ export const metadata = {
 export default function Page() {
   return (
     <>
+      <ServiceSchema
+        title={siteMetadata.seo.title}
+        description={siteMetadata.seo.description}
+        url="/services/seo" faqs={seoData.FAQ.items}
+      />
       <HeroSection {...seoData.hero} />
       <IntroSection {...seoData.intro} />
       <TrustBar {...seoData.trustBar} />

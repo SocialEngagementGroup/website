@@ -11,18 +11,24 @@ import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
 
 
-import siteMetadata from "@/data/metadata";
+import siteMetadata, { ogDefaults, twitterDefaults } from "@/data/metadata";
+import ServiceSchema from "@/components/ServicePage/ServiceSchema";
 import RelatedBlogs from "@/components/BlogPage/RelatedBlogs";
 
 export const metadata = {
+  alternates: {
+    canonical: "/services/videography-and-photography",
+  },
   title: siteMetadata.videographyPhotography.title,
   description: siteMetadata.videographyPhotography.description,
   openGraph: {
+    ...ogDefaults,
     title: siteMetadata.videographyPhotography.title,
     description: siteMetadata.videographyPhotography.description,
     url: "/services/videography-and-photography",
   },
   twitter: {
+    ...twitterDefaults,
     title: siteMetadata.videographyPhotography.title,
     description: siteMetadata.videographyPhotography.description,
   },
@@ -32,6 +38,11 @@ export const metadata = {
 export default function Page() {
   return (
     <>
+      <ServiceSchema
+        title={siteMetadata.videographyPhotography.title}
+        description={siteMetadata.videographyPhotography.description}
+        url="/services/videography-and-photography" faqs={videographyPhotographyData.FAQ.items}
+      />
       <HeroSection {...videographyPhotographyData.hero} />
       <IntroSection {...videographyPhotographyData.intro} />
       <TrustBar {...videographyPhotographyData.trustBar} />
