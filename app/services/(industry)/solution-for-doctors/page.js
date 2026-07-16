@@ -9,18 +9,24 @@ import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 
-import siteMetadata from "@/data/metadata";
+import siteMetadata, { ogDefaults, twitterDefaults } from "@/data/metadata";
+import ServiceSchema from "@/components/ServicePage/ServiceSchema";
 import RelatedBlogs from "@/components/BlogPage/RelatedBlogs";
 
 export const metadata = {
+  alternates: {
+    canonical: "/services/solution-for-doctors",
+  },
   title: siteMetadata.doctors.title,
   description: siteMetadata.doctors.description,
   openGraph: {
+    ...ogDefaults,
     title: siteMetadata.doctors.title,
     description: siteMetadata.doctors.description,
     url: "/services/solution-for-doctors",
   },
   twitter: {
+    ...twitterDefaults,
     title: siteMetadata.doctors.title,
     description: siteMetadata.doctors.description,
   },
@@ -29,6 +35,11 @@ export const metadata = {
 export default function Page() {
   return (
     <>
+      <ServiceSchema
+        title={siteMetadata.doctors.title}
+        description={siteMetadata.doctors.description}
+        url="/services/solution-for-doctors" faqs={solutionForDoctorsData.FAQ.items}
+      />
       <HeroSection {...solutionForDoctorsData.hero} />
       <IntroSection {...solutionForDoctorsData.intro} />
       <TrustBar {...solutionForDoctorsData.trustBar} />

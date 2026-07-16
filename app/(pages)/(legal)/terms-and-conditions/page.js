@@ -1,15 +1,20 @@
 import React from 'react'
-import siteMetadata from "@/data/metadata";
+import siteMetadata, { ogDefaults, twitterDefaults } from "@/data/metadata";
 
 export const metadata = {
+  alternates: {
+    canonical: "/terms-and-conditions",
+  },
   title: siteMetadata.terms.title,
   description: siteMetadata.terms.description,
   openGraph: {
+    ...ogDefaults,
     title: siteMetadata.terms.title,
     description: siteMetadata.terms.description,
     url: "/terms-and-conditions",
   },
   twitter: {
+    ...twitterDefaults,
     title: siteMetadata.terms.title,
     description: siteMetadata.terms.description,
   },

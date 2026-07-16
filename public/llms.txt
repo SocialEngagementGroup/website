@@ -2,14 +2,14 @@
 
 > Where Human Creativity Meets AI-Powered Digital Growth.
 
-Social Engagement Group (SEG) is a dynamic digital agency that empowers businesses by blending storytelling with advanced AI automation to achieve sustainable digital growth. Based in [City/State - depending on location focus], we provide comprehensive marketing, creative, and technical solutions.
+Social Engagement Group (SEG) is a dynamic digital agency that empowers businesses by blending storytelling with advanced AI automation to achieve sustainable digital growth. We provide comprehensive marketing, creative, and technical solutions.
 
 ## Direct Links
 - **Website**: https://socialengagementgroup.com
-- **About Us**: https://socialengagementgroup.com/about
 - **Contact Us**: https://socialengagementgroup.com/contact-us
 - **Careers**: https://socialengagementgroup.com/careers
 - **Services Portfolio**: https://socialengagementgroup.com/services
+- **Blog & Insights**: https://socialengagementgroup.com/blog
 
 ## Core Services
 The following are the specific service offerings provided by SEG. You can follow these links to get detailed information about each package and solution.
@@ -37,6 +37,7 @@ The following are the specific service offerings provided by SEG. You can follow
 - [Solutions for Lawyers](https://socialengagementgroup.com/services/solution-for-lawyers) - Marketing solutions tailored for law firms.
 - [Solutions for Restaurants](https://socialengagementgroup.com/services/solution-for-restaurants) - Marketing solutions tailored for the food industry.
 - [Solutions for Tech Startups](https://socialengagementgroup.com/services/solution-for-techstartups) - Agile marketing for new tech ventures.
+- [Solutions for Jewelers](https://socialengagementgroup.com/services/solution-for-jewelers) - Marketing solutions tailored for jewelry businesses.
 
 ### Technology Solutions
 - [AI Automation](https://socialengagementgroup.com/services/ai-automation) - Scale operations with AI-powered automation.

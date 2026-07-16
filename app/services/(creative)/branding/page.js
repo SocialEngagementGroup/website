@@ -11,17 +11,23 @@ import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 import RelatedBlogs from "@/components/BlogPage/RelatedBlogs";
 
-import siteMetadata from "@/data/metadata";
+import siteMetadata, { ogDefaults, twitterDefaults } from "@/data/metadata";
+import ServiceSchema from "@/components/ServicePage/ServiceSchema";
 
 export const metadata = {
+  alternates: {
+    canonical: "/services/branding",
+  },
   title: siteMetadata.branding.title,
   description: siteMetadata.branding.description,
   openGraph: {
+    ...ogDefaults,
     title: siteMetadata.branding.title,
     description: siteMetadata.branding.description,
     url: "/services/branding",
   },
   twitter: {
+    ...twitterDefaults,
     title: siteMetadata.branding.title,
     description: siteMetadata.branding.description,
   },
@@ -30,6 +36,11 @@ export const metadata = {
 export default function Page() {
   return (
     <>
+      <ServiceSchema
+        title={siteMetadata.branding.title}
+        description={siteMetadata.branding.description}
+        url="/services/branding" faqs={brandingData.FAQ.items}
+      />
       <HeroSection {...brandingData.hero} />
       <IntroSection {...brandingData.intro} />
       <TrustBar {...brandingData.trustBar} />

@@ -12,17 +12,23 @@ import { ppcCampaignsData } from "./ppcCampaignsData";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 import RelatedBlogs from "@/components/BlogPage/RelatedBlogs";
 
-import siteMetadata from "@/data/metadata";
+import siteMetadata, { ogDefaults, twitterDefaults } from "@/data/metadata";
+import ServiceSchema from "@/components/ServicePage/ServiceSchema";
 
 export const metadata = {
+  alternates: {
+    canonical: "/services/ppc-campaigns",
+  },
   title: siteMetadata.ppc.title,
   description: siteMetadata.ppc.description,
   openGraph: {
+    ...ogDefaults,
     title: siteMetadata.ppc.title,
     description: siteMetadata.ppc.description,
     url: "/services/ppc-campaigns",
   },
   twitter: {
+    ...twitterDefaults,
     title: siteMetadata.ppc.title,
     description: siteMetadata.ppc.description,
   },
@@ -30,6 +36,11 @@ export const metadata = {
 export default function Page() {
   return (
     <>
+      <ServiceSchema
+        title={siteMetadata.ppc.title}
+        description={siteMetadata.ppc.description}
+        url="/services/ppc-campaigns" faqs={ppcCampaignsData.FAQ.items}
+      />
       <HeroSection {...ppcCampaignsData.hero} />
       <IntroSection {...ppcCampaignsData.intro} />
       <TrustBar {...ppcCampaignsData.trustBar} />

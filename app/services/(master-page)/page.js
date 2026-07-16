@@ -4,17 +4,22 @@ import AutoSlider from "@/components/MasterServicesPage/AutoSlider/AutoSlider";
 import { CreativeData, Digital, Industry, Marketing, Technology } from "./sliderData";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
 import RelatedBlogs from "@/components/BlogPage/RelatedBlogs";
-import siteMetadata from "@/data/metadata";
+import siteMetadata, { ogDefaults, twitterDefaults } from "@/data/metadata";
 
 export const metadata = {
+  alternates: {
+    canonical: "/services",
+  },
   title: siteMetadata.services.title,
   description: siteMetadata.services.description,
   openGraph: {
+    ...ogDefaults,
     title: siteMetadata.services.title,
     description: siteMetadata.services.description,
     url: "/services",
   },
   twitter: {
+    ...twitterDefaults,
     title: siteMetadata.services.title,
     description: siteMetadata.services.description,
   },

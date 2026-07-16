@@ -1,15 +1,20 @@
 import React from 'react'
-import siteMetadata from "@/data/metadata";
+import siteMetadata, { ogDefaults, twitterDefaults } from "@/data/metadata";
 
 export const metadata = {
+  alternates: {
+    canonical: "/cookies",
+  },
   title: siteMetadata.cookies.title,
   description: siteMetadata.cookies.description,
   openGraph: {
+    ...ogDefaults,
     title: siteMetadata.cookies.title,
     description: siteMetadata.cookies.description,
     url: "/cookies",
   },
   twitter: {
+    ...twitterDefaults,
     title: siteMetadata.cookies.title,
     description: siteMetadata.cookies.description,
   },

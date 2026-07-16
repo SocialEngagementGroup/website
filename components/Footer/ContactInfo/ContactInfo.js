@@ -34,7 +34,8 @@ const ContactInfo = () => {
             <div className="absolute top-6 right-6 opacity-60 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all">
               <Image
                 src="/assets/images/icons/arrow-up-right-1.webp"
-                alt="Arrow Icon"
+                alt=""
+                aria-hidden="true"
                 width={32}
                 height={32}
                 className="w-6 h-6 md:w-8 md:h-8"
@@ -60,7 +61,8 @@ const ContactInfo = () => {
             <div className="absolute top-6 right-6 opacity-60 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all">
               <Image
                 src="/assets/images/icons/arrow-up-right-1.webp"
-                alt="Arrow Icon"
+                alt=""
+                aria-hidden="true"
                 width={32}
                 height={32}
                 className="w-6 h-6 md:w-8 md:h-8"
