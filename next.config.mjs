@@ -6,6 +6,9 @@ const nextConfig = {
   },
   images: {
     formats: ["image/avif", "image/webp"],
+    // Required from Next.js 16 on: every `quality` passed to <Image> must be listed here.
+    // 55 = decorative hero spiral, 60 = lazy slider tiles, 75 = Next.js default.
+    qualities: [55, 60, 75],
     minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days
     remotePatterns: [
       {

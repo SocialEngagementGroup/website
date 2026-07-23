@@ -1,6 +1,5 @@
 export const images = [
   { id: 24, src: "/assets/images/hero-slider-images/rectangle24.webp", alt: "Rectangle 24" },
-  { id: 27, src: "/assets/images/hero-slider-images/rectangle27.webp", alt: "Rectangle 27" },
   { id: 35, src: "/assets/images/hero-slider-images/rectangle35.webp", alt: "Rectangle 35" },
   { id: 39, src: "/assets/images/hero-slider-images/rectangle39.webp", alt: "Rectangle 39" },
   { id: 40, src: "/assets/images/hero-slider-images/rectangle40.webp", alt: "Rectangle 40" },
@@ -12,7 +11,6 @@ export const images = [
   { id: 48, src: "/assets/images/hero-slider-images/rectangle48.webp", alt: "Rectangle 48" },
   { id: 49, src: "/assets/images/hero-slider-images/rectangle49.webp", alt: "Rectangle 49" },
   { id: 50, src: "/assets/images/hero-slider-images/rectangle50.webp", alt: "Rectangle 50" },
-  { id: 51, src: "/assets/images/hero-slider-images/rectangle51.webp", alt: "Rectangle 51" },
   { id: 52, src: "/assets/images/hero-slider-images/rectangle52.webp", alt: "Rectangle 52" },
   { id: 53, src: "/assets/images/hero-slider-images/rectangle53.webp", alt: "Rectangle 53" },
   { id: 54, src: "/assets/images/hero-slider-images/rectangle54.webp", alt: "Rectangle 54" },
