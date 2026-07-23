@@ -61,7 +61,6 @@ function pathToKey(filePath) {
   if (routePath === 'services/web-application') return 'webApplication';
 
   if (routePath === 'media-converter') return 'converter';
-  if (routePath === 'website-audit') return 'websiteAudit';
   if (routePath === 'privacy-policy') return 'privacy';
   if (routePath === 'legal-notice') return 'legal';
   if (routePath === 'terms-and-conditions') return 'terms';

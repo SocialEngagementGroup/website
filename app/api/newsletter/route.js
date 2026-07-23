@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { rateLimit } from "@/lib/rate-limit";
+import { n8nAuthHeaders } from "@/lib/n8n";
 import * as yup from "yup";
 
 const newsletterSchema = yup.object({
@@ -56,14 +57,18 @@ export async function POST(req) {
     );
 
     const verifyData = await verifyRes.json();
-    console.log("reCAPTCHA verify response:", JSON.stringify(verifyData));
 
     if (
       !verifyData.success ||
       verifyData.score < 0.5 ||
       verifyData.action !== "newsletter"
     ) {
-      console.log("reCAPTCHA REJECTED - success:", verifyData.success, "score:", verifyData.score, "action:", verifyData.action, "hostname:", actualHostname);
+      console.log(
+        "reCAPTCHA REJECTED - success:", verifyData.success,
+        "score:", verifyData.score,
+        "action:", verifyData.action,
+        "hostname:", verifyData.hostname
+      );
       return NextResponse.json(
         {
           success: false,
@@ -82,11 +87,25 @@ export async function POST(req) {
       );
     }
 
+    // Fail closed: never send an unauthenticated request to the automation.
+    const authHeaders = n8nAuthHeaders();
+    if (!authHeaders) {
+      console.error("Newsletter API: N8N_WEBHOOK_SECRET is not set");
+      return NextResponse.json(
+        { success: false, error: "Server configuration error" },
+        { status: 500 }
+      );
+    }
+
     const n8nRes = await fetchWithTimeout(
       webhookUrl,
       {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+          ...authHeaders,
+        },
         body: JSON.stringify({
           Email: email,
           "Lead From": leadFrom,

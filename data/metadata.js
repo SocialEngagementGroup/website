@@ -164,10 +164,6 @@ const siteMetadata = {
     title: "Professional Media Converter | Social Engagement Group - SEG",
     description: "Convert, compress, and optimize your media files instantly with high quality results and complete on-device privacy."
   },
-  websiteAudit: {
-    title: "Free Website Performance Audit | Social Engagement Group - SEG",
-    description: "Unlock your website's full potential with a free performance audit. Discover actionable insights to improve speed, SEO, and conversion rates today."
-  },
   careersSlug: {
     title: "TODO: Careers Slug Title",
     description: "TODO: Careers Slug Description"
