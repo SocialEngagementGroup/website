@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { rateLimit } from "@/lib/rate-limit";
+import { n8nAuthHeaders } from "@/lib/n8n";
 import * as yup from "yup";
 
 const contactSchema = yup.object({
@@ -102,6 +103,19 @@ export async function POST(req) {
       );
     }
 
+    // Fail closed: never send an unauthenticated request to the automation.
+    const authHeaders = n8nAuthHeaders();
+    if (!authHeaders) {
+      console.error("Contact API: N8N_WEBHOOK_SECRET is not set");
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Server configuration error",
+        },
+        { status: 500 }
+      );
+    }
+
 
     const payload = {
       name,
@@ -118,13 +132,11 @@ export async function POST(req) {
       webhookUrl,
       {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", ...authHeaders },
         body: JSON.stringify(payload),
       },
       20000
     );
-
-    const n8nText = await n8nRes.text();
 
     if (!n8nRes.ok) {
       return NextResponse.json(
