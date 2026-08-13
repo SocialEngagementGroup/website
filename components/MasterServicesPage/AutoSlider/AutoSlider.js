@@ -122,7 +122,7 @@ const AutoSlider = ({ slides = [] }) => {
                     fill
                     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                     priority={i < 4 && !loading}
-                    quality={85}
+                    quality={75}
                     className="scaling-image block object-cover object-center scale-[1.02] opacity-90 transition-all duration-500 ease-out transform-gpu will-change-transform md:group-hover/slide:scale-[1.08] md:group-hover/slide:opacity-100"
                   />
                   
