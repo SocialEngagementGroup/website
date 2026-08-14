@@ -10,22 +10,25 @@ import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 
 import { reviewReputationManagementData } from "./reviewReputationManagementData";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
-import ServiceSeoJsonLd from "@/components/Seo/ServiceSeoJsonLd";
 
-import siteMetadata from "@/data/metadata";
+import siteMetadata, { ogDefaults, twitterDefaults } from "@/data/metadata";
+import ServiceSchema from "@/components/ServicePage/ServiceSchema";
+import RelatedBlogs from "@/components/BlogPage/RelatedBlogs";
 
 export const metadata = {
-  title: siteMetadata.reputationManagement.title,
-  description: siteMetadata.reputationManagement.description,
   alternates: {
     canonical: "/services/review-and-reputation-management",
   },
+  title: siteMetadata.reputationManagement.title,
+  description: siteMetadata.reputationManagement.description,
   openGraph: {
+    ...ogDefaults,
     title: siteMetadata.reputationManagement.title,
     description: siteMetadata.reputationManagement.description,
     url: "/services/review-and-reputation-management",
   },
   twitter: {
+    ...twitterDefaults,
     title: siteMetadata.reputationManagement.title,
     description: siteMetadata.reputationManagement.description,
   },
@@ -34,11 +37,10 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <ServiceSeoJsonLd
+      <ServiceSchema
         title={siteMetadata.reputationManagement.title}
         description={siteMetadata.reputationManagement.description}
-        path="/services/review-and-reputation-management"
-        faqItems={reviewReputationManagementData.FAQ.items}
+        url="/services/review-and-reputation-management" faqs={reviewReputationManagementData.FAQ.items}
       />
       <HeroSection {...reviewReputationManagementData.hero} />
       <IntroSection {...reviewReputationManagementData.intro} />
@@ -57,6 +59,7 @@ export default function Page() {
         items={reviewReputationManagementData.FAQ.items}
         heading={reviewReputationManagementData.FAQ.heading}
       />
-    </>
+    <RelatedBlogs />
+      </>
   );
 }

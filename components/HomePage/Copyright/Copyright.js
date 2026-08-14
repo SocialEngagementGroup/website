@@ -12,7 +12,7 @@ const Copyright = () => {
     Company: [
       { name: "Home", href: "/" },
       { name: "Services", href: "/services" },
-      { name: "Media Converter", href: "/media-converter" },
+      { name: "Blog", href: "/blog" },
       { name: "Careers", href: "/careers" },
       { name: "Contact Us", href: "/contact-us" },
     ],
@@ -48,7 +48,7 @@ const Copyright = () => {
       { name: "Solution for Jewelers", href: "/services/solution-for-jewelers" },
     ],
     Technology: [
-      { name: "AI Automation", href: "/services/ai-automation-for-business-growth" },
+      { name: "AI Automation", href: "/services/ai-automation" },
       { name: "Cloud Modernization", href: "/services/cloud-modernization" },
       { name: "IT Consultation", href: "/services/it-consultation" },
       { name: "SaaS Implementation", href: "/services/saas-implementation" },
@@ -151,6 +151,7 @@ const Copyright = () => {
           <div className="text-gray-400 text-[14px] md:text-[13px] order-2 md:order-1 flex-1 text-center md:text-left">
             All rights reserved © 2026
           </div>
+
 
           {/* Legal Links (Bottom Middle) */}
           <div className="flex flex-col md:flex-wrap md:flex-row items-center justify-center gap-3 md:gap-6 text-gray-400 text-[14px] md:text-[14px] order-1 md:order-2 tracking-widest md:normal-case shrink-0">

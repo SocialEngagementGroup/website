@@ -5,8 +5,8 @@
  */
 
 export const jobFilters = [
+  { value: "open", label: "Open Jobs" },
   { value: "all", label: "View All" },
-  { value: "open", label: "Open Positions" },
 ];
 
 export const allJobs = [
@@ -16,30 +16,45 @@ export const allJobs = [
     department: "Development",
     type: "Full-time",
     location: "100% Remote",
-    experience: "2–3 years",
+    experience: "2–3 Years",
     compensation: "Competitive, based on experience",
-    deadline: "December 31, 2025",
+    deadline: "April 30, 2026",
     summary:
-      "Build high-performance websites and landing pages using modern tools and frameworks.",
+      "Build high-performance, scalable web applications using Next.js and modern backend technologies.",
     slug: "full-stack-web-developer",
     active: true,
     aboutRole:
-      "We are looking for a versatile Full Stack Web Developer to join our growing digital team. In this role, you will build and maintain high-performance websites and landing pages that support marketing campaigns, enhance user experience, and drive measurable results. You will work across both code-based and modern no-code tools, collaborating closely with designers and marketers to ship fast, conversion-focused web experiences.",
+      "We are looking for a passionate and detail-oriented Full Stack Web Developer with hands-on experience in both frontend and backend development. You will be responsible for building high-performance, scalable web applications using modern technologies like Next.js, while working closely with design, product, and marketing teams. This role is ideal for someone who enjoys shipping fast, writing clean code, and solving real-world problems.",
     responsibilities: [
-      "Build and maintain responsive websites using WordPress (Elementor), Framer, and custom-coded solutions",
-      "Develop fast-loading landing pages optimized for performance, UX, and conversions",
-      "Implement analytics, tracking pixels, SEO metadata, and schema markup",
-      "Troubleshoot front-end issues using HTML, CSS, JavaScript, and modern frameworks",
-      "Optimize websites for Core Web Vitals, accessibility, and technical SEO",
-      "Collaborate with cross-functional teams to align web builds with campaign goals",
-      "Integrate forms, APIs, and automation tools to streamline lead capture",
-      "Maintain hosting environments, deployments, backups, and uptime",
+      "Develop and maintain full-stack web applications using modern frameworks",
+      "Build responsive, high-performance frontend interfaces using Next.js / React",
+      "Design and develop scalable backend services, APIs, and integrations",
+      "Work with databases and ensure efficient data handling and storage",
+      "Optimize applications for Speed, SEO, and Performance",
+      "Collaborate with designers to translate UI/UX into functional applications",
+      "Debug, troubleshoot, and improve existing systems",
+      "Write clean, maintainable, and well-documented code",
+      "Participate in code reviews and contribute to best practices",
     ],
     requirements: [
-      "2–3 years of experience in full-stack or front-end web development",
-      "Strong knowledge of WordPress, modern JS frameworks, and responsive design",
-      "Portfolio or live project links demonstrating real-world work",
-      "Comfortable working remotely in a fast-paced environment",
+      "2–3 years of experience in full-stack web development",
+      "Strong experience with Next.js, React.js, and modern JavaScript (ES6+)",
+      "Solid understanding of backend development (Node.js / APIs)",
+      "Experience with REST APIs and third-party integrations",
+      "Familiarity with databases (MongoDB, PostgreSQL, or similar)",
+      "Understanding of authentication, authorization, and security best practices",
+      "Experience with Git and version control workflows",
+      "Knowledge of responsive design and cross-browser compatibility",
+      "Experience with Supabase / Firebase / serverless architecture (Preferred)",
+      "Familiarity with AI integrations or automation tools (n8n, APIs, etc.) (Preferred)",
+      "Strong problem-solving mindset and detail-oriented",
+      "Ability to work independently and deliver under deadlines",
+    ],
+    benefits: [
+      "Opportunity to work on real-world, high-impact projects",
+      "Fast-paced, growth-driven environment",
+      "Exposure to modern tools, AI workflows, and scalable systems",
+      "Flexible work culture",
     ],
   },
   {
@@ -164,6 +179,15 @@ export const allJobs = [
 
 // Active/open jobs only
 export const jobs = allJobs.filter((job) => job.active);
+
+// Whether a job is still open for applications (deadline today or in the future)
+export const isJobOpen = (job) => {
+  if (!job?.deadline || job.deadline.trim() === "") return false;
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const deadlineDate = new Date(job.deadline);
+  return deadlineDate >= today;
+};
 
 // Get a single job by slug
 export const getJobBySlug = (slug) => {

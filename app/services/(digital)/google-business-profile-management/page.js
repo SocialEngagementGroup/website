@@ -8,22 +8,25 @@ import FAQ from "@/components/ServicePage/FAQ/FAQ";
 import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 import { googleBusinessProfileManagementData } from "./googleBusinessProfileManagementData";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
-import ServiceSeoJsonLd from "@/components/Seo/ServiceSeoJsonLd";
 
-import siteMetadata from "@/data/metadata";
+import siteMetadata, { ogDefaults, twitterDefaults } from "@/data/metadata";
+import ServiceSchema from "@/components/ServicePage/ServiceSchema";
+import RelatedBlogs from "@/components/BlogPage/RelatedBlogs";
 
 export const metadata = {
-  title: siteMetadata.googleBusiness.title,
-  description: siteMetadata.googleBusiness.description,
   alternates: {
     canonical: "/services/google-business-profile-management",
   },
+  title: siteMetadata.googleBusiness.title,
+  description: siteMetadata.googleBusiness.description,
   openGraph: {
+    ...ogDefaults,
     title: siteMetadata.googleBusiness.title,
     description: siteMetadata.googleBusiness.description,
     url: "/services/google-business-profile-management",
   },
   twitter: {
+    ...twitterDefaults,
     title: siteMetadata.googleBusiness.title,
     description: siteMetadata.googleBusiness.description,
   },
@@ -31,11 +34,10 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <ServiceSeoJsonLd
+      <ServiceSchema
         title={siteMetadata.googleBusiness.title}
         description={siteMetadata.googleBusiness.description}
-        path="/services/google-business-profile-management"
-        faqItems={googleBusinessProfileManagementData.FAQ.items}
+        url="/services/google-business-profile-management" faqs={googleBusinessProfileManagementData.FAQ.items}
       />
       <HeroSection {...googleBusinessProfileManagementData.hero} />
       <IntroSection {...googleBusinessProfileManagementData.intro} />
@@ -54,6 +56,7 @@ export default function Page() {
         items={googleBusinessProfileManagementData.FAQ.items}
         heading={googleBusinessProfileManagementData.FAQ.heading}
       />
-    </>
+    <RelatedBlogs />
+      </>
   );
 }

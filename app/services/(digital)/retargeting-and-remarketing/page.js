@@ -9,21 +9,24 @@ import TrustBar from "@/components/ServicePage/TrustBar/TrustBar";
 
 import { retargetingRemarketingData } from "./retargetingRemarketingData";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
-import ServiceSeoJsonLd from "@/components/Seo/ServiceSeoJsonLd";
-import siteMetadata from "@/data/metadata";
+import siteMetadata, { ogDefaults, twitterDefaults } from "@/data/metadata";
+import ServiceSchema from "@/components/ServicePage/ServiceSchema";
+import RelatedBlogs from "@/components/BlogPage/RelatedBlogs";
 
 export const metadata = {
-  title: siteMetadata.retargeting.title,
-  description: siteMetadata.retargeting.description,
   alternates: {
     canonical: "/services/retargeting-and-remarketing",
   },
+  title: siteMetadata.retargeting.title,
+  description: siteMetadata.retargeting.description,
   openGraph: {
+    ...ogDefaults,
     title: siteMetadata.retargeting.title,
     description: siteMetadata.retargeting.description,
     url: "/services/retargeting-and-remarketing",
   },
   twitter: {
+    ...twitterDefaults,
     title: siteMetadata.retargeting.title,
     description: siteMetadata.retargeting.description,
   },
@@ -32,11 +35,10 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <ServiceSeoJsonLd
+      <ServiceSchema
         title={siteMetadata.retargeting.title}
         description={siteMetadata.retargeting.description}
-        path="/services/retargeting-and-remarketing"
-        faqItems={retargetingRemarketingData.FAQ.items}
+        url="/services/retargeting-and-remarketing" faqs={retargetingRemarketingData.FAQ.items}
       />
       <HeroSection {...retargetingRemarketingData.hero} />
       <IntroSection {...retargetingRemarketingData.intro} />
@@ -55,6 +57,7 @@ export default function Page() {
         items={retargetingRemarketingData.FAQ.items}
         heading={retargetingRemarketingData.FAQ.heading}
       />
-    </>
+    <RelatedBlogs />
+      </>
   );
 }

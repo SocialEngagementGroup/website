@@ -8,22 +8,25 @@ import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrate
 import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
-import ServiceSeoJsonLd from "@/components/Seo/ServiceSeoJsonLd";
+import RelatedBlogs from "@/components/BlogPage/RelatedBlogs";
 
-import siteMetadata from "@/data/metadata";
+import siteMetadata, { ogDefaults, twitterDefaults } from "@/data/metadata";
+import ServiceSchema from "@/components/ServicePage/ServiceSchema";
 
 export const metadata = {
-  title: siteMetadata.seo.title,
-  description: siteMetadata.seo.description,
   alternates: {
     canonical: "/services/seo",
   },
+  title: siteMetadata.seo.title,
+  description: siteMetadata.seo.description,
   openGraph: {
+    ...ogDefaults,
     title: siteMetadata.seo.title,
     description: siteMetadata.seo.description,
     url: "/services/seo",
   },
   twitter: {
+    ...twitterDefaults,
     title: siteMetadata.seo.title,
     description: siteMetadata.seo.description,
   },
@@ -32,11 +35,10 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <ServiceSeoJsonLd
+      <ServiceSchema
         title={siteMetadata.seo.title}
         description={siteMetadata.seo.description}
-        path="/services/seo"
-        faqItems={seoData.FAQ.items}
+        url="/services/seo" faqs={seoData.FAQ.items}
       />
       <HeroSection {...seoData.hero} />
       <IntroSection {...seoData.intro} />
@@ -52,6 +54,7 @@ export default function Page() {
       <BrandingStrategy {...seoData.BrandStrategy} />
       <Testimonials />
       <FAQ items={seoData.FAQ.items} heading={seoData.FAQ.heading} />
+      <RelatedBlogs />
     </>
   );
 }

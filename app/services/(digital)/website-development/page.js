@@ -10,22 +10,25 @@ import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrate
 import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
-import ServiceSeoJsonLd from "@/components/Seo/ServiceSeoJsonLd";
+import RelatedBlogs from "@/components/BlogPage/RelatedBlogs";
 
-import siteMetadata from "@/data/metadata";
+import siteMetadata, { ogDefaults, twitterDefaults } from "@/data/metadata";
+import ServiceSchema from "@/components/ServicePage/ServiceSchema";
 
 export const metadata = {
-  title: siteMetadata.websiteDevelopment.title,
-  description: siteMetadata.websiteDevelopment.description,
   alternates: {
     canonical: "/services/website-development",
   },
+  title: siteMetadata.websiteDevelopment.title,
+  description: siteMetadata.websiteDevelopment.description,
   openGraph: {
+    ...ogDefaults,
     title: siteMetadata.websiteDevelopment.title,
     description: siteMetadata.websiteDevelopment.description,
     url: "/services/website-development",
   },
   twitter: {
+    ...twitterDefaults,
     title: siteMetadata.websiteDevelopment.title,
     description: siteMetadata.websiteDevelopment.description,
   },
@@ -35,11 +38,10 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <ServiceSeoJsonLd
+      <ServiceSchema
         title={siteMetadata.websiteDevelopment.title}
         description={siteMetadata.websiteDevelopment.description}
-        path="/services/website-development"
-        faqItems={websiteDevelopmentData.FAQ.items}
+        url="/services/website-development" faqs={websiteDevelopmentData.FAQ.items}
       />
       <HeroSection {...websiteDevelopmentData.hero} />
       <IntroSection {...websiteDevelopmentData.intro} />
@@ -55,6 +57,7 @@ export default function Page() {
       <BrandingStrategy {...websiteDevelopmentData.BrandStrategy} />
       <Testimonials />
       <FAQ items={websiteDevelopmentData.FAQ.items} heading={websiteDevelopmentData.FAQ.heading} />
+      <RelatedBlogs />
     </>
   );
 }

@@ -8,22 +8,25 @@ import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrate
 import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
-import ServiceSeoJsonLd from "@/components/Seo/ServiceSeoJsonLd";
 
-import siteMetadata from "@/data/metadata";
+import siteMetadata, { ogDefaults, twitterDefaults } from "@/data/metadata";
+import ServiceSchema from "@/components/ServicePage/ServiceSchema";
+import RelatedBlogs from "@/components/BlogPage/RelatedBlogs";
 
 export const metadata = {
-  title: siteMetadata.doctors.title,
-  description: siteMetadata.doctors.description,
   alternates: {
     canonical: "/services/solution-for-doctors",
   },
+  title: siteMetadata.doctors.title,
+  description: siteMetadata.doctors.description,
   openGraph: {
+    ...ogDefaults,
     title: siteMetadata.doctors.title,
     description: siteMetadata.doctors.description,
     url: "/services/solution-for-doctors",
   },
   twitter: {
+    ...twitterDefaults,
     title: siteMetadata.doctors.title,
     description: siteMetadata.doctors.description,
   },
@@ -32,11 +35,10 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <ServiceSeoJsonLd
+      <ServiceSchema
         title={siteMetadata.doctors.title}
         description={siteMetadata.doctors.description}
-        path="/services/solution-for-doctors"
-        faqItems={solutionForDoctorsData.FAQ.items}
+        url="/services/solution-for-doctors" faqs={solutionForDoctorsData.FAQ.items}
       />
       <HeroSection {...solutionForDoctorsData.hero} />
       <IntroSection {...solutionForDoctorsData.intro} />
@@ -52,6 +54,7 @@ export default function Page() {
       <BrandingStrategy {...solutionForDoctorsData.BrandStrategy} customClass="solutionForDoctors"/>
       <Testimonials />
       <FAQ items={solutionForDoctorsData.FAQ.items} heading={solutionForDoctorsData.FAQ.heading} />
-    </>
+    <RelatedBlogs />
+      </>
   );
 }

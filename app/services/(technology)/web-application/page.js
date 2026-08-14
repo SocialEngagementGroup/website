@@ -8,22 +8,25 @@ import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrate
 import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
-import ServiceSeoJsonLd from "@/components/Seo/ServiceSeoJsonLd";
 
-import siteMetadata from "@/data/metadata";
+import siteMetadata, { ogDefaults, twitterDefaults } from "@/data/metadata";
+import ServiceSchema from "@/components/ServicePage/ServiceSchema";
+import RelatedBlogs from "@/components/BlogPage/RelatedBlogs";
 
 export const metadata = {
-    title: siteMetadata.webApplication.title,
-    description: siteMetadata.webApplication.description,
   alternates: {
     canonical: "/services/web-application",
   },
+    title: siteMetadata.webApplication.title,
+    description: siteMetadata.webApplication.description,
     openGraph: {
+      ...ogDefaults,
         title: siteMetadata.webApplication.title,
         description: siteMetadata.webApplication.description,
         url: "/services/web-application",
     },
     twitter: {
+      ...twitterDefaults,
         title: siteMetadata.webApplication.title,
         description: siteMetadata.webApplication.description,
     },
@@ -32,11 +35,10 @@ export const metadata = {
 export default function Page() {
     return (
         <>
-      <ServiceSeoJsonLd
+          <ServiceSchema
         title={siteMetadata.webApplication.title}
         description={siteMetadata.webApplication.description}
-        path="/services/web-application"
-        faqItems={webApplicationData.FAQ.items}
+        url="/services/web-application" faqs={webApplicationData.FAQ.items}
       />
             <HeroSection {...webApplicationData.hero} />
             <IntroSection {...webApplicationData.intro} />
@@ -52,6 +54,7 @@ export default function Page() {
             <BrandingStrategy {...webApplicationData.BrandStrategy} />
             <Testimonials />
             <FAQ items={webApplicationData.FAQ.items} heading={webApplicationData.FAQ.heading} />
-        </>
+        <RelatedBlogs />
+      </>
     );
 }

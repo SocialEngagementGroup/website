@@ -118,7 +118,11 @@ const AutoSlider = ({ slides = [] }) => {
                 <div className="scaling-box h-full w-full relative overflow-hidden bg-black transform-gpu will-change-transform border-0 outline-none">
                   <Image
                     src={slide.bg}
-                    alt={slide.title || "slide image"}
+                    alt={
+                      slide.title
+                        ? `${slide.title} — SEG service`
+                        : "SEG service preview"
+                    }
                     fill
                     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                     priority={i < 4 && !loading}

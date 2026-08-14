@@ -10,23 +10,26 @@ import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrate
 import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
-import ServiceSeoJsonLd from "@/components/Seo/ServiceSeoJsonLd";
 
 
-import siteMetadata from "@/data/metadata";
+import siteMetadata, { ogDefaults, twitterDefaults } from "@/data/metadata";
+import ServiceSchema from "@/components/ServicePage/ServiceSchema";
+import RelatedBlogs from "@/components/BlogPage/RelatedBlogs";
 
 export const metadata = {
-  title: siteMetadata.socialMediaContent.title,
-  description: siteMetadata.socialMediaContent.description,
   alternates: {
     canonical: "/services/social-media-content",
   },
+  title: siteMetadata.socialMediaContent.title,
+  description: siteMetadata.socialMediaContent.description,
   openGraph: {
+    ...ogDefaults,
     title: siteMetadata.socialMediaContent.title,
     description: siteMetadata.socialMediaContent.description,
     url: "/services/social-media-content",
   },
   twitter: {
+    ...twitterDefaults,
     title: siteMetadata.socialMediaContent.title,
     description: siteMetadata.socialMediaContent.description,
   },
@@ -36,11 +39,10 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <ServiceSeoJsonLd
+      <ServiceSchema
         title={siteMetadata.socialMediaContent.title}
         description={siteMetadata.socialMediaContent.description}
-        path="/services/social-media-content"
-        faqItems={socialMediaContentData.FAQ.items}
+        url="/services/social-media-content" faqs={socialMediaContentData.FAQ.items}
       />
   <HeroSection {...socialMediaContentData.hero} />
       <IntroSection {...socialMediaContentData.intro} />
@@ -56,6 +58,7 @@ export default function Page() {
       <BrandingStrategy {...socialMediaContentData.BrandStrategy}/>
       <Testimonials />
       <FAQ items={socialMediaContentData.FAQ.items} heading={socialMediaContentData.FAQ.heading} />
-    </>
+    <RelatedBlogs />
+      </>
   );
 }

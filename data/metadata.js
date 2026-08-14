@@ -1,12 +1,37 @@
+/**
+ * Shared Open Graph / Twitter defaults.
+ *
+ * Next.js does NOT deep-merge metadata: a page that defines its own
+ * `openGraph` object replaces the root layout's entirely, silently dropping
+ * the image, siteName, locale, and card type. Every page-level `openGraph`
+ * and `twitter` block must spread these defaults first, then override
+ * title/description/url.
+ */
+export const ogDefaults = {
+  siteName: "Social Engagement Group",
+  locale: "en_US",
+  type: "website",
+  images: [
+    {
+      url: "/assets/images/brand/og-image.png",
+      width: 1200,
+      height: 630,
+      alt: "Social Engagement Group - Human Creativity & AI-Powered Digital Growth",
+    },
+  ],
+};
+
+export const twitterDefaults = {
+  card: "summary_large_image",
+  images: ["/assets/images/brand/og-image.png"],
+};
+
 const siteMetadata = {
   home: {
     title: "AI-Powered Digital Marketing Agency | Social Engagement Group - SEG",
     description: "Social Engagement Group blends human creativity with AI-powered execution to grow your brand across every digital touchpoint. Ads, SEO, content, branding, all under one roof."
   },
-  about: {
-    title: "About Social Engagement Group - SEG | Where Human Creativity Meets AI-Powered Growth",
-    description: "Learn how Social Engagement Group helps brands grow through strategy, storytelling, and AI-powered marketing. Meet the team behind your next chapter."
-  },
+
   contact: {
     title: "Contact Social Engagement Group - SEG | Book a Free Strategy Call",
     description: "Ready to grow your brand? Get in touch with Social Engagement Group to book a free strategy call. We partner with businesses ready for real, measurable results."
@@ -14,6 +39,10 @@ const siteMetadata = {
   careers: {
     title: "Careers at Social Engagement Group - SEG | Join a Creative & AI-Driven Marketing Team",
     description: "We're building something different. Explore open roles at Social Engagement Group and join a team that blends creativity, strategy, and cutting-edge technology."
+  },
+  blog: {
+    title: "Blog | Social Engagement Group - SEG | Marketing, Branding & Growth Insights",
+    description: "Practical insights on marketing, branding, SEO, and technology from the Social Engagement Group team. Strategies and ideas to help your brand grow."
   },
   services: {
     title: "Marketing Services | Social Engagement Group - SEG",
@@ -112,7 +141,7 @@ const siteMetadata = {
     description: "Showcase your craft to the right buyers. Social Engagement Group helps jewelers build stunning brand identities, run targeted ad campaigns, and grow sales through strategic digital marketing."
   },
   aiAutomation: {
-    title: "AI Automation for Business Growth | Scale Smarter & Faster",
+    title: "AI Automation | Scale Smarter & Faster",
     description: "Transform operations with AI automation. Boost efficiency, reduce costs, and unlock growth with intelligent systems that work 24/7 for your business."
   },
   cloudModernization: {
@@ -132,9 +161,13 @@ const siteMetadata = {
     description: "Transform your business with custom web applications. Build powerful, scalable solutions that streamline operations and drive growth."
   },
   converter: {
-    title: "Free Media Converter Tool | Social Engagement Group - SEG",
-    description: "Convert images, videos, and audio files instantly with Social Engagement Group's free online media conversion platform. Fast, simple, and built for creators and marketers."
-  }
+    title: "Professional Media Converter | Social Engagement Group - SEG",
+    description: "Convert, compress, and optimize your media files instantly with high quality results and complete on-device privacy."
+  },
+  careersSlug: {
+    title: "TODO: Careers Slug Title",
+    description: "TODO: Careers Slug Description"
+  },
 };
 
 export default siteMetadata;

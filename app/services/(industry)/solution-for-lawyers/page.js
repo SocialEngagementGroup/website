@@ -8,22 +8,25 @@ import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrate
 import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
-import ServiceSeoJsonLd from "@/components/Seo/ServiceSeoJsonLd";
 
-import siteMetadata from "@/data/metadata";
+import siteMetadata, { ogDefaults, twitterDefaults } from "@/data/metadata";
+import ServiceSchema from "@/components/ServicePage/ServiceSchema";
+import RelatedBlogs from "@/components/BlogPage/RelatedBlogs";
 
 export const metadata = {
-  title: siteMetadata.lawyers.title,
-  description: siteMetadata.lawyers.description,
   alternates: {
     canonical: "/services/solution-for-lawyers",
   },
+  title: siteMetadata.lawyers.title,
+  description: siteMetadata.lawyers.description,
   openGraph: {
+    ...ogDefaults,
     title: siteMetadata.lawyers.title,
     description: siteMetadata.lawyers.description,
     url: "/services/solution-for-lawyers",
   },
   twitter: {
+    ...twitterDefaults,
     title: siteMetadata.lawyers.title,
     description: siteMetadata.lawyers.description,
   },
@@ -34,11 +37,10 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <ServiceSeoJsonLd
+      <ServiceSchema
         title={siteMetadata.lawyers.title}
         description={siteMetadata.lawyers.description}
-        path="/services/solution-for-lawyers"
-        faqItems={solutionForLawyersData.FAQ.items}
+        url="/services/solution-for-lawyers" faqs={solutionForLawyersData.FAQ.items}
       />
       <HeroSection {...solutionForLawyersData.hero} />
       <IntroSection {...solutionForLawyersData.intro} />
@@ -54,6 +56,7 @@ export default function Page() {
       <BrandingStrategy {...solutionForLawyersData.BrandStrategy} />
       <Testimonials />
       <FAQ items={solutionForLawyersData.FAQ.items} heading={solutionForLawyersData.FAQ.heading} />
-    </>
+    <RelatedBlogs />
+      </>
   );
 }

@@ -8,22 +8,25 @@ import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrate
 import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
-import ServiceSeoJsonLd from "@/components/Seo/ServiceSeoJsonLd";
 
-import siteMetadata from "@/data/metadata";
+import siteMetadata, { ogDefaults, twitterDefaults } from "@/data/metadata";
+import ServiceSchema from "@/components/ServicePage/ServiceSchema";
+import RelatedBlogs from "@/components/BlogPage/RelatedBlogs";
 
 export const metadata = {
-  title: siteMetadata.restaurants.title,
-  description: siteMetadata.restaurants.description,
   alternates: {
     canonical: "/services/solution-for-restaurants",
   },
+  title: siteMetadata.restaurants.title,
+  description: siteMetadata.restaurants.description,
   openGraph: {
+    ...ogDefaults,
     title: siteMetadata.restaurants.title,
     description: siteMetadata.restaurants.description,
     url: "/services/solution-for-restaurants",
   },
   twitter: {
+    ...twitterDefaults,
     title: siteMetadata.restaurants.title,
     description: siteMetadata.restaurants.description,
   },
@@ -32,11 +35,10 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <ServiceSeoJsonLd
+      <ServiceSchema
         title={siteMetadata.restaurants.title}
         description={siteMetadata.restaurants.description}
-        path="/services/solution-for-restaurants"
-        faqItems={solutionForRestaurantsData.FAQ.items}
+        url="/services/solution-for-restaurants" faqs={solutionForRestaurantsData.FAQ.items}
       />
       <HeroSection {...solutionForRestaurantsData.hero} />
       <IntroSection {...solutionForRestaurantsData.intro} />
@@ -55,6 +57,7 @@ export default function Page() {
         items={solutionForRestaurantsData.FAQ.items}
         heading={solutionForRestaurantsData.FAQ.heading}
       />
-    </>
+    <RelatedBlogs />
+      </>
   );
 }

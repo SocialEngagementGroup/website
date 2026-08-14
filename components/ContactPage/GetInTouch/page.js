@@ -45,6 +45,7 @@ const GetInTouch = () => {
               <Link
                 href="https://www.instagram.com/socialengagementgroup"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="w-12 h-12 flex items-center justify-center rounded-full bg-[#975554] text-white hover:bg-white hover:text-[#975554] border border-[#975554] transition-all duration-300 shadow-lg shadow-[#975554]/20"
               >
                 <RiInstagramFill size={20} />
@@ -52,6 +53,7 @@ const GetInTouch = () => {
               <Link
                 href="https://www.linkedin.com/company/social-engagement-group"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="w-12 h-12 flex items-center justify-center rounded-full bg-[#975554] text-white hover:bg-white hover:text-[#975554] border border-[#975554] transition-all duration-300 shadow-lg shadow-[#975554]/20"
               >
                 <FaLinkedinIn size={20} />
@@ -59,6 +61,7 @@ const GetInTouch = () => {
               <Link
                 href="https://www.facebook.com/seg.socialengagementgroup/"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="w-12 h-12 flex items-center justify-center rounded-full bg-[#975554] text-white hover:bg-white hover:text-[#975554] border border-[#975554] transition-all duration-300 shadow-lg shadow-[#975554]/20"
               >
                 <FaFacebookF size={20} />
@@ -75,7 +78,7 @@ const GetInTouch = () => {
                   <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-gray-50 border border-gray-100 flex items-center justify-center flex-shrink-0 shadow-sm group-hover:border-[#975554]/30 group-hover:bg-white transition-all duration-300">
                     <Image
                       src={item.icon}
-                      alt="icon"
+                      alt={item.label ? `${item.label} icon` : "Contact icon"}
                       width={24}
                       height={24}
                       className="w-5 h-5 md:w-6 md:h-6 opacity-70 group-hover:opacity-100 transition-opacity"

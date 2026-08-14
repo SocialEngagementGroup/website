@@ -1,4 +1,17 @@
 import { NextResponse } from "next/server";
+import { rateLimit } from "@/lib/rate-limit";
+import { n8nAuthHeaders } from "@/lib/n8n";
+import * as yup from "yup";
+
+const contactSchema = yup.object({
+  name: yup.string().required().max(100),
+  phone: yup.string().max(20).optional(),
+  email: yup.string().email().required().max(150),
+  message: yup.string().required().max(2000),
+  business: yup.string().max(100).optional(),
+  pageUrl: yup.string().max(500).optional(),
+  recaptchaToken: yup.string().required(),
+});
 
 function fetchWithTimeout(url, options = {}, timeoutMs = 20000) {
   const controller = new AbortController();
@@ -10,18 +23,24 @@ function fetchWithTimeout(url, options = {}, timeoutMs = 20000) {
 }
 
 export async function POST(req) {
+  // Rate Limit: Max 3 requests per 1 minute per IP
+  const rateLimitError = rateLimit(req, 3, 60 * 1000);
+  if (rateLimitError) return rateLimitError;
+
   try {
-    const { name, phone, email, message, business, recaptchaToken, pageUrl } =
-      await req.json();
-
-
-    // 1) reCAPTCHA token required
-    if (!recaptchaToken) {
+    const body = await req.json();
+    let validatedData;
+    
+    try {
+      validatedData = await contactSchema.validate(body, { abortEarly: false });
+    } catch (validationError) {
       return NextResponse.json(
-        { success: false, error: "Missing reCAPTCHA token" },
+        { success: false, error: "Validation failed", details: validationError.errors },
         { status: 400 }
       );
     }
+    
+    const { name, phone, email, message, business, recaptchaToken, pageUrl } = validatedData;
 
     // 2) Verify reCAPTCHA
     const secret = process.env.RECAPTCHA_SECRET_KEY;
@@ -58,12 +77,15 @@ export async function POST(req) {
 
     const verifyData = await verifyRes.json();
 
-    if (!verifyData.success) {
+    if (
+      !verifyData.success ||
+      verifyData.score < 0.5 ||
+      verifyData.action !== "contact_form"
+    ) {
       return NextResponse.json(
         {
           success: false,
           error: "reCAPTCHA verification failed",
-          verifyData, // ✅ shows exact reason codes
         },
         { status: 400 }
       );
@@ -75,7 +97,20 @@ export async function POST(req) {
       return NextResponse.json(
         {
           success: false,
-          error: "Missing N8N_WEBHOOK_URL in environment variables",
+          error: "Server configuration error",
+        },
+        { status: 500 }
+      );
+    }
+
+    // Fail closed: never send an unauthenticated request to the automation.
+    const authHeaders = n8nAuthHeaders();
+    if (!authHeaders) {
+      console.error("Contact API: N8N_WEBHOOK_SECRET is not set");
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Server configuration error",
         },
         { status: 500 }
       );
@@ -97,21 +132,17 @@ export async function POST(req) {
       webhookUrl,
       {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", ...authHeaders },
         body: JSON.stringify(payload),
       },
       20000
     );
 
-    const n8nText = await n8nRes.text();
-
     if (!n8nRes.ok) {
       return NextResponse.json(
         {
           success: false,
-          error: "n8n webhook failed",
-          n8nStatus: n8nRes.status,
-          n8nBody: n8nText,
+          error: "Submission failed. Please try again later.",
         },
         { status: 502 }
       );
@@ -119,8 +150,6 @@ export async function POST(req) {
 
     return NextResponse.json({
       success: true,
-      n8nTriggered: true,
-      n8nStatus: n8nRes.status,
     });
   } catch (error) {
     const isAbort = error?.name === "AbortError";
@@ -129,7 +158,7 @@ export async function POST(req) {
     return NextResponse.json(
       {
         success: false,
-        error: isAbort ? "Request timed out" : error?.message || "Unknown error",
+        error: isAbort ? "Request timed out" : "An unexpected error occurred",
       },
       { status: isAbort ? 504 : 500 }
     );

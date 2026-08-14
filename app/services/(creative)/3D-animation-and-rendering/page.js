@@ -8,22 +8,25 @@ import BrandingStrategy from "@/components/ServicePage/BrandStrategy/brandstrate
 import CTA from "@/components/ServicePage/CTA/CTA";
 import FAQ from "@/components/ServicePage/FAQ/FAQ.js";
 import Testimonials from "@/components/ServicePage/Testimonials/Testimonials";
-import ServiceSeoJsonLd from "@/components/Seo/ServiceSeoJsonLd";
 
-import siteMetadata from "@/data/metadata";
+import siteMetadata, { ogDefaults, twitterDefaults } from "@/data/metadata";
+import ServiceSchema from "@/components/ServicePage/ServiceSchema";
+import RelatedBlogs from "@/components/BlogPage/RelatedBlogs";
 
 export const metadata = {
-  title: siteMetadata.animation3d.title,
-  description: siteMetadata.animation3d.description,
   alternates: {
     canonical: "/services/3D-animation-and-rendering",
   },
+  title: siteMetadata.animation3d.title,
+  description: siteMetadata.animation3d.description,
   openGraph: {
+    ...ogDefaults,
     title: siteMetadata.animation3d.title,
     description: siteMetadata.animation3d.description,
     url: "/services/3D-animation-and-rendering",
   },
   twitter: {
+    ...twitterDefaults,
     title: siteMetadata.animation3d.title,
     description: siteMetadata.animation3d.description,
   },
@@ -33,11 +36,10 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <ServiceSeoJsonLd
+      <ServiceSchema
         title={siteMetadata.animation3d.title}
         description={siteMetadata.animation3d.description}
-        path="/services/3D-animation-and-rendering"
-        faqItems={threeDAnimationRenderingData.FAQ.items}
+        url="/services/3D-animation-and-rendering" faqs={threeDAnimationRenderingData.FAQ.items}
       />
       <HeroSection {...threeDAnimationRenderingData.hero} />
       <IntroSection {...threeDAnimationRenderingData.intro} />
@@ -56,6 +58,7 @@ export default function Page() {
         items={threeDAnimationRenderingData.FAQ.items}
         heading={threeDAnimationRenderingData.FAQ.heading}
       />
-    </>
+    <RelatedBlogs />
+      </>
   );
 }

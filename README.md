@@ -40,7 +40,7 @@ The **Social Engagement Group (SEG)** website is a premium, high-performance mar
 | **Carousels**     | [Swiper 12](https://swiperjs.com/) + [React Slick](https://react-slick.neostack.com/)                                       |
 | **Gallery**       | [LightGallery](https://www.lightgalleryjs.com/)                                                                             |
 | **Icons**         | [React Icons](https://react-icons.github.io/) (FontAwesome 6 + Remix Icons)                                                 |
-| **SEO**           | [next-sitemap](https://github.com/iamvishnusankar/next-sitemap) + reCAPTCHA v2                                              |
+| **SEO**           | Native Next.js metadata API (`app/sitemap.js` + `app/robots.js`) + reCAPTCHA v2                                             |
 | **Fonts**         | [Outfit](https://fonts.google.com/specimen/Outfit) + [Playfair Display](https://fonts.google.com/specimen/Playfair+Display) |
 
 ---
@@ -50,7 +50,7 @@ The **Social Engagement Group (SEG)** website is a premium, high-performance mar
 ```
 Website/
 ├── app/
-│   ├── (Pages)/              # Legal pages (Cookies, Privacy, Terms, Legal Notice)
+│   ├── (pages)/              # Legal pages (Cookies, Privacy, Terms, Legal Notice)
 │   ├── Home/                  # Home page modules
 │   ├── about/                 # About page
 │   ├── contact-us/            # Contact page

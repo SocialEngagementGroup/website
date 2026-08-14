@@ -4,7 +4,7 @@ import React, { useState, useMemo } from "react";
 import CareersHero from "@/components/CareersPage/CareersHero";
 import JobFilters from "@/components/CareersPage/JobFilters";
 import JobList from "@/components/CareersPage/JobList";
-import { allJobs } from "@/data/jobsData";
+import { allJobs, isJobOpen } from "@/data/jobsData";
 
 /**
  * CareersPage
@@ -13,17 +13,11 @@ import { allJobs } from "@/data/jobsData";
  * Uses global CSS heading/paragraph sizing from globals.css.
  */
 export default function CareersPage() {
-  const [activeFilter, setActiveFilter] = useState("all");
+  const [activeFilter, setActiveFilter] = useState("open");
 
   const filteredJobs = useMemo(() => {
     if (activeFilter === "open") {
-      const today = new Date();
-      today.setHours(0, 0, 0, 0);
-      return allJobs.filter((job) => {
-        if (!job.deadline || job.deadline.trim() === "") return false;
-        const deadlineDate = new Date(job.deadline);
-        return deadlineDate >= today;
-      });
+      return allJobs.filter((job) => isJobOpen(job));
     }
     return allJobs;
   }, [activeFilter]);

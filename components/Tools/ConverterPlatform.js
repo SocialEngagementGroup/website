@@ -81,12 +81,12 @@ export default function ConverterPlatform() {
     <div className="w-full relative z-10 transition-all duration-500">
       
       {/* Platform Header & Stats */}
-      <div className="flex flex-col items-center justify-center mb-8 md:mb-16 gap-3 md:gap-4 text-center">
-        <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold text-white tracking-tight px-4">
-          Media Conversion Platform
+      <div className="text-center mb-12 md:mb-16 w-full mx-auto space-y-4 md:space-y-6">
+        <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-white leading-tight">
+          Professional Media Converter
         </h1>
-        <p className="text-gray-400 mt-2 max-w-2xl px-6 text-base md:text-lg leading-relaxed">
-          Convert and optimize your media files instantly with professional-grade quality. Secure, fast, and completely private—your files never leave your device.
+        <p className="text-lg md:text-xl text-gray-300 font-light max-w-3xl mx-auto px-4 leading-relaxed">
+          Convert, compress, and optimize your media files instantly with high quality results and complete on-device privacy.
         </p>
       </div>
 
