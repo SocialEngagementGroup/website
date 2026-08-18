@@ -11,6 +11,6 @@ export default function robots() {
         allow: "/",
       },
     ],
-    sitemap: "https://socialengagementgroup.com/sitemap.xml",
+    sitemap: "https://www.socialengagementgroup.com/sitemap.xml",
   };
 }

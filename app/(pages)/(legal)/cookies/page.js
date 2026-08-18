@@ -7,6 +7,9 @@ export const metadata = {
   },
   title: siteMetadata.cookies.title,
   description: siteMetadata.cookies.description,
+  alternates: {
+    canonical: "/cookies",
+  },
   openGraph: {
     ...ogDefaults,
     title: siteMetadata.cookies.title,

@@ -7,6 +7,9 @@ export const metadata = {
   },
   title: siteMetadata.legal.title,
   description: siteMetadata.legal.description,
+  alternates: {
+    canonical: "/legal-notice",
+  },
   openGraph: {
     ...ogDefaults,
     title: siteMetadata.legal.title,

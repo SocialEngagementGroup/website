@@ -12,7 +12,7 @@ import ClientEnhancements from "@/components/Common/ClientEnhancements";
 import siteMetadata from "@/data/metadata";
 
 export const metadata = {
-  metadataBase: new URL("https://socialengagementgroup.com"),
+  metadataBase: new URL("https://www.socialengagementgroup.com"),
   title: siteMetadata.home.title,
   description:
     "Social Engagement Group (SEG) blends human creativity with AI-powered automation to tell your story and drive business growth across every digital touchpoint.",
@@ -22,7 +22,7 @@ export const metadata = {
   openGraph: {
     title: "Social Engagement Group | SEG - Social Engagement Group",
     description: "Where Human Creativity Meets AI-Powered Digital Growth.",
-    url: "https://socialengagementgroup.com",
+    url: "https://www.socialengagementgroup.com",
     siteName: "Social Engagement Group",
     images: [
       {
@@ -124,8 +124,8 @@ export default function SiteLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Social Engagement Group",
-              url: "https://socialengagementgroup.com",
-              logo: "https://socialengagementgroup.com/assets/images/site-logo/logo.svg",
+              url: "https://www.socialengagementgroup.com",
+              logo: "https://www.socialengagementgroup.com/assets/images/site-logo/logo.svg",
               description: "Social Engagement Group (SEG) blends human creativity with AI-powered automation to drive business growth across every digital touchpoint.",
               sameAs: [
                 "https://www.facebook.com/socialengagementgroup",
@@ -150,10 +150,10 @@ export default function SiteLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "Social Engagement Group",
-              url: "https://socialengagementgroup.com",
+              url: "https://www.socialengagementgroup.com",
               potentialAction: {
                 "@type": "SearchAction",
-                target: "https://socialengagementgroup.com/services?s={search_term_string}",
+                target: "https://www.socialengagementgroup.com/services?s={search_term_string}",
                 "query-input": "required name=search_term_string"
               }
             })

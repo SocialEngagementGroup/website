@@ -7,6 +7,9 @@ export const metadata = {
   },
   title: siteMetadata.terms.title,
   description: siteMetadata.terms.description,
+  alternates: {
+    canonical: "/terms-and-conditions",
+  },
   openGraph: {
     ...ogDefaults,
     title: siteMetadata.terms.title,

@@ -12,6 +12,9 @@ export const metadata = {
   },
   title: siteMetadata.services.title,
   description: siteMetadata.services.description,
+  alternates: {
+    canonical: "/services",
+  },
   openGraph: {
     ...ogDefaults,
     title: siteMetadata.services.title,

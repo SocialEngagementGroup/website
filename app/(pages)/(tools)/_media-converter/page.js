@@ -3,6 +3,9 @@ import siteMetadata from "@/data/metadata";
 export const metadata = {
   title: siteMetadata.converter.title,
   description: siteMetadata.converter.description,
+  alternates: {
+    canonical: "/media-converter",
+  },
   openGraph: {
     title: siteMetadata.converter.title,
     description: siteMetadata.converter.description,

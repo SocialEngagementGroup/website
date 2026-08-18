@@ -7,6 +7,9 @@ export const metadata = {
   },
   title: siteMetadata.privacy.title,
   description: siteMetadata.privacy.description,
+  alternates: {
+    canonical: "/privacy-policy",
+  },
   openGraph: {
     ...ogDefaults,
     title: siteMetadata.privacy.title,

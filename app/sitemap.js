@@ -1,7 +1,7 @@
 import { blogs } from "@/data/blogsData";
 
 export default function sitemap() {
-  const baseUrl = "https://socialengagementgroup.com";
+  const baseUrl = "https://www.socialengagementgroup.com";
 
   // Static routes
   const staticRoutes = [

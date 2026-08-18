@@ -8,6 +8,9 @@ export const metadata = {
   },
   title: siteMetadata.contact.title,
   description: siteMetadata.contact.description,
+  alternates: {
+    canonical: "/contact-us",
+  },
   openGraph: {
     ...ogDefaults,
     title: siteMetadata.contact.title,

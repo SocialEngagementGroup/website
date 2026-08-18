@@ -14,6 +14,9 @@ export const metadata = {
   },
   title: siteMetadata.home.title,
   description: siteMetadata.home.description,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     ...ogDefaults,
     title: siteMetadata.home.title,
