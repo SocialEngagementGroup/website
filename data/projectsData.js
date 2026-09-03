@@ -157,17 +157,17 @@ export const projects = [
       {
         name: "Marketing for Law Firms",
         img: "/assets/images/services/master-service-page/marketing/marketing-for-law-firms.webp",
-        link: "https://digital.socialengagementgroup.com/marketing-for-law-firm",
+        link: "/services/solution-for-lawyers",
       },
       {
         name: "Marketing for Doctors",
         img: "/assets/images/services/master-service-page/marketing/marketing-for-doctors.webp",
-        link: "https://digital.socialengagementgroup.com/marketing-for-doctors",
+        link: "/services/solution-for-doctors",
       },
       {
         name: "Marketing for Restaurants",
         img: "/assets/images/services/master-service-page/marketing/marketing-for-restaurants.webp",
-        link: "https://digital.socialengagementgroup.com/marketing-for-restaurants",
+        link: "/services/solution-for-restaurants",
       },
     ],
   },
