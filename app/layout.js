@@ -10,9 +10,10 @@ import ClientEnhancements from "@/components/Common/ClientEnhancements";
 // import { Analytics } from "@vercel/analytics/react";
 
 import siteMetadata from "@/data/metadata";
+import { SITE_URL, ORGANIZATION_ID, WEBSITE_ID } from "@/lib/site";
 
 export const metadata = {
-  metadataBase: new URL("https://socialengagementgroup.com"),
+  metadataBase: new URL(SITE_URL),
   title: siteMetadata.home.title,
   description:
     "Social Engagement Group (SEG) blends human creativity with AI-powered automation to tell your story and drive business growth across every digital touchpoint.",
@@ -22,7 +23,7 @@ export const metadata = {
   openGraph: {
     title: "Social Engagement Group | SEG - Social Engagement Group",
     description: "Where Human Creativity Meets AI-Powered Digital Growth.",
-    url: "https://socialengagementgroup.com",
+    url: SITE_URL,
     siteName: "Social Engagement Group",
     images: [
       {
@@ -123,14 +124,22 @@ export default function SiteLayout({ children }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
+              "@id": ORGANIZATION_ID,
               name: "Social Engagement Group",
-              url: "https://socialengagementgroup.com",
-              logo: "https://socialengagementgroup.com/assets/images/site-logo/logo.svg",
+              url: SITE_URL,
+              // Google's logo guidelines accept raster only (JPG/PNG/GIF) — an
+              // SVG logo is dropped from rich results. Keep the SVG for on-page
+              // rendering; schema points at the PNG export.
+              logo: `${SITE_URL}/assets/images/site-logo/logo.png`,
               description: "Social Engagement Group (SEG) blends human creativity with AI-powered automation to drive business growth across every digital touchpoint.",
+              // Only profiles verified to resolve. The previous list included
+              // https://twitter.com/seg_agency and
+              // https://www.linkedin.com/company/socialengagementgroup, both of
+              // which return 404 — dead sameAs entries actively harm entity
+              // reconciliation. Re-add them here once the real profile URLs are
+              // known (LinkedIn especially matters for a B2B agency).
               sameAs: [
                 "https://www.facebook.com/socialengagementgroup",
-                "https://twitter.com/seg_agency",
-                "https://www.linkedin.com/company/socialengagementgroup",
                 "https://www.instagram.com/socialengagementgroup"
               ],
               // No telephone here until a real number is available —
@@ -149,13 +158,16 @@ export default function SiteLayout({ children }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
+              "@id": WEBSITE_ID,
               name: "Social Engagement Group",
-              url: "https://socialengagementgroup.com",
-              potentialAction: {
-                "@type": "SearchAction",
-                target: "https://socialengagementgroup.com/services?s={search_term_string}",
-                "query-input": "required name=search_term_string"
-              }
+              url: SITE_URL,
+              publisher: { "@id": ORGANIZATION_ID }
+              // NOTE: a SearchAction/potentialAction was removed here. It
+              // declared `/services?s={search_term_string}`, but that query
+              // parameter is ignored — /services?s=x returns byte-identical
+              // HTML to /services. Declaring a search endpoint that does not
+              // exist is invalid markup. Restore this block only if a real
+              // site search is built.
             })
           }}
         />

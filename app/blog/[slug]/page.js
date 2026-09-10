@@ -15,7 +15,8 @@ import BlogFaq from "@/components/BlogPage/BlogFaq";
 import RelatedPosts from "@/components/BlogPage/RelatedPosts";
 import RelatedServices from "@/components/BlogPage/RelatedServices";
 
-const SITE_URL = "https://socialengagementgroup.com";
+import { SITE_URL, ORGANIZATION_ID } from "@/lib/site";
+
 const DEFAULT_OG = "/assets/images/brand/og-image.png";
 
 // Format an ISO date (YYYY-MM-DD) into a readable label
@@ -107,10 +108,12 @@ export default async function BlogDetailPage({ params }) {
     },
     publisher: {
       "@type": "Organization",
+      "@id": ORGANIZATION_ID,
       name: "Social Engagement Group",
       logo: {
         "@type": "ImageObject",
-        url: `${SITE_URL}/assets/images/site-logo/logo.svg`,
+        // PNG, not SVG — Google's logo guidelines accept raster only.
+        url: `${SITE_URL}/assets/images/site-logo/logo.png`,
       },
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": url },

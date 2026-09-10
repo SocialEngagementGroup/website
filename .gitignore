@@ -43,3 +43,12 @@ yarn-error.log*
 next-env.d.ts
 
 /app/generated/prisma
+
+# SEO audit artifacts (raw crawl output, rendered HTML snapshots).
+# MUST stay ignored: Tailwind v4's automatic content detection scans the
+# project directory and skips gitignored paths. These files contain the
+# site's own rendered HTML with escaped class attributes like
+# bg-[url(&#x27;...&#x27;)], which Tailwind would otherwise compile into
+# invalid CSS (`url(&#x27;...)`), breaking the build with
+# "Module not found: Can't resolve './&'".
+socialengagementgroup.com-audit/
