@@ -132,15 +132,17 @@ export default function SiteLayout({ children }) {
               // rendering; schema points at the PNG export.
               logo: `${SITE_URL}/assets/images/site-logo/logo.png`,
               description: "Social Engagement Group (SEG) blends human creativity with AI-powered automation to drive business growth across every digital touchpoint.",
-              // Only profiles verified to resolve. The previous list included
-              // https://twitter.com/seg_agency and
-              // https://www.linkedin.com/company/socialengagementgroup, both of
-              // which return 404 — dead sameAs entries actively harm entity
-              // reconciliation. Re-add them here once the real profile URLs are
-              // known (LinkedIn especially matters for a B2B agency).
+              // Every entry here must resolve — a 404 in sameAs harms entity
+              // reconciliation rather than helping it. All three were verified
+              // live. Two earlier entries were wrong and have been corrected:
+              // the Facebook handle (was /socialengagementgroup) and the
+              // LinkedIn slug (was /company/socialengagementgroup, now
+              // hyphenated). A twitter.com/seg_agency entry was removed
+              // entirely — that account 404s and no replacement exists yet.
               sameAs: [
-                "https://www.facebook.com/socialengagementgroup",
-                "https://www.instagram.com/socialengagementgroup"
+                "https://www.facebook.com/seg.socialengagementgroup/",
+                "https://www.instagram.com/socialengagementgroup/",
+                "https://www.linkedin.com/company/social-engagement-group"
               ],
               // No telephone here until a real number is available —
               // placeholder values in structured data hurt trust signals.

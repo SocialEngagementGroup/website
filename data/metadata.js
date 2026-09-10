@@ -28,25 +28,25 @@ export const twitterDefaults = {
 
 const siteMetadata = {
   home: {
-    title: "AI-Powered Digital Marketing Agency | Social Engagement Group - SEG",
-    description: "Social Engagement Group blends human creativity with AI-powered execution to grow your brand across every digital touchpoint. Ads, SEO, content, branding, all under one roof."
+    title: "AI-Powered Marketing Agency | Social Engagement Group",
+    description: "SEG blends human creativity with AI-powered execution to grow your brand across every digital touchpoint. Ads, SEO, content and branding under one roof."
   },
 
   contact: {
-    title: "Contact Social Engagement Group - SEG | Book a Free Strategy Call",
+    title: "Contact SEG | Book a Free Strategy Call",
     description: "Ready to grow your brand? Get in touch with Social Engagement Group to book a free strategy call. We partner with businesses ready for real, measurable results."
   },
   careers: {
-    title: "Careers at Social Engagement Group - SEG | Join a Creative & AI-Driven Marketing Team",
+    title: "Careers at SEG | Join Our Creative & AI-Driven Team",
     description: "We're building something different. Explore open roles at Social Engagement Group and join a team that blends creativity, strategy, and cutting-edge technology."
   },
   blog: {
-    title: "Blog | Social Engagement Group - SEG | Marketing, Branding & Growth Insights",
+    title: "Marketing, Branding & Growth Insights | SEG Blog",
     description: "Practical insights on marketing, branding, SEO, and technology from the Social Engagement Group team. Strategies and ideas to help your brand grow."
   },
   services: {
-    title: "Marketing Services | Social Engagement Group - SEG",
-    description: "From branding and SEO to paid ads and website development, Social Engagement Group offers full-service digital marketing solutions crafted to deliver real results at every stage of growth."
+    title: "Marketing Services | Social Engagement Group",
+    description: "From branding and SEO to paid ads and website development, SEG offers full-service digital marketing built to deliver results at every stage of growth."
   },
   cookies: {
     title: "Cookies | Social Engagement Group - SEG",
@@ -65,80 +65,80 @@ const siteMetadata = {
     description: "Review the terms and conditions governing your use of the Social Engagement Group website and our marketing services."
   },
   animation3d: {
-    title: "3D Animation & Rendering Services | Social Engagement Group - SEG",
-    description: "Bring your brand to life with stunning 3D animation and rendering. Social Engagement Group creates visuals that stop the scroll, tell your story, and leave a lasting impression."
+    title: "3D Animation & Rendering Services | SEG",
+    description: "Bring your brand to life with 3D animation and rendering. SEG creates visuals that stop the scroll, tell your story, and leave a lasting impression."
   },
   branding: {
-    title: "Brand Identity & Strategy Services | Social Engagement Group - SEG",
-    description: "Build a brand that's impossible to ignore. Social Engagement Group crafts strategic brand identities from voice to visuals that connect emotionally and drive lasting loyalty."
+    title: "Brand Identity & Strategy Services | SEG",
+    description: "Build a brand that's impossible to ignore. SEG crafts strategic brand identities, from voice to visuals, that connect emotionally and drive loyalty."
   },
   contentCreation: {
     title: "Content Creation Services | Social Engagement Group - SEG",
-    description: "Content that converts, not just fills space. Social Engagement Group produces strategic, story-driven content that builds authority, earns trust, and grows your audience."
+    description: "Content that converts, not just fills space. SEG produces strategic, story-driven content that builds authority, earns trust, and grows your audience."
   },
   logoDesign: {
     title: "Logo Design Services | Social Engagement Group - SEG",
     description: "Your logo is your first impression. Social Engagement Group designs logos that are memorable, versatile, and built to represent your brand at every touchpoint."
   },
   socialMediaContent: {
-    title: "Social Media Content Creation | Social Engagement Group - SEG",
-    description: "Scroll-stopping content made to perform. Social Engagement Group creates platform-native social media content that grows your following and drives real engagement."
+    title: "Social Media Content Creation | SEG",
+    description: "Scroll-stopping content made to perform. SEG creates platform-native social media content that grows your following and drives real engagement."
   },
   videographyPhotography: {
-    title: "Videography & Photography Services | Social Engagement Group - SEG",
-    description: "High-quality visuals that tell your brand story. Social Engagement Group's videography and photography services capture moments that connect audiences and elevate your presence."
+    title: "Videography & Photography Services | SEG",
+    description: "High-quality visuals that tell your brand story. SEG's videography and photography capture moments that connect audiences and elevate your presence."
   },
   googleBusiness: {
-    title: "Google Business Profile Management | Social Engagement Group - SEG",
-    description: "Show up where your customers are searching. Social Engagement Group manages and optimizes your Google Business Profile to boost local visibility, trust, and inbound leads."
+    title: "Google Business Profile Management | SEG",
+    description: "Show up where your customers are searching. SEG manages and optimizes your Google Business Profile to boost local visibility, trust, and inbound leads."
   },
   googleLocalAds: {
-    title: "Google Local Services Ads Management | Social Engagement Group - SEG",
-    description: "Get Google Screened and appear at the very top of local search results. Social Engagement Group manages your Local Services Ads so you pay for leads, not clicks."
+    title: "Google Local Services Ads Management | SEG",
+    description: "Get Google Screened and appear at the top of local search. SEG manages your Local Services Ads so you pay for leads, not clicks."
   },
   ppc: {
-    title: "PPC Campaign Management | Google & Meta Ads | Social Engagement Group - SEG",
-    description: "Stop wasting ad spend. Social Engagement Group builds and manages high-converting PPC campaigns on Google and Meta that target the right audience and deliver measurable ROI."
+    title: "PPC Campaign Management | Google & Meta Ads | SEG",
+    description: "Stop wasting ad spend. SEG builds and manages high-converting PPC campaigns on Google and Meta that reach the right audience and deliver measurable ROI."
   },
   retargeting: {
-    title: "Retargeting & Remarketing Services | Social Engagement Group - SEG",
-    description: "Most visitors don't convert the first time. Social Engagement Group's retargeting campaigns bring them back turning missed opportunities into signed clients and loyal customers."
+    title: "Retargeting & Remarketing Services | SEG",
+    description: "Most visitors don't convert first time. SEG's retargeting campaigns bring them back, turning missed opportunities into clients and loyal customers."
   },
   reputationManagement: {
-    title: "Review & Reputation Management | Social Engagement Group - SEG",
-    description: "Your reputation is your most valuable asset. Social Engagement Group monitors, manages, and grows your online reviews to build trust and keep your brand above the competition."
+    title: "Review & Reputation Management | SEG",
+    description: "Your reputation is your most valuable asset. SEG monitors, manages, and grows your online reviews to build trust and keep your brand above competitors."
   },
   seo: {
-    title: "SEO Services | Rank Higher, Convert More | Social Engagement Group - SEG",
-    description: "Get found by the people who need you most. Social Engagement Group delivers data-driven SEO strategies that improve rankings, drive qualified traffic, and grow your business long-term."
+    title: "SEO Services | Rank Higher, Convert More | SEG",
+    description: "Get found by the people who need you most. SEG delivers data-driven SEO that improves rankings, drives qualified traffic, and grows your business."
   },
   socialMediaMarketing: {
-    title: "Social Media Marketing Services | Social Engagement Group - SEG",
+    title: "Social Media Marketing Services | SEG",
     description: "More than just posting. Social Engagement Group builds social media strategies that grow real audiences, spark conversations, and turn followers into customers."
   },
   websiteDevelopment: {
     title: "Website Design & Development | Social Engagement Group - SEG",
-    description: "Your website is your hardest-working salesperson. Social Engagement Group designs and builds fast, conversion-optimized websites that make your brand look credible and work around the clock."
+    description: "Your website is your hardest-working salesperson. SEG builds fast, conversion-optimized sites that look credible and work around the clock."
   },
   doctors: {
-    title: "Digital Marketing for Doctors & Medical Practices | Social Engagement Group - SEG",
-    description: "Attract more patients without lifting a finger. Social Engagement Group delivers tailored digital marketing for healthcare providers from SEO and ads to reputation management and web design."
+    title: "Digital Marketing for Doctors & Medical Practices",
+    description: "Attract more patients without lifting a finger. SEG delivers tailored marketing for healthcare providers, from SEO and ads to reputation and web design."
   },
   lawyers: {
-    title: "Digital Marketing for Law Firms | Social Engagement Group - SEG",
-    description: "More cases start online. Social Engagement Group helps law firms dominate local search, run high-converting ad campaigns, and build a digital presence that turns visitors into signed clients."
+    title: "Digital Marketing for Law Firms | SEG",
+    description: "More cases start online. SEG helps law firms win local search, run high-converting ad campaigns, and build a presence that turns visitors into clients."
   },
   restaurants: {
-    title: "Digital Marketing for Restaurants | Social Engagement Group - SEG",
-    description: "Fill more tables, more often. Social Engagement Group creates digital marketing strategies for restaurants from social media content and local SEO to ads that drive real foot traffic."
+    title: "Digital Marketing for Restaurants | SEG",
+    description: "Fill more tables, more often. SEG builds marketing strategies for restaurants, from social content and local SEO to ads that drive real foot traffic."
   },
   techStartups: {
-    title: "Digital Marketing for Tech Startups | Social Engagement Group - SEG",
-    description: "Early-stage or scaling fast, Social Engagement Group helps tech startups build brand authority, generate qualified leads, and grow their digital presence with precision and speed."
+    title: "Digital Marketing for Tech Startups | SEG",
+    description: "Early-stage or scaling fast, SEG helps tech startups build brand authority, generate qualified leads, and grow their digital presence with precision."
   },
   jewelers: {
-    title: "Digital Marketing for Jewelers & Jewelry Brands | Social Engagement Group - SEG",
-    description: "Showcase your craft to the right buyers. Social Engagement Group helps jewelers build stunning brand identities, run targeted ad campaigns, and grow sales through strategic digital marketing."
+    title: "Digital Marketing for Jewelers & Jewelry Brands",
+    description: "Showcase your craft to the right buyers. SEG helps jewelers build stunning brand identities, run targeted ad campaigns, and grow sales through digital."
   },
   aiAutomation: {
     title: "AI Automation | Scale Smarter & Faster",
@@ -153,11 +153,11 @@ const siteMetadata = {
     description: "Scale your business with strategic IT consulting. Modernize infrastructure, optimize systems, and drive efficiency with expert technology solutions."
   },
   saasImplementation: {
-    title: "SaaS Implementation Services | Deploy Software That Drives Results",
+    title: "SaaS Implementation | Software That Drives Results",
     description: "Seamlessly implement SaaS solutions that transform operations. Expert deployment, integration, and optimization for maximum adoption and ROI."
   },
   webApplication: {
-    title: "Web Application Development | Build Scalable Digital Solutions",
+    title: "Web App Development | Scalable Digital Solutions",
     description: "Transform your business with custom web applications. Build powerful, scalable solutions that streamline operations and drive growth."
   },
   converter: {
