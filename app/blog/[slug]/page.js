@@ -101,11 +101,19 @@ export default async function BlogDetailPage({ params }) {
     image: [ogImage],
     datePublished: post.datePublished,
     dateModified: post.dateModified || post.datePublished,
-    author: {
-      "@type": "Organization",
-      name: post.author?.name || "Social Engagement Group",
-      url: SITE_URL,
-    },
+    // All 23 posts currently carry the same "SEG Team" byline, which still
+    // renders visibly on the page from post.author.name. In schema we point at
+    // the single Organization node by @id instead of repeating an anonymous
+    // Organization on every post.
+    //
+    // Deliberately a bare @id reference with no `name`: attaching "SEG Team" to
+    // an @id that already resolves to "Social Engagement Group" would give one
+    // node two conflicting names.
+    //
+    // When posts get real named authors, replace this with a Person node
+    // (name, jobTitle, sameAs) — that is the actual E-E-A-T win, and it is the
+    // weakest credibility signal on the site until it happens.
+    author: { "@id": ORGANIZATION_ID },
     publisher: {
       "@type": "Organization",
       "@id": ORGANIZATION_ID,
