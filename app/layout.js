@@ -10,9 +10,10 @@ import ClientEnhancements from "@/components/Common/ClientEnhancements";
 // import { Analytics } from "@vercel/analytics/react";
 
 import siteMetadata from "@/data/metadata";
+import { SITE_URL, ORGANIZATION_ID, WEBSITE_ID } from "@/lib/site";
 
 export const metadata = {
-  metadataBase: new URL("https://socialengagementgroup.com"),
+  metadataBase: new URL(SITE_URL),
   title: siteMetadata.home.title,
   description:
     "Social Engagement Group (SEG) blends human creativity with AI-powered automation to tell your story and drive business growth across every digital touchpoint.",
@@ -22,7 +23,7 @@ export const metadata = {
   openGraph: {
     title: "Social Engagement Group | SEG - Social Engagement Group",
     description: "Where Human Creativity Meets AI-Powered Digital Growth.",
-    url: "https://socialengagementgroup.com",
+    url: SITE_URL,
     siteName: "Social Engagement Group",
     images: [
       {
@@ -123,15 +124,25 @@ export default function SiteLayout({ children }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
+              "@id": ORGANIZATION_ID,
               name: "Social Engagement Group",
-              url: "https://socialengagementgroup.com",
-              logo: "https://socialengagementgroup.com/assets/images/site-logo/logo.svg",
+              url: SITE_URL,
+              // Google's logo guidelines accept raster only (JPG/PNG/GIF) — an
+              // SVG logo is dropped from rich results. Keep the SVG for on-page
+              // rendering; schema points at the PNG export.
+              logo: `${SITE_URL}/assets/images/site-logo/logo.png`,
               description: "Social Engagement Group (SEG) blends human creativity with AI-powered automation to drive business growth across every digital touchpoint.",
+              // Every entry here must resolve — a 404 in sameAs harms entity
+              // reconciliation rather than helping it. All three were verified
+              // live. Two earlier entries were wrong and have been corrected:
+              // the Facebook handle (was /socialengagementgroup) and the
+              // LinkedIn slug (was /company/socialengagementgroup, now
+              // hyphenated). A twitter.com/seg_agency entry was removed
+              // entirely — that account 404s and no replacement exists yet.
               sameAs: [
-                "https://www.facebook.com/socialengagementgroup",
-                "https://twitter.com/seg_agency",
-                "https://www.linkedin.com/company/socialengagementgroup",
-                "https://www.instagram.com/socialengagementgroup"
+                "https://www.facebook.com/seg.socialengagementgroup/",
+                "https://www.instagram.com/socialengagementgroup/",
+                "https://www.linkedin.com/company/social-engagement-group"
               ],
               // No telephone here until a real number is available —
               // placeholder values in structured data hurt trust signals.
@@ -149,13 +160,16 @@ export default function SiteLayout({ children }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
+              "@id": WEBSITE_ID,
               name: "Social Engagement Group",
-              url: "https://socialengagementgroup.com",
-              potentialAction: {
-                "@type": "SearchAction",
-                target: "https://socialengagementgroup.com/services?s={search_term_string}",
-                "query-input": "required name=search_term_string"
-              }
+              url: SITE_URL,
+              publisher: { "@id": ORGANIZATION_ID }
+              // NOTE: a SearchAction/potentialAction was removed here. It
+              // declared `/services?s={search_term_string}`, but that query
+              // parameter is ignored — /services?s=x returns byte-identical
+              // HTML to /services. Declaring a search endpoint that does not
+              // exist is invalid markup. Restore this block only if a real
+              // site search is built.
             })
           }}
         />

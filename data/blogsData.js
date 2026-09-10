@@ -41,7 +41,7 @@ export const allBlogs = [
     title:
       "AI-Powered Digital Marketing: How Agencies Blend Human Creativity With Automation",
     metaTitle:
-      "AI-Powered Digital Marketing in 2026: Blending Creativity & Automation",
+      "AI-Powered Digital Marketing in 2026: Creativity + AI",
     metaDescription:
       "Learn how modern agencies combine AI automation with human creativity to scale content, sharpen targeting, and grow ROI in 2026 — without losing brand voice.",
     excerpt:
@@ -166,7 +166,7 @@ export const allBlogs = [
     title:
       "Local SEO for Service Businesses: A Practical Guide to Ranking Higher",
     metaTitle:
-      "Local SEO Guide for Service Businesses: Rank Higher in Local Search",
+      "Local SEO Guide for Service Businesses: Rank Higher",
     metaDescription:
       "A practical local SEO guide for service businesses: optimize your Google Business Profile, win reviews, build local citations, and rank in the map pack.",
     excerpt:
@@ -404,9 +404,9 @@ export const allBlogs = [
     title:
       "Newsjacking 101: How Small Businesses Can Ride the World Cup Wave Without a FIFA Sponsorship Budget",
     metaTitle:
-      "Newsjacking the World Cup: SMB Marketing Without a Sponsorship Budget",
+      "Newsjacking the World Cup: SMB Marketing on a Budget",
     metaDescription:
-      "You don't need an official sponsorship to benefit from the World Cup. Learn how small businesses can newsjack the 2026 tournament for attention, foot traffic, and search demand — legally and on a budget.",
+      "You don't need a sponsorship to benefit from the World Cup. How small businesses can newsjack the 2026 tournament legally and on a budget.",
     excerpt:
       "You don't need a multimillion-dollar FIFA sponsorship to benefit from the World Cup. Here's how small businesses can newsjack the moment — legally and on a budget.",
     category: "marketing",
@@ -520,9 +520,9 @@ export const allBlogs = [
     title:
       "Pre-Trip Checkups: How Auto Shops Can Capture the World Cup Road-Trip Search Surge",
     metaTitle:
-      "World Cup Road-Trip Surge: Local SEO Wins for Auto Repair Shops",
+      "World Cup Road-Trip Surge: Local SEO for Auto Repair",
     metaDescription:
-      "Fans are driving between World Cup host cities all summer. Learn how auto repair shops can capture the surge in pre-trip inspection and 'car checkup near me' searches with local SEO and timely offers.",
+      "Fans are driving between host cities all summer. How auto repair shops can capture the surge in pre-trip inspection searches with local SEO.",
     excerpt:
       "Millions of fans will drive between host cities this summer. Here's how auto repair shops can capture the surge in 'pre-trip inspection near me' searches.",
     category: "seo",
@@ -623,9 +623,9 @@ export const allBlogs = [
     title:
       "How Local Restaurants Are Turning World Cup Watch Parties Into Repeat Customers",
     metaTitle:
-      "World Cup Watch Parties: Turn Restaurant Crowds Into Repeat Customers",
+      "World Cup Watch Parties: Turn Crowds Into Regulars",
     metaDescription:
-      "A packed World Cup watch party is easy. Turning that one-time crowd into loyal regulars is the real win. Here's how local restaurants capture and re-engage watch-party guests.",
+      "A packed watch party is easy; turning that crowd into regulars is the real win. How restaurants capture and re-engage watch-party guests.",
     excerpt:
       "A packed watch party is easy. Turning that one-night crowd into regulars is the real win. Here's how local restaurants are doing it.",
     category: "marketing",
@@ -733,9 +733,9 @@ export const allBlogs = [
     title:
       "Winning World Cup Foot Traffic Without Breaking FIFA's Trademark Rules",
     metaTitle:
-      "World Cup Marketing & FIFA Trademark Rules: A Guide for Bars & Breweries",
+      "World Cup Marketing & FIFA Trademark Rules for Bars",
     metaDescription:
-      "FIFA protects its trademarks aggressively. Learn how bars and breweries can market around the World Cup and drive foot traffic without risking a cease-and-desist — including safe language swaps.",
+      "FIFA protects its trademarks aggressively. How bars and breweries can market around the World Cup without risking a cease-and-desist.",
     excerpt:
       "FIFA protects its marks aggressively. Here's how bars and breweries can ride the World Cup wave and pack the house — without inviting a cease-and-desist.",
     category: "branding",
@@ -841,9 +841,9 @@ export const allBlogs = [
     title:
       "The Marketing Opportunity (and Responsibility) in a Travel Surge",
     metaTitle:
-      "Travel-Surge Marketing for Personal Injury Law Firms | World Cup 2026",
+      "Travel-Surge Marketing for Personal Injury Law Firms",
     metaDescription:
-      "A summer travel surge means more rideshare and pedestrian accident searches. Learn how personal injury law firms can capture rising demand responsibly with helpful content and local SEO.",
+      "A summer travel surge means more rideshare and pedestrian accident searches. How personal injury firms can capture that demand responsibly.",
     excerpt:
       "Millions of visitors means more rideshare and pedestrian accidents — and more people searching for help. Here's how injury firms can meet that demand responsibly.",
     category: "marketing",
@@ -943,9 +943,9 @@ export const allBlogs = [
     slug: "urgent-care-marketing-visitor-wave-summer-heat",
     title: "Marketing to a City Full of Visitors and Summer Heat Risk",
     metaTitle:
-      "Urgent Care Marketing: Visitor Surges & Summer Heat | World Cup 2026",
+      "Urgent Care Marketing: Visitor Surges & Summer Heat",
     metaDescription:
-      "Visitor surges and summer heat drive walk-in demand for urgent care. Learn how clinics can market to tourists, capture 'urgent care near me' searches, and prepare for the spike.",
+      "Visitor surges and summer heat drive walk-in demand. How clinics can market to tourists and capture 'urgent care near me' searches.",
     excerpt:
       "A flood of visitors plus summer heat means spikes in walk-in demand — heat illness, minor injuries, and 'urgent care near me' searches. Here's how clinics can prepare.",
     category: "marketing",
@@ -1047,9 +1047,9 @@ export const allBlogs = [
     slug: "small-budget-world-cup-tourist-spending-retail",
     title: "Small-Budget Ways to Capture World Cup Tourist Spending",
     metaTitle:
-      "Capture World Cup Tourist Spending on a Small Budget | Local Retail",
+      "Capture World Cup Tourist Spending on a Small Budget",
     metaDescription:
-      "Geo-fenced promos near fan zones, timely offers, and foot-traffic tactics: how local retailers can capture World Cup tourist spending without a big marketing budget.",
+      "Geo-fenced promos, timely offers, and foot-traffic tactics: how local retailers capture World Cup tourist spending on a small budget.",
     excerpt:
       "You don't need a big budget to win a share of World Cup tourist spending. Here are small-budget, geo-targeted tactics for local retailers.",
     category: "marketing",
@@ -1147,7 +1147,7 @@ export const allBlogs = [
     metaTitle:
       "Short-Term Rental Marketing for the World Cup Visitor Wave",
     metaDescription:
-      "Host cities are seeing real Airbnb and tourism demand. Learn how short-term rental hosts and hospitality services can market to the World Cup visitor wave and stand out from the competition.",
+      "Host cities are seeing real Airbnb and tourism demand. How short-term rental hosts can market to the World Cup visitor wave and stand out.",
     excerpt:
       "Host cities are seeing a real surge in Airbnb and tourism demand. Here's how short-term rental hosts can stand out and capture the World Cup visitor wave.",
     category: "marketing",
@@ -1465,9 +1465,9 @@ export const allBlogs = [
     title:
       "How Much Does a Business Website Cost in 2026? An Honest Breakdown",
     metaTitle:
-      "Business Website Cost in 2026: Pricing Breakdown & What You Get",
+      "Business Website Cost in 2026: Pricing Breakdown",
     metaDescription:
-      "What does a professional business website actually cost in 2026? An honest breakdown of pricing tiers, what drives cost up or down, and how to budget for a site that pays for itself.",
+      "What does a professional business website cost in 2026? An honest breakdown of pricing tiers, what drives cost, and how to budget for one.",
     excerpt:
       "Website quotes range from $500 to $50,000 — and most business owners have no idea why. Here's an honest breakdown of what drives the price and what you should actually budget for.",
     category: "technology",
@@ -1571,9 +1571,9 @@ export const allBlogs = [
     slug: "signs-your-business-needs-website-redesign",
     title: "9 Signs Your Website Is Quietly Costing You Customers",
     metaTitle:
-      "9 Signs Your Business Website Needs a Redesign | Losing Customers?",
+      "9 Signs Your Business Website Needs a Redesign",
     metaDescription:
-      "Outdated design, slow load times, no mobile experience, invisible on Google — 9 clear signs your business website is driving customers away and what to do about each one.",
+      "Outdated design, slow loads, no mobile experience, invisible on Google - 9 signs your website is driving customers away, and how to fix each.",
     excerpt:
       "Your website never complains, so it's easy to assume it's doing fine. But if it shows any of these 9 signs, it's actively sending customers to your competitors.",
     category: "technology",
@@ -1676,9 +1676,9 @@ export const allBlogs = [
     title:
       "Custom Website vs. DIY Builders: What Growing Businesses Need to Know",
     metaTitle:
-      "Custom Website vs. Wix & Squarespace: Which Is Right for Your Business?",
+      "Custom Website vs. Wix & Squarespace: Which to Pick?",
     metaDescription:
-      "Wix and Squarespace look cheap until you count the hidden costs. An honest comparison of DIY website builders vs. custom development — and when each one makes sense.",
+      "Wix and Squarespace look cheap until you count the hidden costs. An honest comparison of DIY builders vs. custom development.",
     excerpt:
       "DIY builders promise a website in an afternoon. Custom development promises a website that grows your business. Here's an honest look at when each one actually makes sense.",
     category: "technology",
@@ -1787,9 +1787,9 @@ export const allBlogs = [
     slug: "anatomy-of-a-high-converting-website",
     title: "The Anatomy of a Website That Turns Visitors Into Customers",
     metaTitle:
-      "High-Converting Website Anatomy: 7 Elements That Turn Visitors Into Customers",
+      "High-Converting Website Anatomy: 7 Essential Elements",
     metaDescription:
-      "Traffic means nothing if visitors don't act. The 7 elements every high-converting business website shares — from above-the-fold clarity to trust signals and CTAs that get clicked.",
+      "Traffic means nothing if visitors don't act. The 7 elements every high-converting website shares, from above-the-fold clarity to CTAs.",
     excerpt:
       "Two websites can get identical traffic and wildly different results. The difference is anatomy — a handful of elements that quietly decide whether visitors call you or close the tab.",
     category: "marketing",
@@ -1914,9 +1914,9 @@ export const allBlogs = [
     slug: "website-speed-conversions-core-web-vitals",
     title: "Slow Websites Lose Customers: Speed, Core Web Vitals & Your Revenue",
     metaTitle:
-      "Website Speed & Core Web Vitals: How Slow Load Times Kill Conversions",
+      "Website Speed & Core Web Vitals: Slow Kills Conversions",
     metaDescription:
-      "A one-second delay can cut conversions by 7% — and Google ranks slow sites lower too. What Core Web Vitals mean for your business and how to make your website fast.",
+      "A one-second delay can cut conversions by 7%, and Google ranks slow sites lower. What Core Web Vitals mean and how to get fast.",
     excerpt:
       "Your customers won't email you to say your website felt slow. They'll just leave. Here's how speed quietly shapes your rankings, your conversions, and your revenue.",
     category: "seo",
@@ -2035,9 +2035,9 @@ export const allBlogs = [
     title:
       "How to Redesign Your Website Without Losing Your Google Rankings",
     metaTitle:
-      "Website Redesign SEO Checklist: Keep Your Google Rankings Intact",
+      "Website Redesign SEO Checklist: Keep Your Rankings",
     metaDescription:
-      "A careless redesign can erase years of Google rankings overnight. The complete SEO migration checklist — redirects, URLs, content, and testing — for a safe website relaunch.",
+      "A careless redesign can erase years of rankings overnight. The complete SEO migration checklist for a safe website relaunch.",
     excerpt:
       "The scariest sentence in web design: 'We launched the new site and our traffic disappeared.' Here's the migration checklist that makes sure it never happens to you.",
     category: "seo",
@@ -2160,9 +2160,9 @@ export const allBlogs = [
     title:
       "Mobile-First Website Design: Winning the Customers Who Find You on a Phone",
     metaTitle:
-      "Mobile-First Website Design: Why Your Business Site Must Start on the Phone",
+      "Mobile-First Website Design: Why It Starts on the Phone",
     metaDescription:
-      "Over 60% of your visitors are on a phone — and Google ranks your mobile site, not your desktop one. What mobile-first design really means and how to tell if your site passes.",
+      "Over 60% of visitors are on a phone, and Google ranks your mobile site, not desktop. What mobile-first really means and how to check.",
     excerpt:
       "Your website was probably designed on a big monitor and checked on a phone as an afterthought. Your customers experience it in exactly the opposite order.",
     category: "technology",
@@ -2264,9 +2264,9 @@ export const allBlogs = [
     title:
       "Website or Web Application? When Your Business Needs More Than Pages",
     metaTitle:
-      "Website vs. Web Application: Which Does Your Business Actually Need?",
+      "Website vs. Web Application: Which Do You Need?",
     metaDescription:
-      "Booking systems, client portals, dashboards — when a business outgrows a brochure website, it needs a web application. How to tell which one you need and what each involves.",
+      "Booking systems, client portals, dashboards - when a business outgrows a brochure site it needs a web app. How to tell which you need.",
     excerpt:
       "A website tells customers about your business. A web application runs part of it. Knowing which one you actually need saves you from paying for the wrong thing.",
     category: "technology",
@@ -2373,9 +2373,9 @@ export const allBlogs = [
     title:
       "Your Next Customer Might Ask ChatGPT: Preparing Your Website for AI Search",
     metaTitle:
-      "AI Search Optimization 2026: Get Your Website Cited by ChatGPT & Google AI",
+      "AI Search Optimization: Get Cited by ChatGPT & Google",
     metaDescription:
-      "Customers increasingly ask ChatGPT, Perplexity, and Google AI for recommendations. How to structure your website so AI assistants find, trust, and recommend your business.",
+      "Customers increasingly ask ChatGPT, Perplexity, and Google AI for recommendations. How to structure your site so AI recommends you.",
     excerpt:
       "Search is splitting: some customers Google you, others ask an AI assistant. The businesses that show up in both are structuring their websites for it deliberately — here's how.",
     category: "seo",
@@ -2492,9 +2492,9 @@ export const allBlogs = [
     title:
       "How to Choose a Web Development Partner (Without Getting Burned)",
     metaTitle:
-      "How to Choose a Web Development Agency: Questions, Red Flags & Checklist",
+      "How to Choose a Web Development Agency: A Checklist",
     metaDescription:
-      "Horror stories about website projects are common — and avoidable. The questions to ask, red flags to watch for, and a practical checklist for choosing a web development partner.",
+      "Website project horror stories are common and avoidable. The questions to ask, red flags to watch for, and a practical checklist.",
     excerpt:
       "Everyone knows a website horror story: blown budgets, missed deadlines, a site the owner can't even log into. Here's how to vet a web development partner before you sign anything.",
     category: "technology",

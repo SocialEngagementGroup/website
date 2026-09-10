@@ -54,11 +54,21 @@ const Copyright = () => {
       { name: "SaaS Implementation", href: "/services/saas-implementation" },
       { name: "Web Application", href: "/services/web-application" },
     ],
+    // These three used to point at the matching pages on the digital.
+    // subdomain. That footer is sitewide, so it put exact-match anchor text
+    // ("Marketing for Law Firms") on all 56 pages pointing away from the very
+    // pages here that target those queries. The subdomain hosts ad landing
+    // pages and is being set to noindex, so the links now go to our own
+    // service pages — which also gives them a better sitewide anchor than
+    // the "Solution for …" wording in the Industry group above.
+    //
+    // "Marketing by SEG" stays external: one plain branded link to the
+    // subdomain root costs nothing and is genuinely useful to a reader.
     Marketing: [
       { name: "Marketing by SEG", href: "https://digital.socialengagementgroup.com/" },
-      { name: "Marketing for Law Firms", href: "https://digital.socialengagementgroup.com/marketing-for-law-firm" },
-      { name: "Marketing for Doctors", href: "https://digital.socialengagementgroup.com/marketing-for-doctors" },
-      { name: "Marketing for Restaurants", href: "https://digital.socialengagementgroup.com/marketing-for-restaurants" },
+      { name: "Marketing for Law Firms", href: "/services/solution-for-lawyers" },
+      { name: "Marketing for Doctors", href: "/services/solution-for-doctors" },
+      { name: "Marketing for Restaurants", href: "/services/solution-for-restaurants" },
     ],
   };
 

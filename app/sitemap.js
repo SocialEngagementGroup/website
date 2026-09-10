@@ -1,7 +1,9 @@
 import { blogs } from "@/data/blogsData";
+import { jobs } from "@/data/jobsData";
+import { SITE_URL } from "@/lib/site";
 
 export default function sitemap() {
-  const baseUrl = "https://socialengagementgroup.com";
+  const baseUrl = SITE_URL;
 
   // Static routes
   const staticRoutes = [
@@ -69,5 +71,19 @@ export default function sitemap() {
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...serviceRoutes, ...blogRoutes];
+  // Job detail pages. These were live, internally linked from
+  // components/CareersPage/JobCard.js and fully indexable, but absent from the
+  // sitemap entirely — orphaned from a crawler's point of view.
+  //
+  // Driven by `jobs` (data/jobsData.js), which is already filtered to
+  // `active: true`. Setting a listing to `active: false` therefore removes it
+  // from the sitemap automatically — that flag stays the single control.
+  const careerRoutes = jobs.map((job) => ({
+    url: `${baseUrl}/careers/${job.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.5,
+  }));
+
+  return [...staticRoutes, ...serviceRoutes, ...blogRoutes, ...careerRoutes];
 }

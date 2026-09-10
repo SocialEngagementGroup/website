@@ -26,11 +26,16 @@ export const Industry = [
   { title: "Solution for Jewelers", bg: "/assets/images/services/master-service-page/industry/solution-for-jewelers.webp", link: "/services/solution-for-jewelers" },
 ];
 
+// The three industry tiles point at our own service pages rather than the
+// digital. subdomain: those are ad landing pages, now noindex, so sending
+// organic navigation to them wastes the click and the crawl. Note this makes
+// them share destinations with the Industry group above — see the audit note
+// about the Industry/Marketing groups covering the same three industries.
 export const Marketing = [
   { title: "Marketing by SEG", bg: "/assets/images/services/master-service-page/marketing/marketing-by-seg.webp", link: "https://digital.socialengagementgroup.com/" },
-  { title: "Marketing for Law Firms", bg: "/assets/images/services/master-service-page/marketing/marketing-for-law-firms.webp", link: "https://digital.socialengagementgroup.com/marketing-for-law-firm" },
-  { title: "Marketing for Doctors", bg: "/assets/images/services/master-service-page/marketing/marketing-for-doctors.webp", link: "https://digital.socialengagementgroup.com/marketing-for-doctors" },
-  { title: "Marketing for Restaurants", bg: "/assets/images/services/master-service-page/marketing/marketing-for-restaurants.webp", link: "https://digital.socialengagementgroup.com/marketing-for-restaurants" },
+  { title: "Marketing for Law Firms", bg: "/assets/images/services/master-service-page/marketing/marketing-for-law-firms.webp", link: "/services/solution-for-lawyers" },
+  { title: "Marketing for Doctors", bg: "/assets/images/services/master-service-page/marketing/marketing-for-doctors.webp", link: "/services/solution-for-doctors" },
+  { title: "Marketing for Restaurants", bg: "/assets/images/services/master-service-page/marketing/marketing-for-restaurants.webp", link: "/services/solution-for-restaurants" },
 ];
 
 export const Technology = [

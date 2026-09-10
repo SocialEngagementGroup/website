@@ -13,7 +13,7 @@
  *                       url="/services/seo" faqs={seoData.FAQ.items} />
  */
 
-const SITE_URL = "https://socialengagementgroup.com";
+import { SITE_URL, ORGANIZATION_ID } from "@/lib/site";
 
 // FAQ questions in data files carry "1. " prefixes and answers may contain
 // HTML — schema.org expects plain text.
@@ -36,6 +36,7 @@ const ServiceSchema = ({ title = "", description = "", url = "", faqs = [] }) =>
       url: pageUrl,
       provider: {
         "@type": "Organization",
+        "@id": ORGANIZATION_ID,
         name: "Social Engagement Group",
         url: SITE_URL,
       },
