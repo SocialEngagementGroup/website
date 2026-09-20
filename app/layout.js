@@ -139,10 +139,24 @@ export default function SiteLayout({ children }) {
               // LinkedIn slug (was /company/socialengagementgroup, now
               // hyphenated). A twitter.com/seg_agency entry was removed
               // entirely — that account 404s and no replacement exists yet.
+              // YouTube first: brand mentions correlate roughly 3x more strongly
+              // with AI-search citations than backlinks do, and YouTube is the
+              // strongest single platform signal in that data (~0.737 vs ~0.266
+              // for domain rating). The channel already existed and simply was
+              // not declared here.
+              //
+              // The YouTube entry uses the /channel/<id> form because that is
+              // what youtube.com/@SocialEngagementGroup itself canonicalises to.
+              //
+              // A Crunchbase profile appears in search results but returned 403
+              // to verification, so it is deliberately left out — an unverified
+              // URL here is a liability, not a signal.
               sameAs: [
+                "https://www.youtube.com/channel/UCm-Lemh42PoOw-oAeMSUWtg",
+                "https://www.linkedin.com/company/social-engagement-group",
                 "https://www.facebook.com/seg.socialengagementgroup/",
                 "https://www.instagram.com/socialengagementgroup/",
-                "https://www.linkedin.com/company/social-engagement-group"
+                "https://github.com/SocialEngagementGroup"
               ],
               // No telephone here until a real number is available —
               // placeholder values in structured data hurt trust signals.
